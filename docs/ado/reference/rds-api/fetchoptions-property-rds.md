@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cee86b2d579a02d9e6cbcc06bfa5d95714f1ecd9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1809c23267057a34c0f2f594a41bdfe62304545c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722313"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163789"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions プロパティ (RDS)
 非同期フェッチの種類を示します。  
@@ -34,13 +34,13 @@ ms.locfileid: "91722313"
 |--------------|-----------------|  
 |**adcFetchUpFront**|[レコードセット](../ado-api/recordset-object-ado.md)のすべてのレコードは、コントロールがアプリケーションに返される前にフェッチされます。 完全な **レコードセット** がフェッチされてから、アプリケーションで何かを実行できるようになります。|  
 |**adcFetchBackground**|コントロールは、レコードの最初のバッチがフェッチされるとすぐにアプリケーションに戻ることができます。 最初のバッチでフェッチされていないレコードにアクセスしようとするレコード **セット** の後続の読み取りは、探索されたレコードが実際にフェッチされるまで遅延され、その時点で制御がアプリケーションに戻ります。|  
-|**adcFetchAsync**|既定値。 レコードがバックグラウンドでフェッチされている間、コントロールは直ちにアプリケーションに戻ります。 まだフェッチされていないレコードをアプリケーションが読み取ろうとすると、探索されたレコードに最も近いレコードが読み取られ、制御が直ちに返されます。これは、 **レコードセット** の現在の末尾に達したことを示します。 たとえば、 [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-rds.md) を呼び出すと、現在のレコードの位置が、実際にフェッチされた最後のレコードに移動します。ただし、レコード **セット**には、それ以上のレコードが設定されます。|  
+|**adcFetchAsync**|既定値。 レコードがバックグラウンドでフェッチされている間、コントロールは直ちにアプリケーションに戻ります。 まだフェッチされていないレコードをアプリケーションが読み取ろうとすると、探索されたレコードに最も近いレコードが読み取られ、制御が直ちに返されます。これは、 **レコードセット** の現在の末尾に達したことを示します。 たとえば、 [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-rds.md) を呼び出すと、現在のレコードの位置が、実際にフェッチされた最後のレコードに移動します。ただし、レコード **セット** には、それ以上のレコードが設定されます。|  
   
 > [!NOTE]
 >  これらの定数を使用するクライアント側の実行可能ファイルは、それぞれの宣言を提供する必要があります。 RDS ライブラリの既定のインストールフォルダーにある Adcvbs. inc. ファイルから、必要な定数宣言を切り取って貼り付けることができます。  
   
-## <a name="remarks"></a>解説  
- Web アプリケーションでは、通常、 **Adcfetchasync** (既定値) を使用することをお勧めします。これは、パフォーマンスが向上するためです。 コンパイルされたクライアントアプリケーションでは、通常、 **Adcfetchbackground**を使用します。  
+## <a name="remarks"></a>コメント  
+ Web アプリケーションでは、通常、 **Adcfetchasync** (既定値) を使用することをお勧めします。これは、パフォーマンスが向上するためです。 コンパイルされたクライアントアプリケーションでは、通常、 **Adcfetchbackground** を使用します。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5196f4391a37e5881cfc4c7e5743e56cf671c976
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 09ecc9649da8d080ac0fc1dbde4f26cc850907e5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983273"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164031"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder プロパティの例 (VB)
 この例では、インデックスの[Columns](./columns-collection-adox.md)コレクションに追加された[列](./column-object-adox.md)の[順序](./sortorder-property-adox.md)[付け](./index-object-adox.md)プロパティを示します。 このコードでは、 **Employees** テーブルの Country 列に昇順のインデックスが追加され、レコードが表示されます。 次に、このコードにより、 **Employees** テーブルの Country 列に降順のインデックスが追加され、レコードが再び表示されます。 昇順と降順のインデックスの違いを示します。  

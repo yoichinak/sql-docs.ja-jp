@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - objects [ADO], RDS
 - RDS objects [ADO]
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa9329b1da84643f75a83ee1487f8c1be47601b1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03b62e520c7e2124d3e6a2fb9c22c510e916dbe0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724343"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163670"
 ---
 # <a name="rds-objects"></a>RDS オブジェクト
 > [!IMPORTANT]
@@ -27,8 +27,8 @@ ms.locfileid: "91724343"
   
 |Object|説明|  
 |-|-|  
-|[DataControl (RDS)](./datacontrol-object-rds.md)|データクエリ **レコードセット** を1つ以上のコントロール (たとえば、テキストボックス、グリッドコントロール、またはコンボボックス) にバインドして、Web ページに **レコードセット** データを表示します。<br /><br /> **DataControl**オブジェクトは、スクリプト作成には安全です。|  
-|[DataFactory (RDSServer)](./datafactory-object-rdsserver.md)|クライアント側アプリケーションの指定されたデータソースへの読み取り/書き込みデータアクセスを提供するメソッドを実装します。<br /><br /> **DataFactory**オブジェクトは、スクリプト作成には安全ではありません。|  
+|[DataControl (RDS)](./datacontrol-object-rds.md)|データクエリ **レコードセット** を1つ以上のコントロール (たとえば、テキストボックス、グリッドコントロール、またはコンボボックス) にバインドして、Web ページに **レコードセット** データを表示します。<br /><br /> **DataControl** オブジェクトは、スクリプト作成には安全です。|  
+|[DataFactory (RDSServer)](./datafactory-object-rdsserver.md)|クライアント側アプリケーションの指定されたデータソースへの読み取り/書き込みデータアクセスを提供するメソッドを実装します。<br /><br /> **DataFactory** オブジェクトは、スクリプト作成には安全ではありません。|  
 |[領域スペース (RDS)](./dataspace-object-rds.md)|は、中間層に配置されているカスタムビジネスオブジェクトに対してクライアント側プロキシを作成します。<br /><br /> オブジェクト **スペース** オブジェクトは、スクリプト作成には安全です。|  
 |[IRDSService インターフェイス (RDS)](./irdsservice-interface-rds.md)|[InvokeService (RDS)](./invokeservice-rds.md)メソッドを公開します。これは、オブジェクトのサポートされているバージョンで、要求されたインターフェイスへのポインターを返すために使用されます。|  
   

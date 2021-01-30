@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Column::Type
@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dffb08de42e3c38a9c0a28e8cad33af95f0d8926
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 77d7bcf4ddc6beb29dc04513952050c8ba042c55
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983173"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164000"
 ---
 # <a name="type-property-column-adox"></a>Type プロパティ (列) (ADOX)
 列のデータ型を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- [DataTypeEnum](../ado-api/datatypeenum.md)定数のいずれかを指定できる**Long 型**の値を設定または返します。 既定値は **adVarWChar**です。  
+ [DataTypeEnum](../ado-api/datatypeenum.md)定数のいずれかを指定できる **Long 型** の値を設定または返します。 既定値は **adVarWChar** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティは、 [列](./column-object-adox.md) オブジェクトがコレクションまたは別のオブジェクトに追加されるまで、読み取り/書き込みが行われます。その後、読み取り専用になります。  
   
 ## <a name="applies-to"></a>適用対象  

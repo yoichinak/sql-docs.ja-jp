@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_update_collection_item
 - sp_syscollector_update_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2dc7d6967f4bfa7aa1c22f4cfa5c55e06127455b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f21ca6f68eed789756a7dbf57f79afe194d40dab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534866"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161922"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ sp_syscollector_update_collection_item
   
 ## <a name="arguments"></a>引数  
  [ @collection_item_id =] *collection_item_id*  
- コレクションアイテムを識別する一意の識別子を指定します。 *collection_item_id* は **int** で、既定値は NULL です。 *名前*が NULL の場合、 *collection_item_id*には値が必要です。  
+ コレクションアイテムを識別する一意の識別子を指定します。 *collection_item_id* は **int** で、既定値は NULL です。 *名前* が NULL の場合、 *collection_item_id* には値が必要です。  
   
  [ @name =] '*name*'  
- コレクションアイテムの名前を指定します。 *名前* は **sysname** で、既定値は NULL です。 *collection_item_id*が NULL の場合、*名前*には値を指定する必要があります。  
+ コレクションアイテムの名前を指定します。 *名前* は **sysname** で、既定値は NULL です。 *collection_item_id* が NULL の場合、*名前* には値を指定する必要があります。  
   
  [ @new_name =] '*new_name*'  
- コレクション アイテムの新しい名前を指定します。 *new_name* は **sysname**であり、使用する場合、空の文字列にすることはできません。  
+ コレクション アイテムの新しい名前を指定します。 *new_name* は **sysname** であり、使用する場合、空の文字列にすることはできません。  
   
  *new_name* は一意である必要があります。 現在のコレクション アイテムの名前の一覧については、syscollector_collection_items システム ビューにクエリを実行します。  
   
@@ -62,12 +62,12 @@ sp_syscollector_update_collection_item
  このコレクション アイテムによってデータを収集する頻度を秒単位で指定します。 *frequency* は **int**,、既定値は 5,、最小値を指定できます。  
   
  [ @parameters =] '*parameters*'  
- コレクション アイテムの入力パラメーターを指定します。 *パラメーター* は **xml** で、既定値は NULL です。 *パラメーター*スキーマは、コレクター型のパラメータースキーマと一致している必要があります。  
+ コレクション アイテムの入力パラメーターを指定します。 *パラメーター* は **xml** で、既定値は NULL です。 *パラメーター* スキーマは、コレクター型のパラメータースキーマと一致している必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  コレクション セットが非キャッシュ モードに設定されている場合、このモードではコレクション セットに指定されたスケジュールでデータ収集とアップロードが行われるため、頻度を変更しても無視されます。 コレクションセットの状態を表示するには、次のクエリを実行します。 `<collection_item_id>` は、更新するコレクション アイテムの ID に置き換えてください。  
   
 ```  

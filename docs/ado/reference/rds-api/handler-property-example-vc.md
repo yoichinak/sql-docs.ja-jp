@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f8815ce6d607de39861f56bdcecca6c37e9dcc6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 757679e99f9f4de7b7c1c96abf367ad5df5daee1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722162"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163756"
 ---
 # <a name="handler-property-example-vc"></a>Handler プロパティの例 (VC++)
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- コードは次のようになります。 [SQL](./sql-property.md)プロパティに割り当てられたコマンドは***AuthorById***識別子と一致し、作成者の Michael O'Leary の行を取得します。 コードの [connect](./connect-property-rds.md) プロパティに Northwind データソースが指定されていますが、そのデータソースは Msdfmap.ini *Connect* セクションで上書きされます。 **DataControl** object [recordset](./recordset-sourcerecordset-properties-rds.md)プロパティは、コードの便宜として、接続されていない[レコードセット](../ado-api/recordset-object-ado.md)オブジェクトに割り当てられます。  
+ コードは次のようになります。 [SQL](./sql-property.md)プロパティに割り当てられたコマンドは、***AuthorById** _ 識別子と一致し、作成者 Michael O'Leary の行を取得します。 コードの [Connect](./connect-property-rds.md) プロパティに Northwind データソースが指定されていますが、そのデータソースは Msdfmap.ini _connect * セクションによって上書きされます。 **DataControl** object [recordset](./recordset-sourcerecordset-properties-rds.md)プロパティは、コードの便宜として、接続されていない [レコードセット](../ado-api/recordset-object-ado.md)オブジェクトに割り当てられます。  
   
 ```  
 // BeginHandlerCpp.cpp  

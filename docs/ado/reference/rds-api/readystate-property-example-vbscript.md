@@ -7,7 +7,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c439b60d8b349fcb7d130ff45b71a4f3a63f576e
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b216c69954e6551924dd63f7b93ac281015bf025
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724323"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163653"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState プロパティの例 (VBScript)
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "91724323"
   
  次の例は、RDS の [ReadyState](./readystate-property-rds.md) プロパティを読み取る方法を示して [います。](./datacontrol-object-rds.md) 実行時の DataControl オブジェクトを VBScript コードで実行します。 **ReadyState** は読み取り専用プロパティです。  
   
- この例をテストするには、 \<Body> \</Body> 通常の HTML ドキュメントのタグとタグの間でこのコードを**RDSReadySt.asp**切り取って貼り付け、RDSReadySt という名前を付けます。 [ **検索** ] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 ASP スクリプトによってサーバーが識別されます。  
+ この例をテストするには、 \<Body> \</Body> 通常の HTML ドキュメントのタグとタグの間でこのコードを切り取って貼り付け、RDSReadySt という名前を付けます。 [ **検索** ] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginReadyStateVBS -->  

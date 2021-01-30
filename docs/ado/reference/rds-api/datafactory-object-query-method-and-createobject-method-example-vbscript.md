@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7ecbf406097474416302b830d4372a8486815da
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b7e3ae3cf085c87448f901420f0f77d05474d530
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721063"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163823"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory オブジェクト、Query メソッド、および CreateObject メソッドの例 (VBScript)
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
- この例では、RDS の[CreateObject](./createobject-method-rds.md)メソッドを使用して、 [DataFactory](./datafactory-object-rdsserver.md)オブジェクトを作成し[ます。領域スペース](./dataspace-object-rds.md)オブジェクト。 この例をテストするには、 \<Body> \</Body> 通常の HTML ドキュメントのタグとタグの間でこのコードを**DataFactoryVBS.asp**切り取って貼り付け、DataFactoryVBS という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ この例では、RDS の[CreateObject](./createobject-method-rds.md)メソッドを使用して、 [DataFactory](./datafactory-object-rdsserver.md)オブジェクトを作成し[ます。領域スペース](./dataspace-object-rds.md)オブジェクト。 この例をテストするには、 \<Body> \</Body> 通常の HTML ドキュメントのタグとタグの間でこのコードを切り取って貼り付け、DataFactoryVBS という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataFactoryVBS -->  

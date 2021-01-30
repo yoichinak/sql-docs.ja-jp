@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - User25::SetPermissions
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1333fc42f98ba787cfcc139b40932038307e5592
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3c5db51dc0af4f8e86fbaa68b20dbd82a327c038
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983293"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164035"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions メソッド (ADOX)
 オブジェクトの [グループ](./group-object-adox.md) または [ユーザー](./user-object-adox.md) に対する権限を指定します。  
@@ -41,25 +41,25 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  権限を設定するオブジェクトの名前を示す **文字列** 値です。  
   
  *ObjectType*  
- [Objecttypeenum](./objecttypeenum.md)定数の1つであり、アクセス許可を取得するオブジェクトの型を指定する**Long 型**の値です。  
+ [Objecttypeenum](./objecttypeenum.md)定数の1つであり、アクセス許可を取得するオブジェクトの型を指定する **Long 型** の値です。  
   
  *操作*  
- **Long**値。権限を設定するときに実行するアクションの種類を指定する[actionenum](./actionenum.md)定数の1つです。  
+ **Long** 値。権限を設定するときに実行するアクションの種類を指定する [actionenum](./actionenum.md)定数の1つです。  
   
  *権限*  
- 設定する権限を示す1つ以上の[右 Senum](./rightsenum.md)定数のビットマスクとして使用できる**Long 型**の値。  
+ 設定する権限を示す1つ以上の [右 Senum](./rightsenum.md)定数のビットマスクとして使用できる **Long 型** の値。  
   
  *識別子*  
- 省略可能。 オブジェクトがこれらのアクセス許可を継承する方法を指定する、 [Inherittypeenum](./inherittypeenum.md)定数の1つである**Long**値。 既定値は **Adinheritnone**です。  
+ 任意。 オブジェクトがこれらのアクセス許可を継承する方法を指定する、 [Inherittypeenum](./inherittypeenum.md)定数の1つである **Long** 値。 既定値は **Adinheritnone** です。  
   
  *ObjectTypeId*  
- 省略可能。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す **バリアント** 値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
+ 任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す **バリアント** 値です。 *ObjectType* が **Adpermobjproviderspecific** に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  プロバイダーがグループまたはユーザーのアクセス権の設定をサポートしていない場合、エラーが発生します。  
   
 > [!NOTE]
->  **SetPermissions**を呼び出す場合、 **adaccessrevoke**にアクションを設定すると、 *Rights*パラメーターの設定が上書きされます。 *Rights*パラメーターに指定された権限を有効にする場合は、*アクション*を**adaccessrevoke**に設定しないでください。  
+>  **SetPermissions** を呼び出す場合、 **adaccessrevoke** にアクションを設定すると、 *Rights* パラメーターの設定が上書きされます。 *Rights* パラメーターに指定された権限を有効にする場合は、*アクション* を **adaccessrevoke** に設定しないでください。  
   
 ## <a name="applies-to"></a>適用対象  
 

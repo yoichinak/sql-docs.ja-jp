@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Key::GetUpdateRule
@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3113bf5c77dbef03378d2c1359673bf32782f73
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b5704cf6295fdf0f9f1731288cb7b77d793d8447
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983044"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163990"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule プロパティ (ADOX)
 主 [キー](./key-object-adox.md) が更新されたときに実行されるアクションを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- [Ruleenum](./ruleenum.md)定数のいずれかを指定できる**Long 型**の値を設定して返します。 既定値は **adRINone**です。  
+ [Ruleenum](./ruleenum.md)定数のいずれかを指定できる **Long 型** の値を設定して返します。 既定値は **adRINone** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティは、既にコレクションに追加されている [キー](./key-object-adox.md) オブジェクトに対しては読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  

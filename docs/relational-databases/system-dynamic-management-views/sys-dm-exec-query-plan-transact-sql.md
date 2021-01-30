@@ -6,7 +6,7 @@ ms.date: 08/02/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_query_plan_TSQL
 - sys.dm_exec_query_plan
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 18d6e4e8e3c6fe097676d1bf65f337610127566a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ca28e5540112af972ec84db2cb2a25a36a8ba832
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094119"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161384"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +67,7 @@ sys.dm_exec_query_plan(plan_handle)
 |**暗号**|**bit**|対応するプロシージャが暗号化されているかどうか。<br /><br /> 0 = 暗号化されていない<br /><br /> 1 = 暗号化されている<br /><br /> NULL 値は許可されません。|  
 |**query_plan**|**xml**|*Plan_handle* で指定されたクエリ実行プランのコンパイル時のプラン表示表現を格納します。 プラン表示は XML 形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアド プロシージャ コール、ユーザー定義関数コールなどを含むバッチごとに、1 つのプランが生成されます。<br /><br /> NULL 値は許可されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次の場合、**sys.dm_exec_query_plan** で返されるテーブルの **query_plan** 列にはプラン表示の出力は返されません。  
   
 -   *Plan_handle* を使用して指定されたクエリプランがプランキャッシュから削除されている場合、返されるテーブルの **query_plan** 列は null になります。 たとえば、プラン ハンドルがキャプチャされてから **sys.dm_exec_query_plan** に使用されるまでに遅延が生じると、クエリ プランがキャッシュから削除されることがあります。  

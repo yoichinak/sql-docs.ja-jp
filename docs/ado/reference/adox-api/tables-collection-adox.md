@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Catalog::Tables
@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b6d580dd6f56f78947ff1a881db1bff28c3e2b8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e30bb754332d52f02d2857dc80d572e227e819ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983263"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164012"
 ---
 # <a name="tables-collection-adox"></a>Tables コレクション (ADOX)
 カタログのすべての [テーブル](./table-object-adox.md) オブジェクトが含まれます。  
   
-## <a name="remarks"></a>解説  
- **Tables**コレクションの[Append](./append-method-adox-tables.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
+## <a name="remarks"></a>コメント  
+ **Tables** コレクションの [Append](./append-method-adox-tables.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
--   **追加**メソッドを使用して、新しいテーブルをコレクションに追加します。  
+-   **追加** メソッドを使用して、新しいテーブルをコレクションに追加します。  
   
  その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
   

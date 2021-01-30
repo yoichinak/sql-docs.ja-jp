@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e99fd3242e0070cabb69cb67ceb7e60f44f5b88
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b59e6aaccdc93c7c375acc8c3437302d6941474d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722633"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163893"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate メソッドの例 (VBScript)
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
- この例をテストするには、 \<Body> \</Body> 通常の HTML ドキュメントのタグとタグの間でこのコードを**CancelUpdateVBS.asp**切り取って貼り付け、という名前を付けます。 ASP スクリプトによって、インターネットサーバーが識別されます。 サーバーの名前を編集して、独自のセットアップを反映する必要があります。 MyServer からの接続文字列の値を、SQL Server インストールの名前に変更するだけです。  
+ この例をテストするには、 \<Body> \</Body> 通常の HTML ドキュメントのタグとタグの間でこのコードを切り取って貼り付け、という名前を付けます。 ASP スクリプトによって、インターネットサーバーが識別されます。 サーバーの名前を編集して、独自のセットアップを反映する必要があります。 MyServer からの接続文字列の値を、SQL Server インストールの名前に変更するだけです。  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  

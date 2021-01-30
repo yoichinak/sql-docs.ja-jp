@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Procedure
@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b41e83033ab86810c4e26ff3c15fa4d9d1ea97ae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2b1c3734ad88b72a2f7779b37c97c4b7c4863c12
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983633"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164095"
 ---
 # <a name="procedure-object-adox"></a>Procedure オブジェクト (ADOX)
 ストアドプロシージャを表します。 ADO [コマンド](../ado-api/command-object-ado.md) オブジェクトと共に使用する場合、 **プロシージャ** オブジェクトを使用して、ストアドプロシージャの追加、削除、または変更を行うことができます。  
   
-## <a name="remarks"></a>解説  
- **プロシージャ**オブジェクトを使用すると、プロバイダーの "create Procedure" 構文を知らない場合や使用しなくても、ストアドプロシージャを作成できます。  
+## <a name="remarks"></a>コメント  
+ **プロシージャ** オブジェクトを使用すると、プロバイダーの "create Procedure" 構文を知らない場合や使用しなくても、ストアドプロシージャを作成できます。  
   
- **プロシージャ**オブジェクトのプロパティを使用すると、次の操作を実行できます。  
+ **プロシージャ** オブジェクトのプロパティを使用すると、次の操作を実行できます。  
   
 -   [Name](./name-property-adox.md)プロパティを使用してプロシージャを識別します。  
   
--   [Command](./command-property-adox.md)プロパティを使用してプロシージャを作成または実行するために使用できる ADO**コマンド**オブジェクトを指定します。  
+-   [Command](./command-property-adox.md)プロパティを使用してプロシージャを作成または実行するために使用できる ADO **コマンド** オブジェクトを指定します。  
   
 -   [DateCreated](./datecreated-property-adox.md)プロパティと[DateModified](./datemodified-property-adox.md)プロパティを使用して日付情報を返します。  
   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataControl::CreateRecordset
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad1c9b0f36922f29ce015fd459a1be3e788e07f5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4a88898c884cbaf0a9c82a882b15ef48c1e3e3a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721203"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163861"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset メソッド (RDS)
 空の非接続 [レコードセット](../ado-api/recordset-object-ado.md)を作成します。  
@@ -45,7 +45,7 @@ object.CreateRecordset(ColumnInfos)
  [RDSServer DataFactory](./datafactory-object-rdsserver.md)または RDS を表すオブジェクト変数です[。DataControl](./datacontrol-object-rds.md)オブジェクト。  
   
  *ColumnsInfos*  
- 作成された**レコードセット**内の各列を定義する属性の**Variant**配列。 各列定義には、4つの必須属性と1つの省略可能な属性の配列が含まれています。  
+ 作成された **レコードセット** 内の各列を定義する属性の **Variant** 配列。 各列定義には、4つの必須属性と1つの省略可能な属性の配列が含まれています。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -55,18 +55,18 @@ object.CreateRecordset(ColumnInfos)
 |NULL 値の許容|ブール値。|  
 |Scale (省略可能)|この省略可能な属性は、数値フィールドの小数点以下桁数を定義します。 この値が指定されていない場合、数値は3桁に切り捨てられます。 有効桁数は影響を受けませんが、小数点の後の桁数は3桁に切り捨てられます。|  
   
- 次に、一連の列配列が配列にグループ化されて、 **レコードセット**が定義されます。  
+ 次に、一連の列配列が配列にグループ化されて、 **レコードセット** が定義されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  サーバー側ビジネスオブジェクトは、結果の **レコードセット** に、株価を含むオペレーティングシステムファイルなど、OLE DB 以外のデータプロバイダーからのデータを設定できます。  
   
- 次の表に、 **CreateRecordset**メソッドでサポートされる[DataTypeEnum](../ado-api/datatypeenum.md)の値を示します。 表示される数値は、フィールドを定義するために使用される参照番号です。  
+ 次の表に、 **CreateRecordset** メソッドでサポートされる [DataTypeEnum](../ado-api/datatypeenum.md)の値を示します。 表示される数値は、フィールドを定義するために使用される参照番号です。  
   
  各データ型の長さは固定長または可変長です。 サイズが事前に定義されていて、サイズ定義が必要であるため、固定長型は-1 のサイズで定義する必要があります。 可変長データ型では、1 ~ 32767 のサイズを使用できます。  
   
- 変数のデータ型によっては、代入列に示されている型に型を強制的に変換することができます。 **レコードセット**が作成され、いっぱいになるまで、置換は表示されません。 その後、必要に応じて、実際のデータ型を確認できます。  
+ 変数のデータ型によっては、代入列に示されている型に型を強制的に変換することができます。 **レコードセット** が作成され、いっぱいになるまで、置換は表示されません。 その後、必要に応じて、実際のデータ型を確認できます。  
   
-|長さ|一定|Number|代入|  
+|長さ|定数|数値|代入|  
 |------------|--------------|------------|------------------|  
 |固定|**adTinyInt**|16||  
 |固定|**adSmallInt**|2||  

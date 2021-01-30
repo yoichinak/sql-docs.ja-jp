@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - DataFactory object [ADO]
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e31d39f0820a485d4954d789fe2dfb398d8490b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 75c727e8c857dcb5c5922f52e56a37e99f223293
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720983"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163832"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory オブジェクト (RDSServer)
 > [!IMPORTANT]
@@ -27,17 +27,17 @@ ms.locfileid: "91720983"
   
  この既定のサーバー側ビジネスオブジェクトは、クライアント側アプリケーションの指定されたデータソースへの読み取り/書き込みデータアクセスを提供するメソッドを実装します。  
   
- RDSServer オブジェクトは、クライアント要求を受け取るサーバー側オートメーションオブジェクトとして設計されてい **ます** 。 インターネット実装では、Web サーバー上に存在し、ADISAPI コンポーネントによってインスタンス化されます。 **RDSServer**オブジェクトは、指定されたデータソースへの読み取りおよび書き込みアクセスを提供しますが、検証やビジネスルールのロジックは含まれません。  
+ RDSServer オブジェクトは、クライアント要求を受け取るサーバー側オートメーションオブジェクトとして設計されてい **ます** 。 インターネット実装では、Web サーバー上に存在し、ADISAPI コンポーネントによってインスタンス化されます。 **RDSServer** オブジェクトは、指定されたデータソースへの読み取りおよび書き込みアクセスを提供しますが、検証やビジネスルールのロジックは含まれません。  
   
- **RDSServer DataFactory**と RDS の両方で使用できるメソッドを使用する場合[。DataControl](./datacontrol-object-rds.md)オブジェクトでは、リモートデータサービスは RDS を使用し**ます。** 既定で DataControl バージョン。 既定では、基本的なプログラミングシナリオが想定されています。ここでは、 **RDSServer** が汎用的なサーバー側ビジネスオブジェクトとして機能します。  
+ **RDSServer DataFactory** と RDS の両方で使用できるメソッドを使用する場合 [。DataControl](./datacontrol-object-rds.md)オブジェクトでは、リモートデータサービスは RDS を使用し **ます。** 既定で DataControl バージョン。 既定では、基本的なプログラミングシナリオが想定されています。ここでは、 **RDSServer** が汎用的なサーバー側ビジネスオブジェクトとして機能します。  
   
  Web アプリケーションでタスク固有のサーバー側の処理を処理する場合は、 **RDSServer DataFactory** をカスタムビジネスオブジェクトに置き換えることができます。  
   
- [クエリ](./query-method-rds.md)や[CreateRecordset](./createrecordset-method-rds.md)などの**DataFactory**メソッドを呼び出すサーバー側ビジネスオブジェクトを作成できます。 これは、ビジネスオブジェクトに機能を追加するが、既存のリモートデータサービステクノロジを利用する場合に便利です。  
+ [クエリ](./query-method-rds.md)や [CreateRecordset](./createrecordset-method-rds.md)などの **DataFactory** メソッドを呼び出すサーバー側ビジネスオブジェクトを作成できます。 これは、ビジネスオブジェクトに機能を追加するが、既存のリモートデータサービステクノロジを利用する場合に便利です。  
   
- **DataFactory**オブジェクトは、クライアント側で実行されるスクリプトに対して安全ではありません。  
+ **DataFactory** オブジェクトは、クライアント側で実行されるスクリプトに対して安全ではありません。  
   
- **DataFactory**オブジェクトのクラス ID は9381D8F5-0288-11D0-9501-00AA00B911A5 です。  
+ **DataFactory** オブジェクトのクラス ID は9381D8F5-0288-11D0-9501-00AA00B911A5 です。  
   
  ここでは、次のトピックについて説明します。  
   

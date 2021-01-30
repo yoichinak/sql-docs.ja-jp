@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Table
@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f6803b4afc7f50a08f305a619e9c0ca328e5e988
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ba2064096c36bf6490daa8d472801de7594cfdcc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983253"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164017"
 ---
 # <a name="table-object-adox"></a>Table オブジェクト (ADOX)
 列、インデックス、およびキーを含むデータベーステーブルを表します。  
   
-## <a name="remarks"></a>解説  
- 次のコードでは、新しい **テーブル**を作成します。  
+## <a name="remarks"></a>コメント  
+ 次のコードでは、新しい **テーブル** を作成します。  
   
 ```  
 Dim obj As New Table  
 ```  
   
- **Table**オブジェクトのプロパティとコレクションを使用すると、次のことができます。  
+ **Table** オブジェクトのプロパティとコレクションを使用すると、次のことができます。  
   
 -   [Name プロパティ (ADOX)](./name-property-adox.md)プロパティを使用してテーブルを識別します。  
   
@@ -54,7 +54,7 @@ Dim obj As New Table
 > [!NOTE]
 >  データプロバイダーが **テーブル** オブジェクトのすべてのプロパティをサポートしていない可能性があります。 プロバイダーがサポートしていないプロパティの値を設定した場合、エラーが発生します。 新しい **テーブル** オブジェクトの場合、オブジェクトがコレクションに追加されるとエラーが発生します。 既存のオブジェクトの場合、プロパティの設定時にエラーが発生します。  
 >   
->  **テーブル**オブジェクトを作成するときに、オプションのプロパティに適切な既定値が存在しても、プロバイダーがプロパティをサポートしているかどうかは保証されません。 プロバイダーがサポートしているプロパティの詳細については、プロバイダーのドキュメントを参照してください。  
+>  **テーブル** オブジェクトを作成するときに、オプションのプロパティに適切な既定値が存在しても、プロバイダーがプロパティをサポートしているかどうかは保証されません。 プロバイダーがサポートしているプロパティの詳細については、プロバイダーのドキュメントを参照してください。  
   
  ここでは、次のトピックについて説明します。  
   

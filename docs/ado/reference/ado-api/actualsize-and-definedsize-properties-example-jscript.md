@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fb77fd1732162c745590d985fc1f0e29455545c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8b4f260d9fd130c695e4411bd1ccd428f94a4a27
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976943"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161806"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize および DefinedSize プロパティの例 (JScript)
-この例では、 [ActualSize](./actualsize-property-ado.md) プロパティと defined [size](./definedsize-property.md) プロパティを使用して、フィールドの定義済みのサイズと実際のサイズを表示します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Actualsizejs .asp**として保存します。  
+この例では、 [ActualSize](./actualsize-property-ado.md) プロパティと defined [size](./definedsize-property.md) プロパティを使用して、フィールドの定義済みのサイズと実際のサイズを表示します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Actualsizejs .asp** として保存します。  
   
 ```  
 <!-- BeginActualSizeJS -->  

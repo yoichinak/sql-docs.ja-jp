@@ -7,22 +7,22 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - onError event [ADO]
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56caf584d45b76315ff95cf6001a2ce1c882f579
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2596f0ff667a682a16ccf1a9c5678e678e83342e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724463"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163718"
 ---
 # <a name="onerror-event-rds"></a>onError イベント (RDS)
-**OnError**イベントは、操作中にエラーが発生するたびに呼び出されます。  
+**OnError** イベントは、操作中にエラーが発生するたびに呼び出されます。  
   
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
@@ -45,7 +45,7 @@ onError SCode, Description, Source, CancelDisplay
  エラーの原因となったクエリまたはコマンドを示す **文字列** 。  
   
  *CancelDisplay*  
- **ブール**値。 **True**に設定すると、ダイアログボックスにエラーが表示されなくなります。  
+ **ブール** 値。 **True** に設定すると、ダイアログボックスにエラーが表示されなくなります。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  
