@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_scriptpublicationcustomprocs
 - sp_scriptpublicationcustomprocs_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae7c24167b06f659006d44f469c92383adc96d21
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 733ca066ba7c11754fde7b82b228c7ac3796a42e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538612"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189967"
 ---
 # <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ## <a name="result-sets"></a>結果セット  
  1つの **nvarchar (4000)** 列で構成される結果セットを返します。 この結果セットは、カスタム ストアド プロシージャの作成に必要な、完全な CREATE PROCEDURE ステートメントを構成します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  カスタムプロシージャは、自動生成カスタムプロシージャ (0x2) スキーマオプションを指定しないと、アーティクルに対してスクリプト化されません。  
   
  次の手順は、 **sp_scriptpublicationcustomprocs** がサブスクライバーのプロシージャを作成するために使用します。このプロシージャを直接実行することはできません。  
@@ -76,7 +76,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **sp_scriptxupdproc**  
   
 ## <a name="permissions"></a>アクセス許可  
- 実行権限が **public**に付与されます。このストアドプロシージャ内で手続き型のセキュリティチェックが実行され、 **sysadmin** 固定サーバーロールのメンバーと、現在のデータベースの固定データベースロール **db_owner** のメンバーへのアクセスが制限されます。  
+ 実行権限が **public** に付与されます。このストアドプロシージャ内で手続き型のセキュリティチェックが実行され、 **sysadmin** 固定サーバーロールのメンバーと、現在のデータベースの固定データベースロール **db_owner** のメンバーへのアクセスが制限されます。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

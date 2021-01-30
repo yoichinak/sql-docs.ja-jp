@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_spaceused_TSQL
 - sp_spaceused
@@ -19,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b887b79a2e768f3c73a683ae6f60b06fb8d16a2c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 480b61493dc38ea91679e590f3abe63bde3a48c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466833"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189310"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -166,7 +166,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_used**|**varchar (18)**|構築中、アクティブ、およびマージターゲットの状態を持つチェックポイントファイルの合計サイズ (KB 単位)。 これは、メモリ最適化テーブルのデータに対してアクティブに使用されるディスク領域です。 データベースに少なくとも1つのコンテナーを含む memory_optimized_data ファイルグループがない場合は、NULL を返します。 *この列は、 @include_total_xtp_storage = 1 の場合にのみ含ま* れます。| 
 |**xtp_pending_truncation**|**varchar (18)**|状態 WAITING_FOR_LOG_TRUNCATION のチェックポイントファイルの合計サイズ (KB 単位)。 これは、ログの切り捨てが行われると、クリーンアップを待機しているチェックポイントファイルに使用されるディスク領域です。 データベースに少なくとも1つのコンテナーを含む memory_optimized_data ファイルグループがない場合は、NULL を返します。 この列は、の場合にのみ含まれ `@include_total_xtp_storage=1` ます。|
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **database_size** は  +  ログファイルのサイズが含まれていますが、**予約済み** で **unallocated_space** データページのみを考慮しているため、通常は予約済みの **未割り当て領域** の合計より大きくなります。 Azure Synapse Analytics では、このステートメントが true でない場合があります。 
   
  XML インデックスとフルテキストインデックスによって使用されるページは、両方の結果セットの **index_size** に含まれています。 *Objname* を指定すると、オブジェクトの XML インデックスとフルテキストインデックスのページも、**予約** された結果と **index_size** の結果の合計にカウントされます。  

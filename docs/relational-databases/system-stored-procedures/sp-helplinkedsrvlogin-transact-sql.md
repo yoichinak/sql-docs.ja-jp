@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helplinkedsrvlogin_TSQL
 - sp_helplinkedsrvlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4468902fc983e94656a7f00c457b51e26a752a82
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 274d1d9a39feac333d5b7d572ec475bb89444c2b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541747"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190018"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ## <a name="arguments"></a>引数  
 `[ @rmtsrvname = ] 'rmtsrvname'` ログインマッピングが適用されるリンクサーバーの名前を指定します。 *rmtsrvname* は **sysname**,、既定値は NULL です。 NULL の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行中のローカル コンピューターで定義されているすべてのリンク サーバーに対して定義された、すべてのログインのマッピングが返されます。  
   
-`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンクサーバー *rmtsrvname*へのマッピングを持つローカルサーバー上のログインを指定します。 *locallogin* は **sysname**,、既定値は NULL です。 NULL を指定すると、 *rmtsrvname* に定義されているすべてのログインマッピングが返されます。 NULL でない場合は、 *locallogin* から *rmtsrvname* へのマッピングが既に存在している必要があります。 *locallogin* には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows ユーザーを指定できます。 Windows ユーザーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、直接またはアクセス権が付与されている windows グループのメンバーシップを使用して、へのアクセスが許可されている必要があります。  
+`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンクサーバー *rmtsrvname* へのマッピングを持つローカルサーバー上のログインを指定します。 *locallogin* は **sysname**,、既定値は NULL です。 NULL を指定すると、 *rmtsrvname* に定義されているすべてのログインマッピングが返されます。 NULL でない場合は、 *locallogin* から *rmtsrvname* へのマッピングが既に存在している必要があります。 *locallogin* には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows ユーザーを指定できます。 Windows ユーザーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、直接またはアクセス権が付与されている windows グループのメンバーシップを使用して、へのアクセスが許可されている必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -54,10 +54,10 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |-----------------|---------------|-----------------|  
 |**リンクサーバー**|**sysname**|リンク サーバー名。|  
 |**ローカルログイン**|**sysname**|マッピングが適用されるローカルログイン。|  
-|**Is Self Mapping**|**smallint**|0 =**ローカルログイン**は、**リンクサーバー**に接続するときに**リモートログイン**にマップされます。<br /><br /> 1 = **ローカルログイン** は、 **リンクサーバー**に接続するときに同じログインとパスワードにマップされます。|  
-|**Remote Login**|**sysname**|**Isselfmapping**が0の場合、 **locallogin**にマップされている**LinkedServer**のログイン名。 **Isselfmapping**が1の場合、 **REMOTELOGIN**は NULL になります。|  
+|**Is Self Mapping**|**smallint**|0 =**ローカルログイン** は、**リンクサーバー** に接続するときに **リモートログイン** にマップされます。<br /><br /> 1 = **ローカルログイン** は、 **リンクサーバー** に接続するときに同じログインとパスワードにマップされます。|  
+|**Remote Login**|**sysname**|**Isselfmapping** が0の場合、 **locallogin** にマップされている **LinkedServer** のログイン名。 **Isselfmapping** が1の場合、 **REMOTELOGIN** は NULL になります。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ログインマッピングを削除する前に、 **sp_helplinkedsrvlogin** を使用して、関連するリンクサーバーを特定します。  
   
 ## <a name="permissions"></a>アクセス許可  

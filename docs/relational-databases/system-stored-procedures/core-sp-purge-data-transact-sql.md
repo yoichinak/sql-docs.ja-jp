@@ -1,13 +1,13 @@
 ---
 description: core.sp_purge_data (Transact-SQL)
-title: sp_purge_data (Transact-sql) |Microsoft Docs
+title: core.sp_purge_data (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_purge_data_TSQL
 - sp_purge_data
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff33927812ccab2f2665e80709bcf6074ebacc1a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4f198f3aa51d42b3dbc22d040fe9b3325f4361f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530401"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190062"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,12 +48,12 @@ core.sp_purge_data
   
 ## <a name="arguments"></a>引数  
  [ @retention_days =] *retention_days*  
- 管理データウェアハウスのテーブルにデータを保持する日数を指定します。 *Retention_days*よりも古いタイムスタンプを持つデータは削除されます。 *retention_days* は **smallint**,、既定値は NULL です。 指定する場合、値は正の値である必要があります。 NULL の場合は、core.snapshots ビューの valid_through 列の値によって、削除対象の行が判断されます。  
+ 管理データウェアハウスのテーブルにデータを保持する日数を指定します。 *Retention_days* よりも古いタイムスタンプを持つデータは削除されます。 *retention_days* は **smallint**,、既定値は NULL です。 指定する場合、値は正の値である必要があります。 NULL の場合は、core.snapshots ビューの valid_through 列の値によって、削除対象の行が判断されます。  
   
  [ @instance_name =] '*instance_name*'  
  コレクションセットのインスタンスの名前です。 *instance_name* は **sysname**,、既定値は NULL です。  
   
- *instance_name*には、コンピューター名と、 *computername*instancename という形式のインスタンス名で構成される完全修飾インスタンス名を指定する必要があり \\ *instancename*ます。 NULL の場合は、ローカルサーバー上の既定のインスタンスが使用されます。  
+ *instance_name* には、コンピューター名と、 *computername* instancename という形式のインスタンス名で構成される完全修飾インスタンス名を指定する必要があり \\ ます。 NULL の場合は、ローカルサーバー上の既定のインスタンスが使用されます。  
   
  [ @collection_set_uid =] '*collection_set_uid*'  
  コレクション セットの GUID を指定します。 *collection_set_uid* は **uniqueidentifier**,、既定値は NULL です。 NULL の場合、すべてのコレクションセットからの条件を満たす行が削除されます。 この値を取得するには、syscollector_collection_sets カタログ ビューに対してクエリを実行します。  
@@ -64,8 +64,8 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
- このプロシージャでは、保有期間に基づいて削除対象となる core.snapshots ビューの行が選択されます。 削除の対象となるすべての行が、snapshots_internal テーブルから削除されます。 前の行を削除すると、すべての管理データウェアハウステーブルで連鎖削除操作がトリガーされます。 これは、収集されたデータを格納するすべてのテーブルに対して定義されている ON DELETE CASCADE 句を使って実行されます。  
+## <a name="remarks"></a>コメント  
+ このプロシージャでは、保有期間に基づいて削除対象となる core.snapshots ビューの行が選択されます。 削除の対象となるすべての行が core.snapshots_internal テーブルから削除されます。 前の行を削除すると、すべての管理データウェアハウステーブルで連鎖削除操作がトリガーされます。 これは、収集されたデータを格納するすべてのテーブルに対して定義されている ON DELETE CASCADE 句を使って実行されます。  
   
  各スナップショットとその関連データは、明示的なトランザクションで削除されてからコミットされます。 そのため、パージ操作が手動で停止された場合、またはに指定された値を超えた場合は、コミットされて @duration いないデータのみが残ります。 このデータは、ジョブの次回の実行時に削除できます。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_targetservergroup_TSQL
 - sp_update_targetservergroup
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f48424649b3265ee810e48c08602140ce133fc98
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 631e1b316cb66c69ed220cf1e1d3ca09f8e45807
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541569"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189503"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'current_name'` 対象サーバーグループの名前。 *current_name* は **sysname**であり、既定値はありません。  
+`[ @name = ] 'current_name'` 対象サーバーグループの名前。 *current_name* は **sysname** であり、既定値はありません。  
   
-`[ @new_name = ] 'new_name'` 対象サーバーグループの新しい名前を指定します。 *new_name* は **sysname**であり、既定値はありません。  
+`[ @new_name = ] 'new_name'` 対象サーバーグループの新しい名前を指定します。 *new_name* は **sysname** であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
@@ -52,7 +52,7 @@ sp_update_targetservergroup
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin** 固定サーバーロールがユーザーに付与されている必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_update_targetservergroup** は、 **msdb** データベースから実行する必要があります。  
   
 ## <a name="examples"></a>例  

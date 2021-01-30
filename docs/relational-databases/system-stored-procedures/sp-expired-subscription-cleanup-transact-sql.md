@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_expired_subscription_cleanup
 - SP_EXPIRED_SUBSCRIPTION_CLEANUP_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62ee847522ef2f53c94418db5c2289a90185f8c5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1c555f2aaabf3e245261a07cc0bc7257e2601926
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543415"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187970"
 ---
 # <a name="sp_expired_subscription_cleanup-transact-sql"></a>sp_expired_subscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_expired_subscription_cleanup** は、すべての種類のレプリケーションで使用されます。  
   
- 有効期限が切れたサブスクリプションのクリーンアップジョブによって実行される**sp_expired_subscription_cleanup**は、24時間ごとにパブリケーションデータベースから期限切れのサブスクリプションを検出して削除します。 保有期間内にパブリッシャーと同期されていないサブスクリプションがある場合、パブリケーションは期限切れとして宣言され、サブスクリプションのトレースがパブリッシャーでクリーンアップされます。 詳細については、「 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)」を参照してください。  
+ 有効期限が切れたサブスクリプションのクリーンアップジョブによって実行される **sp_expired_subscription_cleanup** は、24時間ごとにパブリケーションデータベースから期限切れのサブスクリプションを検出して削除します。 保有期間内にパブリッシャーと同期されていないサブスクリプションがある場合、パブリケーションは期限切れとして宣言され、サブスクリプションのトレースがパブリッシャーでクリーンアップされます。 詳細については、「 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_expired_subscription_cleanup**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_expired_subscription_cleanup** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_mergesubscription_cleanup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   

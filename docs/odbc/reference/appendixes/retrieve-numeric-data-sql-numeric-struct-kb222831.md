@@ -5,33 +5,33 @@ editor: ''
 ms.prod: sql
 ms.technology: connectivity
 ms.devlang: cpp
-ms.topic: conceptual
+ms.topic: reference
 ms.custom: ''
 ms.date: 07/14/2017
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: 63575c952feb8fc21d56f48540a7cd4e54d5e11f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dce2f56d3257ac3b513ef3839f949258c6f018df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305123"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187178"
 ---
-# <a name="retrieve-numeric-data-with-sql_numeric_struct"></a>SQL\_数値\_構造体を使用して数値データを取得する
+# <a name="retrieve-numeric-data-with-sql_numeric_struct"></a>SQL \_ 数値構造体を使用して数値データを取得する \_
 
 この記事では、SQL Server ODBC ドライバーから数値構造に数値データを取得する方法について説明します。 また、特定の有効桁数と小数点以下桁数の値を使用して正しい値を取得する方法についても説明します。
 
-このデータ型により、アプリケーションは数値データを直接処理できます。 2003年のうち、odbc 3.0 では、 **\_SQL c\_の数値**によって識別される新しい odbc C データ型が導入されました。 このデータ型は、2017の時点でも関連します。
+このデータ型により、アプリケーションは数値データを直接処理できます。 2003年のうち、ODBC 3.0 では、 **SQL \_ c の \_ 数値** によって識別される新しい odbc C データ型が導入されました。 このデータ型は、2017の時点でも関連します。
 
-使用される C バッファーには、 **SQL\_\_数値構造体**の型定義があります。 この構造体には、数値データの有効桁数、小数点以下桁数、符号、および値を格納するためのフィールドがあります。 値自体は、一番左の位置から始まる最下位バイトを持つ、スケールされた整数として格納されます。 
+使用される C バッファーには、 **SQL \_ 数値 \_ 構造体** の型定義があります。 この構造体には、数値データの有効桁数、小数点以下桁数、符号、および値を格納するためのフィールドがあります。 値自体は、一番左の位置から始まる最下位バイトを持つ、スケールされた整数として格納されます。 
 
-記事「 [C データ型](c-data-types.md)」では、SQL\_数値\_構造体の形式と使用方法について詳しく説明しています。 一般的に、ODBC 3.0 プログラマーリファレンスの[付録 D](appendix-d-data-types.md)では、データ型について説明しています。
-
-
-## <a name="sql_numeric_struct-overview"></a>SQL\_数値\_構造体の概要
+記事「 [C データ型](c-data-types.md) 」では、SQL 数値構造体の形式と使用方法について詳しく説明して \_ \_ います。 一般的に、ODBC 3.0 プログラマーリファレンスの [付録 D](appendix-d-data-types.md) では、データ型について説明しています。
 
 
-SQL\_数値\_構造体は、sqltypes ヘッダーファイルで次のように定義されています。
+## <a name="sql_numeric_struct-overview"></a>SQL \_ 数値 \_ 構造体の概要
+
+
+SQL \_ 数値 \_ 構造体は、sqltypes ヘッダーファイルで次のように定義されています。
 
 
 ```c
@@ -50,7 +50,7 @@ typedef struct tagSQL_NUMERIC_STRUCT
 
 ドライバーは、アプリケーションにデータを返すたびに、既定の有効桁数 (ドライバー定義) と既定のスケール (0) を使用します。 アプリケーションで有効桁数と小数点以下桁数の値が指定されていない場合、ドライバーは既定値を想定し、数値データの小数点以下の部分を切り捨てます。
 
-## <a name="sql_numeric_struct-code-sample"></a>SQL\_数値\_構造体コードサンプル
+## <a name="sql_numeric_struct-code-sample"></a>SQL \_ 数値 \_ 構造体コードサンプル
 
 このコードサンプルでは、次の方法を示します。
 
@@ -265,7 +265,7 @@ long strtohextoval()
 ### <a name="applies-to-versions"></a>バージョンに適用されます
 
 
-SQL\_数値\_構造体に関する上記の情報は、次の製品バージョンに適用されます。
+SQL 数値構造体に関する上記の情報は、 \_ \_ 次の製品バージョンに適用されます。
 
 - Microsoft ODBC Driver for Microsoft SQL Server 3.7
 - Microsoft Data Access Components 2.1
@@ -274,10 +274,10 @@ SQL\_数値\_構造体に関する上記の情報は、次の製品バージョ�
 - Microsoft Data Access Components 2.7
 
 
-## <a name="sql_c_numeric-overview"></a>SQL\_C\_数値の概要
+## <a name="sql_c_numeric-overview"></a>SQL \_ C \_ 数値の概要
 
 
-次のサンプルプログラムでは、123.45 を\_テーブル\_に挿入することによって、SQL C の数値の使用方法を示しています。 このテーブルでは、列は数値または10進数の有効桁数が5で、小数点以下桁数が2で定義されています。
+次のサンプルプログラムでは、123.45 を \_ \_ テーブルに挿入することによって、SQL C の数値の使用方法を示しています。 このテーブルでは、列は数値または10進数の有効桁数が5で、小数点以下桁数が2で定義されています。
 
 このプログラムを実行するために使用する ODBC ドライバーでは、ODBC 3.0 機能がサポートされている必要があります。
 

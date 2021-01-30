@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_fulltext_service
 - sp_fulltext_service_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f29ad11ca5b1df94e445466a5402637a2abab023
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6fbbbe3451994687542f755b4d48953c7dbbe2e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546122"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187324"
 ---
 # <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @action = ] 'action'` 変更またはリセットするプロパティを指定します。 *アクション* は **nvarchar (100),、** 既定値はありません。 *C*プロパティとその説明、および設定できる値の一覧については、「 *value*引数」の表を参照してください。 この引数によって返されるプロパティには、データ型、現在の実行値、最小値または最大値、非推奨のステータスなどがあります。  
+`[ @action = ] 'action'` 変更またはリセットするプロパティを指定します。 *アクション* は **nvarchar (100),、** 既定値はありません。 *C* プロパティとその説明、および設定できる値の一覧については、「 *value* 引数」の表を参照してください。 この引数によって返されるプロパティには、データ型、現在の実行値、最小値または最大値、非推奨のステータスなどがあります。  
   
-`[ @value = ] value` 指定されたプロパティの値です。 *値* は **sql_variant**,、既定値は NULL です。 @valueが null の場合 **、sp_fulltext_service**は現在の設定を返します。 次の表は、アクション プロパティとその説明、および設定できる値の一覧です。  
+`[ @value = ] value` 指定されたプロパティの値です。 *値* は **sql_variant**,、既定値は NULL です。 @valueが null の場合 **、sp_fulltext_service** は現在の設定を返します。 次の表は、アクション プロパティとその説明、および設定できる値の一覧です。  
   
 > [!NOTE]  
 >  次の操作は、の将来のリリースで削除される予定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です: **clean_up**、 **connect_timeout**、 **data_timeout**、および **resource_usage**。 新しい開発作業ではこれらのアクションの使用を避け、現在これらのアクションを使用しているアプリケーションの変更を検討してください。  
@@ -59,9 +59,9 @@ sp_fulltext_service [ [@action=] 'action'
 |**master_merge_dop**|**int**|マスターマージプロセスによって使用されるスレッドの数を指定します。 この値は、使用可能な Cpu または CPU コアの数を超えることはできません。<br /><br /> この引数が指定されていない場合、サービスは4のうちの小さい方、または使用可能な cpu または CPU コアの数を使用します。|  
 |**pause_indexing**|**int**|現在一時停止されている場合は、フルテキストインデックス作成を一時停止するか、現在実行中であるか再開するかを指定します。<br /><br /> 0 = サーバー インスタンスのフルテキスト インデックス作成を再開する<br /><br /> 1 = サーバーインスタンスのフルテキストインデックス作成操作を一時停止します。|  
 |**resource_usage**|**int**|以降のバージョンには関数がない [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ため、は無視されます。|  
-|**update_languages**|NULL|フルテキスト検索に登録された言語の一覧を更新します。 これらの言語は、インデックス作成とフルテキストクエリの構成時に指定します。 フィルターデーモンホストは、 **varbinary**、 **varbinary (max)**、 **image**、 **xml**など、フルテキストインデックス作成のために、データ型に格納されている .docx など、対応するファイル形式からテキスト情報を抽出するためにフィルターを使用します。<br /><br /> 詳細については、「 [登録済みのフィルターおよびワード ブレーカーの表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)」を参照してください。|  
+|**update_languages**|NULL|フルテキスト検索に登録された言語の一覧を更新します。 これらの言語は、インデックス作成とフルテキストクエリの構成時に指定します。 フィルターデーモンホストは、 **varbinary**、 **varbinary (max)**、 **image**、 **xml** など、フルテキストインデックス作成のために、データ型に格納されている .docx など、対応するファイル形式からテキスト情報を抽出するためにフィルターを使用します。<br /><br /> 詳細については、「 [登録済みのフィルターおよびワード ブレーカーの表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)」を参照してください。|  
 |**upgrade_option**|**int**|データベースを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からそれより新しいバージョンにアップグレードする際のフルテキスト インデックスの移行方法を制御します。 このプロパティは、データベースのインポート、データベース バックアップの復元、ファイル バックアップの復元、またはデータベース コピー ウィザードを使用したデータベースのコピーによってアップグレードする場合に適用されます。<br /><br /> つぎのいずれかです。<br /><br /> 0 = フルテキストカタログは、新しい拡張されたワードブレーカーを使用して再構築されます。 インデックスの再構築には時間がかかり、アップグレード後にかなりの量の CPU とメモリが必要になる可能性があります。<br /><br /> 1 = フルテキスト カタログがリセットされます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のフルテキスト カタログ ファイルは削除されますが、フルテキスト カタログのメタデータおよびフルテキスト インデックスは保持されます。 アップグレード後、すべてのフルテキスト インデックスで変更の追跡は無効化されており、クロールは自動的には開始されません。 アップグレードの完了後、手動で完全作成を実行するまで、カタログは空のままになります。<br /><br /> 2 = フルテキストカタログがインポートされます。 通常、インポートの方が再構築よりもかなり高速に処理されます。 たとえば、CPU を 1 つだけ使用している場合、インポートは、再構築の約 10 倍の速さで実行されます。 ただし、インポートされたフルテキストカタログは、新しい拡張されたワードブレーカーを使用しないため、最終的にフルテキストカタログを再構築することが必要になる場合があります。<br /><br /> 注: 再構築はマルチスレッドモードで実行できます。また、10個を超える Cpu が使用可能な場合は、再構築によってすべての Cpu を使用できるようになると、インポートよりも再構築が高速に実行される可能性があります。<br /><br /> フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 このオプションは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースでのみ使用できます。<br /><br /> フルテキスト アップグレード オプションの選択については、「[フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」をご覧ください。<br /><br /> 注: でこのプロパティを設定するに [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、" **フルテキストアップグレードオプション** " プロパティを使用します。 詳細については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。|  
-|**verify_signature**|**int**|フルテキストエンジンによって署名付きバイナリのみが読み込まれるかどうかを示します。 既定では、信頼された署名付きバイナリのみが読み込まれます。<br /><br /> 1 = 信頼された署名付きバイナリのみを確認して読み込む (既定値)<br /><br /> 0 = バイナリが署名付きかどうかを確認しない|  
+|**verify_signature**|**int**|Full-Text エンジンによって署名付きバイナリのみが読み込まれるかどうかを示します。 既定では、信頼された署名付きバイナリのみが読み込まれます。<br /><br /> 1 = 信頼された署名付きバイナリのみを確認して読み込む (既定値)<br /><br /> 0 = バイナリが署名付きかどうかを確認しない|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -70,7 +70,7 @@ sp_fulltext_service [ [@action=] 'action'
  なし  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_fulltext_service**を実行できるのは、 **serveradmin**固定サーバーロールのメンバー、またはシステム管理者だけです。  
+ **Sp_fulltext_service** を実行できるのは、 **serveradmin** 固定サーバーロールのメンバー、またはシステム管理者だけです。  
   
 ## <a name="examples"></a>例  
   

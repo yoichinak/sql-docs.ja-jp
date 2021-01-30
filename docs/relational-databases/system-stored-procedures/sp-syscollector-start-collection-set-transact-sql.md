@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_start_collection_set_TSQL
 - sp_syscollector_start_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6dbfb03388d78745e7765d48fa591ffe18b66a33
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 839b9ef5a7d20850d2f8a9658a9c7ba875757ede
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534956"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190575"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,14 +44,14 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @collection_set_id = ] collection_set_id` コレクションセットの一意なローカル識別子を設定します。 *collection_set_id* は **int** で、既定値は NULL です。 *名前*が NULL の場合、 *collection_set_id*には値が必要です。  
+`[ @collection_set_id = ] collection_set_id` コレクションセットの一意なローカル識別子を設定します。 *collection_set_id* は **int** で、既定値は NULL です。 *名前* が NULL の場合、 *collection_set_id* には値が必要です。  
   
-`[ @name = ] 'name'` コレクションセットの名前を指定します。 *名前* は **sysname** で、既定値は NULL です。 *collection_set_id*が NULL の場合、*名前*には値を指定する必要があります。  
+`[ @name = ] 'name'` コレクションセットの名前を指定します。 *名前* は **sysname** で、既定値は NULL です。 *collection_set_id* が NULL の場合、*名前* には値を指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syscollector_create_collection_set を msdb システム データベースのコンテキストで実行し、SQL Server エージェントを有効にする必要があります。  
   
  このプロシージャをスケジュールがないコレクション セットに対して実行すると、失敗します。 コレクションセットにスケジュールがない場合 (コレクションモードが非キャッシュに設定されている場合など)、 [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) ストアドプロシージャを使用してコレクションセットを開始します。  

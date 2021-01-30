@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_foreignkeys_TSQL
 - sp_foreignkeys
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a87d51fff7179ece3442e2459d8d2c5a96c8029
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 377ef64c76238e2e840107dbbe6b32dc9ba4c00f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543404"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189563"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,25 +46,25 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @table_server = ] 'table_server'` テーブル情報を返すリンクサーバーの名前を指定します。 *table_server* は **sysname**であり、既定値はありません。  
+`[ @table_server = ] 'table_server'` テーブル情報を返すリンクサーバーの名前を指定します。 *table_server* は **sysname** であり、既定値はありません。  
   
 `[ @pktab_name = ] 'pktab_name'` 主キーを持つテーブルの名前を指定します。 *pktab_name* は **sysname**,、既定値は NULL です。  
   
-`[ @pktab_schema = ] 'pktab_schema'` 主キーを持つスキーマの名前を指定します。 *pktab_schema*は **sysname**,、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、所有者名に相当します。  
+`[ @pktab_schema = ] 'pktab_schema'` 主キーを持つスキーマの名前を指定します。 *pktab_schema* は **sysname**,、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、所有者名に相当します。  
   
-`[ @pktab_catalog = ] 'pktab_catalog'` 主キーを持つカタログの名前を指定します。 *pktab_catalog*は **sysname**,、既定値は NULL です。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これにはデータベース名が含まれます。  
+`[ @pktab_catalog = ] 'pktab_catalog'` 主キーを持つカタログの名前を指定します。 *pktab_catalog* は **sysname**,、既定値は NULL です。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これにはデータベース名が含まれます。  
   
-`[ @fktab_name = ] 'fktab_name'` 外部キーを持つテーブルの名前を指定します。 *fktab_name*は **sysname**,、既定値は NULL です。  
+`[ @fktab_name = ] 'fktab_name'` 外部キーを持つテーブルの名前を指定します。 *fktab_name* は **sysname**,、既定値は NULL です。  
   
-`[ @fktab_schema = ] 'fktab_schema'` 外部キーを持つスキーマの名前を指定します。 *fktab_schema*は **sysname**,、既定値は NULL です。  
+`[ @fktab_schema = ] 'fktab_schema'` 外部キーを持つスキーマの名前を指定します。 *fktab_schema* は **sysname**,、既定値は NULL です。  
   
-`[ @fktab_catalog = ] 'fktab_catalog'` 外部キーを持つカタログの名前を指定します。 *fktab_catalog*は **sysname**,、既定値は NULL です。  
+`[ @fktab_catalog = ] 'fktab_catalog'` 外部キーを持つカタログの名前を指定します。 *fktab_catalog* は **sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
   
 ## <a name="result-sets"></a>結果セット  
- さまざまな DBMS 製品では、3つの要素で構成するテーブル (_カタログ_) がサポート**しています。**_スキーマ_**。**_テーブル_)。これは、結果セットで表されます。  
+ さまざまな DBMS 製品では、3つの要素で構成するテーブル (_カタログ_) がサポート **しています。**_スキーマ_**。**_テーブル_)。これは、結果セットで表されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -85,8 +85,8 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  結果セットでは、FK_NAME 列と PK_NAME 列は常に NULL を返します。  
   
-## <a name="remarks"></a>解説  
- **sp_foreignkeys**は、 *table_server*に対応する OLE DB プロバイダーの**IDBSchemaRowset**インターフェイスの FOREIGN_KEYS 行セットを照会します。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および *列* の各パラメーターがこのインターフェイスに渡されます。  
+## <a name="remarks"></a>コメント  
+ **sp_foreignkeys** は、 *table_server* に対応する OLE DB プロバイダーの **IDBSchemaRowset** インターフェイスの FOREIGN_KEYS 行セットを照会します。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および *列* の各パラメーターがこのインターフェイスに渡されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  

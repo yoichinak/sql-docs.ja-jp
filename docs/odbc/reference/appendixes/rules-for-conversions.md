@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - numeric data type [ODBC], literals
 - conversions with numeric literals [ODBC]
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e3d9a931a960ce1bd404b6616b4a6e4f0d37c4a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b015a60e376e47a4c3c931d4739a884db23fc98b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424954"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187134"
 ---
 # <a name="rules-for-conversions"></a>変換規則
 このセクションの規則は、数値リテラルを含む変換に適用されます。 これらの規則のために、次の用語が定義されています。  
   
--   *ストアの割り当て:* データベースのテーブル列にデータを送信する場合。 これは、 **Sqlexecute**、 **SQLExecDirect**、および **SQLSetPos**の呼び出し中に発生します。 ストアの割り当て時に、"ターゲット" はデータベース列を参照し、"ソース" はアプリケーションバッファー内のデータを参照します。  
+-   *ストアの割り当て:* データベースのテーブル列にデータを送信する場合。 これは、 **Sqlexecute**、 **SQLExecDirect**、および **SQLSetPos** の呼び出し中に発生します。 ストアの割り当て時に、"ターゲット" はデータベース列を参照し、"ソース" はアプリケーションバッファー内のデータを参照します。  
   
--   *取得の割り当て:* データベースからアプリケーションバッファーにデータを取得する場合。 これは、 **Sqlfetch**、 **SQLGetData**、 **sqlfetchscroll**、 **SQLSetPos**の呼び出し中に発生します。 取得の割り当て中、"ターゲット" はアプリケーションバッファーを指し、"ソース" はデータベース列を参照します。  
+-   *取得の割り当て:* データベースからアプリケーションバッファーにデータを取得する場合。 これは、 **Sqlfetch**、 **SQLGetData**、 **sqlfetchscroll**、 **SQLSetPos** の呼び出し中に発生します。 取得の割り当て中、"ターゲット" はアプリケーションバッファーを指し、"ソース" はデータベース列を参照します。  
   
 -   *CS:* 文字ソースの値。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88424954"
 ## <a name="character-source-to-numeric-target"></a>数値ターゲットへの文字ソース  
  文字ソース (CS) から数値ターゲット (NT) に変換するための規則を次に示します。  
   
-1.  Cs は、cs の先頭または末尾のスペースを削除することによって取得した値に置き換えます。 CS が有効な *数値リテラル*でない場合、SQLSTATE 22018 (キャストの指定に無効な文字値) が返されます。  
+1.  Cs は、cs の先頭または末尾のスペースを削除することによって取得した値に置き換えます。 CS が有効な *数値リテラル* でない場合、SQLSTATE 22018 (キャストの指定に無効な文字値) が返されます。  
   
 2.  CS を、小数点の前の先頭のゼロ、小数点の後のゼロ、またはその両方を削除して取得した値に置き換えます。  
   
@@ -68,9 +68,9 @@ ms.locfileid: "88424954"
   
          NS が0の場合、YP は0になります。  
   
-         実際の*数値リテラル* の定義に準拠し、解釈された値が NS の絶対値である最短文字列を ysn にします。 YSN の長さが、NS のデータ型の (*precision* + 1) よりも小さい場合は、YP を ysn にします。  
+         実際の *数値リテラル* の定義に準拠し、解釈された値が NS の絶対値である最短文字列を ysn にします。 YSN の長さが、NS のデータ型の (*precision* + 1) よりも小さい場合は、YP を ysn にします。  
   
-         それ以外の場合、YP は、 *概数リテラル* の定義に準拠した最短の文字列です。解釈された値は、NS の絶対値で、 *仮数* は ' 0 ' 以外の 1 *桁* で構成され、その後に *ピリオド* と *符号なし整数*が続きます。  
+         それ以外の場合、YP は、 *概数リテラル* の定義に準拠した最短の文字列です。解釈された値は、NS の絶対値で、 *仮数* は ' 0 ' 以外の 1 *桁* で構成され、その後に *ピリオド* と *符号なし整数* が続きます。  
   
 3.  大文字と小文字の区別:  
   

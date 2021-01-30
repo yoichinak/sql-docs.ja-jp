@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_estimated_rowsize_reduction_for_vardecimal
 - sp_estimated_rowsize_reduction_for_vardecimal_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f4ab6fbd33edef26f9cf1d37daf6688a68d8d5eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ea1d65f193bc4d6fd42278e62e39d6fd380d88bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527922"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187314"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,10 +61,10 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**decimal (12, 2)**|Vardecimal ストレージ形式が使用されている場合の平均行サイズを表します。|  
 |**row_count**|**int**|テーブル内の行の数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  テーブルで vardecimal ストレージ形式を有効にした場合の結果の節約量を見積もるには、 **sp_estimated_rowsize_reduction_for_vardecimal** を使用します。 たとえば、行の平均サイズを40% に減らすことができる場合は、テーブルのサイズを40% 小さくすることができます。 ただし FILL FACTOR と行サイズによっては、テーブル領域を削減できない場合もあります。 たとえば、長さ 8,000 バイトの行があり、そのサイズを 40% を削減したとしても、データ ページに収まるのは 1 行のみであることに変わりはないので、領域は削減されません。  
   
- **Sp_estimated_rowsize_reduction_for_vardecimal**の結果によってテーブルが大きくなることが示された場合、テーブルの多くの行では decimal データ型の有効桁数がほぼすべて使用されます。また、vardecimal ストレージ形式に必要な少量のオーバーヘッドの追加は、vardecimal ストレージ形式の節約よりも大きくなります。 このようなまれなケースでは、vardecimal ストレージ形式を有効にしないでください。  
+ **Sp_estimated_rowsize_reduction_for_vardecimal** の結果によってテーブルが大きくなることが示された場合、テーブルの多くの行では decimal データ型の有効桁数がほぼすべて使用されます。また、vardecimal ストレージ形式に必要な少量のオーバーヘッドの追加は、vardecimal ストレージ形式の節約よりも大きくなります。 このようなまれなケースでは、vardecimal ストレージ形式を有効にしないでください。  
   
  テーブルで vardecimal ストレージ形式が有効になっている場合は、 **sp_estimated_rowsize_reduction_for_vardecimal** を使用して、vardecimal ストレージ形式が無効になっている場合に行の平均サイズを見積もることができます。  
   

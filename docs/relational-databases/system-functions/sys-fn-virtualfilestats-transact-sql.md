@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_virtualfilestats_TSQL
 - fn_virtualfilestats
@@ -22,12 +22,12 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c49575ef666cf35c26dd4e924cbb75b17cb9c4e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 755ec3806e72ab535588c6da15075ebf0beb4043
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170144"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187389"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +67,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**FileHandle**|**bigint**|ファイルハンドルの値。|  
 |**BytesOnDisk**|**bigint**|ディスク上の物理ファイルサイズ (バイト数)。<br /><br /> データベースファイルの場合、この値は **sys.database_files** の **サイズ** と同じですが、ページではなくバイト単位で表現されます。<br /><br /> データベーススナップショットのスパースファイルの場合、これはオペレーティングシステムがファイルに対して使用している領域です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **fn_virtualfilestats** は、ファイルで実行された i/o の合計数などの統計情報を提供するシステムテーブル値関数です。 この関数を使用すると、ユーザーがファイルの読み取りまたは書き込みを待機する時間の長さを追跡できます。 また、関数は、大量の i/o アクティビティが発生しているファイルを特定するのにも役立ちます。  
   
 ## <a name="permissions"></a>アクセス許可  

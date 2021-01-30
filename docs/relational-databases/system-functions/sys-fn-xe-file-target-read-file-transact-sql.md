@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_xe_file_target_read_file_TSQL
 - fn_xe_file_target_read_file
@@ -23,12 +23,12 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8af7ee0bc6c899026e51110264f2b28c2f579dd7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a592609cce6805105e61679e54857312e6296b6f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096355"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187378"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|**適用対象**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />イベントの日付と時刻 (UTC タイムゾーン)。 NULL 値は許可されません。|  
 
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  で **sys.fn_xe_file_target_read_file** を実行して大きな結果セットを読み取る [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と、エラーが発生する可能性があります。 結果を **ファイル** モード (**Ctrl + Shift + F キー**) に使用して、大きな結果セットをファイルにエクスポートし、代わりに別のツールでファイルを読み取ります。  
   
 ## <a name="permissions"></a>アクセス許可  

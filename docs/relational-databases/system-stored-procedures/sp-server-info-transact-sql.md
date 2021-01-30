@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_server_info
 - sp_server_info_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b8460daf65826290942f28fe65af6e5fa9f9b416
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: ec0ddfe23b45f0ff0cca4db65b616f99db080c69
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98765775"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190783"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-sql)
 
@@ -60,7 +60,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**2**|DBMS_VER|Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] *xxxx*  -  *x xxxx xxxx*<br/><br> たとえば、`Microsoft SQL Server 2017 - 14.0.3257.3` のように指定します。|  
-|"**10**"|OWNER_TERM|owner|  
+|**10**|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|table|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
 |**13**|TABLE_LENGTH<br /><br /> テーブル名の最大文字数です。|128|  
@@ -88,7 +88,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> ストアド プロシージャを DB-Library のリモート ストアド プロシージャ関数を使用して実行できるかどうかを示します。|Y|  
 |**500**|SYS_SPROC_VERSION<br /><br /> 現在実装されているストアド プロシージャ カタログのバージョンを示します。|現在のバージョン番号|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_server_info** は、ODBC で **SQLGetInfo** によって提供される情報のサブセットを返します。  
   
 ## <a name="permissions"></a>アクセス許可  
