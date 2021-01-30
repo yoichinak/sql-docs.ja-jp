@@ -1,5 +1,5 @@
 ---
-description: sp_change_users_login (Transact-sql)
+description: sp_change_users_login (Transact-SQL)
 title: sp_change_users_login (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/13/2016
@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_users_login
 - sp_change_users_login_TSQL
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c82241030646e2ef20c978cb1905cf836f9a589b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109b2a6aa015f8f66a327714264aa986060f9a0c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447414"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203717"
 ---
-# <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-sql)
+# <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   既存のデータベースユーザーをログインにマップ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 
@@ -53,18 +53,18 @@ sp_change_users_login [ @Action = ] 'action'
   
 |値|説明|  
 |-----------|-----------------|  
-|**Auto_Fix**|現在のデータベース内の sys.database_principals システム カタログ ビューにあるユーザー エントリを、同じ名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにリンクします。 同じ名前のログインが存在しない場合は、新しく作成されます。 **Auto_Fix**ステートメントの結果を調べて、正しいリンクが実際に作成されていることを確認します。 セキュリティを重視する状況では **Auto_Fix** を使用しないようにしてください。<br /><br /> **Auto_Fix**を使用する場合は、ログインがまだ存在しない場合は*ユーザー*と*パスワード*を指定する必要があります。そうでない場合は、*ユーザー*を指定する必要がありますが、*パスワード*は無視されます。 *ログイン* は NULL にする必要があります。 *ユーザー* は、現在のデータベースの有効なユーザーである必要があります。 ログインに別のユーザーをマップすることはできません。|  
-|**Report**|現在のデータベース内で、どのログインにもリンクされていないユーザーと、対応するセキュリティ識別子 (SID) を一覧表示します。 *ユーザー*、 *ログイン*、および *パスワード* は NULL であるか、指定されていません。<br /><br /> システムテーブルを使用するクエリでレポートオプションを置き換えるには、 **server_prinicpals** 内のエントリを、 **database_principals**のエントリと比較します。|  
-|**Update_One**|現在のデータベース内の指定された *ユーザー* を既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *ログイン*にリンクします。 *ユーザー* と *ログイン* を指定する必要があります。 *パスワード* は NULL であるか、指定されていません。|  
+|**Auto_Fix**|現在のデータベース内の sys.database_principals システム カタログ ビューにあるユーザー エントリを、同じ名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにリンクします。 同じ名前のログインが存在しない場合は、新しく作成されます。 **Auto_Fix** ステートメントの結果を調べて、正しいリンクが実際に作成されていることを確認します。 セキュリティを重視する状況では **Auto_Fix** を使用しないようにしてください。<br /><br /> **Auto_Fix** を使用する場合は、ログインがまだ存在しない場合は *ユーザー* と *パスワード* を指定する必要があります。そうでない場合は、*ユーザー* を指定する必要がありますが、*パスワード* は無視されます。 *ログイン* は NULL にする必要があります。 *ユーザー* は、現在のデータベースの有効なユーザーである必要があります。 ログインに別のユーザーをマップすることはできません。|  
+|**Report**|現在のデータベース内で、どのログインにもリンクされていないユーザーと、対応するセキュリティ識別子 (SID) を一覧表示します。 *ユーザー*、 *ログイン*、および *パスワード* は NULL であるか、指定されていません。<br /><br /> システムテーブルを使用するクエリでレポートオプションを置き換えるには、 **sys.server_prinicpals** のエントリと **sys.database_principals** のエントリを比較します。|  
+|**Update_One**|現在のデータベース内の指定された *ユーザー* を既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *ログイン* にリンクします。 *ユーザー* と *ログイン* を指定する必要があります。 *パスワード* は NULL であるか、指定されていません。|  
   
  [ @UserNamePattern =] '*ユーザー*'  
- 現在のデータベース内のユーザーの名前を指定します。 *user* の部分は **sysname**で、既定値は NULL です。  
+ 現在のデータベース内のユーザーの名前を指定します。 *user* の部分は **sysname** で、既定値は NULL です。  
   
  [ @LoginName =] '*login*'  
  ログインの名前を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
  [ @Password =] '*パスワード*'  
- Auto_Fix を指定して作成された新しいログインに割り当てられたパスワードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定します。 **Auto_Fix** 一致するログインが既に存在する場合、ユーザーとログインはマップされ、 *パスワード* は無視されます。 一致するログインが存在しない場合、sp_change_users_login によって新しいログインが作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *パスワード* が新しいログインのパスワードとして割り当てられます。 *パスワード* は **sysname**であり、NULL にすることはできません。  
+ Auto_Fix を指定して作成された新しいログインに割り当てられたパスワードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定します。  一致するログインが既に存在する場合、ユーザーとログインはマップされ、 *パスワード* は無視されます。 一致するログインが存在しない場合、sp_change_users_login によって新しいログインが作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *パスワード* が新しいログインのパスワードとして割り当てられます。 *パスワード* は **sysname** であり、NULL にすることはできません。  
   
 > **重要!!** 常に[強力なパスワード](../../relational-databases/security/strong-passwords.md)を使用してください。
   
@@ -76,9 +76,9 @@ sp_change_users_login [ @Action = ] 'action'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |UserName|**sysname**|データベースユーザー名。|  
-|UserSID|**varbinary (85)**|ユーザーのセキュリティ識別子。|  
+|UserSID|**varbinary(85)**|ユーザーのセキュリティ識別子。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_change_users_login は、現在のデータベースのデータベース ユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとリンクする場合に使用します。 ユーザーのログインが既に変更されている場合は、sp_change_users_login を使用してユーザーを新しいログインにリンクすれば、ユーザーの権限が失われることはありません。 新しい *ログイン* を sa にすることはできません。また、 *ユーザー* を dbo、guest、または INFORMATION_SCHEMA ユーザーにすることはできません。  
   
  sp_change_users_login は、データベース ユーザーを Windows レベルのプリンシパル、証明書、または非対称キーにマップする場合は使用できません。  
@@ -88,7 +88,7 @@ sp_change_users_login [ @Action = ] 'action'
  ユーザー定義のトランザクション内では、sp_change_users_login は実行できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- db_owner 固定データベース ロールのメンバーシップが必要です。 **Auto_Fix**オプションを指定できるのは、sysadmin 固定サーバーロールのメンバーだけです。  
+ db_owner 固定データベース ロールのメンバーシップが必要です。 **Auto_Fix** オプションを指定できるのは、sysadmin 固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>例  
   
@@ -123,12 +123,12 @@ EXEC sp_change_users_login 'Auto_Fix', 'Mary', NULL, 'B3r12-3x$098f6';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

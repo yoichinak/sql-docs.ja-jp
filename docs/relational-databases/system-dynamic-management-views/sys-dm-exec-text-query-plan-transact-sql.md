@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_text_query_plan
 - sys.dm_exec_text_query_plan_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a085041b90652dbdaa3408b0780338df88322751
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 95259700c5235ebe748ae4eaaa0f320df8c7a595
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096578"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192948"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +94,7 @@ sys.dm_exec_text_query_plan
 |**暗号**|**bit**|対応するプロシージャが暗号化されているかどうか。<br /><br /> 0 = 暗号化されていない<br /><br /> 1 = 暗号化されている<br /><br /> NULL 値は許可されません。|  
 |**query_plan**|**nvarchar(max)**|*Plan_handle* で指定されたクエリ実行プランのコンパイル時のプラン表示表現を格納します。 プラン表示はテキスト形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアド プロシージャ コール、ユーザー定義関数コールなどを含むバッチごとに、1 つのプランが生成されます。<br /><br /> NULL 値は許可されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次の場合、**sys.dm_exec_text_query_plan** で返されるテーブルの **plan** 列にはプラン表示の出力は返されません。  
   
 -   *Plan_handle* を使用して指定されたクエリプランがプランキャッシュから削除されている場合、返されるテーブルの **query_plan** 列は null になります。 たとえば、プラン ハンドルがキャプチャされてから **sys.dm_exec_text_query_plan** に使用されるまでに遅延が生じると、クエリ プランがキャッシュから削除されることがあります。  

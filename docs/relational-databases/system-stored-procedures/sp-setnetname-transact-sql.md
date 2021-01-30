@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setnetname
 - sp_setnetname_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 71584754f3b175201623a222feae6722f39809ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f84120579d3eae3b2755eaab89eff137af6190db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543073"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193502"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>引数  
- ** @server = '** *サーバー* **'**  
- ユーザーが作成したリモート ストアド プロシージャ呼び出しの構文で参照しているリモート サーバーの名前を指定します。 この*サーバー*を使用するには、既に1行の**サーバーが存在**している必要があります。 *server* のデータ型は **sysname**で、既定値はありません。  
+ **@server = '** *サーバー* **'**  
+ ユーザーが作成したリモート ストアド プロシージャ呼び出しの構文で参照しているリモート サーバーの名前を指定します。 この *サーバー* を使用するには、既に1行の **サーバーが存在** している必要があります。 *server* のデータ型は **sysname** で、既定値はありません。  
   
- ** @netname = '** *network_name* **'**  
- リモートストアドプロシージャ呼び出しが行われるコンピューターのネットワーク名を指定します。 *network_name* は **sysname**であり、既定値はありません。  
+ **@netname = '** *network_name* **'**  
+ リモートストアドプロシージャ呼び出しが行われるコンピューターのネットワーク名を指定します。 *network_name* は **sysname** であり、既定値はありません。  
   
  この名前は Windows コンピューター名と一致する必要があり、名前には [!INCLUDE[msCoName](../../includes/msconame-md.md)] 識別子で許可されていない文字を含めることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -72,10 +72,10 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ```  
   
 > [!NOTE]  
->  **Sp_setnetname**を使用してリンクサーバーをローカルサーバーに戻すことはサポートされていません。 この方法で参照されているサーバーは、分散トランザクションに参加できません。  
+>  **Sp_setnetname** を使用してリンクサーバーをローカルサーバーに戻すことはサポートされていません。 この方法で参照されているサーバーは、分散トランザクションに参加できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールと**setupadmin**固定サーバーロールのメンバーシップが必要です。  
+ **Sysadmin** 固定サーバーロールと **setupadmin** 固定サーバーロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リモートストアドプロシージャ呼び出しを実行するためにで使用される一般的な管理シーケンスを示しています。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_sql_referenced_entities_TSQL
 - dm_sql_referenced_entities
@@ -21,12 +21,12 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5b90048297d0573749f4751a3730beb87d56ddb
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1ed4aebeaf422b47dd94531c5d0a8a491cf9490e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094006"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203334"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
@@ -115,7 +115,7 @@ sys.dm_sql_referenced_entities (
   
  列の依存関係を解決できない場合、エラー2020を返します。 このエラーによって、クエリからオブジェクト レベルの依存関係が返されなくなることはありません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この関数は、任意のデータベースのコンテキストで実行して、サーバーレベルの DDL トリガーを参照するエンティティを返すことができます。  
   
  次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 依存関係情報は、ルール、既定値、一時テーブル、一時ストアドプロシージャ、またはシステムオブジェクトに対して作成または管理されません。  

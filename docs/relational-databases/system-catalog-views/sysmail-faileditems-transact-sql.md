@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_faileditems
 - sysmail_faileditems_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 0fc32200b893022e16bcd4ee7049da82c4572660
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 83e7bc1ebeaa78cd8e12325c7259c93139f9a200
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100134"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193019"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "98100134"
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベースメールによって送信されなかったメッセージを表示するには、 **sysmail_faileditems** ビューを使用します。 データベース メールのトラブルシューティングを行うとき、このビューでは送信されなかったメッセージの属性を確認できるので、問題の性質を特定するのに役立ちます。 失敗の理由を確認するには、失敗したメッセージのエントリを [ [sysmail_event_log &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md) ビューで確認します。  
   
 ## <a name="permissions"></a>アクセス許可  

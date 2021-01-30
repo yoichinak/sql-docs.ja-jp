@@ -1,12 +1,12 @@
 ---
-title: sp_rda_reconcile_columns (Transact-sql) |Microsoft Docs
-description: 詳細については、「sp_rda_reconcile_columns」を参照してください。 このストアドプロシージャを使用して、リモート Azure テーブルの列と Stretch が有効な SQL Server テーブルの列を調整します。
+title: sys.sp_rda_reconcile_columns (Transact-sql) |Microsoft Docs
+description: Sys.sp_rda_reconcile_columns について説明します。 このストアドプロシージャを使用して、リモート Azure テーブルの列と Stretch が有効な SQL Server テーブルの列を調整します。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_rda_reconcile_columns
 - sys.sp_rda_reconcile_columns_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1788e373c8bab330182df9338e447946cda87bd3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8eb33cbb1fd2975d96a727f6a7fde457c9827cc8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538447"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211777"
 ---
-# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sp_rda_reconcile_columns (Transact-sql)
+# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   リモート Azure テーブルの列を、Stretch が有効な SQL Server テーブルの列に調整します。  
@@ -45,16 +45,16 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>引数  
- \@objname = '* \@ objname*'  
+ \@objname = '*\@ objname*'  
  Stretch が有効な SQL Server テーブルの名前。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- Db_owner のアクセス許可が必要です。  
+ db_owner のアクセス許可が必要です。  
    
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  Stretch 対応の SQL Server テーブルに存在しなくなったリモートの Azure テーブルに列が存在している場合、これらの余分な列が Stretch Database の正常な動作を妨げることはありません。 必要に応じて余分の列を手動で削除できます。  
   
 ## <a name="example"></a>例  

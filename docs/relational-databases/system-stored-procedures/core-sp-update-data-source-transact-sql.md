@@ -1,13 +1,13 @@
 ---
-description: sp_update_data_source (Transact-sql)
-title: sp_update_data_source (Transact-sql) |Microsoft Docs
+description: core.sp_update_data_source (Transact-sql)
+title: core.sp_update_data_source (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_data_source
 - sp_update_data_source_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ad50aaa81cb61b6ead9388e41e025993e54c364
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45bfb2c042ea491516aa4d3caadff72c45451202
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550105"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180589"
 ---
-# <a name="coresp_update_data_source-transact-sql"></a>sp_update_data_source (Transact-sql)
+# <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   管理データ ウェアハウスの core.source_info_internal テーブルで既存行の更新または新規行の挿入を行います。 このプロシージャは、アップロードパッケージが管理データウェアハウスへのデータのアップロードを開始するたびに、データコレクターの実行時コンポーネントによって呼び出されます。  
@@ -54,13 +54,13 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
  コレクション セットが存在するサーバーの名前を指定します。 *machine_name* は **sysname** で、既定値はありません。  
   
  [ @named_instance =] '*named_instance*'  
- コレクションセットのインスタンスの名前です。 *named_instance* は **sysname**であり、既定値はありません。  
+ コレクションセットのインスタンスの名前です。 *named_instance* は **sysname** であり、既定値はありません。  
   
 > [!NOTE]  
->  *named_instance*には、コンピューター名と、 *computername*instancename という形式のインスタンス名で構成される完全修飾インスタンス名を指定する必要があり \\ *instancename*ます。  
+>  *named_instance* には、コンピューター名と、 *computername* instancename という形式のインスタンス名で構成される完全修飾インスタンス名を指定する必要があり \\ ます。  
   
  [ @days_until_expiration =] *days_until_expiration*  
- スナップショット データ保持期間の日数を指定します。 *days_until_expiration* は **smallint**です。  
+ スナップショット データ保持期間の日数を指定します。 *days_until_expiration* は **smallint** です。  
   
  [ @source_id =] *source_id*  
  更新元の一意の識別子。 *source_id* は **INT** で、出力として返されます。  
@@ -68,7 +68,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  アップロード パッケージが管理データ ウェアハウスへのデータのアップロードを開始するたびに、データ コレクターの実行時コンポーネントが core.sp_update_data_source を呼び出します。 前回のアップロード時以降に次のいずれかの変更が行われている場合は、core.source_info_internal テーブルが更新されます。  
   
 -   新しいコレクションセットが追加されました。  

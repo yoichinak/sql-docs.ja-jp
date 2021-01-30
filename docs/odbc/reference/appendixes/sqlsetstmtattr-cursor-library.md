@@ -7,26 +7,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetStmtAttr function [ODBC], Cursor Library
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96466e354875224c05bef4c94d72249bad9a4cff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a395052df9eb5623e63463e3e79722769583721
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429495"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202589"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (カーソル ライブラリ)
 > [!IMPORTANT]  
 >  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックでは、カーソルライブラリでの **SQLSetStmtAttr** 関数の使用について説明します。 **SQLSetStmtAttr**の一般的な情報については、「 [SQLSetStmtAttr 関数](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)」を参照してください。  
+ このトピックでは、カーソルライブラリでの **SQLSetStmtAttr** 関数の使用について説明します。 **SQLSetStmtAttr** の一般的な情報については、「 [SQLSetStmtAttr 関数](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)」を参照してください。  
   
- カーソルライブラリでは、 **SQLSetStmtAttr**で次のステートメント属性がサポートされています。  
+ カーソルライブラリでは、 **SQLSetStmtAttr** で次のステートメント属性がサポートされています。  
 
 :::row:::
     :::column:::
@@ -51,9 +51,9 @@ ms.locfileid: "88429495"
   
  カーソルライブラリは、SQL_ATTR_SIMULATE_CURSOR statement 属性の SQL_SC_NON_UNIQUE 値のみをサポートしています。  
   
- ODBC 仕様では、 **Sqlfetch**または**sqlfetchscroll**が呼び出された後、SQL_ATTR_PARAM_BIND_TYPE または SQL_ATTR_ROW_BIND_TYPE 属性を使用した**SQLSetStmtAttr**への呼び出しがサポートされていますが、カーソルライブラリではサポートされません。 カーソルライブラリのバインドの種類を変更する前に、アプリケーションでカーソルを閉じる必要があります。 カーソルライブラリでは、カーソルが開いているときの SQL_ATTR_ROW_BIND_OFFSET_PTR、SQL_ATTR_PARAM_BIND_OFFSET_PTR、SQL_ATTR_ROWS_FETCHED_PTR、および SQL_ATTR_PARAMS_PROCESSED_PTR ステートメントの属性の変更がサポートされています。  
+ ODBC 仕様では、 **Sqlfetch** または **sqlfetchscroll** が呼び出された後、SQL_ATTR_PARAM_BIND_TYPE または SQL_ATTR_ROW_BIND_TYPE 属性を使用した **SQLSetStmtAttr** への呼び出しがサポートされていますが、カーソルライブラリではサポートされません。 カーソルライブラリのバインドの種類を変更する前に、アプリケーションでカーソルを閉じる必要があります。 カーソルライブラリでは、カーソルが開いているときの SQL_ATTR_ROW_BIND_OFFSET_PTR、SQL_ATTR_PARAM_BIND_OFFSET_PTR、SQL_ATTR_ROWS_FETCHED_PTR、および SQL_ATTR_PARAMS_PROCESSED_PTR ステートメントの属性の変更がサポートされています。  
   
- アプリケーションでは、カーソルが開いている間に行セットのサイズを変更するために SQL_ATTR_ROW_ARRAY_SIZE の**属性**を使用して**SQLSetStmtAttr**を呼び出すことができます。 新しい行セットのサイズは、次に **Sqlfetchscroll** または **sqlfetch** が呼び出されたときに有効になります。  
+ アプリケーションでは、カーソルが開いている間に行セットのサイズを変更するために SQL_ATTR_ROW_ARRAY_SIZE の **属性** を使用して **SQLSetStmtAttr** を呼び出すことができます。 新しい行セットのサイズは、次に **Sqlfetchscroll** または **sqlfetch** が呼び出されたときに有効になります。  
   
  カーソルライブラリでは、SQL_ATTR_PARAM_BIND_OFFSET_PTR または SQL_ATTR_ROW_BIND_OFFSET_PTR statement 属性の設定をサポートして、バインドオフセットを有効にします。 カーソルライブラリが ODBC 2 と共に使用されている場合、バインドオフセットは **Sqlfetch** の呼び出しには使用されません。*x* ドライバー。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpmergesession_TSQL
 - sp_replmonitorhelpmergesession
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9544a1d11efbd3d956821784257619bb45b7a5cc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d81a500eccbc8d969e9e0ef957ae4db09616d768
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526200"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211885"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,22 +45,22 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="arguments"></a>引数  
 `[ @agent_name = ] 'agent_name'` エージェントの名前を指定します。 *agent_name* は **nvarchar (100)** で、既定値はありません。  
   
-`[ @hours = ] hours` 履歴エージェントセッション情報を返す時間の範囲を時間単位で指定します。 *時間* は **int**で、次のいずれかの範囲を指定できます。  
+`[ @hours = ] hours` 履歴エージェントセッション情報を返す時間の範囲を時間単位で指定します。 *時間* は **int** で、次のいずれかの範囲を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |< **0**|過去のエージェント実行に関する情報を返します。最大で100の実行が実行されます。|  
 |**0** (既定値)|過去のすべてのエージェント実行に関する情報を返します。|  
-|> **0**|*過去数時間以内*に発生したエージェントの実行に関する情報を返します。|  
+|> **0**|*過去数時間以内* に発生したエージェントの実行に関する情報を返します。|  
   
 `[ @session_type = ] session_type` セッションの終了結果に基づいて結果セットをフィルター処理します。 *session_type* は **int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|再試行されたか成功したエージェント セッション。|  
 |**0**|障害が発生したエージェントセッション。|  
   
-`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値は NULL です。 このパラメーターは、サブスクライバーで **sp_replmonitorhelpmergesession** を実行するときに使用されます。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname** で、既定値は NULL です。 このパラメーターは、サブスクライバーで **sp_replmonitorhelpmergesession** を実行するときに使用されます。  
   
 `[ @publisher_db = ] 'publisher_db'` パブリケーションデータベースの名前を指定します。 *publisher_db* は **sysname**,、既定値は NULL です。 このパラメーターは、サブスクライバーで **sp_replmonitorhelpmergesession** を実行するときに使用されます。  
   
@@ -87,13 +87,13 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_replmonitorhelpmergesession** は、マージレプリケーションの監視に使用されます。  
   
  サブスクライバーで実行された場合、 **sp_replmonitorhelpmergesession** は、最後の5つのマージエージェントセッションに関する情報のみを返します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_replmonitorhelpmergesession**を実行できるのは、ディストリビューター側のディストリビューションデータベースまたはサブスクライバー側のサブスクリプションデータベースで、 **db_owner**または**replmonitor**固定データベースロールのメンバーだけです。  
+ **Sp_replmonitorhelpmergesession** を実行できるのは、ディストリビューター側のディストリビューションデータベースまたはサブスクライバー側のサブスクリプションデータベースで、 **db_owner** または **replmonitor** 固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_delete_collection_set_TSQL
 - sp_syscollector_delete_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3f13e2c25ed16e276ef3cd047b41679df647259d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ffc5af0517be9e294594d1de595b8571c338b838
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547355"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211817"
 ---
 # <a name="sp_syscollector_delete_collection_set-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,10 +51,10 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syscollector_delete_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
- *Collection_set_id*または*名前*には値を指定する必要があります。どちらも NULL にすることはできません。 これらの値を取得するには、syscollector_collection_set システム ビューにクエリを実行します。  
+ *Collection_set_id* または *名前* には値を指定する必要があります。どちらも NULL にすることはできません。 これらの値を取得するには、syscollector_collection_set システム ビューにクエリを実行します。  
   
  システム定義のコレクションセットを削除することはできません。  
   
@@ -62,7 +62,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
  このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、 *collection_set_id*を指定して、ユーザー定義のコレクションセットを削除します。  
+ 次の例では、 *collection_set_id* を指定して、ユーザー定義のコレクションセットを削除します。  
   
 ```  
 USE msdb;  

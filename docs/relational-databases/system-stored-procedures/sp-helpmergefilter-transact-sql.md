@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergefilter
 - sp_helpmergefilter_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faa3b2922f8d73875b5213603b980560d69465ff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 862f23713da4bcd611310149b509e34658766006
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526960"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179238"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'` アーティクルの名前を指定します。 *アーティクル* は **sysname**で、既定値はです **%** 。これにより、すべてのアーティクルの名前が返されます。  
+`[ @article = ] 'article'` アーティクルの名前を指定します。 *アーティクル* は **sysname** で、既定値はです **%** 。これにより、すべてのアーティクルの名前が返されます。  
   
-`[ @filtername = ] 'filtername'` 情報を返すフィルターの名前を指定します。 *filtername* のデータ型は **sysname**で、既定値はです **%** 。これは、アーティクルまたはパブリケーションで定義されているすべてのフィルターに関する情報を返します。  
+`[ @filtername = ] 'filtername'` 情報を返すフィルターの名前を指定します。 *filtername* のデータ型は **sysname** で、既定値はです **%** 。これは、アーティクルまたはパブリケーションで定義されているすべてのフィルターに関する情報を返します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -65,11 +65,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpmergefilter** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_helpmergefilter**を実行できるのは、 **sysadmin**固定サーバーロールおよび**db_owner**固定データベースロールのメンバーだけです。  
+ **Sp_helpmergefilter** を実行できるのは、 **sysadmin** 固定サーバーロールおよび **db_owner** 固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

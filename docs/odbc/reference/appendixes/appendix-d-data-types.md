@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - C data types [ODBC], defined
 - SQL data types [ODBC], defined
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 77ca1ac4b4628880e6f0a87237b347aadb66584d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2ff95858f654bef654b18105b4fda52c77cca0c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411488"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212550"
 ---
 # <a name="appendix-d-data-types"></a>付録 D: データ型
 ODBC では、SQL データ型と C データ型の2つのデータ型セットが定義されています。 SQL データ型は、データソースに格納されているデータのデータ型を示します。 C データ型は、アプリケーションバッファーに格納されているデータのデータ型を示します。  
   
  SQL データ型は、SQL-92 標準に従って、各 DBMS によって定義されます。 ODBC では、SQL-92 標準で指定された各 SQL データ型に対して、型識別子が定義されます。これは、ODBC 関数で引数として渡されるか、結果セットのメタデータで返される **#define** 値です。 ODBC でサポートされていない SQL 92 データ型は BIT (ODBC SQL_BIT 型の特性は異なります)、BIT_VARYING、TIME_WITH_TIMEZONE、TIMESTAMP_WITH_TIMEZONE、および NATIONAL_CHARACTER。 ドライバーは、データソース固有の SQL データ型を ODBC SQL データ型識別子およびドライバー固有の SQL データ型識別子にマップする役割を担います。 SQL データ型は、実装記述子の SQL_DESC_CONCISE_TYPE フィールドで指定します。  
   
- ODBC では、C データ型とそれに対応する ODBC 型識別子を定義します。 アプリケーションでは、 **SQLBindCol**または**SQLGetData**の呼び出しで*TargetType*引数に適切な c 型識別子を渡すことによって、結果セットデータを受け取るバッファーの c データ型を指定します。 これは、 **SQLBindParameter**の呼び出しで*ValueType*引数に適切な c 型識別子を渡すことによって、ステートメントパラメーターを含むバッファーの c 型を指定します。 C データ型は、アプリケーション記述子の [SQL_DESC_CONCISE_TYPE] フィールドで指定します。  
+ ODBC では、C データ型とそれに対応する ODBC 型識別子を定義します。 アプリケーションでは、 **SQLBindCol** または **SQLGetData** の呼び出しで *TargetType* 引数に適切な c 型識別子を渡すことによって、結果セットデータを受け取るバッファーの c データ型を指定します。 これは、 **SQLBindParameter** の呼び出しで *ValueType* 引数に適切な c 型識別子を渡すことによって、ステートメントパラメーターを含むバッファーの c 型を指定します。 C データ型は、アプリケーション記述子の [SQL_DESC_CONCISE_TYPE] フィールドで指定します。  
   
 > [!NOTE]  
 >  ドライバー固有の C データ型はありません。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from SQL to C types [ODBC], timestamp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a2904f01b5ecadbfc224d052366197e41163cd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d7881ad4ef9280ab9f2e7ac0d941ae2228b21b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429544"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202996"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL から C へ: Timestamp
 
@@ -34,7 +34,7 @@ Timestamp ODBC SQL データ型の識別子は次のとおりです。
 |-----------------------|----------|------------------------|----------------------------|--------------|  
 |SQL_C_CHAR|*Bufferlength* > 文字のバイト長<br /><br /> 20 <= *bufferlength* <= 文字バイト長<br /><br /> *Bufferlength* < 20|データ<br /><br /> 切り捨てられたデータ [b]<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_WCHAR|*Bufferlength* > 文字長<br /><br /> 20 <= *bufferlength* <= 文字の長さ<br /><br /> *Bufferlength* < 20|データ<br /><br /> 切り捨てられたデータ [b]<br /><br /> 未定義。|データの長さ (文字数)<br /><br /> データの長さ (文字数)<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
+|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength* のバイト長|データ<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
 |SQL_C_TYPE_DATE|タイムスタンプの時刻部分がゼロ [a]<br /><br /> タイムスタンプの時刻部分が0以外の場合 [a]|データ<br /><br /> 切り捨てられたデータ [c]|6 [f]<br /><br /> 6 [f]|該当なし<br /><br /> 01S07|  
 |SQL_C_TYPE_TIME|タイムスタンプの秒部分の小数部がゼロ [a]<br /><br /> タイムスタンプの秒の小数部が0以外の場合 [a]|データ [d]<br /><br /> 切り捨てられたデータ [d], [e]|6 [f]<br /><br /> 6 [f]|該当なし<br /><br /> 01S07|  
 |SQL_C_TYPE_TIMESTAMP|タイムスタンプの秒の小数部が切り捨てられない [a]<br /><br /> タイムスタンプの秒部分の小数部が切り捨てられる [a]|データ [e]<br /><br /> 切り捨てられたデータ [e]|16 [f]<br /><br /> 16 [f]|該当なし<br /><br /> 01S07|  

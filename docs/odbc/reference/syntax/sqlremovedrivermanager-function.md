@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLRemoveDriverManager
 apilocation:
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db880d031e803d5778c2af9b2bea08b6ed590e3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92359b7df67535f8bee5a5a3dfb4b7a7348f54f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499625"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192501"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 関数
 **互換性**  
  導入されたバージョン: ODBC 3.0: Windows XP Service Pack 2、Windows Server 2003 Service Pack 1、およびそれ以降のオペレーティングシステムでは非推奨となりました。  
   
- **まとめ**  
+ **要約**  
  **Sqlremovedrivermanager** は、システム情報の Odbcinst.ini エントリから ODBC コアコンポーネントに関する情報を変更または削除します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,7 +39,7 @@ ms.locfileid: "88499625"
 ```cpp  
   
 BOOL SQLRemoveDriverManager(  
-     LPDWORD     pdwUsageCount);  
+     LPDWORD     pdwUsageCount);  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -50,7 +50,7 @@ BOOL SQLRemoveDriverManager(
  関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。 この関数が呼び出されたときにシステム情報にエントリが存在しない場合、関数は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlremovedrivermanager**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連する* \* pferrorcode*値を取得できます。 次の表は、 **Sqlインストーラエラー**によって返される可能性がある* \* pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
+ **Sqlremovedrivermanager** から FALSE が返された場合、 **sqlインストーラエラー** を呼び出すことによって、関連する *\* pferrorcode* 値を取得できます。 次の表は、 **Sqlインストーラエラー** によって返される可能性がある *\* pferrorcode* 値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
 |*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
@@ -59,7 +59,7 @@ BOOL SQLRemoveDriverManager(
 |ODBC_ERROR_USAGE_UPDATE_FAILED|コンポーネントの使用状況カウントをインクリメントまたはデクリメントできませんでした|インストーラーで、ドライバーマネージャーの使用状況カウントを減らすことができませんでした。|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>コメント  
+## <a name="comments"></a>説明  
  **Sqlremovedrivermanager** は **sqlremovedrivermanager** 関数を補完し、システム情報のコンポーネントの使用状況を更新します。 この関数は、セットアップアプリケーションからのみ呼び出す必要があります。  
   
  **Sqlremovedrivermanager** は、コアコンポーネントの使用量カウントを1つ減らします。 コンポーネントの使用量が0になると、エントリシステム情報が削除されます。 コアコンポーネントのエントリは、システム情報の次の場所にあります ("ODBC Core" というタイトルの下)。  
@@ -101,7 +101,7 @@ BOOL SQLRemoveDriverManager(
 
  **Sqlremovedrivermanager** は、アップグレードプロセスの一部としても呼び出されます。 アプリケーションでアップグレードを実行する必要があることが検出され、ドライバーが既にインストールされている場合は、ドライバーを削除してから再インストールする必要があります。  
   
- コンポーネントの使用回数を減らすには、最初に**Sqlremovedrivermanager**を呼び出す必要があります。 コンポーネントの使用量を増やすには、 **Sqlinstalldriverex**を呼び出す必要があります。 アプリケーションセットアッププログラムは、古いコアコンポーネントファイルを新しいファイルに置き換える必要があります。 ファイルの使用量カウントは変わりません。また、古いバージョンのコアコンポーネントファイルを使用するその他のアプリケーションでは、新しいバージョンのファイルが使用されるようになります。  
+ コンポーネントの使用回数を減らすには、最初に **Sqlremovedrivermanager** を呼び出す必要があります。 コンポーネントの使用量を増やすには、 **Sqlinstalldriverex** を呼び出す必要があります。 アプリケーションセットアッププログラムは、古いコアコンポーネントファイルを新しいファイルに置き換える必要があります。 ファイルの使用量カウントは変わりません。また、古いバージョンのコアコンポーネントファイルを使用するその他のアプリケーションでは、新しいバージョンのファイルが使用されるようになります。  
   
 ## <a name="related-functions"></a>関連する関数  
   

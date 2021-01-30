@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_clr_properties
 - sys.dm_clr_properties_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34dfbfbecf82df79520fc5a530bcb8c18c544c77
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c23c8d624a9670cdb309d43f645831b5e09fab5a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095283"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212100"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "98095283"
 |**name**|**nvarchar(128)**|プロパティの名前。|  
 |**value**|**nvarchar(128)**|プロパティの値。|  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  **ディレクトリ** プロパティは、.NET Framework がサーバーにインストールされたディレクトリを示します。 サーバーコンピューターに複数の .NET Framework がインストールされている可能性があります。このプロパティの値によって、どのインストール [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用されているかが識別されます。  
   
  **Version** プロパティは、サーバー上の .NET Framework およびホストされている CLR のバージョンを示します。  
   
- **Sys.dm_clr_properties** 動的マネージビューは、**状態** プロパティに対して6つの異なる値を返すことができます。これには、ホストされる clr の状態が反映されます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 それらは次のとおりです。  
+ **Sys.dm_clr_properties** 動的マネージビューは、**状態** プロパティに対して6つの異なる値を返すことができます。これには、ホストされる clr の状態が反映されます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 これらは次のとおりです。  
   
 -   Mscoree is not loaded. (mscoree が読み込まれていない。)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "98095283"
   
  **CLR が停止状態** は、がシャットダウン処理中の場合にのみ表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR 統合機能の強化により、このビューのプロパティおよび値は、の将来のバージョンで変更される可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  

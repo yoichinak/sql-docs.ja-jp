@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_renamedb
 - sp_renamedb_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85ded9c74077436ccf94c33350b4193726819068
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5b2e0ceff1889df17d1ab5ca62c6819c41679374
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538571"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179195"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,15 +43,15 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'old_name'` データベースの現在の名前を指定します。 *old_name* は **sysname**であり、既定値はありません。  
+`[ @dbname = ] 'old_name'` データベースの現在の名前を指定します。 *old_name* は **sysname** であり、既定値はありません。  
   
-`[ @newname = ] 'new_name'` データベースの新しい名前を指定します。 *new_name* は、識別子の規則に従う必要があります。 *new_name* は **sysname**であり、既定値はありません。  
+`[ @newname = ] 'new_name'` データベースの新しい名前を指定します。 *new_name* は、識別子の規則に従う必要があります。 *new_name* は **sysname** であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数値 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**または**dbcreator**固定サーバーロールのメンバーシップが必要です。  
+ **Sysadmin** または **dbcreator** 固定サーバーロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、`Accounting` データベースを作成し、このデータベース名を `Financial` に変更します。 `sys.databases`次に、カタログビューに対してクエリを行い、データベースの新しい名前を確認します。  

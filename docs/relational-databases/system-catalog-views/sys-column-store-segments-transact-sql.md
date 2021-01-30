@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - column_store_segments
 - sys.column_store_segments_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 189a5cca5cfac0cce6437ccc256d461140f3c40b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4a4aa951ac82857f16b4866ed581c883ffcda7bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095612"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203449"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "98095612"
 |**null_value**|**bigint**|NULL を表すために使用される値。|  
 |**on_disk_size**|**bigint**|セグメントのサイズ (バイト単位)。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 列ストアセグメントのエンコードの種類は、 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] セグメントデータを分析することで、最も低いストレージコストを実現することを目標として、によって選択されます。 データがほぼ異なる場合、は [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 値ベースのエンコードを使用します。 データがほとんど異なる場合、では [!INCLUDE[ssde_md](../../includes/ssde_md.md)] ハッシュベースのエンコードが使用されます。 文字列ベースのエンコーディングと値ベースのエンコードのどちらを選択するかは、格納されるデータの型 (文字列データまたはバイナリデータ) に関連します。 すべてのエンコーディングは、可能であれば、ビットパックと実行時間のエンコーディングを利用します。
  
 ## <a name="permissions"></a>アクセス許可  
