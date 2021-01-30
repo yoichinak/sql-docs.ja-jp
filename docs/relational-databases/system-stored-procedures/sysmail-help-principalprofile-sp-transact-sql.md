@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_principalprofile_sp_TSQL
 - sysmail_help_principalprofile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5fb578b0af1e51e8e8ca4bb37bc82b3949cb33be
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: efb4b5cd655bf4a401d530e4c9bd52cbc9660a65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541072"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181954"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @principal_id = ] principal_id` 関連付けを表示する **msdb** データベースのデータベースユーザーまたはロールの ID を示します。 *principal_id* は **int**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定できます。  
+`[ @principal_id = ] principal_id` 関連付けを表示する **msdb** データベースのデータベースユーザーまたはロールの ID を示します。 *principal_id* は **int**,、既定値は NULL です。 *Principal_id* または *principal_name* のいずれかを指定できます。  
   
-`[ @principal_name = ] 'principal_name'` 関連付けを表示する **msdb** データベースのデータベースユーザーまたはロールの名前を指定します。 *principal_name* は **sysname**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定できます。  
+`[ @principal_name = ] 'principal_name'` 関連付けを表示する **msdb** データベースのデータベースユーザーまたはロールの名前を指定します。 *principal_name* は **sysname**,、既定値は NULL です。 *Principal_id* または *principal_name* のいずれかを指定できます。  
   
-`[ @profile_id = ] profile_id` 関連付けを一覧表示するプロファイルの ID を示します。 *profile_id* は **int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定できます。  
+`[ @profile_id = ] profile_id` 関連付けを一覧表示するプロファイルの ID を示します。 *profile_id* は **int**,、既定値は NULL です。 *Profile_id* または *profile_name* のいずれかを指定できます。  
   
-`[ @profile_name = ] 'profile_name'` 関連付けを一覧表示するプロファイルの名前を指定します。 *profile_name* は **sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定できます。  
+`[ @profile_name = ] 'profile_name'` 関連付けを一覧表示するプロファイルの名前を指定します。 *profile_name* は **sysname**,、既定値は NULL です。 *Profile_id* または *profile_name* のいずれかを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
@@ -64,10 +64,10 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |**profile_name**|**sysname**|データベースメールプロファイルの名前。|  
 |**is_default**|**bit**|このプロファイルがユーザーの既定のプロファイルかどうかを示すフラグ|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  パラメーターを指定せずに **sysmail_help_principalprofile_sp** が呼び出された場合、返される結果セットには、のインスタンス内のすべての関連付けが一覧表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 それ以外の場合、結果セットには、指定されたパラメーターに一致するアソシエーションの情報が含まれます。 たとえば、プロファイル名が指定されている場合、このプロシージャはプロファイルのすべての関連付けを一覧表示します。  
   
- **sysmail_help_principalprofile_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ **sysmail_help_principalprofile_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb** でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_jobstep
 - sp_update_jobstep_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 52b17f706b53c05074fdcb21bf5e566df3d1d165
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c102cee625bc81611bd67209306d6bc5f9398660
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549504"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183576"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,51 +62,51 @@ sp_update_jobstep
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` ステップが属するジョブの識別番号を指定します。 *job_id*は **uniqueidentifier**,、既定値は NULL です。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
+`[ @job_id = ] job_id` ステップが属するジョブの識別番号を指定します。 *job_id* は **uniqueidentifier**,、既定値は NULL です。 *Job_id* または *job_name* のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @job_name = ] 'job_name'` ステップが属するジョブの名前です。 *job_name*は **sysname**,、既定値は NULL です。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
+`[ @job_name = ] 'job_name'` ステップが属するジョブの名前です。 *job_name* は **sysname**,、既定値は NULL です。 *Job_id* または *job_name* のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @step_id = ] step_id` 変更するジョブステップの識別番号を指定します。 この数を変更することはできません。 *step_id*は **int**,、既定値はありません。  
+`[ @step_id = ] step_id` 変更するジョブステップの識別番号を指定します。 この数を変更することはできません。 *step_id* は **int**,、既定値はありません。  
   
-`[ @step_name = ] 'step_name'` ステップの新しい名前を指定します。 *step_name*は **sysname**,、既定値は NULL です。  
+`[ @step_name = ] 'step_name'` ステップの新しい名前を指定します。 *step_name* は **sysname**,、既定値は NULL です。  
   
-`[ @subsystem = ] 'subsystem'`*コマンド*を実行するために Microsoft SQL Server エージェントによって使用されるサブシステムです。 *サブシステム* は **nvarchar (40)**,、既定値は NULL です。  
+`[ @subsystem = ] 'subsystem'`*コマンド* を実行するために Microsoft SQL Server エージェントによって使用されるサブシステムです。 *サブシステム* は **nvarchar (40)**,、既定値は NULL です。  
   
-`[ @command = ] 'command'`*サブシステム*を介して実行されるコマンドです。 *コマンド* は **nvarchar (max)**,、既定値は NULL です。  
+`[ @command = ] 'command'`*サブシステム* を介して実行されるコマンドです。 *コマンド* は **nvarchar (max)**,、既定値は NULL です。  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @cmdexec_success_code = ] success_code`*コマンド*が正常に実行されたことを示すために、 **CmdExec**サブシステムコマンドによって返される値。 *success_code* は **int**,、既定値は NULL です。  
+`[ @cmdexec_success_code = ] success_code`*コマンド* が正常に実行されたことを示すために、 **CmdExec** サブシステムコマンドによって返される値。 *success_code* は **int**,、既定値は NULL です。  
   
 `[ @on_success_action = ] success_action` ステップが成功した場合に実行するアクション。*success_action* は **tinyint**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明 (アクション)|  
+|値|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
 |**3**|次のステップに進む|  
 |**4**|手順 success_step_id に進み *ます。*|  
   
-`[ @on_success_step_id = ] success_step_id` ステップが成功し *success_action* が **4**の場合に実行する、このジョブのステップの識別番号を指定します。 *success_step_id* は **int**,、既定値は NULL です。  
+`[ @on_success_step_id = ] success_step_id` ステップが成功し *success_action* が **4** の場合に実行する、このジョブのステップの識別番号を指定します。 *success_step_id* は **int**,、既定値は NULL です。  
   
 `[ @on_fail_action = ] fail_action` ステップが失敗した場合に実行するアクション。 *fail_action* は **tinyint**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明 (アクション)|  
+|値|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
 |**3**|次のステップに進む|  
 |**4**|手順 *fail_step_id * * に進みます。*|  
   
-`[ @on_fail_step_id = ] fail_step_id` ステップが失敗し、 *fail_action* が **4**の場合に実行する、このジョブのステップの識別番号を指定します。 *fail_step_id* は **int**,、既定値は NULL です。  
+`[ @on_fail_step_id = ] fail_step_id` ステップが失敗し、 *fail_action* が **4** の場合に実行する、このジョブのステップの識別番号を指定します。 *fail_step_id* は **int**,、既定値は NULL です。  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*サーバー*は**nvarchar (128)**,、既定値は NULL です。  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*サーバー* は **nvarchar (128)**,、既定値は NULL です。  
   
-`[ @database_name = ] 'database'` ステップを実行するデータベースの名前です [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *データベース*は **sysname**です。 角かっこ ([]) で囲まれた名前は使用できません。 既定値は NULL です。  
+`[ @database_name = ] 'database'` ステップを実行するデータベースの名前です [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *データベース* は **sysname** です。 角かっこ ([]) で囲まれた名前は使用できません。 既定値は NULL です。  
   
-`[ @database_user_name = ] 'user'` ステップの実行時に使用するユーザーアカウントの名前 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *user*の部分は **sysname**で、既定値は NULL です。  
+`[ @database_user_name = ] 'user'` ステップの実行時に使用するユーザーアカウントの名前 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *user* の部分は **sysname** で、既定値は NULL です。  
   
-`[ @retry_attempts = ] retry_attempts` このステップが失敗した場合に使用する再試行回数。 *retry_attempts*は **int**,、既定値は NULL です。  
+`[ @retry_attempts = ] retry_attempts` このステップが失敗した場合に使用する再試行回数。 *retry_attempts* は **int**,、既定値は NULL です。  
   
 `[ @retry_interval = ] retry_interval` 再試行の間隔 (分) です。 *retry_interval* は **int**,、既定値は NULL です。  
   
@@ -120,7 +120,7 @@ sp_update_jobstep
   
 `[ @flags = ] flags` 動作を制御するオプション。 *フラグ* は **int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|出力ファイルを上書きします。|  
 |**2**|出力ファイルに追加|  
@@ -128,20 +128,20 @@ sp_update_jobstep
 |**8**|テーブルにログを書き込む (既存の履歴を上書きする)|  
 |**16**|ログをテーブルに書き込む (既存の履歴に追加する)|  
   
-`[ @proxy_id = ] proxy_id` ジョブステップを実行するプロキシの ID 番号を指定します。 *proxy_id* の型は **int**で、既定値は NULL です。 *Proxy_id*が指定されておらず、 *proxy_name*が指定されておらず、 *user_name*が指定されていない場合、ジョブステップはエージェントのサービスアカウントとして実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+`[ @proxy_id = ] proxy_id` ジョブステップを実行するプロキシの ID 番号を指定します。 *proxy_id* の型は **int** で、既定値は NULL です。 *Proxy_id* が指定されておらず、 *proxy_name* が指定されておらず、 *user_name* が指定されていない場合、ジョブステップはエージェントのサービスアカウントとして実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-`[ @proxy_name = ] 'proxy_name'` ジョブステップを実行するプロキシの名前を指定します。 *proxy_name* の型は **sysname**で、既定値は NULL です。 *Proxy_id*が指定されておらず、 *proxy_name*が指定されておらず、 *user_name*が指定されていない場合、ジョブステップはエージェントのサービスアカウントとして実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+`[ @proxy_name = ] 'proxy_name'` ジョブステップを実行するプロキシの名前を指定します。 *proxy_name* の型は **sysname** で、既定値は NULL です。 *Proxy_id* が指定されておらず、 *proxy_name* が指定されておらず、 *user_name* が指定されていない場合、ジョブステップはエージェントのサービスアカウントとして実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_update_jobstep** は、 **msdb** データベースから実行する必要があります。  
   
  ジョブ ステップを更新すると、ジョブのバージョン番号が増えます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -153,7 +153,7 @@ sp_update_jobstep
   
  他のユーザーが所有するジョブステップを更新できるのは、 **sysadmin** のメンバーだけです。  
   
- ジョブステップがプロキシへのアクセスを必要とする場合、ジョブステップの作成者は、そのジョブステップのプロキシへのアクセス権を持っている必要があります。 Transact-SQL を除くすべてのサブシステムでは、プロキシ アカウントが必要です。 **Sysadmin**のメンバーは、すべてのプロキシにアクセスでき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロキシにエージェントサービスアカウントを使用できます。  
+ ジョブステップがプロキシへのアクセスを必要とする場合、ジョブステップの作成者は、そのジョブステップのプロキシへのアクセス権を持っている必要があります。 Transact-SQL を除くすべてのサブシステムでは、プロキシ アカウントが必要です。 **Sysadmin** のメンバーは、すべてのプロキシにアクセスでき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロキシにエージェントサービスアカウントを使用できます。  
   
 ## <a name="examples"></a>例  
  次の例では、ジョブの最初のステップの再試行回数を変更し `Weekly Sales Data Backup` ます。 この例を実行すると、再試行回数は `10` 回になります。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_get_account_TSQL
 - sp_msx_get_account
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a6b910559b9ad36d598227abc7ee935a2e16a31
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 932fd01c930878902eb1636ed8d42083e2dcad10
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543188"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180225"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_msx_get_account
 |msx_credential_name|**sysname**|このマスターサーバー接続に使用される資格情報の名前。|  
 |msx_login_name|**nvarchar (4000)**|資格情報に関する Windows ユーザーのドメイン名とユーザー名。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ターゲット サーバーに対して指定された資格情報がない場合、空の結果セットを返します。 資格情報を設定するには、sp_msx_set_account を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

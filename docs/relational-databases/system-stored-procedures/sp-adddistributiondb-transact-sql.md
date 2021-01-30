@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adddistributiondb_TSQL
 - sp_adddistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: f0f213880d00be458bb453aefd5957fe431dd053
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5a80b39ca68abd37f3e9e843c2e76e8e71669d0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481558"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182810"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,13 +54,13 @@ sp_adddistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @database = ] database'` 作成するディストリビューションデータベースの名前を指定します。 *データベースのデータ* 型は **sysname**で、既定値はありません。 指定したデータベースが既に存在し、既にディストリビューションデータベースとしてマークされていない場合は、ディストリビューションを有効にするために必要なオブジェクトがインストールされ、データベースがディストリビューションデータベースとしてマークされます。 指定したデータベースが、既にディストリビューション データベースとして有効な場合は、エラーが返されます。  
+`[ @database = ] database'` 作成するディストリビューションデータベースの名前を指定します。 *データベースのデータ* 型は **sysname** で、既定値はありません。 指定したデータベースが既に存在し、既にディストリビューションデータベースとしてマークされていない場合は、ディストリビューションを有効にするために必要なオブジェクトがインストールされ、データベースがディストリビューションデータベースとしてマークされます。 指定したデータベースが、既にディストリビューション データベースとして有効な場合は、エラーが返されます。  
   
 `[ @data_folder = ] 'data_folder'_` ディストリビューションデータベースのデータファイルを格納するために使用するディレクトリの名前を指定します。 *data_folder* は **nvarchar (255)**,、既定値は NULL です。 NULL の場合、のインスタンスのデータディレクトリ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用されます。たとえば、のように `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` なります。  
   
-`[ @data_file = ] 'data_file'` データベースファイルの名前を指定します。 *data_file* は **nvarchar (255)**,、既定値は **データベース**です。 NULL の場合、ストアドプロシージャはデータベース名を使用してファイル名を構築します。  
+`[ @data_file = ] 'data_file'` データベースファイルの名前を指定します。 *data_file* は **nvarchar (255)**,、既定値は **データベース** です。 NULL の場合、ストアドプロシージャはデータベース名を使用してファイル名を構築します。  
   
-`[ @data_file_size = ] data_file_size` 初期データファイルのサイズをメガバイト (MB) 単位で示します。 *data_file_size i*s **int**,、既定値は 5 mb です。  
+`[ @data_file_size = ] data_file_size` 初期データファイルのサイズをメガバイト (MB) 単位で示します。 *data_file_size i* s **int**,、既定値は 5 mb です。  
   
 `[ @log_folder = ] 'log_folder'` データベースログファイルのディレクトリの名前を指定します。 *log_folder* は **nvarchar (255)**,、既定値は NULL です。 NULL の場合、のインスタンスのデータディレクトリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用されます (たとえば、 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` )。  
   
@@ -76,11 +76,11 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @security_mode = ] security_mode` ディストリビューターに接続するときに使用するセキュリティモードを示します。 *security_mode* は **int**,、既定値は1です。 **0** は認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1** Windows 統合認証を指定します。  
   
-`[ @login = ] 'login'` ディストリビューションデータベースを作成するためにディストリビューターに接続するときに使用されるログイン名を指定します。 *Security_mode*が**0**に設定されている場合は、これが必要です。 *login* のデータ型は **sysname** で、既定値は NULL です。  
+`[ @login = ] 'login'` ディストリビューションデータベースを作成するためにディストリビューターに接続するときに使用されるログイン名を指定します。 *Security_mode* が **0** に設定されている場合は、これが必要です。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
-`[ @password = ] 'password'` ディストリビューターに接続するときに使用するパスワードを入力します。 *Security_mode*が**0**に設定されている場合は、これが必要です。 *パスワード* は **sysname**,、既定値は NULL です。  
+`[ @password = ] 'password'` ディストリビューターに接続するときに使用するパスワードを入力します。 *Security_mode* が **0** に設定されている場合は、これが必要です。 *パスワード* は **sysname**,、既定値は NULL です。  
   
-`[ @createmode = ] createmode`*createmode*は**int**,、既定値は 1,、値は次のいずれかを指定することができます。  
+`[ @createmode = ] createmode`*createmode* は **int**,、既定値は 1,、値は次のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -101,9 +101,9 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="remarks"></a>解説  
  **sp_adddistributiondb** は、すべての種類のレプリケーションで使用されます。 ただし、このストアド プロシージャは、ディストリビューター側でのみ動作します。  
   
- **Sp_adddistributiondb**を実行する前に[sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)を実行してディストリビューターを構成する必要があります。  
+ **Sp_adddistributiondb** を実行する前に [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)を実行してディストリビューターを構成する必要があります。  
   
- **Sp_adddistributiondb**を実行する前に**sp_adddistributor**を実行します。  
+ **Sp_adddistributiondb** を実行する前に **sp_adddistributor** を実行します。  
   
 ## <a name="example"></a>例  
   
@@ -162,14 +162,14 @@ GO
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_adddistributiondb**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_adddistributiondb** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  
   
   

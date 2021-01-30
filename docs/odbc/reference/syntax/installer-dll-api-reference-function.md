@@ -7,21 +7,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - installer DLL [ODBC]
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5b2c49e5a49d371677b0fc16a77fb332bb95a9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88b1d85e731108984b1eb9f001363bd26401f91d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461244"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174673"
 ---
 # <a name="installer-dll-api-reference-function"></a>Installer DLL API Reference 関数
-ここでは、インストーラー DLL API の関数の構文について説明します。 インストーラー DLL API は20の関数で構成されています。 これらの関数のうちの3つである **Sqlgettranslator**、 **sqlremovedsnfromini**、および **Sqlwritedsntoini**は、セットアップ dll によってのみ呼び出されます。 その他の関数は、セットアップおよび管理プログラムによって呼び出されます。  
+ここでは、インストーラー DLL API の関数の構文について説明します。 インストーラー DLL API は20の関数で構成されています。 これらの関数のうちの3つである **Sqlgettranslator**、 **sqlremovedsnfromini**、および **Sqlwritedsntoini** は、セットアップ dll によってのみ呼び出されます。 その他の関数は、セットアップおよび管理プログラムによって呼び出されます。  
   
  各関数には、その関数が導入された ODBC のバージョンが示されています。  
   

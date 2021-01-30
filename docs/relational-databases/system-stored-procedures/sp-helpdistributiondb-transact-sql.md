@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdistributiondb_TSQL
 - sp_helpdistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c79c1ed5bbbbf53be84432e4d542affece0b16a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9740605d1f3eca456ba506a692b5fc827273e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543322"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179298"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @database = ] 'database_name'` プロパティを返すデータベース名を指定します。 *database_name* は **sysname**で、既定値は **%** ディストリビューターに関連付けられているすべてのデータベースに対して、ユーザーには権限が与えられています。  
+`[ @database = ] 'database_name'` プロパティを返すデータベース名を指定します。 *database_name* は **sysname** で、既定値は **%** ディストリビューターに関連付けられているすべてのデータベースに対して、ユーザーには権限が与えられています。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -50,7 +50,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|履歴を保持する時間数。|  
 |**history_cleanup_agent**|**sysname**|履歴クリーンアップエージェントの名前。|  
 |**distribution_cleanup_agent**|**sysname**|ディストリビューションクリーンアップエージェントの名前。|  
-|**status**|**int**|内部使用のみです。|  
+|**status**|**int**|内部使用のみ。|  
 |**data_folder**|**nvarchar (255)**|データベース ファイルを格納するときに使用するディレクトリの名前。|  
 |**data_file**|**nvarchar (255)**|データベースファイルの名前。|  
 |**data_file_size**|**int**|データ ファイルの初期サイズ (MB 単位)。|  
@@ -61,11 +61,11 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpdistributiondb** は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- ディストリビューションデータベースの **db_owner** 固定データベースロールのメンバー、またはディストリビューションデータベースの **replmonitor** ロールのメンバー、およびディストリビューションデータベースを使用するパブリケーションのパブリケーションアクセスリストのユーザーは、 **sp_helpdistributiondb** を実行してファイルに関連する情報を返すことができます。 **Public**ロールのメンバーは、 **sp_helpdistributiondb**を実行して、アクセス権のあるディストリビューションデータベースについて、ファイルに関連しない情報を返すことができます。  
+ ディストリビューションデータベースの **db_owner** 固定データベースロールのメンバー、またはディストリビューションデータベースの **replmonitor** ロールのメンバー、およびディストリビューションデータベースを使用するパブリケーションのパブリケーションアクセスリストのユーザーは、 **sp_helpdistributiondb** を実行してファイルに関連する情報を返すことができます。 **Public** ロールのメンバーは、 **sp_helpdistributiondb** を実行して、アクセス権のあるディストリビューションデータベースについて、ファイルに関連しない情報を返すことができます。  
   
 ## <a name="see-also"></a>参照  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

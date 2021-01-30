@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_io_cluster_valid_path_names
 - dm_io_cluster_valid_path_names_TSQL
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 24bddc071b9ad5b64ef796f16718d1465dec7eaa
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 615849d483d2883476fb2eb65ba5183581426af6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097586"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185005"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-sql)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "98097586"
 |-----------------|---------------|-----------------|  
 |**path_name**|**Nvarchar (512)**|データベースおよびログファイルのルートディレクトリとして使用できるボリュームマウントポイントまたはドライブパス。 NULL 値は許可されません。|  
 |**cluster_owner_node**|**Nvarchar (64)**|ドライブの現在の所有者。 クラスター共有ボリューム (CSV) の場合、所有者はメタデータサーバーをホストしているノードです。 NULL 値は許可されません。|  
-|**is_cluster_shared_volume**|**ビット**|このパスを含むドライブがクラスター化ボリュームの場合は 1 を返します。それ以外の場合は 0 を返します。|  
+|**is_cluster_shared_volume**|**16-bit**|このパスを含むドライブがクラスター化ボリュームの場合は 1 を返します。それ以外の場合は 0 を返します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  SQL Server フェールオーバークラスターインスタンス (FCI) は、FCI のすべてのノード間でデータとログファイルの保存に共有ストレージを使用する必要があります。 このビューに表示されているディスクは、インスタンスに関連付けられているクラスターリソースグループに含まれていて、データまたはログファイルの格納に使用できる唯一のディスクです。  
   
 > [!NOTE]  

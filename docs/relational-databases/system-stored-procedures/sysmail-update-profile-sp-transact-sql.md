@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_profile_sp
 - sysmail_update_profile_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78a123514e990499f191cbc6742870647adebc5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf631b1acd099d8d7821a49163b80d643331ec28
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454751"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181878"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,10 +50,10 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  プロファイル id とプロファイル名の両方を指定すると、プロファイルの名前が指定した名前に変更され、プロファイルの説明が更新されます。 これらの引数のいずれか1つだけを指定すると、プロファイルの説明が更新されます。  
   
- ストアドプロシージャ **sysmail_update_profile_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ ストアドプロシージャ **sysmail_update_profile_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb** でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  
@@ -61,7 +61,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ## <a name="examples"></a>例  
  **A. プロファイルの説明を変更する**  
   
- 次の例では、msdb データベースのという名前のプロファイルの説明を変更し `AdventureWorks Administrator` ます。 **msdb**  
+ 次の例では、msdb データベースのという名前のプロファイルの説明を変更し `AdventureWorks Administrator` ます。   
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  

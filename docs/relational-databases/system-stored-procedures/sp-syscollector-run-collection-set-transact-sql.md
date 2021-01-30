@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_run_collection_set_TSQL
 - sp_syscollector_run_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 19d13692fda89e3596388269ef9a860615c3fb4b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dba48d2ba3e3945a137df381e4b403ebf1e6dfb8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544760"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185259"
 ---
 # <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +54,10 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
- *Collection_set_id*または*名前*には値を指定する必要があります。どちらも NULL にすることはできません。  
+## <a name="remarks"></a>コメント  
+ *Collection_set_id* または *名前* には値を指定する必要があります。どちらも NULL にすることはできません。  
   
- この手順では、コレクションを開始し、指定されたコレクションセットのジョブをアップロードします。また、コレクションセットの** \@ collection_mode**が非キャッシュ (1) に設定されている場合は、直ちにコレクションエージェントジョブを開始します。 詳細については、「 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)」を参照してください。  
+ この手順では、コレクションを開始し、指定されたコレクションセットのジョブをアップロードします。また、コレクションセットの **\@ collection_mode** が非キャッシュ (1) に設定されている場合は、直ちにコレクションエージェントジョブを開始します。 詳細については、「 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)」を参照してください。  
   
  sp_sycollector_run_collection_set は、スケジュールを持たないコレクション セットの実行にも使用できます。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.assembly_modules
 - sys.assembly_modules_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d46e4eca31f16a9f244046f05abe6dda44df3fb
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7910a39de1d1ec3e848dbbcfddf3d1cf79221ecc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099300"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180826"
 ---
 # <a name="sysassembly_modules-transact-sql"></a>sys.assembly_modules (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98099300"
 |**assembly_class**|**sysname**|このモジュールを定義するアセンブリ内のクラスの名前。|  
 |**assembly_method**|**sysname**|このモジュールを定義する **assembly_class** 内のメソッドの名前。<br /><br /> 集計関数 (AF) の場合は NULL です。|  
 |**null_on_null_input**|**bit**|モジュールは、任意の NULL 入力に対して NULL 出力を生成するように宣言されています。|  
-|**execute_as_principal_id**|**int**|CLR 関数、ストアドプロシージャ、またはトリガーの EXECUTE AS 句で指定されているように、コンテキストの実行が発生するデータベースプリンシパルの ID。<br /><br /> NULL = EXECUTE AS CALLER。 既定値です。<br /><br /> 指定されたデータベースプリンシパルの ID = EXECUTE AS SELF、EXECUTE AS *user_name*、または execute as *login_name* です。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|CLR 関数、ストアドプロシージャ、またはトリガーの EXECUTE AS 句で指定されているように、コンテキストの実行が発生するデータベースプリンシパルの ID。<br /><br /> NULL = EXECUTE AS CALLER。 これは既定値です。<br /><br /> 指定されたデータベースプリンシパルの ID = EXECUTE AS SELF、EXECUTE AS *user_name*、または execute as *login_name* です。<br /><br /> -2 = EXECUTE AS OWNER。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

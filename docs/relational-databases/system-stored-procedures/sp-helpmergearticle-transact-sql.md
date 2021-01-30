@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergearticle
 - sp_helpmergearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04e67d82b6c567a5c94de8009635c31e41864b92
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 43365f58dbfe76c89a5e7e41a0c65c65188edfdf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535214"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179285"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` 情報を取得するパブリケーションの名前を指定します。 *publication*のデータ型は **sysname**で、既定値はです **%** 。これにより、現在のデータベースのすべてのパブリケーションに含まれるすべてのマージアーティクルに関する情報が返されます。  
+`[ @publication = ] 'publication'` 情報を取得するパブリケーションの名前を指定します。 *publication* のデータ型は **sysname** で、既定値はです **%** 。これにより、現在のデータベースのすべてのパブリケーションに含まれるすべてのマージアーティクルに関する情報が返されます。  
   
-`[ @article = ] 'article'` 情報を返すアーティクルの名前を指定します。 *アーティクル*のデータ型は **sysname**で、既定値はです **%** 。これにより、指定されたパブリケーションのすべてのマージアーティクルに関する情報が返されます。  
+`[ @article = ] 'article'` 情報を返すアーティクルの名前を指定します。 *アーティクル* のデータ型は **sysname** で、既定値はです **%** 。これにより、指定されたパブリケーションのすべてのマージアーティクルに関する情報が返されます。  
   
 ## <a name="result-set"></a>結果セット  
   
@@ -54,7 +54,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**sync_object_owner**|**sysname**|パブリッシュされたアーティクルを定義するビューの所有者の名前。|  
 |**sync_object**|**sysname**|パーティションの初期データを確立するために使用されるカスタムオブジェクトの名前。|  
 |**description**|**nvarchar (255)**|アーティクルの説明です。|  
-|**status**|**tinyint**|アーティクルの状態。次のいずれかの値になります。<br /><br /> **1** = 非アクティブ<br /><br /> **2** = アクティブ<br /><br /> **5** = データ定義言語 (DDL) 操作の保留中<br /><br /> **6** = 新しく生成されたスナップショットを使用する DDL 操作<br /><br /> 注: アーティクルが再初期化されると、 **5** と **6** の値が **2**に変更されます。|  
+|**status**|**tinyint**|アーティクルの状態。次のいずれかの値になります。<br /><br /> **1** = 非アクティブ<br /><br /> **2** = アクティブ<br /><br /> **5** = データ定義言語 (DDL) 操作の保留中<br /><br /> **6** = 新しく生成されたスナップショットを使用する DDL 操作<br /><br /> 注: アーティクルが再初期化されると、 **5** と **6** の値が **2** に変更されます。|  
 |**creation_script**|**nvarchar (255)**|サブスクリプションデータベースでアーティクルを作成するために使用される、オプションのアーティクルスキーマスクリプトのパスと名前です。|  
 |**conflict_table**|**nvarchar (270)**|挿入または更新の競合を格納するテーブルの名前。|  
 |**article_resolver**|**nvarchar (255)**|アーティクルのカスタム競合回避モジュール。|  
@@ -88,11 +88,11 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpmergearticle** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_helpmergearticle**を実行できるのは、パブリケーションデータベースの固定データベースロール**db_owner** 、ディストリビューションデータベースの**replmonitor**ロール、またはパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
+ **Sp_helpmergearticle** を実行できるのは、パブリケーションデータベースの固定データベースロール **db_owner** 、ディストリビューションデータベースの **replmonitor** ロール、またはパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_helpmergearticle](../../relational-databases/replication/codesnippet/tsql/sp-helpmergearticle-tran_1.sql)]  

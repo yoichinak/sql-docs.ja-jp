@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLAllocStmt
 apilocation:
@@ -20,23 +20,23 @@ helpviewer_keywords:
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28eea4b64b8c94c0db83352a5bcbeafe8263bf60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 557c5165e1b81c2072d6392023e0811d1abb8dee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487285"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181105"
 ---
 # <a name="sqlallocstmt-function"></a>SQLAllocStmt 関数
 **互換性**  
  導入されたバージョン: ODBC 1.0 標準準拠: 非推奨  
   
- **まとめ**  
- ODBC 3 の場合。*x*、ODBC 2。*x* 関数 **sqlallocstmt** は **SQLAllocHandle**に置き換えられました。 詳細については、「 [SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)」を参照してください。  
+ **要約**  
+ ODBC 3 の場合。*x*、ODBC 2。*x* 関数 **sqlallocstmt** は **SQLAllocHandle** に置き換えられました。 詳細については、「 [SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)」を参照してください。  
   
 > [!NOTE]  
 >  ドライバーマネージャーが ODBC 2 の場合にこの関数をマップする方法の詳細については、「」を参照してください。*x* アプリケーションは ODBC 3 を使用して動作しています。*x* ドライバー、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「 [非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) 」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)

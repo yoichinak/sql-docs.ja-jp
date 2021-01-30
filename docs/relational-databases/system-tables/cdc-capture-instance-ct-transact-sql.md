@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cdc
 - cdc_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7fa737644611f24d9d0858fd04066d3ba0571ee3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: db855911d000c9d39c738f39aec0fa8486912957
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102730"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183376"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc。 &lt;capture_instance &gt; _CT (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98102730"
 |*\<captured source table columns>*|多様|変更テーブルの残りの列は、キャプチャインスタンスの作成時にキャプチャされた列として識別された、ソーステーブルの列です。 キャプチャ対象列リストで列が指定されなかった場合、ソース テーブルのすべての列がこのテーブルに格納されます。|  
 |**__ $ command_id** |**int** |トランザクション内の操作の順序を追跡します。 |  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 
 列の列は、 `__$command_id` バージョン2012から2016の累積的な更新プログラムで導入されました。 バージョンおよびダウンロードの情報については、 [Microsoft SQL Server データベースに対して変更データキャプチャを有効にした後に、更新された行の変更テーブルの順序が正しく設定さ](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)れ3030352ていないことを確認してください。  詳細については、 [SQL Server 2012、2014、2016の最新の CU にアップグレードした後に、CDC の機能が停止する場合があり](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016)ます。
 

@@ -6,7 +6,7 @@ ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_os_hosts_TSQL
 - dm_os_hosts
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: a0220ed88a3852188c5ee2f7952df7f067e410ad
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7d52a5cf6a949656df60fd76ed678c2505566735
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098896"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184893"
 ---
 # <a name="sysdm_os_hosts-transact-sql"></a>sys.dm_os_hosts (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "98098896"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary (8)**|ホスト オブジェクトの内部メモリ アドレス。|  
-|**type**|**nvarchar(60)**|ホストされるコンポーネントの種類。 たとえば、オブジェクトに適用された<br /><br /> SOSHOST_CLIENTID_SERVERSNI = SQL Server ネイティブインターフェイス<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB プロバイダー<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft データアクセスの実行時|  
+|**type**|**nvarchar(60)**|ホストされるコンポーネントの種類。 たとえば、次のように入力します。<br /><br /> SOSHOST_CLIENTID_SERVERSNI = SQL Server ネイティブインターフェイス<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB プロバイダー<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft データアクセスの実行時|  
 |**name**|**nvarchar(32)**|ホストの名前。|  
 |**enqueued_tasks_count**|**int**|ホストによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のキューに挿入されたタスクの合計数。|  
 |**active_tasks_count**|**int**|このホストがキューに配置した現在実行中のタスクの数。|  
@@ -52,12 +52,12 @@ ms.locfileid: "98098896"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の実行可能なコンポーネント以外の OLE DB プロバイダーなどのコンポーネントが、メモリを割り当てたりノンプリエンプティブなスケジュールに参加することが許可されます。 これらのコンポーネントはによってホストされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これらのコンポーネントによって割り当てられるすべてのリソースが追跡されます。 ホスティングによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部コンポーネントで使用されるリソースをより正確に把握できます。  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|差出人|終了|Relationship|  
+|差出人|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |sys.dm_os_hosts. default_memory_clerk_address|sys.dm_os_memory_clerks。 memory_clerk_address|1対1|  
 |sys.dm_os_hosts. host_address|sys.dm_os_memory_clerks。 host_address|1対1|  

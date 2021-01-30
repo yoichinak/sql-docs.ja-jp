@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - crypt_properties
 - crypt_properties_TSQL
@@ -21,12 +21,12 @@ ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09372a367d3469ffa0d2de6a4ea97bb1bbe10c34
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9b1d32be9df04d9fd4e7b487120e31b771f7e569
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473043"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182565"
 ---
 # <a name="syscrypt_properties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97473043"
 |**class**|**tinyint**|プロパティが存在するリソースのクラスの識別子。<br /><br /> 1 = オブジェクトまたは列<br /> 5 = アセンブリ|  
 |**class_desc**|**nvarchar(60)**|プロパティが存在するクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|クラスに従って解釈される、プロパティが存在する対象の ID|  
-|**thumbprint**|**varbinary(32)**|使用する証明書または非対称キーの SHA-1 ハッシュ。|  
+|**拇印**|**varbinary(32)**|使用する証明書または非対称キーの SHA-1 ハッシュ。|  
 |**crypt_type**|**char (4)**|暗号化の種類。<br /><br /> SPVC = 証明書の秘密キーで署名済み<br /><br /> SPVA = 非対称秘密キーによる署名<br /><br /> CPVC = 証明書の秘密キーによって副署されます。<br /><br /> CPVA = 非対称キーによって副署されます。|  
 |**crypt_type_desc**|**nvarchar(60)**|暗号化の種類の説明。<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> 証明書によるカウンターの署名<br /><br /> 非対称キーによるカウンターの署名|  
 |**crypt_property**|**varbinary(max)**|署名された、または暗号化されたビット。 署名付きモジュールの場合は、モジュールの署名ビットです。|  

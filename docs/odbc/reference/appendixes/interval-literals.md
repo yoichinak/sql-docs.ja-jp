@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval literals [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dd065091127645a45b836781fc6edf6c701e6685
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1e100fcc54f9ca6cc165eece7637b7fae45f65b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425034"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184409"
 ---
 # <a name="interval-literals"></a>Interval のリテラル
 ODBC では、すべてのドライバーで SQL_CHAR または SQL_VARCHAR データ型からすべての C interval データ型への変換がサポートされている必要があります。 ただし、基になるデータソースで interval データ型がサポートされていない場合、ドライバーは、これらの変換をサポートするために、[SQL_CHAR] フィールドの値の正しい形式を認識している必要があります。 同様に、ODBC では、任意の ODBC C 型が SQL_CHAR または SQL_VARCHAR に変換可能である必要があるため、ドライバーは、文字フィールドに格納されている間隔の形式を認識している必要があります。 このセクションでは、間隔リテラルの構文について説明します。この構文では、ドライバーライターは、C の interval データ型の間で変換中に SQL_CHAR フィールドを検証するために使用する必要があります。  
@@ -44,7 +44,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
 -   間隔が先頭と末尾のフィールドで構成されている場合、先頭のフィールドは2番目のフィールドであり、かっこで囲んだフィールドの有効桁数が指定されることがあります。 末尾のフィールドには、2番目以外のフィールドまたは2番目のフィールドを指定できます。このフィールドには、かっこ内の秒の小数部の有効桁数が含まれる場合があります。  
   
- *値*の間隔文字列は単一引用符で囲まれます。 年、月リテラル、または日時リテラルを指定できます。 *値*の文字列の形式は、次の規則によって決定されます。  
+ *値* の間隔文字列は単一引用符で囲まれます。 年、月リテラル、または日時リテラルを指定できます。 *値* の文字列の形式は、次の規則によって決定されます。  
   
 -   文字列には、によって暗黙的に指定されるすべてのフィールドの10進値が含まれ \<*interval* *qualifier*> ます。  
   

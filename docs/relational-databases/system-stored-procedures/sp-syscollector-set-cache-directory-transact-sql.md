@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_set_cache_directory_TSQL
 - sp_syscollector_set_cache_directory
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ea0f5784b29ac235984e098f3b40d9ceafb2b12c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c77fa4764cc1456ba9a3cb2f9923182d0d384e0a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545926"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185277"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  キャッシュ ディレクトリの構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このストアド プロシージャは失敗します。 詳細については、「 [データコレクションの有効化または無効化](../../relational-databases/data-collection/enable-or-disable-data-collection.md)」と「 [データコレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)」を参照してください。  
   
  指定されたディレクトリは、sp_syscollector_set_cache_directory の実行時に存在する必要はありません。ただし、ディレクトリが作成されるまで、データを正常にキャッシュおよびアップロードすることはできません。 このストアド プロシージャを実行する前に、ディレクトリを作成することをお勧めします。  

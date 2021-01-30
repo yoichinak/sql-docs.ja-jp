@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_io_cluster_shared_drives_TSQL
 - sys.dm_io_cluster_shared_drives
@@ -21,12 +21,12 @@ ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42c6b5bc337ae80099037181dc0d5fb0681f36bf
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1cb3a37eb8bd0a0fea491ee6aa11e74b4c092739
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096534"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185045"
 ---
 # <a name="sysdm_io_cluster_shared_drives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-sql)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "98096534"
 |**DriveName**|**nchar(2)**|クラスターの共有ディスクアレイに参加している個々のディスクを表すドライブ (ドライブ文字) の名前。 NULL 値は許可されません。|  
 |**pdw_node_id**|**int**|**適用対象**: ssPDW<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  クラスタリングが有効になっている場合、フェールオーバークラスターインスタンスは、インスタンスが別のノードにフェールオーバーした後にアクセスできるように、共有ディスク上にデータファイルとログファイルを配置する必要があります。 このビューの各行は、クラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで使用される 1 つの共有ディスクを表します。 このビューによって一覧表示されたディスクのみを使用して、のこのインスタンスのデータファイルまたはログファイルを格納でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このビューに表示されているディスクは、そのインスタンスに関連付けられているクラスターリソースグループ内のディスクです。  
   
 > [!NOTE]  

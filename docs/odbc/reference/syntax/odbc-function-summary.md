@@ -7,23 +7,23 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - functions [ODBC], listed by task
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 50a0b9146acd71f87b4dd65bbdd34c67725e9948
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5d27a6093947ba4e29e43f4970848780cbf4e8e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487375"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174643"
 ---
 # <a name="odbc-function-summary"></a>ODBC 関数の概要
 次の表に、タスクの種類ごとにグループ化された ODBC 関数の一覧を示します。また、各関数の目的について、準拠の指定と簡単な説明が含まれています。 準拠の表記の詳細については、「 [ODBC と標準 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)」を参照してください。 各関数の構文とセマンティクスの詳細については、「 [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)」を参照してください。  
   
- アプリケーションは **SQLGetInfo** 関数を呼び出して、ドライバーに関する準拠情報を取得できます。 ドライバー内の特定の関数のサポートに関する情報を取得するために、アプリケーションは **Sqlgetfunctions**を呼び出すことができます。  
+ アプリケーションは **SQLGetInfo** 関数を呼び出して、ドライバーに関する準拠情報を取得できます。 ドライバー内の特定の関数のサポートに関する情報を取得するために、アプリケーションは **Sqlgetfunctions** を呼び出すことができます。  
   
 |タスク|関数名|互換性|目的|  
 |----------|-------------------|-----------------|-------------|  

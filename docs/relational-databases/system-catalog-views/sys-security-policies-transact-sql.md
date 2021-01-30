@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SYS.SECURITY_POLICIES_TSQL
 - SECURITY_POLICIES_TSQL
@@ -22,12 +22,12 @@ ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2d1cd685055d4dd91bdb9cda445c7847bf5bbd6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c33e75e803b7b5d9972d373f4cc5738601197860
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479033"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182500"
 ---
 # <a name="syssecurity_policies-transact-sql"></a>sys.security_policies (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "97479033"
 |principal_id|**int**|データベースに登録されているセキュリティポリシーの所有者の ID。 スキーマを使用して所有者が決定される場合は NULL です。|  
 |schema_id|**int**|オブジェクトが存在するスキーマの ID。|  
 |parent_object_id|**int**|ポリシーが所属するオブジェクトの ID。 0 を指定する必要があります。|  
-|型|**vachar (2)**|**SP** である必要があります。|  
+|type|**vachar (2)**|**SP** である必要があります。|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**。|  
 |create_date|**datetime**|セキュリティポリシーが作成された UTC 日付。|  
 |modify_date|**datetime**|セキュリティポリシーが最後に変更された UTC 日付。|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAMethod
 - sp_OAMethod_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7442e3af4bf0233e51f32d7c8e6f034d69598046
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: da84a59353baffa92ac0fa30e55bfa4b248379f7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526961"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182407"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="arguments"></a>引数  
  *objecttoken*  
- 以前に **sp_OACreate**を使用して作成された OLE オブジェクトのオブジェクトトークンです。  
+ 以前に **sp_OACreate** を使用して作成された OLE オブジェクトのオブジェクトトークンです。  
   
  *methodname*  
  呼び出す OLE オブジェクトのメソッド名を指定します。  
@@ -51,9 +51,9 @@ sp_OAMethod objecttoken , methodname
  _戻り_  **結果の出力**  
  OLE オブジェクトのメソッドの戻り値です。 指定する場合は、適切なデータ型のローカル変数でなければなりません。  
   
- メソッドが単一の値を返す場合は、戻り *値のローカル*変数を指定します。これにより、ローカル変数のメソッドの戻り値が返されます。または、メソッドの戻り値を単一列の単一行の結果セットとしてクライアントに *返す戻り値を指定しない*でください。  
+ メソッドが単一の値を返す場合は、戻り *値のローカル* 変数を指定します。これにより、ローカル変数のメソッドの戻り値が返されます。または、メソッドの戻り値を単一列の単一行の結果セットとしてクライアントに *返す戻り値を指定しない* でください。  
   
- メソッドの戻り値が OLE オブジェクトの場合、戻り値は、データ型が**int**のローカル変数で*ある必要が*あります。オブジェクトトークンはローカル変数に格納され、このオブジェクトトークンを他の OLE オートメーションストアドプロシージャと共に使用できます。  
+ メソッドの戻り値が OLE オブジェクトの場合、戻り値は、データ型が **int** のローカル変数で *ある必要が* あります。オブジェクトトークンはローカル変数に格納され、このオブジェクトトークンを他の OLE オートメーションストアドプロシージャと共に使用できます。  
   
  メソッドの戻り値が配列の場合、戻り値が指定され *ている場合* は NULL に設定されます。  
   
@@ -69,13 +69,13 @@ sp_OAMethod objecttoken , methodname
   
  出力パラメーターの戻り値を取得するには、 *パラメーター* を適切なデータ型のローカル変数にする必要があり、 **出力** を指定する必要があります。 定数パラメーターが指定されている場合、または **output** が指定されていない場合、出力パラメーターからの戻り値は無視されます。  
   
- 指定する場合、 *parametername* は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 名前付きパラメーターの名前である必要があります。 **@**_Parametername_is ローカル変数ではないことに注意 [!INCLUDE[tsql](../../includes/tsql-md.md)] してください。 アットマーク ( **@** ) は削除され、 *parametername*はパラメーター名として OLE オブジェクトに渡されます。 すべての位置指定パラメーターを指定した後に、すべての名前付きパラメーターを指定する必要があります。  
+ 指定する場合、 *parametername* は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 名前付きパラメーターの名前である必要があります。 **@** _Parametername_is ローカル変数ではないことに注意 [!INCLUDE[tsql](../../includes/tsql-md.md)] してください。 アットマーク ( **@** ) は削除され、 *parametername* はパラメーター名として OLE オブジェクトに渡されます。 すべての位置指定パラメーターを指定した後に、すべての名前付きパラメーターを指定する必要があります。  
   
  *n*  
  複数のパラメーターを指定できることを示すプレースホルダーです。  
   
 > [!NOTE]
->  * \@ parametername*は、指定されたメソッドの一部であり、オブジェクトに渡されるため、名前付きパラメーターにすることができます。 このストアドプロシージャの他のパラメーターは、名前ではなく位置によって指定されます。  
+>  *\@ parametername* は、指定されたメソッドの一部であり、オブジェクトに渡されるため、名前付きパラメーターにすることができます。 このストアドプロシージャの他のパラメーターは、名前ではなく位置によって指定されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数 (失敗)。これは、OLE オートメーションオブジェクトによって返される HRESULT の整数値です。  
@@ -106,7 +106,7 @@ sp_OAMethod objecttoken , methodname
  また、 **sp_OAMethod** を使用してプロパティ値を取得することもできます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures` OLE オートメーションに関連するシステムプロシージャを使用するには、構成を **有効** にする必要があります。  
+ **Sysadmin** 固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures` OLE オートメーションに関連するシステムプロシージャを使用するには、構成を **有効** にする必要があります。  
   
 ## <a name="examples"></a>例  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdbfixedrole
 - sp_helpdbfixedrole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0b72a64d8d895956273a7c76e21dbb88152b546
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 817947901ca7f35ba2972004d23ed8d7f85215ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538803"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176432"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @rolename = ] 'role'` 固定データベースロールの名前を指定します。 *role* の部分は **sysname**で、既定値は NULL です。 *Role*を指定すると、そのロールに関する情報のみが返されます。それ以外の場合は、すべての固定データベースロールの一覧と説明が返されます。  
+`[ @rolename = ] 'role'` 固定データベースロールの名前を指定します。 *role* の部分は **sysname** で、既定値は NULL です。 *Role* を指定すると、そのロールに関する情報のみが返されます。それ以外の場合は、すべての固定データベースロールの一覧と説明が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -52,7 +52,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|固定データベースロールの名前。|  
 |**説明**|**nvarchar (70)**|**Dbfixedrole の説明です。**|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次の表に示すように、固定データベースロールはデータベースレベルで定義され、特定のデータベースレベルの管理アクティビティを実行する権限を持っています。 固定データベース ロールは、追加または削除できません。 固定データベースロールに付与された権限は変更できません。  
   
 |固定データベースロール|説明|  

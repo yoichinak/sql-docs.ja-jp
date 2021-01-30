@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - display size of data types [ODBC]
 - data types [ODBC], column size
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d00a23fb38bdece97ffcbde0974b7bdf893a5133
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a23183fd60d947771cb041af977d518157ac573
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421506"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182530"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列サイズ、10進数、転送オクテット長、および表示サイズ-ODBC
 データ型は、列 (またはパラメーター) のサイズ、10進数、長さ、および表示サイズによって特徴付けられます。 次の ODBC 関数は、SQL ステートメントのパラメーターまたはデータソースの SQL データ型に対してこれらの属性を返します。 各 ODBC 関数は、次のように、これらの属性の異なるセットを返します。  
@@ -44,7 +44,7 @@ ms.locfileid: "88421506"
   
  すべてのデータ型の表示サイズ値は、1つの記述子フィールドの値 SQL_DESC_DISPLAY_SIZE に対応します。  
   
- 記述子フィールドは、結果セットの特性を記述します。 記述子フィールドには、ステートメントを実行する前のデータに関する有効な値が含まれていません。 一方、 **Sqlcolumns**、 **SQLProcedureColumns**、および **SQLGetTypeInfo**によって返される列サイズ、10進数字、および表示サイズの値は、データソースのカタログに存在するテーブル列やデータ型などのデータベースオブジェクトの特性を返します。 同様に、結果セットでは、 **Sqlcolattribute** によって、列のサイズ、10進数、およびデータソースの列の転送オクテット長が返されます。これらの値は、必ずしも SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_OCTET_LENGTH 記述子フィールドの値と同じではありません。  
+ 記述子フィールドは、結果セットの特性を記述します。 記述子フィールドには、ステートメントを実行する前のデータに関する有効な値が含まれていません。 一方、 **Sqlcolumns**、 **SQLProcedureColumns**、および **SQLGetTypeInfo** によって返される列サイズ、10進数字、および表示サイズの値は、データソースのカタログに存在するテーブル列やデータ型などのデータベースオブジェクトの特性を返します。 同様に、結果セットでは、 **Sqlcolattribute** によって、列のサイズ、10進数、およびデータソースの列の転送オクテット長が返されます。これらの値は、必ずしも SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_OCTET_LENGTH 記述子フィールドの値と同じではありません。  
   
  これらの記述子フィールドの詳細については、「 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)」を参照してください。  
   

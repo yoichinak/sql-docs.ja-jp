@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ea84b28e12194ffb1a1b181089622cd169c91b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fb1e91c03f7a1a1fee98ce887be991370450999
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471634"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183199"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL コマンド
 指定されたフィールドを含むテーブルを作成します。  
@@ -63,7 +63,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  *FieldType* は、フィールドの [データ型](../../odbc/microsoft/visual-foxpro-field-data-types.md)を示す単一の文字です。 一部のフィールドデータ型では、 *Nfieldwidth* または *nprecision* またはその両方を指定する必要があります。  
   
- *Nfieldwidth* と *Nprecision* は、D、G、I、L、M、P、T、および Y 型では無視されます。 n precision が B、F、N のいずれの型にも含まれ*ていない場合、* *nprecision*の既定値は 0 (小数点以下の桁数ではありません) になります。  
+ *Nfieldwidth* と *Nprecision* は、D、G、I、L、M、P、T、および Y 型では無視されます。 n precision が B、F、N のいずれの型にも含まれ *ていない場合、* *nprecision* の既定値は 0 (小数点以下の桁数ではありません) になります。  
   
  NULL  
  フィールドの null 値を許可します。  
@@ -73,14 +73,14 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  Null と NOT NULL を省略すると、SET NULL の現在の設定によって、フィールドで null 値が許可されるかどうかが決まります。 ただし、null および NOT NULL を省略し、PRIMARY KEY または UNIQUE 句を含めると、SET NULL の現在の設定は無視され、フィールドの既定値は NULL になりません。  
   
- *LExpression1*の確認  
+ *LExpression1* の確認  
  フィールドの検証規則を指定します。 *lExpression1* ユーザー定義関数を指定できます。 空白のレコードが追加されるたびに、検証規則がチェックされます。 追加されたレコードで空のフィールド値が検証規則によって許可されていない場合、エラーが生成されます。  
   
  エラー *cMessageText1*  
  フィールド規則によってエラーが生成された場合に表示されるエラーメッセージを指定します。 このメッセージは、[参照] ウィンドウまたは編集ウィンドウ内でデータが変更された場合にのみ表示されます。  
   
  既定の *eExpression1*  
- フィールドの既定値を指定します。 *EExpression1*のデータ型は、フィールドのデータ型と同じである必要があります。  
+ フィールドの既定値を指定します。 *EExpression1* のデータ型は、フィールドのデータ型と同じである必要があります。  
   
  PRIMARY KEY  
  フィールドのプライマリインデックスを作成します。 プライマリインデックスタグには、フィールドと同じ名前が付けられています。  
@@ -93,8 +93,8 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  プライマリまたは候補のインデックスに使用されるフィールドでは、Null 値と重複レコードは許可されません。 ただし、null 値をサポートするフィールドのプライマリインデックスまたは候補インデックスを作成した場合、Visual FoxPro ではエラーは生成されません。 プライマリまたは候補のインデックスに使用するフィールドに null 値または重複値を入力しようとすると、Visual FoxPro でエラーが発生します。  
   
- *TableName2*の参照 [TAG *TagName1*]  
- 永続的なリレーションシップを確立する親テーブルを指定します。 タグ *TagName1*を省略した場合、リレーションシップは親テーブルのプライマリインデックスキーを使用して確立されます。 親テーブルにプライマリインデックスがない場合、Visual FoxPro ではエラーが生成されます。  
+ *TableName2* の参照 [TAG *TagName1*]  
+ 永続的なリレーションシップを確立する親テーブルを指定します。 タグ *TagName1* を省略した場合、リレーションシップは親テーブルのプライマリインデックスキーを使用して確立されます。 親テーブルにプライマリインデックスがない場合、Visual FoxPro ではエラーが生成されます。  
   
  親テーブルの既存のインデックスタグに基づいてリレーションシップを確立するには、タグ *TagName1* を含めます。 インデックスタグ名には、最大10文字まで含めることができます。  
   
@@ -115,26 +115,26 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  テーブルで使用できるプライマリインデックスは1つだけなので、フィールドのプライマリインデックスを既に作成している場合は、この句を含めることはできません。 CREATE TABLE に複数の主キー句を含めると、Visual FoxPro によってエラーが生成されます。  
   
- 一意の *eExpression3*タグ *TagName3*  
+ 一意の *eExpression3* タグ *TagName3*  
  候補インデックスを作成します。 *eExpression3* は、テーブル内のフィールドまたはフィールドの組み合わせを指定します。 ただし、主キーオプションのいずれかを使用してプライマリインデックスを作成した場合は、プライマリインデックスに対して指定されたフィールドを含めることはできません。 タグ *TagName3* 作成される候補のインデックスタグのタグ名を指定します。 インデックスタグ名には、最大10文字まで含めることができます。  
   
  テーブルには複数の候補インデックスを含めることができます。  
   
- 外部キー *eExpression4*TAG *TagName4*[nodup]  
+ 外部キー *eExpression4* TAG *TagName4*[nodup]  
  外部 (非プライマリ) インデックスを作成し、親テーブルとのリレーションシップを確立します。 *eExpression4* は、外部インデックスキーの式を指定し、 *TagName4* は、作成される外部インデックスキータグの名前を指定します。 インデックスタグ名には、最大10文字まで含めることができます。 候補の外部インデックスを作成するには、NODUP を含めます。  
   
  テーブルに対して複数の外部インデックスを作成できますが、外部インデックス式ではテーブル内の別のフィールドを指定する必要があります。  
   
- *TableName3*の参照 [TAG *TagName5*]  
+ *TableName3* の参照 [TAG *TagName5*]  
  永続的なリレーションシップを確立する親テーブルを指定します。 親テーブルのインデックスタグに基づいてリレーションシップを確立するには、タグ *TagName5* を含めます。 インデックスタグ名には、最大10文字まで含めることができます。 既定では、TAG *TagName5 を* 省略すると、親テーブルのプライマリインデックスキーを使用してリレーションシップが確立されます。  
   
- *EExpression2*の確認 [ERROR *cMessageText2*]  
+ *EExpression2* の確認 [ERROR *cMessageText2*]  
  テーブル検証ルールを指定します。 エラー *cMessageText2* は、テーブル検証ルールが実行されたときに Visual FoxPro によって表示されるエラーメッセージを指定します。 このメッセージは、[参照] ウィンドウまたは [編集] ウィンドウ内でデータが変更された場合にのみ表示されます。  
   
- 配列*Arrayname*から  
+ 配列 *Arrayname* から  
  テーブル内の各フィールドの名前、型、有効桁数、および小数点以下桁数を内容とする既存の配列の名前を指定します。 配列の内容は、 **Afields**() 関数を使用して定義できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  新しいテーブルは、使用可能な最も低い作業領域で開かれ、そのエイリアスによってアクセスできます。 新しいテーブルは、SET EXCLUSIVE の現在の設定に関係なく、排他的に開かれます。  
   
  データベースが開いていて、FREE 句が含まれていない場合は、新しいテーブルがデータベースに追加されます。 データベース内のテーブルと同じ名前の新しいテーブルを作成することはできません。  
@@ -155,14 +155,14 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  ドライバーを使用してテーブルを作成する場合、ドライバーは、作成後すぐにテーブルを閉じて、他のユーザーがテーブルにアクセスできるようにします。 これは Visual FoxPro とは異なり、テーブルは作成時に排他的に開かれたままになります。 ただし、CREATE TABLE ステートメントを含むデータソースのストアドプロシージャを実行すると、そのテーブルは開いたままになります。  
   
- データソースがデータベース (dbc ファイル) の場合、Visual FoxPro ODBC ドライバーは、*ベーステーブル名*と同じ名前の*longtablename*という名前のテーブルを作成します。  
+ データソースがデータベース (dbc ファイル) の場合、Visual FoxPro ODBC ドライバーは、*ベーステーブル名* と同じ名前の *longtablename* という名前のテーブルを作成します。  
   
 ### <a name="using-data-definition-language-ddl"></a>データ定義言語 (DDL) の使用  
  次の場所に DDL を含めることはできません。  
   
 -   トランザクションを必要とするバッチ SQL ステートメントの場合  
   
--   手動コミットモードでは、トランザクションを必要とするステートメントの後、アプリケーションが最初に **Sqltransact**を呼び出す場合を除きます。  
+-   手動コミットモードでは、トランザクションを必要とするステートメントの後、アプリケーションが最初に **Sqltransact** を呼び出す場合を除きます。  
   
  たとえば、一時テーブルを作成する場合は、トランザクションを必要とするステートメントを開始する前に、テーブルを作成する必要があります。 トランザクションを必要とするバッチ SQL ステートメントに CREATE TABLE ステートメントを含めると、ドライバーはエラーメッセージを返します。  
   

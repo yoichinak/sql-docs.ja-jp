@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_status_sp
 - sysmail_help_status_sp_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b40f86ddb3fd349e11f25e655ac06e757c559a56
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c60340af17a1faf439519416ac862fb792115a5e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525356"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181919"
 ---
 # <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  データベースメールキューの状態を表示します。 **Sysmail_start_sp**を使用してデータベースメールキューを開始し、 **sysmail_stop_sp**データベースメールキューを停止します。  
+  データベースメールキューの状態を表示します。 **Sysmail_start_sp** を使用してデータベースメールキューを開始し、 **sysmail_stop_sp** データベースメールキューを停止します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

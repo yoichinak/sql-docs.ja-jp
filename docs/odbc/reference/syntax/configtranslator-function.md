@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - ConfigTranslator
 apilocation:
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b99628b801199c7e2d7fd033e1b0728f1538932
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d15cbb5e43f8d893d38aaa086f0d6f039e2b2a93
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461274"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174712"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 関数
 **互換性**  
  導入されたバージョン: ODBC 2.0  
   
- **まとめ**  
+ **要約**  
  **Configtranslator** は、翻訳者の既定の翻訳オプションを返します。 トランスレーター DLL または別のセットアップ DLL に配置できます。  
   
 ## <a name="syntax"></a>構文  
@@ -54,15 +54,15 @@ BOOL ConfigTranslator(
  関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **Configtranslator**から FALSE が返された場合、関連する* \* Pferrorcode*値は、 **sqlpostインストーラエラー**の呼び出しによってインストーラーエラーバッファーにポストされ、 **sqlインストーラエラー**を呼び出すことによって取得できます。 次の表は、 **Sqlインストーラエラー**によって返される可能性がある* \* pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
+ **Configtranslator** から FALSE が返された場合、関連する *\* Pferrorcode* 値は、 **sqlpostインストーラエラー** の呼び出しによってインストーラーエラーバッファーにポストされ、 **sqlインストーラエラー** を呼び出すことによって取得できます。 次の表は、 **Sqlインストーラエラー** によって返される可能性がある *\* pferrorcode* 値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
 |*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*HwndParent*引数が無効であるか、NULL でした。|  
-|ODBC_ERROR_DRIVER_SPECIFIC|ドライバーまたはトランスレーター固有のエラー|ODBC インストーラーエラーが定義されていないドライバー固有のエラー。 **Sqlpostインストーラ error**関数の呼び出しの*szerror*引数には、ドライバー固有のエラーメッセージが含まれている必要があります。|  
-|ODBC_ERROR_INVALID_OPTION|無効な変換オプション|*Pvoption*引数に無効な値が含まれています。|  
+|ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*HwndParent* 引数が無効であるか、NULL でした。|  
+|ODBC_ERROR_DRIVER_SPECIFIC|ドライバーまたはトランスレーター固有のエラー|ODBC インストーラーエラーが定義されていないドライバー固有のエラー。 **Sqlpostインストーラ error** 関数の呼び出しの *szerror* 引数には、ドライバー固有のエラーメッセージが含まれている必要があります。|  
+|ODBC_ERROR_INVALID_OPTION|無効な変換オプション|*Pvoption* 引数に無効な値が含まれています。|  
   
-## <a name="comments"></a>コメント  
+## <a name="comments"></a>説明  
  変換ツールで1つの翻訳オプションのみがサポートされている場合、 **Configtranslator** は TRUE を返し、 *pvoption* を32ビットオプションに設定します。 それ以外の場合は、使用する既定の翻訳オプションを決定します。 **Configtranslator** では、ユーザーが既定の翻訳オプションを選択するダイアログボックスを表示できます。  
   
 ## <a name="related-functions"></a>関連する関数  

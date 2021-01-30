@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help
 - sp_help_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe0b4f610b0656a0b82ad80adebde1480f14c6f3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e97e2118c90521881dbf55d686910cff01ef79e7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478913"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176569"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**NULL 値の使用**|**varchar (** 35 **)**|NULL 値が許可されるかどうかを示します。 Yes または No。|  
     |**Default_name**|**nvarchar (** 128 **)**|このデータ型にバインドされた既定値の名前です。<br /><br /> NULL = 既定値がバインドされていません。|  
     |**Rule_name**|**nvarchar (** 128 **)**|このデータ型にバインドされたルールの名前です。<br /><br /> NULL = 既定値がバインドされていません。|  
-    |**Collation**|**sysname**|データ型の照合順序。 文字以外のデータ型の場合は NULL です。|  
+    |**照合順序**|**sysname**|データ型の照合順序。 文字以外のデータ型の場合は NULL です。|  
   
 3.  *名前* がデータ型以外のデータベースオブジェクトである場合、 **sp_help** は、指定されたオブジェクトの型に基づいて、この結果セットと追加の結果セットを返します。  
 
@@ -99,14 +99,14 @@ sp_help [ [ @objname = ] 'name' ]
         |**NULL 値の使用**|**varchar (** 35 **)**|列で NULL 値を使用できるかどうかを示します。 Yes または No。|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|末尾の空白をトリミングします。 Yes または No を返します。|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|これは旧バージョンとの互換性のためにだけ用意されています。|  
-        |**Collation**|**sysname**|列の照合順序。 非文字データ型の場合は NULL です。|  
+        |**照合順序**|**sysname**|列の照合順序。 非文字データ型の場合は NULL です。|  
   
     -   Id 列に対して次の結果セットが返されます。  
   
         |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
         |**ID**|**nvarchar (** 128 **)**|データ型が id として宣言されている列の名前。|  
-        |**シード**|**numeric**|Id 列の開始値。|  
+        |**Seed**|**numeric**|Id 列の開始値。|  
         |**Increment**|**numeric**|この列の値に使用する増分です。|  
         |**[レプリケーションでは使用しない]**|**int**|**Sqlrepl** などのレプリケーションログインでテーブルにデータを挿入するときに、IDENTITY プロパティは適用されません。<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -159,7 +159,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**スケール**|**int**|小数点の右側の桁数。|  
         |**Param_order**|**smallint**|パラメーターの順番です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Sp_help** プロシージャは、現在のデータベースでのみオブジェクトを検索します。  
   
  *名前* が指定されていない場合 **sp_help** 現在のデータベース内のすべてのオブジェクトのオブジェクト名、所有者、およびオブジェクトの種類が一覧表示されます。 **sp_helptrigger** は、トリガーに関する情報を提供します。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_db_partition_stats
 - dm_db_partition_stats_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe7e6639e8f0b04e8a3482ce56baf732a9113c6d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0838f88916f2fb1b7847ab1ee27e7f9f13a594ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095153"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179332"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "98095153"
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
 |**distribution_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分布に関連付けられている一意の数値 id です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sys.dm_db_partition_stats** では、データベースにあるすべてのパーティションの行内データ、LOB データ、行オーバーフロー データについて、格納と管理に使用されている領域に関する情報が表示されます。 ここではパーティションごとに 1 行が表示されます。  
   
  出力の基になる数字は、メモリにキャッシュされるか、各種システム テーブルのディスクに格納されます。  

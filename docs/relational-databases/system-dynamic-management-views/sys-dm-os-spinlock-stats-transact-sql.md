@@ -9,7 +9,7 @@ ms.service: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_os_spinlock_stats_TSQL
 - dm_os_spinlock_stats_TSQL
@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: 396c52a6d687c554b277e6f26c290978f035ae01
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fad0a1121d9d7d9e8cc37970022f1c5bbf028e10
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099774"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184777"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-sql)
 
@@ -51,7 +51,7 @@ ms.locfileid: "98099774"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。    
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  
  sys.dm_os_spinlock_stats は、スピンロックの競合の原因を特定するために使用できます。 場合によっては、スピンロックの競合を解決または減少させることができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   

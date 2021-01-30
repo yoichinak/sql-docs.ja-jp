@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergearticlecolumn
 - sp_helpmergearticlecolumn_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce3aa58526b458619b9875a19118fd4575aca3bf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d781adddce0db83791614012b8583f20af1d2e5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546071"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179282"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` パブリケーションの名前を指定します。*publication* は **sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'` 情報を取得するアーティクルであるテーブルまたはビューの名前を指定します。*アーティクル* は **sysname**で、既定値はありません。  
+`[ @article = ] 'article'` 情報を取得するアーティクルであるテーブルまたはビューの名前を指定します。*アーティクル* は **sysname** で、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -54,11 +54,11 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpmergearticlecolumn** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_helpmergearticlecolumn**を実行できるのは、ディストリビューションデータベースの**replmonitor**固定データベースロールのメンバー、またはパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
+ **Sp_helpmergearticlecolumn** を実行できるのは、ディストリビューションデータベースの **replmonitor** 固定データベースロールのメンバー、またはパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

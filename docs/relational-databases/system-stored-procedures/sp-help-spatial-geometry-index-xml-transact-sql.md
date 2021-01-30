@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geometry_index_xml_TSQL
 - sp_help_spatial_geometry_index_xml
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee3abb8e5a06d972b63140007cb8002e32837df2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: f0630c37d00e6f9d8496d1fd0b0786987c46e96f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810901"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185394"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Geometry**空間インデックスについて、指定された一連のプロパティの名前と値を返します。 プロパティのコアセットとインデックスのすべてのプロパティのどちらを返すかを選択できます。  
+  **Geometry** 空間インデックスについて、指定された一連のプロパティの名前と値を返します。 プロパティのコアセットとインデックスのすべてのプロパティのどちらを返すかを選択できます。  
   
  結果は、選択したプロパティの名前と値を表示する XML フラグメントで返されます。  
   
@@ -54,11 +54,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public** ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>コメント  
  NULL 値を含むプロパティは、XML の戻り値のセットに含まれません。  
   
 ## <a name="example"></a>例  
- 次の例では、を使用し `sp_help_spatial_geometry_index_xml` て、 ** \@ qs**の指定されたクエリサンプルのテーブル**geometry_col**で定義されている空間インデックス**SIndx_SpatialTable_geometry_col2**を調査します。 この例では、選択したプロパティの名前と値を表示する XML フラグメント内の指定されたインデックスのコアプロパティを返します。  
+ 次の例では、を使用し `sp_help_spatial_geometry_index_xml` て、 **\@ qs** の指定されたクエリサンプルのテーブル **geometry_col** で定義されている空間インデックス **SIndx_SpatialTable_geometry_col2** を調査します。 この例では、選択したプロパティの名前と値を表示する XML フラグメント内の指定されたインデックスのコアプロパティを返します。  
   
  その後、 [XQuery](../../xquery/xquery-basics.md) が結果セットで実行され、特定のプロパティが返されます。  
   

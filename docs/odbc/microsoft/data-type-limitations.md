@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], data types
 - data types [ODBC], desktop database drivers
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4853846f21aa0ad763295bbdc4233c472ac53864
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9081f52e7cf79613b9021ce7b883a1720da468c6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412788"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176527"
 ---
 # <a name="data-type-limitations"></a>データ型の制限事項
 Microsoft ODBC Desktop データベースドライバーでは、データ型に次の制限が適用されます。  
@@ -31,8 +31,8 @@ Microsoft ODBC Desktop データベースドライバーでは、データ型に
 |BINARY|長さ0のバイナリ列を作成すると、実際には255バイトのバイナリ列が返されます。|  
 |DATE|CONVERT 関数では、DATE データ型を別のデータ型 (またはそれ自体) に変換することはできません。|  
 |DECIMAL (真数)|サポートされていません。|  
-|浮動小数点データ型|浮動小数点数の小数点以下の桁数は、Windows のコントロールパネルの [インターナショナル] セクションで設定した数値形式によって制限される場合があります。|  
+|データ型の Floating-Point|浮動小数点数の小数点以下の桁数は、Windows のコントロールパネルの [インターナショナル] セクションで設定した数値形式によって制限される場合があります。|  
 |NUMERIC|最大有効桁数と28の小数点以下桁数をサポートします。|  
 |timestamp|TIMESTAMP データ型は、CONVERT 関数によってそれ自体に変換することはできません。|  
 |TINYINT|TINYINT 値は常に符号なしです。|  
-|長さ0の文字列|DBASE、Microsoft Excel、Paradox、または Textdriver を使用するときに、長さ0の文字列を列に挿入すると、実際には NULL が挿入されます。|
+|Zero-Length 文字列|DBASE、Microsoft Excel、Paradox、または Textdriver を使用するときに、長さ0の文字列を列に挿入すると、実際には NULL が挿入されます。|

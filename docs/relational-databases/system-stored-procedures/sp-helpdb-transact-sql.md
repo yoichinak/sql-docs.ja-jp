@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdb
 - sp_helpdb_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1b2055f810be69949f72dd97364ccfb47bfa22f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: efb199d0fc846bc37a8f7c1272563de99507c795
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809166"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176438"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'name'` 情報を報告するデータベースの名前を指定します。 *名前* は **sysname**,、既定値はありません。 *名前*が指定されていない場合は、 **sp_helpdb** 、**データベースカタログビュー**内のすべてのデータベースについてレポートします。  
+`[ @dbname = ] 'name'` 情報を報告するデータベースの名前を指定します。 *名前* は **sysname**,、既定値はありません。 *名前* が指定されていない場合は、 **sp_helpdb** 、**データベースカタログビュー** 内のすべてのデータベースについてレポートします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -51,13 +51,13 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|データベース名。|  
 |**db_size**|**nvarchar (13)**|データベースの合計サイズ。|  
-|**責任**|**sysname**|**Sa**などのデータベース所有者。|  
+|**所有者**|**sysname**|**Sa** などのデータベース所有者。|  
 |**dbid**|**smallint**|データベース ID。|  
 |**created**|**nvarchar(11)**|データベースの作成日です。|  
-|**status**|**nvarchar (600)**|データベースで現在設定されているデータベースオプションの値のコンマ区切りの一覧です。<br /><br /> ブール値を持つオプションは、有効になっている場合にのみリストに追加されます。 ブール型以外のオプションは、 *option_name*値の形式で対応する値と共に一覧表示され = *value*ます。<br /><br /> 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
+|**status**|**nvarchar (600)**|データベースで現在設定されているデータベースオプションの値のコンマ区切りの一覧です。<br /><br /> ブール値を持つオプションは、有効になっている場合にのみリストに追加されます。 ブール型以外のオプションは、 *option_name* 値の形式で対応する値と共に一覧表示され = ます。<br /><br /> 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
 |**compatibility_level**|**tinyint**|データベースの互換性レベル (60、65、70、80、および 90) です。|  
   
- *Name*を指定した場合は、指定されたデータベースのファイル割り当てを示す追加の結果セットが存在します。  
+ *Name* を指定した場合は、指定されたデータベースのファイル割り当てを示す追加の結果セットが存在します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -70,11 +70,11 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**成長**|**nvarchar (18)**|ファイルの拡張増分値。 これは、新しい領域が必要になるたびにファイルに追加される領域の量を示します。|  
 |**ユーセジリンク**|**varchar (9)**|ファイルの使用方法。 データファイルの場合、値は **' data only '** で、ログファイルの値は **' log only '** です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>コメント  
  結果セットの **status** 列は、データベースで ON に設定されているオプションを報告します。 [ **状態** ] 列には、すべてのデータベースオプションがレポートされません。 現在のデータベースオプションの設定の完全な一覧を表示するに **は、データベースカタログビュー** を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 1つのデータベースを指定する場合は、データベース内の **public** ロールのメンバーシップが必要です。 データベースが指定されていない場合は、 **master**データベースの**public**ロールのメンバーシップが必要です。  
+ 1つのデータベースを指定する場合は、データベース内の **public** ロールのメンバーシップが必要です。 データベースが指定されていない場合は、 **master** データベースの **public** ロールのメンバーシップが必要です。  
   
  データベースにアクセスできない場合は、エラーメッセージ15622とデータベースに関する情報が **sp_helpdb** 表示されます。  
   

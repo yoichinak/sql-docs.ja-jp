@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - text file driver [ODBC], data types
 - ODBC desktop database drivers [ODBC], text file driver
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0d14d98f7aa25c42ec6d121aa0819a1f3dcce5db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1e447d2f20c8efb5e0c0cddc793baf73384e556
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449104"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182538"
 ---
 # <a name="text-file-data-types"></a>テキスト ファイルのデータ型
 次の表は、テキストデータ型を ODBC SQL データ型にマップする方法を示しています。 Odbc テキストドライバーでは、すべての ODBC SQL データ型がサポートされているわけではないことに注意してください。  
@@ -36,7 +36,7 @@ ms.locfileid: "88449104"
 |LONGCHAR|SQL_LONGVARCHAR|  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** は ODBC データ型を返します。 *ODBC プログラマーズリファレンス*の付録 D のすべての変換は、前の表に記載されている SQL データ型に対してサポートされています。  
+>  **SQLGetTypeInfo** は ODBC データ型を返します。 *ODBC プログラマーズリファレンス* の付録 D のすべての変換は、前の表に記載されている SQL データ型に対してサポートされています。  
   
  次の表は、テキストデータ型の制限を示しています。  
   

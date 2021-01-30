@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergeconflictrows_TSQL
 - sp_helpmergeconflictrows
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d6d8ea39fd9ccc48f96c838367d5f859226098d1
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 4aeb1205f3d929eed7b2717ff388d8e03891d9e3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809838"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179257"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +44,9 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* の **sysname**,、既定値は **%** です。 パブリケーションが指定されている場合は、パブリケーションによって修飾されたすべての競合が返されます。 たとえば、 **MSmerge_conflict_Customers** テーブルに **WA** および **ca** パブリケーションの競合行がある場合、パブリケーション名 **ca** を渡すと、 **ca** パブリケーションに関連する競合が取得されます。  
   
-`[ @conflict_table = ] 'conflict_table'` 競合テーブルの名前を指定します。 *conflict_table* は **sysname**であり、既定値はありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、競合テーブルの名前は、パブリッシュされたアーティクルごとに1つのテーブルと共に、 **MSmerge_conflict \_ _パブリケーション \_ アーティクル_** での形式名を使用して付けられます。  
+`[ @conflict_table = ] 'conflict_table'` 競合テーブルの名前を指定します。 *conflict_table* は **sysname** であり、既定値はありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、競合テーブルの名前は、パブリッシュされたアーティクルごとに1つのテーブルと共に、 **MSmerge_conflict \_ _パブリケーション \_ アーティクル_** での形式名を使用して付けられます。  
   
-`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname** で、既定値は NULL です。  
   
 `[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。*publisher_db* は **sysname**,、既定値は NULL です。  
   
@@ -67,11 +67,11 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>コメント  
  **sp_helpmergeconflictrows** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_helpmergeconflictrows**を実行できるのは、固定サーバーロール**sysadmin** 、 **db_owner**固定データベースロールのメンバー、およびディストリビューションデータベースの**replmonitor**ロールのメンバーだけです。  
+ **Sp_helpmergeconflictrows** を実行できるのは、固定サーバーロール **sysadmin** 、 **db_owner** 固定データベースロールのメンバー、およびディストリビューションデータベースの **replmonitor** ロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [マージパブリケーションの競合情報を表示 &#40;レプリケーション Transact-sql プログラミング&#41;](../replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
