@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_rename_TSQL
 - sp_rename
@@ -22,12 +22,12 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: c180d679075076168d3be510c22d0775ebc7af30
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a9aabbb180e01dcfec95d87861fc43dd0a1aca51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478903"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99125939"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-sql)
 [!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -86,7 +86,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数値 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 **適用対象** SQL Server (サポートされているすべてのバージョン) と Azure SQL Database  
  sp_rename では、PRIMARY KEY (主キー) または UNIQUE (一意) 制約の名前を変更した場合、関連するインデックスの名前も自動的に変更されます。 名前を変更したインデックスが PRIMARY KEY 制約に関連付けられている場合、PRIMARY KEY 制約も sp_rename によって自動的に名前が変更されます。  
 

@@ -5,7 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set
 - sys.dm_exec_describe_first_result_set_TSQL
@@ -19,12 +19,12 @@ ms.author: wiassaf
 ms.custom: ''
 ms.date: 06/10/2016
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00bb311a4b1faad0e85a7f3b450db2f1057dcb4e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2a9c52669618f25d685016db93de99f01bd095ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094103"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99106608"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 
@@ -103,7 +103,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type**|**int**|返されるエラーを表す整数が格納されます。 error_type_desc にマップされます。 解説の下の一覧を参照してください。|  
 |**error_type_desc**|**nvarchar(60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この関数は、**sp_describe_first_result_set** と同じアルゴリズムを使用します。 詳細については、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) を参照してください。  
   
  次の表に、エラーの種類とその説明を示します。  

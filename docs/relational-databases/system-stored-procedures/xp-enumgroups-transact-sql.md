@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_enumgroups_TSQL
 - xp_enumgroups
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59535a5dd2d5df7b5d165e58a30358001378d360
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a0319158b7e2627bac7cd67a8f15e10dc4694b51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551093"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99124072"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,13 +53,13 @@ xp_enumgroups [ 'domain_name' ]
 |**group**|**sysname**|Windows グループの名前|  
 |**comment**|**sysname**|Windows によって提供される Windows グループの説明|  
   
-## <a name="remarks"></a>解説  
- *Domain_name*が、のインスタンスが実行されている Windows ベースのコンピューターの名前である場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはドメイン名が指定されていない場合**xp_enumgroups**は、を実行しているコンピューターからローカルグループを列挙し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+## <a name="remarks"></a>コメント  
+ *Domain_name* が、のインスタンスが実行されている Windows ベースのコンピューターの名前である場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはドメイン名が指定されていない場合 **xp_enumgroups** は、を実行しているコンピューターからローカルグループを列挙し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- **xp_enumgroups**のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が Windows 98 で実行されている場合、xp_enumgroups は使用できません。  
+ のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が Windows 98 で実行されている場合、xp_enumgroups は使用できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Master**データベースの**db_owner**固定データベースロールのメンバーシップ、または**sysadmin**固定サーバーロールのメンバーシップが必要です。  
+ **Master** データベースの **db_owner** 固定データベースロールのメンバーシップ、または **sysadmin** 固定サーバーロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、ドメイン内のグループを一覧表示し `sales` ます。  

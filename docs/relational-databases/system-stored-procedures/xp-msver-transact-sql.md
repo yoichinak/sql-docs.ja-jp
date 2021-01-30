@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_msver_TSQL
 - xp_msver
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a736447de4215d7f9c630036ae13872ff9d58bff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8a23619f5a1bf12ddcde718fc95db484f6d3cf6e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544713"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99123842"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  に関するバージョン情報を返し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 また**xp_msver**は、サーバーの実際のビルド番号とサーバー環境に関する情報も返します。 **Xp_msver**返される情報は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、バッチ、ストアドプロシージャなどで使用して、プラットフォームに依存しないコードのロジックを強化することができます。  
+  に関するバージョン情報を返し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 また **xp_msver** は、サーバーの実際のビルド番号とサーバー環境に関する情報も返します。 **Xp_msver** 返される情報は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、バッチ、ストアドプロシージャなどで使用して、プラットフォームに依存しないコードのロジックを強化することができます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ xp_msver [ optname ]
 |**WindowsVersion**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] を実行しているコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows のバージョン。|  
 |**ProcessorCount**|を実行しているコンピューターのプロセッサ数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ProcessorActiveMask**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターに搭載されているプロセッサ。[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows により起動され、使用されます。|  
-|**ProcessorType**|プロセッサの種類。 **プラットフォーム**に似ています。|  
+|**ProcessorType**|プロセッサの種類。 **プラットフォーム** に似ています。|  
 |**PhysicalMemory**|を実行しているコンピューターに搭載されている RAM の容量 (mb 単位) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**製品 ID**|プロダクト ID (PID) 番号。 これは、インストール時に指定します。 この番号は、元の CD ケースのステッカーに記載されてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
   
@@ -70,7 +70,7 @@ xp_msver [ optname ]
  1 (成功)  
   
 ## <a name="result-sets"></a>結果セット  
- パラメーターを指定せずに**xp_msver**は、すべてのオプション値を一覧表示する4列の結果セットを返します。 **xp_msver**、任意のパラメーターについて、4列の結果セットをそのオプションの値と共に返します。  
+ パラメーターを指定せずに **xp_msver** は、すべてのオプション値を一覧表示する4列の結果セットを返します。 **xp_msver**、任意のパラメーターについて、4列の結果セットをそのオプションの値と共に返します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
