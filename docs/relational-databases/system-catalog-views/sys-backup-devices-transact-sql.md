@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - backup_devices_TSQL
 - backup_devices
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: cddc056b4e83c6bb3e01d901eb4106318b7cd71b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1698ea0f99a92c9b93af3eb7eb479bb10b200928
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099266"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198585"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "98099266"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|バックアップ デバイスの名前。 セット内で一意です。|  
 |**type**|**tinyint**|バックアップ デバイスの種類。<br /><br /> 2 = ディスク<br /><br /> 3 = フロッピーディスク (廃止)<br /><br /> 5 = テープ<br /><br /> 6 = パイプ (obsolete)<br /><br /> 7 = 仮想デバイス (サードパーティのバックアップベンダーがオプションで使用)<br /><br /> 9 = URL<br /><br />通常、ディスク (2) と URL (9) のみが使用されます。|  
-|**type_desc**|**nvarchar(60)**|バックアップ デバイスの種類の説明。<br /><br /> DISK<br /><br /> フロッピーディスク (廃止)<br /><br /> TAPE<br /><br /> パイプ (obsolete)<br /><br /> VIRTUAL_DEVICE (サード パーティ バックアップ ベンダーがオプションで使用)<br /><br /> [URL] <br /><br /> 通常、ディスクと URL のみが使用されます。|  
+|**type_desc**|**nvarchar(60)**|バックアップ デバイスの種類の説明。<br /><br /> DISK<br /><br /> フロッピーディスク (廃止)<br /><br /> TAPE<br /><br /> パイプ (obsolete)<br /><br /> VIRTUAL_DEVICE (サード パーティ バックアップ ベンダーがオプションで使用)<br /><br /> URL <br /><br /> 通常、ディスクと URL のみが使用されます。|  
 |**physical_name**|**nvarchar(260)**|バックアップデバイスの物理ファイル名またはパス。|  
   
 ## <a name="permissions"></a>アクセス許可  

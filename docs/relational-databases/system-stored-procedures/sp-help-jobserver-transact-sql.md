@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobserver
 - sp_help_jobserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e59691a44353826f47550bb67c7a7872fcc4200
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4c5e5f8a4c7ec027c72452ea725ec6def715309a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546099"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200115"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +48,9 @@ sp_help_jobserver
 `[ @job_name = ] 'job_name'` 情報を返すジョブの名前を指定します。 *job_name* は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
+>  *Job_id* または *job_name* のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @show_last_run_details = ] show_last_run_details` 最後に実行された実行情報が結果セットに含まれるかどうかを示します。 *show_last_run_details* は **tinyint**,、既定値は **0**です。 **0** には最後の実行情報は含まれず、 **1** はです。  
+`[ @show_last_run_details = ] show_last_run_details` 最後に実行された実行情報が結果セットに含まれるかどうかを示します。 *show_last_run_details* は **tinyint**,、既定値は **0** です。 **0** には最後の実行情報は含まれず、 **1** はです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -64,7 +64,7 @@ sp_help_jobserver
 |**enlist_date**|**datetime**|対象サーバーをマスターサーバーに参加させた日付。|  
 |**last_poll_date**|**datetime**|対象サーバーが最後にマスターサーバーをポーリングした日付。|  
   
- *Show_last_run_details*を**1**に設定して**sp_help_jobserver**を実行した場合、結果セットにはこれらの列が追加されます。  
+ *Show_last_run_details* を **1** に設定して **sp_help_jobserver** を実行した場合、結果セットにはこれらの列が追加されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -75,7 +75,7 @@ sp_help_jobserver
 |**last_run_outcome**|**int**|このサーバーで最後に実行されたときのジョブの結果:<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明|  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -85,7 +85,7 @@ sp_help_jobserver
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- **SQLAgentUserRole**のメンバーは、自分が所有しているジョブの情報のみを表示できます。  
+ **SQLAgentUserRole** のメンバーは、自分が所有しているジョブの情報のみを表示できます。  
   
 ## <a name="examples"></a>例  
  次の例では、ジョブに関する情報 (最終実行情報を含む) が返され `NightlyBackups` ます。  

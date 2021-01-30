@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_trace_getfilterinfo
 - fn_trace_getfilterinfo_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 889a10c6ae999a5211120e52d7b903d04c5ec70e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7e20ee696ab4d371c6b12dfb24bd5433170080ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097460"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200369"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ fn_trace_getfilterinfo ( trace_id )
 |**comparison_operator**|**int**|実行する比較の種類を指定します。<br /><br /> 0 = 等しい<br /><br /> 1 = 等しくない<br /><br /> 2 = より大きい<br /><br /> 3 = より小さい<br /><br /> 4 = 以上<br /><br /> 5 = 以下<br /><br /> 6 = 一致<br /><br /> 7 = 一致しない|  
 |**value**|**sql_variant**|フィルターを適用するときに使用する値を示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ユーザーは *trace_id* 値を設定して、トレースの識別、変更、および制御を行います。 特定のトレースの ID が渡された場合、 **fn_trace_getfilterinfo** はそのトレースに関するすべてのフィルターに関する情報を返します。 指定されたトレースにフィルターがない場合、空の行セットが返されます。 無効な ID が渡された場合、空の行セットが返されます。 トレースに関する同様の情報については、「 [sys.fn_trace_getinfo &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  

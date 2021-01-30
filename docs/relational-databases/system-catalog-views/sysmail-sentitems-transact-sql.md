@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_sentitems_TSQL
 - sysmail_sentitems
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 06dff45056c38800c0aa72ecc28e462086e8e5b6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ef28d1d962fbdcfffd13dee4599b30617bbc36ad
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100152"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199705"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "98100152"
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベースメールのトラブルシューティングを行うときに、このビューは、正常に送信されたメッセージの属性を表示することによって、問題の性質を特定するのに役立ちます。 データベースメールは、SMTP メールサーバーに正常に送信されたときにメッセージを送信済みとしてマークします。 通常、電子メールは数分のうちに相手側に届きますが、SMTP サーバーの問題が原因で遅れることもあります。 データベースメールは、SMTP メールサーバーによって受け付けられたときにメッセージを送信済みとしてマークします。 受信者の電子メール アドレスに配信できないなど、SMTP メール サーバーで発生する電子メール エラーは、データベース メールには返されません。 これらの電子メールは、配信されていない場合でも、送信済みとして記録されます。 SMTP サーバーでのエラーのトラブルシューティングを行います。 また、SMTP メールサーバーは、データベースメールアカウントの返信用電子メールアドレスに配信不能メッセージ通知を送信する場合があります。  
   
 ## <a name="permissions"></a>アクセス許可  

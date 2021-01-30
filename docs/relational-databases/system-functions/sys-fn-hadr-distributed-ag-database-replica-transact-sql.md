@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_hadr_distributed_ag_database_replica
 - sys.fn_hadr_distributed_ag_database_replica_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b87e98f49941cfa9da555d54a10185d21e36d47e
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: e704af7bcdf5df2a27bcb3a9bd8ae37494f7f6de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753681"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199246"
 ---
 # <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,10 +43,10 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
   
 ## <a name="arguments"></a>引数  
  '*lag_Id*'  
- 分散型可用性グループの識別子を示します。 *lag_Id* 型は **uniqueidentifier**です。  
+ 分散型可用性グループの識別子を示します。 *lag_Id* 型は **uniqueidentifier** です。  
   
  '*database_id*'  
- 分散型可用性グループ内のデータベースの識別子を示します。 *database_id* 型は **uniqueidentifier**です。  
+ 分散型可用性グループ内のデータベースの識別子を示します。 *database_id* 型は **uniqueidentifier** です。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
  次の情報を返します。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addrole
 - sp_addrole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 245e617a9756e276bc06907a6f1592ec5383e69e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6217f78d47e193c8583caca0925f2d4b587c439
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489573"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200171"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88489573"
   現在のデータベースに新しいデータベース ロールを作成します。  
   
 > [!IMPORTANT]
->  **sp_addrole**は、以前のバージョンのとの互換性のために含まれて [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] おり、将来のリリースではサポートされない可能性があります。 代わりに [CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) を使用してください。  
+>  **sp_addrole** は、以前のバージョンのとの互換性のために含まれて [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] おり、将来のリリースではサポートされない可能性があります。 代わりに [CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @rolename = ] 'role'` 新しいデータベースロールの名前を指定します。 *role* は **sysname**で、既定値はありません。 *ロール* は有効な識別子 (ID) である必要があり、現在のデータベースに存在していない必要があります。  
+`[ @rolename = ] 'role'` 新しいデータベースロールの名前を指定します。 *role* は **sysname** で、既定値はありません。 *ロール* は有効な識別子 (ID) である必要があり、現在のデータベースに存在していない必要があります。  
   
-`[ @ownername = ] 'owner'` 新しいデータベースロールの所有者を示します。 *owner* は **sysname**で、既定値は現在実行中のユーザーです。 *所有者* は、現在のデータベースのデータベースユーザーまたはデータベースロールである必要があります。  
+`[ @ownername = ] 'owner'` 新しいデータベースロールの所有者を示します。 *owner* は **sysname** で、既定値は現在実行中のユーザーです。 *所有者* は、現在のデータベースのデータベースユーザーまたはデータベースロールである必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -61,7 +61,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  **sp_addrole** は、ユーザー定義のトランザクション内では使用できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- データベースに対する CREATE ROLE 権限が必要です。 スキーマを作成する場合は、データベースに CREATE SCHEMA が必要です。 *Owner*がユーザーまたはグループとして指定されている場合、そのユーザーまたはグループに対して IMPERSONATE が必要です。 *Owner*がロールとして指定されている場合、そのロールまたはそのロールのメンバーに対する ALTER 権限が必要です。 Owner がアプリケーションロールとして指定されている場合は、そのアプリケーションロールに対する ALTER 権限が必要です。  
+ データベースに対する CREATE ROLE 権限が必要です。 スキーマを作成する場合は、データベースに CREATE SCHEMA が必要です。 *Owner* がユーザーまたはグループとして指定されている場合、そのユーザーまたはグループに対して IMPERSONATE が必要です。 *Owner* がロールとして指定されている場合、そのロールまたはそのロールのメンバーに対する ALTER 権限が必要です。 Owner がアプリケーションロールとして指定されている場合は、そのアプリケーションロールに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、`Managers` という新しいロールを現在のデータベースに追加します。  
@@ -70,9 +70,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 EXEC sp_addrole 'Managers';  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   
   

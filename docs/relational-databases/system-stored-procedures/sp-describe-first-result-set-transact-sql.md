@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_first_result_set
 - sp_describe_first_result_set_TSQL
@@ -19,12 +19,12 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c95a79bb42cbc3ab32a5521682aacc8f4f9079d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8e9a77fb68a5642b3ba5fac7aac9ae0d9c31c899
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466913"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200805"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|内部使用です。|  
 |**tds_collation_sort_id**|**tinyint NULL**|内部使用です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_describe_first_result_set** は、プロシージャが (仮定の) バッチ a に対して最初の結果セットのメタデータを返す場合に、そのバッチ (a) が後で実行されると、バッチによって (1) 最適化時のエラーが発生することを保証します。 (2) 実行時エラーが発生します。 (3) は結果セットを返しません。または、(4) **sp_describe_first_result_set** によって記述されたものと同じメタデータを持つ最初の結果セットを返します。  
   
  名前、NULL 値の許容属性、およびデータ型が異なる可能性があります。 **Sp_describe_first_result_set** が空の結果セットを返す場合、バッチ実行で結果セットが返されないという保証があります。  

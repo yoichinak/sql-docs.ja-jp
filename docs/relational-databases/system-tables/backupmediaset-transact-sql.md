@@ -6,7 +6,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - backupmediaset
 - backupmediaset_TSQL
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - backupmediaset system table
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 10b4d744e7ef4e0d11a9788580ea7f8c5a67bd1f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c886cf2fb117611d5956277656dd7aaadca9afc5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091582"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198657"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 
@@ -43,9 +43,9 @@ ms.locfileid: "98091582"
 |**mirror_count**|**tinyint**|メディアセット内のミラーの数。|  
 |**is_password_protected**|**bit**|メディアセットパスワードが保護されているかを示します。<br /><br /> 0 = 保護されていない<br /><br /> 1 = 保護されている|  
 |**is_compressed**|**bit**|バックアップが圧縮されているかどうか。<br /><br /> 0 = 圧縮されていません。<br /><br /> 1 = 圧縮<br /><br /> この値は、 **msdb** のアップグレード中に NULL に設定されます。 これは圧縮されていないバックアップを示します。|  
-|**is_encrypted**|**ビット**|バックアップが暗号化されているかどうか。<br /><br /> 0 = 暗号化なし<br /><br /> 1 = 暗号化|  
+|**is_encrypted**|**16-bit**|バックアップが暗号化されているかどうか。<br /><br /> 0 = 暗号化なし<br /><br /> 1 = 暗号化|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  LOADHISTORY を使用した *backup_device* からの RESTORE verifyonly は、 **backupmediaset** テーブルの列に、メディアセットヘッダーからの適切な値を設定します。  
   
  このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) ストアドプロシージャを実行します。  

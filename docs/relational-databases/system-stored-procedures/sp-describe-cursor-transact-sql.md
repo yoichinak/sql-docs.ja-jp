@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_cursor
 - sp_describe_cursor_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2e24c729dce92d05827466d9931916a9002adc1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0787f088205aab72c437e22bfac265ef05ccbe19
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548124"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200785"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
   
 ## <a name="arguments"></a>引数  
  [ @cursor_return =] *output_cursor_variable* 出力  
- カーソル出力を受け取るように宣言したカーソル変数の名前です。 *output_cursor_variable* は **カーソル**であり、既定値はありません。 sp_describe_cursor が呼び出されたときに、どのカーソルにも関連付けないでください。 返されるカーソルは、スクロール可能、動的、読み取り専用のカーソルです。  
+ カーソル出力を受け取るように宣言したカーソル変数の名前です。 *output_cursor_variable* は **カーソル** であり、既定値はありません。 sp_describe_cursor が呼び出されたときに、どのカーソルにも関連付けないでください。 返されるカーソルは、スクロール可能、動的、読み取り専用のカーソルです。  
   
  [ @cursor_source =] {N'local ' |N'global ' |N'variable' }  
  ローカルカーソル、グローバルカーソル、またはカーソル変数の名前を使用して、レポートされるカーソルが指定されているかどうかを指定します。 パラメーターは **nvarchar (30)** です。  
@@ -69,7 +69,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  なし  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
- sp_describe_cursor は、カーソル出力パラメーターに結果セットをカプセル化 [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor**します。 これにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 これはまた、データベース API 関数からプロシージャを直接呼び出すことができないことを意味します。 **Cursor**出力パラメーターはプログラム変数にバインドする必要がありますが、データベース api では、**カーソル**パラメーターまたは変数のバインドがサポートされていません。  
+ sp_describe_cursor は、カーソル出力パラメーターに結果セットをカプセル化 [!INCLUDE[tsql](../../includes/tsql-md.md)] します。 これにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 これはまた、データベース API 関数からプロシージャを直接呼び出すことができないことを意味します。 **Cursor** 出力パラメーターはプログラム変数にバインドする必要がありますが、データベース api では、**カーソル** パラメーターまたは変数のバインドがサポートされていません。  
   
  次の表に、sp_describe_cursor が返すカーソルの形式を示します。 カーソルの形式は、sp_cursor_list を使用した場合に返される形式と同じです。  
   
@@ -79,7 +79,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |cursor_name|**sysname**|DECLARE CURSOR ステートメントからのカーソルの名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、カーソルがカーソル変数を設定して作成されると、cursor_name にカーソル変数の名前が返されます。 以前のバージョンのでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この出力列にはシステムによって生成された名前が返されていました。|  
 |cursor_scope|**tinyint**|1 = ローカル<br /><br /> 2 = GLOBAL|  
 |status|**int**|CURSOR_STATUS システム関数によって報告されたものと同じ値:<br /><br /> 1 = カーソル名または変数によって参照されているカーソルが開いています。 カーソルが状態非依存、静的、キーセットのいずれかの場合には、結果セットに少なくとも 1 行が含まれます。 カーソルが動的な場合、結果セットには0個以上の行が含まれます。<br /><br /> 0 = カーソル名または変数によって参照されるカーソルが開かれていますが、行がありません。 動的カーソルがこの値を返すことはありません。<br /><br /> -1 = カーソル名または変数によって参照されたカーソルは閉じています。<br /><br /> -2 = カーソル変数にのみ適用されます。 変数に割り当てられたカーソルがありません。 おそらく、OUTPUT パラメーターによってカーソルを変数に割り当てましたが、戻る前にストアド プロシージャがカーソルを閉じました。<br /><br /> -3 = 指定された名前のカーソルまたはカーソル変数が存在しないか、またはカーソル変数にカーソルが割り当てられていません。|  
-|対象となるのは、モデル|**tinyint**|1 = 非依存 (または静的)<br /><br /> 2 = キーセット<br /><br /> 3 = 動的<br /><br /> 4 = 高速順方向|  
+|model|**tinyint**|1 = 非依存 (または静的)<br /><br /> 2 = キーセット<br /><br /> 3 = 動的<br /><br /> 4 = 高速順方向|  
 |concurrency|**tinyint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
 |scrollable|**tinyint**|0 = 順方向専用<br /><br /> 1 = スクロール可能|  
 |open_status|**tinyint**|0 = 終了<br /><br /> 1 = 開く|  
@@ -90,7 +90,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |last_operation|**tinyint**|カーソルに対して最後に実行された操作:<br /><br /> 0 = カーソルに対して操作が実行されていません。<br /><br /> 1 = OPEN <br /><br /> 2 = FETCH <br /><br /> 3 = 挿入<br /><br /> 4 = UPDATE <br /><br /> 5 = 削除<br /><br /> 6 = 閉じる<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|サーバーのスコープ内のカーソルの一意の値。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_describe_cursor は、カーソルがスクロール可能かどうか、更新可能かどうかなど、サーバー カーソルのグローバルな属性を説明します。 カーソルから返された結果セットの属性の説明が必要な場合は、sp_describe_cursor_columns を使用します。 カーソルが参照するベース テーブルのレポートが必要な場合は、sp_describe_cursor_tables を使用します。 接続時に可視になる [!INCLUDE[tsql](../../includes/tsql-md.md)] Server カーソルのレポートが必要な場合は、sp_cursor_list を使用します。  
   
  Declare cursor ステートメントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DECLARE cursor に含まれる SELECT ステートメントの使用をサポートできないカーソルの種類を要求する場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT ステートメントを使用して、サポートできる型にカーソルを暗黙的に変換します。 DECLARE CURSOR ステートメントで TYPE_WARNING が指定されている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換が完了したことを示す情報メッセージがアプリケーションに送信されます。 その後、sp_describe_cursor を呼び出して、実装されているカーソルの種類を判断できます。  

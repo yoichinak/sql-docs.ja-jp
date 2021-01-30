@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
 - sp_help_jobhistory
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d805cfb7f6cf682e07e703e6854e25737a82b9cc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2cfef1ba5f28b498ab360daf67cc1bf3c79f0d2a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547992"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200139"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,21 +64,21 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @sql_severity = ] sql_severity` ジョブの実行時に SQL Server によって返されるエラーメッセージの重大度レベル。 *sql_severity* は **int**,、既定値は NULL です。  
   
-`[ @start_run_date = ] start_run_date` ジョブが開始された日付。 *start_run_date*は **int**,、既定値は NULL です。 *start_run_date* は、YYYYMMDD 形式で入力する必要があります。ここで、YYYY は4桁の年、MM は2桁の月、DD は2桁の日の名前です。  
+`[ @start_run_date = ] start_run_date` ジョブが開始された日付。 *start_run_date* は **int**,、既定値は NULL です。 *start_run_date* は、YYYYMMDD 形式で入力する必要があります。ここで、YYYY は4桁の年、MM は2桁の月、DD は2桁の日の名前です。  
   
-`[ @end_run_date = ] end_run_date` ジョブが完了した日付。 *end_run_date* は **int**,、既定値は NULL です。 *end_run_date*は、YYYYMMDD 形式で入力する必要があります。ここで、YYYY は4桁の年、MM は2桁の月、DD は2桁の日の名前です。  
+`[ @end_run_date = ] end_run_date` ジョブが完了した日付。 *end_run_date* は **int**,、既定値は NULL です。 *end_run_date* は、YYYYMMDD 形式で入力する必要があります。ここで、YYYY は4桁の年、MM は2桁の月、DD は2桁の日の名前です。  
   
-`[ @start_run_time = ] start_run_time` ジョブが開始された時刻。 *start_run_time* は **int**,、既定値は NULL です。 *start_run_time*は、HHMMSS 形式で入力する必要があります。 HH は、1日の2桁の時、MM は2桁の分、SS は2桁の秒を示します。  
+`[ @start_run_time = ] start_run_time` ジョブが開始された時刻。 *start_run_time* は **int**,、既定値は NULL です。 *start_run_time* は、HHMMSS 形式で入力する必要があります。 HH は、1日の2桁の時、MM は2桁の分、SS は2桁の秒を示します。  
   
-`[ @end_run_time = ] end_run_time` ジョブの実行が完了した時刻。 *end_run_time* は **int**,、既定値は NULL です。 *end_run_time*は、HHMMSS 形式で入力する必要があります。 HH は、1日の2桁の時、MM は2桁の分、SS は2桁の秒を示します。  
+`[ @end_run_time = ] end_run_time` ジョブの実行が完了した時刻。 *end_run_time* は **int**,、既定値は NULL です。 *end_run_time* は、HHMMSS 形式で入力する必要があります。 HH は、1日の2桁の時、MM は2桁の分、SS は2桁の秒を示します。  
   
-`[ @minimum_run_duration = ] minimum_run_duration` ジョブが完了するまでの時間の最小値です。 *minimum_run_duration* は **int**,、既定値は NULL です。 *minimum_run_duration*は、HHMMSS 形式で入力する必要があります。 HH は、1日の2桁の時、MM は2桁の分、SS は2桁の秒を示します。  
+`[ @minimum_run_duration = ] minimum_run_duration` ジョブが完了するまでの時間の最小値です。 *minimum_run_duration* は **int**,、既定値は NULL です。 *minimum_run_duration* は、HHMMSS 形式で入力する必要があります。 HH は、1日の2桁の時、MM は2桁の分、SS は2桁の秒を示します。  
   
 `[ @run_status = ] run_status` ジョブの実行状態です。 *run_status* は **int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|**0**|Failed|  
+|**0**|失敗|  
 |**1**|成功|  
 |**2**|再試行 (ステップのみ)|  
 |**3**|Canceled|  
@@ -91,13 +91,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @server = ] 'server'` ジョブが実行されたサーバーの名前。 *サーバー* は **nvarchar (30)**,、既定値は NULL です。  
   
-`[ @mode = ] 'mode'` SQL Server 結果セットのすべての列 (**FULL**) または列の概要を出力するかどうかを指定します。 *モード* は **varchar (7)**,、既定値は **SUMMARY**です。  
+`[ @mode = ] 'mode'` SQL Server 結果セットのすべての列 (**FULL**) または列の概要を出力するかどうかを指定します。 *モード* は **varchar (7)**,、既定値は **SUMMARY** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 実際の列の一覧は、 *モード*の値によって異なります。 最も包括的な列のセットを以下に示します。 *モード* がいっぱいになったときに返されます。  
+ 実際の列の一覧は、 *モード* の値によって異なります。 最も包括的な列のセットを以下に示します。 *モード* がいっぱいになったときに返されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -119,11 +119,11 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|ステップが再試行された回数 (ジョブ履歴の場合は常に 0)。|  
 |**server**|**nvarchar(30)**|ステップまたはジョブを実行するサーバー。 常に (**ローカル**) です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_help_jobhistory** は、指定したスケジュールされたジョブの履歴を含むレポートを返します。 どのパラメーターも指定しない場合は、レポートにはすべての定期ジョブの履歴が含まれます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -133,7 +133,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- **SQLAgentUserRole**データベースロールのメンバーは、自分が所有しているジョブの履歴のみを表示できます。  
+ **SQLAgentUserRole** データベースロールのメンバーは、自分が所有しているジョブの履歴のみを表示できます。  
   
 ## <a name="examples"></a>例  
   

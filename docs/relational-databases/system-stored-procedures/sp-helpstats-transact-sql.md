@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpstats
 - sp_helpstats_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e44d5cb6911336180b1d90701ce78cf19d0b2a6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c3b0d76b08d8be5aefcbfceee570d893d6ca4659
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97410859"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198717"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ sp_helpstats[ @objname = ] 'object_name'
 |**statistics_name**|統計の名前。 **Sysname** を返します。 null にすることはできません。|  
 |**statistics_keys**|統計の基になるキー。 **Nvarchar (2078)** を返します。 null にすることはできません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  DBCC SHOW_STATISTICS を使用すると、特定のインデックスまたは統計に関する詳細な統計情報を表示できます。 詳細については、「 [DBCC SHOW_STATISTICS &#40;transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 」と「 [transact-sql &#40;の sp_helpindex ](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  

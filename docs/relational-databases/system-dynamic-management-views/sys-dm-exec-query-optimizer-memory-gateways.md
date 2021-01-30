@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: wiassaf
 ms.technology: performance
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_query_optimizer_memory_gateways_TSQL
 - dm_exec_query_optimizer_memory_gateways
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a87f08bd2992d752b57af9519d351c198cb4d78b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6ff3adb52a968957faead5453e266ec733df38f4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477233"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198527"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-sql)
 
@@ -51,7 +51,7 @@ SQL Server には、サーバーに対する VIEW SERVER STATE 権限が必要�
 Azure SQL Database には、データベースに対する VIEW DATABASE STATE 権限が必要です。
 
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 SQL Server では、階層化されたゲートウェイアプローチを使用して、許可される同時コンパイルの数を調整します。  小規模、中、大など、3つのゲートウェイが使用されます。 ゲートウェイを使用すると、より大きなコンパイルメモリを必要とするコンシューマーによって、全体的なメモリリソースが枯渇するのを防ぐことができます。
 
 ゲートウェイの結果を遅延コンパイルで待機します。 調整された要求には、コンパイル時の遅延に加えて、RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類の累積が関連付けられます。 RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類は、クエリがコンパイルに大量のメモリを使用していて、メモリが不足していること、または、特定のゲートウェイで使用可能なユニットがいっぱいになっていることを示している場合があります。 **Sys.dm_exec_query_optimizer_memory_gateways** の出力を使用して、クエリ実行プランをコンパイルするためのメモリが不足しているシナリオのトラブルシューティングを行うことができます。  

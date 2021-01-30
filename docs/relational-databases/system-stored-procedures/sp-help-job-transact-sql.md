@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_job_TSQL
 - sp_help_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c0b2f0845c98f4b5fa403bd98b87718afd0fb26
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 32ffb85143cf448742831071bee7d4b94a25ec57
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549703"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200162"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'` 表示するジョブ属性。 *job_aspect* は **varchar (9)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**ALL**|ジョブのすべての属性情報|  
 |**補足**|ジョブ情報|  
@@ -70,7 +70,7 @@ sp_help_job { [ @job_id = ] job_id
 |**よう**|ジョブ ステップ情報|  
 |**ターゲット**|ターゲット情報|  
   
-`[ @job_type = ] 'job_type'` レポートに含めるジョブの種類。 *job_type* は **varchar (12)**,、既定値は NULL です。 *Job_type* **ローカル** または **マルチサーバー**を指定できます。  
+`[ @job_type = ] 'job_type'` レポートに含めるジョブの種類。 *job_type* は **varchar (12)**,、既定値は NULL です。 *Job_type* **ローカル** または **マルチサーバー** を指定できます。  
   
 `[ @owner_login_name = ] 'login_name'` ジョブの所有者のログイン名です。 *login_name* は **sysname**,、既定値は NULL です。  
   
@@ -82,7 +82,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status` ジョブの実行状態です。 *状態* は **int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|アイドルまたは中断されていないジョブのみを返します。|  
 |**1**|実行.|  
@@ -92,9 +92,9 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|状態.|  
 |**7**|完了操作の実行中。|  
   
-`[ @date_comparator = ] 'date_comparison'`*Date_created*と*date_modified*の比較に使用する比較演算子。 *date_comparison* は **char (1)**,、は =, \<, or > です。  
+`[ @date_comparator = ] 'date_comparison'`*Date_created* と *date_modified* の比較に使用する比較演算子。 *date_comparison* は **char (1)**,、は =, \<, or > です。  
   
-`[ @date_created = ] date_created` ジョブが作成された日付。 *date_created*は **datetime**,、既定値は NULL です。  
+`[ @date_created = ] date_created` ジョブが作成された日付。 *date_created* は **datetime**,、既定値は NULL です。  
   
 `[ @date_last_modified = ] date_modified` ジョブが最後に変更された日付。 *date_modified* は **datetime**,、既定値は NULL です。  
   
@@ -115,15 +115,15 @@ sp_help_job { [ @job_id = ] job_id
 |**description**|**nvarchar(512)**|ジョブの説明。|  
 |**start_step_id**|**int**|実行を開始するジョブのステップの ID。|  
 |**category**|**sysname**|ジョブ カテゴリ。|  
-|**責任**|**sysname**|ジョブ所有者。|  
-|**notify_level_eventlog**|**int**|どのような場合に、通知イベントを Microsoft Windows アプリケーションログに記録するかを示す**ビットマスク**。 次のいずれかの値を指定します。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功した場合<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
-|**notify_level_email**|**int**|どのような場合に、ジョブの完了時に通知電子メールを送信するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
-|**notify_level_netsend**|**int**|どのような場合に、ジョブの完了時にネットワークメッセージを送信するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
-|**notify_level_page**|**int**|どのような場合に、ジョブの完了時にページを送信するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
+|**所有者**|**sysname**|ジョブ所有者。|  
+|**notify_level_eventlog**|**int**|どのような場合に、通知イベントを Microsoft Windows アプリケーションログに記録するかを示す **ビットマスク**。 次のいずれかの値を指定します。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功した場合<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
+|**notify_level_email**|**int**|どのような場合に、ジョブの完了時に通知電子メールを送信するかを示す **ビットマスク**。 指定できる値は、 **notify_level_eventlog** の場合と同じです。|  
+|**notify_level_netsend**|**int**|どのような場合に、ジョブの完了時にネットワークメッセージを送信するかを示す **ビットマスク**。 指定できる値は、 **notify_level_eventlog** の場合と同じです。|  
+|**notify_level_page**|**int**|どのような場合に、ジョブの完了時にページを送信するかを示す **ビットマスク**。 指定できる値は、 **notify_level_eventlog** の場合と同じです。|  
 |**notify_email_operator**|**sysname**|通知するオペレーターの電子メール名。|  
 |**notify_netsend_operator**|**sysname**|ネットワークメッセージを送信するときに使用するコンピューターまたはユーザーの名前。|  
 |**notify_page_operator**|**sysname**|ページを送信するときに使用するコンピューターまたはユーザーの名前。|  
-|**delete_level**|**int**|どのような場合に、ジョブの完了時にジョブを削除するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
+|**delete_level**|**int**|どのような場合に、ジョブの完了時にジョブを削除するかを示す **ビットマスク**。 指定できる値は、 **notify_level_eventlog** の場合と同じです。|  
 |**date_created**|**datetime**|ジョブが作成された日付。|  
 |**date_modified**|**datetime**|ジョブが最後に変更された日付。|  
 |**version_number**|**int**|ジョブのバージョン (ジョブを変更するたびに自動的に更新されます)。|  
@@ -141,7 +141,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_target**|**int**|ジョブのターゲット サーバー数。|  
 |**type**|**int**|ジョブの種類。<br /><br /> 1 = ローカルジョブ。<br /><br /> **2** = マルチサーバージョブ。<br /><br /> **0** = ジョブに対象サーバーがありません。|  
   
- *Job_id*または*job_name*が指定されている場合、 **sp_help_job**は、ジョブステップ、ジョブスケジュール、およびジョブ対象サーバーに対してこれらの追加の結果セットを返します。  
+ *Job_id* または *job_name* が指定されている場合、 **sp_help_job** は、ジョブステップ、ジョブスケジュール、およびジョブ対象サーバーに対してこれらの追加の結果セットを返します。  
   
  次に、ジョブ ステップに関する結果セットを示します。  
   
@@ -151,12 +151,12 @@ sp_help_job { [ @job_id = ] job_id
 |**step_name**|**sysname**|ステップの名前。|  
 |**サブ**|**nvarchar(40)**|ステップ コマンドを実行するサブシステム。|  
 |**command**|**nvarchar (3200)**|実行するコマンド。|  
-|**flags**|**nvarchar (4000)**|ステップの動作を制御する値の**ビットマスク**。|  
-|**cmdexec_success_code**|**int**|**CmdExec**ステップの場合、これは成功したコマンドのプロセス終了コードです。|  
+|**flags**|**nvarchar (4000)**|ステップの動作を制御する値の **ビットマスク**。|  
+|**cmdexec_success_code**|**int**|**CmdExec** ステップの場合、これは成功したコマンドのプロセス終了コードです。|  
 |**on_success_action**|**nvarchar (4000)**|ステップが成功した場合の対処方法:<br /><br /> **1** = 正常に終了します。<br /><br /> **2** = エラーで終了します。<br /><br /> **3** = 次の手順に進みます。<br /><br /> **4** = ステップに進みます。|  
-|**on_success_step_id**|**int**|**On_success_action**が**4**の場合は、次に実行する手順を示します。|  
-|**on_fail_action**|**nvarchar (4000)**|ステップが失敗した場合に実行する動作。 値は **on_success_action**の場合と同じです。|  
-|**on_fail_step_id**|**int**|**On_fail_action**が**4**の場合は、次に実行する手順を示します。|  
+|**on_success_step_id**|**int**|**On_success_action** が **4** の場合は、次に実行する手順を示します。|  
+|**on_fail_action**|**nvarchar (4000)**|ステップが失敗した場合に実行する動作。 値は **on_success_action** の場合と同じです。|  
+|**on_fail_step_id**|**int**|**On_fail_action** が **4** の場合は、次に実行する手順を示します。|  
 |**server**|**sysname**|予約済み。|  
 |**database_name**|**sysname**|ステップの場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、これはコマンドを実行するデータベースです。|  
 |**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース ユーザー コンテキスト。|  
@@ -178,16 +178,16 @@ sp_help_job { [ @job_id = ] job_id
 |**schedule_id**|**int**|すべてのジョブで一意なスケジュール識別子。|  
 |**schedule_name**|**sysname**|スケジュールの名前 (このジョブでのみ一意)。|  
 |**有効**|**int**|スケジュールがアクティブである (**1**) かどうか (**0**)。|  
-|**freq_type**|**int**|ジョブをいつ実行するかを示す値。<br /><br /> **1** = 1 回<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月、 **freq_interval**に対して相対的<br /><br /> **64** = **SQLServerAgent** サービスの開始時に実行します。|  
-|**freq_interval**|**int**|ジョブが実行された日。 値は **freq_type**の値によって異なります。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
-|**freq_subday_type**|**Int**|**Freq_subday_interval**の単位。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
+|**freq_type**|**int**|ジョブをいつ実行するかを示す値。<br /><br /> **1** = 1 回<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月、 **freq_interval** に対して相対的<br /><br /> **64** = **SQLServerAgent** サービスの開始時に実行します。|  
+|**freq_interval**|**int**|ジョブが実行された日。 値は **freq_type** の値によって異なります。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
+|**freq_subday_type**|**Int**|**Freq_subday_interval** の単位。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
 |**freq_subday_interval**|**int**|ジョブの各実行間に発生する **freq_subday_type** 期間の数。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
 |**freq_relative_interval**|**int**|スケジュールされたジョブの各月の **freq_interval** の発生。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
 |**freq_recurrence_factor**|**int**|スケジュールされたジョブの実行間隔 (月数)。|  
 |**active_start_date**|**int**|ジョブの実行を開始する日付。|  
 |**active_end_date**|**int**|ジョブの実行を終了する日付。|  
 |**active_start_time**|**int**|Active_start_date でジョブの実行を開始する時刻 **。**|  
-|**active_end_time**|**int**|**Active_end_date**でジョブの実行を終了する時刻。|  
+|**active_end_time**|**int**|**Active_end_date** でジョブの実行を終了する時刻。|  
 |**date_created**|**datetime**|スケジュールが作成された日付。|  
 |**schedule_description**|**nvarchar (4000)**|スケジュールの英語の説明 (要求された場合)。|  
 |**next_run_date**|**int**|スケジュールによってジョブが次に実行される日付。|  
@@ -210,7 +210,7 @@ sp_help_job { [ @job_id = ] job_id
 |**last_outcome_message**|**nvarchar(1024)**|この対象サーバーで最後に実行されたときのジョブからの結果メッセージ。|  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -220,7 +220,7 @@ sp_help_job { [ @job_id = ] job_id
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- **SQLAgentUserRole**のメンバーは、自分が所有しているジョブのみを表示できます。 **Sysadmin**、 **SQLAgentReaderRole**、および**Sqlagentoperatorrole**のメンバーは、すべてのローカルジョブとマルチサーバージョブを表示できます。  
+ **SQLAgentUserRole** のメンバーは、自分が所有しているジョブのみを表示できます。 **Sysadmin**、 **SQLAgentReaderRole**、および **Sqlagentoperatorrole** のメンバーは、すべてのローカルジョブとマルチサーバージョブを表示できます。  
   
 ## <a name="examples"></a>例  
   

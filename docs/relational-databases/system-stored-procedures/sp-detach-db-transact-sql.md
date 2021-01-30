@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_detach_db
 - sp_detach_db_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6829fff1f535a0e0d55b8dd849c67b0b197c4e48
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 1d4b484cd6d440b14b7639b513fba7e53f615443
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810852"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200761"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,14 +48,14 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="arguments"></a>引数  
 `[ @dbname = ] 'database_name'` デタッチするデータベースの名前を指定します。 *database_name* は **sysname** 値で、既定値は NULL です。  
   
-`[ @skipchecks = ] 'skipchecks'` 更新プログラムの統計をスキップするか実行するかを指定します。 *skipchecks* は **nvarchar (10)** 値で、既定値は NULL です。 統計の更新をスキップするには、 **true**を指定します。 UPDATE STATISTICS を明示的に実行するには、 **false**を指定します。  
+`[ @skipchecks = ] 'skipchecks'` 更新プログラムの統計をスキップするか実行するかを指定します。 *skipchecks* は **nvarchar (10)** 値で、既定値は NULL です。 統計の更新をスキップするには、 **true** を指定します。 UPDATE STATISTICS を明示的に実行するには、 **false** を指定します。  
   
  既定では、UPDATE STATISTICS は、テーブルとインデックスのデータに関する情報を更新するために実行されます。 UPDATE STATISTICS の実行は、データベースを読み取り専用メディアに移動する場合に使用すると便利です。  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` デタッチされているデータベースに関連付けられているフルテキストインデックスファイルが、データベースのデタッチ操作中に削除されないように指定します。 *KeepFulltextIndexFile* は **nvarchar (10)** 値、既定値は **true**です。 *KeepFulltextIndexFile*が**false**の場合、データベースに関連付けられているすべてのフルテキストインデックスファイルとフルテキストインデックスのメタデータは、データベースが読み取り専用でない限り削除されます。 NULL または **true**の場合、フルテキスト関連のメタデータが保持されます。  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` デタッチされているデータベースに関連付けられているフルテキストインデックスファイルが、データベースのデタッチ操作中に削除されないように指定します。 *KeepFulltextIndexFile* は **nvarchar (10)** 値、既定値は **true** です。 *KeepFulltextIndexFile* が **false** の場合、データベースに関連付けられているすべてのフルテキストインデックスファイルとフルテキストインデックスのメタデータは、データベースが読み取り専用でない限り削除されます。 NULL または **true** の場合、フルテキスト関連のメタデータが保持されます。  
   
 > [!IMPORTANT]
->  ** \@ Keepfulltextindexfile**パラメーターは、将来のバージョンのでは削除される予定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 新しい開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く変更してください。  
+>  **\@ Keepfulltextindexfile** パラメーターは、将来のバージョンのでは削除される予定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 新しい開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く変更してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -79,7 +79,7 @@ sp_detach_db [ @dbname= ] 'database_name'
      データベースをデタッチする前に、 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)を実行してパブリッシングを無効にする必要があります。  
   
     > [!NOTE]  
-    >  **sp_replicationdboption**を使用できない場合、 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)を実行してレプリケーションを削除できます。  
+    >  **sp_replicationdboption** を使用できない場合、 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)を実行してレプリケーションを削除できます。  
   
 -   データベースに、データベース スナップショットが存在する。  
   
@@ -113,13 +113,13 @@ GO
 ```  
   
 > [!NOTE]  
->  現在のユーザーをデータベースから直ちに、または指定された秒数内に強制的に戻すには、ROLLBACK オプションを使用します。 ALTER DATABASE *database_name* SET SINGLE_USER WITH rollback *rollback_option*です。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
+>  現在のユーザーをデータベースから直ちに、または指定された秒数内に強制的に戻すには、ROLLBACK オプションを使用します。 ALTER DATABASE *database_name* SET SINGLE_USER WITH rollback *rollback_option* です。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 ## <a name="reattaching-a-database"></a>データベースの再アタッチ  
  デタッチされたファイルはそのまま残り、CREATE DATABASE (FOR ATTACH または FOR ATTACH_REBUILD_LOG オプション) を使用して再アタッチできます。 ファイルを別のサーバーに移動し、そこにアタッチすることもできます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールのメンバーシップ、またはデータベースの**db_owner**ロールのメンバーシップが必要です。  
+ **Sysadmin** 固定サーバーロールのメンバーシップ、またはデータベースの **db_owner** ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks チェック* を true に設定してデータベースをデタッチします。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_parameter_encryption
 - sp_describe_parameter_encryption_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b06ee1588fe46b04348d2e9595eb72206f7b57d2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 41821edc34835f60cef201ae78b3448f3d3f4699
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466823"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200782"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-sql)
 
@@ -85,7 +85,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|最初の結果セットの行のコード。 参照先の行では、列に対して構成されている列暗号化キーが記述され、パラメーターはに対応します。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|型の正規化アルゴリズムのバージョン番号。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントドライバー (Always Encrypted をサポートする) は、アプリケーションによって発行されたパラメーター化クエリの暗号化メタデータを取得するために、 **sp_describe_parameter_encryption** を自動的に呼び出します。 その後、ドライバーは、暗号化メタデータを使用して、Always Encrypted で保護されているデータベース列に対応するパラメーターの値を暗号化し、データベースエンジンにクエリを送信する前に、暗号化されたパラメーター値を使用して、アプリケーションによって送信されたプレーンテキストパラメーター値を置き換えます。  
   
 ## <a name="permissions"></a>アクセス許可  

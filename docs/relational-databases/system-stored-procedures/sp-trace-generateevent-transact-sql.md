@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
 - sp_trace_generateevent
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8a5e027b2d76aa1e6965f1fe782b8987a927ce3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a3120d1c1f9e6e7b3ee1c875d8aa6ae5a997d57
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541589"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200587"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,10 +61,10 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**3**|指定されたイベントは無効です。 イベントが存在しないか、またはストアドプロシージャに対して適切ではありません。|  
 |**13**|メモリが不足しています。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
   
-## <a name="remarks"></a>解説  
- **sp_trace_generateevent**は、 **xp_trace_ \* **の拡張ストアドプロシージャによって以前に実行された多くの操作を実行します。 **Xp_trace_generate_event**ではなく**sp_trace_generateevent**を使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_trace_generateevent** は、 **xp_trace_ \* _ 拡張ストアドプロシージャによって以前に実行された多くの操作を実行 *します。*** **Xp_trace_generate_event** ではなく _ sp_trace_generateevent を使用します。  
   
- **Sp_trace_generateevent**では、ユーザー定義イベントの ID 番号のみを使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で他のイベント ID 番号を使用すると、エラーが発生します。  
+ **Sp_trace_generateevent** では、ユーザー定義イベントの ID 番号のみを使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で他のイベント ID 番号を使用すると、エラーが発生します。  
   
  すべての SQL トレースストアドプロシージャ (**sp_trace_xx**) のパラメーターは厳密に型指定されます。 これらのパラメーターを、引数の説明で指定されている正しいデータ型で指定しないと、このストアド プロシージャではエラーが返されます。  
   
@@ -96,7 +96,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)  
   

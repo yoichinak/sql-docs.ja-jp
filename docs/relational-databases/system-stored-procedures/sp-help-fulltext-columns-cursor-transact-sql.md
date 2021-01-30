@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_fulltext_columns_cursor
 - sp_help_fulltext_columns_cursor_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60cc0643d08ca46aef4fc77803e3a277a0b3ab5f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2a27c719888b21d9762d77e1f14f3590e93fe452
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535384"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198319"
 ---
 # <a name="sp_help_fulltext_columns_cursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89535384"
   カーソルを使用して、フルテキストインデックス作成用に指定された列を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、 [fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) カタログビューを使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) カタログビューを使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,11 +45,11 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @cursor_return = ] @cursor_variable OUTPUT`**Cursor**型の出力変数を入力します。 結果として得られるカーソルは、読み取り専用のスクロール可能な動的カーソルです。  
+`[ @cursor_return = ] @cursor_variable OUTPUT`**Cursor** 型の出力変数を入力します。 結果として得られるカーソルは、読み取り専用のスクロール可能な動的カーソルです。  
   
-`[ @table_name = ] 'table_name'` フルテキストインデックス情報を要求する1つまたは2つの要素で構成されるテーブル名を指定します。 *table_name* は **nvarchar (517)** で、既定値は NULL です。 *Table_name*を省略した場合、フルテキストインデックスが作成されたテーブルごとにフルテキストインデックス列の情報が取得されます。  
+`[ @table_name = ] 'table_name'` フルテキストインデックス情報を要求する1つまたは2つの要素で構成されるテーブル名を指定します。 *table_name* は **nvarchar (517)** で、既定値は NULL です。 *Table_name* を省略した場合、フルテキストインデックスが作成されたテーブルごとにフルテキストインデックス列の情報が取得されます。  
   
-`[ @column_name = ] 'column_name'` フルテキストインデックスメタデータを必要とする列の名前を指定します。 *column_name* は **sysname** で、既定値は NULL です。 *Column_name*を省略した場合、または NULL の場合、 *table_name*のフルテキストインデックス列ごとにフルテキスト列情報が返されます。 *Table_name*も省略した場合、または NULL の場合は、データベース内のすべてのテーブルのフルテキストインデックスが作成されたすべての列に対してフルテキストインデックス列の情報が返されます。  
+`[ @column_name = ] 'column_name'` フルテキストインデックスメタデータを必要とする列の名前を指定します。 *column_name* は **sysname** で、既定値は NULL です。 *Column_name* を省略した場合、または NULL の場合、 *table_name* のフルテキストインデックス列ごとにフルテキスト列情報が返されます。 *Table_name* も省略した場合、または NULL の場合は、データベース内のすべてのテーブルのフルテキストインデックスが作成されたすべての列に対してフルテキストインデックス列の情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) エラー  

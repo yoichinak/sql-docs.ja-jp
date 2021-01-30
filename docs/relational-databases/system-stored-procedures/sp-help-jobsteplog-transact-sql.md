@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobsteplog_TSQL
 - sp_help_jobsteplog
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4499ad9e2dd54e5592bd4ee9d3b22e3505e9d144
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0e5311127f4ff825f862cb3aef2317a2c53578cc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547994"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200099"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +45,10 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="arguments"></a>引数  
 `[ @job_id = ] 'job_id'` ジョブステップログ情報を返すジョブの識別番号を指定します。 *job_id* は **int**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name* は **sysname**で、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name* は **sysname** で、既定値は NULL です。  
   
 > [!NOTE]  
->  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
+>  *Job_id* または *job_name* のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
 `[ @step_id = ] step_id` ジョブのステップの識別番号を指定します。 含まれていない場合は、ジョブのすべての手順が含まれます。 *step_id* は **int**,、既定値は NULL です。  
   
@@ -71,11 +71,11 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|ジョブ ステップ ログのサイズ (MB 単位)。|  
 |**出力**|**nvarchar(max)**|ジョブステップのログ出力。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_help_jobsteplog** は **msdb** データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -85,7 +85,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- **SQLAgentUserRole**のメンバーは、自分が所有するジョブステップのログメタデータのみを表示できます。  
+ **SQLAgentUserRole** のメンバーは、自分が所有するジョブステップのログメタデータのみを表示できます。  
   
 ## <a name="examples"></a>例  
   

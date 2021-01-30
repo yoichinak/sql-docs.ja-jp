@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_unsentitems_TSQL
 - sysmail_unsentitems
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 0e8ffcc7ae60096de1b0355ed113ffb55e02e286
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c532febf9074456ec1806fdb9d7ad0eed9b9b26a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100119"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199686"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "98100119"
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベース メールのトラブルシューティングを行うとき、このビューでは送信済みのメッセージ数とメッセージの待機時間を確認できるので、問題の性質を特定するのに役立ちます。 メッセージが 1 つも送信されていない場合は、データベース メール外部プログラムが動作していないか、ネットワークの問題によってデータベース メールから SMTP サーバーへの接続に障害が発生している可能性があります。 未送信のメッセージの多くが同じ **profile_id** を持っている場合は、SMTP サーバーに問題がある可能性があります。 プロファイルにアカウントを追加することを検討してください。 メッセージが送信されているにもかかわらず、メッセージがキューに過剰に時間を費やしている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必要なメッセージの量を処理するためにより多くのリソースが必要になることがあります。  
   
 ## <a name="permissions"></a>アクセス許可  

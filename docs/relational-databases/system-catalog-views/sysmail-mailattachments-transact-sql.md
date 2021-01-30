@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_mailattachments_TSQL
 - sysmail_mailattachments
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9fe55316cc27c21849379afe400d2950a5bcf882
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: adffc878cb36a7719748f8e5214bb23dab16fee2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100138"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199694"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98100138"
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベースメールのトラブルシューティングを行う場合は、このビューを使用して添付ファイルのプロパティを表示します。  
   
  システムテーブルに格納されている添付ファイルは、 **msdb** データベースのサイズが大きくなる可能性があります。 **Sysmail_delete_mailitems_sp** を使用して、メールアイテムとそれに関連付けられている添付ファイルを削除します。 詳細については、「 [データベースメールメッセージとイベントログをアーカイブするための SQL Server エージェントジョブの作成](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)」を参照してください。  

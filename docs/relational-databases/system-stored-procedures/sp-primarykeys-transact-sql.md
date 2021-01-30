@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_primarykeys_TSQL
 - sp_primarykeys
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5b967d8ac3d30147e583ffa6268cdd8d2a8d282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 23117c882ee0c2c55e8d29089327e9dd84643878
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534999"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199587"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @table_server = ] 'table_server'_` 主キー情報を返すリンクサーバーの名前を指定します。 *table_server* は **sysname**であり、既定値はありません。  
+`[ @table_server = ] 'table_server'_` 主キー情報を返すリンクサーバーの名前を指定します。 *table_server* は **sysname** であり、既定値はありません。  
   
-`[ @table_name = ] 'table_name'` 主キー情報を提供するテーブルの名前を指定します。 *table_name*は **sysname**,、既定値は NULL です。  
+`[ @table_name = ] 'table_name'` 主キー情報を提供するテーブルの名前を指定します。 *table_name* は **sysname**,、既定値は NULL です。  
   
 `[ @table_schema = ] 'table_schema'` テーブルスキーマを示します。 *table_schema* は **sysname**,、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境では、これはテーブル所有者に相当します。  
   
@@ -65,10 +65,10 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|複数列の主キーの列のシーケンス番号。|  
 |**PK_NAME**|**sysname**|主キー識別子。 データソースに該当しない場合は NULL を返します。|  
   
-## <a name="remarks"></a>解説  
- **sp_primarykeys**は、 *table_server*に対応する OLE DB プロバイダーの**IDBSchemaRowset**インターフェイスの PRIMARY_KEYS 行セットを照会することによって実行されます。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および *列* の各パラメーターがこのインターフェイスに渡されます。  
+## <a name="remarks"></a>コメント  
+ **sp_primarykeys** は、 *table_server* に対応する OLE DB プロバイダーの **IDBSchemaRowset** インターフェイスの PRIMARY_KEYS 行セットを照会することによって実行されます。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および *列* の各パラメーターがこのインターフェイスに渡されます。  
   
- 指定されたリンクサーバーの OLE DB プロバイダーが**IDBSchemaRowset**インターフェイスの PRIMARY_KEYS 行セットをサポートしていない場合、 **sp_primarykeys**は空の結果セットを返します。  
+ 指定されたリンクサーバーの OLE DB プロバイダーが **IDBSchemaRowset** インターフェイスの PRIMARY_KEYS 行セットをサポートしていない場合、 **sp_primarykeys** は空の結果セットを返します。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  

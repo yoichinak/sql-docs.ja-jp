@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_configure_peerconflictdetection_TSQL
 - sp_configure_peerconflictdetection
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 80ce8df6158ca3c0f7cd37fc045c7bd5987e2e0f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58e583191ba0c18824715664162f89a7911c466a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546192"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198711"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,14 +51,14 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @action =] '*action*'  
  パブリケーションの競合検出を有効にするか無効にするかを指定します。 *アクション* は **nvarchar (5)**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**enable**|パブリケーションの競合検出を有効にします。|  
 |**disable**|パブリケーションの競合検出を無効にします。|  
 |NULL (既定値)||  
   
  [ @originator_id =] *originator_id*  
- ピア ツー ピア トポロジ内のノードの ID を指定します。 *originator_id* は **int**,、既定値は NULL です。 *アクション*が**有効**に設定されている場合、この ID は競合検出に使用されます。 トポロジで使用されていないゼロ以外の正の ID を指定してください。 既に使用されている ID を確認するには、 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) システム テーブルに対してクエリを実行します。  
+ ピア ツー ピア トポロジ内のノードの ID を指定します。 *originator_id* は **int**,、既定値は NULL です。 *アクション* が **有効** に設定されている場合、この ID は競合検出に使用されます。 トポロジで使用されていないゼロ以外の正の ID を指定してください。 既に使用されている ID を確認するには、 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) システム テーブルに対してクエリを実行します。  
   
  [ @conflict_retention =] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -78,7 +78,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_configure_peerconflictdetection は、ピア ツー ピア トランザクション レプリケーションで使用されます。 競合検出を使用するには、すべてのノードが以降のバージョンを実行している必要があり、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] すべてのノードに対して検出を有効にする必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

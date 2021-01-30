@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_allitems_TSQL
 - sysmail_allitems
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6bc9b58549bbc20fe66caaf2adc61edd4345acd7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 25b60bb95655cea1d4e460b46a0e21faf28a3103
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096658"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199727"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,12 +57,12 @@ ms.locfileid: "98096658"
 |**send_request_date**|**datetime**|メッセージがメールキューに置かれた日付と時刻。|  
 |**send_request_user**|**sysname**|メッセージを送信したユーザー。 これは、メッセージの From: フィールドではなく、データベースメールプロシージャのユーザーコンテキストです。|  
 |**sent_account_id**|**int**|メッセージの送信に使用されるデータベースメールアカウントの識別子。|  
-|**sent_status**|**varchar (8)**|メールの状態。 次のいずれかの値になります。<br /><br /> **送信** 済み-メールが送信されました。<br /><br /> **未送信** -データベースメールはまだメッセージの送信を試みています。<br /><br /> データベースメール **再試行** しています。メッセージを送信できませんでしたが、もう一度送信しようとしています。<br /><br /> **失敗しました** -データベースメールはメッセージを送信できませんでした。|  
+|**sent_status**|**varchar (8)**|メールの状態。 指定できる値は次のとおりです。<br /><br /> **送信** 済み-メールが送信されました。<br /><br /> **未送信** -データベースメールはまだメッセージの送信を試みています。<br /><br /> データベースメール **再試行** しています。メッセージを送信できませんでしたが、もう一度送信しようとしています。<br /><br /> **失敗しました** -データベースメールはメッセージを送信できませんでした。|  
 |**sent_date**|**datetime**|メッセージが送信された日時。|  
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベースメールによって処理されたすべてのメッセージの状態を表示するには、 **sysmail_allitems** ビューを使用します。 データベース メールのトラブルシューティングを行うとき、このビューでは送信済みとそれ以外のメッセージの属性を比較できるので、問題の性質を特定するのに役立ちます。  
   
  このビューによって公開されるシステムテーブルにはすべてのメッセージが含まれているため、 **msdb** データベースのサイズが大きくなる可能性があります。 テーブルのサイズを小さくするために、古いメッセージをビューから定期的に削除します。 詳細については、「 [データベースメールメッセージとイベントログをアーカイブするための SQL Server エージェントジョブの作成](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)」を参照してください。  

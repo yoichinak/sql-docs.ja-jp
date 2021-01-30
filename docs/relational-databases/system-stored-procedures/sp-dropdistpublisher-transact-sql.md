@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdistpublisher
 - sp_dropdistpublisher_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2d7d0eed28b877c881cd297556755ea70bf5c674
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 09db4d47afee6795b403542c8442cc9d74724f4b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543519"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200698"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +40,13 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` 削除するパブリッシャーを示します。 *publisher* は **sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` 削除するパブリッシャーを示します。 *publisher* は **sysname** で、既定値はありません。  
   
-`[ @no_checks = ] no_checks` パブリッシャーがディストリビューターとしてサーバーをアンインストールしたかどうかを **sp_dropdistpublisher** に確認するかどうかを指定します。 *no_checks* は **ビット**,、既定値は **0**です。  
+`[ @no_checks = ] no_checks` パブリッシャーがディストリビューターとしてサーバーをアンインストールしたかどうかを **sp_dropdistpublisher** に確認するかどうかを指定します。 *no_checks* は **ビット**,、既定値は **0** です。  
   
- **0**の場合、レプリケーションは、リモートパブリッシャーがローカルサーバーをディストリビューターとしてアンインストールしたことを確認します。 パブリッシャーがローカルの場合、レプリケーションでは、ローカルサーバーにパブリケーションまたはディストリビューションオブジェクトが残っていないことを確認します。  
+ **0** の場合、レプリケーションは、リモートパブリッシャーがローカルサーバーをディストリビューターとしてアンインストールしたことを確認します。 パブリッシャーがローカルの場合、レプリケーションでは、ローカルサーバーにパブリケーションまたはディストリビューションオブジェクトが残っていないことを確認します。  
   
- **1**の場合、リモートパブリッシャーに到達できない場合でも、ディストリビューションパブリッシャーに関連付けられているすべてのレプリケーションオブジェクトが削除されます。 この操作を行った後、リモートパブリッシャーは、 ** \@ ignore_distributor**1 の[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)を使用してレプリケーションをアンインストールする必要があり  =  **1**ます。  
+ **1** の場合、リモートパブリッシャーに到達できない場合でも、ディストリビューションパブリッシャーに関連付けられているすべてのレプリケーションオブジェクトが削除されます。 この操作を行った後、リモートパブリッシャーは、 **\@ ignore_distributor** 1 の [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)を使用してレプリケーションをアンインストールする必要があり  =  ます。  
   
 `[ @ignore_distributor = ] ignore_distributor` パブリッシャーが削除されたときに、ディストリビューターにディストリビューションオブジェクトを残すかどうかを指定します。 *ignore_distributor* は **ビット** で、次のいずれかの値を指定できます。  
   
@@ -57,7 +57,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropdistpublisher** は、すべての種類のレプリケーションで使用されます。  
   
  Oracle パブリッシャーを削除できない場合は、パブリッシャーを削除できないと **sp_dropdistpublisher** によってエラーが返され、パブリッシャーのディストリビューターオブジェクトが削除されます。  
@@ -66,7 +66,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_dropdistpublisher**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_dropdistpublisher** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   

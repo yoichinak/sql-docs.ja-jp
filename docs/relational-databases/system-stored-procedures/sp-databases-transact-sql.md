@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_databases_TSQL
 - sp_databases
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 90fbcbf710f1779ad011163641aa61b14b33c65b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e324cb4660302517daee36072e9b835abc455baf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549900"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200327"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,11 +46,11 @@ sp_databases
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|データベースの名前です。 では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] この列は、データベース名を表し **ます。** この名前は、データベースカタログビューに格納されています。|  
+|**DATABASE_NAME**|**sysname**|データベース名。 では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] この列は、データベース名を表し **ます。** この名前は、データベースカタログビューに格納されています。|  
 |**DATABASE_SIZE**|**int**|データベースのサイズ (kb 単位)。|  
 |**備考**|**varchar (254)**|では [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、このフィールドは常に NULL を返します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  返されるデータベース名は、現在のデータベース状況を変更するために USE ステートメントでパラメーターとして使えます。  
   
  **sp_databases** には OPEN DATABASE CONNECTIVITY (ODBC) に相当するものはありません。  

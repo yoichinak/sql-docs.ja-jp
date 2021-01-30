@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_event_log
 - sysmail_event_log_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 58c8e734ed9acdef41b22772c8d3955b825a46de
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f5c3435be5885aeedbedb7868a2883dc34ff0dff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096641"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199762"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "98096641"
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。 電子メールの場合は、メールを送信したユーザーです。 データベースメール外部プログラムによって生成されるメッセージの場合、これはプログラムのユーザーコンテキストです。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベースメールのトラブルシューティングを行う場合は、 **sysmail_event_log** ビューで、電子メールの失敗に関連するイベントを検索します。 データベースメール外部プログラムの失敗などの一部のメッセージは、特定の電子メールに関連付けられていません。 特定の電子メールに関連するエラーを検索するには、 **sysmail_faileditems** ビューで失敗した電子メールの **mailitem_id** を参照し、その **mailitem_id** に関連するメッセージを **sysmail_event_log** で検索します。 **Sp_send_dbmail** からエラーが返された場合、電子メールはデータベースメールシステムに送信されず、この表示にはエラーが表示されません。  
   
  個々のアカウントで配信試行が失敗した場合は、再試行の間、メール アイテムの配信が成功または失敗するまで、データベース メールでエラー メッセージが保持されます。 究極の成功の場合、すべての累積エラーは、 **account_id** を含む個別の警告としてログに記録されます。 これにより、電子メールが送信された場合でも警告が表示されることがあります。 最終的な配信エラーが発生した場合、すべてのアカウントで障害が発生したため、以前のすべての警告は、 **account_id** なしで1つのエラーメッセージとしてログに記録されます。  

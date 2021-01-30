@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syscollector_config_store_TSQL
 - syscollector_config_store
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c5914dfa56d4ee6dd360c391c64e636638bb4342
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0ffb12c3aa43b1e18e20fdf43cf0311c02881138
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094291"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199763"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "98094291"
 ## <a name="permissions"></a>アクセス許可  
  ビューの SELECT 権限、または dc_operator、dc_proxy、dc_admin のいずれかの固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用できるプロパティの一覧は固定されており、それらの値は適切なストアドプロシージャを使用してのみ変更できます。 次の表で、このビューを介して公開されるプロパティについて説明します。  
   
 |プロパティ名|説明|  

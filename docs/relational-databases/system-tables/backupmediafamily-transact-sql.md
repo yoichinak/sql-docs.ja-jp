@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - backupmediafamily
 - backupmediafamily_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - backup media [SQL Server], backupmediafamily system table
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6adacacdb3e075e3eb058005d3b11fc8fc219cbe
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: df687040bf73fb1d78f15d7cca18cc0fc092ee1f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096290"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198682"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-sql)
 
@@ -43,7 +43,7 @@ ms.locfileid: "98096290"
 |**physical_block_size**|**int**|メディアファミリの書き込みに使用される物理ブロックサイズ。 NULL にすることができます。|  
 |**mirror**|**tinyint**|ミラー数 (0 ～ 3)。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  LOADHISTORY を使用した *backup_device* からの RESTORE verifyonly は、 **backupmediaset** テーブルの列に、メディアセットヘッダーからの適切な値を設定します。  
   
  このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) ストアドプロシージャを実行します。  
