@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_resync_targetserver
 - sp_resync_targetserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8d7076615c68b7cd0918a3556753fd0d41d5bcf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3bd9b8b4b73cf79fc1adc9dcff8fd4754c944e35
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551257"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194369"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +41,15 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @server_name = ] 'server'` 再同期するサーバーの名前。 *server* のデータ型は **sysname**で、既定値はありません。 **All**を指定した場合、すべての対象サーバーが再同期されます。  
+`[ @server_name = ] 'server'` 再同期するサーバーの名前。 *server* のデータ型は **sysname** で、既定値はありません。 **All** を指定した場合、すべての対象サーバーが再同期されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **Sp_post_msx_operation**アクションの結果を報告します。  
+ **Sp_post_msx_operation** アクションの結果を報告します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_resync_targetserver** 対象サーバーの現在の命令セットを削除し、ダウンロードする対象サーバーの新しいセットを投稿します。 新しいセットは、すべてのマルチサーバージョブを削除する命令で構成され、その後、サーバーで現在対象となっている各ジョブの挿入が行われます。  
   
 ## <a name="permissions"></a>アクセス許可  

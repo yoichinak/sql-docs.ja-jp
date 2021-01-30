@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_all_changes
 - sys.fn_all_changes
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c1b411daa6ccdfdb34da1a9560520416e26e1191
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a4736042dc8770660f076d3865df4033ef3233d5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096482"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194492"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_all_changes_ &lt; capture_instance &gt; (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -92,7 +92,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar (2)**|ターゲット環境に行を適用するために必要な操作を示す操作コード。 これは、呼び出しで指定された引数 *row_filter_option* の値によって異なります。<br /><br /> *row_filter_option* = ' all '<br /><br /> ' D '-削除操作<br /><br /> ' I '-挿入操作<br /><br /> ' UN '-更新操作の新しい値<br /><br /> *row_filter_option* = ' all update old '<br /><br /> ' D '-削除操作<br /><br /> ' I '-挿入操作<br /><br /> ' UN '-更新操作の新しい値<br /><br /> ' UO '-更新操作の古い値|  
 |\<columns from @update_flag_list>|**bit**|ビットフラグには、列名に _uflag を追加することによって名前が付けられます。 フラグは、 \_ ' UO ' の _CDC_OPERATION が ' i ' の場合は常に NULL に設定されます。 \__CDC_OPERATION が ' UN ' の場合、更新によって対応する列が変更された場合は1に設定されます。 それ以外の場合は、0 に設定されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  Fn_all_changes_<capture_instance> 関数は、cdc.fn_cdc_get_all_changes_<capture_instance クエリ関数のラッパーとして機能します。 ラッパーを作成するスクリプトを生成するには、sys.sp_cdc_generate_wrapper ストアド プロシージャを使用します。  
   
  ラッパー関数が自動的に作成されることはありません。 ラッパー関数を作成するには、次の 2 つを行う必要があります。  

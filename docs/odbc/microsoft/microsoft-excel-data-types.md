@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], Excel driver
 - Excel data types [ODBC]
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3e54ece7962fc5b56e4b9fcc17123ac7ad3c9e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a6342706e2ab9b66db9d0410b31573d89bdf1d7c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466434"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212127"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel のデータ型
 次の表は、Microsoft Excel ドライバーのデータ型を ODBC SQL データ型にマップする方法を示しています。 Microsoft Excel ドライバーは、列のデータに基づいて、これらのデータ型を Microsoft Excel テーブルの列に割り当てます。  
@@ -37,7 +37,7 @@ ms.locfileid: "88466434"
 |[TEXT]|SQL_VARCHAR|  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** は、ODBC SQL データ型を返します。 *Odbc プログラマーズリファレンス*の付録 D のすべての変換は、このトピックで前述した odbc SQL データ型に対してサポートされています。  
+>  **SQLGetTypeInfo** は、ODBC SQL データ型を返します。 *Odbc プログラマーズリファレンス* の付録 D のすべての変換は、このトピックで前述した odbc SQL データ型に対してサポートされています。  
   
  次の表は、Microsoft Excel のデータ型に関する制限を示しています。  
   

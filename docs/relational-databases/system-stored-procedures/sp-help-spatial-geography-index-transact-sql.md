@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geography_index
 - sp_help_spatial_geography_index_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b2b519fd8e52af2a67c37941a4868622aa254599
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: adccb4ff123d5ea91691d57c03556c51441abed3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810348"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212048"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Geography**空間インデックスに関する指定された一連のプロパティの名前と値を返します。 結果はテーブル形式で返されます。 プロパティのコアセットとインデックスのすべてのプロパティのどちらを返すかを選択できます。  
+  **Geography** 空間インデックスに関する指定された一連のプロパティの名前と値を返します。 結果はテーブル形式で返されます。 プロパティのコアセットとインデックスのすべてのプロパティのどちらを返すかを選択できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>解説  
   
 ## <a name="example"></a>例  
- 次の例では、を使用して `sp_help_spatial_geography_index` 、 ** \@ **テーブル**geography_col**で定義されている、指定されたクエリサンプルのテーブルの**SIndx_SpatialTable_geography_col2**を調査します。 **geography** この例では、指定したインデックスのコアプロパティのみが返されます。  
+ 次の例では、を使用して `sp_help_spatial_geography_index` 、 **\@** テーブル **geography_col** で定義されている、指定されたクエリサンプルのテーブルの **SIndx_SpatialTable_geography_col2** を調査します。  この例では、指定したインデックスのコアプロパティのみが返されます。  
   
 ```  
 declare @qs geography  
@@ -62,7 +62,7 @@ declare @qs geography
 exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geography_col2', 0, @qs;  
 ```  
   
- **Geography**インスタンスの境界ボックスは、地球全体です。  
+ **Geography** インスタンスの境界ボックスは、地球全体です。  
   
 ## <a name="requirements"></a>必要条件  
   

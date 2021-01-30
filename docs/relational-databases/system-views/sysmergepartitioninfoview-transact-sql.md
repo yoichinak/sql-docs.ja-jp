@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmergepartitioninfoview
 - sysmergepartitioninfoview_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c194b2442762f2ec9373cc730cbc4835bce45983
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f9a5063691cb0d8ed77fdc19ce3bba1adebf8858
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446521"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181578"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Sysmergepartitioninfoview**ビューでは、テーブルアーティクルのパーティション分割情報が公開されます。 このビューは、パブリッシャーのパブリケーションデータベースとサブスクライバーのサブスクリプションデータベースに格納されます。  
+  **Sysmergepartitioninfoview** ビューでは、テーブルアーティクルのパーティション分割情報が公開されます。 このビューは、パブリッシャーのパブリケーションデータベースとサブスクライバーのサブスクリプションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "88446521"
 |**select_proc**|**sysname**|マージ エージェントがロックやアーティクルの列と行の検索に使用する、自動生成ストアド プロシージャの名前です。|  
 |**metadata_select_proc**|**sysname**|マージレプリケーションシステムテーブル内のメタデータにアクセスするために使用する、自動的に生成されたストアドプロシージャの名前。|  
 |**delete_proc**|**sysname**|同期中に行を削除するために使用されるプロシージャです。|  
-|**schema_option**|**binary (8)**|指定されたアーティクルのスキーマ生成オプションのビットマップ。 サポートされている *schema_option* 値の詳細については、「 [transact-sql&#41;&#40;sp_addmergearticle ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」を参照してください。|  
+|**schema_option**|**binary (8)**|指定されたアーティクルのスキーマ生成オプションのビットマップ。 サポートされている *schema_option* 値の詳細については、「 [transact-sql&#41;&#40;sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」を参照してください。|  
 |**destination_object**|**sysname**|サブスクライバーで作成されたテーブルの名前です。|  
 |**destination_owner**|**sysname**|目的のオブジェクトの所有者名。|  
 |**resolver_clsid**|**nvarchar (50)**|カスタム競合回避モジュールの ID。 ビジネスロジックハンドラーの場合、この値は NULL です。|  
@@ -84,7 +84,7 @@ ms.locfileid: "88446521"
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|更新前のテーブルのビューの ID です。|  
-|**delete_tracking**|**bit**|削除がレプリケートされるかどうかを示します。<br /><br /> **0** = 削除はレプリケートされません。<br /><br /> **1** = 削除がレプリケートされます。これは、マージレプリケーションの既定の動作です。<br /><br /> *Delete_tracking*の値が**0**の場合、サブスクライバー側で削除された行はパブリッシャー側で手動で削除する必要があり、パブリッシャー側で削除された行はサブスクライバー側で手動で削除する必要があります。<br /><br /> 注: 値が **0** の場合は、非収束になります。|  
+|**delete_tracking**|**bit**|削除がレプリケートされるかどうかを示します。<br /><br /> **0** = 削除はレプリケートされません。<br /><br /> **1** = 削除がレプリケートされます。これは、マージレプリケーションの既定の動作です。<br /><br /> *Delete_tracking* の値が **0** の場合、サブスクライバー側で削除された行はパブリッシャー側で手動で削除する必要があり、パブリッシャー側で削除された行はサブスクライバー側で手動で削除する必要があります。<br /><br /> 注: 値が **0** の場合は、非収束になります。|  
 |**compensate_for_errors**|**bit**|同期中にエラーが検出されたときに補正アクションが行われるかどうかを示します。<br /><br /> **0** = 補正アクションは無効です。<br /><br /> **1** = サブスクライバーまたはパブリッシャーで適用できない変更は、常に、マージレプリケーションの既定の動作である変更を元に戻す補正アクションにつながります。<br /><br /> 注: 値が **0** の場合は、非収束になります。|  
 |**pub_range**|**bigint**|パブリッシャーの id 範囲のサイズ。|  
 |**range**|**bigint**|調整でサブスクライバーに割り当てられる連続する id 値のサイズ。|  
@@ -101,13 +101,13 @@ ms.locfileid: "88446521"
 |**expand_proc**|**sysname**|新しく挿入された親行のすべての子行と、パーティションの変更または削除された親行のパーティション Id を再評価するプロシージャの名前。|  
 |**logical_record_parent_nickname**|**int**|論理レコード内の特定のアーティクルの最上位レベルの親のニックネーム。|  
 |**logical_record_view**|**int**|それぞれの子の rowguid に対応する、トップレベルにある親アーティクルの rowguid を出力するビューです。|  
-|**logical_record_deleted_view_rule**|**sysname**|**Logical_record_view**に似ていますが、update トリガーと delete トリガーの "deleted" テーブルに子行が表示される点が異なります。|  
+|**logical_record_deleted_view_rule**|**sysname**|**Logical_record_view** に似ていますが、update トリガーと delete トリガーの "deleted" テーブルに子行が表示される点が異なります。|  
 |**logical_record_level_conflict_detection**|**bit**|競合を、論理レコード レベルと、行または列レベルのどちらで検出するかを示します。<br /><br /> **0** = 行レベルまたは列レベルの競合検出が使用されます。<br /><br /> **1** = 論理レコードの競合検出が使用されます。この場合、パブリッシャーでの行の変更と、サブスクライバーでの同じ論理レコードの変更は競合として処理されます。<br /><br /> この値が 1 の場合には、論理レコード レベルでの競合解決だけを使用できます。|  
 |**logical_record_level_conflict_resolution**|**bit**|競合を論理レコードレベルまたは行レベルまたは列レベルで解決する必要があるかどうかを示します。<br /><br /> **0** = 行または列レベルの解決が使用されます。<br /><br /> **1** = 競合が発生した場合、勝者からの論理レコード全体が、損失側の論理レコード全体を上書きします。<br /><br /> 値 1 は、論理レコード レベルでの検出でも、行または列レベルの検出でも使用することができます。|  
-|**partition_options**|**tinyint**|アーティクル内のデータをパーティション分割する方法を定義します。これにより、すべての行が1つのパーティションまたは1つのサブスクリプションのみに属している場合に、パフォーマンスを最適化できます。 *Partition_options*には、次のいずれかの値を指定できます。<br /><br /> **0** = アーティクルのフィルター選択は静的であるか、またはパーティションごとに一意のデータのサブセットではありません ("重複する" パーティション)。<br /><br /> **1** = パーティションは重複しており、サブスクライバーで行われた DML の更新では、行が属するパーティションを変更することはできません。<br /><br /> **2** = アーティクルのフィルター選択によって重複しないパーティションが生成されますが、複数のサブスクライバーが同じパーティションを受け取ることができます。<br /><br /> **3** = アーティクルのフィルター選択により、各サブスクリプションで一意な重複しないパーティションが生成されます。|  
+|**partition_options**|**tinyint**|アーティクル内のデータをパーティション分割する方法を定義します。これにより、すべての行が1つのパーティションまたは1つのサブスクリプションのみに属している場合に、パフォーマンスを最適化できます。 *Partition_options* には、次のいずれかの値を指定できます。<br /><br /> **0** = アーティクルのフィルター選択は静的であるか、またはパーティションごとに一意のデータのサブセットではありません ("重複する" パーティション)。<br /><br /> **1** = パーティションは重複しており、サブスクライバーで行われた DML の更新では、行が属するパーティションを変更することはできません。<br /><br /> **2** = アーティクルのフィルター選択によって重複しないパーティションが生成されますが、複数のサブスクライバーが同じパーティションを受け取ることができます。<br /><br /> **3** = アーティクルのフィルター選択により、各サブスクリプションで一意な重複しないパーティションが生成されます。|  
 |**name**|**sysname**|パーティションの名前。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パラメーター化されたフィルターを使用してマージパブリケーションのパーティションを管理する](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geometry_histogram
 - sp_help_spatial_geometry_histogram_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d875178db938e92aa60e3396cee2242d6a54e3f7
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 75609570d3c021b350fc06cbaf35f32dee4bd8ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810219"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183599"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
   
  引用符は、修飾されたテーブルが指定されている場合にのみ必要です。 データベース名を含む完全修飾名を指定する場合は、データベース名を現在のデータベースの名前にする必要があります。 *tabname* は **sysname**,、既定値はありません。  
   
-`[ @colname = ] 'colname'` 指定された空間列の名前を指定します。 *colname* は **sysname**であり、既定値はありません。  
+`[ @colname = ] 'colname'` 指定された空間列の名前を指定します。 *colname* は **sysname** であり、既定値はありません。  
   
 `[ @resolution = ] 'resolution'` 境界ボックスの解像度です。 有効な値は 10 ～ 5000 です。 *解決策* は **tinyint**,、既定値はありません。  
   
@@ -61,7 +61,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
   
 `[ @ymax = ] 'ymax'` "Y の最大値" 境界ボックスプロパティです。 *ymax* は **float**,、既定値はありません。  
   
-`[ @sample = ] 'sample'` 使用するテーブルの割合を示します。 有効な値は 0 ~ 100 です。 *sample* は **float**です。 既定値は100です。  
+`[ @sample = ] 'sample'` 使用するテーブルの割合を示します。 有効な値は 0 ~ 100 です。 *sample* は **float** です。 既定値は 100 です。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  テーブル値が返されます。 次のグリッドでは、テーブルの列の内容について説明します。  
@@ -75,7 +75,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public** ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>コメント  
  SSMS 空間タブでは、結果がグラフィカルに表示されます。 空間ウィンドウに対して結果にクエリを実行すると、結果項目の概数を取得できます。 テーブル内のオブジェクトは複数のセルに対応している場合があるため、セルの合計が実際のオブジェクトの数よりも大きくなる可能性があります。  
   
  境界ボックスの外部にあるオブジェクトまたは境界ボックスの境界に接しているオブジェクトの数を格納する追加の行が結果セットに追加される場合があります。 この行の **cellid** は0で、この行の **セル** には、境界ボックスを表す **LineString** が含まれています。 この行は、境界ボックス外の領域全体を表します。  

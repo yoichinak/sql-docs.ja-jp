@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_account_sp
 - sysmail_update_account_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fe446ee69a7bf3f7ac6600b2cb521f4f9d89ffa1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b441dfe7aa92bd78bb87ef05b4b7f9cdd6108919
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485525"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181883"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,33 +61,33 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @display_name = ] 'display_name'` このアカウントからの電子メールメッセージに使用する新しい表示名。 *display_name* は **nvarchar (128)**,、既定値はありません。  
   
-`[ @replyto_address = ] 'replyto_address'` このアカウントからの電子メールメッセージの返信先ヘッダーで使用する新しいアドレス。 *replyto_address* は **nvarchar (128)**,、既定値はありません。  
+`[ @replyto_address = ] 'replyto_address'` このアカウントからの電子メールメッセージの Reply-To ヘッダーで使用する新しいアドレス。 *replyto_address* は **nvarchar (128)**,、既定値はありません。  
   
 `[ @description = ] 'description'` アカウントの新しい説明。 *説明* は **nvarchar (256)**,、既定値は NULL です。  
   
-`[ @mailserver_name = ] 'server_name'` このアカウントに使用する SMTP メールサーバーの新しい名前を指定します。 を実行するコンピューターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *SERVER_NAME* を IP アドレスに解決できる必要があります。 *server_name* は **sysname**であり、既定値はありません。  
+`[ @mailserver_name = ] 'server_name'` このアカウントに使用する SMTP メールサーバーの新しい名前を指定します。 を実行するコンピューターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *SERVER_NAME* を IP アドレスに解決できる必要があります。 *server_name* は **sysname** であり、既定値はありません。  
   
-`[ @mailserver_type = ] 'server_type'` メールサーバーの新しい種類。 *server_type* は **sysname**であり、既定値はありません。 **' SMTP '** の値のみがサポートされています。  
+`[ @mailserver_type = ] 'server_type'` メールサーバーの新しい種類。 *server_type* は **sysname** であり、既定値はありません。 **' SMTP '** の値のみがサポートされています。  
   
 `[ @port = ] port_number` メールサーバーの新しいポート番号。 *port_number* は **int**,、既定値はありません。  
   
 `[ @timeout = ] 'timeout'` SmtpClient のタイムアウトパラメーター。1つの電子メールメッセージを送信します。 *タイムアウト* は秒単位の **int** で、既定値はありません。  
   
-`[ @username = ] 'username'` メールサーバーへのログオンに使用する新しいユーザー名を指定します。 *ユーザー名* は **sysname**で、既定値はありません。  
+`[ @username = ] 'username'` メールサーバーへのログオンに使用する新しいユーザー名を指定します。 *ユーザー名* は **sysname** で、既定値はありません。  
   
 `[ @password = ] 'password'` メールサーバーへのログオンに使用する新しいパスワード。 *パスワード* は **sysname**,、既定値はありません。  
   
-`[ @use_default_credentials = ] use_default_credentials` サービスの資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 **use_default_credentials** はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールはの資格情報を使用し [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に** \@ ユーザー名**と** \@ パスワード**を使用します。 ** \@ ユーザー名**と** \@ パスワード**が NULL の場合は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に相談してください。  
+`[ @use_default_credentials = ] use_default_credentials` サービスの資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 **use_default_credentials** はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールはの資格情報を使用し [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に **\@ ユーザー名** と **\@ パスワード** を使用します。 **\@ ユーザー名** と **\@ パスワード** が NULL の場合は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に相談してください。  
   
 `[ @enable_ssl = ] enable_ssl` データベースメールトランスポート層セキュリティ (TLS) を使用して通信を暗号化するかどうかを指定します。これは、以前 Secure Sockets Layer (SSL) と呼ばれていました。 このオプションは、SMTP サーバーで TLS が必要な場合に使用します。 **enable_ssl** はビット,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  アカウント名とアカウント id の両方を指定すると、アカウントの情報を更新するだけでなく、アカウント名も変更されます。 アカウント名の変更は、アカウント名のエラーを修正する場合に利用できます。  
   
- ストアドプロシージャ **sysmail_update_account_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ ストアドプロシージャ **sysmail_update_account_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb** でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
@@ -95,7 +95,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="examples"></a>例  
   
 ### <a name="a-changing-the-information-for-an-account"></a>A. アカウントの情報を変更する  
- 次の例では、msdb データベースのアカウントを更新し `AdventureWorks Administrator` ます。 **msdb** アカウントの情報は、指定された値に設定されます。  
+ 次の例では、msdb データベースのアカウントを更新し `AdventureWorks Administrator` ます。  アカウントの情報は、指定された値に設定されます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  

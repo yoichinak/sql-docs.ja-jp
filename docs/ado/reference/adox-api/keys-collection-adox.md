@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Table::Keys
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 675584dd52cd1a403b9d9d44351b86e88caba382
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6e3369e181577214a9e4b430dded19110744eb0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983983"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169314"
 ---
 # <a name="keys-collection-adox"></a>Keys コレクション (ADOX)
 [テーブル](./table-object-adox.md)のすべての[キー](./key-object-adox.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [キーコレクション]()の[Append](./append-method-adox-keys.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
 -   [追加](./append-method-adox-keys.md)メソッドを使用して、新しいキーをコレクションに追加します。  

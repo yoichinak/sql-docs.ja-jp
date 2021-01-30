@@ -1,13 +1,13 @@
 ---
-description: managed_backup。 sp_get_backup_diagnostics (Transact-sql)
-title: managed_backup。 sp_get_backup_diagnostics (Transact-sql) |Microsoft Docs
+description: managed_backup managed_backup.sp_get_backup_diagnostics (transact-sql)
+title: managed_backup managed_backup.sp_get_backup_diagnostics (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_get_backup_diagnostics_TSQL
 - sp_get_backup_diagnostics
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: efd884b6e757ab81cf01eda00b0322ef3ec5c701
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fbda9abd944665d3f0d52c174e0b1a5c1e488fa0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543701"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205292"
 ---
-# <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup。 sp_get_backup_diagnostics (Transact-sql)
+# <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup managed_backup.sp_get_backup_diagnostics (transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Smart Admin によってログに記録された拡張イベントを返します。  
@@ -45,9 +45,9 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  @xevent_channel  
- 拡張イベントの種類。 既定値は、それまでの 30 分間にログに記録されたすべてのイベントを返すよう設定されています。 ログに記録されるイベントは、有効になっている拡張イベントの種類によって異なります。 このパラメーターを使用すると、特定の種類のイベントのみが表示されるようにストアド プロシージャにフィルターを適用できます。 完全なイベント名を指定するか、部分文字列 ( **' admin**'、' analytics **'**、 **' Operational '**、 **' Debug '** など) を指定することができます。 @event_channelは**VARCHAR (255)** です。  
+ 拡張イベントの種類。 既定値は、それまでの 30 分間にログに記録されたすべてのイベントを返すよう設定されています。 ログに記録されるイベントは、有効になっている拡張イベントの種類によって異なります。 このパラメーターを使用すると、特定の種類のイベントのみが表示されるようにストアド プロシージャにフィルターを適用できます。 完全なイベント名を指定するか、部分文字列 ( **' admin**'、' analytics **'**、 **' Operational '**、 **' Debug '** など) を指定することができます。 @event_channelは **VARCHAR (255)** です。  
   
- 現在有効になっているイベントの種類の一覧を取得するには、 **managed_backup. fn_get_current_xevent_settings** 関数を使用します。  
+ 現在有効になっているイベントの種類の一覧を取得するには、 **managed_backup** 関数を使用します。  
   
  [@begin_time  
  イベントが表示対象となる期間の開始時刻。 @begin_timeパラメーターは DATETIME で、既定値は NULL です。 これが指定されていない場合は、過去30分間のイベントが表示されます。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpextendedproc
 - sp_helpextendedproc_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12255797c4c9799e6e6ec3110dea58f4617142eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e8256d22c8565b56b328119e6b5618ca4f8d226b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549677"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197613"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,11 +55,11 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**name**|**sysname**|拡張ストアドプロシージャの名前。|  
 |**dll**|**nvarchar (255)**|DLL の名前。|  
   
-## <a name="remarks"></a>解説  
- *プロシージャ*を指定した場合は、指定した拡張ストアドプロシージャに対して**sp_helpextendedproc**レポートが作成されます。 このパラメーターが指定されていない場合、 **sp_helpextendedproc** は、すべての拡張ストアドプロシージャ名と各拡張ストアドプロシージャが属する DLL 名を返します。  
+## <a name="remarks"></a>コメント  
+ *プロシージャ* を指定した場合は、指定した拡張ストアドプロシージャに対して **sp_helpextendedproc** レポートが作成されます。 このパラメーターが指定されていない場合、 **sp_helpextendedproc** は、すべての拡張ストアドプロシージャ名と各拡張ストアドプロシージャが属する DLL 名を返します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_helpextendedproc**を実行する権限は、 **public**に与えられます。  
+ **Sp_helpextendedproc** を実行する権限は、 **public** に与えられます。  
   
 ## <a name="examples"></a>例  
   

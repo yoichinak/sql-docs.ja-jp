@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75124c0fc8d7a0c3c0bb0ea491c84c3673339108
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6bf9a232f2dadfc562cd6e7e183858c3a7f64e9c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724353"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168827"
 ---
 # <a name="rds-properties"></a>RDS プロパティ
 > [!IMPORTANT]
@@ -33,12 +33,12 @@ ms.locfileid: "91724353"
 |[FilterColumn (RDS)](./filtercolumn-property-rds.md)|フィルター条件を評価する列を示します。|  
 |[FilterCriterion (RDS)](./filtercriterion-property-rds.md)|フィルター値に使用する評価演算子を示します。|  
 |[FilterValue (RDS)](./filtervalue-property-rds.md)|レコードをフィルター処理するための値を示します。|  
-|[ハンドラー (RDS)](./handler-property-rds.md)|**RDSServer**の機能を拡張するサーバー側のカスタマイズプログラム (*ハンドラー*) の名前と、*ハンドラー*によって使用されるすべてのパラメーターを示します。|  
+|[ハンドラー (RDS)](./handler-property-rds.md)|**RDSServer** の機能を拡張するサーバー側のカスタマイズプログラム (*ハンドラー*) の名前と、*ハンドラー* によって使用されるすべてのパラメーターを示します。|  
 |[InternetTimeout (RDS)](./internettimeout-property-rds.md)|要求がタイムアウトするまでのミリ秒単位の待機時間を示します。|  
-|[ReadyState (RDS)](./readystate-property-rds.md)|**DataControl**オブジェクトが**レコードセット**オブジェクトにデータをフェッチする際の進行状況を示します。|  
+|[ReadyState (RDS)](./readystate-property-rds.md)|**DataControl** オブジェクトが **レコードセット** オブジェクトにデータをフェッチする際の進行状況を示します。|  
 |[Recordset と SourceRecordset (RDS)](./recordset-sourcerecordset-properties-rds.md)|カスタムビジネスオブジェクトから返される **レコードセット** オブジェクトを示します。|  
 |[サーバー (RDS)](./server-property-rds.md)|インターネットインフォメーションサービス (IIS) 名と通信プロトコルを示します。|  
 |[SortColumn (RDS)](./sortcolumn-property-rds.md)|レコードを並べ替える列を指定します。|  
 |[SortDirection (RDS)](./sortdirection-property-rds.md)|並べ替え順序が昇順と降順のどちらであるかを示します。|  
-|[SQL (RDS)](./sql-property.md)|**レコードセット**を取得するために使用するクエリ文字列を示します。|  
+|[SQL (RDS)](./sql-property.md)|**レコードセット** を取得するために使用するクエリ文字列を示します。|  
 |[URL (RDS)](./url-property-rds.md)|相対 URL または絶対 URL を含む文字列を示します。|

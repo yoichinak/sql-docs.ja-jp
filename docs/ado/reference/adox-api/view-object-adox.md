@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - View
@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eefc7c259d12f20ada1676a6518fa357719abe63
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 700b82c39352842cc20b017c90df686c95215586
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982993"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169128"
 ---
 # <a name="view-object-adox"></a>View オブジェクト (ADOX)
 フィルター処理されたレコードセットまたは仮想テーブルを表します。 ADO [コマンド](../ado-api/command-object-ado.md) オブジェクトと組み合わせて使用すると、ビュー **オブジェクトを使用して** 、ビューの追加、削除、または変更を行うことができます。  
   
-## <a name="remarks"></a>解説  
- ビューは、他のデータベーステーブルまたはビューから作成された仮想テーブルです。 **ビュー**オブジェクトを使用すると、プロバイダーの "create View" 構文を知らない場合や使用しなくても、ビューを作成できます。  
+## <a name="remarks"></a>コメント  
+ ビューは、他のデータベーステーブルまたはビューから作成された仮想テーブルです。 **ビュー** オブジェクトを使用すると、プロバイダーの "create View" 構文を知らない場合や使用しなくても、ビューを作成できます。  
   
- **View**オブジェクトのプロパティを使用すると、次のことができます。  
+ **View** オブジェクトのプロパティを使用すると、次のことができます。  
   
 -   [Name](./name-property-adox.md)プロパティを使用してビューを識別します。  
   
--   [コマンド](./command-property-adox.md)プロパティを使用してビューを追加、削除、または変更するために使用できる ADO**コマンド**オブジェクトを指定します。  
+-   [コマンド](./command-property-adox.md)プロパティを使用してビューを追加、削除、または変更するために使用できる ADO **コマンド** オブジェクトを指定します。  
   
 -   [DateCreated](./datecreated-property-adox.md)プロパティと[DateModified](./datemodified-property-adox.md)プロパティを使用して日付情報を返します。  
   

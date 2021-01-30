@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_get_captured_columns
 - sys.sp_cdc_get_captured_columns
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f19017dd72dc51f2fd79010b85c251c3c64ed22
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 90476faf2182ad92259d85dd97cc900153ec53c4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811056"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205963"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|数値ベースの場合は、列の小数点以下桁数です。それ以外の場合は、NULL です。|  
 |datetime_precision|**smallint**|Datetime ベースの場合は、列の有効桁数です。それ以外の場合は NULL。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>コメント  
  Sys.sp_cdc_get_captured_columns を使用して、キャプチャインスタンスクエリ関数 [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) または [cdc.fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>に対してクエリを実行することによって返されたキャプチャ対象列の列情報を取得します。 列名、Id、および位置は、キャプチャインスタンスの有効期間中は一定のままです。 追跡対象テーブルの基になるソース列のデータ型が変更された場合にのみ、列のデータ型が変化します。 ソーステーブルに対して追加または削除された列は、既存のキャプチャインスタンスのキャプチャ対象列には影響しません。  
   
  [Sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)を使用して、ソーステーブルに適用されるデータ定義言語 (ddl) ステートメントに関する情報を取得します。 DDL の変更によって追跡対象ソース列の構造が変更された場合、そのような DDL の変更がすべて結果セットとして返されます。  

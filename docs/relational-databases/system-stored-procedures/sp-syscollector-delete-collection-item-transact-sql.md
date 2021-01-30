@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_delete_collection_item
 - sp_syscollector_delete_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee92161ff7effa336e6e1791c7da5b7988a926c2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae900632edd8ccce0e31c87bd7814c41f02da291
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544745"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204325"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
   
 ## <a name="arguments"></a>引数  
  [ @collection_item_id =] *collection_item_id*  
- コレクション アイテムの一意な識別子を指定します。 *collection_item_id* は **int** で、既定値は NULL です。 *名前*が NULL の場合、 *collection_item_id*には値が必要です。  
+ コレクション アイテムの一意な識別子を指定します。 *collection_item_id* は **int** で、既定値は NULL です。 *名前* が NULL の場合、 *collection_item_id* には値が必要です。  
   
  [ @name =] '*name*'  
- コレクションアイテムの名前を指定します。 *名前* は **sysname** で、既定値は NULL です。 *collection_item_id*が NULL の場合、*名前*には値を指定する必要があります。  
+ コレクションアイテムの名前を指定します。 *名前* は **sysname** で、既定値は NULL です。 *collection_item_id* が NULL の場合、*名前* には値を指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syscollector_delete_collection_item は、msdb システム データベースのコンテキストで実行する必要があります。 コレクションアイテムをシステムコレクションセットから削除することはできません。  
   
  この操作が実行されている間、コレクション アイテムを含むコレクション セットは停止し、再開されます。  

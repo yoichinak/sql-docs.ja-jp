@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_attach_single_file_db
 - sp_attach_single_file_db_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0b8026e1aae3df927a6cc454f7fb4763e3d05093
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: e8fd050ff5706cc2406fcb4502c5d93a8253bc4c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753497"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197707"
 ---
 # <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  データ ファイルが 1 つだけ格納されているデータベースを現在のサーバーにアタッチします。 複数のデータファイルで**sp_attach_single_file_db**を使用することはできません。  
+  データ ファイルが 1 つだけ格納されているデータベースを現在のサーバーにアタッチします。 複数のデータファイルで **sp_attach_single_file_db** を使用することはできません。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、CREATE DATABASE *database_name* FOR ATTACH を使用することをお勧めします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)」を参照してください。 レプリケートされたデータベースには、このプロシージャを使用しないでください。  
@@ -63,9 +63,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  なし  
   
 ## <a name="remarks"></a>解説  
- **Sp_attach_single_file_db**は、明示的な**sp_detach_db**操作またはコピーしたデータベースに対してサーバーから以前にデタッチされたデータベースでのみ使用してください。  
+ **Sp_attach_single_file_db** は、明示的な **sp_detach_db** 操作またはコピーしたデータベースに対してサーバーから以前にデタッチされたデータベースでのみ使用してください。  
   
- **sp_attach_single_file_db** は、1つのログファイルがあるデータベースでのみ機能します。 **Sp_attach_single_file_db**データベースをサーバーにアタッチすると、新しいログファイルが作成されます。 データベースが読み取り専用の場合、ログ ファイルは、アタッチされる前の場所に作成されます。  
+ **sp_attach_single_file_db** は、1つのログファイルがあるデータベースでのみ機能します。 **Sp_attach_single_file_db** データベースをサーバーにアタッチすると、新しいログファイルが作成されます。 データベースが読み取り専用の場合、ログ ファイルは、アタッチされる前の場所に作成されます。  
   
 > [!NOTE]  
 >  データベース スナップショットのデタッチおよびアタッチは行うことができません。  

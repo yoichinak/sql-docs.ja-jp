@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_account_sp
 - sysmail_delete_account_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccc7cbbbae49362eabc1612547e37589d80894a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1facb2a83b79c51fbfa53eaa4af4980b0e71b594
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538514"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203658"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,9 +40,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @account_id = ] account_id` 削除するアカウントの ID 番号を指定します。 *account_id* は **int**,、既定値はありません。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
+`[ @account_id = ] account_id` 削除するアカウントの ID 番号を指定します。 *account_id* は **int**,、既定値はありません。 *Account_id* または *account_name* のいずれかを指定する必要があります。  
   
-`[ @account_name = ] 'account_name'` 削除するアカウントの名前を指定します。 *account_name* は **sysname**であり、既定値はありません。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
+`[ @account_name = ] 'account_name'` 削除するアカウントの名前を指定します。 *account_name* は **sysname** であり、既定値はありません。 *Account_id* または *account_name* のいずれかを指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
@@ -53,7 +53,7 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ## <a name="remarks"></a>解説  
  この手順では、アカウントがプロファイルで使用されているかどうかに関係なく、指定されたアカウントを削除します。 アカウントが含まれていないプロファイルは、正常に電子メールを送信できません。  
   
- ストアドプロシージャ **sysmail_delete_account_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ ストアドプロシージャ **sysmail_delete_account_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb** でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - explicit data type conversion functions [ODBC]
 - data type conversion functions [ODBC]
@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da897469d26cd0403dc023cfcd3f3e03bfceeba4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 927c911b839e7aa07b087edb0fb3b457d0825b6c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466189"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194818"
 ---
 # <a name="explicit-data-type-conversion-function"></a>データ型の明示的な変換用関数
 明示的なデータ型の変換は、SQL データ型定義の観点から指定されます。  
   
- 明示的なデータ型変換関数の ODBC 構文では、変換は制限されません。 あるデータ型から別のデータ型への特定の変換の有効性は、ドライバー固有の各実装によって決まります。 ドライバーは ODBC 構文をネイティブ構文に変換するので、ODBC 構文で有効であってもデータソースではサポートされていない変換を拒否します。 ODBC 関数 **SQLGetInfo**は、変換オプション (SQL_CONVERT_BIGINT、SQL_CONVERT_BINARY、SQL_CONVERT_INTERVAL_YEAR_MONTH など) と共に、データソースによってサポートされている変換について照会する手段を提供します。  
+ 明示的なデータ型変換関数の ODBC 構文では、変換は制限されません。 あるデータ型から別のデータ型への特定の変換の有効性は、ドライバー固有の各実装によって決まります。 ドライバーは ODBC 構文をネイティブ構文に変換するので、ODBC 構文で有効であってもデータソースではサポートされていない変換を拒否します。 ODBC 関数 **SQLGetInfo** は、変換オプション (SQL_CONVERT_BIGINT、SQL_CONVERT_BINARY、SQL_CONVERT_INTERVAL_YEAR_MONTH など) と共に、データソースによってサポートされている変換について照会する手段を提供します。  
   
- **CONVERT**関数の形式は次のとおりです。  
+ **CONVERT** 関数の形式は次のとおりです。  
   
  **CONVERT (** _value_exp_、 _data_type_**)**  
   
- 関数は、指定された*data_type*に変換*value_exp*によって指定された値を返します。 *data_type*は、次のいずれかのキーワードです。  
+ 関数は、指定された *data_type* に変換 *value_exp* によって指定された値を返します。 *data_type* は、次のいずれかのキーワードです。  
 
 :::row:::
     :::column:::

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergealternatepublisher_TSQL
 - sp_helpmergealternatepublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89441f749d9406f731ad0f1fc9b2ea1eed3dc5ec
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e7448059958f07ba1aab7e63a1a857e113e21432
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541729"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183103"
 ---
 # <a name="sp_helpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +38,9 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` 代替パブリッシャーの名前を指定します。*publisher* は **sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` 代替パブリッシャーの名前を指定します。*publisher* は **sysname** で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリケーションデータベースの名前を指定します。*publisher_db* は **sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーションデータベースの名前を指定します。*publisher_db* は **sysname** であり、既定値はありません。  
   
 `[ @publication = ] 'publication'` パブリケーションの名前を指定します。*publication* は **sysname**,、既定値はありません。  
   
@@ -58,13 +58,13 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpmergealternatepublisher** は、マージレプリケーションで使用します。  
   
  マージ セッションごとに、システムではパブリッシャーとサブスクライバーの両方に対し、代替パブリッシャーの一覧を求めるクエリが実行されます。 マージ処理では代替パブリッシャーの一覧に対してエントリの追加や削除が行われ、サブスクライバーとパブリッシャーの両方に一致する代替パブリッシャーの一覧が生成されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_helpmergealternatepublisher**を実行できるのは、パブリケーションのパブリケーションアクセスリストのメンバーだけです。  
+ **Sp_helpmergealternatepublisher** を実行できるのは、パブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,13 +1,13 @@
 ---
-description: managed_backup。 sp_backup_master_switch (Transact-sql)
-title: managed_backup。 sp_backup_master_switch (Transact-sql) |Microsoft Docs
+description: managed_backup managed_backup.sp_backup_master_switch (transact-sql)
+title: managed_backup managed_backup.sp_backup_master_switch (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_ backup_master_switch
 - smart_admin.sp_backup_master_switch
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cbb360512888007f8fa5e0408771f1e27f94aeb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 97202d989a21002d7f24c886378fd3f6c6b35ebd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548422"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205303"
 ---
-# <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup。 sp_backup_master_switch (Transact-sql)
+# <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup managed_backup.sp_backup_master_switch (transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   を一時停止または再開 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] します。  
@@ -48,7 +48,7 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  @state  
- の状態を設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] します。 @stateパラメーターは**BIT**です。 値を0に設定すると、操作は一時停止されます。値を1に設定すると、操作が再開されます。  
+ の状態を設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] します。 @stateパラメーターは **BIT** です。 値を0に設定すると、操作は一時停止されます。値を1に設定すると、操作が再開されます。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
@@ -57,7 +57,7 @@ EXEC managed_backup.sp_backup_master_switch
  このステートメントに関連したセキュリティの問題について説明します。サブセクション (H3 見出し) として「権限」を含めます。 必要に応じて、組み合わせ所有権や監査に関する他のサブセクションを含めることを検討してください。  
   
 ### <a name="permissions"></a>アクセス許可  
- **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および**Sp_delete_backuphistory**ストアドプロシージャに対する**EXECUTE**権限が必要です。  
+ **Db_backupoperator** データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL** 権限、および **Sp_delete_backuphistory** ストアドプロシージャに対する **EXECUTE** 権限が必要です。  
   
 ## <a name="examples"></a>例  
  次の例を使用すると、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を、そのバックアップが実行されているインスタンス上で一時停止できます。  

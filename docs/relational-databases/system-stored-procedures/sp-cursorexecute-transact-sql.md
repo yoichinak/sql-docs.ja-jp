@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursorexecute
 - sp_cursorexecute_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07795588a4c1d6df43a7041f9254a661e527be14
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6aab1670ae9d517ec60d3af572d15eaf12432f7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543602"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205154"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,26 +50,26 @@ sp_cursorexecute prepared_handle, cursor
  SQL Server 生成されたカーソル識別子を示します。 *cursor* は、カーソルに対して動作する後続のすべてのプロシージャ (など) で指定する必要がある必須のパラメーターです sp_cursorfetch  
   
  *scrollopt*  
- スクロール オプションです。 *scrollopt* は、 **int** 入力値を必要とする省略可能なパラメーターです。 Sp_cursorexecute*scrollopt* パラメーターには、sp_cursoropen と同じ値オプションがあります。  
+ スクロール オプションです。 *scrollopt* は、 **int** 入力値を必要とする省略可能なパラメーターです。 Sp_cursorexecute *scrollopt* パラメーターには、sp_cursoropen と同じ値オプションがあります。  
   
 > [!NOTE]  
 >  PARAMETERIZED_STMT 値はサポートされていません。  
   
 > [!IMPORTANT]  
->  *Scrollopt*値が指定されていない場合、既定値は、sp_cursorprepare で指定された*scrollopt*値に関係なく、KEYSET になります。  
+>  *Scrollopt* 値が指定されていない場合、既定値は、sp_cursorprepare で指定された *scrollopt* 値に関係なく、KEYSET になります。  
   
  *ccopt*  
- 通貨制御オプション。 *ccopt* は、 **int 型** の入力値を必要とする省略可能なパラメーターです。 Sp_cursorexecute*ccopt* パラメーターには、sp_cursoropen と同じ値オプションがあります。  
+ 通貨制御オプション。 *ccopt* は、 **int 型** の入力値を必要とする省略可能なパラメーターです。 Sp_cursorexecute *ccopt* パラメーターには、sp_cursoropen と同じ値オプションがあります。  
   
 > [!IMPORTANT]  
->  *Ccopt*の値が指定されていない場合、sp_cursorprepare で指定された*ccopt*の値に関係なく、既定値はオプティミスティックになります。  
+>  *Ccopt* の値が指定されていない場合、sp_cursorprepare で指定された *ccopt* の値に関係なく、既定値はオプティミスティックになります。  
   
  *行*  
  AUTO_FETCH で使用するフェッチバッファー行の数を示す省略可能なパラメーターです。 既定値は20行です。 *rowcount* の動作は、入力値と戻り値として割り当てられた場合に異なります。  
   
 |入力値として|戻り値として|  
 |--------------------|---------------------|  
-|FAST_FORWARD cursor で AUTO_FETCH が指定されている場合、 *rowcount* はフェッチバッファーに格納する行の数を表します。|結果セット内の行の数を表します。 *Scrollopt* AUTO_FETCH 値を指定すると、 *rowcount*はフェッチバッファーにフェッチされた行の数を返します。|  
+|FAST_FORWARD cursor で AUTO_FETCH が指定されている場合、 *rowcount* はフェッチバッファーに格納する行の数を表します。|結果セット内の行の数を表します。 *Scrollopt* AUTO_FETCH 値を指定すると、 *rowcount* はフェッチバッファーにフェッチされた行の数を返します。|  
   
  *bound_param*  
  追加パラメーターをオプションで使用することを示します。  
@@ -80,18 +80,18 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>コードの戻り値  
  *rowcount* は次の値を返す場合があります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |-1|不明な行の数。|  
 |-n|非同期設定が有効になっています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>scrollopt パラメーターと ccopt パラメーター  
- *scrollopt* と *ccopt* は、キャッシュされたプランがサーバーキャッシュに対して割り込まれる場合に役立ちます。つまり、ステートメントを識別する準備済みハンドルを再コンパイルする必要があります。 *Scrollopt*および*ccopt*パラメーターの値は、元の要求で sp_cursorprepare に送信された値と一致している必要があります。  
+ *scrollopt* と *ccopt* は、キャッシュされたプランがサーバーキャッシュに対して割り込まれる場合に役立ちます。つまり、ステートメントを識別する準備済みハンドルを再コンパイルする必要があります。 *Scrollopt* および *ccopt* パラメーターの値は、元の要求で sp_cursorprepare に送信された値と一致している必要があります。  
   
 > [!NOTE]  
->  PARAMETERIZED_STMT を *scrollopt*に割り当てることはできません。  
+>  PARAMETERIZED_STMT を *scrollopt* に割り当てることはできません。  
   
  一致する値を指定しなかった場合、プランの再コンパイルが行われ、準備操作と実行操作が否定されます。  
   

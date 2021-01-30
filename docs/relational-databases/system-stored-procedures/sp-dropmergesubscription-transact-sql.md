@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergesubscription_TSQL
 - sp_dropmergesubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8d1b10deb11751ba8a8d2c5ee49cda293e695d50
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 29cf6541b12f49194c1d1a6562d3fb80975a5591
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538948"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204802"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,11 +47,11 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* の **sysname**,、既定値は NULL です。  
   
-`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscription_database*は **sysname**,、既定値は NULL です。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscription_database* は **sysname**,、既定値は NULL です。  
   
-`[ @subscription_type = ] 'subscription_type'` サブスクリプションの種類を示します。 *subscription_type*は **nvarchar (15)** で、次のいずれかの値を指定できます。  
+`[ @subscription_type = ] 'subscription_type'` サブスクリプションの種類を示します。 *subscription_type* は **nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**すべての**|プッシュサブスクリプション、プルサブスクリプション、および匿名サブスクリプション|  
 |**非同期**|匿名サブスクリプションです。|  
@@ -59,21 +59,21 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |**だとすると**|プル サブスクリプションです。|  
 |**both** (既定値)|プッシュ サブスクリプションおよびプル サブスクリプションです。|  
   
-`[ @ignore_distributor = ] ignore_distributor` ディストリビューターに接続せずにこのストアドプロシージャを実行するかどうかを示します。 *ignore_distributor* は **ビット**,、既定値は **0**です。 このパラメーターを使用すると、ディストリビューターでクリーンアップタスクを実行せずに、サブスクリプションを削除できます。 また、ディストリビューターを再インストールする必要がある場合にも役立ちます。  
+`[ @ignore_distributor = ] ignore_distributor` ディストリビューターに接続せずにこのストアドプロシージャを実行するかどうかを示します。 *ignore_distributor* は **ビット**,、既定値は **0** です。 このパラメーターを使用すると、ディストリビューターでクリーンアップタスクを実行せずに、サブスクリプションを削除できます。 また、ディストリビューターを再インストールする必要がある場合にも役立ちます。  
   
-`[ @reserved = ] reserved` 将来使用するために予約されています。 *予約済み* は **ビット**,、既定値は **0**です。  
+`[ @reserved = ] reserved` 将来使用するために予約されています。 *予約済み* は **ビット**,、既定値は **0** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropmergesubscription** は、マージレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_dropmergesubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_dropmergesubscription** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [プッシュサブスクリプションを削除する](../../relational-databases/replication/delete-a-push-subscription.md)   

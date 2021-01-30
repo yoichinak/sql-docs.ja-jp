@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.endpoint_webmethods_TSQL
 - sys.endpoint_webmethods
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 1c57d8319df8feb793587dc07d6d55248a0fca12
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7d528284dd7a8cb3efcbbd84d66a38362c0141f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100634"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203919"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "98100634"
 |method_alias|**nvarchar (64)**|メソッドのエイリアス。<br /><br /> 注: [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子では、WSDL メソッド名の中で有効でない文字を使用できます。<br /><br /> エイリアスは、エンドポイントの WSDL の説明で公開されている名前を、webmethod が呼び出されたときに呼び出される、基になる実際の実行可能オブジェクトにマップするために使用され [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。|  
 |object_name|**nvarchar (776)**|NAME = オプションで指定された、Web メソッドのリダイレクト先のオブジェクト名です。 名前の部分はピリオド (.) で区切られ、角かっこを使用して区切られ `[``]` ます。<br /><br /> オブジェクト名は WSDL オプションで指定されている、3 つの部分から成る名前でなければなりません。|  
 |result_schema|**tinyint**|XSD (ある場合) を応答と共に返送するかどうかを指定するオプションです。<br /><br /> 0 = なし<br /><br /> 1 = 標準<br /><br /> 2 = 既定値|  
-|result_schema_desc|**nvarchar(60)**|XSD (ある場合) を応答と共に返送するかどうかを指定するオプションの説明です。<br /><br /> なし<br /><br /> STANDARD<br /><br /> DEFAULT|  
+|result_schema_desc|**nvarchar(60)**|XSD (ある場合) を応答と共に返送するかどうかを指定するオプションの説明です。<br /><br /> NONE<br /><br /> STANDARD<br /><br /> DEFAULT|  
 |result_format|**tinyint**|応答において結果をどのようにフォーマットするかを指定するオプションです。<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = なし|  
-|result_format_desc|**nvarchar(60)**|応答での結果の書式設定方法を決定するオプションの説明。<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> なし|  
+|result_format_desc|**nvarchar(60)**|応答での結果の書式設定方法を決定するオプションの説明。<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> NONE|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

@@ -6,7 +6,7 @@ ms.date: 12/21/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_os_memory_cache_clock_hands_TSQL
 - dm_os_memory_cache_clock_hands
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c994aa8b67c6fb6f8f3e7c199eac278813cd167e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c87554c8c6707fc4527e0e2fe8c75868d56e486d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099782"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184865"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "98099782"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリキャッシュと呼ばれる構造体のメモリに情報を格納します。 キャッシュには、データ、インデックス エントリ、コンパイル済みプロシージャ プランなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関するさまざまな種類の情報が格納されます。 情報を再作成しないようにするために、メモリキャッシュは可能な限り長く保持され、通常はキャッシュから削除されます。これは、時間がかかりすぎている場合や、新しい情報のためにメモリ領域が必要な場合に、キャッシュから削除されます。 古い情報を削除するプロセスは、メモリスイープと呼ばれます。 メモリスイープは頻繁に発生するアクティビティですが、連続していません。 メモリ キャッシュのスイープはクロック アルゴリズムによって制御され、 各クロックは、両手と呼ばれる複数のメモリスイープを制御できます。 メモリキャッシュクロックハンドは、メモリスイープの1つの針の現在の場所です。  
 
 ## <a name="see-also"></a>参照  
