@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - STLength_TSQL
 - STLength (geometry Data Type)
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 713e423d0ef388ea63089bc2b4a203b8affa0fad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa53274ed371828b0e124ef362dadfce2754de7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488124"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158318"
 ---
 # <a name="stlength-geometry-data-type"></a>STLength (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88488124"
   
  CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geometry** インスタンスが閉じられている場合、長さはインスタンスの周囲の合計長として計算されます。多角形の長さとは、周囲の長さです。地点の長さは 0 です。 **geometrycollection** コレクション型の長さは、コレクションに含まれるすべての **geometry** インスタンスの長さの合計として計算されます。  
   
  STLength() は、LineString が有効でも無効でも動作します。 通常、LineString が無効になるのは、線分の重複のためです。これは、不正確な GPS のトレースなどの異常によって起きる場合があります。 STLength() は、重複する線分や無効な線分を削除しません。 返される長さの値には、重複する線分や無効な線分が含まれています。 MakeValid() メソッドは、LineString から重複する線分を削除できます。  
