@@ -21,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12fe1e95cbb1c7ad26025ee52ce111cb3f835704
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 171cada53538f8e5b615e6096a169b0976b57532
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440827"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236048"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-sql)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |[仮想ログファイル (%)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)のパリティ。指定した範囲内のログの末尾を特定するために内部的に使用されます。|
 |vlf_first_lsn|**nvarchar (48)** |[仮想ログファイル (](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)列 1) 内の最初のログレコードの[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|
 |vlf_create_lsn|**nvarchar (48)** |[仮想ログファイル](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)を作成したログレコードの[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|
-|vlf_encryptor_thumbprint|**varbinary(20)**| **適用対象:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 値が [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)を使用して暗号化されている場合は、オフの暗号化の拇印を表示します。それ以外の場合は NULL を示します。 |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **適用対象:** [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br><br> 値が [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)を使用して暗号化されている場合は、オフの暗号化の拇印を表示します。それ以外の場合は NULL を示します。 |
 
 ## <a name="remarks"></a>解説
 `sys.dm_db_log_info`動的管理関数は、ステートメントを置き換え `DBCC LOGINFO` ます。    

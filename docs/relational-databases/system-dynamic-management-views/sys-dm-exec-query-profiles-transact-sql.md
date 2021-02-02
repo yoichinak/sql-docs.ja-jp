@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b1f8aa494a01a8fc99fc48efc79a66b80458524
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4777dea76c24aaeab7f64a761c4d13b49c644af0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161370"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235871"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "99161370"
   
 -   並列スキャンがある場合、この DMV では、スキャンで使用される並列スレッドごとにカウンターがレポートされます。
  
-SP1 以降では [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 、 *標準のクエリ実行統計プロファイルインフラストラクチャ* は、 *軽量のクエリ実行統計プロファイルインフラストラクチャ* とサイドバイサイドで存在します。 `SET STATISTICS XML ON` と `SET STATISTICS PROFILE ON` は、常に *標準のクエリ実行統計プロファイルインフラストラクチャ* を使用します。 にデータを設定するには `sys.dm_exec_query_profiles` 、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
+SP1 以降では [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 、 *標準のクエリ実行統計プロファイルインフラストラクチャ* は、 *軽量のクエリ実行統計プロファイルインフラストラクチャ* とサイドバイサイドで存在します。 `SET STATISTICS XML ON` と `SET STATISTICS PROFILE ON` は、常に *標準のクエリ実行統計プロファイルインフラストラクチャ* を使用します。 にデータを設定するには `sys.dm_exec_query_profiles` 、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
 
 >[!NOTE]
 > 調査対象のクエリは、クエリのプロファイルインフラストラクチャが有効になっ **た後** に開始する必要があります。クエリを開始した後で有効にすると、で結果が生成されません `sys.dm_exec_query_profiles` 。 クエリプロファイルインフラストラクチャを有効にする方法の詳細については、「 [クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。

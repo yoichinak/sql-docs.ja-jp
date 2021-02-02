@@ -21,12 +21,12 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c44ef469dfa60e7c4ac96386ab87812fab447555
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 58e1f2042f10d1b4f06482fdfb13f07cf5edfa3e
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210291"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237713"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "99210291"
 |**null_on_null_input**|**bit**|モジュールは、任意の NULL 入力上で NULL 出力を生成するように宣言されました。|  
 |**execute_as_principal_id**|**Int**|実行データベースプリンシパルの ID。<br /><br /> 既定では NULL、または EXECUTE AS CALLER の場合は NULL です。<br /><br /> SELF として実行する場合は指定したプリンシパルの ID、または EXECUTE AS にする場合は \<principal> です。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|**bit**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 0 = ネイティブでコンパイルされていない<br /><br /> 1 = ネイティブコンパイル<br /><br /> 既定値は 0 です。|  
-|**is_inlineable**|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 以降。<br/><br />モジュールがインライン化可能かどうかを示します。 Inlineability は、 [ここで](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)指定した条件に基づいています。<br /><br /> 0 = not インライン化可能<br /><br /> 1 = はインライン化可能です。 <br /><br /> スカラー Udf の場合、UDF がインライン化可能の場合、値は1になり、それ以外の場合は0になります。 インライン Tvf の場合は値1、その他のすべてのモジュール型の場合は0を格納します。<br />|  
-|**inline_type**|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 以降。<br /><br />現在モジュールに対してインライン展開が有効になっているかどうかを示します。 <br /><br />0 = インライン展開は無効になっています<br /><br /> 1 = インライン展開が有効になっています。<br /><br /> スカラー Udf では、インライン展開が有効になっている場合 (明示的または暗黙的)、値は1になります。 インライン Tvf の場合、値は常に1になり、その他のモジュールの種類では0になります。<br />|  
+|**is_inlineable**|**bit**|**適用対象**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] 以降。<br/><br />モジュールがインライン化可能かどうかを示します。 Inlineability は、 [ここで](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)指定した条件に基づいています。<br /><br /> 0 = not インライン化可能<br /><br /> 1 = はインライン化可能です。 <br /><br /> スカラー Udf の場合、UDF がインライン化可能の場合、値は1になり、それ以外の場合は0になります。 インライン Tvf の場合は値1、その他のすべてのモジュール型の場合は0を格納します。<br />|  
+|**inline_type**|**bit**|**適用対象**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] 以降。<br /><br />現在モジュールに対してインライン展開が有効になっているかどうかを示します。 <br /><br />0 = インライン展開は無効になっています<br /><br /> 1 = インライン展開が有効になっています。<br /><br /> スカラー Udf では、インライン展開が有効になっている場合 (明示的または暗黙的)、値は1になります。 インライン Tvf の場合、値は常に1になり、その他のモジュールの種類では0になります。<br />|  
 
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  既定の制約の SQL 式である D 型のオブジェクトは、 [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) カタログビューにあります。 CHECK 制約の SQL 式 (C 型のオブジェクト) は、 [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) カタログビューにあります。  
   
  この情報については、「 [sys.dm_db_uncontained_entities &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)」も参照してください。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6374bdcc748ab528c4cb70c2db6387d3b55f6cb6
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b5290d2e9650acc8ee540e572109b51b377e5235
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171534"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236575"
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>概要: テーブルからデータをインポートする (マスター データ サービス)
 
@@ -50,7 +50,7 @@ ms.locfileid: "98171534"
      ステージング ストアド プロシージャや [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を使って、データを読み込みます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] では、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ステージング プロセスのサポートは非推奨とされました。  
+>  [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] では、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ステージング プロセスのサポートは非推奨とされました。  
   
 ## <a name="deactivating-and-deleting-members-mds"></a>メンバーの非アクティブ化と削除 (MDS)  
  非アクティブにしたメンバーは、再びアクティブにできます。 メンバーを再びアクティブにすると、階層およびコレクションにおける属性とメンバーシップが復元されます。 以前のトランザクションはすべてそのままです。 マスター データ マネージャーの **[バージョン管理]** 機能領域の管理者は、非アクティブになっているトランザクションを表示できます。  

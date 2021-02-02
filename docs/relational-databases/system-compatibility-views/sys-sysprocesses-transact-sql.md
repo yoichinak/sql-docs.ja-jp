@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6b0a49e257760e44398da7426933f6a9050a62f2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8cf9c34360cfabff16dd4823738168b9611a90ba
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99160669"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235879"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysのプロセス (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,9 +70,9 @@ ms.locfileid: "99160669"
 |stmt_start|**int**|指定された sql_handle の現在の SQL ステートメントの開始オフセットです。|  
 |stmt_end|**int**|指定した sql_handle の現在の SQL ステートメントの終了オフセットです。<br /><br /> -1 = 現在のステートメントは、指定した sql_handle に対して fn_get_sql 関数が返す結果の最後まで実行されます。|  
 |request_id|**int**|要求の ID。 特定のセッションで実行されている要求を識別するために使用されます。|
-|page_resource |**binary (8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> `waitresource`列にページが含まれている場合は、ページリソースの8バイトの16進数表現。 |  
+|page_resource |**binary (8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br /><br /> `waitresource`列にページが含まれている場合は、ページリソースの8バイトの16進数表現。 |  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ユーザーがサーバーに対する VIEW SERVER STATE 権限を持っている場合、ユーザーにはのインスタンスで実行中のすべてのセッションが表示されます。それ以外の場合、ユーザーには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 現在のセッションのみが表示されます。  
   
 ## <a name="see-also"></a>参照  

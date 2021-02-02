@@ -21,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44c8b94a441e276561f3eb8fff165fede678e952
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e4a772318df16bebec216b70ab3fce2bf2ca4d56
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99160174"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236033"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-sql)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "99160174"
   
  詳細については、「 [Memory-Optimized オブジェクトのストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)」を参照してください。  
   
-##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降  
- 次の表では、以降のの列について説明し `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]** ます。  
+##  <a name="sssql16-md-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降  
+ 次の表では、以降のの列について説明し `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]** ます。  
   
 |列名|種類|説明|  
 |-----------------|----------|-----------------|  

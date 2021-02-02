@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a0e183d97b17936d5d7e1b414c2d492910a8a8b3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d6d44a187862903181cb19ee2eabafc1fd26ec91
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207075"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237220"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  次の表に、変更可能なパブリケーションのプロパティと、プロパティの値に関する制限を示します。  
   
-|プロパティ|値|説明|  
+|プロパティ|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|指定されたパブリケーションに対して匿名サブスクリプションを作成できます。また、 *immediate_sync* も **true** である必要があります。 ピアツーピアパブリケーションの場合は変更できません。|  
 ||**false**|指定されたパブリケーションに対して匿名サブスクリプションを作成することはできません。 ピアツーピアパブリケーションの場合は変更できません。|  
@@ -112,7 +112,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**同時**|すべてのテーブルについてネイティブ モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショットレプリケーションでは無効です。|  
 ||**concurrent_c**|すべてのテーブルについてキャラクター モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショットレプリケーションでは無効です。|  
 |**taskid**||このプロパティは非推奨とされており、サポートされなくなりました。|  
-|**allow_drop**|**true**|`DROP TABLE`トランザクションレプリケーションに含まれるアーティクルの DLL サポートを有効にします。 サポートされている最小バージョン: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service pack 2 以降および [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] service pack 1 以降。 追加の参照: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|`DROP TABLE`トランザクションレプリケーションに含まれるアーティクルの DLL サポートを有効にします。 サポートされている最小バージョン: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service pack 2 以降および [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] service pack 1 以降。 追加の参照: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|`DROP TABLE`トランザクションレプリケーションに含まれるアーティクルの DLL サポートを無効にします。 これは、このプロパティの **既定** 値です。|
 |**NULL** (既定値)||*プロパティ* に対してサポートされている値の一覧を返します。|  
   
@@ -134,7 +134,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **sp_changepublication** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  次のいずれかのプロパティを変更した後で、新しいスナップショットを生成する必要があります。また、 *force_invalidate_snapshot* パラメーターに値 **1** を指定する必要があります。  

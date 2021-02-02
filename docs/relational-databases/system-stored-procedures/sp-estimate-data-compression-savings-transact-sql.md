@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 938e6994f5d19f59023009cf9806ca62280dc5b9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 93d169d364369e87f1c363297c2a5c73c58e442b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193560"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237845"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +90,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|現在の圧縮設定を使用したサンプルのサイズ。 この列には、断片化も含まれます。|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|要求された圧縮設定を使用して作成されるサンプルのサイズ。また、該当する場合は、既存の FILL FACTOR と断片化はありません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  を使用 `sp_estimate_data_compression_savings` すると、行、ページ、列ストア、または列ストアアーカイブの圧縮に対してテーブルまたはパーティションを有効にした場合に発生する節約量を見積もることができます。 たとえば、行の平均サイズを40% 削減できる場合は、オブジェクトのサイズを40% 小さくすることができます。 これは FILL FACTOR と行サイズに左右されるため、領域を削減できない場合もあります。 たとえば、8000バイトの長さの行があり、そのサイズを40% 削減した場合でも、データページには1つの行だけを収めることができます。 領域は削減されません。  
   
  `sp_estimate_data_compression_savings` を実行してテーブルが増大するという結果が示される場合は、テーブルの多くの行でデータ型の有効桁数がほとんど使用されており、圧縮された形式に必要なわずかなオーバーヘッドが積み重なって、圧縮による削減量を上回ることを意味しています。 このようなまれなケースでは、圧縮を使用しないでください。  
@@ -110,10 +110,10 @@ sp_estimate_data_compression_savings
  SQL Server 2019 より前では、このプロシージャは列ストアインデックスには適用されませんでした。したがって、データ圧縮パラメーターの列ストアと COLUMNSTORE_ARCHIVE は受け入れられませんでした。  SQL Server 2019 以降では、列ストアインデックスは、推定のソースオブジェクトとしても、要求された圧縮の種類としても使用できます。
 
  > [!IMPORTANT]
- > メモリ最適化された [TempDB メタデータ](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) がで有効になっている場合 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 、一時テーブルでの列ストアインデックスの作成はサポートされていません。 この制限のため、Memory-Optimized TempDB メタデータが有効になっている場合、列ストアおよび COLUMNSTORE_ARCHIVE データ圧縮パラメーターで sp_estimate_data_compression_savings はサポートされていません。
+ > メモリ最適化された [TempDB メタデータ](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) がで有効になっている場合 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 、一時テーブルでの列ストアインデックスの作成はサポートされていません。 この制限のため、Memory-Optimized TempDB メタデータが有効になっている場合、列ストアおよび COLUMNSTORE_ARCHIVE データ圧縮パラメーターで sp_estimate_data_compression_savings はサポートされていません。
 
 ## <a name="considerations-for-columnstore-indexes"></a>列ストア インデックスに関する考慮事項
- 以降で [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] は、 `sp_estimate_compression_savings` 列ストアと列ストアアーカイブの両方の圧縮の推定がサポートされています。 ページと行の圧縮とは異なり、列ストア圧縮をオブジェクトに適用するには、新しい列ストアインデックスを作成する必要があります。 このため、このプロシージャの列ストアと COLUMNSTORE_ARCHIVE オプションを使用する場合、プロシージャに提供されたソースオブジェクトの型によって、圧縮サイズの推定に使用される列ストアインデックスの種類が決まります。 次の表は、 @data_compression パラメーターが列ストアまたは COLUMNSTORE_ARCHIVE に設定されている場合に、各ソースオブジェクトの種類の圧縮節約量を推定するために使用される参照オブジェクトを示しています。
+ 以降で [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] は、 `sp_estimate_compression_savings` 列ストアと列ストアアーカイブの両方の圧縮の推定がサポートされています。 ページと行の圧縮とは異なり、列ストア圧縮をオブジェクトに適用するには、新しい列ストアインデックスを作成する必要があります。 このため、このプロシージャの列ストアと COLUMNSTORE_ARCHIVE オプションを使用する場合、プロシージャに提供されたソースオブジェクトの型によって、圧縮サイズの推定に使用される列ストアインデックスの種類が決まります。 次の表は、 @data_compression パラメーターが列ストアまたは COLUMNSTORE_ARCHIVE に設定されている場合に、各ソースオブジェクトの種類の圧縮節約量を推定するために使用される参照オブジェクトを示しています。
 
  |ソースオブジェクト|参照オブジェクト|
  |-----------------|---------------|

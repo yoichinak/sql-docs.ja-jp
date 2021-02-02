@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 2fa5692ca0f710a56937b3510e7eb4e68b283882
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: af42d2a2a5a014bffbab771637a45e3ac3afd6e6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209024"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237542"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "99209024"
 |**last_commit_lsn**|**数値 (25, 0)**|トランザクション ログの最終コミット レコードに対応する実際のログ シーケンス番号。<br /><br /> プライマリ データベースの場合、これは処理された最終コミット レコードに対応します。 セカンダリ データベースの行には、セカンダリ レプリカがプライマリ レプリカに送信したログ シーケンス番号が反映されます。<br /><br /> セカンダリ レプリカの場合、これは再実行された最終コミット レコードです。|  
 |**last_commit_time**|**datetime**|最終コミット レコードに対応する時刻。<br /><br /> セカンダリ データベースの場合、この時刻はプライマリ データベースと同じになります。<br /><br /> プライマリ レプリカの場合、各セカンダリ データベースの行に、そのセカンダリ データベースをホストするセカンダリ レプリカがプライマリ レプリカに報告した時刻が表示されます。 プライマリデータベースの行と特定のセカンダリデータベースの行の間の時間の差は、再実行プロセスが検出され、進行状況がセカンダリレプリカによってプライマリレプリカに報告されていることを前提として、目標復旧時点 (RPO) を表します。|  
 |**low_water_mark_for_ghosts**|**bigint**|プライマリデータベースのゴーストクリーンアップで使用される下限を示す、データベースの単調に増加する数。 この数が時間の経過と共に増加していない場合は、ゴーストクリーンアップが行われない可能性があることを意味します。 プライマリ レプリカでは、クリーンアップする非実体行を決定するために、すべての可用性レプリカ (プライマリ レプリカを含む) でこのデータベースのこの列の最小値を使用します。|  
-|**secondary_lag_seconds**|**bigint**|同期中にセカンダリレプリカがプライマリレプリカの背後にある秒数。<br /><br />**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。|  
+|**secondary_lag_seconds**|**bigint**|同期中にセカンダリレプリカがプライマリレプリカの背後にある秒数。<br /><br />**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降。|  
   
 ##  <a name="understanding-the-lsn-column-values"></a><a name="LSNcolumns"></a> LSN 列の値について  
  **End_of_log_lsn**、 **last_hardened_lsn**、 **last_received_lsn**、 **last_sent_lsn**、 **recovery_lsn**、および **truncation_lsn** の各列の値は、実際のログシーケンス番号 (lsn) ではありません。 これらの各値には、0 が埋め込まれたログ ブロック ID が反映されます。  

@@ -21,12 +21,12 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96bf6756f26e0bc8b82c6f7f008203fcb206c22f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fe236fc66e4155e64006ede1c6eace01982470e8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184347"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236901"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "99184347"
 |encryptor_thumbprint|**varbinary(20)**|暗号化のサムプリントを表示します。|  
 |encryptor_type|**nvarchar(32)**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](/troubleshoot/sql/general/determine-version-edition-update-level)まで)。<br /><br /> 暗号化機能について説明します。|  
 |percent_complete|**real**|データベース暗号化状態の変更の完了率。 状態の変更がない場合、これは0になります。|
-|encryption_state_desc|**nvarchar(32)**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。<br><br> データベースが暗号化されているか、暗号化されていないかを示す文字列。<br><br>NONE<br><br>暗号化<br><br>暗号<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。<br><br>暗号化スキャンの現在の状態を示します。 <br><br>0 = スキャンが開始されていません。 TDE が有効になっていません。<br><br>1 = スキャンが進行中です。<br><br>2 = スキャンは実行中ですが、中断されているため、ユーザーは再開できます。<br><br>3 = 何らかの理由でスキャンが中止されました。手動介入が必要です。 詳細については、Microsoft サポートにお問い合わせください。<br><br>4 = スキャンが正常に完了し、TDE が有効になり、暗号化が完了しました。|
-|encryption_scan_state_desc|**nvarchar(32)**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。<br><br>暗号化スキャンの現在の状態を示す文字列。<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>完了|
-|encryption_scan_modify_date|**datetime**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。<br><br> 暗号化スキャンの状態が最後に変更された日付 (UTC) が表示されます。|
+|encryption_state_desc|**nvarchar(32)**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降。<br><br> データベースが暗号化されているか、暗号化されていないかを示す文字列。<br><br>NONE<br><br>暗号化<br><br>暗号<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降。<br><br>暗号化スキャンの現在の状態を示します。 <br><br>0 = スキャンが開始されていません。 TDE が有効になっていません。<br><br>1 = スキャンが進行中です。<br><br>2 = スキャンは実行中ですが、中断されているため、ユーザーは再開できます。<br><br>3 = 何らかの理由でスキャンが中止されました。手動介入が必要です。 詳細については、Microsoft サポートにお問い合わせください。<br><br>4 = スキャンが正常に完了し、TDE が有効になり、暗号化が完了しました。|
+|encryption_scan_state_desc|**nvarchar(32)**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降。<br><br>暗号化スキャンの現在の状態を示す文字列。<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>完了|
+|encryption_scan_modify_date|**datetime**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降。<br><br> 暗号化スキャンの状態が最後に変更された日付 (UTC) が表示されます。|
   
 ## <a name="permissions"></a>アクセス許可
 

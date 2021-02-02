@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: ca05529c9b4ce1d9ec603989af81f0d2aeebf76b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129422"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236394"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
 
@@ -130,11 +130,11 @@ ms.locfileid: "96129422"
   
 3.  [ **データベースサーバー** ] ページで、SQL Server インスタンスを指定します。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] SQL Server Managed Instance のサポートを追加します。 **SQL Server インスタンス** の値をマネージインスタンスのホストに設定します。 たとえば、「 `xxxxxx.xxxxxx.database.windows.net` 」のように入力します。
+    >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] SQL Server Managed Instance のサポートを追加します。 **SQL Server インスタンス** の値をマネージインスタンスのホストに設定します。 たとえば、「 `xxxxxx.xxxxxx.database.windows.net` 」のように入力します。
 
 4. 認証の **種類** を選択し、[ **接続のテスト** ] をクリックして、選択した認証の種類の資格情報を使用してデータベースに接続できることを確認します。 **[次へ]** をクリックします。
 
-    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]でマネージインスタンスに接続するには、次のいずれかの認証の種類を使用します。
+    >[!INCLUDE[sqlv15](../includes/sssql19-md.md)]でマネージインスタンスに接続するには、次のいずれかの認証の種類を使用します。
     >
     >- Azure Active Directory 統合認証: **現在のユーザー– Active Directory 統合**
     >- SQL Server 認証: **SQL Server アカウント**。
@@ -207,7 +207,7 @@ ms.locfileid: "96129422"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. **[Apply]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、https://*server name* / *web application*/です。 
+15. **[適用]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、https://*server name* / *web application*/です。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 

@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 7261cde3df2e1aa31e7a7ab0d5ccbd5f8e8d3e54
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a37a592866c8fcfdc12e5b84657bc7fa7166ee81
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161398"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237888"
 ---
 # <a name="sysservers-transact-sql"></a>sys. servers (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99161398"
 |**server_id**|**int**|リンクサーバーのローカル ID。|  
 |**name**|**sysname**|**Server_id** = 0 の場合、返される値はサーバー名です。<br /><br /> **Server_id** > 0 の場合、返される値はリンクサーバーのローカル名になります。|  
 |**product**|**sysname**|リンクサーバーの製品名。 値 "SQL Server" は、の別のインスタンスを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
-|**provider**|**sysname**|リンク サーバー接続用の OLE DB プロバイダー名です。<br /><br />以降では [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 、値 "SQLNCLI" は既定で [Microsoft OLE DB Driver for SQL SERVER (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) にマップされます。 以前のバージョンでは、値 "SQLNCLI" は [SQL Server Native Client OLE DB プロバイダー (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md)にマップされていました。|  
+|**provider**|**sysname**|リンク サーバー接続用の OLE DB プロバイダー名です。<br /><br />以降では [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 、値 "SQLNCLI" は既定で [Microsoft OLE DB Driver for SQL SERVER (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) にマップされます。 以前のバージョンでは、値 "SQLNCLI" は [SQL Server Native Client OLE DB プロバイダー (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md)にマップされていました。|  
 |**data_source**|**nvarchar (4000)**|データソース接続プロパティを OLE DB します。|  
 |**location**|**nvarchar (4000)**|OLE DB 場所接続プロパティです。 None の場合は NULL です。|  
 |**provider_string**|**nvarchar (4000)**|OLE DB プロバイダー文字列接続プロパティです。<br /><br /> は、呼び出し元がアクセス許可を持っていない限り NULL です `ALTER ANY LINKED SERVER` 。|  
@@ -60,7 +60,7 @@ ms.locfileid: "99161398"
 |**is_nonsql_subscriber**|**bit**|サーバーは SQL Server 以外のレプリケーション サブスクライバーです。|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|1の場合、リモートストアドプロシージャを呼び出すと分散トランザクションが開始され、トランザクションは MS DTC に参加します。 詳細については、「 [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)からデータにアクセスする方法について説明します。|  
 |**modify_date**|**datetime**|サーバー情報が前回変更された日付です。|  
-|**is_rda_server**|**bit**|**適用対象:** 以降 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 。<br /><br />サーバーはリモートデータアーカイブの有効化 (stretch 対応) です。 詳細については、「 [Enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」を参照してください。|
+|**is_rda_server**|**bit**|**適用対象:** 以降 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 。<br /><br />サーバーはリモートデータアーカイブの有効化 (stretch 対応) です。 詳細については、「 [Enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」を参照してください。|
   
 ## <a name="permissions"></a>アクセス許可  
  **Provider_string** の値は、呼び出し元が ALTER ANY LINKED SERVER 権限を持っていない限り、常に NULL になります。  

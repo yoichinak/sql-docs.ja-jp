@@ -21,12 +21,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31071c4fd89d6542b1d2bd87fc8f445a43c641b0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 20ad2ca8797dd9e3f094028422edef5b935cd2ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99135123"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237530"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "99135123"
 |group_id|**int**|ワークロードグループの ID。 NULL 値は許可されません。|  
 |name|**sysname**|ワークロードグループの名前。 NULL 値は許可されません。|  
 |pool_id|**int**|リソースプールの ID。 NULL 値は許可されません。|  
-|external_pool_id|**int**|**適用対象**: 以降 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 。<br /><br /> 外部リソースプールの ID。 NULL 値は許可されません。|  
+|external_pool_id|**int**|**適用対象**: 以降 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 。<br /><br /> 外部リソースプールの ID。 NULL 値は許可されません。|  
 |statistics_start_time|**datetime**|ワークロードグループの統計コレクションがリセットされた時刻。 NULL 値は許可されません。|  
 |total_request_count|**bigint**|ワークロードグループ内の完了した要求の累積数。 NULL 値は許可されません。|  
 |total_queued_request_count|**bigint**|GROUP_MAX_REQUESTS の制限に達した後にキューに登録された要求の累積数。 NULL 値は許可されません。|  
@@ -65,11 +65,11 @@ ms.locfileid: "99135123"
 |group_max_requests|**int**|同時要求の最大数の現在の設定です。 NULL 値は許可されません。|  
 |max_dop|**int**|ワークロードグループの並列処理の最大限度を構成しました。 既定値は0で、グローバル設定が使用されます。 NULL 値は許可されません。| 
 |effective_max_dop|**int**|**適用対象**: 以降 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。<br /><br />ワークロードグループの並列処理の有効な最大限度。 NULL 値は許可されません。| 
-|total_cpu_usage_preemptive_ms|**bigint**|**適用対象**: 以降 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 。<br /><br />ワークロードグループのプリエンプティブモードのスケジュール設定で使用された合計 CPU 時間 (ミリ秒単位)。 NULL 値は許可されません。<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。| 
-|request_max_memory_grant_percent_numeric|**float**|**適用対象**: 以降 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 。<br /><br />1つの要求に対する最大メモリ許可の現在の設定 (パーセンテージ)。 NULL 値は許可されません。| 
+|total_cpu_usage_preemptive_ms|**bigint**|**適用対象**: 以降 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 。<br /><br />ワークロードグループのプリエンプティブモードのスケジュール設定で使用された合計 CPU 時間 (ミリ秒単位)。 NULL 値は許可されません。<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。| 
+|request_max_memory_grant_percent_numeric|**float**|**適用対象**: 以降 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 。<br /><br />1つの要求に対する最大メモリ許可の現在の設定 (パーセンテージ)。 NULL 値は許可されません。| 
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  この動的管理ビューには、メモリ内の構成が表示されます。 格納されている構成メタデータを表示するには、 [sys.resource_governor_workload_groups &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) カタログビューを使用します。  
   
  が正常に実行されると、、、、、、、、、、、、 `ALTER RESOURCE GOVERNOR RESET STATISTICS` `statistics_start_time` `total_request_count` `total_queued_request_count` `total_cpu_limit_violation_count` `total_cpu_usage_ms` `max_request_cpu_time_ms` `total_lock_wait_count` `total_lock_wait_time_ms` `total_query_optimization_count` `total_suboptimal_plan_generation_count` `total_reduced_memgrant_count` および `max_request_grant_memory_kb` の各カウンターがリセットされます。 カウンター `statistics_start_time` は、現在のシステムの日付と時刻に設定され、その他のカウンターはゼロ (0) に設定されます。  
