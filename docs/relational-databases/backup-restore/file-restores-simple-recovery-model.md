@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7722c033fd9434f04c70b046aeaa91591f30dd3c
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 5e2df8edb5b31ff2ffcd45eba9b5d9cf234c528d
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96126939"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076890"
 ---
 # <a name="file-restores-simple-recovery-model"></a>ファイルの復元 (単純復旧モデル)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "96126939"
   
      *オフライン ファイル復元* では、破損したファイルまたはファイル グループを復元する間、データベースはオフラインになります。 データベースは、復元シーケンスの最後にオンラインになります。  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ではすべてのエディションで、オフラインのファイル復元がサポートされます。  
+     [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ではすべてのエディションで、オフラインのファイル復元がサポートされます。  
   
 -   オンライン ファイル復元  
   
