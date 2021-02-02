@@ -26,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59cc4c80781f899701f872bd1e8cdd1eea823358
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: bed0d2f1b133d3d155c3afd59a86652f010316ea
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384741"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250635"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR パラメーター データのマッピング
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  次の表は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SqlTypes 名前空間のの共通言語ランタイム (CLR) に相当するデータ型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、それらのネイティブ CLR に .NET Framework 相当 **System.Data.SqlTypes** するものを示して [!INCLUDE[msCoName](../../includes/msconame-md.md)] います。  
+  次の表は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SqlTypes 名前空間のの共通言語ランタイム (CLR) に相当するデータ型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、それらのネイティブ CLR に .NET Framework 相当するものを示して [!INCLUDE[msCoName](../../includes/msconame-md.md)] います。  
   
 ||||  
 |-|-|-|  
@@ -51,10 +51,10 @@ ms.locfileid: "94384741"
 |**DATETIMEOFFSET**|**なし**|**DateTimeOffset、Nullable\<DateTimeOffset>**|  
 |**decimal**|**SqlDecimal**|**Decimal、Nullable\<Decimal>**|  
 |**float**|**SqlDouble**|**Double、Nullable\<Double>**|  
-|**geography**|**SqlGeography**<br /><br /> **Sqlgeography** は Microsoft.SqlServer.Types.dll で定義されており、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430)からダウンロードできます。|なし|  
-|**geometry**|**SqlGeometry**<br /><br /> **Sqlgeometry** は Microsoft.SqlServer.Types.dll で定義されています。これは SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430)からダウンロードできます。|なし|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **Sqlhierarchyid** は Microsoft.SqlServer.Types.dll で定義されており、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430)からダウンロードできます。|なし|  
-|**画像**|なし|なし|  
+|**geography**|**SqlGeography**<br /><br /> **Sqlgeography** は Microsoft.SqlServer.Types.dll で定義されており、SQL Server と共にインストールされ、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430)からダウンロードできます。|なし|  
+|**geometry**|**SqlGeometry**<br /><br /> **Sqlgeometry** は Microsoft.SqlServer.Types.dll で定義されています。これは SQL Server と共にインストールされ、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430)からダウンロードできます。|なし|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **Sqlhierarchyid** は Microsoft.SqlServer.Types.dll で定義されており、SQL Server と共にインストールされ、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430)からダウンロードできます。|なし|  
+|**image**|なし|なし|  
 |**int**|**SqlInt32**|**Int32、Nullable\<Int32>**|  
 |**money**|**SqlMoney**|**Decimal、Nullable\<Decimal>**|  
 |**nchar**|**SqlChars、SqlString**|**String, Char[]**|  
@@ -66,7 +66,7 @@ ms.locfileid: "94384741"
 |**rowversion**|なし|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16、Nullable\<Int16>**|  
 |**smallmoney**|**SqlMoney**|**Decimal、Nullable\<Decimal>**|  
-|**sql_variant**|なし|**オブジェクト**|  
+|**sql_variant**|なし|**Object**|  
 |**テーブル**|なし|なし|  
 |**text**|なし|なし|  
 |**time**|なし|**TimeSpan、Nullable\<TimeSpan>**|  
@@ -111,9 +111,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR データ型 (SQL Server)**|**SQL Server のデータ型**|  
-|**Decimal**|smallmoney|  
+|**10 進数**|smallmoney|  
 |**SqlMoney**|smallmoney|  
-|**Decimal**|money|  
+|**10 進数**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   
@@ -121,7 +121,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |変更内容|  
 |---------------------|  
-|マッピングテーブルに **Sqlgeography** 、 **sqlgeography** 、および **sqlgeography** 型を追加しました。|  
+|マッピングテーブルに **Sqlgeography**、 **sqlgeography**、および **sqlgeography** 型を追加しました。|  
   
 ## <a name="see-also"></a>参照  
  [.NET Framework での SQL Server データ型](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
