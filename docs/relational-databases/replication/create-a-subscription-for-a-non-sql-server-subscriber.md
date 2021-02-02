@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36c15a9d7de2c613b3a25b16827bfcc037393524
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773907"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076224"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 以外のサブスクライバーのサブスクリプションの作成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 トランザクション レプリケーションとスナップショット レプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対するデータのパブリッシュがサポートされています。 サポートされるサブスクライバー プラットフォームの詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。  
+  このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 トランザクション レプリケーションとスナップショット レプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対するデータのパブリッシュがサポートされています。 サポートされるサブスクライバー プラットフォームの詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "85773907"
 4.  **[サブスクリプション オプション]** ページで、 **[SQL Server 以外のサブスクライバーを許可]** オプションに対して **[True]** の値を選択します。 このオプションを選択した場合、パブリケーションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーとの互換性を確保するために、プロパティの数が変更されます。  
   
     > [!NOTE]  
-    >  **[True]** を選択すると、 **pre_creation_cmd** アーティクル プロパティの値が 'drop' に設定されます。 この設定では、アーティクルのテーブル名と一致するテーブルがサブスクライバーにある場合、レプリケーションによってそのテーブルが削除されます。 サブスクライバーにある既存のテーブルを保持するには、アーティクルごとに [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) ストアド プロシージャを使用し、次のように **pre_creation_cmd**の値に 'none' を指定します。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`  
+    >  **[True]** を選択すると、 **pre_creation_cmd** アーティクル プロパティの値が 'drop' に設定されます。 この設定では、アーティクルのテーブル名と一致するテーブルがサブスクライバーにある場合、レプリケーションによってそのテーブルが削除されます。 サブスクライバーにある既存のテーブルを保持するには、アーティクルごとに [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) ストアド プロシージャを使用し、次のように **pre_creation_cmd** の値に 'none' を指定します。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] パブリケーションの新しいスナップショットを作成するように要求されます。 この時点で作成しない場合は、次に示す作成手順を後で使用してください。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "85773907"
         Persist Security Info=False;Connection Pooling=True;  
         ```  
   
-         文字列内のオプションの多くは、接続する DB2 サーバーに固有のものですが、 **Process Binary as Character** オプションは常に **False**に設定する必要があります。 サブスクリプション データベースを識別するため、 **Initial Catalog** オプションに値が必要です。  
+         文字列内のオプションの多くは、接続する DB2 サーバーに固有のものですが、 **Process Binary as Character** オプションは常に **False** に設定する必要があります。 サブスクリプション データベースを識別するため、 **Initial Catalog** オプションに値が必要です。  
   
 10. **[同期スケジュール]** ページで、 **[エージェント スケジュール]** メニューからディストリビューション エージェントのスケジュールを選択します (スケジュールは通常、 **[連続実行する]** です)。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "85773907"
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>サブスクライバー側のテーブルを保持するには  
   
--   既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションを有効にすると、 **pre_creation_cmd** アーティクル プロパティが 'drop' に設定されます。 この設定では、アーティクルのテーブル名と一致するテーブルがサブスクライバーにある場合、レプリケーションによってそのテーブルが削除されます。 サブスクライバーにある既存のテーブルを保持するには、アーティクルごとに [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) ストアド プロシージャを使用し、次のように **pre_creation_cmd**の値に 'none' を指定します。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
+-   既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションを有効にすると、 **pre_creation_cmd** アーティクル プロパティが 'drop' に設定されます。 この設定では、アーティクルのテーブル名と一致するテーブルがサブスクライバーにある場合、レプリケーションによってそのテーブルが削除されます。 サブスクライバーにある既存のテーブルを保持するには、アーティクルごとに [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) ストアド プロシージャを使用し、次のように **pre_creation_cmd** の値に 'none' を指定します。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>パブリケーションのスナップショットを生成するには  
   
@@ -160,7 +160,7 @@ ms.locfileid: "85773907"
     -   **enabled_for_het_sub** の値が 0 の場合、`@property` に **enabled_for_het_sub** を指定し、`@value` に **true** を指定して、[sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。  
   
         > [!NOTE]  
-        >  **enabled_for_het_sub** を **true**に変更する前に、そのパブリケーションに対する既存のサブスクリプションをすべて削除する必要があります。 パブリケーションで更新サブスクリプションもサポートされる場合、 **enabled_for_het_sub** を **true** に設定することはできません。 **enabled_for_het_sub** を変更すると、他のパブリケーション プロパティにも影響します。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  
+        >  **enabled_for_het_sub** を **true** に変更する前に、そのパブリケーションに対する既存のサブスクリプションをすべて削除する必要があります。 パブリケーションで更新サブスクリプションもサポートされる場合、 **enabled_for_het_sub** を **true** に設定することはできません。 **enabled_for_het_sub** を変更すると、他のパブリケーション プロパティにも影響します。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) を実行します。 `@publication`、`@subscriber`、`@destination_db` に対して値 `(default destination)`、`@subscription_type` に対して値 **push**、`@subscriber_type` に対して値 3 (OLE DB プロバイダーを指定) を指定します。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "85773907"
     -   このサブスクリプションでのディストリビューション エージェント ジョブのスケジュール。 詳細については、「 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用するパブリッシャー側でプッシュ サブスクリプションを作成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用するパブリッシャー側でプッシュ サブスクリプションを作成する場合は、 *job_login* および *job_password* を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   

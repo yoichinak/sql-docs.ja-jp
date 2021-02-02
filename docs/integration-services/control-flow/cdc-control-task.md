@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 685ac46fd80e92d115dcf8aed3c49abb1ac9d144
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 492a0cd4b510b91d1f5f17ad04de54b005502bba
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123581"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049116"
 ---
 # <a name="cdc-control-task"></a>CDC 制御タスク
 
@@ -37,9 +37,9 @@ ms.locfileid: "96123581"
 |Operation|説明|  
 |---------------|-----------------|  
 |ResetCdcState|この操作は、現在の CDC コンテキストに関連付けられた、永続的な CDC の状態をリセットするために使用されます。 この操作の実行後に、LSN-timestamp `sys.fn_cdc_get_max_lsn` テーブルの現在の最大 LSN が次の処理範囲の開始位置になります。 この操作には、ソース データベースへの接続が必要です。|  
-|MarkInitialLoadStart|この操作は初期読み込みパッケージの開始時に使用され、ソース データベースで現在の LSN を記録します。その後、初期読み込みパッケージがソース テーブルの読み取りを開始します。 この操作には、 `sys.fn_cdc_get_max_lsn`を呼び出すための、ソース データベースへの接続が必要です。<br /><br /> (Oracle ではなく) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC での作業時に MarkInitialLoadStart を選択した場合、接続マネージャーで指定されたユーザーは、db_owner か sysadmin である必要があります。|  
-|MarkInitialLoadEnd|この操作は初期読み込みパッケージの終了時に使用され、初期読み込みパッケージがソース テーブルの読み取りを終了した後で、ソース データベースで現在の LSN を記録します。 この LSN を特定するために、この操作が発生したときの時刻が記録され、CDC データベース内の `cdc.lsn_time_`マッピング テーブルに対するクエリにより、その時刻より後に行われた変更が検索されます。<br /><br /> (Oracle ではなく) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC での作業時に MarkInitialLoadEnd を選択した場合、接続マネージャーで指定されたユーザーは、db_owner か sysadmin である必要があります。|  
-|MarkCdcStart|この操作は、初期読み込みがスナップショット データベースから行われるときに使用されます。 この場合、変更処理は、スナップショット LSN の直後から開始されます。 使用するスナップショット データベースの名前と、スナップショット LSN に関するクエリを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に対して実行する CDC 制御タスクを使用できます。 また、スナップショット LSN を直接指定するオプションもあります。<br /><br /> (Oracle ではなく) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC での作業時に MarkCdcStart を選択した場合、接続マネージャーで指定されたユーザーは、db_owner か sysadmin である必要があります。|  
+|MarkInitialLoadStart|この操作は初期読み込みパッケージの開始時に使用され、ソース データベースで現在の LSN を記録します。その後、初期読み込みパッケージがソース テーブルの読み取りを開始します。 この操作には、 `sys.fn_cdc_get_max_lsn`を呼び出すための、ソース データベースへの接続が必要です。<br /><br /> (Oracle ではなく) [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC での作業時に MarkInitialLoadStart を選択した場合、接続マネージャーで指定されたユーザーは、db_owner か sysadmin である必要があります。|  
+|MarkInitialLoadEnd|この操作は初期読み込みパッケージの終了時に使用され、初期読み込みパッケージがソース テーブルの読み取りを終了した後で、ソース データベースで現在の LSN を記録します。 この LSN を特定するために、この操作が発生したときの時刻が記録され、CDC データベース内の `cdc.lsn_time_`マッピング テーブルに対するクエリにより、その時刻より後に行われた変更が検索されます。<br /><br /> (Oracle ではなく) [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC での作業時に MarkInitialLoadEnd を選択した場合、接続マネージャーで指定されたユーザーは、db_owner か sysadmin である必要があります。|  
+|MarkCdcStart|この操作は、初期読み込みがスナップショット データベースから行われるときに使用されます。 この場合、変更処理は、スナップショット LSN の直後から開始されます。 使用するスナップショット データベースの名前と、スナップショット LSN に関するクエリを [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] に対して実行する CDC 制御タスクを使用できます。 また、スナップショット LSN を直接指定するオプションもあります。<br /><br /> (Oracle ではなく) [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC での作業時に MarkCdcStart を選択した場合、接続マネージャーで指定されたユーザーは、db_owner か sysadmin である必要があります。|  
   
  処理範囲の管理には、次の操作を使用します。  
   
@@ -108,17 +108,17 @@ ms.locfileid: "96123581"
   
 -   **[初期読み込みの開始をマーク]**: この操作は、スナップショットのないアクティブ データベースから初期読み込みを実行するときに使用されます。 初期読み込みパッケージの開始時に呼び出され、ソース データベースで現在の LSN を記録します。その後、初期読み込みパッケージがソース テーブルの読み取りを開始します。 この操作には、ソース データベースへの接続が必要です。  
   
-     (Oracle ではなく) **CDC での作業時に** [初期読み込みの開始をマーク] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin** である必要があります。  
+     (Oracle ではなく) **CDC での作業時に** [初期読み込みの開始をマーク] [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin** である必要があります。  
   
 -   **[初期読み込みの終了をマーク]**: この操作は、スナップショットのないアクティブ データベースから初期読み込みを実行するときに使用されます。 初期読み込みパッケージの終了時に呼び出され、初期読み込みパッケージがソース テーブルの読み取りを終了した後で、ソース データベースで現在の LSN を記録します。 この LSN を特定するために、この操作が発生したときの時刻が記録され、CDC データベース内の `cdc.lsn_time_`マッピング テーブルに対するクエリにより、その時刻より後に行われた変更が検索されます。  
   
-     (Oracle ではなく) **CDC での作業時に** [初期読み込みの終了をマーク] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin** である必要があります。  
+     (Oracle ではなく) **CDC での作業時に** [初期読み込みの終了をマーク] [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin** である必要があります。  
   
 -   **[CDC の開始をマーク]**: この操作は、初期読み込みがスナップショット データベースまたは休止データベースから行われるときに使用されます。 初期読み込みパッケージ内の任意のポイントで呼び出されます。 この操作は、スナップショット LSN またはスナップショット データベースの名前 (これからスナップショット LSN が動的に派生) が設定されるパラメーターを受け取ります。ただし、このパラメーターは空のままにすることもでき、その場合は、現在のデータベース LSN が変更処理パッケージの開始 LSN として使用されます。  
   
      この操作は、[初期読み込みの開始をマーク] または [初期読み込みの終了をマーク] 操作の代わりに使用されます。  
   
-     (Oracle ではなく) **CDC での作業時に** [CDC の開始をマーク] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin** である必要があります。  
+     (Oracle ではなく) **CDC での作業時に** [CDC の開始をマーク] [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin** である必要があります。  
   
 -   **[処理範囲の取得]**: この操作は、CDC ソース データ フローを使用するデータ フローを呼び出す前に、変更処理パッケージで使用されます。 この操作は、呼び出し時に CDC ソース データ フローが読み取る LSN の範囲を設定します。 範囲は、データ フローの処理中に CDC ソースによって使用される SSIS パッケージ変数に格納されます。  
   

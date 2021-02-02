@@ -13,16 +13,16 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 46d577d8488a4b696ef5736a1bb94127e24bc53a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 931aa85fbb37d8dba1c9bb3e06e00760d3f16caf
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667709"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049161"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>メンテナンス プランの作成 (メンテナンス プラン デザイン画面)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でメンテナンス プラン デザイン画面を使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 基本的なメンテナンス プランを作成する場合は、 **メンテナンス プラン ウィザード** が最適です。それに対して、デザイン画面を使用してプランを作成すると、高度なワークフローを利用できます。  
+  このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]でメンテナンス プラン デザイン画面を使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 基本的なメンテナンス プランを作成する場合は、 **メンテナンス プラン ウィザード** が最適です。それに対して、デザイン画面を使用してプランを作成すると、高度なワークフローを利用できます。  
   
  **このトピックの内容**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85667709"
   
 -   マルチサーバー メンテナンス プランを作成するには、1 台のマスター サーバーと 1 台以上のターゲット サーバーを含むマルチサーバー環境を構成する必要があります。 マルチサーバー メンテナンス プランは、マスター サーバー上で作成および管理する必要があります。 このプランはターゲット サーバー上でも表示できますが、ターゲット サーバーでは管理できません。  
   
--   **db_ssisadmin** ロールおよび **dc_admin** ロールのメンバーは、特権を **sysadmin**に昇格できる可能性があります。 このような特権の昇格が発生するのは、それらのロールが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを変更でき、これらのパッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **sysadmin** セキュリティ コンテキストを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行できるためです。 メンテナンス プラン、データ コレクション セット、およびその他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行時にこの特権の昇格を防ぐには、特権が制限されたプロキシ アカウントを使用するようにパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを構成するか、 **db_ssisadmin** ロールおよび **dc_admin** ロールには **sysadmin** メンバーのみを追加するようにします。  
+-   **db_ssisadmin** ロールおよび **dc_admin** ロールのメンバーは、特権を **sysadmin** に昇格できる可能性があります。 このような特権の昇格が発生するのは、それらのロールが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを変更でき、これらのパッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **sysadmin** セキュリティ コンテキストを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行できるためです。 メンテナンス プラン、データ コレクション セット、およびその他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行時にこの特権の昇格を防ぐには、特権が制限されたプロキシ アカウントを使用するようにパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを構成するか、 **db_ssisadmin** ロールおよび **dc_admin** ロールには **sysadmin** メンバーのみを追加するようにします。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
@@ -146,7 +146,7 @@ ms.locfileid: "85667709"
   
     2.  **[ツールボックス]** に表示するツールを選択し、 **[OK]** をクリックします。  
   
-     メンテナンス プランのタスクを **[ツールボックス]** に追加すると、 **メンテナンス プラン ウィザード**で使用できるようになります。 上記の個々のタスクの詳細については、「 [メンテナンス プラン ウィザードの起動](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 」の「 **メンテナンス プラン ウィザードの使用**」を参照してください。  
+     メンテナンス プランのタスクを **[ツールボックス]** に追加すると、 **メンテナンス プラン ウィザード** で使用できるようになります。 上記の個々のタスクの詳細については、「 [メンテナンス プラン ウィザードの起動](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 」の「 **メンテナンス プラン ウィザードの使用**」を参照してください。  
   
 8.  タスク間のワークフローを定義するには:  
   
@@ -230,7 +230,7 @@ ms.locfileid: "85667709"
   
     5.  **[レポートとログ記録]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
-12. ログ ファイル ビューアーで結果を参照するには、 **オブジェクト エクスプローラー**で **[メンテナンス プラン]** フォルダーを右クリックするか、特定のメンテナンス プランを右クリックして **[履歴の表示]** を選択します。  
+12. ログ ファイル ビューアーで結果を参照するには、 **オブジェクト エクスプローラー** で **[メンテナンス プラン]** フォルダーを右クリックするか、特定のメンテナンス プランを右クリックして **[履歴の表示]** を選択します。  
 
      **[ログ ファイルの表示 -** _server\_name_] ダイアログ ボックスでは、次のオプションを使用できます。  
   
@@ -274,6 +274,6 @@ ms.locfileid: "85667709"
      行を選択すると、選択されたイベント行の詳細情報がページの下部に表示されます。 列をグリッド内の別の場所にドラッグすることで、列を並べ替えることができます。 グリッドのヘッダーで列のセパレーター バーを左右にドラッグすると、列の幅を変更できます。 グリッドのヘッダーで列のセパレーター バーをダブルクリックすると、内容の長さに合わせて自動的に列の幅が調整されます。  
   
      **インスタンス**  
-     イベントが発生したインスタンスの名前です。 これは、 *computer name*\\*instance name*と表示されます。  
+     イベントが発生したインスタンスの名前です。 これは、 *computer name*\\*instance name* と表示されます。  
   
   

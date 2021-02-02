@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c8b658fc2589ad0c39173ac206036b8274acc858
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: deb83a831430dd6ad57bf50eca26b9e30c49f22c
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774130"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076214"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>ポリシー カテゴリへのデータベースのサブスクライブまたはアンサブスクライブ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用し、ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブする方法について説明します。  
+  このトピックでは、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用し、ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブする方法について説明します。  
   
  **このトピックの内容**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "85774130"
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブするには  
   
-1.  **オブジェクト エクスプローラー**で、カテゴリのサブスクリプションを管理するデータベースが格納されているサーバーをプラス記号をクリックして展開します。  
+1.  **オブジェクト エクスプローラー** で、カテゴリのサブスクリプションを管理するデータベースが格納されているサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[データベース]** フォルダーを展開します。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "85774130"
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>ポリシー カテゴリにデータベースをサブスクライブするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "85774130"
   
 #### <a name="to-unsubscribe-a-database-to-a-policy-category"></a>ポリシー カテゴリからデータベースをアンサブスクライブするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

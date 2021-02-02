@@ -17,17 +17,17 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbad843d482945a29cb03fde9545b1c19fb354f9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: cd8b60ec5b302183fdb1a0713e71568821dae2fe
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098396"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813095"
 ---
 # <a name="contained-databases"></a>包含データベース
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  " *包含データベース* " は、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから分離されたデータベースです。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、ユーザーは 4 つの方法でインスタンスからデータベースを分離できます。  
+  " *包含データベース* " は、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから分離されたデータベースです。  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] では、ユーザーは 4 つの方法でインスタンスからデータベースを分離できます。  
   
 -   データベースを表すメタデータの多くはデータベースに保持されます (master データベースのメタデータを保持する代わりに、またはそれに加えて保持されます)。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "98098396"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境 (DMV の XEvents など) は、包含情報をレポートおよび操作できます。  
   
- データベースへのメタデータの格納など、部分的包含データベースの一部の機能はすべての [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースに適用されます。 データベース レベル認証やカタログ照合順序など、部分的包含データベースの一部の利点を使用可能にするには、あらかじめこれらを有効にしておく必要があります。 部分的包含は、 **CREATE DATABASE** ステートメントと **ALTER DATABASE** ステートメントを使用するか、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して有効にします。 部分的データベース包含を有効にする方法の詳細については、「 [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)」をご覧ください。  
+ データベースへのメタデータの格納など、部分的包含データベースの一部の機能はすべての [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] データベースに適用されます。 データベース レベル認証やカタログ照合順序など、部分的包含データベースの一部の利点を使用可能にするには、あらかじめこれらを有効にしておく必要があります。 部分的包含は、 **CREATE DATABASE** ステートメントと **ALTER DATABASE** ステートメントを使用するか、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して有効にします。 部分的データベース包含を有効にする方法の詳細については、「 [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)」をご覧ください。  
   
 ##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a> 部分的包含データベースの概念  
  完全包含データベースには、すべての設定と、データベースを定義するために必要なメタデータが含まれており、データベースがインストールされている [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに対する構成上の依存関係がありません。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから分離するのには時間がかかる場合があり、データベースと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間の関係に関する詳細な知識が必要でした。 部分的包含データベースを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスと他のデータベースからデータベースを簡単に分離できるようになります。  

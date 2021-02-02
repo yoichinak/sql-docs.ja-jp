@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ac65acde470d75c616e77d21f6e62ab8d1f5e4e4
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 8b18603ce1dce86a304a1da06fcdd8b7b1414519
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241855"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813130"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC デザイナー コンソールの概要
 
@@ -51,7 +51,7 @@ ms.locfileid: "98241855"
 
 ### <a name="target-sql-server-database"></a>対象の SQL Server データベース
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のエディション  
+-   [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のエディション  
   
 ## <a name="software-prerequisites"></a>ソフトウェアの必要なコンポーネント  
  インストールされている Oracle CDC デザイナー コンソールのバージョンに応じて、Oracle クライアント ソフトウェアの 32 ビット バージョンまたは 64 ビット バージョンを使用する必要があります。  

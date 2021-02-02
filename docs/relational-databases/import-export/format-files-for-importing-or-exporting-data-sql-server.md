@@ -16,19 +16,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8584c274304757724d0eceb88a91257112ef694a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 82314d905d6336ae35d564096db00aa4e426436c
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474003"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049082"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>データをインポートまたはエクスポートするためのフォーマット ファイル (SQL Server)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートしたり、テーブルからデータを一括エクスポートしたりする場合、 *フォーマット ファイル* を使用して、データの一括エクスポートと一括インポートに必要なすべてのフォーマット情報を格納できます。 これには、そのテーブルに対応するデータ ファイル内の各フィールドのフォーマット情報が含まれます。
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、次の 2 種類のフォーマット ファイルがサポートされます: XML の形式と XML 以外のフォーマット ファイル。 XML 以外のフォーマット ファイルにも XML フォーマット ファイルにもデータ ファイル内のすべてのフィールドの説明が含まれており、XML フォーマット ファイルには対応するテーブル列の説明も含まれています。 通常は、XML フォーマット ファイルと XML 以外のフォーマット ファイルの間には互換性があります。 ただし、XML フォーマット ファイルの方が XML 以外のフォーマット ファイルよりも優れた点がいくつかあるので、新しいフォーマット ファイルには XML 構文を使用することをお勧めします。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)です。
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] では、次の 2 種類のフォーマット ファイルがサポートされます: XML の形式と XML 以外のフォーマット ファイル。 XML 以外のフォーマット ファイルにも XML フォーマット ファイルにもデータ ファイル内のすべてのフィールドの説明が含まれており、XML フォーマット ファイルには対応するテーブル列の説明も含まれています。 通常は、XML フォーマット ファイルと XML 以外のフォーマット ファイルの間には互換性があります。 ただし、XML フォーマット ファイルの方が XML 以外のフォーマット ファイルよりも優れた点がいくつかあるので、新しいフォーマット ファイルには XML 構文を使用することをお勧めします。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)です。
 
 ## <a name="benefits-of-format-files"></a><a name="Benefits"></a> フォーマット ファイルの利点
 

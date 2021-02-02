@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3f275d1f2c5ce4142bb357a1c1b314b694ef589
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: f0e4c13745057b1276f06f3bc77ace266921a43d
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783032"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076274"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>SQL Server データベース エンジンのインスタンスの非表示
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "98783032"
   
 ## <a name="see-also"></a>参照  
  [サーバー ネットワークの構成](../../database-engine/configure-windows/server-network-configuration.md)   
- [SQL 仮想サーバーのクライアント接続の説明](https://support.microsoft.com/kb/273673)   
+ [SQL 仮想サーバーのクライアント接続の説明](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/273673)   
  [SQL Server 名前付きインスタンスに静的ポートを割り当て、一般的な落とし穴を回避する方法](https://deep.data.blog/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall/)  
   
   

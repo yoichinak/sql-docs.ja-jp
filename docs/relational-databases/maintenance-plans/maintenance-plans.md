@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e97723d6ea047aa86641c9074ff235c682519e7a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6eb1586c38283d695e96d4640d37c261314a339f
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245204"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048922"
 ---
 # <a name="maintenance-plans"></a>メンテナンス プラン
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "87245204"
 ## <a name="benefits-of-maintenance-plans"></a>メンテナンス プランの利点  
  [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]では、メンテナンス プランによって、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェント ジョブが実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージが作成されます。 メンテナンス プランは、手動で実行することも、定期的に自動実行することもできます。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メンテナンス プランには、次の機能が用意されています。  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] メンテナンス プランには、次の機能が用意されています。  
   
 -   さまざまな一般的なメンテナンス タスクを使用するワークフローの作成。 カスタム [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを独自に作成することもできます。  
   

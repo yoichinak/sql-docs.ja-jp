@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3dff6cb9b3a65ea5f38a97786e10701bc1f31749
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 0544531bf30bc99781c51b7664f4f5a756f5b00f
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170304"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049197"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server、データベース レプリカ
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **SQLServer:Database Replica** パフォーマンス オブジェクトには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の AlwaysOn 可用性グループのセカンダリ データベースに関する情報を報告するパフォーマンス カウンターが含まれています。 このオブジェクトは、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでのみ有効です。  
+  **SQLServer:Database Replica** パフォーマンス オブジェクトには、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]の AlwaysOn 可用性グループのセカンダリ データベースに関する情報を報告するパフォーマンス カウンターが含まれています。 このオブジェクトは、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでのみ有効です。  
   
 |カウンター名|説明|表示|  
 |------------------|-----------------|--------------|  

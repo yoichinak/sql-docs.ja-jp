@@ -11,16 +11,16 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 00c7778583545c56b886bfc30c4763bacd1404b3
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 6a64388940661139a52a10cd781fa13033e6fb70
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171564"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049179"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>データベースのターゲットの復旧時間の変更 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのターゲットの復旧時間を設定または変更する方法について説明します。 既定では、ターゲットの復旧時間は 60 秒です。データベースで *間接チェックポイント* が使用されます。 ターゲットの復旧時間により、このデータベースの復旧時間に上限が設定されます。  
+  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのターゲットの復旧時間を設定または変更する方法について説明します。 既定では、ターゲットの復旧時間は 60 秒です。データベースで *間接チェックポイント* が使用されます。 ターゲットの復旧時間により、このデータベースの復旧時間に上限が設定されます。  
   
 > [!NOTE]  
 >  ターゲットの復旧時間の設定によって特定のデータベースに対して指定された上限は、実行時間の長いトランザクションによって UNDO が過度に繰り返される場合には超過することがあります。  
