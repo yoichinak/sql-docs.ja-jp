@@ -12,12 +12,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ba8729558f6e3e1736db9c380a268cd606444f1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c39e0d3bc84bd469d599ada0ecd5884e37193a08
+ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482354"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860925"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>テンポラル テーブルの考慮事項と制約
 
@@ -53,7 +53,7 @@ ms.locfileid: "97482354"
 - レプリケーション テクノロジの使用量は制限されています。
 
   - **Always On:** 完全にサポートされています
-  - **変更データ キャプチャと変更データの追跡:** 現在のテーブルでのみサポートされます
+  - **変更データ キャプチャと変更の追跡:** 現在のテーブルでのみサポートされます
   - **スナップショットおよびトランザクション レプリケーション**:1 つのパブリッシャー (テンポラルが有効化されない)、および 1 つのサブスクライバー (テンポラルが有効化される) でのみサポートされます。 この場合、パブリッシャーは OLTP ワークロードに使用され、サブスクライバーはオフロード レポート ('AS OF' クエリを含む) に使用されます。 ディストリビューション エージェントが開始すると、トランザクションが開かれ、ディストリビューション エージェントが停止するまで開かれたままになっています。 この動作により、SysStartTime と SysEndTime は、ディストリビューション エージェントによって開始される最初のトランザクションの開始時刻に設定されます。 そのため、SysStartTime と Sysstarttime が現在のシステム時刻に近い時刻に設定されていることが、アプリケーションまたは組織にとって重要な場合、ディストリビューション エージェントは、継続的に実行する既定の動作ではなく、スケジュールに従って実行することをお勧めします。 複数のサブスクライバーの使用は、ローカル システム クロックへの依存によりテンポラル データの一貫性が失われる可能性があるため、サポートされていません。
   - **マージ レプリケーション:** テンポラル テーブルではサポートされません
 

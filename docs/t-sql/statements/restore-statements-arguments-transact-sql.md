@@ -1,27 +1,26 @@
 ---
 description: RESTORE ステートメントの引数 (Transact-SQL)
-title: RESTORE の引数 (Transact-SQL) | Microsoft Docs
+title: RESTORE の引数 (Transact-SQL)
 ms.custom: ''
 ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
-ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 19c71e5beb3b192615f57e620870dec66b2d645f
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: c07e6ba84a511d81e1fb17718552a0ca2738271a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688821"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236241"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE ステートメントの引数 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -255,7 +254,7 @@ CREDENTIAL
  Microsoft Azure Blob ストレージ サービスからバックアップを復元する場合にのみ使用されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] の場合、URL からの復元時にのみ、1 つのデバイスから復元できます。 URL からの復元時に複数のデバイスから復元するには、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から[現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 詳細については、「[Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)」 (PowerShell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] の場合、URL からの復元時にのみ、1 つのデバイスから復元できます。 URL からの復元時に複数のデバイスから復元するには、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 詳細については、「[Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)」 (PowerShell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
   
  REPLACE  
  **サポートしているステートメント:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

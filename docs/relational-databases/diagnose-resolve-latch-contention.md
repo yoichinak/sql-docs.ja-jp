@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75f999052eecd750d548cb6d383eafe5375ed130
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: af2caf850d3f7facb61a7484c5af44e4ba785fa3
+ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440147"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860915"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>SQL Server でラッチの競合を診断および解決する
 
@@ -58,7 +58,7 @@ SQL Server のページは 8 KB で、複数の行を格納できます。 コ�
 
 * **KP** -- 保持ラッチ (Keep Latch)。参照されている構造を破棄できないようにします。 スレッドでバッファーの構造を確認する必要がある場合に使用されます。 KP ラッチは、破棄 (DT) ラッチを除くすべてのラッチと互換性があるため、KP ラッチは "軽量" と見なされます。つまり、使用したときのパフォーマンスへの影響が最小限です。 KP ラッチは DT ラッチと互換性がないため、参照されている構造体が他のスレッドによって破棄されることはありません。 たとえば、KP ラッチを使用すると、それによって参照される構造体が、レイジーライター プロセスによって破棄されなくなります。 SQL Server のバッファー ページ管理でレイジーライター プロセスを使用する方法の詳細については、「[ページの書き込み](./writing-pages.md)」を参照してください。
 
-* **SH** -- 共有ラッチ (Shared Latch)。ページ構造を読み取るために必要です。 
+* **SH** -- 共有ラッチ。参照されている構造体を読み取るために必要です (データ ページの読み取りなど)。 共有ラッチの下では、複数のスレッドからリソースに同時にアクセスして読み取りを行うことができます。
 * **UP** -- 更新ラッチ (Update Latch)。SH (共有ラッチ) および KP とは互換性がありますが、それ以外とはないので、参照されている構造体に EX ラッチで書き込むことはできません。 
 * **EX** - 排他ラッチ (Exclusive Latch)。参照されている構造体に対する他のスレッドによる書き込みまたは読み取りをブロックします。 使用例の 1 つは、破損ページ保護のためにページの内容を変更する場合です。 
 * **DT** -- 破棄ラッチ (Destroy Latch)。参照されている構造の内容を破棄する前に取得する必要があります。 たとえば、他のスレッドで使用できる空きバッファーのリストに追加する前に、クリーン ページを解放するため、レイジーライター プロセスで DT ラッチを取得する必要があります。

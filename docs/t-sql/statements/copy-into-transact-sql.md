@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 43a5cc755eb07fe80a0d33d6b5b892e2a65ab21e
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: fb52e9e869c0210e8e320c11dfec21aa8f7d585e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638824"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076810"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -402,7 +402,7 @@ WITH (
 ## <a name="faq"></a>よく寄せられる質問
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>PolyBase と比較した場合の COPY コマンドのパフォーマンスについて教えてください。
-ワークロードによっては、COPY コマンドのパフォーマンスが向上します。 最適な読み込みパフォーマンスを得るには、CSV の読み込み時に複数のファイルに入力を分割することを検討してください。
+ワークロードによっては、COPY コマンドのパフォーマンスが向上します。 最適な読み込みパフォーマンスを得るには、CSV の読み込み時に複数のファイルに入力を分割することを検討してください。 このガイドは、gzip 圧縮ファイルにも適用されます。
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>CSV ファイルを読み込む COPY コマンドに関するファイルの分割ガイダンスについて教えてください。
 ファイル数に関するガイダンスを、次の表で説明します。 推奨されるファイル数に到達すると、大きいファイル程パフォーマンスが向上します。 単純なファイル分割エクスペリエンスについては、次の[ドキュメント](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474)を参照してください。 

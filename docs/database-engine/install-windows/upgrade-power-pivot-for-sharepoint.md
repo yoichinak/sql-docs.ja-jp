@@ -12,12 +12,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 03041d41745e51d858f56bfcd21407ad58530dd9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2f034ac2223b15a3b66883a3ce3dbc434bcf07db
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460695"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813247"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアップグレード
 
@@ -57,7 +57,7 @@ ms.locfileid: "97460695"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールは SQL Server の共有機能の 1 つで、すべての共有機能は同時にアップグレードされます。 アップグレード プロセス中に、共有機能のアップグレードを必要とする他の SQL Server インスタンスまたは機能を選択すると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールもアップグレードされます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールがアップグレードされても [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] インスタンスがアップグレードされない場合は、問題が発生している可能性があります。 SQL Server の共有機能の詳細については、「[インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)」を参照してください。  
   
--   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) は、以前のバージョンとサイド バイ サイドでインストールされます。 たとえば [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] アドインは、 `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`フォルダーにインストールされます。  
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) は、以前のバージョンとサイド バイ サイドでインストールされます。 たとえば、このアドインは `c:\Program Files\Microsoft SQL Server\nnn\Tools\PowerPivotTools` フォルダーにインストールされます。 SQL Server インストール ファイルについては、[ファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-)に関するページを参照してください。
   
 ##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 前提条件  
  **アクセス許可**  

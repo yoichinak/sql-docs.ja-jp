@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: eab3c943f1191c2d52f6d476c1e0a83b74b6f0df
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 57ddcd78bd05cda262c9e4d041562dc5c2dfc4b7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638188"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236552"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "97638188"
 データの検出と分類では、データベース内の機密データの **検出**、**分類**、**ラベル付け**、**レポート作成** を行うための新しいツールが導入されました。このツールは [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) に組み込まれています。
 最も機密性の高いデータ (ビジネス、財務、医療など) の検出と分類は、組織の情報保護の達成において極めて重要な役割を果たすことができます。 次のような場合にインフラストラクチャとして使用できます。
 * データのプライバシー基準を満たせるようにする。
-* 機密性の高いデータを含むデータベース/列へのアクセスを制御し、セキュリティを強化する。
+* 機密性の高いデータを含むデータベースまたは列へのアクセスを監視する。
 
 > [!NOTE]
 > データの検出と分類は、**SQL Server 2012 以降でサポートされ、[SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 以降で使用できます**。 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](/azure/sql-database/sql-database-data-discovery-and-classification/)」を参照してください。
 
 ## <a name="overview"></a><a id="subheading-1"></a>概要
-データの検出と分類では高度な一連のサービスが導入され、データベースだけでなく、データの保護を目的とした新しい SQL Information Protection パラダイムが形成されます。
+データの検出と分類には一連のサービスが導入され、データベースだけでなく、データの保護を目的とした新しい SQL Information Protection パラダイムが形成されます。
 
 * **検出および推奨事項** - 分類エンジンはデータベースをスキャンし、機密データが含まれる可能性のある列を識別します。 適切な分類の推奨事項を確認して適用するだけでなく、手動で列を分類するための簡単な方法が提供されます。
 * **ラベル付け** - 列で永続的に機密分類ラベルにタグを付けることができます。

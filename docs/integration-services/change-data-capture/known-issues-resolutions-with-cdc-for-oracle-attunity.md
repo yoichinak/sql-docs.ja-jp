@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: e89a3638dc304bdda8bc11c55897975fb006e3ca
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94384732"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076840"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity の既知のエラーと解決策
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "94384732"
 - 一部の変更が失われ、SQL Server データベースにはレプリケートされません。 この問題は、テーブルに複数の CLOB (Character Large Binary Object) が含まれ、そのうちの 1 つで値が大きいときに発生します。 
     - KB [3029096](https://support.microsoft.com/kb/3029096) で説明されているとおり、_SQL Server 2014 SP1 向け累積更新プログラム 1_ と _SQL Server 2014 RTM 向け累積更新プログラム 8_ で修正されました。 
 - Long データ型の列が Oracle テーブルにあると、Change Data Capture for Oracle by Attunity が停止します。
-    - KB [3145983](https://support.microsoft.com/kb/3145983) で説明されているとおり、_SQL Server 2014 SP1 向け累積更新プログラム 5_ と _SQL 2014 RTM 向け累積更新プログラム 12_ で修正されました。
+    - KB [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d) で説明されているとおり、_SQL Server 2014 SP1 向け累積更新プログラム 5_ と _SQL 2014 RTM 向け累積更新プログラム 12_ で修正されました。
 
 ### <a name="sql-server-2012"></a>SQL Server 2012
 
@@ -89,7 +89,7 @@ ms.locfileid: "94384732"
 - Oracle テーブル cdc.table_name のメタデータ検証が失敗しました。 列 column_name インデックスが範囲外です。 KB [2883524](https://support.microsoft.com/kb/2883524) で説明されているとおり、_SQL Server 2012 SP1 向け累積更新プログラム 7_ で修正されました。
 - SQL Server 2012 で CDC for Oracle by Attunity を使用すると、Oracle CDC サービスに中止状態が表示されます。 KB [2923839](https://support.microsoft.com/kb/2923839) で説明されているとおり、_SQL Server 2012 SP1 向け累積更新プログラム 8_ で修正されました。  
 - 一部の変更が失われ、SQL Server データベースにはレプリケートされません。 この問題は、テーブルに複数の CLOB (Character Large Binary Object) が含まれ、そのうちの 1 つで値が大きいときに発生します。 KB [2923839](https://support.microsoft.com/kb/2923839) で説明されているとおり、_SQL Server 2012 SP1 向け累積更新プログラム 8_ で修正されました。   
-- Long データ型の列が Oracle テーブルにあると、Change Data Capture for Oracle by Attunity が停止します。 KB [3145983](https://support.microsoft.com/kb/3145983) で説明されているとおり、_SQL Server 2012 SP3 向け累積更新プログラム 2_ と _SQL 2012 SP2 向け累積更新プログラム 11_ で修正されました。 
+- Long データ型の列が Oracle テーブルにあると、Change Data Capture for Oracle by Attunity が停止します。 KB [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d) で説明されているとおり、_SQL Server 2012 SP3 向け累積更新プログラム 2_ と _SQL 2012 SP2 向け累積更新プログラム 11_ で修正されました。 
 
 ## <a name="collect-detailed-logs"></a>詳細ログの収集 
 

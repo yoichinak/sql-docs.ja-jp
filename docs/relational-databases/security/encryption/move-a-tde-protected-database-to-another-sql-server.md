@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e15751fb064d2843770d72f26db94b29de28f199
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 1f9b85e3d2f14eb534956c218d38f98b634dc89c
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867598"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813286"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>別の SQL Server への TDE で保護されたデータベースの移動
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91867598"
   
 ##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a> 透過的なデータ暗号化で保護されたデータベースを作成するには  
 
-次の手順は、SQL Server Management Studio を使用し、TRANSACT-SQL を使用して、TDE で保護されたデータベースを作成する必要があることを示しています。
+次の手順は、SQL Server Management Studio を使用し、Transact-SQL を使用して、TDE で保護されたデータベースを作成する方法を示しています。
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> SQL Server Management Studio の使用  
   
@@ -63,7 +63,7 @@ ms.locfileid: "91867598"
      **[データベース暗号化の管理]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
      **暗号化アルゴリズム**  
-     データベース暗号化で使用するアルゴリズムを表示または設定します。 既定の暗号化アルゴリズムは**AES128** です。 このフィールドを空白にすることはできません。 暗号化アルゴリズムの詳細については、「 [Choose an Encryption Algorithm](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)」をご覧ください。  
+     データベース暗号化で使用するアルゴリズムを表示または設定します。 既定の暗号化アルゴリズムは **AES128** です。 このフィールドを空白にすることはできません。 暗号化アルゴリズムの詳細については、「 [Choose an Encryption Algorithm](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)」をご覧ください。  
   
      **サーバー証明書の使用**  
      証明書によって保護するように暗号化を設定します。 一覧から選択します。 サーバー証明書に対する **VIEW DEFINITION** 権限がない場合、このリストは空になります。 証明書による暗号化方法が選択されている場合、この値を空にすることはできません。 証明書の詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
@@ -78,7 +78,7 @@ ms.locfileid: "91867598"
 
 ###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Transact-SQL の使用  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "91867598"
   
 ##  <a name="to-move-a-database-protected-by-transparent-data-encryption"></a><a name="TsqlProcedure"></a> 透過的なデータ暗号化で保護されたデータベースを移動するには 
 
-次の手順は、SQL Server Management Studio を使用し、TRANSACT-SQL を使用して、TDE で保護されたデータベースを移動する必要があることを示しています。
+次の手順は、SQL Server Management Studio を使用し、Transact-SQL を使用して、TDE で保護されたデータベースを移動する方法を示しています。
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> SQL Server Management Studio の使用  
   
@@ -234,7 +234,7 @@ ms.locfileid: "91867598"
      選択したファイルを **[アタッチするデータベース]** グリッドから削除します。  
   
      **"** _<database_name>_ **" データベースの詳細**  
-     デタッチするファイルの名前を表示します。 ファイルのパス名を確認または変更するには、**参照**ボタン ( **[...]** ) をクリックしてください。  
+     デタッチするファイルの名前を表示します。 ファイルのパス名を確認または変更するには、**参照** ボタン ( **[...]** ) をクリックしてください。  
   
     > [!NOTE]  
     >  ファイルが存在しなかった場合、 **[メッセージ]** 列に "見つかりませんでした" と表示されます。 ログ ファイルが見つからない場合は、ログ ファイルが別のディレクトリに置かれているか、削除されています。 **[データベースの詳細]** グリッドでファイル パスを更新し、正しい場所を指定するか、そのログ ファイルをグリッドから削除します。 .ndf データ ファイルが見つからない場合、グリッドのパスを更新して、正しい場所を指定する必要があります。  
@@ -253,7 +253,7 @@ ms.locfileid: "91867598"
   
 ###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Transact-SQL の使用  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

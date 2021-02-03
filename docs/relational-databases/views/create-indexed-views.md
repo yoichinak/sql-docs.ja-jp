@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872d40262da465bac6e336472e8beca402482b5f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0cc0d86dbdce6e3618957551a1059c0178a23d61
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484374"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236302"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
 
@@ -39,8 +39,9 @@ ms.locfileid: "97484374"
 1. SET オプションが、ビューで参照されるすべての既存のテーブルに対して正しいことを確認します。
 2. テーブルやビューを作成する前に、そのセッション用の SET オプションが正しく設定されていることを確認します。
 3. ビュー定義が決定的であることを確認します。
-4. `WITH SCHEMABINDING` オプションを使用して、ビューを作成します。
-5. ビューに一意のクラスター化インデックスを作成します。
+4. ベース テーブルの所有者がビューと同じであることを確認します。
+5. `WITH SCHEMABINDING` オプションを使用して、ビューを作成します。
+6. ビューに一意のクラスター化インデックスを作成します。
 
 > [!IMPORTANT]
 > 多数のインデックス付きビュー、または少数ではあるものの非常に複雑なインデックス付きビューで参照されるテーブルに対して DML<sup>1</sup> を実行する場合、これらの参照されるインデックス付きビューを更新する必要もあります。 その結果、DML クエリのパフォーマンスが大幅に低下する場合があります。また、場合によっては、クエリ プランを生成できないこともあります。
@@ -156,7 +157,10 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
 
 #### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
-データベースの **CREATE VIEW** アクセス許可と、ビューが作成されているスキーマの **ALTER** アクセス許可が必要です。
+データベースの **CREATE VIEW** アクセス許可と、ビューが作成されているスキーマの **ALTER** アクセス許可が必要です。 ベース テーブルが別のスキーマ内に存在する場合、少なくともそのテーブルに対する **REFERENCES** アクセス許可が必要です。
+
+    > [!NOTE]  
+    > For the creation of the index on top of the view, the base table must have the same owner as the view. This is also called ownership-chain. This is usually the case when table and view reside within the same schema, but it is possible that individual objects have different owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用
 

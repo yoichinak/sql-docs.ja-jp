@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - '@@ROWCOUNT_TSQL'
 - '@@ROWCOUNT'
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5cbcc0c744c195db159788cb4476a92963323f66
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 6eca1ac99c93c8faa062b46b09fe3715663a5c87
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037110"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159714"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "92037110"
   
 -   @@ROWCOUNT を 0 にリセットしますが、クライアントにはその値を返しません。  
   
- 単純な割り当てを行うステートメントの場合、@@ROWCOUNT の値は常に 1 に設定されます。 行はクライアントに送信されません。 ステートメントの例は次のとおりです。SET @*local_variable*、RETURN、READTEXT、および SELECT GETDATE() または SELECT **'***一般的なテキスト***'** などのクエリのない SELECT ステートメント。  
+ 単純な割り当てを行うステートメントの場合、@@ROWCOUNT の値は常に 1 に設定されます。 行はクライアントに送信されません。 ステートメントの例は次のとおりです。SET @*local_variable*、RETURN、READTEXT、および SELECT GETDATE() または **'** _一般的なテキスト_*_'_* などのクエリのない SELECT ステートメント。  
   
  クエリ内で代入操作をするステートメントまたはクエリ内で RETURN を使用するステートメントは、クエリの影響を受ける行またはクエリに読み取られる行の数を @@ROWCOUNT 値に設定します (例: SELECT @*local_variable* = c1 FROM t1)。  
   
