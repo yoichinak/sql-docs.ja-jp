@@ -14,12 +14,12 @@ ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016
-ms.openlocfilehash: 0f6ba4369e2ac2da9058621108f310e1b3f8e953
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 26d32a2fcf2e516236cb0bfba91e240e956dab5f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480963"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250570"
 ---
 # <a name="subscriber-types"></a>サブスクライバーの種類
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "97480963"
 ## <a name="options"></a>オプション  
  このパブリケーションでサポートする必要がある各サブスクライバーの種類を選択します。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]  
  パブリケーションはすべての機能を使用することができます。  
   
  [!INCLUDE[ssEW](../../includes/ssew-md.md)]  

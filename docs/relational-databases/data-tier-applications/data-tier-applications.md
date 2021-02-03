@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 562769cc1f9ce3e895b59811a61026747c0a3724
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193052"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251101"
 ---
 # <a name="data-tier-applications"></a>データ層アプリケーション
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,16 +48,16 @@ ms.locfileid: "92193052"
   
     -   DAC 操作は、SQLServer 2008 R2 で導入されました。 SQL Server 2008 R2 データベースに加えて、ツールでは SQL Server 2008、SQL Server 2005、および SQL Server 2000 データベースからの DACPAC ファイルの生成がサポートされます。  
   
-    -   SQL 2016 データベースに加えて、SQL Server 2016 に付属のツールでは、SQL Server 2008 R2 または SQL Server 2012 に付属の DAC ツールで生成された DACPAC ファイルを読み取ることができます。 これには、SQL Server 2014、2012、2008 R2、2008、2005 のデータベースが含まれますが、SQL Server 2000 のデータベースは**含まれません**。  
+    -   SQL 2016 データベースに加えて、SQL Server 2016 に付属のツールでは、SQL Server 2008 R2 または SQL Server 2012 に付属の DAC ツールで生成された DACPAC ファイルを読み取ることができます。 これには、SQL Server 2014、2012、2008 R2、2008、2005 のデータベースが含まれますが、SQL Server 2000 のデータベースは **含まれません**。  
   
-    -   SQL Server 2008 R2 の DAC ツールでは、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のツールによって生成された DACPAC ファイルを読み取ることはできません。  
+    -   SQL Server 2008 R2 の DAC ツールでは、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]のツールによって生成された DACPAC ファイルを読み取ることはできません。  
   
 -   DACPAC は、.dacpac 拡張子を持つ Windows ファイルです。 このファイルでは、DACPAC の生成元、データベース内のオブジェクト、およびその他の特性を詳細に表す複数の XML セクションから構成されるオープン フォーマットがサポートされます。 上級ユーザーは、製品に付属の DacUnpack.exe ユーティリティを使用してファイルをパッケージ解除して、各セクションをより詳細に調査できます。  
   
 -   ユーザーがデータベースを作成 (DAC パッケージを配置することによるデータベースの作成を含む) するには、**dbmanager** ロールのメンバーであるか、**CREATE DATABASE** 権限が割り当てられている必要があります。 ユーザーがデータベースを削除するには、**dbmanager** ロールのメンバーであるか、**DROP DATABASE** 権限を割り当てられている必要があります。  
   
 ## <a name="dac-tools"></a>DAC ツール  
- DACPAC は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に付属の複数のツール間でシームレスに使用できます。 これらのツールは、相互運用性の単位として DACPAC を使用して、異なるユーザーの要件に対処します。  
+ DACPAC は、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]に付属の複数のツール間でシームレスに使用できます。 これらのツールは、相互運用性の単位として DACPAC を使用して、異なるユーザーの要件に対処します。  
   
 -   アプリケーション開発者:  
   

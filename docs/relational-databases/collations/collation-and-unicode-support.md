@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99ef20a9db20238f24361327b79068ed39d430f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e2a5f205d7182d1ffedf07b885e7411920ca7b27
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465673"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251201"
 ---
 # <a name="collation-and-unicode-support"></a>照合順序と Unicode のサポート
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "97465673"
     
 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの結果は、それぞれ異なる照合順序が設定されている複数のデータベースのコンテキストでステートメントが実行される場合には、データベースごとに異なります。 可能であれば、組織全体で同じ照合順序を使用します。 これにより、すべての文字または Unicode 表現で照合順序を指定する必要がなくなります。 異なる照合順序とコード ページが設定されたオブジェクトを操作する場合は、照合の優先順位の規則を考慮してクエリを作成します。 詳細については、「 [照合順序の優先順位 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)」を参照してください。    
     
-照合順序に関連するオプションは、大文字と小文字の区別、アクセントの区別、かなの区別、および文字幅の区別、バリエーションの選択の区別です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、[UTF-8](https://www.wikipedia.org/wiki/UTF-8) エンコードのための追加のオプションが導入されています。 
+照合順序に関連するオプションは、大文字と小文字の区別、アクセントの区別、かなの区別、および文字幅の区別、バリエーションの選択の区別です。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では、[UTF-8](https://www.wikipedia.org/wiki/UTF-8) エンコードのための追加のオプションが導入されています。 
 
 これらのオプションは、照合順序の名前に付加することによって指定できます。 たとえば、**Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8** という照合順序では、大文字と小文字、アクセント、かな、文字幅、UTF-8 エンコードが区別されます。 また、**Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS** という照合順序では、大文字小文字とアクセントが区別されず、かな、文字幅、異体字セレクターが区別され、非 Unicode エンコードが使用されます。 
 
@@ -76,7 +76,7 @@ ms.locfileid: "97465673"
 |アクセントを区別する (\_AS)|アクセントのある文字とアクセントのない文字を区別します。 たとえば、"a" と "ấ" は等しくありません。 このオプションを選択しないと、照合順序でアクセントが区別されません。 つまり、アクセントのある文字とアクセントのない文字は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 アクセントを区別しないことを明示的に選択するには、\_AI と指定します。|    
 |かなを区別する (\_KS)|次の 2 種類の日本語かな文字を区別します。ひらがなとカタカナ。 このオプションを選択しないと、照合順序でかなが区別されません。 つまり、ひらがなとカタカナは、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 かなを区別しないように指定する唯一の方法は、このオプションを省略することです。|   
 |文字幅を区別する (\_WS)|全角文字と半角文字を区別します。 このオプションを選択しないと、同じ文字の全角表現と半角表現は、並べ替えを行うときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 文字幅を区別しないように指定する唯一の方法は、このオプションを省略することです。|  
-|異体字の選択を区別する (\_VSS)|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] で導入された日本語の照合順序 **Japanese_Bushu_Kakusu_140** と **Japanese_XJIS_140** で、多様な表意文字のバリエーションの選択を区別します。 バリエーションのシーケンスは、基本文字と追加のバリエーションの選択で構成されます。 この \_VSS オプションを選択しない場合、照合順序で異体字の選択が区別されず、比較において異体字の選択が考慮されることはありません。 つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、並べ替えが同じになるように、バリエーションの選択が異なる同じ基本文字に基づいて構築された文字が考慮されています。 詳細については、「[Unicode 表意文字のバリエーション データベース](https://www.unicode.org/reports/tr37/)」を参照してください。<br/><br/> 異体字セレクターを区別する (\_VSS) 照合順序は、全文検索インデックスではサポートされていません。 フルテキスト検索インデックスでは、アクセントを区別する (\_AS)、かなを区別する (\_KS)、文字幅を区別する (\_WS) オプションのみがサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML と CLR のエンジンでは、(\_VSS) 異体字セレクターはサポートされていません。|      
+|異体字の選択を区別する (\_VSS)|[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] で導入された日本語の照合順序 **Japanese_Bushu_Kakusu_140** と **Japanese_XJIS_140** で、多様な表意文字のバリエーションの選択を区別します。 バリエーションのシーケンスは、基本文字と追加のバリエーションの選択で構成されます。 この \_VSS オプションを選択しない場合、照合順序で異体字の選択が区別されず、比較において異体字の選択が考慮されることはありません。 つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、並べ替えが同じになるように、バリエーションの選択が異なる同じ基本文字に基づいて構築された文字が考慮されています。 詳細については、「[Unicode 表意文字のバリエーション データベース](https://www.unicode.org/reports/tr37/)」を参照してください。<br/><br/> 異体字セレクターを区別する (\_VSS) 照合順序は、全文検索インデックスではサポートされていません。 フルテキスト検索インデックスでは、アクセントを区別する (\_AS)、かなを区別する (\_KS)、文字幅を区別する (\_WS) オプションのみがサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML と CLR のエンジンでは、(\_VSS) 異体字セレクターはサポートされていません。|      
 |バイナリ (\_BIN) <sup>1</sup>|各文字に定義されているビット パターンに基づいて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルのデータが並べ替えられ、比較されます。 バイナリ並べ替え順では、大文字と小文字が区別され、アクセントが区別されます。 また、バイナリは最速の並べ替え順です。 詳細については、この記事の「[バイナリ照合順序](#Binary-collations)」セクションを参照してください。|      
 |バイナリコード ポイント (\_BIN2) <sup>1</sup> | Unicode データの Unicode コード ポイントに基づいて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータが並べ替えられ、比較されます。 非 Unicode データの場合、バイナリ コード ポイントではバイナリ並べ替えと同一の比較が使用されます。<br/><br/> バイナリ コード ポイント並べ替え順を使用すると、並べ替えられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを比較するアプリケーションでデータを再度並べ替える必要がないという利点があります。 このため、バイナリ コード ポイント並べ替え順を使用すると、アプリケーション開発が簡略化され、パフォーマンスを向上させることができます。 詳細については、この記事の「[バイナリ照合順序](#Binary-collations)」セクションを参照してください。|
 |UTF-8 (\_UTF8)|UTF-8 でエンコードされたデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納できるようにします。 このオプションを選択しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、適用可能なデータ型に対して既定の非 Unicode エンコード形式が使用されます。 詳細については、この記事の「[UTF-8 サポート](#utf8)」セクションを参照してください。| 
@@ -461,7 +461,7 @@ Unicode は、コード ポイントを文字にマップするための標準�
 > [!NOTE]
 > Unicode データ型の場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]では、UCS-2 を使うと最大 65,535 文字を表すことができ、補助文字を使った場合は Unicode の全範囲 (1,114,111 文字) を表すことができます。 補助文字の有効化について詳しくは、「[補助文字](#Supplementary_Characters)」をご覧ください。
 
-代わりに、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、UTF 8 対応の照合順序 (\_UTF8) を使用した場合に、以前の非 Unicode データ型 (**char** と **varchar**) が UTF-8 エンコードを使用した Unicode データ型になります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、UCS-2 エンコードまたは UTF-16 エンコードを引き続き使用する、以前の既存の Unicode データ型 (**nchar**、**nvarchar**、**ntext**) の動作は変わりません。 詳しくは、「[UTF-8 と UTF-16 でのストレージの相違点](#storage_differences)」をご覧ください。
+代わりに、[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降では、UTF 8 対応の照合順序 (\_UTF8) を使用した場合に、以前の非 Unicode データ型 (**char** と **varchar**) が UTF-8 エンコードを使用した Unicode データ型になります。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では、UCS-2 エンコードまたは UTF-16 エンコードを引き続き使用する、以前の既存の Unicode データ型 (**nchar**、**nvarchar**、**ntext**) の動作は変わりません。 詳しくは、「[UTF-8 と UTF-16 でのストレージの相違点](#storage_differences)」をご覧ください。
 
 ### <a name="unicode-considerations"></a>Unicode の注意点
 非 Unicode データ型には、多くの制限が関連付けられています。 これは、Unicode に対応していないコンピューターではコード ページの使用が 1 つに制限されているためです。 Unicode コードを使用すると、必要なコード ページ変換が少なくなるので、パフォーマンスの向上が期待できます。 Unicode 照合順序は、サーバー レベルではサポートされないため、データベース、列、式の各レベルで個別に選択する必要があります。    
@@ -473,7 +473,7 @@ Unicode は、コード ポイントを文字にマップするための標準�
 >
 > 一部の Unicode 文字の検索と並べ替えの機能を向上させるために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) で使用可能な UTF-16 照合順序を使用するには (Windows 照合順序のみ)、補助文字 (\_SC) の照合順序の 1 つ、またはバージョン 140 の照合順序の 1 つを選択できます。    
  
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で使用可能な UTF-8 照合順序を使用し、一部の Unicode 文字の検索と並べ替えの機能を向上させるには (Windows 照合順序のみ)、UTF-8 エンコード対応の照合順序 (\_UTF8) を選択する必要があります。
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] で使用可能な UTF-8 照合順序を使用し、一部の Unicode 文字の検索と並べ替えの機能を向上させるには (Windows 照合順序のみ)、UTF-8 エンコード対応の照合順序 (\_UTF8) を選択する必要があります。
  
 -   UTF8 フラグは、以下に適用できます。    
     -   補助文字 (\_SC) または異体字セレクターの区別 (\_VSS) 認識を既にサポートしている言語照合順序
@@ -484,8 +484,8 @@ Unicode は、コード ポイントを文字にマップするための標準�
     -   BIN または BIN2<sup>2</sup> バイナリ照合順序
     -   SQL\_* 照合順序  
     
-<sup>1</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 以降。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 では、照合順序 **UTF8_BIN2** が **Latin1_General_100_BIN2_UTF8** に置き換えられました。        
-<sup>2</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 まで。    
+<sup>1</sup>[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3 以降。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 3.0 では、照合順序 **UTF8_BIN2** が **Latin1_General_100_BIN2_UTF8** に置き換えられました。        
+<sup>2</sup>[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3 まで。    
     
 Unicode または非 Unicode データ型の使用に関連する問題点を評価するには、使用環境におけるパフォーマンスの違いを測定するためのシナリオをテストする必要があります。 組織内のシステムで使用する照合順序を標準化し、可能であれば Unicode サーバーおよびクライアントを配置するようにしてください。    
     
@@ -512,7 +512,7 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、完全な Unicode 文字範囲 (000000 – 10FFFF) を表すために、**nchar**、**nvarchar**、**sql_variant** の各データ型で使用できる補助文字 (\_SC) 照合順序の新しいファミリが導入されました。 次に例を示します。**Latin1_General_100_CI_AS_SC** や、日本語の照合順序を使用する場合は **Japanese_Bushu_Kakusu_100_CI_AS_SC** を使用できます。 
  
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、新しい UTF-8 対応の照合順序 ([\_UTF8](#utf8)) を使用して、補助文字のサポートが **char** および **varchar** データ型まで拡張されています。 これらのデータ型では、完全な Unicode 文字範囲を表すこともできます。   
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では、新しい UTF-8 対応の照合順序 ([\_UTF8](#utf8)) を使用して、補助文字のサポートが **char** および **varchar** データ型まで拡張されています。 これらのデータ型では、完全な Unicode 文字範囲を表すこともできます。   
 
 > [!NOTE]
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降では、すべての新しい \_140 照合順序で補助文字が自動的にサポートされます。
@@ -545,7 +545,7 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 ## <a name="gb18030-support"></a><a name="GB18030"></a> GB18030 のサポート    
 GB18030 は中華人民共和国が単独で中国語の文字のエンコードに使用している標準規格です。 GB18030 文字の長さは 1 バイト、2 バイト、4 バイトのいずれかです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、クライアント側アプリケーションからサーバーに GB18030 でエンコードした文字が入力されたときに文字を認識し、内部的には Unicode 文字に変換して格納することで GB18030 文字をサポートしています。 それらがサーバーに格納されると、それ以降の操作では Unicode 文字として処理されます。 
 
-任意の中国語の照合順序を使用できますが、最新の 100 バージョンの使用をお勧めします。 すべての \_100 レベルの照合順序は、GB18030 文字の言語的な並べ替えをサポートしています。 データに補助文字 (サロゲート ペア) が含まれている場合は、検索や並べ替えの機能を向上させるために、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で利用可能な SC 照合順序を使用できます。    
+任意の中国語の照合順序を使用できますが、最新の 100 バージョンの使用をお勧めします。 すべての \_100 レベルの照合順序は、GB18030 文字の言語的な並べ替えをサポートしています。 データに補助文字 (サロゲート ペア) が含まれている場合は、検索や並べ替えの機能を向上させるために、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で利用可能な SC 照合順序を使用できます。    
 
 > [!NOTE]
 > GB18030 でエンコードされた文字を含む文字列が正しく表示されるように、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] などのクライアント ツールでは確実に Dengxian フォントを使用します。
@@ -559,9 +559,9 @@ GB18030 は中華人民共和国が単独で中国語の文字のエンコード
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を操作するデータベース アプリケーションは、複雑な文字表記をサポートするコントロールを使用する必要があります。 マネージド コードで作成される標準の Windows フォーム コントロールは、複雑な文字表記を使用できます。    
 
-## <a name="japanese-collations-added-in--sssqlv14_md"></a><a name="Japanese_Collations"></a>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] に追加された日本語照合順序
+## <a name="japanese-collations-added-in--sssql17-md"></a><a name="Japanese_Collations"></a>[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] に追加された日本語照合順序
  
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、各種オプションの順列 (\_CS、\_AS、\_KS、\_WS、\_VSS) で、新しい日本語照合順序がサポートされています。 
+[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降では、各種オプションの順列 (\_CS、\_AS、\_KS、\_WS、\_VSS) で、新しい日本語照合順序がサポートされています。 
 
 これらの照合順序を一覧表示するには、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に対してクエリを実行します。      
 
@@ -577,12 +577,12 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 <a name="ctp23"></a>
 
 ## <a name="utf-8-support"></a><a name="utf8"></a> UTF-8 のサポート
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、インポートまたはエクスポートのエンコードとして、および文字列データのデータベース レベルまたは列レベルの照合順序として、広く使用されている UTF-8 文字エンコードの完全なサポートが導入されています。 UTF-8 は、**char** および **varchar** データ型で許可されており、*UTF8* サフィックスを持つようにオブジェクトの照合順序を作成するか変更すると有効になります。 たとえば、**LATIN1_GENERAL_100_CI_AS_SC** を **LATIN1_GENERAL_100_CI_AS_SC_UTF8** に変更します。 
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では、インポートまたはエクスポートのエンコードとして、および文字列データのデータベース レベルまたは列レベルの照合順序として、広く使用されている UTF-8 文字エンコードの完全なサポートが導入されています。 UTF-8 は、**char** および **varchar** データ型で許可されており、*UTF8* サフィックスを持つようにオブジェクトの照合順序を作成するか変更すると有効になります。 たとえば、**LATIN1_GENERAL_100_CI_AS_SC** を **LATIN1_GENERAL_100_CI_AS_SC_UTF8** に変更します。 
 
 UTF-8 は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された補助文字をサポートする Windows 照合順序にのみ使用できます。 **nchar** および **nvarchar** データ型では、UCS-2 または UTF-16 エンコードのみが許可され、変更されていません。
 
 ### <a name="storage-differences-between-utf-8-and-utf-16"></a><a name="storage_differences"></a> UTF-8 と UTF-16 でのストレージの相違点
-Unicode Consortium では、各文字に一意のコード ポイント (000000 – 10FFFF の範囲の値) が割り当てられています。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、完全な範囲を表すために、UTF-8 エンコードと UTF-16 エンコードの両方を使用できます。    
+Unicode Consortium では、各文字に一意のコード ポイント (000000 – 10FFFF の範囲の値) が割り当てられています。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では、完全な範囲を表すために、UTF-8 エンコードと UTF-16 エンコードの両方を使用できます。    
 -  UTF-8 エンコードでは、ASCII 範囲 (000000 – 00007F) の文字には 1 バイト、コード ポイント 000080 – 0007FF には 2 バイト、コード ポイント 000800 – 00FFFF には 3 バイト、コード ポイント 0010000 – 0010FFFF には 4 バイトが、それぞれ必要です。 
 -  UTF-16 エンコードでは、コード ポイント 000000 – 00FFFF には 2 バイト、コード ポイント 0010000 – 0010FFFF には 4 バイトが必要です。 
 
