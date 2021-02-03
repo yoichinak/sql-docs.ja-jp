@@ -6,19 +6,19 @@ ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccb035e127b6476ca18b5745dbaf58b66c8c929e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 14a917d6a6faec85cbc712f612e593fdfe19bc06
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476253"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197853"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped イベント クラス
 
@@ -56,11 +56,11 @@ ms.locfileid: "97476253"
 |SPID|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |State|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース コード内のイベントが生成された場所を示します。 イベントが生成された場所によって、状態コードが異なることがあります。 マイクロソフトのサポート エンジニアはこの状態コードを使用して、イベントが生成されたソース コード内の場所を特定することができます。|30|いいえ|  
-|成功|**int**|メッセージが存続している時間。 この値が有効期限の値以上の場合は、メッセージが削除されます。|23|いいえ|  
+|Success|**int**|メッセージが存続している時間。 この値が有効期限の値以上の場合は、メッセージが削除されます。|23|いいえ|  
 |TargetLoginName|**nvarchar**|メッセージの転送先になるネットワーク アドレス。|42|いいえ|  
 |TargetUserName|**nvarchar**|メッセージを発信したサービスの名前。|39|いいえ|  
 |TextData|**ntext**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がメッセージを削除した理由の説明。|1|はい|  
-|Transaction ID|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
+|トランザクション ID|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
  このイベントの TextData 列に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がメッセージを削除した理由の説明が格納されます。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caf0fcb2a9b00c8f391280395629348f055d4039
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0cf40a6b16c1a2750180a5646e17ad317fe3c1bf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100958"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194283"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -184,7 +184,7 @@ SET **@** _cursor_variable_ の構文規則に、LOCAL キーワードと GLOBAL
   
 複合代入演算子は、変数や、UPDATE、SELECT、および RECEIVE ステートメントの SET など、演算子の右側にある式で代入を行う任意の場所で使用できます。  
   
-SELECT ステートメントで、値を連結する目的で (つまり、集計値を計算する目的で) 変数を使用しないでください。 予期しないクエリ結果が生じる可能性があります。 これは、(代入を含め) SELECT リスト内のすべての式は、出力行ごとに 1 回のみ実行されるとは限らないためです。 詳細については、[サポート技術情報の資料](https://support.microsoft.com/kb/287515)を参照してください。  
+SELECT ステートメントで、値を連結する目的で (つまり、集計値を計算する目的で) 変数を使用しないでください。 予期しないクエリ結果が生じる可能性があります。 これは、(代入を含め) SELECT リスト内のすべての式は、出力行ごとに 1 回のみ実行されるとは限らないためです。 詳細については、[サポート技術情報の資料](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/287515)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
 public ロールのメンバーシップが必要です。 すべてのユーザーは、SET **@** _local_variable_ を使用できます。  

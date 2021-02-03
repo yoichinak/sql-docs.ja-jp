@@ -6,7 +6,7 @@ ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 17828 (Database Engine error)
 - maxtokensize
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53a3ed421997c7c7fc9978b5b1dbce8f5d3c69c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e11485d4acc9638741f3ed48943d314a3efb0449
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456372"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196641"
 ---
 # <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +71,7 @@ Kerberos 環境で Windows 認証を使用する場合、クライアントは�
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-8.  **レジストリ エディター**を閉じます。  
+8.  **レジストリ エディター** を閉じます。  
   
 9. コンピューターを再起動します。  
   

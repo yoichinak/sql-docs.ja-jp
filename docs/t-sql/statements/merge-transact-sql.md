@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - MERGE
 - MERGE_TSQL
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 664ef8a40e341f52bda0658d532849a278ae49b9
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: cbc1286bbbced3a546c1057433dba5bbc4289281
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679079"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199384"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -170,7 +170,7 @@ WHEN MATCHED THEN \<merge_matched>
 MERGE ステートメントには、最大 2 つの WHEN MATCHED 句を指定できます。 句を 2 つ指定する場合、最初の句は AND \<search_condition> 句と共に使用する必要があります。 任意の行に対し、最初の WHEN MATCHED 句が適用されなかった場合にのみ、2 番目の WHEN MATCHED 句が適用されます。 WHEN MATCHED 句が 2 つある場合は、一方で UPDATE 操作を、もう一方で DELETE 操作を指定する必要があります。 \<merge_matched> 句で UPDATE が指定されており、\<merge_search_condition> に基づいて \<table_source> の複数の行が *target_table* の 1 つの行に一致する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からエラーが返されます。 MERGE ステートメントで、同じ行を複数回更新することや、同じ行の更新と削除を行うことはできません。  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-\<table_source> ON \<merge_search_condition> で返される行のうち、 *target_table* 内の行とは一致しないが、追加の検索条件 (存在する場合) は満たす行ごとに、 *target_table* に 1 行を挿入するように指定します。 挿入する値は、\<merge_not_matched> 句で指定します。 MERGE ステートメントに指定できる WHEN NOT MATCHED [ BY TARGET ] 句は 1 つだけです。
+\<table_source> ON \<merge_search_condition> で返される行のうち、*target_table* 内の行とは一致しないが、追加の検索条件 (存在する場合) は満たす行ごとに、*target_table* に 1 行を挿入するように指定します。 挿入する値は、\<merge_not_matched> 句で指定します。 MERGE ステートメントに指定できる WHEN NOT MATCHED [ BY TARGET ] 句は 1 つだけです。
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 \<table_source> ON \<merge_search_condition> で返される行に一致せず、追加の検索条件を満たす *target_table のすべての行を、\<merge_matched> 句に従って更新または削除するように指定します。  
@@ -196,7 +196,7 @@ INDEX ( index_val [ ,...n ] )
 ソース テーブルとの暗黙の結合を実行するための、対象テーブルの 1 つ以上のインデックスの名前または ID を指定します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
 \<output_clause>  
-*target_table* 内の更新、挿入、または削除される行ごとに 1 行を返します。この場合、特定の順序はありません。 **$action** は、OUTPUT 句に指定することができます。 **$action** は、行に対して実行されたアクションに従って次のいずれかの値をそれぞれの行について返す、 **nvarchar(10)** 型の列です:"INSERT"、"UPDATE"、または "DELETE"。その行で実行されるアクションに従います。 この句の引数と動作について詳しくは、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。  
+*target_table* 内の更新、挿入、または削除される行ごとに 1 行を返します。この場合、特定の順序はありません。 **$action** は、OUTPUT 句に指定することができます。 **$action** は、行に対して実行されたアクションに従って次のいずれかの値をそれぞれの行について返す、**nvarchar(10)** 型の列です:"INSERT"、"UPDATE"、または "DELETE"。その行で実行されるアクションに従います。 この句の引数と動作について詳しくは、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 オプティマイザー ヒントを使用して、データベース エンジンがステートメントを処理する方法をカスタマイズすることを指定します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
@@ -215,10 +215,10 @@ DELETE
 \<merge_not_matched>  
 対象テーブルに挿入する値を指定します。  
   
-( *column_list* )  
+(*column_list*)  
 対象テーブルのデータを挿入する 1 つ以上の列で構成されるリストを指定します。 列は 1 部構成の名前で指定する必要があります。そうしないと MERGE ステートメントが失敗します。 *column_list* はかっこで囲み、コンマで区切る必要があります。  
   
-VALUES ( *values_list* )  
+VALUES ( *values_list*)  
 対象テーブルに挿入する値を返す定数、変数、または式を、コンマ区切りのリストで指定します。 式に EXECUTE ステートメントを含めることはできません。  
   
 DEFAULT VALUES  
@@ -264,7 +264,7 @@ MERGE ステートメントに指定された挿入、更新、削除の各操�
   
 MERGE ステートメントによって実行される挿入、更新、削除のいずれかの操作に対して、有効な INSTEAD OF トリガーが対象テーブルに定義されている場合、MERGE ステートメントに指定されたすべての操作に有効な INSTEAD OF トリガーを定義する必要があります。  
   
-INSTEAD OF UPDATE トリガーや INSTEAD OF DELETE トリガーが *target_table* に定義されている場合、更新操作や削除操作は実行されません。 代わりにトリガーが起動され、 **inserted** テーブルと **deleted** テーブルに適切なデータが設定されます。  
+INSTEAD OF UPDATE トリガーや INSTEAD OF DELETE トリガーが *target_table* に定義されている場合、更新操作や削除操作は実行されません。 代わりにトリガーが起動され、**inserted** テーブルと **deleted** テーブルに適切なデータが設定されます。  
   
 INSTEAD OF INSERT トリガーが *target_table* に定義されている場合、挿入操作は実行されません。 代わりに、テーブルに適切なデータが設定されます。  
   
