@@ -16,12 +16,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f31a17d3f8bf2285bc41c7462deec4e53008efd1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405682"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237083"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "97405682"
    
     上記のキー ストアの詳細については、「[Always Encrypted の列マスター キーの作成と保存](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)」をご覧ください。
 
-5. お客様が [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用していて、お使いの SQL Server インスタンスがセキュア エンクレーブを使って構成されている場合は、 **[エンクレーブ計算を許可する]** チェックボックスをオンにして、マスター キーをエンクレーブ対応にすることができます。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](always-encrypted-enclaves.md)」をご覧ください。 
+5. お客様が [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] を使用していて、お使いの SQL Server インスタンスがセキュア エンクレーブを使って構成されている場合は、 **[エンクレーブ計算を許可する]** チェックボックスをオンにして、マスター キーをエンクレーブ対応にすることができます。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](always-encrypted-enclaves.md)」をご覧ください。 
 
     > [!NOTE]
     > お使いの SQL Server インスタンスがセキュア エンクレーブを使って正しく構成されていない場合は、 **[エンクレーブ計算を許可する]** チェックボックスは表示されません。

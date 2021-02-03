@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 0274f6f2a0acccb20f9a9682d16b35ef5009d1b5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 72d5179d64cda06a95e531d8cbc847b33ce9b92f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471603"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237248"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf ツールを使用して SQL Server on Linux を構成する
 
@@ -52,7 +52,7 @@ ms.locfileid: "97471603"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-**mssql-conf** は、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、Ubuntu 用に [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] と共にインストールされる構成スクリプトです。 このユーティリティを使用すると、次のパラメーターを設定できます。
+**mssql-conf** は、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、Ubuntu 用に [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] と共にインストールされる構成スクリプトです。 このユーティリティを使用すると、次のパラメーターを設定できます。
 
 |パラメーター|説明|
 |---|---|

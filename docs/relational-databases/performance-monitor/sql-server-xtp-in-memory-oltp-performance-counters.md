@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 38d44cc0c916c7e40e26b89196b21012f7b72499
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 4c6e97837d26e680f7f94bcdc60132127a11afe4
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170714"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237714"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP (インメモリ OLTP) パフォーマンス カウンター
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、パフォーマンス モニターがインメモリ OLTP のアクティビティを監視するために使用できるオブジェクトとカウンターが用意されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降では、オブジェクトとカウンターがマシン上で指定した [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]バージョンのすべてのインスタンス間で共有されます。  
   
- 以前は、オブジェクトおよびカウンター名は *XTP Cursors* のように、 **XTP** から始まりました。 現在は、 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]から始まり、名前は次のようなパターンとなります。  
+ 以前は、オブジェクトおよびカウンター名は *XTP Cursors* のように、 **XTP** から始まりました。 現在は、 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]から始まり、名前は次のようなパターンとなります。  
   
 -   **SQL Server** *\<version>* の **XTP Cursors**  
   

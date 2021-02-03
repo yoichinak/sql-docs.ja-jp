@@ -14,16 +14,16 @@ ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a5108a5631c5a87218d7c99bfb6d5bd24c29840
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 44ee1d091b9314dca90aef7c07632b874ceca293
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479133"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250231"
 ---
 # <a name="rename-statistics"></a>統計名の変更
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で統計オブジェクトの名前を変更できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+  を使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で統計オブジェクトの名前を変更できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **このトピックの内容**  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
 - ALTER_AVAILABILITY_TSQL
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 23cd700fd8b25778118b2141bf0205dcbd87c92e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dc5c1829eaa8be1116c07ae8f4cc3e6d80501f60
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170464"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237870"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -228,10 +228,10 @@ ALTER AVAILABILITY GROUP group_name
  この設定の詳細については、「[データベース レベルの正常性検出オプション](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)」を参照してください。 
 
 DTC_SUPPORT  **=** { PER_DB | NONE }  
-この可用性グループの分散トランザクションが有効かどうかを指定します。 分散トランザクションは [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降の可用性グループ データベースに対してのみサポートされ、複数データベースにまたがるトランザクションは [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 以降に対してのみサポートされます。 `PER_DB` では、これらのトランザクションをサポートする可用性グループが作成され、可用性グループ内のデータベースを含む複数データベースにまたがるトランザクションが分散トランザクションに自動的に昇格されます。 `NONE` では、複数データベースにまたがるトランザクションは分散トランザクションに自動昇格されず、データベースは DTC の安定した RMID に登録されません。 `NONE` の設定を使用しても分散トランザクションは妨げられませんが、状況によってはデータベースのフェールオーバーと自動復旧が失敗する場合があります。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。 
+この可用性グループの分散トランザクションが有効かどうかを指定します。 分散トランザクションは [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降の可用性グループ データベースに対してのみサポートされ、複数データベースにまたがるトランザクションは [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 以降に対してのみサポートされます。 `PER_DB` では、これらのトランザクションをサポートする可用性グループが作成され、可用性グループ内のデータベースを含む複数データベースにまたがるトランザクションが分散トランザクションに自動的に昇格されます。 `NONE` では、複数データベースにまたがるトランザクションは分散トランザクションに自動昇格されず、データベースは DTC の安定した RMID に登録されません。 `NONE` の設定を使用しても分散トランザクションは妨げられませんが、状況によってはデータベースのフェールオーバーと自動復旧が失敗する場合があります。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。 
  
 > [!NOTE]
-> 可用性グループの設定 DTC_SUPPORT の変更のサポートは、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Service Pack 2 で導入されました。 それより前のバージョンでは、このオプションは使用できません。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の以前のバージョンでこの設定を変更するには、可用性グループをいったん削除してから、再度作成する必要があります。
+> 可用性グループの設定 DTC_SUPPORT の変更のサポートは、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 で導入されました。 それより前のバージョンでは、このオプションは使用できません。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の以前のバージョンでこの設定を変更するには、可用性グループをいったん削除してから、再度作成する必要があります。
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  SQL Server 2017 で導入されました。 コミットに必要な同期セカンダリ レプリカの最小数を設定するために使用します。この数を超えると、プライマリがトランザクションをコミットします。 SQL Server トランザクションは、セカンダリ レプリカの最小数の最新情報がトランザクション ログに与えられるまで待機することになります。 既定値は 0 であり、SQL Server 2016 と同じように動作します。 最小値は 0 です。 最大値はレプリカの数から 1 を引いた値になります。 このオプションは、同期コミット モードのレプリカに関連しています。 レプリカが同期コミット モードのとき、セカンダリ同期レプリカに対する書き込みがレプリカ データベース トランザクション ログにコミットされるまで、プライマリ レプリカへの書き込みは待機します。 セカンダリ同期レプリカをホストする SQL Server が応答を停止した場合、プライマリ レプリカをホストする SQL Server はそのセカンダリ レプリカを同期未実行としてマークし、続行します。 応答のないデータベースがオンラインに復帰すると、"未同期" 状態になります。プライマリが再度同期可能になるまで、レプリカに異常のマークが付きます。 この設定により、レプリカの最小数で各トランザクションがコミットされるまで、プライマリ レプリカは続行しません。 レプリカの最小数が利用できない場合、プライマリのコミットは失敗します。 クラスター タイプ `EXTERNAL` の場合、可用性グループがクラスター リソースに追加されると、設定が変更されます。 「[可用性グループの構成の高可用性とデータの保護](../../linux/sql-server-linux-availability-group-ha.md)」を参照してください。
@@ -406,7 +406,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  読み取り可能なセカンダリ レプリカをホストする可能性があるすべてのサーバー インスタンスを指定するには、コンマ区切りのリストを使用します。 読み取り専用のルーティングは、リストで指定されているサーバー インスタンスの順序に従います。 レプリカの読み取り専用ルーティング リストにレプリカのホスト サーバー インスタンスを含める場合、通常は一覧の最後にこのサーバー インスタンスを配置することをお勧めします。読み取りを目的とした接続が使用できる場合に、これがセカンダリ レプリカに移動するためです。  
   
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、読み取り可能なセカンダリ レプリカ間で読み取りを目的とした要求の負荷を分散することができます。 読み取り専用ルーティング リスト内のかっこの入れ子になったセットにレプリカを配置することで、これを指定します。 詳細と例については、「[読み取り専用レプリカ間の負荷分散の構成](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)」を参照してください。  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、読み取り可能なセカンダリ レプリカ間で読み取りを目的とした要求の負荷を分散することができます。 読み取り専用ルーティング リスト内のかっこの入れ子になったセットにレプリカを配置することで、これを指定します。 詳細と例については、「[読み取り専用レプリカ間の負荷分散の構成](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)」を参照してください。  
   
  NONE  
  この可用性レプリカがプライマリ レプリカの場合は、読み取り専用のルーティングをサポートしないことを指定します。 これは既定の動作です。 MODIFY REPLICA ON と併せて使用すると、この値は既存のリスト (ある場合) を無効にします。  

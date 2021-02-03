@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - TOP_TSQL
 - TOP
@@ -22,17 +22,17 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb6024d0ad3ef6f34d170201c0fbacc3447dab26
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: d007bd92518d4ce5f898c400bad53f09d2e93642
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783594"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237790"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、クエリの結果セットとして返される行を、指定した行の数または割合に制限します。 TOP と ORDER BY 句を使用すると、結果セットは並べ替えられた行の先頭の *N* 行に制限されます。 それ以外の場合、TOP では特定の順序になっていない先頭の *N* 行が返されます。 この句を使用して、SELECT ステートメントから返される行の数を指定します。 または、TOP を使用して、INSERT、UPDATE、MERGE、DELETE ステートメントによって影響を受ける行数を指定します。  
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で、クエリの結果セットとして返される行を、指定した行の数または割合に制限します。 TOP と ORDER BY 句を使用すると、結果セットは並べ替えられた行の先頭の *N* 行に制限されます。 それ以外の場合、TOP では特定の順序になっていない先頭の *N* 行が返されます。 この句を使用して、SELECT ステートメントから返される行の数を指定します。 または、TOP を使用して、INSERT、UPDATE、MERGE、DELETE ステートメントによって影響を受ける行数を指定します。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

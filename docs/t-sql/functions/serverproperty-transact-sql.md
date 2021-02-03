@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SERVERPROPERTY_TSQL
 - SERVERPROPERTY
@@ -25,12 +25,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aed106ed3915c779c558ff919128320f97174c8d
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: cd1ebb88dc0a3cad6ae8712ec68f7d63fc0c655a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241893"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237406"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -70,20 +70,20 @@ SERVERPROPERTY ( 'propertyname' )
 |FilestreamEffectiveLevel|FILESTREAM アクセスの有効なレベル。 レベルが変更されており、インスタンスの再起動またはコンピューターの再起動のいずれかが保留されている場合、この値は FilestreamConfiguredLevel と異なることがあります。 詳細については、「[filestream のアクセス レベル](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)」を参照してください。<br /><br /> 基本データ型: **int**|  
 |FilestreamShareName|FILESTREAM で使用される共有の名前。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **nvarchar(128)**| 
 |HadrManagerStatus|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] マネージャーが開始されたかどうかを示します。<br /><br /> 0 = 未開始状態、通信保留中<br /><br /> 1 = 開始されて実行中<br /><br /> 2 = 未開始状態、失敗<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**|  
-|InstanceDefaultBackupPath|**適用対象**: [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 以降。<br /><br /> インスタンス バックアップ ファイルの既定のパスの名前。|  
+|InstanceDefaultBackupPath|**適用対象**: [!INCLUDE[ssSQL2019](../../includes/sssql19-md.md)] 以降。<br /><br /> インスタンス バックアップ ファイルの既定のパスの名前。|  
 |InstanceDefaultDataPath|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から 2015 年後半以降の更新プログラムの現在のバージョン。<br /><br /> インスタンス データ ファイルの既定のパスの名前。<br /><br /> 基本データ型: **nvarchar(128)**|  
 |InstanceDefaultLogPath|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から 2015 年後半以降の更新プログラムの現在のバージョン。<br /><br /> インスタンス ログ ファイルの既定のパスの名前。<br /><br /> 基本データ型: **nvarchar(128)**|  
 |InstanceName|ユーザーの接続先のインスタンス名。<br /><br /> インスタンス名が既定インスタンスの場合や、無効な入力またはエラーの場合は、NULL が返されます。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|セットアップ時に Advanced Analytics 機能がインストールされた場合は 1 を返します。Advanced Analytics がインストールされていない場合は 0 を返します。<br /><br /> 基本データ型: **int**|  
-|IsBigDataCluster| CU4 から始まった [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] で導入されました。<br /><br />インスタンスが SQL Server ビッグ データ クラスターの場合は 1 を返し、ビッグ データ クラスターではない場合は 0 を返します。<br /><br /> 基本データ型: **int**|  
+|IsBigDataCluster| CU4 から始まった [!INCLUDE[ssSQL2019](../../includes/sssql19-md.md)] で導入されました。<br /><br />インスタンスが SQL Server ビッグ データ クラスターの場合は 1 を返し、ビッグ データ クラスターではない場合は 0 を返します。<br /><br /> 基本データ型: **int**|  
 |IsClustered|サーバー インスタンスがフェールオーバー クラスターで構成されます。<br /><br /> 1 = クラスター化<br /><br /> 0 = 非クラスター化<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**|  
 |IsFullTextInstalled|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスに、フルテキスト インデックス作成およびセマンティック インデックス作成のコンポーネントがインストールされています。<br /><br /> 1 = フルテキスト インデックス作成およびセマンティック インデックス作成のコンポーネントがインストールされています。<br /><br /> 0 = フルテキスト インデックス作成およびセマンティック インデックス作成のコンポーネントがインストールされていません。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**|  
 |IsHadrEnabled|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]は、このサーバー インスタンス上で有効です。<br /><br /> 0 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]機能は無効です。<br /><br /> 1 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]機能は有効です。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで可用性レプリカを作成して実行するには、サーバー インスタンス上で [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]が有効になっている必要があります。 詳細については、「[AlwaysOn 可用性グループの有効化と無効化 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」を参照してください。<br /><br /> **注:** IsHadrEnabled プロパティは、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] のみに関連します。 データベース ミラーリングやログ配布などの、その他の高可用性機能およびディザスター リカバリー機能は、このサーバー プロパティの影響を受けません。|  
 |IsIntegratedSecurityOnly|サーバーは統合セキュリティ モードです。<br /><br /> 1 = 統合セキュリティ (Windows 認証)<br /><br /> 0 = 非統合セキュリティ (Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方)。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**|  
 |IsLocalDB|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> サーバーは [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB のインスタンスです。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**|  
-|IsPolyBaseInstalled|**適用対象**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> サーバー インスタンスに PolyBase 機能がインストールされているかどうかを返します。<br /><br /> 0 = Polybase はインストールされていません。<br /><br /> 1 = Polybase はインストールされています。<br /><br /> 基本データ型: **int**|  
+|IsPolyBaseInstalled|**適用対象**: [!INCLUDE[ssSQL2016](../../includes/sssql16-md.md)]<br /><br /> サーバー インスタンスに PolyBase 機能がインストールされているかどうかを返します。<br /><br /> 0 = Polybase はインストールされていません。<br /><br /> 1 = Polybase はインストールされています。<br /><br /> 基本データ型: **int**|  
 |IsSingleUser|サーバーはシングル ユーザー モードです。<br /><br /> 1 = シングル ユーザー<br /><br /> 0 = 非シングル ユーザー<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**|  
-|IsTempDbMetadataMemoryOptimized|**適用対象**: [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 以降。<br /><br />メタデータに対してメモリ最適化テーブルを使用するように tempdb が有効になっている場合は、1 を返します。メタデータに対して通常のディスク ベースのテーブルが tempdb によって使用されている場合は 0 になります。 詳細については、「 [tempdb Database](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)」をご覧ください。<br /><br /> 基本データ型: **int**|  
+|IsTempDbMetadataMemoryOptimized|**適用対象**: [!INCLUDE[ssSQL2019](../../includes/sssql19-md.md)] 以降。<br /><br />メタデータに対してメモリ最適化テーブルを使用するように tempdb が有効になっている場合は、1 を返します。メタデータに対して通常のディスク ベースのテーブルが tempdb によって使用されている場合は 0 になります。 詳細については、「 [tempdb Database](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)」をご覧ください。<br /><br /> 基本データ型: **int**|  
 |IsXTPSupported|**適用対象**:SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。<br /><br /> サーバーは、インメモリ OLTP をサポートします。<br /><br /> 1 = サーバーはインメモリ OLTP をサポートします。<br /><br /> 0 = サーバーはインメモリ OLTP をサポートしません。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**|  
 |LCID|照合順序の Windows ロケール識別子 (LCID)。<br /><br /> 基本データ型: **int**|  
 |LicenseType|未使用。 ライセンス情報は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品によって保存または維持されていません。 常に DISABLED が返されます。<br /><br /> 基本データ型: **nvarchar(128)**|  

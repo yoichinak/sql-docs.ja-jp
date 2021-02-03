@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b275387efa5cc44b012cccef82fb3284e594abb
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 96686e379f9d10058ebcedffd44405b6c2f8a18a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170544"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237582"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>インメモリ OLTP データベースにおける高可用性のサポート
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "98170544"
     持続性のあるメモリ最適化テーブルのインメモリ状態がセカンダリ レプリカで維持されます。 自動フェールオーバーまたは強制フェールオーバーが発生した場合に復旧の必要がないため、新しいプライマリへのフェールオーバーにかかる時間はディスク ベースのテーブルと変わりありません。 この構成では、SCHEMA_ONLY として作成されたメモリ最適化テーブルがサポートされます。 ただし、これらのテーブルに対する変更はログに記録されないため、セカンダリ レプリカ上のこれらのテーブルにはデータはありません。  
   
 -   **[読み取り可能セカンダリ]**    
-    セカンダリ レプリカが読み取りアクセス用に構成されている場合、セカンダリ レプリカ上のメモリ最適化テーブルにアクセスしてクエリを実行することができます。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]では、セカンダリ レプリカ上の読み取りタイムスタンプは、プライマリ レプリカ上の読み取りタイムスタンプと同期に近い状態で保たれます。そのため、プライマリ レプリカへの変更はセカンダリにすばやく反映されます。 この同期に近い動作は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインメモリ OLTP とは異なります。  
+    セカンダリ レプリカが読み取りアクセス用に構成されている場合、セカンダリ レプリカ上のメモリ最適化テーブルにアクセスしてクエリを実行することができます。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]では、セカンダリ レプリカ上の読み取りタイムスタンプは、プライマリ レプリカ上の読み取りタイムスタンプと同期に近い状態で保たれます。そのため、プライマリ レプリカへの変更はセカンダリにすばやく反映されます。 この同期に近い動作は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインメモリ OLTP とは異なります。  
 
 ### <a name="considerations"></a>考慮事項
 

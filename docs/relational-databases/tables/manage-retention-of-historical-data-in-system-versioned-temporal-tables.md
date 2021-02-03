@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0dac2b5d344969f96016a86622ee4e07ab8c23d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2e37f8234a1b8ee2ab72c76a423ea72ac9d3f14a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98168139"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235826"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
 
@@ -51,9 +51,9 @@ ms.locfileid: "98168139"
 ## <a name="using-stretch-database-approach"></a>Stretch Database 手法の利用
 
 > [!NOTE]
-> Stretch Database 手法の利用は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にのみ適用され、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] には適用されません。
+> Stretch Database 手法の利用は [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] にのみ適用され、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] には適用されません。
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、履歴データが Azure に透過的に移行されます。 セキュリティ強化のために、SQL Server の [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) 機能で移行中のデータを暗号化できます。 また、 [行レベルのセキュリティ](../../relational-databases/security/row-level-security.md) やその他の高度な SQL Server セキュリティ機能を Temporal/Stretch Database と共に使用し、データを保護できます。
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) の [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] では、履歴データが Azure に透過的に移行されます。 セキュリティ強化のために、SQL Server の [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) 機能で移行中のデータを暗号化できます。 また、 [行レベルのセキュリティ](../../relational-databases/security/row-level-security.md) やその他の高度な SQL Server セキュリティ機能を Temporal/Stretch Database と共に使用し、データを保護できます。
 
 Stretch Database 手法の利用では、一時的な履歴テーブルの一部または全部を Azure にストレッチできます。SQL Server は履歴データを Azure に通知なしで移行します。 履歴テーブルのストレッチを有効にしても、データ変更や一時的なクエリ実行で、テンポラル テーブルの操作が変わることはありません。
 
@@ -70,7 +70,7 @@ Stretch Database 手法の利用では、一時的な履歴テーブルの一部
 
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Stretch ウィザードを利用し、履歴テーブル全体をストレッチする
 
-初心者にとって最も簡単な方法は、Stretch ウィザードを利用して、データベース全体でストレッチを有効にし、Stretch ウィザード内で一時的な履歴テーブルを選択することです (この例では、本来であれば空のデータベースで、Department テーブルをシステム バージョン管理のテンポラル テーブルとして構成しているものと想定しています)。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]では一時的な履歴テーブル自体を右クリックし、[Stretch] をクリックすることはできません。
+初心者にとって最も簡単な方法は、Stretch ウィザードを利用して、データベース全体でストレッチを有効にし、Stretch ウィザード内で一時的な履歴テーブルを選択することです (この例では、本来であれば空のデータベースで、Department テーブルをシステム バージョン管理のテンポラル テーブルとして構成しているものと想定しています)。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]では一時的な履歴テーブル自体を右クリックし、[Stretch] をクリックすることはできません。
 
 1. データベースを右クリックし、 **[タスク]** をポイントし、 **[Stretch]** をポイントします。それから、 **[有効化]** をクリックしてウィザードを起動します。
 2. **[テーブルの選択]** ウィンドウで、一時的な履歴テーブルのチェック ボックスを選択し、[次へ] をクリックします。

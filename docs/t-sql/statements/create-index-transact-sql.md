@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE INDEX
 - INDEX
@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f1322f21ed7ad3f09f30a0f5a5e71e5614a8d47
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 8591620ce92aca8a6c272539721f20a8a64fd9ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766234"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237101"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -90,7 +90,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 
 **重要なシナリオ:**
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 以降では、列ストア インデックスに非クラスター化インデックスを使用して、データ ウェアハウスのクエリのパフォーマンスを向上させます。 詳しくは、「[列ストア インデックス - データ ウェアハウス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)」をご覧ください。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 以降では、列ストア インデックスに非クラスター化インデックスを使用して、データ ウェアハウスのクエリのパフォーマンスを向上させます。 詳しくは、「[列ストア インデックス - データ ウェアハウス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)」をご覧ください。
 
 その他の種類のインデックスについては、以下を参照してください。
 
@@ -250,7 +250,7 @@ NONCLUSTERED
 *column*      
  インデックスの基準となる 1 列または複数列を指定します。 指定した列を組み合わせた値で複合インデックスを作成するには、2 つ以上の列名を指定します。 複合インデックスに含まれる列は、*table_or_view_name* の後のかっこ内に、並べ替えの優先順序に従って指定します。
 
-1 つの複合インデックス キーには、最大 32 の列を結合できます。 複合インデックス キーに含まれる列はすべて、同じテーブルまたはビュー内に存在する必要があります。 複合インデックスの値の最大許容サイズは、クラスター化インデックスの場合は、900 バイトまたは非クラスター化インデックスの 1,700 です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以前のバージョンの場合、制限は列数が 16、サイズが 900 バイトになります。
+1 つの複合インデックス キーには、最大 32 の列を結合できます。 複合インデックス キーに含まれる列はすべて、同じテーブルまたはビュー内に存在する必要があります。 複合インデックスの値の最大許容サイズは、クラスター化インデックスの場合は、900 バイトまたは非クラスター化インデックスの 1,700 です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以前のバージョンの場合、制限は列数が 16、サイズが 900 バイトになります。
 
 ラージ オブジェクト (LOB) データ型の列 **ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、または **image** 、インデックスのキー列として指定することはできません。 また、ビュー定義に含めることはできません **ntext**、**text**、または **image** 列では、CREATE INDEX ステートメントで参照されていない場合でも。
 
@@ -351,7 +351,7 @@ _database_name_
 
 ビューにインデックスを作成するには、SCHEMABINDING を指定してそのビューを定義する必要があります。 ビューに非クラスター化インデックスを作成する前に、そのビューに一意のクラスター化インデックスを作成する必要があります。 インデックス付きビューの詳細については、「解説」を参照してください。
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、オブジェクトをクラスター化列ストア インデックスに格納されたテーブルに指定できます。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、オブジェクトをクラスター化列ストア インデックスに格納されたテーブルに指定できます。
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、*database_name* が現在のデータベースの場合、または _database_name_ が `tempdb` で、_object_name_ が # で始まる場合に、3 つの要素で構成された名前形式 _database_name_.[_schema_name_]._object_name_ をサポートします。
 
@@ -498,7 +498,7 @@ OFF
 
 RESUMABLE **=** { ON | **OFF**}      
 
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
  オンラインでのインデックス操作が再開可能かどうかを指定します。
 
@@ -510,7 +510,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* **[MINUTES]** は **RESUMABLE = ON** (**ONLINE = ON** が必須) と共に使用   
 
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 再開可能なオンラインでのインデックス操作が、一時停止までに実行される時間 (分単位で指定する整数値) を示します。
 
@@ -543,7 +543,7 @@ OFF
 ページ ロックは使用されません。
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 最終ページ挿入競合に対して最適化するかどうかを指定します。 既定値は OFF です。 詳細については、「[シーケンシャル キー](#sequential-keys)」セクションを参照してください。
 
@@ -621,7 +621,7 @@ CREATE INDEX ステートメントは、他のクエリと同じように最適�
 テーブル (ヒープ) にクラスター化インデックスを作成したり、既存のクラスター化インデックスを削除して再作成する場合は、データの並べ替えや、基のテーブルまたは既存のクラスター化インデックス データの一時的コピーを実行するために、データベース内で追加の作業領域が使用可能になっている必要があります。 クラスター化インデックスの詳細については、「[クラスター化インデックスの作成](../../relational-databases/indexes/create-clustered-indexes.md)」と「[SQL Server のインデックスのアーキテクチャとデザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)」を参照してください。
 
 ## <a name="nonclustered-indexes"></a>非クラスター化インデックス
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、クラスター化列ストア インデックスとして格納されたテーブルに非クラスター化インデックスを作成できます。 最初に保存されているテーブルに非クラスター化インデックスを作成するかどうかは後で、テーブルをクラスター化列ストア インデックスに変換する場合は、ヒープまたはクラスター化インデックスに適用する場合は、インデックスが永続化されます。 クラスター化列ストア インデックスを再構築するときに、非クラスター化インデックスを削除する必要がではありません。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、クラスター化列ストア インデックスとして格納されたテーブルに非クラスター化インデックスを作成できます。 最初に保存されているテーブルに非クラスター化インデックスを作成するかどうかは後で、テーブルをクラスター化列ストア インデックスに変換する場合は、ヒープまたはクラスター化インデックスに適用する場合は、インデックスが永続化されます。 クラスター化列ストア インデックスを再構築するときに、非クラスター化インデックスを削除する必要がではありません。
 
 制限事項と制約事項:
 
@@ -682,7 +682,7 @@ SET オプションが正しくないと、次の状態が発生する場合が�
 XML インデックスについては、「[CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md)」および「[XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)」をご覧ください。
 
 ## <a name="index-key-size"></a>インデックス キーのサイズ
-インデックス キーの最大サイズは 900 バイトをクラスター化インデックスと非クラスター化インデックスの 1,700 バイトです。 ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以前では、制限は常に 900 バイトでした)。インデックス **varchar** 既存のデータ列には、インデックスの作成時の制限を超えない場合をバイトの制限を超える列を作成することができます。 ただし、後続の挿入や更新操作を、制限を超える合計サイズとなる列には失敗します。 クラスター化インデックスのインデックス キーには、ROW_OVERFLOW_DATA アロケーション ユニットに既存のデータを持つ **varchar** 列を含めることはできません。 クラスター化インデックスが **varchar** 列に作成され、既存のデータが IN_ROW_DATA アロケーション ユニットにある場合に、データを行外に押し出すような挿入処理や更新処理をその列に対して行うと失敗します。
+インデックス キーの最大サイズは 900 バイトをクラスター化インデックスと非クラスター化インデックスの 1,700 バイトです。 ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以前では、制限は常に 900 バイトでした)。インデックス **varchar** 既存のデータ列には、インデックスの作成時の制限を超えない場合をバイトの制限を超える列を作成することができます。 ただし、後続の挿入や更新操作を、制限を超える合計サイズとなる列には失敗します。 クラスター化インデックスのインデックス キーには、ROW_OVERFLOW_DATA アロケーション ユニットに既存のデータを持つ **varchar** 列を含めることはできません。 クラスター化インデックスが **varchar** 列に作成され、既存のデータが IN_ROW_DATA アロケーション ユニットにある場合に、データを行外に押し出すような挿入処理や更新処理をその列に対して行うと失敗します。
 
 非クラスター化インデックスのリーフ レベルに非キー列を含めることができます。 インデックス キー サイズを計算するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではこれらの列は考慮されません。 詳細については、「[付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」と「[SQL Server のインデックスのアーキテクチャとデザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)」を参照してください。
 
@@ -754,7 +754,7 @@ DROP_EXISTING を使用すると、非クラスター化インデックスが定
 詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。
 
 ### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a>再開可能なインデックス操作
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 次のガイドラインは再開可能なインデックス操作に適用されます。
 
@@ -797,7 +797,7 @@ DROP_EXISTING を使用すると、非クラスター化インデックスが定
 `ALLOW_ROW_LOCKS = OFF` と `ALLOW_PAGE_LOCK = OFF` の場合、インデックスにアクセスするとき、テーブル レベルのロックのみが許可されます。
 
 ## <a name="sequential-keys"></a>シーケンシャル キー
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 最終ページ挿入競合は、多数の同時実行スレッドがシーケンシャル キーを使用するインデックスに行を挿入しようと発生する、一般的なパフォーマンスの問題です。 先頭のキー列に、ID 列や現在の日付/時刻が既定値である日付など、常に増加 (または減少) する値が含まれている場合、インデックスはシーケンシャルと見なされます。 挿入されるキーはシーケンシャルであるため、すべての新しい行がインデックス構造の最後、つまり同じページに挿入されます。 これにより、メモリ内のページで競合が発生し、対象のページに対する PAGELATCH_EX で待機している複数のスレッドとして観察できます。
 
@@ -1104,7 +1104,7 @@ GO
 ```
 
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. 再開可能なインデックス操作を作成、再開、一時停止、中止する
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1133,7 +1133,7 @@ ALTER INDEX test_idx2 ON test_table ABORT;
 ### <a name="n-basic-syntax"></a>北 基本構文
 再開可能なインデックス操作を作成、再開、一時停止、中止する       
 
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

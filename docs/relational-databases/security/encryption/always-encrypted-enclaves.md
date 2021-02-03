@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: ed6a0a041cba407b06b26e8b1d800da1f47b2bbb
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: e84635c1f32396e033841c546dafc1796624d5ab
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534671"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237084"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
 
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用すると、インプレース暗号化と豊富な機密クエリが有効になることで、[Always Encrypted](always-encrypted-database-engine.md) の機密コンピューティング機能が拡張されます。 セキュリティで保護されたエンクレーブが設定された Always Encrypted は、[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] と [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (プレビュー) で利用できます。
+セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用すると、インプレース暗号化と豊富な機密クエリが有効になることで、[Always Encrypted](always-encrypted-database-engine.md) の機密コンピューティング機能が拡張されます。 セキュリティで保護されたエンクレーブが設定された Always Encrypted は、[!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] と [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (プレビュー) で利用できます。
 
 2015 の [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] および [!INCLUDE[sssql16](../../../includes/sssql16-md.md)] で導入された Always Encrypted により、注意が必要なデータの機密性が、マルウェアや、次のような高い特権を持つ "*未承認の*" SQL ユーザーから保護されます: サーバー インスタンスやハードウェアなどに対する正当なアクセス権を持ちながら、実際のデータの一部またはすべてにアクセスしてはならない、DBA、コンピューター管理者、クラウド管理者、その他のユーザー。  
 
@@ -44,7 +44,7 @@ Always Encrypted は、次の図のようにセキュリティで保護された
 
 ## <a name="supported-enclave-technologies"></a>サポートされているエンクレーブ テクノロジ
 
-[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] のセキュリティで保護されたエンクレーブが設定された Always Encrypted は、Windows で[仮想化ベースのセキュリティ (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) のセキュリティで保護されたメモリ エンクレーブ (仮想保護モード (VSM) エンクレーブとも呼ばれます) を使用します。
+[!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] のセキュリティで保護されたエンクレーブが設定された Always Encrypted は、Windows で[仮想化ベースのセキュリティ (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) のセキュリティで保護されたメモリ エンクレーブ (仮想保護モード (VSM) エンクレーブとも呼ばれます) を使用します。
 
 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では、セキュリティで保護されたエンクレーブが設定された Always Encrypted により、[Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) のエンクレーブが使用されます。 Intel SGX は、[DC シリーズ](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)のハードウェア構成を使用するデータベースでサポートされる、ハードウェアベースの信頼された実行環境テクノロジです。
 
@@ -54,12 +54,12 @@ Always Encrypted は、次の図のようにセキュリティで保護された
 
 エンクレーブを検証するプロセスは、**エンクレーブの構成証明** と呼ばれ、アプリケーション内のクライアント ドライバーと、外部の構成証明サービスに接続する[!INCLUDE[ssde-md](../../../includes/ssde-md.md)]の両方が含まれます。 構成証明プロセスの詳細は、エンクレーブの種類 (VBS または SGX) と、構成証明サービスによって異なります。
 
-[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] での VBS のセキュリティで保護されたエンクレーブに対する構成証明プロセスは [Windows Defender System Guard ランタイム構成証明](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)であり、構成証明サービスとしてホスト ガーディアン サービス (HGS) が必要です。 
+[!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] での VBS のセキュリティで保護されたエンクレーブに対する構成証明プロセスは [Windows Defender System Guard ランタイム構成証明](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)であり、構成証明サービスとしてホスト ガーディアン サービス (HGS) が必要です。 
 
 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] での Intel SGX エンクレーブの構成証明には、[Microsoft Azure Attestation](https://docs.microsoft.com/azure/attestation/overview) が必要です。
 
 > [!NOTE]
-> [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] では、Microsoft Azure Attestation はサポートされていません。 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] での VBS エンクレーブに対してサポートされている唯一の構成証明ソリューションは、ホスト ガーディアン サービスだけです。
+> [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] では、Microsoft Azure Attestation はサポートされていません。 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] での VBS エンクレーブに対してサポートされている唯一の構成証明ソリューションは、ホスト ガーディアン サービスだけです。
 
 ## <a name="supported-client-drivers"></a>サポートされるクライアント ドライバー
 
@@ -104,7 +104,7 @@ Always Encrypted は、次の図のようにセキュリティで保護された
 
 セキュリティで保護されたエンクレーブでサポートされる操作は次のとおりです。
 
-| 操作| [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] |
+| 操作| [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] |
 |:---|:---|:---|
 | [比較演算子](../../../mdx/comparison-operators.md) | サポートされています | サポートされています |
 | [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md) | サポートされています | サポートされています |
@@ -122,7 +122,7 @@ Always Encrypted は、次の図のようにセキュリティで保護された
 > - [SELECT - GROUP BY](../../../t-sql/queries/select-group-by-transact-sql.md)
 > - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
 >
-> [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] では、文字列型の列 (`char`、`nchar`) に対してエンクレーブを使用する機密クエリを実行するには、列でバイナリ 2 並べ替え順序 (BIN2) の照合順序が使用されている必要があります。 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] で文字列に対して機密クエリを実行するには、BIN2 照合順序または UTF-8 照合順序が必要です。 
+> [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] では、文字列型の列 (`char`、`nchar`) に対してエンクレーブを使用する機密クエリを実行するには、列でバイナリ 2 並べ替え順序 (BIN2) の照合順序が使用されている必要があります。 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] で文字列に対して機密クエリを実行するには、BIN2 照合順序または UTF-8 照合順序が必要です。 
 
 ### <a name="indexes-on-enclave-enabled-columns"></a>エンクレーブ対応列でのインデックス
 
@@ -141,7 +141,7 @@ Always Encrypted は、次の図のようにセキュリティで保護された
 SQL Server のインスタンスで障害が発生した場合、そのデータベースは、完了しなかったトランザクションによる変更がデータ ファイルに含まれ状態のままになる可能性があります。 インスタンスが起動されると、[データベース復旧](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started)と呼ばれるプロセスが実行されます。このプロセスでは、トランザクション ログで見つかったすべての未完了のトランザクションがロールバックされて、データベースの整合性が保持されます。 未完了のトランザクションによってインデックスの変更が行われた場合、それらの変更も元に戻す必要があります。 たとえば、インデックス内の一部のキー値は、削除するか、再挿入する必要があります。
 
 > [!IMPORTANT]
-> ランダム化された暗号化を使用して暗号化されているエンクレーブ対応の列で最初のインデックスを作成する **前** に、データベースに対して [高速データベース復旧 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) を有効にすることを強くお勧めします。 ADR は、[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では既定で有効になりますが、[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] ではなりません。
+> ランダム化された暗号化を使用して暗号化されているエンクレーブ対応の列で最初のインデックスを作成する **前** に、データベースに対して [高速データベース復旧 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) を有効にすることを強くお勧めします。 ADR は、[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では既定で有効になりますが、[!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] ではなりません。
 
 [従来のデータベース復旧プロセス](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) ([ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) 復旧モデルに従うもの) では、インデックスに対する変更を元に戻すには、アプリケーションが列の列暗号化キーをエンクレーブに提供するまで SQL Server は待機する必要があり、長くかかることがあります。 高速データベース復旧 (ADR) を使用すると、エンクレーブ内のキャッシュで列暗号化キーを使用できないために遅延する必要がある元に戻す操作の数が、劇的に減少します。 その結果、新しいトランザクションがブロックされる可能性が最小限になり、データベースの可用性が大幅に向上します。 ADR を有効にしても、SQL Server ではやはり古いデータ バージョンのクリーンアップを完了するために列暗号化キーが必要になる場合がありますが、データベースまたはユーザーのトランザクションの可用性に影響を与えないバックグラウンド タスクとして行われます。 ただし、列暗号化キーがないためにクリーンアップ操作が失敗したことを示すエラー メッセージが、エラー ログに記録されることがあります。
 
@@ -181,7 +181,7 @@ SQL Server と Azure SQL Database の両方で、bacpac ファイルを使用し
 
 - ランダム化された暗号化を使用するエンクレーブ対応の列では、クラスター化インデックスを作成できません。
 - ランダム化された暗号化を使用するエンクレーブ対応の列を、主キー列にすることはできず、外部キー制約または一意キー制約によって参照することはできません。
-- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] の場合 (この制限は [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] には適用されません)、ランダム化された暗号化を使用するエンクレーブ対応列では、入れ子になったループ結合 (可能な場合はインデックスを使用) のみがサポートされます。 異なる製品間のその他の違いについては、「[機密クエリ](#confidential-queries)」を参照してください。
+- [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] の場合 (この制限は [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] には適用されません)、ランダム化された暗号化を使用するエンクレーブ対応列では、入れ子になったループ結合 (可能な場合はインデックスを使用) のみがサポートされます。 異なる製品間のその他の違いについては、「[機密クエリ](#confidential-queries)」を参照してください。
 - 同じコード ページ内の照合順序および NULL 値の許容の変更を除き、インプレース暗号化操作を、列メタデータの他の変更と組み合わせることはできません。 たとえば、1 つの `ALTER TABLE`/`ALTER COLUMN` Transact-SQL ステートメントで列を暗号化、再暗号化、または復号化し、さらに列のデータ型を変更することはできません。 2 つの異なるステートメントを使用します。
 - インメモリ テーブルの列にエンクレーブ対応キーを使用することは、サポートされていません。
 - 計算列を定義する式では、ランダム化された暗号化を使用してエンクレーブが有効な列の計算を実行することはできません (計算が「[機密クエリ](#confidential-queries)」に記載されているサポート対象の操作に含まれる場合でも)。

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f2aa24e3ebd335251ad2721444e9f9d8645ef221
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: e6e6dfd3092f4602f652af81e547b63fc1ddc3df
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534906"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236084"
 ---
 # <a name="configure-the-secure-enclave-in-sql-server"></a>SQL Server でセキュリティで保護されたエンクレーブを構成する
 
@@ -27,7 +27,7 @@ SQL Server で[セキュリティで保護されたエンクレーブが設定�
 > [!NOTE]
 > セキュリティで保護されたエンクレーブの構成を担当するロールは DBA です。 「[HGS で構成証明を構成する場合のロールと責任](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs)」を参照してください。
 
-[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] でサポートされているエンクレーブの型は仮想化ベースのセキュリティ (VBS) です。 VBS エンクレーブの型を構成する前に、インスタンスをホストしているコンピューターに対してホスト ガーディアン サービス (HGS) を使用して構成証明を設定することをお勧めします。 HGS の概要については、「[ホスト ガーディアン サービスの構成証明の計画](always-encrypted-enclaves-host-guardian-service-plan.md)」を参照してください。 構成証明を設定すると、VBS エンクレーブが適切に初期化されるために必要な仮想化ベースのセキュリティも有効になります。 詳細については、「[仮想化ベースのセキュリティが実行されていることを確認する](always-encrypted-enclaves-host-guardian-service-register.md#step-2-verify-virtualization-based-security-is-running)」を参照してください。
+[!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] でサポートされているエンクレーブの型は仮想化ベースのセキュリティ (VBS) です。 VBS エンクレーブの型を構成する前に、インスタンスをホストしているコンピューターに対してホスト ガーディアン サービス (HGS) を使用して構成証明を設定することをお勧めします。 HGS の概要については、「[ホスト ガーディアン サービスの構成証明の計画](always-encrypted-enclaves-host-guardian-service-plan.md)」を参照してください。 構成証明を設定すると、VBS エンクレーブが適切に初期化されるために必要な仮想化ベースのセキュリティも有効になります。 詳細については、「[仮想化ベースのセキュリティが実行されていることを確認する](always-encrypted-enclaves-host-guardian-service-register.md#step-2-verify-virtualization-based-security-is-running)」を参照してください。
 
 エンクレーブの型を構成する方法の詳細については、「[Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)」を参照してください。
 

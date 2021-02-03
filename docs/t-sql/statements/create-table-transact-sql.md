@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FILESTREAM_TSQL
 - TABLE
@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 64992e05c67f9fc3f401b1a8074295dad589a74e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: cbbf7efce0a0aeac175bc98063323b5f4b7a325a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170364"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237324"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -464,7 +464,7 @@ IDENTITY: 新しい列が ID 列であることを示します。 テーブル�
 
 NOT FOR REPLICATION `CREATE TABLE` ステートメントでは、IDENTITY プロパティ、FOREIGN KEY 制約、CHECK 制約で `NOT FOR REPLICATION` 句を指定できます。 `IDENTITY` プロパティでこの句を指定すると、レプリケーション エージェントが挿入を行うときに ID 列の値が増加されません。 制約でこの句を指定すると、レプリケーション エージェントが挿入、更新、削除操作を行う際に制約が適用されません。
 
-GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定した `datetime2` 列が、システムによって、レコードの有効期限の開始時刻またはレコードの有効期限の終了時刻のいずれかを記録するために使用されることを指定します。 列を `NOT NULL` として定義する必要があります。 それらを `NULL` として指定しようとすると、システムによりエラーがスローされます。 期間列に対して明示的に NOT NULL を指定しない場合、システムにより既定で列が `NOT NULL` として定義されます。 `PERIOD FOR SYSTEM_TIME` および `WITH SYSTEM_VERSIONING = ON` 引数と組み合わせてこの引数を使い、テーブル上でシステムのバージョン管理を有効にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
 
@@ -534,7 +534,7 @@ Always Encrypted (セキュア エンクレーブなし) を使用している�
 
 列は、該当するデータ型である必要があります。
 
-ALGORITHM **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)。
+ALGORITHM **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降)。
 
 **'AEAD_AES_256_CBC_HMAC_SHA_256'** を指定する必要があります。
 
@@ -542,7 +542,7 @@ ALGORITHM **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 SPARSE: 列がスパース列であることを示します。 スパース列のストレージは NULL 値用に最適化されます。 スパース列を NOT NULL として指定することはできません。 スパース列のその他の制限事項と詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。
 
-MASKED WITH ( FUNCTION = ' *mask_function* ') **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)。
+MASKED WITH ( FUNCTION = ' *mask_function* ') **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降)。
 
 動的なデータ マスクを指定します。 *mask_function* マスキング関数は、適切なパラメーターの名前を指定します。 次の 4 つの関数を使用できます。
 
@@ -651,11 +651,11 @@ WITH FILLFACTOR **=** _fillfactor_: インデックス データの格納に使�
 
 *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS: 列セットの名前です。 列セットは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 列セットの詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。
 
-PERIOD FOR SYSTEM_TIME (*system_start_time_column_name* , *system_end_time_column_name* ) **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+PERIOD FOR SYSTEM_TIME (*system_start_time_column_name* , *system_end_time_column_name* ) **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 レコードの有効期間を記録するためにシステムで使われる列の名前を指定します。 GENERATED ALWAYS AS ROW { START | END } および WITH SYSTEM_VERSIONING = ON 引数と組み合わせてこの引数を使い、テーブル上でシステムのバージョン管理を有効にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
 
-COMPRESSION_DELAY **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+COMPRESSION_DELAY **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 メモリ最適化のために、行が変更されないままテーブル内に留まる必要のある最小時間 (分) を遅延によって指定します。その後、それは列ストア インデックスへの圧縮対象となります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、圧縮する特定の行がその最終更新時刻に従って選択されます。 たとえば、行が 2 時間の期間に頻繁に変更されている場合は、SQL Server が行を圧縮する前に更新が確実に完了するように `COMPRESSION_DELAY = 120 Minutes` に設定できます。
 
@@ -677,11 +677,11 @@ PAGE: ページの圧縮を使用して、テーブルまたは指定したパ�
 
 COLUMNSTORE
 
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 非クラスター化列ストアとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 COLUMNSTORE では、最も高パフォーマンスの列ストア圧縮で圧縮することを指定します。 これは、一般的な選択です。
 
-COLUMNSTORE_ARCHIVE **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+COLUMNSTORE_ARCHIVE **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 非クラスター化列ストアとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 COLUMNSTORE_ARCHIVE では、テーブルまたはパーティションをより小さなサイズにさらに圧縮します。 これは、アーカイブ用や、ストレージのサイズを減らす必要があり、かつ保存と取得に時間をかける余裕があるその他の状況で使用できます。
 
@@ -732,7 +732,7 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF }: ON の場合、インデックスにア�
 
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF }: ON の場合、インデックスにアクセスするときにページ ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。 OFF の場合、ページ ロックは使用されません。 既定値は ON です。
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。 <BR>
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降。 <BR>
 最終ページ挿入競合に対して最適化するかどうかを指定します。 既定値は OFF です。 詳細については、CREATE INDEX のページの「[シーケンシャル キー](./create-index-transact-sql.md#sequential-keys)」セクションを参照してください。
 
 FILETABLE_DIRECTORY = *directory_name*
@@ -766,12 +766,12 @@ FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*
 
 FileTable の **parent_path_locator** 列と **name** 列に対して自動的に作成される一意制約で使用する名前を指定します。 この値を指定しない場合、システムによって制約の名前が生成されます。
 
-SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ] **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。
+SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ] **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。
 
 データ型、NULL 値の許容制約、および主キー制約の要件が満たされている場合は、テーブルのシステムのバージョン管理を有効にします。 `HISTORY_TABLE` 引数を使用しない場合、システムは現在のテーブルと同じファイル グループ内の現在のテーブルのスキーマに一致する新しい履歴テーブルを生成し、これによって 2 つのテーブルの間にリンクが作成され、履歴テーブルに現在のテーブル内の各レコードの履歴が記録されるようになります。 この履歴テーブルの名前は `MSSQL_TemporalHistoryFor<primary_table_object_id>` になります。 履歴テーブルには既定では、 **PAGE** 圧縮します。 `HISTORY_TABLE` 引数を使ってリンクを作成し、既存の履歴テーブルを使用する場合、現在のテーブルと指定したテーブルの間のリンクが作成されます。 現在のテーブルがパーティション分割する場合、履歴テーブルは、パーティション分割構成がレプリケートされていないために自動的に現在のテーブルから履歴テーブルに既定のファイル グループに作成されます。 履歴テーブルの作成時に履歴テーブルの名前を指定すると場合、は、スキーマとテーブルの名前を指定する必要があります。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの整合性チェックでは、既存のレコードが重複しないことを確認します。 データを実行する一貫性チェックが、既定値です。 `PERIOD FOR SYSTEM_TIME` および `GENERATED ALWAYS AS ROW { START | END }` 引数と組み合わせてこの引数を使い、テーブル上でシステムのバージョン管理を有効にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
 
 REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降)。
 
 Stretch Database が有効または無効になっている新しいテーブルを作成します。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。
 
@@ -783,7 +783,7 @@ Stretch Database が有効または無効になっている新しいテーブル
 
 **権限**: データベースまたはテーブルの Stretch を有効にするには、db_owner アクセス許可が必要です。 テーブルの Stretch を有効にする場合、テーブルに対する ALTER 権限も必要です。
 
-[ FILTER_PREDICATE = { null | *predicate* } ] **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)。
+[ FILTER_PREDICATE = { null | *predicate* } ] **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降)。
 
 必要に応じて、履歴データと現在のデータの両方を含むテーブルから移行する行を選択するフィルター述語を指定します。 この述語で決定論的インライン テーブル値関数を呼び出す必要があります。 詳しくは、「[Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」および「[フィルター関数を使用して移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」をご覧ください。
 
@@ -794,7 +794,7 @@ Stretch Database が有効または無効になっている新しいテーブル
 
 フィルター述語を指定する場合は、*MIGRATION_STATE* も指定する必要があります。
 
-MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] にデータを移行するには `OUTBOUND` を指定します。
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にテーブルのリモート データをコピーして戻し、テーブルに対する Stretch を無効にするには、`INBOUND` を指定します。 詳細については、「 [Stretch Database を無効にして、リモート データを戻す](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)」を参照してください。
@@ -855,7 +855,7 @@ HASH **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 許容されるテーブル、列、制約、およびインデックスの数については、「[SQL Server の最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md)」を参照してください。
 
-一般的にテーブルとインデックスには、一度に 1 エクステントの増分で領域が割り当てられます。 `ALTER DATABASE` の `SET MIXED_PAGE_ALLOCATION` オプションが TRUE に設定されている場合、または常に [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] より前である場合は、テーブルまたはインデックスの作成時に、ページが単一エクステントを埋めるのに十分な量になるまで混合エクステントからページが割り当てられます。 ページが単一エクステントを埋めるのに十分な量になった後は、現在割り当てられているエクステントが埋まるたびに新しいエクステントが割り当てられます。 テーブルに割り当てられて使用されている領域の大きさに関するレポートを表示するには、`sp_spaceused` を実行します。
+一般的にテーブルとインデックスには、一度に 1 エクステントの増分で領域が割り当てられます。 `ALTER DATABASE` の `SET MIXED_PAGE_ALLOCATION` オプションが TRUE に設定されている場合、または常に [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] より前である場合は、テーブルまたはインデックスの作成時に、ページが単一エクステントを埋めるのに十分な量になるまで混合エクステントからページが割り当てられます。 ページが単一エクステントを埋めるのに十分な量になった後は、現在割り当てられているエクステントが埋まるたびに新しいエクステントが割り当てられます。 テーブルに割り当てられて使用されている領域の大きさに関するレポートを表示するには、`sp_spaceused` を実行します。
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、列定義の中で、DEFAULT、IDENTITY、ROWGUIDCOL または列制約を指定する順序は設定されていません。
 
@@ -1340,7 +1340,7 @@ CREATE TABLE T1
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>P. システム バージョン管理されたディスク ベースのテンポラル テーブルの作成
 
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 次の例では、新しい履歴テーブルにリンクされたテンポラル テーブルを作成する方法と、既存の履歴テーブルにリンクされたテンポラル テーブルを作成する方法を示します。 テンポラル テーブルでは、システムのバージョン管理を有効にするテーブルに対して有効になるように定義された主キーを含める必要があることに注意してください。 既存のテーブルのシステムのバージョン管理の追加または削除方法を示す例については、「[使用例](../../t-sql/statements/alter-table-transact-sql.md#Example_Top)」でシステムのバージョン管理の例をご覧ください。 ユース ケースについては、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」をご覧ください。
 
@@ -1390,7 +1390,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSI
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>Q. システム バージョン管理されたメモリ最適化テンポラル テーブルの作成
 
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 次の例では、ディスク ベースの新しい履歴テーブルにリンクされた、システム バージョン管理されたメモリ最適化テンポラル テーブルを作成する方法を示します。
 

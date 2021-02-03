@@ -27,12 +27,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6af1077d46fa6378e0853eb570ba560d49e6eaec
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 52cfa79cfa88646fea2bdd2d58168cbfdd60e57d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171344"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236603"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 
@@ -97,7 +97,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、SPA、MPA、CLR 割り当てがすべて統合され、 **"あらゆるサイズの" ページ アロケータ** になります。これは、構成オプションの *max server memory (MB)* と *min server memory (MB)* によって制御されるメモリ上限に含まれます。 この変更によって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ マネージャーを通過するすべてのメモリ要件において、より正確にサイズを調整できるようになりました。 
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ～ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードしたら、現在の *max server memory (MB)* 構成と *min server memory (MB)* 構成を注意深く見直してください。 これは、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降は、以前のバージョンに比べ、このような構成に含まれるメモリ割り当てが多くなっているためです。 この変更は [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] と [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] の 32 ビット バージョンと 64 ビット バージョン、[!INCLUDE[ssSQL15](../includes/sssql16-md.md)] ～ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の 64 ビット バージョンに適用されます。
+> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ～ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードしたら、現在の *max server memory (MB)* 構成と *min server memory (MB)* 構成を注意深く見直してください。 これは、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降は、以前のバージョンに比べ、このような構成に含まれるメモリ割り当てが多くなっているためです。 この変更は [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] と [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] の 32 ビット バージョンと 64 ビット バージョン、[!INCLUDE[sssql15-md](../includes/sssql16-md.md)] ～ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の 64 ビット バージョンに適用されます。
 
 次の表は、メモリ割り当ての種類とそれを制御する構成オプションである *max server memory (MB)* と *min server memory (MB)* についてまとめたものです。
 
@@ -341,9 +341,9 @@ min server memory と max server memory の両方に同じ値を指定した場�
 ただし、ミューテックスを使用すると、多数のスレッドが同じメモリ オブジェクトから同時性の高い方法で割り当てられる場合に競合が発生する可能性があります。 したがって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にはパーティション分割されたメモリ オブジェクト (PMO) という概念があり、各パーティションはそれぞれ 1 つの CMemThread オブジェクトによって表されます。 メモリ オブジェクトのパーティション分割は静的に定義され、作成後に変更することはできません。 メモリ割り当てパターンは、ハードウェアやメモリの使用状況などの側面に大きく左右されるので、完全なパーティション分割パターンを事前に取得することは不可能です。 ほとんどの場合は、1 つのパーティションを使用するだけで十分ですが、シナリオによっては、高度にパーティション分割されたメモリ オブジェクトのみが回避できる競合が発生する可能性があります。 各メモリ オブジェクトをパーティション分割することは望ましくありません。パーティションが増えると他の非効率性が生じ、メモリの断片化が増す可能性があるからです。
 
 > [!NOTE]
-> [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] より前は、トレース フラグ 8048 を使用して、ノードベースの PMO を強制的に CPU ベースの PMO にすることができました。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 以降は、この動作は動的であり、エンジンによって制御されます。
+> [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] より前は、トレース フラグ 8048 を使用して、ノードベースの PMO を強制的に CPU ベースの PMO にすることができました。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 および [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 以降は、この動作は動的であり、エンジンによって制御されます。
 
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 以降は、[!INCLUDE[ssde_md](../includes/ssde_md.md)] が特定の CMemThread オブジェクトでの競合を動的に検出し、そのオブジェクトをノードごと、または CPU ごとに基づく実装に昇格させることができます。  昇格すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスが再開されるまで、PMO は昇格されたままになります。 CMemThread の競合は、[sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV 内に CMEMTHREAD の長い待機時間が存在すること、および [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 列 *contention_factor*、*partition_type*、*exclusive_allocations_count*、*waiting_tasks_count* を観察することで検出できます。
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 および [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 以降は、[!INCLUDE[ssde_md](../includes/ssde_md.md)] が特定の CMemThread オブジェクトでの競合を動的に検出し、そのオブジェクトをノードごと、または CPU ごとに基づく実装に昇格させることができます。  昇格すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスが再開されるまで、PMO は昇格されたままになります。 CMemThread の競合は、[sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV 内に CMEMTHREAD の長い待機時間が存在すること、および [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 列 *contention_factor*、*partition_type*、*exclusive_allocations_count*、*waiting_tasks_count* を観察することで検出できます。
 
 ## <a name="see-also"></a>参照
 [サーバー メモリに関するサーバー構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

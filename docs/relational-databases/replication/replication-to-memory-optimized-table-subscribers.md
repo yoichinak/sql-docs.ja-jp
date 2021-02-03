@@ -12,17 +12,17 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 71a245f6263b938cef7a3841b3570a3a9137a1db
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a2dd5e112230540c519fad2b4926d70f374bbcfc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172204"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236333"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  スナップショットとトランザクション レプリケーション サブスクライバーとして機能するテーブルは、ピア ツー ピア トランザクション レプリケーションを除き、メモリ最適化テーブルとして構成できます。 その他のレプリケーション構成はメモリ最適化テーブルとは互換性がありません。 この機能は [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]以降のバージョンで使用できます。  
+  スナップショットとトランザクション レプリケーション サブスクライバーとして機能するテーブルは、ピア ツー ピア トランザクション レプリケーションを除き、メモリ最適化テーブルとして構成できます。 その他のレプリケーション構成はメモリ最適化テーブルとは互換性がありません。 この機能は [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]以降のバージョンで使用できます。  
   
 ## <a name="two-configurations-are-required"></a>必要な 2 つの構成  
   

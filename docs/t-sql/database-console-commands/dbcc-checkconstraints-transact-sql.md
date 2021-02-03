@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: a0257d403980bcb869a7ac1e06471cd1699dd16d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 66b0b155d8fb3bc6c35292469edd4fa40a6ce21f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170604"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237289"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 
@@ -92,7 +92,7 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 クエリ データは temp テーブルに格納されます。 指定したすべてのテーブルまたは制約がチェックされた後、結果セットが返されます。
 DBCC CHECKCONSTRAINTS では、FOREIGN KEY 制約と CHECK 制約の整合性はチェックされますが、テーブルのディスク上のデータ構造に関する整合性はチェックされません。 このようなデータ構造のチェックは、[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) および [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) で実行できます。
   
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降
+**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降
   
 *table_name* または *table_id* が指定されており、システムのバージョン管理で有効になっている場合、DBCC CHECKCONSTRAINTS では、指定したテーブルで、テンポラル データの整合性チェックも行います。 このコマンドでは、*NO_INFOMSGS* が指定されていない場合、それぞれの整合性違反を別の行に出力します。 出力の形式は、([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record> になります。
   

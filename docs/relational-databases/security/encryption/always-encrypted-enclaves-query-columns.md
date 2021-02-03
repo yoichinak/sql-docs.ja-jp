@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8aecf4b22cf02ae91d259f45daff1d2cd8414f97
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: bc92b0af972236b588369869afc5b023735ae699
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534691"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237127"
 ---
 # <a name="run-transact-sql-statements-using-secure-enclaves"></a>セキュリティで保護されたエンクレーブを使用して Transact-SQL ステートメントを実行する
 
@@ -45,15 +45,15 @@ ms.locfileid: "98534691"
   - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md)
   - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md)
   - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
-  - [結合](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]入れ子になったループ結合のみがサポートされます。 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では、入れ子になったループ、ハッシュ、マージ結合がサポートされます
-  - [SELECT - ORDER BY 句 (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md) [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] でサポートされます。 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]
-  - [SELECT - GROUP BY 句 (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] でサポートされます。 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]
+  - [結合](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]入れ子になったループ結合のみがサポートされます。 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では、入れ子になったループ、ハッシュ、マージ結合がサポートされます
+  - [SELECT - ORDER BY 句 (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md) [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] でサポートされます。 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
+  - [SELECT - GROUP BY 句 (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] でサポートされます。 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
 - 行を挿入、更新、または削除するクエリ。これにより、エンクレーブ対応列のインデックスのインデックス キーの挿入または削除がトリガーされます。 詳細については、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する](always-encrypted-enclaves-create-use-indexes.md)」を参照してください。
 
 > [!NOTE]
 > エンクレーブを使用するインデックスおよび機密 DML クエリに対する操作は、ランダム化された暗号化を使用するエンクレーブ対応列でのみサポートされます。 決定論的な暗号化はサポートされていません。
 >
-> [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] では、文字列型の列 (`char`、`nchar`) に対してエンクレーブを使用する機密クエリを実行するには、列にバイナリ 2 並べ替え順序 (BIN2) の照合順序が構成されている必要があります。 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では、BIN2 または UTF-8 の照合順序を使用する必要があります。
+> [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] では、文字列型の列 (`char`、`nchar`) に対してエンクレーブを使用する機密クエリを実行するには、列にバイナリ 2 並べ替え順序 (BIN2) の照合順序が構成されている必要があります。 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では、BIN2 または UTF-8 の照合順序を使用する必要があります。
 
 ### <a name="dbcc-commands-using-secure-enclaves"></a>セキュリティで保護されたエンクレーブを使用する DBCC コマンド
 
@@ -67,7 +67,7 @@ ms.locfileid: "98534691"
 - 構成証明サービスの管理者から、環境用の構成証明 URL を入手する必要があります。
 
   - [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、「[HGS 構成証明 URL を確認して共有する](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)」を参照してください。
-  - [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)」を参照してください。
+  - [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation)」を参照してください。
 
 - アプリケーションを使用してデータベースに接続している場合は、セキュリティで保護されたエンクレーブが設定された Always Encrypted がサポートされているクライアント ドライバーを使用する必要があります。 アプリケーションは、データベース接続で Always Encrypted が有効になっており、構成証明プロトコルと構成証明 URL が適切に構成されているデータベースに接続する必要があります。 詳細については、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する](always-encrypted-enclaves-client-development.md)」を参照してください。
 - SQL Server Management Studio (SSMS) または Azure SQL Data Studio を使用している場合は、データベースに接続するときに、Always Encrypted を有効にし、構成証明プロトコルと構成証明 URL を構成する必要があります。 詳細については、以下のセクションを参照してください。
@@ -104,7 +104,7 @@ Always Encrypted が有効になっていて、正しい構成証明プロトコ
 1. **[接続]** ダイアログで、 **[詳細...]** をクリックします。
 2. 接続に対して Always Encrypted を有効にするには、 **[Always Encrypted]** フィールドを **[有効]** に設定します。
 3. 構成証明プロトコルと構成証明 URL を指定します。
-    - [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用している場合は、**構成証明プロトコル** を **ホスト ガーディアン サービス** に設定し、ホスト ガーディアン サービスの構成証明 URL を **[エンクレーブ構成証明 URL]** フィールドに入力します。
+    - [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] を使用している場合は、**構成証明プロトコル** を **ホスト ガーディアン サービス** に設定し、ホスト ガーディアン サービスの構成証明 URL を **[エンクレーブ構成証明 URL]** フィールドに入力します。
     - [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] を使用している場合は、**構成証明プロトコル** を **Azure Attestation** に設定し、Microsoft Azure Attestation でポリシーを参照する構成証明 URL を **[エンクレーブ構成証明 URL]** フィールドに入力します。
 
     ![Azure Data Studio を使用し、構成証明を指定してサーバーに接続する](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
@@ -191,7 +191,7 @@ GO
 
 次のクエリでは、暗号化された `Salary` 列に基づいて従業員レコードが並べ替えられて、給与が最高の 10 人の従業員が取得されます。
 > [!NOTE]
-> 暗号化された列の並べ替えは、[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] ではサポートされていますが、[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] ではサポートされていません。
+> 暗号化された列の並べ替えは、[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] ではサポートされていますが、[!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] ではサポートされていません。
 
 ```sql
 SELECT TOP(10) * FROM [HR].[Employees]

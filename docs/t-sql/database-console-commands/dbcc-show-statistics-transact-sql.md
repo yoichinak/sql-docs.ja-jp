@@ -34,12 +34,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 710a6211b588ab0dd4745b41af1f330c81241294
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 375a31ab7ec07bdbc35251d22940a17df047e578
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170504"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237470"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 
@@ -58,7 +58,7 @@ DBCC SHOW_STATISTICS では、統計オブジェクトに格納されたデー�
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 以降では、増分統計の統計オブジェクトに含まれるヘッダー情報をプログラムで取得するために、[sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) 動的管理ビューが使用可能です。
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU2 以降では、統計オブジェクトに含まれるヒストグラム情報をプログラムで取得するために、[sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 動的管理ビューが使用可能です。
+> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU2 以降では、統計オブジェクトに含まれるヒストグラム情報をプログラムで取得するために、[sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 動的管理ビューが使用可能です。
 
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -120,7 +120,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |String Index|Yes の場合は、統計オブジェクトに文字列の統計概要が含まれています。これにより、LIKE 演算子を使用するクエリ述語 (`WHERE ProductName LIKE '%Bike'` など) に対するカーディナリティの推定が向上します。 文字列の統計概要は、ヒストグラムとは別に格納されます。この統計は、統計オブジェクトの最初のキー列について、その型が **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)** 、**nvarchar(max)** 、**text**、**ntext** である場合に作成されます。|  
 |[フィルター式]|統計オブジェクトに含まれるテーブル行のサブセットの述語。 NULL = フィルター選択されていない統計情報です。 フィルター選択された述語の詳細については、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。 フィルター選択された統計情報の詳細については、「[統計情報](../../relational-databases/statistics/statistics.md)」を参照してください。|  
 |[フィルター処理なしの行数]|フィルター式を適用する前のテーブル内の行の合計数。 [フィルター式] が NULL の場合、[フィルター処理なしの行数] は [行数] と同じになります。|  
-|永続化されたサンプルのパーセンテージ|サンプリングの割合を明示的に指定しない統計情報の更新に使用される永続化されたサンプルのパーセンテージです。 値がゼロの場合、永続化されたサンプルのパーセンテージがこの統計に設定されていません。<br /><br /> **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4| 
+|永続化されたサンプルのパーセンテージ|サンプリングの割合を明示的に指定しない統計情報の更新に使用される永続化されたサンプルのパーセンテージです。 値がゼロの場合、永続化されたサンプルのパーセンテージがこの統計に設定されていません。<br /><br /> **適用対象:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4| 
   
 次の表は、DENSITY_VECTOR を指定した場合に結果セットに返される列を示しています。
   

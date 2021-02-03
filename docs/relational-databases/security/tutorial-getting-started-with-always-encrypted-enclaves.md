@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 08e7674819e4dc52a8613e39d1f8ec82a42abc05
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 2334a132c8d2b56f0eaf0909b9f83544cb6e0af5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534721"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236510"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-in-sql-server"></a>チュートリアル:SQL Server でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "98534721"
 
 ### <a name="sql-server-computer-requirements"></a>SQL Server コンピューターの要件
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 以降。
+- [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] 以降。
 - Windows 10 Enterprise バージョン 1809 以降、または Windows Server 2019 Datacenter エディション。 Windows 10 および Windows Server の他のエディションでは、HGS を使用した構成証明はサポートされていません。
 - 仮想化テクノロジの CPU サポート:
   - Extended Page Tables を備えた Intel VT-x。

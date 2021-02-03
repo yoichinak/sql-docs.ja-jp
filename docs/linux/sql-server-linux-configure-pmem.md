@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15'
-ms.openlocfilehash: 4630a96f1abf961174ece179aabfd160a5784ad9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5b99f12aebc27d04b384ff0b8d51b5359ca76d19
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471613"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236920"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux 用に永続メモリ (PMEM) を構成する
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-この記事では、[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] on Linux 用に永続メモリ (PMEM) を構成する方法について説明します。
+この記事では、[!INCLUDE[sqlv15](../includes/sssql19-md.md)] on Linux 用に永続メモリ (PMEM) を構成する方法について説明します。
 
 ## <a name="overview"></a>概要
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] には、永続メモリを使用するインメモリ機能が多数あります。 このドキュメントでは、SQL Server on Linux 用に永続メモリを構成するために必要な手順について説明します。
+[!INCLUDE[sqlv15](../includes/sssql19-md.md)] には、永続メモリを使用するインメモリ機能が多数あります。 このドキュメントでは、SQL Server on Linux 用に永続メモリを構成するために必要な手順について説明します。
 
 > [!NOTE]
 > 用語 _エンライトメント_ は、永続メモリ対応ファイル システムの操作の概念を伝えるために導入されました。 ユーザー スペース アプリケーションからファイル システムへの直接アクセスは、メモリ マッピング (`mmap()`) を使用することで容易になります。 ファイルのメモリ マッピングを作成すると、アプリケーションは、I/O スタックを完全にバイパスするロード命令またはストア命令を発行できます。 これは、ホスト拡張アプリケーション (SQLPAL と Windows OS または Linux OS がやり取りできるようにするブラック ボックス コード) の観点からは、「エンライトメントされた」ファイル システムと見なされます。

@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ae64e777b08cdf4df6f7e8fdd05ff8c3822a06b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3f1e5c31fdd51a7db14540bfeea3229c170dd2fa
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171524"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236655"
 ---
 # <a name="foreach-loop-container"></a>Foreach ループ コンテナー
 
@@ -461,7 +461,7 @@ ms.locfileid: "98171524"
 ####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> [列挙子] = [Foreach Azure BLOB 列挙子]  
  **[Azure BLOB 列挙子]** を指定すると、SSIS パッケージは、指定した BLOB の場所にある BLOB ファイルを列挙します。 列挙された BLOB ファイルの名前を変数に格納し、Foreach ループ コンテナー内のタスクで使用できます。  
   
- **Azure BLOB 列挙子** は、 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]用の SQL Server Integration Services (SSIS) Feature Pack for Azure のコンポーネントです。 Feature Pack は [こちら](https://go.microsoft.com/fwlink/?LinkID=626967)からダウンロードしてください。  
+ **Azure BLOB 列挙子** は、 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]用の SQL Server Integration Services (SSIS) Feature Pack for Azure のコンポーネントです。 Feature Pack は [こちら](https://go.microsoft.com/fwlink/?LinkID=626967)からダウンロードしてください。  
   
  **[Azure Storage 接続マネージャー]**  
  既存の Azure ストレージ接続マネージャーを選択するか、Azure ストレージ アカウントを参照する接続マネージャーを新規作成します。  

@@ -7,12 +7,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 434345c505eaab389063fbc5b2c7fffc51708634
-ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
+ms.openlocfilehash: 56ac6b94c281cd97c53e290b5bc387131518bbcd
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192999"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235909"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上の SQL Server 2019 のリリース ノート
 
@@ -290,7 +290,7 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
           sudo systemctl restart mssql-server
           ```
 
-- インメモリ OLTP を使用する Windows 上の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースは、Linux 上の SQL Server 2019 (15.x) で復元することはできません。 インメモリ OLTP を使用する [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースを復元するには、最初に Windows 上でデータベースを [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]、SQL Server 2017、または SQL Server 2019 にアップグレードしてから、バックアップ/復元またはデタッチ/アタッチを使用して Linux 上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に移動します。
+- インメモリ OLTP を使用する Windows 上の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースは、Linux 上の SQL Server 2019 (15.x) で復元することはできません。 インメモリ OLTP を使用する [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースを復元するには、最初に Windows 上でデータベースを [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]、SQL Server 2017、または SQL Server 2019 にアップグレードしてから、バックアップ/復元またはデタッチ/アタッチを使用して Linux 上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に移動します。
 
 - ユーザー権限 **ADMINISTER BULK OPERATIONS** は、現時点で Linux ではサポートされていません。
 

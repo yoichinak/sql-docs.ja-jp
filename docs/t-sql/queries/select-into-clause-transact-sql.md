@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - INTO_TSQL
 - INSERT_INTO_TSQL
@@ -30,12 +30,12 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7afde8d9db8beedc46ea597dc47e31877d170942
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3ce1740def1f7d2ebd70ad611f3b7b489ca04f99
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172724"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235863"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
  *filegroup*    
  新しいテーブルを作成するファイル グループの名前を指定します。 指定されたファイル グループがデータベースに存在する必要があります。存在しない場合は、SQL Server エンジンからエラーがスローされます。   
  
- **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 以降。
+ **適用対象:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 以降。
   
 ## <a name="data-types"></a>データ型  
  FILESTREAM 属性は新しいテーブルに転送されません。 FILESTREAM BLOB がコピーされ、**varbinary(max)** BLOB として新しいテーブルに格納されます。 FILESTREAM 属性がない場合、**varbinary(max)** データ型は 2 GB までに制限されます。 FILESTREAM BLOB がこの値を超えると、エラー 7119 が発生して、ステートメントが中止されます。  
@@ -219,7 +219,7 @@ GO
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. PolyBase で作成された外部テーブルをインポートする  
  Hadoop または Azure ストレージからデータを永続的なストレージの SQL Server にインポートします。 `SELECT INTO` を使用して、SQL Server の永続記憶装置に、外部テーブルで参照されるデータをインポートします。 リレーショナル テーブルにその場を作成し、2 番目の手順で、テーブルの上に列ストア インデックスを作成します。  
   
- **適用対象**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用対象**: [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]。  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
@@ -236,7 +236,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-copying-the-data-from-one-table-to-another-and-create-the-new-table-on-a-specified-filegroup"></a>F. あるテーブルから別のテーブルにデータをコピーし、指定したファイルグループに新しいテーブルを作成する
 次の例は、新しいテーブルを別のテーブルのコピーとして作成し、ユーザーの既定のファイル グループとは異なる、指定したファイル グループに読み込む方法を示しています。
 
- **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 以降。
+ **適用対象:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 以降。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

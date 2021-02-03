@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 910db0887a50e12163ddeda927159f5e6c97b74b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 87ea13391e0495c695ccc057e842e2f6ef0c6e19
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169280"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237948"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 
@@ -213,7 +213,7 @@ GO
 ユーザー データベースによって使用されるものとは異なるディスクに、`tempdb` データベースを配置します。
 
 ## <a name="performance-improvements-in-tempdb-for-sql-server"></a>SQL Server の tempdb でのパフォーマンスの強化
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、`tempdb` のパフォーマンスが次の方法でさらに最適化されています。  
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、`tempdb` のパフォーマンスが次の方法でさらに最適化されています。  
   
 - 一時テーブルとテーブル変数はキャッシュされます。 キャッシュを使用することで、一時オブジェクトを削除および作成する操作を非常に高速に実行できます。 また、キャッシュによって、ページの割り当てやメタデータの競合も減少します。  
 - 割り当てページ ラッチ プロトコルが改善され、使用される `UP` (更新) ラッチの回数が減っています。  
@@ -226,9 +226,9 @@ GO
 `tempdb` でのパフォーマンス向上の詳細については、[TEMPDB - ファイルとトレース フラグと更新](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my)に関するブログ記事を参照してください。
 
 ## <a name="memory-optimized-tempdb-metadata"></a>メモリ最適化 tempdb メタデータ
-`tempdb` でのメタデータの競合は、従来、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上で実行されている多くのワークロードのスケーラビリティに対するボトルネックになっていました。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、[メモリ内データベース](../in-memory-database.md)機能ファミリの一部として、メモリ最適化 tempdb メタデータという新機能が導入されています。 
+`tempdb` でのメタデータの競合は、従来、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上で実行されている多くのワークロードのスケーラビリティに対するボトルネックになっていました。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では、[メモリ内データベース](../in-memory-database.md)機能ファミリの一部として、メモリ最適化 tempdb メタデータという新機能が導入されています。 
 
-この機能により、このボトルネックが実質的に除去され、tempdb の負荷が高いワークロードに新しいレベルのスケーラビリティが提供されます。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、一時テーブルのメタデータの管理に関連するシステム テーブルを、ラッチ フリーの非持続的メモリ最適化テーブルに移動できます。
+この機能により、このボトルネックが実質的に除去され、tempdb の負荷が高いワークロードに新しいレベルのスケーラビリティが提供されます。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では、一時テーブルのメタデータの管理に関連するシステム テーブルを、ラッチ フリーの非持続的メモリ最適化テーブルに移動できます。
 
 メモリ最適化 tempdb メタデータを使用する方法とそのタイミングの概要については、この 7 分間のビデオをご覧ください。
 

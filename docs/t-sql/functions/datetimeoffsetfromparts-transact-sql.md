@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DATETIMEOFFSETFROMPARTS_TSQL
 - DATETIMEOFFSETFROMPARTS
@@ -19,12 +19,12 @@ ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab37520d60c482afccb40bde7392de2515a79753
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9f8ce697a414d095e91214626b4ae4f8e1e2a83b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101196"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237918"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
   
 *分数* 引数によって異なります、 有効桁数 引数。 たとえば、precision の値が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。precision の値が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 precision 値がゼロの場合、fractions の値もゼロでなければなりません。それ以外の場合、`DATETIMEOFFSETFROMPARTS` はエラーを生成します。  
   
-この関数は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー以降のリモート処理に対応しています。 バージョンが [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前の場合、サーバーのリモート処理には対応していません。
+この関数は、リモート処理は実行することのできる [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] サーバー上とします。 [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] 下のバージョンのサーバーには、リモート処理されません。  
   
 ## <a name="examples"></a>例  
   

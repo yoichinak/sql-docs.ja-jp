@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 63e2f722305c2af448be7d49868eef72d1a9fb8d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1b484ea7b300fe53983dd26c5f7644abbebd2ca2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172694"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236814"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure でのデータベース ファイルのスナップショット バックアップ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "98172694"
   
  **ダウンロード**  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** に移動してください。  
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** に移動してください。  
   
--   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
+-   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
 ## <a name="using-azure-snapshots-to-back-up-database-files-stored-in-azure"></a>Azure のスナップショットを使用した Azure に格納されているデータベース ファイルのバックアップ  
   

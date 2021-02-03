@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - time_TSQL
 - time
@@ -23,12 +23,12 @@ ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f86da3e041d4edea7c6fcb71869414ba75544752
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7425622f808eccb983b73670b57ec3295de15fb3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472163"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237347"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 
@@ -108,7 +108,7 @@ ms.locfileid: "97472163"
   
  **time(n)** への変換では、時、分、秒がコピーされます。 変換先の有効桁数が、ソースの有効桁数よりも小さい場合、秒の小数部は変換先の有効桁数に合わせて切り上げられます。 次の例は、`time(4)` 値を `time(3)` 値に変換した結果を示しています。  
   
-```  
+```sql
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
 DECLARE @timeTo time(3) = @timeFrom;  
   
@@ -126,7 +126,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
   
  変換先が **datetime** の場合は、時、分、秒の値がコピーされ、日付部分が "1900-01-01" に設定されます。 **time(n)** 値の秒の小数部の有効桁数が 3 桁より大きい場合、**datetime** の結果は切り捨てられます。 次のコードは、`time(4)` 値を `datetime` 値に変換した結果を示しています。  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetime datetime= @time;  
 SELECT @time AS '@time', @datetime AS '@datetime';  
@@ -142,7 +142,7 @@ SELECT @time AS '@time', @datetime AS '@datetime';
   
  変換先が **smalldatetime** の場合は、日付が "1900-01-01" に設定され、時間と分の値が切り上げられます。 秒と秒の小数部は 0 に設定されます。 次のコードは、`time(4)` 値を `smalldatetime` 値に変換した結果を示しています。  
   
-```  
+```sql
 -- Shows rounding up of the minute value.  
 DECLARE @time time(4) = '12:15:59.9999';   
 DECLARE @smalldatetime smalldatetime= @time;    
@@ -169,7 +169,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
  変換先が **datetimeoffset(n)** の場合は、日付が "1900-01-01" に設定され、時刻がコピーされます。 タイム ゾーン オフセットが +00:00 に設定されます。 **time(n)** の値の秒の小数部の有効桁数が **datetimeoffset(n)** の値の有効桁数を超える場合、値はその桁数に合わせて切り上げられます。 次の例は、`time(4)` 値を `datetimeoffset(3)` 型に変換した結果を示しています。  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetimeoffset datetimeoffset(3) = @time;  
   
@@ -186,7 +186,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
  変換先が **datetime2(n)** の場合は、日付が "1900-01-01"' に設定され、時刻部分がコピーされ、タイム ゾーン オフセットが 00:00 に設定されます。 **datetime2(n)** 値の秒の小数部の有効桁数が **time(n)** 値を超える場合、値はその桁数に合わせて切り上げられます。  次の例は、`time(4)` 値を `datetime2(2)` 値に変換した結果を示しています。  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetime2 datetime2(3) = @time;  
   
@@ -221,7 +221,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 ### <a name="a-comparing-date-and-time-data-types"></a>A. date と time のデータ型を比較する  
  次の例では、文字列をそれぞれの **date** および **time** データ型にキャストした結果を比較します。  
   
-```  
+```sql
 SELECT   
      CAST('2007-05-08 12:35:29. 1234567 +12:15' AS time(7)) AS 'time'   
     ,CAST('2007-05-08 12:35:29. 1234567 +12:15' AS date) AS 'date'   

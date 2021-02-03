@@ -22,12 +22,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a445552a69033bec7564e05d7fc86d7416a5ff47
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ed532d22800cd10530ecc7db8595fcf75e3737da
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461833"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237943"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -239,7 +239,7 @@ LSN 148 はトランザクション ログの最後のレコードです。 LSN 
 * トランザクションにより多くの変更が加えられ、これをコミットせずにシステムをシャットダウンした場合、次にシステムを再起動したときの復旧フェーズは **[復旧間隔]** オプションで指定した時間よりもかなり長くかかることがあります。
 * ログは MinLSN を超えた位置で切り捨てることができないので、ログのサイズが非常に大きくなることがあります。 この現象は、自動チェックポイントのたびに通常はトランザクション ログが切り捨てられる単純復旧モデルをデータベースで使用している場合でも発生します。
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降と [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] では、長時間トランザクションの復旧と上記の問題は、[高速データベース復旧](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)を使うことで回避できます。  
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 以降と [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] では、長時間トランザクションの復旧と上記の問題は、[高速データベース復旧](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)を使うことで回避できます。  
 
 ### <a name="replication-transactions"></a>レプリケーションのトランザクション
 ログ リーダー エージェントは、トランザクション レプリケーション用に構成した各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーします。 アクティブなログには、レプリケーション用にマークされていて、まだディストリビューション データベースに配信されていないすべてのトランザクションが含まれている必要があります。 これらのトランザクションが時間どおりにレプリケートされない場合、そのことが原因でログを切り捨てられなくなる場合もあります。 詳細については、「 [Transactional Replication](../relational-databases/replication/transactional/transactional-replication.md)」 (トランザクション レプリケーション) を参照してください。

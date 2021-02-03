@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - OBJECTPROPERTY
 - OBJECTPROPERTY_TSQL
@@ -23,12 +23,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 652d705c92aede4592a079733c8dd281e9dd8e91
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c268fc5650495abec05abafee219c045189ba17b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170534"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237419"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -159,7 +159,7 @@ OBJECTPROPERTY ( id , property )
 |TableUpdateTrigger|テーブル|テーブルに UPDATE トリガーがあります。<br /><br /> > 1 = 指定された種類の最初のトリガーの ID。|  
 |TableUpdateTriggerCount|テーブル|テーブルには指定された数の UPDATE トリガーがあります。<br /><br /> > 0 = UPDATE トリガーの数。|  
 |TableHasColumnSet|テーブル|テーブルに列セットがあります。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。|  
-|TableTemporalType|テーブル|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。<br /><br /> テーブルの種類を指定します。<br /><br /> 0 = 非テンポラル テーブル<br /><br /> 1 = システムのバージョン情報のテーブルの履歴テーブル<br /><br /> 2 = システムのバージョン情報のテンポラル テーブル|  
+|TableTemporalType|テーブル|**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降。<br /><br /> テーブルの種類を指定します。<br /><br /> 0 = 非テンポラル テーブル<br /><br /> 1 = システムのバージョン情報のテーブルの履歴テーブル<br /><br /> 2 = システムのバージョン情報のテンポラル テーブル|  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  

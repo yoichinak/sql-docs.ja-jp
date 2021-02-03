@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fa041d70aa80d44194859c92ad58f518cfa14c45
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: c925c4a8361b54ff563b6a1443e392f0ca392df9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783372"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237271"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は Microsoft Azure BLOB ストレージへの SQL Server バックアップを管理および自動化します。 SQL Server でデータベースのトランザクション ワークロードに基づいて、バックアップ スケジュールを決定するように選択できます。 また、詳細オプションを使用して、スケジュールを定義することもできます。 保有期間の設定で、Azure BLOB ストレージでのバックアップの保存期間を決定します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] では、指定された保有期間の特定の時点への復元がサポートされています。  
   
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]以降、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] のプロシージャと基になる動作が変更されています。 詳細については、[SQL Server 2014 マネージド バックアップの設定の SQL Server 2016 への移行](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)に関するページを参照してください。  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]以降、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] のプロシージャと基になる動作が変更されています。 詳細については、[SQL Server 2014 マネージド バックアップの設定の SQL Server 2016 への移行](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)に関するページを参照してください。  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は、Microsoft Azure 仮想マシンで実行されている SQL Server インスタンスに推奨されます。  

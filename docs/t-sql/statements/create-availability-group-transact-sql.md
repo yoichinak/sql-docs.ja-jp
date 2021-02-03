@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - AVAILABILITY GROUP
 - CREATE_AVAILABILITY_TSQL
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fde4d33f9de2bd3103d1c48ad1a80fe211c8e1a3
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1ba1a89e21c7eb57c2f3dd603e35472d56ab62d7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170344"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236285"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -180,13 +180,13 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   この設定の詳細については、「[データベース レベルの正常性検出オプション](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)」を参照してください。 
   
  DTC_SUPPORT  **=** { PER_DB | NONE }  
- データベースをまたがるトランザクションが分散トランザクション コーディネーター (DTC) でサポートされるかどうかを指定します。 データベースにまたがるトランザクションは、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降でのみサポートされます。 PER_DB では、これらのトランザクションをサポートする可用性グループが作成されます。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。  
+ データベースをまたがるトランザクションが分散トランザクション コーディネーター (DTC) でサポートされるかどうかを指定します。 データベースにまたがるトランザクションは、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降でのみサポートされます。 PER_DB では、これらのトランザクションをサポートする可用性グループが作成されます。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。  
   
  BASIC  
- 基本的な可用性グループを作成するために使用します。 基本的な可用性グループは、1 つのデータベースと 2 つのレプリカ (プライマリ レプリカとセカンダリ レプリカ) に制限されます。 このオプションは、SQL Server Standard Edition の非推奨のデータベース ミラーリング機能に代わるものです。 詳細については、「[基本的な可用性グループ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。 基本的な可用性グループは、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降でサポートされています。  
+ 基本的な可用性グループを作成するために使用します。 基本的な可用性グループは、1 つのデータベースと 2 つのレプリカ (プライマリ レプリカとセカンダリ レプリカ) に制限されます。 このオプションは、SQL Server Standard Edition の非推奨のデータベース ミラーリング機能に代わるものです。 詳細については、「[基本的な可用性グループ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。 基本的な可用性グループは、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降でサポートされています。  
 
  DISTRIBUTED  
- 分散型可用性グループを作成するために使用します。 このオプションは、個別の Windows Server フェールオーバー クラスター内の 2 つの可用性グループを接続するために AVAILABILITY GROUP ON パラメーターと共に使用されます。  詳細については、「[Distributed Availability Groups &#40;Always On Availability Groups&#41; (分散型可用性グループ (Always On 可用性グループ))](../../database-engine/availability-groups/windows/distributed-availability-groups.md)」を参照してください。 分散型可用性グループは、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降でサポートされています。 
+ 分散型可用性グループを作成するために使用します。 このオプションは、個別の Windows Server フェールオーバー クラスター内の 2 つの可用性グループを接続するために AVAILABILITY GROUP ON パラメーターと共に使用されます。  詳細については、「[Distributed Availability Groups &#40;Always On Availability Groups&#41; (分散型可用性グループ (Always On 可用性グループ))](../../database-engine/availability-groups/windows/distributed-availability-groups.md)」を参照してください。 分散型可用性グループは、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降でサポートされています。 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  SQL Server 2017 で導入されました。 コミットに必要な同期セカンダリ レプリカの最小数を設定するために使用します。この数を超えると、プライマリがトランザクションをコミットします。 セカンダリ レプリカの最小数についてトランザクション ログが更新されるまで、SQL Server トランザクションが確実に待機するようになります。 既定値は 0 であり、SQL Server 2016 と同じように動作します。 最小値は 0 です。 最大値はレプリカの数から 1 を引いた値になります。 このオプションは、同期コミット モードのレプリカに関連しています。 レプリカが同期コミット モードのとき、セカンダリ同期レプリカに対する書き込みがレプリカ データベース トランザクション ログにコミットされるまで、プライマリ レプリカへの書き込みは待機します。 セカンダリ同期レプリカをホストする SQL Server が応答を停止した場合、プライマリ レプリカをホストする SQL Server はそのセカンダリ レプリカを同期未実行としてマークし、続行します。 応答のないデータベースがオンラインに復帰すると、"未同期" 状態になります。プライマリが再度同期可能になるまで、レプリカに異常のマークが付きます。 この設定により、レプリカの最小数で各トランザクションがコミットされるまで、プライマリ レプリカは確実に待機するようになります。 レプリカの最小数が使用できない場合、プライマリのコミットは失敗します。 クラスター タイプ `EXTERNAL` の場合、可用性グループがクラスター リソースに追加されると、設定が変更されます。 「[可用性グループの構成の高可用性とデータの保護](../../linux/sql-server-linux-availability-group-ha.md)」を参照してください。
@@ -356,7 +356,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
  読み取り可能なセカンダリ レプリカをホストする可能性があるすべてのサーバー インスタンスを指定するには、コンマ区切りリストを使用します。 読み取り専用のルーティングは、リストで指定されているサーバー インスタンスの順序に従います。 レプリカの読み取り専用ルーティング リストにレプリカのホスト サーバー インスタンスを含める場合、通常は一覧の最後にこのサーバー インスタンスを配置することをお勧めします。読み取りを目的とした接続が使用できる場合に、これがセカンダリ レプリカに移動するためです。  
   
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、読み取り可能なセカンダリ レプリカ間で読み取りを目的とした要求の負荷を分散することができます。 読み取り専用ルーティング リスト内のかっこの入れ子になったセットにレプリカを配置することで、これを指定します。 詳細と例については、「[読み取り専用レプリカ間の負荷分散の構成](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)」を参照してください。  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、読み取り可能なセカンダリ レプリカ間で読み取りを目的とした要求の負荷を分散することができます。 読み取り専用ルーティング リスト内のかっこの入れ子になったセットにレプリカを配置することで、これを指定します。 詳細と例については、「[読み取り専用レプリカ間の負荷分散の構成](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)」を参照してください。  
   
  NONE  
  この可用性レプリカがプライマリ レプリカの場合は、読み取り専用のルーティングをサポートしないことを指定します。 これは既定の動作です。  

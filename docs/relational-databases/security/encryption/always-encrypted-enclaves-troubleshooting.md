@@ -11,12 +11,12 @@ ms.topic: how-to
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c7bffa36b256b959048953a5438fec6a336c3acc
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: dc6bcbecdb29cdf0cf1fca8c41e971463bb0d6b9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534886"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236360"
 ---
 # <a name="troubleshoot-common-issues-for-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted の一般的な問題をトラブルシューティングする
 
@@ -29,7 +29,7 @@ ms.locfileid: "98534886"
 セキュリティで保護されたエンクレーブを使用してステートメントを実行するには、Always Encrypted を有効にし、データベース接続の構成証明 URL を指定する必要があります。詳細については、「[セキュリティで保護されたエンクレーブを使用してステートメントを実行するための前提条件](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves)」を参照してください。 ただし、構成証明 URL を指定しても、[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] のデータベースまたはターゲットである [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] インスタンスがセキュリティで保護されたエンクレーブをサポートしていない場合、または正しく構成されていない場合、接続は失敗します。
 
 - [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] を使用している場合は、データベースで [DC シリーズ](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)のハードウェア構成が使用されていることを確認してください。 詳細については、「[Azure SQL データベースに対して Intel SGX を有効にする](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)」を参照してください。
-- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] を使用している場合は、セキュリティで保護されたエンクレーブがインスタンスに対して正しく構成されていることを確認してください。 詳細については、「[SQL Server でセキュリティで保護されたエンクレーブを構成する](always-encrypted-enclaves-configure-enclave-type.md)」を参照してください。
+- [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] を使用している場合は、セキュリティで保護されたエンクレーブがインスタンスに対して正しく構成されていることを確認してください。 詳細については、「[SQL Server でセキュリティで保護されたエンクレーブを構成する](always-encrypted-enclaves-configure-enclave-type.md)」を参照してください。
 
 ## <a name="attestation-errors-when-using-microsoft-azure-attestation"></a>Microsoft Azure Attestation 使用時の構成証明エラー
 
@@ -61,7 +61,7 @@ ms.locfileid: "98534886"
 ## <a name="attestation-errors-when-using-host-guardian-service"></a>ホスト ガーディアン サービス使用時の構成証明エラー
 
 > [!NOTE]
-> このセクションは [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] のみに適用されます。
+> このセクションは [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] のみに適用されます。
 
 クライアント ドライバーから [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] に実行対象の T-SQL ステートメントが送信される前に、ドライバーによって次のエンクレーブ構成証明ワークフローが、ホスト ガーディアン サービス (HGS) を使用してトリガーされます。
 

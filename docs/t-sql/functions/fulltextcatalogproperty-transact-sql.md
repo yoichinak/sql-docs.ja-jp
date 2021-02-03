@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FULLTEXTCATALOGPROPERTY_TSQL
 - FULLTEXTCATALOGPROPERTY
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 57e53c26b7f1797daf6a1ccc53f7578eabda734a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d49757197a66a0af05a0115cf4b16d6d589acc13
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98087390"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237497"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のフルテキスト カタログ プロパティについての情報を返します。  
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のフルテキスト カタログ プロパティについての情報を返します。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,7 +71,7 @@ _property_
 ## <a name="exceptions"></a>例外  
 エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。  
   
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、ユーザーはセキュリティ保護可能なリソースのメタデータのみを表示できます。 セキュリティ保護可能なリソースは、自身が所有しているリソースか、アクセス許可を持っているリソースです。 そのため、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (FULLTEXTCATALOGPROPERTY など) が NULL を返す可能性があります。 詳しくは、「[sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)」をご覧ください。  
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] では、ユーザーはセキュリティ保護可能なリソースのメタデータのみを表示できます。 セキュリティ保護可能なリソースは、自身が所有しているリソースか、アクセス許可を持っているリソースです。 そのため、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (FULLTEXTCATALOGPROPERTY など) が NULL を返す可能性があります。 詳しくは、「[sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)」をご覧ください。  
   
 ## <a name="remarks"></a>解説  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') では、[sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md) で示されているように、状態が 4 または 6 のフラグメントのみを参照します。 これらのフラグメントは、論理インデックスの一部です。 したがって、**IndexSize** プロパティは論理インデックス サイズのみを返します。 

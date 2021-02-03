@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 303b560a40d5c87e49a8d5d2693aa0f814d03f45
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 05f33d170224ee079b4d23598e88e1802bebfbbb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170514"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237680"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -695,7 +695,7 @@ sql_handle
 * 実行プランは頻繁に参照されるため、そのコストがゼロになることはありません。 メモリ負荷が存在せず、現在のコストがゼロでない場合、実行プランはプラン キャッシュに残り、削除されません。
 * アドホック実行プランは挿入され、メモリ負荷が生じるまでは再度参照されることはありません。 アドホック実行プランは、現在のコストがゼロで初期化されます。そのため、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は実行プランを検証するときに現在のコストがゼロであると認識し、プラン キャッシュから実行プランを削除します。 メモリ負荷が存在しない場合、アドホック実行プランは、現在のコストがゼロでプラン キャッシュに残ります。
 
-キャッシュから 1 つまたはすべてのプランを手動で削除するには、 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)を使用します。 [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) はプラン キャッシュを含むすべてのキャッシュの消去に使用できます。 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 以降は、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` を使用してスコープ内のデータベースのプロシージャ (プラン) キャッシュをクリアします。 [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) および [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) を使用して一部の構成設定を変更すると、プラン キャッシュからプランが削除されることがあります。 これらの構成設定の一覧については、「[DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks)」の記事の「注釈」を参照してください。 このような構成の変更があると、次の情報メッセージがエラー ログに記録されます。
+キャッシュから 1 つまたはすべてのプランを手動で削除するには、 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)を使用します。 [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) はプラン キャッシュを含むすべてのキャッシュの消去に使用できます。 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] 以降は、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` を使用してスコープ内のデータベースのプロシージャ (プラン) キャッシュをクリアします。 [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) および [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) を使用して一部の構成設定を変更すると、プラン キャッシュからプランが削除されることがあります。 これらの構成設定の一覧については、「[DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks)」の記事の「注釈」を参照してください。 このような構成の変更があると、次の情報メッセージがエラー ログに記録されます。
 
 > `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
 
@@ -1023,7 +1023,7 @@ WHERE ProductID = 63;
 
 並列処理を妨げる構造は次のとおりです。
 -   **スカラー UDF**        
-    スカラー ユーザー定義関数について詳しくは、「[ユーザー定義関数の作成](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)」をご覧ください。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]には、これらの関数をインライン化する機能があり、クエリ処理中の並列処理の使用をロック解除します。 スカラー UDF のインライン化について詳しくは、「[SQL データベースでのインテリジェントなクエリ処理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)」をご覧ください。
+    スカラー ユーザー定義関数について詳しくは、「[ユーザー定義関数の作成](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)」をご覧ください。 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 以降の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]には、これらの関数をインライン化する機能があり、クエリ処理中の並列処理の使用をロック解除します。 スカラー UDF のインライン化について詳しくは、「[SQL データベースでのインテリジェントなクエリ処理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)」をご覧ください。
     
 -   **リモート クエリ**        
     リモート クエリについて詳しくは、「[プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)」をご覧ください。
@@ -1098,7 +1098,7 @@ WHERE ProductID = 63;
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] およびデータベース互換性レベル 110 以降、`SELECT … INTO` ステートメントは並列実行できるようになりました。 他の形式の挿入演算子は、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] の説明と同じように機能します。
 
-[!INCLUDE[ssSQL15](../includes/sssql16-md.md)] およびデータベース互換性レベル 130 以降、ヒープまたはクラスター化列ストア インデックス (CCI) に挿入し、TABLOCK ヒントを使用するときに、`INSERT … SELECT` ステートメントを並列実行できるようになりました。 ローカル一時テーブル (# プレフィックスで識別されます) とグローバル一時テーブル (## プレフィックスで識別されます) への挿入は、TABLOCK ヒントを使用した並列処理にも有効です。 詳細については、「[INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)」を参照してください。
+[!INCLUDE[sssql15-md](../includes/sssql16-md.md)] およびデータベース互換性レベル 130 以降、ヒープまたはクラスター化列ストア インデックス (CCI) に挿入し、TABLOCK ヒントを使用するときに、`INSERT … SELECT` ステートメントを並列実行できるようになりました。 ローカル一時テーブル (# プレフィックスで識別されます) とグローバル一時テーブル (## プレフィックスで識別されます) への挿入は、TABLOCK ヒントを使用した並列処理にも有効です。 詳細については、「[INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)」を参照してください。
 
 静的カーソルとキーセット ドリブン カーソルは、並列実行プランによって作成できます。 ただし、動的カーソルの動作は、直列実行の場合だけ有効です。 クエリ オプティマイザーは、動的カーソルの一部であるクエリに対しては必ず直列実行プランを生成します。
 
@@ -1108,7 +1108,7 @@ WHERE ProductID = 63;
 1.  サーバー レベル。**並列処理の最大限度 (MAXDOP)** の [サーバー構成オプション](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
     > [!NOTE]
-    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] では、インストール プロセス中に MAXDOP サーバー構成オプションを設定するための自動推奨事項が導入されています。 セットアップのユーザー インターフェイスでは、推奨設定を受け入れることも、独自の値を入力することもできます。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](../sql-server/install/instance-configuration.md#maxdop)」を参照してください。
+    > [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] では、インストール プロセス中に MAXDOP サーバー構成オプションを設定するための自動推奨事項が導入されています。 セットアップのユーザー インターフェイスでは、推奨設定を受け入れることも、独自の値を入力することもできます。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](../sql-server/install/instance-configuration.md#maxdop)」を参照してください。
 
 2.  ワークロード レベル。**MAX_DOP** [Resource Governor ワークロード グループ構成オプション](../t-sql/statements/create-workload-group-transact-sql.md)を使用します。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
@@ -1273,7 +1273,7 @@ OLE DB データ ソースにリンク サーバーとしてアクセスする�
 
 > [!NOTE]
 > [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] までは、パーティション テーブルおよびインデックスは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise、Developer および Evaluation Edition でのみサポートされます。   
-> [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 以降では、パーティション テーブルおよびインデックスは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition でもサポートされます。 
+> [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 以降では、パーティション テーブルおよびインデックスは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition でもサポートされます。 
 
 ### <a name="new-partition-aware-seek-operation"></a>新しいパーティション対応のシーク操作
 

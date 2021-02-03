@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - Join Hint
 - Join_Hint_TSQL
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37f988a345bcc4280f6e76f039049ca56a4f6a81
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3d95b42433c45305aae60888dabe827a900f42c7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116307"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235935"
 ---
 # <a name="hints-transact-sql---join"></a>ヒント (Transact-SQL) - Join
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  結合ヒントにより、クエリ オプティマイザーで、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の 2 つのテーブル間の結合方法を設定します。 結合および結合の構文に関する一般的な情報については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
+  結合ヒントにより、クエリ オプティマイザーで、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の 2 つのテーブル間の結合方法を設定します。 結合および結合の構文に関する一般的な情報については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   
 > [!CAUTION]  
 >  通常、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーでは、クエリにとって最適な実行プランが選択されるため、ヒントは、経験を積んだ開発者やデータベース管理者が最後の手段としてのみ使用することをお勧めします。

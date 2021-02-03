@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - EXEC
 - EXECUTE_TSQL
@@ -32,12 +32,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ed27623969b2390f1d5b5b36b51a4c2eb5129e7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 32a9e7f42747c6ddf5ef92f8bde260b4a0b234f0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100423"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236013"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -374,7 +374,7 @@ Execute a character string
  WITH \<execute_option>  
  実行オプションは次のとおりです。 RESULT SETS オプションは INSERT...EXEC ステートメントで指定できません。  
  
-AT DATA_SOURCE data_source_name **適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降
+AT DATA_SOURCE data_source_name **適用対象**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] 以降
   
  *command_string* を *data_source_name* に対して実行し、結果が返された場合はそれをクライアントに返します。 *data_source_name* は、データベース内の既存の EXTERNAL DATA SOURCE 定義を参照する必要があります。 SQL Server をポイントするデータ ソースのみがサポートされます。 さらに、コンピューティング プールをポイントする SQL Server ビッグ データ クラスター データ ソースの場合、データ プールまたは記憶域プールがサポートされます。 データ ソースは [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md) を使用して定義されます。  
   
@@ -744,7 +744,7 @@ WITH RESULT SETS
   
  次の例では、SQL Server インスタンスをポイントする外部データ ソースにコマンド文字列を渡します。 
   
-**適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降
+**適用対象**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] 以降
   
 ```sql    
 EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
@@ -755,7 +755,7 @@ GO
 
  次の例では、SQL Server ビッグ データ クラスターのコンピューティング プールをポイントする外部データ ソースにコマンド文字列を渡します。 この例では SQL Server ビッグ データ クラスターのコンピューティング プールに対してデータ ソース `SqlComputePool` を作成し、そのデータ ソースに対して `SELECT` ステートメントを実行します。 
   
-**適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降
+**適用対象**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] 以降
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlComputePool 
@@ -767,7 +767,7 @@ GO
 ### <a name="q-using-execute-with-at-data_source-data_source_name-to-query-data-pool-in-sql-server-big-data-cluster"></a>Q. EXECUTE と AT DATA_SOURCE data_source_name を使用して SQL Server ビッグ データ クラスターのデータ プールに対してクエリを実行する 
  次の例では、SQL Server ビッグ データ クラスターのコンピューティング プールをポイントする外部データ ソースにコマンド文字列を渡します。 この例では SQL Server ビッグ データ クラスターのデータ プールに対してデータ ソース `SqlDataPool` を作成し、そのデータ ソースに対して `SELECT` ステートメントを実行します。 
   
-**適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降
+**適用対象**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] 以降
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlDataPool 
@@ -780,7 +780,7 @@ GO
 
  次の例では、SQL Server ビッグ データ クラスターのコンピューティング プールをポイントする外部データ ソースにコマンド文字列を渡します。 この例では SQL Server ビッグ データ クラスターのデータ プールに対してデータ ソース `SqlStoragePool` を作成し、そのデータ ソースに対して `SELECT` ステートメントを実行します。 
   
-**適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降
+**適用対象**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] 以降
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlStoragePool

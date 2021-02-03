@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ebedb1071dc5953bc78918f928f0f53a7145e282
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: fdb18826c75e55f41e3c02a97e2f8374a22778b3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98167854"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237559"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>メモリ最適化テーブルのストレージの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98167854"
 -   スペースが許す場合は、通常、チェックポイント ファイルはすべてのコンテナーに均等に分散されます。 SQL server 2014 では、均一な分散を実現するには奇数個のコンテナーが必要です。2016 以降では、コンテナーが奇数または偶数のどちらでも、均一に分散されます。
   
 ## <a name="encryption"></a>暗号化  
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降のバージョンでは、データベース上で Transparent Data Encryption (TDE) を有効にする際に、メモリ最適化テーブルのストレージは保存時に暗号化されます。 詳細については、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、データベースで TDE が有効になっている場合でも、チェックポイント ファイルは暗号化されません。
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降のバージョンでは、データベース上で Transparent Data Encryption (TDE) を有効にする際に、メモリ最適化テーブルのストレージは保存時に暗号化されます。 詳細については、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、データベースで TDE が有効になっている場合でも、チェックポイント ファイルは暗号化されません。
 
  [持続性のない](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md) (SCHEMA_ONLY) メモリ最適化テーブルのデータは、常にディスクに書き込まれません。 そのため、TDE は、このようなテーブルには適用されません。
   

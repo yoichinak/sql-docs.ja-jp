@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 481493a50fdefc22f6eb4d77feb13cfc4848388d
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 73a1c9f3a39ce51ce6ecc347af2e2eb0fb173fb6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534651"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237299"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成して使用する 
 
@@ -33,7 +33,7 @@ ms.locfileid: "98534651"
 
 セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する前に、データベースで確実にセキュリティで保護されたエンクレーブを利用できるように環境を構成する必要があります。 また、[エンクレーブの構成証明](always-encrypted-enclaves.md#secure-enclave-attestation)を設定する必要があります。 
 
-環境を設定するためのプロセスは、[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] と [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] のどちらを使用しているかによって異なります。
+環境を設定するためのプロセスは、[!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] と [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] のどちらを使用しているかによって異なります。
 
 ### <a name="set-up-the-secure-enclave-and-attestation-in-ssnoversion-md"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] でセキュリティで保護されたエンクレーブと構成証明を設定する
 
@@ -46,9 +46,9 @@ ms.locfileid: "98534651"
 ### <a name="set-up-the-secure-enclave-and-attestation-in-sssdsfull"></a>[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] でセキュリティで保護されたエンクレーブと構成証明を設定する
 
 詳しくは、次の記事を参照してください。
-- [[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] で Intel SGX エンクレーブと構成証明を計画する](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-plan)
-- [Azure SQL Database に対して Intel SGX を有効にする](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-enable-sgx)
-- [Azure SQL Database 論理サーバー用に Azure Attestation を構成する](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-configure-attestation)
+- [[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] で Intel SGX エンクレーブと構成証明を計画する](/azure/azure-sql/database/always-encrypted-enclaves-plan)
+- [Azure SQL Database に対して Intel SGX を有効にする](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)
+- [Azure SQL Database 論理サーバー用に Azure Attestation を構成する](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation)
 
 ## <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する
 詳しくは、以下の記事を参照してください。

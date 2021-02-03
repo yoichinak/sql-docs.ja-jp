@@ -14,12 +14,12 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc483082fe25fbed8a8e989544e189ccdc81bb73
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: a65e01d5d4e43e25d122c614508f8f9c1c05bf39
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596240"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236187"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -100,7 +100,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `AUTHORIZATION` は、 `GRANT`型、 `REVOKE` 型、または `DENY`型のいずれかである必要があります。  
   
--   `PERMISSION` は許可または禁止されるアクションを確立します。 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] では、230 の権限を指定できます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] の権限の数が少なくなっています。 権限は、「[アクセス許可 &#40;データベース エンジン&#41;](../../../relational-databases/security/permissions-database-engine.md)」のトピックと以下のチャートで確認できます。  
+-   `PERMISSION` は許可または禁止されるアクションを確立します。 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] では、230 の権限を指定できます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] の権限の数が少なくなっています。 権限は、「[アクセス許可 &#40;データベース エンジン&#41;](../../../relational-databases/security/permissions-database-engine.md)」のトピックと以下のチャートで確認できます。  
   
 -   `ON SECURABLE::NAME` は、セキュリティ保護可能な型 (サーバー、サーバー オブジェクト、データベース、データベース オブジェクト) とその名前です。 一部の権限は、不明瞭でありコンテキストで不適切であるため、 `ON SECURABLE::NAME` を必要としません。 たとえば、`CREATE TABLE` の権限は `ON SECURABLE::NAME` 句を必要としません。 (たとえば `GRANT CREATE TABLE TO Mary;` は Mary にテーブルの作成を許可します)。  
   
@@ -157,7 +157,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  上に示した最初の権限 (`GRANT SELECT ON OBJECT::Region TO Ted;`) が最も詳細であり、 `SELECT`を付与する最小のステートメントです。 下位のオブジェクトに対する権限はありません。 可能な限り最小の権限を付与することをお勧めしますが、付与システムの簡略化のためには高いレベルで付与するほうが適切です。 このため、Ted がスキーマ全体への権限を必要とする場合、 `SELECT` をテーブルまたはビュー レベルで複数回付与するのではなく、 `SELECT` をスキーマ レベルで 1 回付与します。 データベースの設計は、戦略の成功に大きく関わってきます。 一意の権限を必要とするオブジェクトが単一のスキーマに含まれるようにデータベースを設計する際には、この戦略が最適です。  
   
 ## <a name="list-of-permissions"></a>権限の一覧  
- [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] には 230 の権限があります。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] には 219 の権限があります。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] には 214 の権限があります。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] には 195 の権限があります。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]、 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] にはそれぞれ、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に適用されない権限が含まれているものの、データベース エンジンの一部のみを公開しているため、権限の数が少なくなっています。 
+ [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] には 230 の権限があります。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] には 219 の権限があります。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] には 214 の権限があります。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] には 195 の権限があります。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]、 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] にはそれぞれ、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に適用されない権限が含まれているものの、データベース エンジンの一部のみを公開しているため、権限の数が少なくなっています。 
  
  [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  

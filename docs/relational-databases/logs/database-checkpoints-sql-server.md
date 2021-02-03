@@ -28,12 +28,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c98d84c8e3bc08bfae13c149cfc0487c57e40008
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 259e58dcf9ef713a9bb8787a63ac8cbf3a349c88
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171574"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237728"
 ---
 # <a name="database-checkpoints-sql-server"></a>データベース チェックポイント (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -107,11 +107,11 @@ ms.locfileid: "98171574"
 ただし、間接チェックポイントが構成されたデータベースでオンライン トランザクション ワークロードが生じると、パフォーマンスが低下することがあります。 これは、間接チェックポイントで使用されるバックグラウンド ライターによって、サーバー インスタンスの合計書き込みロードが増える場合があるためです。  
  
 > [!IMPORTANT]
-> 間接チェックポイントは、Model データベースや TempDB データベースなど、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] で作成された新しいデータベースの既定の動作です。          
+> 間接チェックポイントは、Model データベースや TempDB データベースなど、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] で作成された新しいデータベースの既定の動作です。          
 > インプレース アップグレードまたは以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から復元されたデータベースは、間接チェックポイントを使用するように明示的に変更しない限り、以前の自動チェックポイントを使用します。       
 
 ### <a name="improved-indirect-checkpoint-scalability"></a><a name="ctp23"></a> 間接チェックポイントのスケーラビリティの向上
-[!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] より前のバージョンでは、`tempdb` のように多数のダーティ ページを生成するデータベースがあると、応答停止スケジューラ エラーが発生することがあります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では間接チェックポイントのスケーラビリティが向上しており、`UPDATE`/`INSERT` のワークロードが大きいデータベースでのエラー回避に役立つはずです。
+[!INCLUDE[ssNoVersion](../../includes/sssql19-md.md)] より前のバージョンでは、`tempdb` のように多数のダーティ ページを生成するデータベースがあると、応答停止スケジューラ エラーが発生することがあります。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では間接チェックポイントのスケーラビリティが向上しており、`UPDATE`/`INSERT` のワークロードが大きいデータベースでのエラー回避に役立つはずです。
   
 ##  <a name="internal-checkpoints"></a><a name="EventsCausingChkpt"></a> 内部チェックポイント  
 内部チェックポイントは、ディスク イメージがログの現在の状態と一致することを保証するために、さまざまなサーバー コンポーネントによって生成されます。 内部チェックポイントは、次のイベントに応答して生成されます。  

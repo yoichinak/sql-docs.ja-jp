@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER_USER_TSQL
 - ALTER USER
@@ -26,12 +26,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21314c02ddb58aabcee33257fc4d8d44f56b9da7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 9f10913c23d8ab4b395bea53d1aadb7fbd8d3009
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170574"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237016"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -114,7 +114,7 @@ NAME = newUserName
 > [!NOTE]
 > このオプションは包含データベースでのみ指定でき、また、包含ユーザーに対してのみ指定できます。
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] **適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
 
  一括コピー操作でのサーバーの暗号化メタデータ チェックを抑制します。 これによりユーザーは、データを暗号化解除することなく、テーブルまたはデータベース間で暗号化データを一括コピーできます。 既定値は OFF です。
 
@@ -302,7 +302,7 @@ ALTER USER userName
 > [!NOTE]
 > このオプションは、包含ユーザーに対してのみ使用できます。
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] **適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
 
  一括コピー操作でのサーバーの暗号化メタデータ チェックを抑制します。 これによりユーザーは、データを暗号化解除することなく、テーブルまたはデータベース間で暗号化データを一括コピーできます。 既定値は OFF です。
 

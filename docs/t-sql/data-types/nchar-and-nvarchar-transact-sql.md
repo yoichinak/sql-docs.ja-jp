@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a33a9bfe6409c08eba3d3f212c95619634699a55
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 038cb4e80af0423a5581ef2b7b51c1bbc54bb5cc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480543"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237632"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar および nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "97480543"
   
 SET ANSI_PADDING が ON にでは常に **nchar** と **nvarchar** です。 SET ANSI_PADDING OFF には適用されませんが、 **nchar** または **nvarchar** データ型。
   
-Unicode 文字の文字列定数には、プレフィックスとして文字 N を付けて UCS-2 または UTF-16 の入力を通知します。これは SC 照合順序が使用されているか使用されていないかによって異なります。 プレフィックス N がない場合、文字列はデータベースの既定のコード ページに変換され、特定の文字が認識されない場合があります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、UTF-8 が有効になっている照合順序を使用する場合、既定のコード ページでは UNICODE UTF-8 文字セットを格納させることができます。 
+Unicode 文字の文字列定数には、プレフィックスとして文字 N を付けて UCS-2 または UTF-16 の入力を通知します。これは SC 照合順序が使用されているか使用されていないかによって異なります。 プレフィックス N がない場合、文字列はデータベースの既定のコード ページに変換され、特定の文字が認識されない場合があります。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降、UTF-8 が有効になっている照合順序を使用する場合、既定のコード ページでは UNICODE UTF-8 文字セットを格納させることができます。 
  
 > [!NOTE]  
 > 文字列定数にプレフィックスとして文字 N を付けたときに、変換する定数の長さが nvarchar 文字列データ型の最大長 (4,000) を超えない場合、暗黙的な変換によって UCS-2 または UTF-16 の文字列が生成されます。 それ以外の場合、暗黙的な変換では大きな値の nvarchar(max) が生成されます。

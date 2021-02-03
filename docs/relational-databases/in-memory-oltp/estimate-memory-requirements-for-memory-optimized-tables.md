@@ -12,12 +12,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c40cb726e20f015a46cd808200ebbe67d9c1dc10
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: d5372743bc76fc30c3fb023e38e5ec14630b7011
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98168430"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237207"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "98168430"
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>メモリ要件を見積もるための基本的なガイダンス
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]より、メモリ最適化テーブルのサイズに制限がなくなりました。ただし、テーブルはメモリ内に収まる必要があります。  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で SCHEMA_AND_DATA テーブルにサポートされるデータ サイズは 256 GB です。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]より、メモリ最適化テーブルのサイズに制限がなくなりました。ただし、テーブルはメモリ内に収まる必要があります。  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で SCHEMA_AND_DATA テーブルにサポートされるデータ サイズは 256 GB です。
 
 メモリ最適化テーブルのサイズは、データのサイズに行ヘッダーの一部のオーバーヘッドを加えたものに相当します。 ディスク ベース テーブルをメモリ最適化テーブルに移行する場合、メモリ最適化テーブルのサイズは、大まかには元のディスク ベース テーブルのクラスター化インデックスまたはヒープのサイズに相当します。
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - OBJECTPROPERTYEX
 - OBJECTPROPERTYEX_TSQL
@@ -23,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 371e5230707c4b82680213689f8e4cd4ddc45986
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 611d0f17ae0ed8cd0e7679d149b186563f802ba4
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170294"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237474"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -165,7 +165,7 @@ OBJECTPROPERTYEX ( id , property )
 |UserDataAccess|関数、ビュー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンス内にある、ユーザー データやユーザー テーブルにオブジェクトがアクセスします。<br /><br /> 1 = 読み取り<br /><br /> 0 = なし<br /><br /> 基本データ型: **int**|  
 |TableHasColumnSet|テーブル|テーブルに列セットがあります。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。|  
 |カーディナリティ|テーブル (システムまたはユーザー定義)、ビュー、またはインデックス|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 指定されたオブジェクト内の行数。|  
-|TableTemporalType|テーブル|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。<br /><br /> テーブルの種類を指定します。<br /><br /> 0 = 非テンポラル テーブル<br /><br /> 1 = システムのバージョン情報のテーブルの履歴テーブル<br /><br /> 2 = システムのバージョン情報のテンポラル テーブル|  
+|TableTemporalType|テーブル|**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降。<br /><br /> テーブルの種類を指定します。<br /><br /> 0 = 非テンポラル テーブル<br /><br /> 1 = システムのバージョン情報のテーブルの履歴テーブル<br /><br /> 2 = システムのバージョン情報のテンポラル テーブル|  
   
 ## <a name="return-types"></a>戻り値の型  
  **sql_variant**  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
 - CREATE_USER_TSQL
@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 446e9fa7dc252da75bc1c14ecf3fbe0fdf92b3e8
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 6943409b7a0406a7012374b0c8a0ee7142550fe0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170324"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237070"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -240,7 +240,7 @@ SID = *sid*
  包含データベースにパスワード ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証) を持つユーザーに対してのみ適用されます。 新しいデータベース ユーザーの SID を指定します。 このオプションを選択しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって SID が自動的に割り当てられます。 複数のデータベースで同じ ID (SID) を持つユーザーを作成するには SID パラメーターを使用します。 これは、Always On フェールオーバーの準備のために、複数のデータベースにユーザーを作成する場合に役立ちます。 ユーザーの SID を特定するには、sys.database_principals でクエリを実行します。  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  一括コピー操作でのサーバーの暗号化メタデータ チェックを抑制します。 これによりユーザーは、データを暗号化解除することなく、テーブルまたはデータベース間で暗号化データを一括コピーできます。 既定値は OFF です。  
   
@@ -458,7 +458,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. 暗号化されたデータをコピーするためのユーザーを作成する  
  以下の例では、Always Encrypted 機能によって保護されたデータを、暗号化された列を含む一連のテーブルから、(同じまたは異なるデータベースに) 暗号化された列を持つ別の一連のテーブルにコピーできるユーザーを作成します。  詳細については、「[Always Encrypted で保護された機微なデータの移行](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)」を参照してください。  
   
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```sql  
 CREATE USER [Chin]   

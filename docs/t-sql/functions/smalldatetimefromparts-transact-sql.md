@@ -1,13 +1,13 @@
 ---
 description: SMALLDATETIMEFROMPARTS (Transact-SQL)
-title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
+title: SMALLDATETIMEFROMPARTS (Transact-SQL)
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SMALLDATETIMEFROMPARTS
 - SMALLDATETIMEFROMPARTS_TSQL
@@ -15,16 +15,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - SMALLDATETIMEFROMPARTS function
-ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdb92fe477a1a8c59da96f454f1944b9102381f8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0b213719ced09557bceb89c8821e3bd36083eeab
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484154"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237240"
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,8 +61,8 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
   
 ## <a name="remarks"></a>解説  
  この関数は、完全に初期化された **smalldatetime** 値のコンストラクターと同様に動作します。 引数が有効でない場合は、エラーがスローされます。 必須の引数が null の場合は、null が返されます。  
-  
- この関数は、リモート処理は実行することのできる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー上とします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 下のバージョンのサーバーには、リモート処理されません。  
+ 
+ この関数は、リモート処理は実行することのできる [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] サーバー上とします。 [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] 下のバージョンのサーバーには、リモート処理されません。  
   
 ## <a name="examples"></a>例  
   

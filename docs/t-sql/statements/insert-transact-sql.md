@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - INSERT_TSQL
 - INSERT
@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 206aefdd3cd58b94124a0840cef7e788c5a29390
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b5a6fd7131b63741a82c120e1e0b222405865a9d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171274"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237179"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -319,7 +319,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
   
 制限の緩い一括更新 (BU) ロックを保持する `BULK INSERT` ステートメントとは異なり、`TABLOCK` ヒントが指定された `INSERT INTO … SELECT` を使用すると、テーブルに対する排他 (X) ロックが保持されます。 つまり、複数の挿入操作を同時に実行して行を挿入することはできません。 
 
-ただし、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] およびデータベース互換性レベル 130 以降、ヒープまたはクラスター化列ストア インデックス (CCI) に挿入するときに、1 つの `INSERT INTO … SELECT` ステートメントを並列実行できるようになりました。 `TABLOCK` ヒントを使用すると、並列挿入を行うことができます。  
+ただし、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] およびデータベース互換性レベル 130 以降、ヒープまたはクラスター化列ストア インデックス (CCI) に挿入するときに、1 つの `INSERT INTO … SELECT` ステートメントを並列実行できるようになりました。 `TABLOCK` ヒントを使用すると、並列挿入を行うことができます。  
 
 上記のステートメントの並列処理には、最小ログ記録の要件と同様の次の要件があります。  
 -   対象テーブルが、空のヒープか、空でないヒープである。  
@@ -785,7 +785,7 @@ GO
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. PolyBase を使用して作成された外部のテーブルに挿入する  
  Hadoop または Azure ストレージに SQL Server からのデータをエクスポートします。 最初に、変換先ファイルまたはディレクトリを指す外部テーブルを作成します。 次に、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートするのに INSERT INTO 使用します。 INSERT INTO ステートメントでは、存在しないと、SELECT ステートメントの結果は、指定されたファイルの形式で指定した場所にエクスポートする場合、変換先ファイルまたはディレクトリを作成します。  詳細については、「 [PolyBase 入門](../../relational-databases/polybase/polybase-guide.md)」を参照してください。  
   
-**適用対象**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]  
   
 ```sql
 -- Create an external table.   

@@ -16,16 +16,16 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f421e3a0e07b73037e9b789bd29778791f699561
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 93974ff7f7ef5d0dd28ae8ce6989da2f0b496548
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473073"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250246"
 ---
 # <a name="recompile-a-stored-procedure"></a>ストアド プロシージャの再コンパイル
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを再コンパイルする方法について説明します。 これには、プロシージャ定義内またはプロシージャの呼び出し時に **WITH RECOMPILE** オプションを使用する方法、個々のステートメントで **RECOMPILE** クエリ ヒントを使用する方法、および **sp_recompile** システム ストアド プロシージャを使用する方法の 3 つがあります。 このトピックでは、プロシージャ定義の作成時および既存のプロシージャの実行時に WITH RECOMPILE オプションを使用する方法について説明します。 さらに、sp_recompile システム ストアド プロシージャを使用して既存のプロシージャを再コンパイルする方法についても説明します。  
+  このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを再コンパイルする方法について説明します。 これには、プロシージャ定義内またはプロシージャの呼び出し時に **WITH RECOMPILE** オプションを使用する方法、個々のステートメントで **RECOMPILE** クエリ ヒントを使用する方法、および **sp_recompile** システム ストアド プロシージャを使用する方法の 3 つがあります。 このトピックでは、プロシージャ定義の作成時および既存のプロシージャの実行時に WITH RECOMPILE オプションを使用する方法について説明します。 さらに、sp_recompile システム ストアド プロシージャを使用して既存のプロシージャを再コンパイルする方法についても説明します。  
   
  **このトピックの内容**  
   

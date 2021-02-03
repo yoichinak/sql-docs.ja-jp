@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: sqlfreshmay19
 ms.date: 11/25/2019
-ms.openlocfilehash: 2ef49ed5d3d46e4f5c5602972ea87347b686d9bb
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: cd4dae49fb19532e9aee082e4046c4d79dbf0a82
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97617571"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99238002"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンへの接続のトラブルシューティング
 
@@ -108,7 +108,7 @@ SQL Server の既定のインスタンスには、SQL Server Browser サービ�
    > [!NOTE]
    > クライアントに渡されるエラー メッセージの一部には、問題を解決するために十分な情報を意図的に含めていません。 これはセキュリティ機能であり、SQL Server に関する情報を攻撃者に与えることを回避します。 エラーに関する完全な情報は、SQL Server エラー ログを調べてください。 そこに詳細があります。 
 
-4. エラー `18456 Login failed for user` を受け取った場合、オンライン ブックのトピック、[MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) にエラー コードに関する追加情報があります。 また、Aaron Bertrand のブログで、広範囲なエラー コード リストが紹介されています ([エラー 18456 のトラブルシューティング](https://sqlblog.org/2011/01/14/troubleshooting-error-18456))。 オブジェクト エクスプローラーの管理セクションで、SSMS (接続できる場合) のエラー ログを見ることができます。 接続できない場合、Windows のメモ帳プログラムでエラー ログを表示できます。 既定の場所はバージョンによって異なり、セットアップ中に変更できます。 [!INCLUDE[ssSQL15_md](../../includes/sssqlv15-md.md)] の既定の場所は `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`です。 
+4. エラー `18456 Login failed for user` を受け取った場合、オンライン ブックのトピック、[MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) にエラー コードに関する追加情報があります。 また、Aaron Bertrand のブログで、広範囲なエラー コード リストが紹介されています ([エラー 18456 のトラブルシューティング](https://sqlblog.org/2011/01/14/troubleshooting-error-18456))。 オブジェクト エクスプローラーの管理セクションで、SSMS (接続できる場合) のエラー ログを見ることができます。 接続できない場合、Windows のメモ帳プログラムでエラー ログを表示できます。 既定の場所はバージョンによって異なり、セットアップ中に変更できます。 [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] の既定の場所は `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`です。 
 
 5. 共有メモリで接続できない場合、TCP による接続をテストしてください。 名前の前に `tcp:` を指定すると、TCP 接続を強制できます。 次に例を示します。
 

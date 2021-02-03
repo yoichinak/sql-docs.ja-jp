@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 5b83b5781d8c40c0acc6ee79ab0730c249def7c5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: da72d129bac65b1b9210e49d33782b257ea9e182
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172524"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236430"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。 データベースをチューニングした後で結果を表示および操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)」を参照してください。  
+  このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。 データベースをチューニングした後で結果を表示および操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)」を参照してください。  
   
 ##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> データベース エンジン チューニング アドバイザーを初期化する  
  初回起動時に、 **sysadmin** 固定サーバー ロールのメンバーであるユーザーがデータベース エンジン チューニング アドバイザーを初期化する必要があります。 これは、チューニング操作をサポートするには、いくつかのシステム テーブルを **msdb** データベースに作成する必要があるためです。 また、初期化によって、 **db_owner** 固定データベース ロールのメンバーであるユーザーも自分の所有するデータベースにあるテーブルのワークロードをチューニングできます。  
   
  システム管理者権限を持つユーザーは、次の操作のいずれかを実行する必要があります。  
   
--   データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイスを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスに接続します。 詳細については、このトピックの「 [データベース エンジン チューニング アドバイザーを起動する](#Start) 」を参照してください。  
+-   データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイスを使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]のインスタンスに接続します。 詳細については、このトピックの「 [データベース エンジン チューニング アドバイザーを起動する](#Start) 」を参照してください。  
   
 -   **dta** ユーティリティを使用して最初のワークロードをチューニングします。 詳細については、このトピックの「 [dta ユーティリティを使用する](#dta) 」を参照してください。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "98172524"
 
       ||  
       |-|  
-      |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。|  
+      |**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降。|  
 
   
 -   プラン キャッシュをワークロードとして指定する。 このようにすることでワークロードを手動で作成する手間が省けます。 詳細については、このトピックの「 [データベースをチューニングする](#Tune) 」を参照してください。  

@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df2d323f8978ea5ce9cdaf23c2acf177517ff1ff
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c9a4b3f45a626d8ad3c809cc5e8f73fa9db0f15f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170934"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99238005"
 ---
 # <a name="soft-numa-sql-server"></a>ソフト NUMA (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-最新のプロセッサには、1 つのソケットに対して複数のコアがあります。 各ソケットは、通常、1 つの NUMA ノードとして表示されます。 SQL Server データベース エンジンは、さまざまな内部構造を分割し、NUMA ノード単位でサービス スレッドを分割します。  1 つのソケットに対してコアを 10 個以上含むプロセッサの場合、ソフトウェア NUMA を使用してハードウェア NUMA ノードを分割すると、一般的に、拡張性と性能が向上します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 より前の場合、ソフトウェア ベースの NUMA (ソフト NUMA) ではレジストリを編集し、ノード構成関係マスクを追加する必要がありました。また、ソフト NUMA は、インスタンス単位ではなく、ホスト レベルで構成されていました。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、ソフト NUMA は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの起動時にデータベース/インスタンス レベルで自動的に構成されます。  
+最新のプロセッサには、1 つのソケットに対して複数のコアがあります。 各ソケットは、通常、1 つの NUMA ノードとして表示されます。 SQL Server データベース エンジンは、さまざまな内部構造を分割し、NUMA ノード単位でサービス スレッドを分割します。  1 つのソケットに対してコアを 10 個以上含むプロセッサの場合、ソフトウェア NUMA を使用してハードウェア NUMA ノードを分割すると、一般的に、拡張性と性能が向上します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 より前の場合、ソフトウェア ベースの NUMA (ソフト NUMA) ではレジストリを編集し、ノード構成関係マスクを追加する必要がありました。また、ソフト NUMA は、インスタンス単位ではなく、ホスト レベルで構成されていました。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、ソフト NUMA は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの起動時にデータベース/インスタンス レベルで自動的に構成されます。  
   
 > [!NOTE]  
 > ホット アド プロセッサは、ソフト NUMA ではサポートされていません。  
   
 ## <a name="automatic-soft-numa"></a>自動ソフト NUMA  
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]が起動時に NUMA ノードまたはソケットあたり 8 個を超える物理コアを検出するたびに、ソフト NUMA ノードが既定で自動的に作成されます。 ハイパースレッドのプロセッサ コアは、ノードの物理プロセッサを数えるときに区別されません。  物理コアの検出数がソケットあたり 8 個を超えると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] でソフト NUMA ノードが作成されます。その場合、8 個のコアが含まれていることが理想的ですが、ノードあたり 5 個から 9 個の論理コアを含めることができます。 ハードウェア ノードのサイズは CPU 関係マスクにより制限されます。 NUMA ノードの数がサポートされる NUMA ノードの最大数を超えることはありません。  
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]が起動時に NUMA ノードまたはソケットあたり 8 個を超える物理コアを検出するたびに、ソフト NUMA ノードが既定で自動的に作成されます。 ハイパースレッドのプロセッサ コアは、ノードの物理プロセッサを数えるときに区別されません。  物理コアの検出数がソケットあたり 8 個を超えると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] でソフト NUMA ノードが作成されます。その場合、8 個のコアが含まれていることが理想的ですが、ノードあたり 5 個から 9 個の論理コアを含めることができます。 ハードウェア ノードのサイズは CPU 関係マスクにより制限されます。 NUMA ノードの数がサポートされる NUMA ノードの最大数を超えることはありません。  
   
 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) ステートメントと `SET SOFTNUMA` 引数を使用し、ソフト NUMA を無効化したり、再有効化したりすることができます。 この設定の値を変更した場合、その変更を適用するには、データベース エンジンを再起動する必要があります。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "98170934"
 ```   
 
 > [!NOTE]
-> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降では、トレース フラグ 8079 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が自動ソフト NUMA を使用できるようにします。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8079 に効力はありません。 詳細については、「[DBCC TRACEON - トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降では、トレース フラグ 8079 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が自動ソフト NUMA を使用できるようにします。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8079 に効力はありません。 詳細については、「[DBCC TRACEON - トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。
 
 ## <a name="manual-soft-numa"></a>手動ソフト NUMA  
 ソフト NUMA を使用できるように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を手動で構成するには、自動のソフト NUMA を無効化し、レジストリを編集してノード構成関係マスクを追加します。 この方法を利用すると、ソフト NUMA マスクは、バイナリ、DWORD (16 進数または 10 進数)、または QWORD (16 進数または 10 進数) のレジストリ エントリとして記述できます。 最初の 32 個を超える CPU を構成するには、QWORD またはバイナリのレジストリ値を使用します ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前では QWORD 値を使用できません)。 レジストリの変更後、ソフト NUMA 構成を適用するには [!INCLUDE[ssDE](../../includes/ssde-md.md)] を再起動する必要があります。  
@@ -101,7 +101,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
  次の例では、1 ソケットにつき 18 個のコア (4 ソケットを装備) を備え、各ソケットがそれぞれ独自の K グループに属する DL580 G9 サーバーを使用するとします。 作成する可能性のあるソフト NUMA 構成は、ノードごとに 6 コア、グループごとに 3 ノード、および 4 グループのようになります。  
   
-|複数の K グループを持つ [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] サーバーの例|Type|値の名前|値データ|  
+|複数の K グループを持つ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] サーバーの例|Type|値の名前|値データ|  
 |-----------------------------------------------------------------------------------------------------------------|----------|----------------|----------------|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|グループ|0|  

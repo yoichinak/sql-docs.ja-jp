@@ -5,7 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - JOIN
 - FROM_TSQL
@@ -37,12 +37,12 @@ ms.author: vanto
 ms.custom: ''
 ms.date: 06/01/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1ac3e525ba2e7f3cf459a7ce0ae309d22263aa1
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c13c477c5042658edd47f5f9be53a707e47628d2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172404"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235970"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 句と JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -229,7 +229,7 @@ XML ドキュメントに対して行セット ビューを提供します。 �
  *column_alias*  
  派生テーブルの結果セット内の列名に対する別名です。このパラメーターは省略可能です。 選択リストの各列の別名を 1 つずつ含みます。列の別名リスト全体をかっこで囲みます。  
   
- *table_or_view_name* FOR SYSTEM_TIME \<system_time> 適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time> 適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 データの特定のバージョンが、指定された時間的なテーブルとそのシステムのバージョン情報のリンクの履歴テーブルから返されることを指定します  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE 句
@@ -369,19 +369,19 @@ ON (p.ProductID = v.ProductID);
  入力テーブルが *column_list* 内の複数の列から *pivot_column* と呼ばれる単一の列に絞り込まれることを指定します。 PIVOT および UNPIVOT の詳細については、「[PIVOT および UNPIVOT の使用](../../t-sql/queries/from-using-pivot-and-unpivot.md)」を参照してください。  
   
 AS OF \<date_time>  
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 これまでの時間内には、指定位置で行ごとに実際の値を含む (現在) の 1 つのレコードを含むテーブルを返します。 内部的には、共用体はテンポラル テーブルとその履歴テーブルの間に実行されます。結果はフィルター処理され、 *\<date_time>* パラメーターによって指定される時点で有効であった行で値を返します。 *system_start_time_column_name* 値が *\<date_time>* パラメーター値と等しいかそれよりも小さく、*system_end_time_column_name* 値が *\<date_time>* パラメーター値より大きい場合に、行の値は有効と見なされます。   
   
 FROM \<start_date_time> TO \<end_date_time>
-: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]**に該当します。**
+: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]**に該当します。**
 FROM 引数の *\<start_date_time>* パラメーター値の前からアクティブ状態が始まったかどうかに関係なく、または、TO 引数の *\<end_date_time>* パラメーター値の後でアクティブ状態を止めたかどうかに関係なく、指定の時間範囲内でアクティブであったすべてのレコード バージョンの値を含むテーブルを返します。 内部的には、共用体が一時的なテーブルとその履歴テーブルの間実行され、結果をフィルター処理すると、指定した時間範囲の中にいつでもにアクティブだったすべての行のバージョンの値を返します。 FROM エンドポイントによって定義されている下限の境界で正確にアクティブになった行のサイズが含まれ、宛先エンドポイントによって定義された境界の上限で正確にアクティブになった行は含まれません。  
   
 BETWEEN \<start_date_time> AND \<end_date_time>  
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 \<end_date_time> エンドポイントで定義された上限の境界によってアクティブになった行が含まれることを除き、上記の **FROM \<start_date_time> TO \<end_date_time>** の説明と同じです。  
   
 CONTAINED IN (\<start_date_time> , \<end_date_time>)  
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 開かれて、CONTAINED IN 引数の 2 つの datetime 値で定義されている指定時間範囲内に閉じられた、すべてのレコードのバージョンの値が含まれるテーブルを返します。 行が下位の境界に正確に有効になったまたは上限の境界上だけでアクティブにされているが中断されることでは、含まれています。  
   
 ALL  
@@ -610,7 +610,7 @@ GO
   
 ### <a name="m-using-for-system_time"></a>M. FOR SYSTEM_TIME を使用する  
   
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 次の例では、FOR SYSTEM_TIME AS OF date_time_literal_or_variable 引数を使用して、2014 年 1 月 1 日の時点の実際 (現在) のテーブル行を返します。  
   
 ```sql

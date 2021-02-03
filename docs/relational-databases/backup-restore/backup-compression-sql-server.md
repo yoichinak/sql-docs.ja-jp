@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a98aaaea7d243853f31d19c0e7c3aa824ee2cc4e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: f083aff61ad674e0190a8789c9d8c19b0f4a9821
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171474"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236149"
 ---
 # <a name="backup-compression-sql-server"></a>バックアップの圧縮 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,9 +94,9 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
 
 ## <a name="backup-compression-with-tde"></a>TDE を使用したバックアップの圧縮
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、`MAXTRANSFERSIZE` を **65536 (64 KB)** より大きく設定することにより、最初にページを暗号化解除し、圧縮してから再度暗号化する、[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) で暗号化されたデータベースの最適化された圧縮アルゴリズムが有効になります。 `MAXTRANSFERSIZE` が指定されていない場合、または `MAXTRANSFERSIZE = 65536` (64 KB) が使用される場合、TDE で暗号化されたデータベースでのバックアップの圧縮では暗号化されたページが直接圧縮され、適切な圧縮比率が得られない可能性があります。 詳細については、「[Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases)」 (TDE が有効になっているデータベースのバックアップの圧縮) を参照してください。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、`MAXTRANSFERSIZE` を **65536 (64 KB)** より大きく設定することにより、最初にページを暗号化解除し、圧縮してから再度暗号化する、[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) で暗号化されたデータベースの最適化された圧縮アルゴリズムが有効になります。 `MAXTRANSFERSIZE` が指定されていない場合、または `MAXTRANSFERSIZE = 65536` (64 KB) が使用される場合、TDE で暗号化されたデータベースでのバックアップの圧縮では暗号化されたページが直接圧縮され、適切な圧縮比率が得られない可能性があります。 詳細については、「[Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases)」 (TDE が有効になっているデータベースのバックアップの圧縮) を参照してください。
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 以降では、この最適化された圧縮アルゴリズムを TDE で有効にするために `MAXTRANSFERSIZE` を設定する必要がなくなりました。 バックアップ コマンドに `WITH COMPRESSION` が指定されている場合、または *backup compression default* サーバー構成が 1 に設定されている場合、最適化されたアルゴリズムを有効にするために、`MAXTRANSFERSIZE` は自動的に 128 K に増加されます。 バックアップ コマンドに `MAXTRANSFERSIZE` が 64 K より大きい値で指定されている場合は、指定された値が使用されます。 言い換えると、SQL Server によって値は増加されるのみであり、自動的に減少されることはありません。 `MAXTRANSFERSIZE = 65536` で TDE で暗号化されたデータベースをバックアップする必要がある場合は、`WITH NO_COMPRESSION` を指定するか、*backup compression default* サーバー構成が 0 に設定されていることを確認する必要があります。
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5 以降では、この最適化された圧縮アルゴリズムを TDE で有効にするために `MAXTRANSFERSIZE` を設定する必要がなくなりました。 バックアップ コマンドに `WITH COMPRESSION` が指定されている場合、または *backup compression default* サーバー構成が 1 に設定されている場合、最適化されたアルゴリズムを有効にするために、`MAXTRANSFERSIZE` は自動的に 128 K に増加されます。 バックアップ コマンドに `MAXTRANSFERSIZE` が 64 K より大きい値で指定されている場合は、指定された値が使用されます。 言い換えると、SQL Server によって値は増加されるのみであり、自動的に減少されることはありません。 `MAXTRANSFERSIZE = 65536` で TDE で暗号化されたデータベースをバックアップする必要がある場合は、`WITH NO_COMPRESSION` を指定するか、*backup compression default* サーバー構成が 0 に設定されていることを確認する必要があります。
 
 詳細については、「[BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)」を参照してください。
 

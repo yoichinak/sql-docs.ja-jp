@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP PROCEDURE
 - DROP_PROCEDURE_TSQL
@@ -26,17 +26,17 @@ ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3915bf9f19396c8cc55179861e23052f25886b20
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 438738baa1734e38a06eecebb6a2cfbc8a97f026
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98689056"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237013"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  1 つ以上のストアド プロシージャまたはプロシージャ グループを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の現在のデータベースから削除します。  
+  1 つ以上のストアド プロシージャまたはプロシージャ グループを [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の現在のデータベースから削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] から [現在のバージョン](/troubleshoot/sql/general/determine-version-edition-update-level)まで)。  
   
  条件付きでは既に存在する場合にのみ、プロシージャを削除します。  
   
@@ -93,7 +93,7 @@ GO
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
- 次の例では、削除、 `dbo.uspMyProc` ストアド プロシージャが存在するが、プロシージャが存在しない場合のエラーは発生しません。 この構文はで新しい [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]です。  
+ 次の例では、削除、 `dbo.uspMyProc` ストアド プロシージャが存在するが、プロシージャが存在しない場合のエラーは発生しません。 この構文はで新しい [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]です。  
   
 ```sql  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  

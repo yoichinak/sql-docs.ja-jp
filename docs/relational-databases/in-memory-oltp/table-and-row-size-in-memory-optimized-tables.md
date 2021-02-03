@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddc8c6bf630994b66ecd2977edc44bec888a0e8e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 733b2ba63ba6236ae1df955dafd31ce18260214c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172674"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237551"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>メモリ最適化テーブルのテーブルと行のサイズ
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] より前のバージョンでは、メモリ最適化テーブルの行内データのサイズは、[8,060 バイト](?viewFallbackFrom=sql-server-2014)より長くすることができませんでした。 しかし、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降および Azure SQL Database では、複数の大きな列 (複数の varbinary(8000) 列など) および LOB 列 (varbinary(max)、varchar(max)、nvarchar(max)) を含むメモリ最適化テーブルを作成し、ネイティブにコンパイルされた T-SQL モジュールとテーブル型を使ってこれらの列に対する操作を実行できるようになっています。 
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] より前のバージョンでは、メモリ最適化テーブルの行内データのサイズは、[8,060 バイト](?viewFallbackFrom=sql-server-2014)より長くすることができませんでした。 しかし、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降および Azure SQL Database では、複数の大きな列 (複数の varbinary(8000) 列など) および LOB 列 (varbinary(max)、varchar(max)、nvarchar(max)) を含むメモリ最適化テーブルを作成し、ネイティブにコンパイルされた T-SQL モジュールとテーブル型を使ってこれらの列に対する操作を実行できるようになっています。 
   
 行サイズの上限である 8060 バイトを超える列は、行外の、個別の内部テーブルに配置されます。 行外の列ごとに対応する内部テーブルがあり、 それぞれの内部テーブルには非クラスター化インデックスが 1 つ含まれます。 行外の列に使用されるこれらの内部テーブルについて詳しくは、「[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)」をご覧ください。 
  

@@ -41,7 +41,7 @@ IMPORTANCE は、リソース プールに対してローカルです。同じ�
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 1 つの要求にプールから割り当てられる最大メモリ量を指定します。 *value* は、MAX_MEMORY_PERCENT で指定したリソース プールのサイズが基準になります。
 
-*value* は、[!INCLUDE[ssSQL17](sssql17-md.md)] までは整数であり、[!INCLUDE[sql-server-2019](sssqlv15-md.md)] 以降と Azure SQL Managed Instance では float です。 既定値は 25 です。 *value* の許容範囲は 1 ～ 100 です。
+*value* は、[!INCLUDE[ssSQL17](sssql17-md.md)] までは整数であり、[!INCLUDE[sql-server-2019](sssql19-md.md)] 以降と Azure SQL Managed Instance では float です。 既定値は 25 です。 *value* の許容範囲は 1 ～ 100 です。
 
 > [!IMPORTANT]  
 > 指定した量のみがクエリの実行時に許可されるメモリとして割り当てられます。
@@ -64,7 +64,7 @@ REQUEST_MAX_CPU_TIME_SEC = *value*</br>
 > [!NOTE]
 > 既定では、リソース ガバナーでは最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、「[CPU Threshold Exceeded イベント クラス](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)」を参照してください。
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
+> [!INCLUDE[sssql16-md](sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
 
 REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*</br>
 メモリ許可 (作業バッファー メモリ) が使用可能になるのをクエリが待機できる最大時間を秒単位で指定します。 *value* は、0 または正の整数にする必要があります。 *value* の既定の設定である 0 の場合、クエリ コストに基づく内部の計算を使用して、最大時間が決定されます。
@@ -97,7 +97,7 @@ USING { *pool_name* |  **"default"** }</br>
 > 定義済みのワークロード グループおよびリソース プールではすべて、"default" などの小文字の名前が使用されています。 大文字と小文字を区別する照合順序を使用するサーバーでは、これを考慮する必要があります。 SQL_Latin1_General_CP1_CI_AS など、大文字と小文字を区別しない照合順序を使用するサーバーでは、"default" と "Default" が同じものと見なされます。
 
 EXTERNAL external_pool_name | "default"</br>
-**適用対象**: [!INCLUDE[ssNoVersion](ssnoversion-md.md)] ([!INCLUDE[ssSQL15](sssql16-md.md)] 以降)。
+**適用対象**: [!INCLUDE[ssNoVersion](ssnoversion-md.md)] ([!INCLUDE[sssql16-md](sssql16-md.md)] 以降)。
 
 ワークロード グループには、外部リソース プールを指定できます。 ワークロード グループを定義し、2 つのプールに関連付けることができます。
 
@@ -106,7 +106,7 @@ EXTERNAL external_pool_name | "default"</br>
 
 ## <a name="remarks"></a>解説
 
-`REQUEST_MEMORY_GRANT_PERCENT` が使用される場合、インデックスの作成では、パフォーマンスの改善のために最初に付与されたのよりも多くのワークスペース メモリを使用できます。 この特別な処理は、[!INCLUDE[ssCurrent](sscurrent-md.md)] のリソース ガバナーでサポートされています。 ただし、最初のメモリ許可も追加のメモリ許可も、リソース プール設定およびワークロード グループ設定によって制限されます。
+`REQUEST_MEMORY_GRANT_PERCENT` が使用される場合、インデックスの作成では、パフォーマンスの改善のために最初に付与されたのよりも多くのワークスペース メモリを使用できます。 この特別な処理は、[!INCLUDE[ssCurrent](ssnoversion-md.md)] のリソース ガバナーでサポートされています。 ただし、最初のメモリ許可も追加のメモリ許可も、リソース プール設定およびワークロード グループ設定によって制限されます。
 
 `MAX_DOP` の制限は、[タスク](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)ごとに設定されます。 この設定は、[要求](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)ごとまたはクエリ制限ごとではありません。 つまり、並列クエリ実行中に、1 つの要求で、[スケジューラ](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)に割り当てられてた複数のタスクを生成することができます。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
 

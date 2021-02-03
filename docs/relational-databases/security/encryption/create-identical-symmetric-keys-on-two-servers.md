@@ -13,16 +13,16 @@ ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0cdf5dee29f2035ddb700f29df9c0bbb993c0aa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 780944c299548aaa9a5664fef4688c11cdf69646
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479373"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250341"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>2 台のサーバーでの同じ対称キーの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]で 2 台のサーバーに同じ対称キーを作成する方法について説明します。 暗号化テキストの暗号化を解除するには、暗号化に使用したキーが必要です。 1 つのデータベースで暗号化と暗号化解除の両方が行われる場合、データベースに格納されているキーを、権限に応じて暗号化と暗号化解除の両方に使用できます。 一方、暗号化と暗号化解除が別々のデータベースまたは別々のサーバーで行われる場合、一方のデータベースに格納されているキーを他方のデータベースで使用することはできません。
+  このトピックでは、 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]で 2 台のサーバーに同じ対称キーを作成する方法について説明します。 暗号化テキストの暗号化を解除するには、暗号化に使用したキーが必要です。 1 つのデータベースで暗号化と暗号化解除の両方が行われる場合、データベースに格納されているキーを、権限に応じて暗号化と暗号化解除の両方に使用できます。 一方、暗号化と暗号化解除が別々のデータベースまたは別々のサーバーで行われる場合、一方のデータベースに格納されているキーを他方のデータベースで使用することはできません。
   
 ## <a name="before-you-begin"></a>はじめに  
   

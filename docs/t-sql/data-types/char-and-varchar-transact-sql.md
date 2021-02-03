@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - varchar
 - varchar_TSQL
@@ -25,18 +25,18 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f78cfecbfcf99ec3ae855b41bb802a0c6b12864
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a54d7e0abbbb15379f83a13fc0e604b6d087326d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462553"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236388"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char および varchar (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-固定サイズ (**char**)、または可変サイズ (**varchar**) の文字データ型です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、UTF-8 が有効になっている照合順序を使用する場合、これらのデータ型には [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 文字データの全範囲が格納され、[UTF-8](https://www.wikipedia.org/wiki/UTF-8) 文字エンコードが使用されます。 UTF-8 が無効の照合順序を指定する場合、これらのデータ型には、対応するその照合順序のコード ページでサポートされている文字のサブセットのみが格納されます。
+固定サイズ (**char**)、または可変サイズ (**varchar**) の文字データ型です。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降、UTF-8 が有効になっている照合順序を使用する場合、これらのデータ型には [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 文字データの全範囲が格納され、[UTF-8](https://www.wikipedia.org/wiki/UTF-8) 文字エンコードが使用されます。 UTF-8 が無効の照合順序を指定する場合、これらのデータ型には、対応するその照合順序のコード ページでサポートされている文字のサブセットのみが格納されます。
 
 ## <a name="arguments"></a>引数
 
@@ -56,11 +56,11 @@ COLLATE 句で特定の照合順序を指定しない限り、**char** 型また
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマルチバイト エンコードには以下が含まれます。
 
 - 一部の東アジア言語に向けた 2 バイト文字セット (DBCS)。コード ページ 936 および 950 (中国語)、932 (日本語)、または 949 (韓国語) を使用します。
-- コード ページ 65001 を使用する UTF 8。 **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+- コード ページ 65001 を使用する UTF 8。 **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降)
 
 複数言語をサポートするサイトがある場合:
 
-- [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、Unicode をサポートして文字変換の問題を最小限に抑えるために、UTF-8 が有効になっている照合順序の使用を検討してください。
+- [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降、Unicode をサポートして文字変換の問題を最小限に抑えるために、UTF-8 が有効になっている照合順序の使用を検討してください。
 - 下位バージョンの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を使用する場合、文字変換の問題を最小限に抑えるために、Unicode の **nchar** データ型または **nvarchar** データ型を使用することを検討してください。
 
 **char** 型または **varchar** 型を使用する場合は、次のことをお勧めします。

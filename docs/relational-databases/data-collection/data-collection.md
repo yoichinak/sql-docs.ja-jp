@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd4827f08c9e21ccd45f128bcc64ab9e03c1474b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 3dd72fbcc8f46f505e086043800ec68068a3cb5e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193422"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250109"
 ---
 # <a name="data-collection"></a>データ収集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  データ コレクターは、さまざまなデータのセットを収集する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のコンポーネントです。 データ コレクションは、継続的に実行されるかユーザー定義のスケジュールに基づいて実行されます。 データ コレクターは、収集したデータを管理データ ウェアハウスというリレーショナル データベースに格納します。  
+  データ コレクターは、さまざまなデータのセットを収集する [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のコンポーネントです。 データ コレクションは、継続的に実行されるかユーザー定義のスケジュールに基づいて実行されます。 データ コレクターは、収集したデータを管理データ ウェアハウスというリレーショナル データベースに格納します。  
   
 ## <a name="what-is-data-collector"></a>データ コレクターとは何ですか。 
- データ コレクターは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のデータ収集プラットフォームの主要なコンポーネントであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって提供されるツールです。 データ コレクターでは、中心となる 1 つのポイントでデータベース サーバーやアプリケーションのデータを収集できます。 この収集ポイントではさまざまなソースからデータを取得できます。SQL トレースとは異なり、パフォーマンス データに制限されません。  
+ データ コレクターは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のデータ収集プラットフォームの主要なコンポーネントであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって提供されるツールです。 データ コレクターでは、中心となる 1 つのポイントでデータベース サーバーやアプリケーションのデータを収集できます。 この収集ポイントではさまざまなソースからデータを取得できます。SQL トレースとは異なり、パフォーマンス データに制限されません。  
   
  データ コレクターでは、テスト環境や実稼働環境に合わせてデータ収集の範囲を調整できます。 また、データ コレクターはデータ ウェアハウスも使用します。データ ウェアハウスは、データにさまざまな保有期間を設定して収集したデータを管理できるようにするリレーショナル データベースです。  
   
  データ コレクターは、データ収集の動的なチューニングをサポートし、その API を通じて拡張できます。 詳細については、「 [データ コレクターのプログラミング](../system-functions/data-collector-functions-transact-sql.md)」を参照してください。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータ収集およびデータ管理の全体的な戦略にデータ コレクターがどのように組み込まれているかを次の図に示します。  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]のデータ収集およびデータ管理の全体的な戦略にデータ コレクターがどのように組み込まれているかを次の図に示します。  
   
  ![データ管理におけるデータ コレクターの役割](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "データ管理におけるデータ コレクターの役割")  
   

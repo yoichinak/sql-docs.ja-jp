@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: b4e2d053a232d374360177159cb3b97785f73a4f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8df8f8a8a01b8ade5372147f274d329baf346ffd
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898023"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250173"
 ---
 # <a name="restore-the-service-master-key"></a>サービス マスター キーの復元
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でサービス マスター キーを復元する方法について説明します。  
+  このトピックでは、 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でサービス マスター キーを復元する方法について説明します。  
   
 > [!WARNING]  
 > サービス マスター キーの復元が必要になることはほとんどありません。 サービス マスター キーを復元する必要が生じた場合は、十分注意して作業を行ってください。 詳細については、「 [Back Up the Service Master Key](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)」をご覧ください。  
@@ -51,7 +51,7 @@ ms.locfileid: "85898023"
   
 1. バックアップしたサービス マスター キーのコピーを、物理バックアップ メディアまたはローカル ファイル システム上のディレクトリから取得します。  
   
-2. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+2. **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 3. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

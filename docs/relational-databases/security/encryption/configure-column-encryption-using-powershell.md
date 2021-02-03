@@ -12,12 +12,12 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f03f5dc54c525e850c7654c5860fb56d35ad75c7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a5568667a9618046556b5bc586ae241093603c35
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475603"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237317"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>PowerShell での Always Encrypted を使用した列暗号化の構成
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "97475603"
 ::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用していて、お使いの SQL Server インスタンスがセキュリティで保護されたエンクレーブで構成されている場合は、データベースからデータを移動せずに、暗号化操作をインプレースで実行できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)」を参照してください。 PowerShell では、インプレース暗号化がサポートされていないことに注意してください。
+> [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] を使用していて、お使いの SQL Server インスタンスがセキュリティで保護されたエンクレーブで構成されている場合は、データベースからデータを移動せずに、暗号化操作をインプレースで実行できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)」を参照してください。 PowerShell では、インプレース暗号化がサポートされていないことに注意してください。
 
 ::: moniker-end
 SqlServer PowerShell モジュールでの Always Encrypted のサポートの詳細については、「[PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)」を参照してください。

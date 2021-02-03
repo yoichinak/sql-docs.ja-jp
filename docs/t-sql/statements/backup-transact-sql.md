@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - BACKUP_TSQL
 - BACKUP
@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016'
-ms.openlocfilehash: 55b1a81a5cbb5078f331df0fb7f1f93048555337
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5b2a61299d684dcd5711969feb1ef1cd16f43b32
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170564"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237751"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -250,7 +250,7 @@ TO \<backup_device> [ **,** ...*n* ]: 関連する [バックアップ デバイ
 > [!NOTE]
 > NUL ディスク デバイスは送信される情報をすべて破棄し、テストでのみ使用する必要があります。 これは運用環境向けではありません。
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、URL にバックアップする場合、単一デバイスにのみバックアップできます。 URL へのバックアップ時に複数のデバイスにバックアップするには、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、URL にバックアップする場合、単一デバイスにのみバックアップできます。 URL へのバックアップ時に複数のデバイスにバックアップするには、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。
 
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 以降)。
 
@@ -288,7 +288,7 @@ MIRROR TO \<backup_device> [ **,** ...*n* ]: TO 句で指定したバックア�
 CREDENTIAL **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 以降)。
 Microsoft Azure BLOB ストレージ サービスにバックアップを作成する場合にのみ使用します。
 
-FILE_SNAPSHOT **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)。
+FILE_SNAPSHOT **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降)。
 
 すべての SQL Server データベース ファイルが Azure Blob ストレージ サービスを使用して格納される場合は、データベース ファイルの Azure のスナップショットを作成するために使用されます。 詳細については、「[Microsoft Azure 内の SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップでは、データベース ファイル (データとログ ファイル) の Azure スナップショットを一貫性のある状態で取得します。 一貫した Azure のスナップショットのセットは、バックアップを構成し、バックアップ ファイルに記録されます。 `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` と `BACKUP LOG TO URL WITH FILE_SNAPSHOT` の唯一の違いは、後者ではトランザクション ログの切り捨ても行うのに対して、前者では行わないことです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスナップショット バックアップでは、バックアップ チェーンを確立するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で必要な最初の完全バックアップの後、トランザクション ログ バックアップの時点にデータベースを復元する場合、単一のトランザクション ログ バックアップのみが必要になります。 さらに、次の 2 つのトランザクション ログ バックアップ期間の間の特定の時点にデータベースを復元するためには、2 つのトランザクション ログ バックアップのみが必要になります。
 
@@ -696,9 +696,9 @@ BACKUP ステートメントは、明示的または暗黙的なトランザク�
 
 オペレーティング システムがデータベースの照合順序をサポートしている限り、プロセッサの種類が違っていても、プラットフォーム間にわたるバックアップ操作を実行できます。
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、`MAXTRANSFERSIZE` を **65536 (64 KB)** より大きく設定することにより、最初にページを暗号化解除し、圧縮してから再度暗号化する、[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) で暗号化されたデータベースの最適化された圧縮アルゴリズムが有効になります。 `MAXTRANSFERSIZE` が指定されていない場合、または `MAXTRANSFERSIZE = 65536` (64 KB) が使用される場合、TDE で暗号化されたデータベースでのバックアップの圧縮では暗号化されたページが直接圧縮され、適切な圧縮比率が得られない可能性があります。 詳細については、「[Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases)」 (TDE が有効になっているデータベースのバックアップの圧縮) を参照してください。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、`MAXTRANSFERSIZE` を **65536 (64 KB)** より大きく設定することにより、最初にページを暗号化解除し、圧縮してから再度暗号化する、[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) で暗号化されたデータベースの最適化された圧縮アルゴリズムが有効になります。 `MAXTRANSFERSIZE` が指定されていない場合、または `MAXTRANSFERSIZE = 65536` (64 KB) が使用される場合、TDE で暗号化されたデータベースでのバックアップの圧縮では暗号化されたページが直接圧縮され、適切な圧縮比率が得られない可能性があります。 詳細については、「[Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases)」 (TDE が有効になっているデータベースのバックアップの圧縮) を参照してください。
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 以降では、この最適化された圧縮アルゴリズムを TDE で有効にするために `MAXTRANSFERSIZE` を設定する必要がなくなりました。 バックアップ コマンドに `WITH COMPRESSION` が指定されている場合、または *backup compression default* サーバー構成が 1 に設定されている場合、最適化されたアルゴリズムを有効にするために、`MAXTRANSFERSIZE` は自動的に 128 K に増加されます。 バックアップ コマンドに `MAXTRANSFERSIZE` が 64 K より大きい値で指定されている場合は、指定された値が使用されます。 言い換えると、SQL Server によって値は増加されるのみであり、自動的に減少されることはありません。 `MAXTRANSFERSIZE = 65536` で TDE で暗号化されたデータベースをバックアップする必要がある場合は、`WITH NO_COMPRESSION` を指定するか、*backup compression default* サーバー構成が 0 に設定されていることを確認する必要があります。
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5 以降では、この最適化された圧縮アルゴリズムを TDE で有効にするために `MAXTRANSFERSIZE` を設定する必要がなくなりました。 バックアップ コマンドに `WITH COMPRESSION` が指定されている場合、または *backup compression default* サーバー構成が 1 に設定されている場合、最適化されたアルゴリズムを有効にするために、`MAXTRANSFERSIZE` は自動的に 128 K に増加されます。 バックアップ コマンドに `MAXTRANSFERSIZE` が 64 K より大きい値で指定されている場合は、指定された値が使用されます。 言い換えると、SQL Server によって値は増加されるのみであり、自動的に減少されることはありません。 `MAXTRANSFERSIZE = 65536` で TDE で暗号化されたデータベースをバックアップする必要がある場合は、`WITH NO_COMPRESSION` を指定するか、*backup compression default* サーバー構成が 0 に設定されていることを確認する必要があります。
 
 > [!NOTE]
 > 次のように、既定の `MAXTRANSFERSIZE` が 64 K より大きくなる場合もあります。
@@ -706,7 +706,7 @@ BACKUP ステートメントは、明示的または暗黙的なトランザク�
 > - データベースに複数のデータ ファイルが作成されている場合、64 K より大きい `MAXTRANSFERSIZE` が使用されます。
 > - URL へのバックアップを実行する場合、既定値は `MAXTRANSFERSIZE = 1048576` (1 MB) になります。
 >
-> これらの条件のいずれかが当てはまる場合であっても、バックアップ コマンドで `MAXTRANSFERSIZE` に 64 K より大きい値を明示的に設定して、最適化されたバックアップ圧縮アルゴリズムを取得する必要があります ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 以降を使用している場合を除く)。
+> これらの条件のいずれかが当てはまる場合であっても、バックアップ コマンドで `MAXTRANSFERSIZE` に 64 K より大きい値を明示的に設定して、最適化されたバックアップ圧縮アルゴリズムを取得する必要があります ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5 以降を使用している場合を除く)。
 
 既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳しくは、「[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」をご覧ください。
 

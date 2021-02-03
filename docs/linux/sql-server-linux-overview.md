@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 593a966baf3565ef2ed6d30eba92901dc8cbcca2
-ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
+ms.openlocfilehash: 504dd2ca2e8d1e2527a95830106fc152aec4ec77
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97515349"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237634"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上の SQL Server
 
@@ -66,7 +66,7 @@ SQL Server 2017 は、Linux を含むすべてのサポートされているプ�
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] は、Linux を含むすべてのサポートされているプラットフォームで、基になるデータベース エンジンが同じです。 そのため、既存の多くの特徴と機能が Linux でも同じように動作します。 ドキュメントのこの領域では、Linux の観点から、これらの機能の一部を紹介します。 また、Linux 上では独自の要件がある領域に関する注意も示します。
+[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] は、Linux を含むすべてのサポートされているプラットフォームで、基になるデータベース エンジンが同じです。 そのため、既存の多くの特徴と機能が Linux でも同じように動作します。 ドキュメントのこの領域では、Linux の観点から、これらの機能の一部を紹介します。 また、Linux 上では独自の要件がある領域に関する注意も示します。
 
 既に SQL Server on Linux について理解している場合は、[リリース ノート](sql-server-linux-release-notes-2019.md)で、このリリースの一般的なガイドラインと既知の問題を参照してください。 次に、[SQL Server on Linux 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)を確認します。
 
@@ -75,7 +75,7 @@ SQL Server 2017 は、Linux を含むすべてのサポートされているプ�
 
 ### <a name="all-versions-of-sql-server"></a>SQL Server のすべてのバージョン
 
-SQL Server 2017 と [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] は、Linux を含むすべてのサポートされているプラットフォームで、基になるデータベース エンジンが同じです。 そのため、既存の多くの特徴と機能が Linux でも同じように動作します。 ドキュメントのこの領域では、Linux の観点から、これらの機能の一部を紹介します。 また、Linux 上では独自の要件がある領域に関する注意も示します。
+SQL Server 2017 と [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] は、Linux を含むすべてのサポートされているプラットフォームで、基になるデータベース エンジンが同じです。 そのため、既存の多くの特徴と機能が Linux でも同じように動作します。 ドキュメントのこの領域では、Linux の観点から、これらの機能の一部を紹介します。 また、Linux 上では独自の要件がある領域に関する注意も示します。
 
 既に SQL Server on Linux について理解している場合は、リリース ノートを参照してください。
 

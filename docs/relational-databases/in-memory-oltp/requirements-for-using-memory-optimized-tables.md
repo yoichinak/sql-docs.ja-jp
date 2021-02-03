@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cbe2b75a46e63b5e388b91ace3d74c0db3be49b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5a7c64a949ad4eabfbd02ad78229b04a919ab032
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170734"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237188"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>メモリ最適化テーブルを使用するための要件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "98170734"
   
  インメモリ OLTP を使用する場合、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」に加え、以下も要件です。  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 (以降) のあらゆるエディション。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] RTM (SP1 前) の場合、Enterprise、Developer、または Evaluation エディションが必要です。
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 (以降) のあらゆるエディション。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] RTM (SP1 前) の場合、Enterprise、Developer、または Evaluation エディションが必要です。
     
     > [!NOTE]
     > インメモリ OLTP には、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が必要です。  
@@ -46,12 +46,12 @@ ms.locfileid: "98170734"
   
 ## <a name="important-notes-on-using-hek_2"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] の使用に関する重要な注意事項  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、メモリ最適化テーブルのサイズには空きメモリのサイズ以外の制限がありません。 
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降、メモリ最適化テーブルのサイズには空きメモリのサイズ以外の制限がありません。 
 
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、データベース内の持続性のあるすべてのテーブルのメモリ内サイズの合計は 250 GB を超えないようにする必要があります。 詳細については、「 [メモリ最適化テーブルのメモリ必要量の推定](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)」を参照してください。  
 
 > [!NOTE]
-> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 より、Standard エディションと Express エディションではインメモリ OLTP がサポートされていますが、所与のデータベースでメモリ最適化テーブルに利用できるメモリ量にクォータが課せられます。 Standard エディションの場合、これはデータベースごとに 32GB です。Express エディションの場合、データベースごとに 352MB です。 
+> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 より、Standard エディションと Express エディションではインメモリ OLTP がサポートされていますが、所与のデータベースでメモリ最適化テーブルに利用できるメモリ量にクォータが課せられます。 Standard エディションの場合、これはデータベースごとに 32GB です。Express エディションの場合、データベースごとに 352MB です。 
   
 -   メモリ最適化テーブルが含まれるデータベースを 1 つ以上作成する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントに *SE_MANAGE_VOLUME_NAME* ユーザー権を与え、ファイルの瞬時初期化 (IFI) を有効にしてください。 IFI なしの場合、メモリ最適化ストレージ ファイル (データ ファイルとデルタ ファイル) が作成時に初期化されるため、ワークロードのパフォーマンスが低下する場合があります。 有効化方法など、IFI に関する詳細については、「[データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)」を参照してください。
   

@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72ab05dfce314119c30e08428fdcaa2b94ba25ed
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 8dd4d753f4195a1cf4ae6a92ea8bd617675ba4f7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171774"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237596"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列ストア インデックス - 設計ガイダンス
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "98171774"
 
 ## <a name="add-b-tree-nonclustered-indexes-for-efficient-table-seeks"></a>B ツリー 非クラスター化インデックスを追加してテーブルのシークを効率化する
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、クラスター化列ストア インデックスのセカンダリ インデックスとして非クラスター化 B ツリー インデックスを作成できます。 列ストア インデックスが変更されると、非クラスター化 B ツリー インデックスが更新されます。 これは、うまく利用するとメリットのある強力な機能です。 
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、クラスター化列ストア インデックスのセカンダリ インデックスとして非クラスター化 B ツリー インデックスを作成できます。 列ストア インデックスが変更されると、非クラスター化 B ツリー インデックスが更新されます。 これは、うまく利用するとメリットのある強力な機能です。 
 
 セカンダリ B ツリー インデックスを使用すると、すべての行をスキャンせずに特定の行を効率的に検索できます。  他のオプションも使用できます。 たとえば、B ツリー インデックスで UNIQUE 制約を使用して、主キーまたは外部キー制約を適用できます。 一意でない値は B ツリー インデックスに挿入できないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でその値を列ストアに挿入することはできません。 
 
@@ -84,7 +84,7 @@ ms.locfileid: "98171774"
 
 ## <a name="use-a-nonclustered-columnstore-index-for-real-time-analytics"></a>非クラスター化列ストア インデックスを使用したリアルタイム分析
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、行ストア ディスク ベース テーブルまたはメモリ内 OLTP テーブルで非クラスター化列ストア インデックスを使用できます。 これにより、トランザクション テーブルに対して分析をリアルタイムで実行できるようになります。 トランザクションは基になるテーブルで発生しますが、列ストア インデックスに対して分析を実行できます。 1 つのテーブルで両方のインデックスを管理するため、行ストアと列ストア両方のインデックスに対して変更をリアルタイムで使用できます。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、行ストア ディスク ベース テーブルまたはメモリ内 OLTP テーブルで非クラスター化列ストア インデックスを使用できます。 これにより、トランザクション テーブルに対して分析をリアルタイムで実行できるようになります。 トランザクションは基になるテーブルで発生しますが、列ストア インデックスに対して分析を実行できます。 1 つのテーブルで両方のインデックスを管理するため、行ストアと列ストア両方のインデックスに対して変更をリアルタイムで使用できます。
 
 列ストア インデックスは行ストア インデックスよりもデータ圧縮率が 10 倍高いため、必要な追加ストレージがわずかで済みます。 たとえば、圧縮された行ストア テーブルが 20 GB を必要とする場合、列ストア インデックスではさらに 2 GB 必要な場合があります。 必要な追加領域は、非クラスター化列ストア インデックス内の列数によっても異なります。 
 
@@ -94,7 +94,7 @@ ms.locfileid: "98171774"
   
 *   別のデータ ウェアハウスの必要をなくす場合。 従来、企業では行ストア テーブルでトランザクションを実行し、データを別のデータ ウェアハウスに読み込んで分析を実行しています。 多くのワークロードでは、トランザクション テーブルに非クラスター化列ストア インデックスを作成して、読み込みプロセスと別のデータ ウェアハウスを排除できます。
 
-  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] には、このシナリオのパフォーマンスを高めるいくつかの方法が用意されています。 OLTP アプリケーションを変更せずに非クラスター化列ストア インデックスを有効にできるため、とても簡単に試すことができます。 
+  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] には、このシナリオのパフォーマンスを高めるいくつかの方法が用意されています。 OLTP アプリケーションを変更せずに非クラスター化列ストア インデックスを有効にできるため、とても簡単に試すことができます。 
 
 処理リソースを追加するには、読み取り可能なセカンダリに対して分析を実行できます。 読み取り可能なセカンダリを使用すると、トランザクションのワークロードと分析ワークロードの処理が分離されます。 
 
@@ -171,11 +171,11 @@ B ツリー インデックスは並べ替えられた順序で行を既に格�
   
 |タスク|参照トピック|Notes|  
 |----------|----------------------|-----------|  
-|テーブルを列ストアとして作成する。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]以降、テーブルをクラスター化列ストア インデックスとして作成できます。 最初に行ストア テーブルを作成して列ストアに変換する必要はありません。|  
-|列ストア インデックスを持つメモリ テーブルを作成します。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]以降、列ストア インデックスを持つ、メモリ最適化テーブルを作成できます。 列ストア インデックスは、テーブルの作成後に、ALTER TABLE ADD INDEX 構文を使用して追加することもできます。|  
+|テーブルを列ストアとして作成する。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]以降、テーブルをクラスター化列ストア インデックスとして作成できます。 最初に行ストア テーブルを作成して列ストアに変換する必要はありません。|  
+|列ストア インデックスを持つメモリ テーブルを作成します。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]以降、列ストア インデックスを持つ、メモリ最適化テーブルを作成できます。 列ストア インデックスは、テーブルの作成後に、ALTER TABLE ADD INDEX 構文を使用して追加することもできます。|  
 |行ストア テーブルを列ストアに変換する。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|既存のヒープまたはバイナリ ツリーを列ストアに変換します。 この変換を実行するときの既存のインデックスとインデックス名の処理方法を例示します。|  
 |列ストア テーブルを行ストアに変換する。|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index)、[列ストア テーブルを行ストア ヒープに戻す](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |この変換は通常は必要ありませんが、状況によっては必要になる場合があります。 列ストアをヒープまたはクラスター化インデックスに変換する方法を例示します。|   
-|行ストア テーブルで列ストア インデックスを作成する。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|行ストア テーブルでは列ストア インデックスを 1 つ使用できます。  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]以降、列ストア インデックスにフィルター条件を指定できるようになりました。 基本構文を例示します。|  
+|行ストア テーブルで列ストア インデックスを作成する。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|行ストア テーブルでは列ストア インデックスを 1 つ使用できます。  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]以降、列ストア インデックスにフィルター条件を指定できるようになりました。 基本構文を例示します。|  
 |運用分析のパフォーマンスの高いインデックスを作成する。|[列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|補完的な列ストア インデックスと B ツリー インデックスを作成する方法について説明します。OLTP クエリでは B ツリー インデックスが使用され、分析クエリでは列ストア インデックスが使用されます。|  
 |データ ウェアハウス用のパフォーマンスの高い列ストア インデックスを作成する。|[列ストア インデックス - データ ウェアハウス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|列ストア テーブルで B ツリー インデックスを使用して、パフォーマンスの高いデータ ウェアハウス クエリを作成する方法について説明します。|  
 |B ツリー インデックスを使用して列ストア インデックスに主キー制約を適用する|[列ストア インデックス - データ ウェアハウス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|B ツリー インデックスと列ストア インデックスを組み合わせて、列ストア インデックスに主キー制約を適用する方法を示します。|  

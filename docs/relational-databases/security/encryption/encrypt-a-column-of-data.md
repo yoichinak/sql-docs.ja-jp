@@ -18,18 +18,18 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: c09f7f91edf2cada0464b6cfbc1922664a86866f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ae34b381a6f1d46329855662d0a796ea6ab3d265
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641078"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250197"
 ---
 # <a name="encrypt-a-column-of-data"></a>データの列の暗号化
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で対称暗号化を使用してデータ列を暗号化する方法について説明します。 これは、列レベルの暗号化、またはセル レベルの暗号化とも呼ばれます。 この機能は、Azure Synapse Analytics を対象としたプレビューの段階です
+この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] で対称暗号化を使用してデータ列を暗号化する方法について説明します。 これは、列レベルの暗号化、またはセル レベルの暗号化とも呼ばれます。 この機能は、Azure Synapse Analytics を対象としたプレビューの段階です
 
 この記事の例は、AdventureWorks2017 に対して検証済みです。 サンプル データベースを取得するには、「[AdventureWorks サンプル データベース](../../../samples/adventureworks-install-configure.md)」を参照してください。
 

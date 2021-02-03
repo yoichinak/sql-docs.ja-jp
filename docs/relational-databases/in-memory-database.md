@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 88f965eadf0defbd75c859fa2308dd255f5c1486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6625022360c93da5cbc43224572908738f6d430c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470441"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236444"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>メモリ内データベース システムとテクノロジ
 
@@ -39,13 +39,13 @@ ms.locfileid: "88470441"
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md) は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]を搭載した Windows と Linux の両方のプラットフォームのバイト アドレス指定可能な永続メモリ ストレージ デバイス上にあるデータベース ファイル用のバッファー プールを拡張します。
+[ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md) は、[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]を搭載した Windows と Linux の両方のプラットフォームのバイト アドレス指定可能な永続メモリ ストレージ デバイス上にあるデータベース ファイル用のバッファー プールを拡張します。
 
 ## <a name="memory-optimized-tempdb-metadata"></a>メモリ最適化 `tempdb` メタデータ
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、[メモリ最適化 tempdb メタデータ](./databases/tempdb-database.md#memory-optimized-tempdb-metadata)という新機能が導入されています。この機能により、効果的に一部の競合ボトルネックが除去され、tempdb が多用されるワークロードに対して新たなレベルのスケーラビリティが実現されます。
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] では、[メモリ最適化 tempdb メタデータ](./databases/tempdb-database.md#memory-optimized-tempdb-metadata)という新機能が導入されています。この機能により、効果的に一部の競合ボトルネックが除去され、tempdb が多用されるワークロードに対して新たなレベルのスケーラビリティが実現されます。
 
 ## <a name="in-memory-oltp"></a>インメモリ OLTP
 
@@ -57,7 +57,7 @@ ms.locfileid: "88470441"
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] では、`ndctl` ユーティリティを使用して永続メモリ (PMEM) を構成する方法が説明されています。[永続メモリ](../linux/sql-server-linux-configure-pmem.md) に関するページをご覧ください。
+[!INCLUDE[sqlv15](../includes/sssql19-md.md)] では、`ndctl` ユーティリティを使用して永続メモリ (PMEM) を構成する方法が説明されています。[永続メモリ](../linux/sql-server-linux-configure-pmem.md) に関するページをご覧ください。
 
 ## <a name="persisted-log-buffer"></a>永続化されたログ バッファー
 

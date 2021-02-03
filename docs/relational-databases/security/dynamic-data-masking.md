@@ -11,12 +11,12 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33fb069efc355ebaa8892a743b926f927d8a435e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: cfbdf3f505ddd5af743cca98eb332bdfd6f9bbc1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171284"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237194"
 ---
 # <a name="dynamic-data-masking"></a>動的なデータ マスキング
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "98171284"
 
 動的データ マスクの目的は、アクセスすべきではないユーザーがデータを閲覧することを防ぎ、デリケートなデータの公開を制限することにあります。 動的データ マスクは、ユーザーが直接データベースに接続し、徹底的なクエリを実行して、デリケートなデータの漏えいを防ぐことを目的としてはいません。 動的データ マスクは、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ機能 (監査、暗号化、行レベルのセキュリティなど) を補完します。データベース内のデリケートなデータの保護をより強化するために、セキュリティ機能と連携して動的データ マスクを使用することをお勧めします。  
   
-動的データ マスクは [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] と [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]で使用できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] をコマンドを使用して構成します。 Azure portal で動的データ マスクを構成する方法の詳細については、[SQL Database 動的データ マスクの使用 (Azure ポータル)](/azure/azure-sql/database/dynamic-data-masking-overview)に関するページを参照してください。  
+動的データ マスクは [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] と [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]で使用できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] をコマンドを使用して構成します。 Azure portal で動的データ マスクを構成する方法の詳細については、[SQL Database 動的データ マスクの使用 (Azure ポータル)](/azure/azure-sql/database/dynamic-data-masking-overview)に関するページを参照してください。  
   
 ## <a name="defining-a-dynamic-data-mask"></a>動的データ マスクを定義する
  マスク ルールは、列のデータを難読化するために、テーブル内の列で定義することがあります。 4 種類のマスクを利用できます。  

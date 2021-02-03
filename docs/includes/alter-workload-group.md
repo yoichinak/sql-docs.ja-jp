@@ -46,7 +46,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
  1 つの要求にプールから割り当てられる最大メモリ量を指定します。 *value* は、MAX_MEMORY_PERCENT で指定したリソース プールのサイズが基準になります。  
 
-*value* は [!INCLUDE[ssSQL17](sssql17-md.md)] までの整数と [!INCLUDE[sql-server-2019](sssqlv15-md.md)] で始まる float です。 既定値は 25 です。 *value* の許容範囲は 1 ～ 100 です。
+*value* は [!INCLUDE[ssSQL17](sssql17-md.md)] までの整数と [!INCLUDE[sql-server-2019](sssql19-md.md)] で始まる float です。 既定値は 25 です。 *value* の許容範囲は 1 ～ 100 です。
   
 > [!NOTE]  
 > 指定した量のみがクエリの実行時に許可されるメモリとして割り当てられます。  
@@ -72,7 +72,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > 既定では、リソース ガバナーでは最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、「[CPU Threshold Exceeded イベント クラス](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)」を参照してください。 
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
+> [!INCLUDE[sssql16-md](sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  メモリ許可 (作業バッファー メモリ) が使用可能になるのをクエリが待機できる最大時間を秒単位で指定します。  

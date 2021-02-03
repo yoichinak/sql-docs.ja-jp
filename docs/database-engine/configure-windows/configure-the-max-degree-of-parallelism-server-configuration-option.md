@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperf-fy20q4
-ms.openlocfilehash: 7b0e4b8abf21d918e7d4d627c7ed82d5507394ec
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 4006ad1707d30d0a9147056ddfff8b71ae7643e1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171064"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236964"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "98171064"
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、SQL Server の **max degree of parallelism (MAXDOP)** サーバー構成オプションを構成する方法について説明します。 複数のマイクロプロセッサまたは CPU が搭載されたコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行されている場合、並列処理を使用できるかどうかが[!INCLUDE[ssde_md](../../includes/ssde_md.md)]によって検出されます。 並列処理の次数に基づいて、並列プランの実行ごとに、1 つのステートメントを実行するために使用されるプロセッサの数が設定されます。 **max degree of parallelism** オプションを使用すると、並列プラン実行で使用するプロセッサの数を制限できます。 **並列処理の最大限度 (MAXDOP)** によって設定される制限の詳細については、このページの「[考慮事項](#Considerations)」セクションを参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、クエリ、インデックス データ定義言語 (DDL) の操作、並列挿入、オンライン列変更、並行統計コレクション、静的およびキーセット ドリブン カーソルの作成の場合に並列実行プランが検討されます。
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] では、利用できるプロセッサの数に基づいてインストール プロセスの間に MAXDOP サーバー構成オプションを設定するための自動推奨事項が導入されています。 セットアップのユーザー インターフェイスでは、推奨設定を受け入れることも、独自の値を入力することもできます。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](../../sql-server/install/instance-configuration.md#maxdop)」を参照してください。
+> [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] では、利用できるプロセッサの数に基づいてインストール プロセスの間に MAXDOP サーバー構成オプションを設定するための自動推奨事項が導入されています。 セットアップのユーザー インターフェイスでは、推奨設定を受け入れることも、独自の値を入力することもできます。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](../../sql-server/install/instance-configuration.md#maxdop)」を参照してください。
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
@@ -55,9 +55,9 @@ ms.locfileid: "98171064"
 -   クエリおよびインデックスの操作だけでなく、このオプションも DBCC CHECKTABLE、DBCC CHECKDB、および DBCC CHECKFILEGROUP の並列処理を制御します。 トレース フラグ 2528 を使用して、これらのステートメントの並列実行プランを無効にすることができます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。
 
 ###  <a name="recommendations"></a><a name="Recommendations"></a> <a name="Guidelines"></a> 推奨事項  
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、サービスの開始中、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]の起動時に NUMA ノードまたはソケットあたり 8 個を超える物理コアが検出されると、既定でソフト NUMA ノードが自動的に作成されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]により、同じ物理コアからさまざまなソフト NUMA ノードに論理プロセッサが配置されます。 次の表に示す推奨事項は、並列クエリのすべてのワーカー スレッドを同じソフト NUMA ノード内に保持することを目的としています。 これにより、ワークロードの NUMA ノード間でクエリのパフォーマンスとワーカー スレッドの分布が向上します。 詳細については、「[ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)」を参照してください。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、サービスの開始中、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]の起動時に NUMA ノードまたはソケットあたり 8 個を超える物理コアが検出されると、既定でソフト NUMA ノードが自動的に作成されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]により、同じ物理コアからさまざまなソフト NUMA ノードに論理プロセッサが配置されます。 次の表に示す推奨事項は、並列クエリのすべてのワーカー スレッドを同じソフト NUMA ノード内に保持することを目的としています。 これにより、ワークロードの NUMA ノード間でクエリのパフォーマンスとワーカー スレッドの分布が向上します。 詳細については、「[ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)」を参照してください。
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、**max degree of parallelism** サーバーの構成値を構成する場合、以下のガイドラインを使用します。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、**max degree of parallelism** サーバーの構成値を構成する場合、以下のガイドラインを使用します。
 
 |サーバー構成|プロセッサの数|ガイダンス|
 |----------------|-----------------|-----------------|
@@ -67,7 +67,7 @@ ms.locfileid: "98171064"
 |複数の NUMA ノードを持つサーバー|NUMA ノードあたり 16 を超える論理プロセッサ|最大値を 16 として、MAXDOP を NUMA ノードあたりの論理プロセッサ数の半分に保つ|
   
 > [!NOTE]
-> 上の表の NUMA ノードは、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降で自動的に作成されるソフト NUMA ノード、またはソフト NUMA が無効になっている場合はハードウェア ベースの NUMA ノードを表します。   
+> 上の表の NUMA ノードは、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降で自動的に作成されるソフト NUMA ノード、またはソフト NUMA が無効になっている場合はハードウェア ベースの NUMA ノードを表します。   
 >  リソース ガバナー ワークロード グループに対して max degree of parallelism オプションを設定する場合は、これらと同じガイドラインを使用します。 詳細については、「[CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。
   
 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、**max degree of parallelism** サーバーの構成値を構成する場合、以下のガイドラインを使用します。

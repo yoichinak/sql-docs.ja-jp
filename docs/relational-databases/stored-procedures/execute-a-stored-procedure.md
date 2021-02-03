@@ -20,17 +20,17 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7cff43378cdffd2015040d9de4d8ffb7b014291
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 115220ef0fabbe98a0c4a1bf5f185409c5a82829
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475303"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250275"
 ---
 # <a name="execute-a-stored-procedure"></a>ストアド プロシージャの実行
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを実行する方法について説明します。  
+このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを実行する方法について説明します。  
   
  ストアド プロシージャを実行するには、2 つの方法があります。 1 つ目の最も一般的な方法は、アプリケーションまたはユーザーがプロシージャを呼び出す方法です。 2 番目の方法は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの起動時にプロシージャが自動的に実行されるように設定する方法です。 アプリケーションまたはユーザーによってプロシージャが呼び出される場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の EXECUTE または EXEC キーワードが呼び出しの中に明示的に指定されています。 または、プロシージャが [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ内の最初のステートメントである場合は、このキーワードを使用せずにストアド プロシージャを呼び出すことができます。  
   

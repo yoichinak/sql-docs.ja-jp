@@ -15,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40416d9ccd36e8de4ac1e4196a769607af3b5545
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4e8b8a82580fbe6f1a60a82d54e90c5ee106280f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482358"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236785"
 ---
 # <a name="tables"></a>テーブル
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97482358"
 
 ### <a name="partitioned-tables"></a>パーティション テーブル
 
-パーティション テーブルはデータが行方向に分割されているテーブルで、パーティションがデータベースの複数のファイル グループに分散される場合もあります。 大きなテーブルやインデックスをパーティション分割すると、コレクション全体の整合性を維持しながら、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うことができるので、大きなテーブルやインデックスを管理しやすくなります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、最大 15,000 個のパーティションを既定でサポートしています。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。
+パーティション テーブルはデータが行方向に分割されているテーブルで、パーティションがデータベースの複数のファイル グループに分散される場合もあります。 大きなテーブルやインデックスをパーティション分割すると、コレクション全体の整合性を維持しながら、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うことができるので、大きなテーブルやインデックスを管理しやすくなります。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] では、最大 15,000 個のパーティションを既定でサポートしています。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。
 
 ### <a name="temporary-tables"></a>一時テーブル
 
@@ -47,7 +47,7 @@ ms.locfileid: "97482358"
 
 #### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> 複数のスコープにまたがる一時テーブルを使用するワークロードの再コンパイルの削減
 
-すべてのデータベース互換レベルにおいて、[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] により、複数のスコープにまたがる一時テーブルを使用するワークロードの再コンパイルが減ります。 この機能は、すべてのデプロイ モデルのデータベース互換レベル 150 の Azure SQL Database でも有効になります。  この機能が提供されるまでは、一時テーブルが外側のスコープのバッチによって作成されていた場合、データ操作言語 (DML) ステートメント (`SELECT`、`INSERT`、`UPDATE`、`DELETE`) で一時テーブルを参照すると、実行のたびに DML ステートメントが再コンパイルされました。 この改良により、SQL Server では追加の軽量なチェックが実行されて、不要な再コンパイルが回避されます。
+すべてのデータベース互換レベルにおいて、[!INCLUDE[ss2019](../../includes/sssql19-md.md)] により、複数のスコープにまたがる一時テーブルを使用するワークロードの再コンパイルが減ります。 この機能は、すべてのデプロイ モデルのデータベース互換レベル 150 の Azure SQL Database でも有効になります。  この機能が提供されるまでは、一時テーブルが外側のスコープのバッチによって作成されていた場合、データ操作言語 (DML) ステートメント (`SELECT`、`INSERT`、`UPDATE`、`DELETE`) で一時テーブルを参照すると、実行のたびに DML ステートメントが再コンパイルされました。 この改良により、SQL Server では追加の軽量なチェックが実行されて、不要な再コンパイルが回避されます。
 
 - コンパイル時に一時テーブルの作成に使用される外側のスコープのモジュールが、連続実行に使用されるものと同じかどうかを確認してください。 
 - 最初のコンパイルで行われたデータ定義言語 (DDL) のすべての変更を追跡し、連続実行に対する DDL 操作と比較します。

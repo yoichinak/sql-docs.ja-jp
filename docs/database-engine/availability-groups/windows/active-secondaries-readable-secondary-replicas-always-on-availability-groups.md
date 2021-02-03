@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 1b7be0ce3e3be27633c32e031f7c674804a43d8b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 4d08635e146a7eb5e4af3c26fde87fed64071cd1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170814"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237374"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "98170814"
  つまり、プライマリ レプリカとセカンダリ レプリカの間には待機時間 (通常は数秒程度) が発生します。 ただし、ネットワークの問題のためにスループットが低下するなどの特殊なケースでは、待機時間が長くなることがあります。 I/O ボトルネックが生じた場合やデータの移動が中断された場合は、待機時間が増加します。 データ移動の中断を監視するには、 [Always On ダッシュボード](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) または [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 動的管理ビューを使用できます。  
   
 ####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> メモリ最適化テーブルが含まれるデータベースでのデータ待機時間  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] では、アクティブなセカンダリでのデータ待機時間に関して、特別な考慮事項がありました。「[[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)」を参照してください。 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] 以降では、メモリ最適化テーブルのデータ待機時間に関する特別な考慮事項はありません。 メモリ最適化テーブルの予想されるデータ待機時間は、ディスク ベース テーブルの待機時間に相当します。  
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] では、アクティブなセカンダリでのデータ待機時間に関して、特別な考慮事項がありました。「[[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)」を参照してください。 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] 以降では、メモリ最適化テーブルのデータ待機時間に関する特別な考慮事項はありません。 メモリ最適化テーブルの予想されるデータ待機時間は、ディスク ベース テーブルの待機時間に相当します。  
   
 ###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> 読み取り専用ワークロードの影響  
  セカンダリ レプリカを読み取り専用アクセス用に構成した場合、セカンダリ データベースに対する読み取り専用ワークロードによって (ディスク ベース テーブルに対する読み取り専用ワークロードで大量の I/O が発生する場合には特に)、再実行スレッドの CPU や (ディスク ベース テーブルに対する) I/O などのシステム リソースが消費されます。 すべての行がメモリ内にあるため、メモリ最適化テーブルにアクセスしても IO の影響はありません。  

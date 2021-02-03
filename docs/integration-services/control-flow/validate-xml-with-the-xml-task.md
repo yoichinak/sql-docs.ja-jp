@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 97e0ea80dcc5cffefc99cbbc928eace94ade942a
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 91eb457beedb4712598b871a9325228c2309f2f2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172594"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237895"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
@@ -37,7 +37,7 @@ ms.locfileid: "98172594"
  この XML 検証機能は、大きなサイズの XML ドキュメントや大量のエラーにも、簡単に規模を変更して対応できます。 出力ファイル自体が XML 形式なので、出力に対するクエリの実行と分析が可能です。 たとえば、出力に大量のエラーが含まれている場合、このトピックで説明する方法で [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用して、エラーをグループ化することができます。  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ( [!INCLUDE[ssIS](../../includes/ssis-md.md)]) では、**Service Pack 2 で** ValidationDetails[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] プロパティが導入されました。 このプロパティは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]でも利用できます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ( [!INCLUDE[ssIS](../../includes/ssis-md.md)]) では、**Service Pack 2 で** ValidationDetails[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] プロパティが導入されました。 このプロパティは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]でも利用できます。  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>有効な XML のサンプル出力  
  有効な XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。  

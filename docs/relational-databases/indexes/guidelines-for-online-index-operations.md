@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17c91b53c786934d292692493fa886698128b34d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9612070531dc13d9646d439501925f59f62c8da7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465303"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236911"
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
 
@@ -119,7 +119,7 @@ S-Lock または Sch-M ロックはインデックス操作の最後のフェー
 ## <a name="online-default-options"></a>オンラインの既定のオプション
 
 > [!IMPORTANT]
-> これらのオプションは、[!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] でパブリック プレビュー状態です。
+> これらのオプションは、[!INCLUDE[ssNoVersion](../../includes/sssql19-md.md)] でパブリック プレビュー状態です。
 
 ELEVATE_ONLINE または ELEVATE_RESUMABLE データベース スコープ構成オプションを設定することで、データベース レベルでオンラインまたは再開可能の既定のオプションを設定できます。 これらの既定のオプションを設定すると、データベース テーブルをオフラインにする操作を誤って実行してしまう事態を回避できます。 いずれのオプションでも、エンジンは特定の操作をオンラインまたは再開可能実行に自動昇格します。  
 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) コマンドを使用して、オプションを FAIL_UNSUPPORTED、WHEN_SUPPORTED、または OFF のいずれかに設定できます。 オンラインと再開可能に異なる値を設定できます。
@@ -129,7 +129,7 @@ ELEVATE_ONLINE と ELEVATE_RESUMABLE はいずれも、オンラインと再開�
 > [!NOTE]
 > ELEVATE_ONLINE と ELEVATE_RESUMABLE は XML インデックス操作に適用されません。
 
-## <a name="related-content"></a>関連するコンテンツ
+## <a name="related-content"></a>関連コンテンツ
 
 - [オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)  

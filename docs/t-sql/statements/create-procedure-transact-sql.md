@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - PROC
 - PROCEDURE
@@ -47,12 +47,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a23a11bf4968179baad9d3cc88e5a64acae68b76
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c1c781ab64e5ec0a3dde6a298b320a3520667fd3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170164"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237832"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -148,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 
 OR ALTER
 
-**適用対象**:Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降)。
+**適用対象**:Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 以降)。
 
 既に存在するプロシージャを変更します。
 
@@ -220,7 +220,7 @@ ENCRYPTION
 
 EXECUTE AS "*句*":プロシージャを実行するセキュリティ コンテキストを指定します。
 
-ネイティブ コンパイル ストアド プロシージャの場合、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、EXECUTE AS 句に対して制限はありません。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、SELF、OWNER、および *'user_name'* 句は、ネイティブ コンパイル ストアド プロシージャでサポートされます。
+ネイティブ コンパイル ストアド プロシージャの場合、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、EXECUTE AS 句に対して制限はありません。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、SELF、OWNER、および *'user_name'* 句は、ネイティブ コンパイル ストアド プロシージャでサポートされます。
 
 詳細については、「[EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)」を参照してください。
 
