@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ef3d409ae656776b870119ccd14cb211cc16b32c
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 72bf9910a86d66ac36cbebbb0be66f8a8df832e5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125552"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235766"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -179,9 +179,9 @@ ms.locfileid: "96125552"
 -   [復旧アドバイザー: SSMS を使用して分割バックアップを作成/復元する](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> 高速データベース復旧
-[高速データベース復旧](/azure/sql-database/sql-database-accelerated-database-recovery/)は [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で利用できます。 高速データベース復旧では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の[復旧プロセス](#TlogAndRecovery)の再設計により、データベースの可用性が大幅に向上します (長時間トランザクションが存在する場合は特に)。 高速データベース復旧が有効にされたデータベースでは、フェールオーバーまたは他のクリーンではないシャットダウンの後の復旧プロセスが、非常に速く完了します。 高速データベース復旧を有効にした場合、取り消された長時間トランザクションのロールバックも非常に速く完了します。
+[高速データベース復旧](/azure/sql-database/sql-database-accelerated-database-recovery/)は [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で利用できます。 高速データベース復旧では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の[復旧プロセス](#TlogAndRecovery)の再設計により、データベースの可用性が大幅に向上します (長時間トランザクションが存在する場合は特に)。 高速データベース復旧が有効にされたデータベースでは、フェールオーバーまたは他のクリーンではないシャットダウンの後の復旧プロセスが、非常に速く完了します。 高速データベース復旧を有効にした場合、取り消された長時間トランザクションのロールバックも非常に速く完了します。
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、次の構文を使用して、データベースごとに高速データベース復旧を有効にできます。
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では、次の構文を使用して、データベースごとに高速データベース復旧を有効にできます。
 
 ```sql
 ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;

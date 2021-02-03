@@ -12,12 +12,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca8263c5d75fca3bc59164d8d3ff7acaa9c5f2e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: cf8e82f8ebaa0a8b5b30cc4ffd460f7db7d4d121
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172734"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234867"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列ストア インデックス - データ ウェアハウス
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "98172734"
   列ストア インデックスは、パーティション分割と共に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ウェアハウスの構築に不可欠な機能です。  
   
 ## <a name="whats-new"></a>新機能  
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] では、列ストアのパフォーマンスを向上させるために、次の機能が導入されています。  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] では、列ストアのパフォーマンスを向上させるために、次の機能が導入されています。  
   
 -   AlwaysOn で、読み取り可能なセカンダリ レプリカで列ストア インデックスのクエリをサポートします。  
 -   複数のアクティブな結果セット (MARS) で、列ストア インデックスをサポートします。  
@@ -39,7 +39,7 @@ ms.locfileid: "98172734"
 -   データベース互換性レベル 130 以上でのスナップショット分離。  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>非クラスター化インデックスと列ストア インデックスを組み合わせてパフォーマンスを改善する  
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、クラスター化列ストア インデックスに非クラスター化インデックスを定義できます。   
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、クラスター化列ストア インデックスに非クラスター化インデックスを定義できます。   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>例: 非クラスター化インデックスを使用してテーブルの検索効率を改善する  
  データ ウェアハウスでのテーブルの検索効率を改善するために、テーブルの検索でクエリが最高のパフォーマンスを発揮するように設計された非クラスター化インデックスを作成できます。 たとえば、一致する値を見つけるクエリや、値の小さな範囲を返すクエリは、列ストア インデックスではなく B ツリー インデックスに対して実行したほうが高いパフォーマンスを発揮します。 このようなクエリでは、列ストア インデックスを介したフル テーブル スキャンは必要ありません。B ツリー インデックスを介したバイナリ検索を実行すると、よりすばやく正しい結果が返されます。  
@@ -101,7 +101,7 @@ WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey);
 ```  
   
 ### <a name="improve-performance-by-enabling-row-level-and-row-group-level-locking"></a>行レベルおよび行グループ レベルのロックを有効にしてパフォーマンスを改善する  
- 列ストア インデックス機能で非クラスター化インデックスを補完するために、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] には、選択、更新、および削除の各操作に対してより細分化されたロック機能が用意されています。 クエリの実行では、非クラスター化インデックスに対するインデックス検索に行レベルのロックを使用できます。また、列ストア インデックスに対するテーブル全体のスキャンに行グループ レベルのロックを使用できます。 行レベルのロックと行グループ レベルのロックを適切に使用すると、読み取り/書き込みのコンカレンシー度を高めることができます。  
+ 列ストア インデックス機能で非クラスター化インデックスを補完するために、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] には、選択、更新、および削除の各操作に対してより細分化されたロック機能が用意されています。 クエリの実行では、非クラスター化インデックスに対するインデックス検索に行レベルのロックを使用できます。また、列ストア インデックスに対するテーブル全体のスキャンに行グループ レベルのロックを使用できます。 行レベルのロックと行グループ レベルのロックを適切に使用すると、読み取り/書き込みのコンカレンシー度を高めることができます。  
   
 ```sql  
 --Granular locking example  

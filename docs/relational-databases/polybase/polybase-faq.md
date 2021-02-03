@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 57d59e774c1042bf7989bcd2df4a652ed4498f0d
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: 70ffec480513c7a002a8691f2624a604bc82ead0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563138"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235808"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 
@@ -36,7 +36,7 @@ ms.locfileid: "96563138"
 
 ## <a name="whats-new-in-polybase-2019"></a>PolyBase 2019 の新機能 
 
-[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] の PolyBase は、さまざまな大規模なデータ ソースからデータを読み取ることができるようになりました。 これらの外部データ ソースのデータは、SQL Server で外部テーブルとして格納できます。 PolyBase により、ODBC ジェネリック型を除くこれらの外部データ ソースへのプッシュ ダウン計算もサポートされます。
+[!INCLUDE[sssql19](../../includes/sssql19-md.md)] の PolyBase は、さまざまな大規模なデータ ソースからデータを読み取ることができるようになりました。 これらの外部データ ソースのデータは、SQL Server で外部テーブルとして格納できます。 PolyBase により、ODBC ジェネリック型を除くこれらの外部データ ソースへのプッシュ ダウン計算もサポートされます。
 
 ### <a name="compatible-data-sources"></a>互換性のあるデータ ソース
 
@@ -51,7 +51,7 @@ ms.locfileid: "96563138"
 
 ## <a name="polybase-in-big-data-clusters-vs-polybase-in-stand-alone-instances"></a>ビッグ データ クラスターの PolyBase とスタンドアロン インスタンスの PolyBase
 
-次の表では、[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] のスタンドアロン インストールと [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] のビッグ データ クラスターで使用できる PolyBase の機能について説明します。
+次の表では、[!INCLUDE[sssql19](../../includes/sssql19-md.md)] のスタンドアロン インストールと [!INCLUDE[sssql19](../../includes/sssql19-md.md)] のビッグ データ クラスターで使用できる PolyBase の機能について説明します。
 
 |機能 |ビッグ データ クラスター|スタンドアロン インスタンス|
 |--------------------------|--------------------------|---------|   
@@ -64,4 +64,4 @@ ms.locfileid: "96563138"
 |クエリの実行をスケールアウトする | X| X (Windows のみ) |
 
 > [!NOTE]
->この表では、最新の [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP で利用できる機能については説明されていません。 使用可能な機能については、リリース ノートをご覧ください。 ODBC ジェネリック コネクタを使用した接続の詳細については、[ODBC ジェネリック型を構成するためのハウツー ガイド](polybase-configure-odbc-generic.md)の記事をご覧ください。
+>この表では、最新の [!INCLUDE[sssql19](../../includes/sssql19-md.md)] CTP で利用できる機能については説明されていません。 使用可能な機能については、リリース ノートをご覧ください。 ODBC ジェネリック コネクタを使用した接続の詳細については、[ODBC ジェネリック型を構成するためのハウツー ガイド](polybase-configure-odbc-generic.md)の記事をご覧ください。

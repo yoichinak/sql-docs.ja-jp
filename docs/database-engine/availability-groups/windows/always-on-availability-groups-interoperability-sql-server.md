@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 1c0322b1b00b3f5cbff775d3c248ee81916f48a9
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 928b63c84781b837560e593b56d3c272971f9a23
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98765135"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235794"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性グループ: 相互運用性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "98765135"
 
 次の機能は、特定の制限付きで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と相互運用します。 詳細については、リンク先のトピックを参照してください。
 
-- データベースをまたがるトランザクション/分散トランザクション ([!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] と Windows Server 2016)。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。
+- データベースをまたがるトランザクション/分散トランザクション ([!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] と Windows Server 2016)。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。
 - 読み取り不可のセカンダリがある環境では、[クエリ統計システム データ コレクター](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query)を確実に実行することができません。 クエリ統計システム データ コレクターを使用するには、[読み取りアクセス](configure-read-only-access-on-an-availability-replica-sql-server.md)を許可するように、可用性グループのセカンダリ レプリカを設定してください。 
 
 ## <a name="features-that-do-not-interoperate-with-always-on-availability-groups"></a><a name="NoInterop"></a> Always On 可用性グループと相互運用不可能な機能

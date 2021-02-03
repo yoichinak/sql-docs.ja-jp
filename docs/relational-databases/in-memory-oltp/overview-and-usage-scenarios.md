@@ -12,12 +12,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: kevin-farlee
 ms.author: kfarlee
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b01ecd66479d93d3eb89065a94005d9deeffaf5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 8492183591b2069115e8da8d05d89759f5eee46d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172304"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235255"
 ---
 # <a name="overview-and-usage-scenarios"></a>概要と使用シナリオ
 
@@ -29,7 +29,7 @@ ms.locfileid: "98172304"
 
 ## <a name="in-memory-oltp-overview"></a>インメモリ OLTP の概要
 
-インメモリ OLTP は、適切なワークロードの場合にパフォーマンスが大きく向上します。 お客様の BWIN は、インメモリ OLTP を利用して、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] を実行する 1 台のコンピューターで[毎秒 120 万要求を達成](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale)しました。 また、Quorum は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でインメモリ OLTP を利用して、[リソース使用率を 70% 下げ](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)、ワークロードを 2 倍にしました。 一部の事例では、最大 30 倍のパフォーマンス向上が見られていますが、向上率はワークロードによって変わります。
+インメモリ OLTP は、適切なワークロードの場合にパフォーマンスが大きく向上します。 お客様の BWIN は、インメモリ OLTP を利用して、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] を実行する 1 台のコンピューターで[毎秒 120 万要求を達成](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale)しました。 また、Quorum は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でインメモリ OLTP を利用して、[リソース使用率を 70% 下げ](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)、ワークロードを 2 倍にしました。 一部の事例では、最大 30 倍のパフォーマンス向上が見られていますが、向上率はワークロードによって変わります。
 
 それでは、このパフォーマンス向上は何に由来するのでしょうか。 基本的に、インメモリ OLTP は、データ アクセスとトランザクションの実行を効率化し、同時に実行されるトランザクション間のロックとラッチの競合を取り除くことで、トランザクション プロセスのパフォーマンスを改善します。高速化の理由はデータがメモリ内にあるからではなく、メモリ内のデータを中心にして最適化しているためです。 メモリ内のコンカレンシー処理が多い計算に関する最新の機能強化を利用するように、データ ストレージ、アクセス、処理アルゴリズムはゼロから再設計されました。
 
@@ -67,8 +67,8 @@ ms.locfileid: "98172304"
 
 #### <a name="customer-case-studies"></a>お客様の導入事例
 
-- CMC Markets では、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] のインメモリ OLTP を利用して、一貫性のある低待機時間を実現しています:[待機時間 1 秒は長すぎるため、現在、この金融サービス企業では取引ソフトウェアを更新しています。](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco では、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] のインメモリ OLTP を利用して、スループットの向上をサポートし、ワークロードの急増を処理しています:[将来のリスクを望まないオンライン ゲーム企業が、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] に賭けています。](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- CMC Markets では、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] のインメモリ OLTP を利用して、一貫性のある低待機時間を実現しています:[待機時間 1 秒は長すぎるため、現在、この金融サービス企業では取引ソフトウェアを更新しています。](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
+- Derivco では、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] のインメモリ OLTP を利用して、スループットの向上をサポートし、ワークロードの急増を処理しています:[将来のリスクを望まないオンライン ゲーム企業が、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] に賭けています。](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>IoT (モノのインターネット) などのデータ統合
 
@@ -101,7 +101,7 @@ ms.locfileid: "98172304"
 
 インメモリ OLTP テクノロジは、SQL でセッションの状態 (ASP.NET アプリケーションの状態など) を維持する場合におよびキャッシュの場合に特に推奨されます。
 
-ASP.NET セッションの状態は、インメモリ OLTP で特に成功している使用事例です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、あるお客様が毎秒約 120 万要求を達成しました。 一方、社内のすべての中間層アプリケーションのキャッシュ ニーズにインメモリ OLTP を使用し始めました。 詳細:[How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) (bwin がインメモリ OLTP を使用して前例のないパフォーマンスとスケールを達成している方法)
+ASP.NET セッションの状態は、インメモリ OLTP で特に成功している使用事例です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、あるお客様が毎秒約 120 万要求を達成しました。 一方、社内のすべての中間層アプリケーションのキャッシュ ニーズにインメモリ OLTP を使用し始めました。 詳細:[How bwin is using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) (bwin がインメモリ OLTP を使用して前例のないパフォーマンスとスケールを達成している方法)
 
 #### <a name="implementation-considerations"></a>実装時の注意事項
 
@@ -112,7 +112,7 @@ ASP.NET セッションの状態のメモリ最適化を始めるには、GitHub
 #### <a name="customer-case-studies"></a>お客様導入事例
 
 - bwin は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインメモリ OLTP を使用して、スループットを大幅に増やし、ASP.NET セッションの状態のハードウェアの占有領域を減らすことができました:[ゲーム サイトを毎秒 250,000 要求に拡張し、プレーヤーのエクスペリエンスを改善することができました](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
-- bwin は、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] のインメモリ OLTP を使用して、ASP.NET セッションの状態を使用してスループットをさらに増加し、会社全体の中間層キャッシュ システムを実装しました:[How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) (bwin がインメモリ OLTP を使用して前例のないパフォーマンスとスケールを達成している方法)
+- bwin は、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] のインメモリ OLTP を使用して、ASP.NET セッションの状態を使用してスループットをさらに増加し、会社全体の中間層キャッシュ システムを実装しました:[How bwin is using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) (bwin がインメモリ OLTP を使用して前例のないパフォーマンスとスケールを達成している方法)
 
 ### <a name="tempdb-object-replacement"></a>tempdb オブジェクトの置き換え
 

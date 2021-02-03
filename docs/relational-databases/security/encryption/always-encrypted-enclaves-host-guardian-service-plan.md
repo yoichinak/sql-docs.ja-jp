@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4c80a51370de62410367b1225fd85e3ffe7f261
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: d156b2c02d67c947041de268962579d6417202e2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534801"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235749"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>ホスト ガーディアン サービスの構成証明の計画
 
@@ -118,7 +118,7 @@ HGS は、暗号化と暗号化の解除を必要とするアクション数が�
 
 これらの要件の内容は次のとおりです。
 
-- [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 以降
+- [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] 以降
 - Windows 10 Enterprise バージョン 1809 以降、または Windows Server 2019 Datacenter エディション。 Windows 10 および Windows Server の他のエディションでは、HGS を使用した構成証明はサポートされていません。
 - 仮想化テクノロジの CPU サポート:
   - Extended Page Tables を備えた Intel VT-x。

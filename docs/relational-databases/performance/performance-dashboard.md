@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ef87d8cdfb44d36faff5e06cfdc0b0f691142c03
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ad05914c851b30c567f15cfa43e85299b37b81c5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170404"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235788"
 ---
 # <a name="performance-dashboard"></a>パフォーマンス ダッシュボード
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "98170404"
 
 **[待機]** レポートでは、アイドル待機とスリープ待機のすべてが除外されます。 待機の詳細については、「[sys.dm_os_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」および[待機とキューを使用した SQL Server 2005 のパフォーマンス チューニング](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc)に関する記事を参照してください。
 
-基になる DMV 内のデータがクリアされたために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動すると、 **[コストの高いクエリ]** レポートはリセットされます。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、コストの高いクエリに関する詳細情報はクエリ ストアで見つけることができます。 
+基になる DMV 内のデータがクリアされたために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動すると、 **[コストの高いクエリ]** レポートはリセットされます。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降、コストの高いクエリに関する詳細情報はクエリ ストアで見つけることができます。 
 
 
 > [!NOTE]

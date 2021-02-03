@@ -12,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6a0b60d8b690490074187d977d9bd636d88aea3
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 37827d1de9b99acb585762da094fd6cdaf905298
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172684"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235391"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列ストア インデックス - データ読み込みガイダンス
 
@@ -89,7 +89,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- このコマンドでは、BCP や一括挿入と同じように列ストア インデックスにデータを読み込みますが、データは単一のバッチにまとめられます。 ステージング テーブルの行数が 102400 未満の場合、行はデルタ行グループに読み込まれ、それ以外の場合、行は圧縮された列グループに直接読み込まれます。 この `INSERT` 操作はシングル スレッドの場合に限られていました。 データの並列読み込みを行う場合、複数のステージング テーブルを作成するか、ステージング テーブルの重複していない行の範囲を指定して `INSERT`/`SELECT` を実行することができます。 このような制限は [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] にはありません。 次のコマンドではステージング テーブルからデータを並列で読み込みますが、`TABLOCK` を指定する必要があります。 これは、一括読み込みについて説明した内容と矛盾していることがありますが、主な違いは、ステージング テーブルからの並列データの読み込みが同じトランザクションで実行されることです。
+ このコマンドでは、BCP や一括挿入と同じように列ストア インデックスにデータを読み込みますが、データは単一のバッチにまとめられます。 ステージング テーブルの行数が 102400 未満の場合、行はデルタ行グループに読み込まれ、それ以外の場合、行は圧縮された列グループに直接読み込まれます。 この `INSERT` 操作はシングル スレッドの場合に限られていました。 データの並列読み込みを行う場合、複数のステージング テーブルを作成するか、ステージング テーブルの重複していない行の範囲を指定して `INSERT`/`SELECT` を実行することができます。 このような制限は [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] にはありません。 次のコマンドではステージング テーブルからデータを並列で読み込みますが、`TABLOCK` を指定する必要があります。 これは、一括読み込みについて説明した内容と矛盾していることがありますが、主な違いは、ステージング テーブルからの並列データの読み込みが同じトランザクションで実行されることです。
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 

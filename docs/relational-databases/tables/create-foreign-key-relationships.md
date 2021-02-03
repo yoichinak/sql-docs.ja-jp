@@ -14,12 +14,12 @@ ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 230a1a00d66f1839be7a8135ff9c45022f0a2511
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: b58c999fd74f7a899e7b700022f57b7171ed39b7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98765650"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234708"
 ---
 # <a name="create-foreign-key-relationships"></a>外部キーのリレーションシップの作成
 
@@ -42,7 +42,7 @@ ms.locfileid: "98765650"
 - FOREIGN KEY 制約は、同じテーブル内の他の列を参照でき、自己参照として参照されます。
 - 列レベルで指定された FOREIGN KEY 制約は、参照列を 1 つだけ表示できます。 この参照列は、制約が定義されている列と同じデータ型である必要があります。
 - テーブルレベルで指定された FOREIGN KEY 制約は、制約列リスト内の列の数と同じ数の参照列を持っている必要があります。 また、各参照列のデータ型は、列リスト内の、参照列に対応する列と同じでなければなりません。
-- [!INCLUDE[ssDE](../../includes/ssde-md.md)] には、他のテーブルを参照するテーブルに含めることができる FOREIGN KEY 制約の数に対して定義済みの制限はありません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、特定のテーブルを参照する他のテーブルが所有する FOREIGN KEY 制約の数も制限されません。 ただし、使用できる FOREIGN KEY 制約の実際の数は、ハードウェア構成やデータベースおよびアプリケーションのデザインにより制限されます。 テーブルから、他のテーブルと列を最大 253 個まで外部キーとして参照 (発信参照) することができます。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、1 つのテーブル内の列を参照 (着信参照) できる他のテーブルと列の数が 253 から 10,000 までに限られています。 (少なくとも 130 の互換性レベルが必要です)。増加には、次の制限があります。
+- [!INCLUDE[ssDE](../../includes/ssde-md.md)] には、他のテーブルを参照するテーブルに含めることができる FOREIGN KEY 制約の数に対して定義済みの制限はありません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、特定のテーブルを参照する他のテーブルが所有する FOREIGN KEY 制約の数も制限されません。 ただし、使用できる FOREIGN KEY 制約の実際の数は、ハードウェア構成やデータベースおよびアプリケーションのデザインにより制限されます。 テーブルから、他のテーブルと列を最大 253 個まで外部キーとして参照 (発信参照) することができます。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、1 つのテーブル内の列を参照 (着信参照) できる他のテーブルと列の数が 253 から 10,000 までに限られています。 (少なくとも 130 の互換性レベルが必要です)。増加には、次の制限があります。
 
   - 253 を超える外部キー参照は、DELETE と UPDATE DML 操作でのみサポートされています。 MERGE 操作はサポートされません。
   - テーブル自体に対する外部キー参照も、253 の外部キー参照に制限されます。
