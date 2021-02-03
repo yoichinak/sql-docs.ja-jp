@@ -19,12 +19,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd89afe79f1e6cf7a5745b04378c1b403142c56e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6f78a502be14ffcf51937823d61bd61c144777f5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97426418"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187263"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted テーブルと deleted テーブルの使用
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "97426418"
 > [!NOTE]  
 >  トリガーの動作が、データ変更の影響のある行の数に依存する場合、複数行データ変更 (SELECT ステートメントに基づく INSERT、DELETE、または UPDATE) に @@ROWCOUNT の検査などのテストを使用し、適切な動作を実行する必要があります。 詳細については、「 [複数行のデータを処理するための DML トリガーの作成](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)」を参照してください。
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、AFTER トリガー用の inserted テーブルおよび deleted テーブル内で **text** 列、 **ntext** 列、または **image** 列を参照することを禁止しています。 これらのデータ型は旧バージョンとの互換性のためだけに用意されているものです。 大きなデータを格納するには、 **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** データ型を使用することをお勧めします。 AFTER トリガーと INSTEAD OF トリガーでは両方とも、inserted テーブルおよび deleted テーブルで **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** 型のデータがサポートされます。 詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] では、AFTER トリガー用の inserted テーブルおよび deleted テーブル内で **text** 列、 **ntext** 列、または **image** 列を参照することを禁止しています。 これらのデータ型は旧バージョンとの互換性のためだけに用意されているものです。 大きなデータを格納するには、 **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** データ型を使用することをお勧めします。 AFTER トリガーと INSTEAD OF トリガーでは両方とも、inserted テーブルおよび deleted テーブルで **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** 型のデータがサポートされます。 詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
   
  **トリガーで inserted テーブルを使用してビジネス ルールを適用する例**  
   

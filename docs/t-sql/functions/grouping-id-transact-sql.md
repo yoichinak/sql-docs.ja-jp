@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - GROUPING_ID_TSQL
 - GROUPING_ID
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f2c8332aabe8c6583cd76429aaf1679417a956d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: e071cc947160ef741486e8e9eaea988687d4af9e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111111"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182393"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`abc`|`111`|`7`|  
   
 ## <a name="technical-definition-of-grouping_id-"></a>GROUPING_ID () の技術的な定義  
- 各 GROUPING_ID 引数は、GROUP BY リストの要素でなければなりません。 GROUPING_ID () は、最下位 N ビットが点灯する場合がある **integer** ビットマップを返します。 点灯した **bit** は、対応する引数が特定の出力行に対するグループ列でないことを示します。 最も順位が低い **bit** は引数 N に対応し、N-1<sup></sup>番目に順位が低い **bit** は引数 1 に対応します。  
+ 各 GROUPING_ID 引数は、GROUP BY リストの要素でなければなりません。 GROUPING_ID () は、最下位 N ビットが点灯する場合がある **integer** ビットマップを返します。 点灯した **bit** は、対応する引数が特定の出力行に対するグループ列でないことを示します。 最も順位が低い **bit** は引数 N に対応し、N-1 <sup></sup>番目に順位が低い **bit** は引数 1 に対応します。  
   
 ## <a name="grouping_id--equivalents"></a>GROUPING_ID () の対応  
  単一グループ クエリの場合、GROUPING (\<column_expression>) は GROUPING_ID (\<column_expression>) に対応し、いずれも 0 を返します。  

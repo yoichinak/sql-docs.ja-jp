@@ -2,11 +2,11 @@
 description: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/26/2020
+ms.date: 01/28/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE EXTERNAL LIBRARY
 - CREATE_EXTERNAL_LIBRARY_TSQL
@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 9839a6fa8bd678afdce426f9dcd5657500c5a6cd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1cb25ebe0b24e2656f6b206b8a56eb24b81f45af
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100794"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186845"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -98,8 +98,7 @@ WITH ( LANGUAGE = 'R' )
 
 <file_spec> ::=  
 {  
-    (CONTENT = { <client_library_specifier> | <library_bits> }  
-    [, PLATFORM = WINDOWS ])  
+    (CONTENT = { <client_library_specifier> | <library_bits> })  
 }  
 
 <client_library_specifier> :: = 
@@ -171,6 +170,8 @@ WITH ( LANGUAGE = <language> )
 
 **<client_library_specifier>** で指定したファイルにアクセスしようとすると、SQL Server では現在の Windows ログインのセキュリティ コンテキストの権限が借用されます。 **<client_library_specifier>** でネットワーク上の場所 (UNC パス) を指定した場合は、委任制限があり、現在のログインの権限借用範囲はネットワーク上の場所まで拡大されません。 この場合、アクセスは SQL Server サービス アカウントのセキュリティ コンテキストを使って行われます。 詳しくは、「[資格情報 (データベース エンジン)](../../relational-databases/security/authentication-access/credentials-database-engine.md)」をご覧ください。
 
+::: moniker-end
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 必要に応じて、ファイルの OS プラットフォームを指定できます。 特定の言語またはランタイムの OS プラットフォームごとに 1 つのファイル成果物またはコンテンツのみが許可されます。
 ::: moniker-end
 
@@ -179,13 +180,6 @@ WITH ( LANGUAGE = <language> )
 アセンブリと同様に、パッケージのコンテンツを 16 進数のリテラルとして指定します。 
 
 このオプションは、ライブラリを作成または既存のライブラリを変更する (およびそれを行うために必要なアクセス許可を持つ) 必要があるが、サーバー上のファイル システムが制限されていて、サーバーがアクセスできる場所にライブラリ ファイルをコピーできない場合に役立ちます。
-
-::: moniker range="=sql-server-2017"
-**PLATFORM = WINDOWS**
-
-ライブラリのコンテンツのプラットフォームを指定します。 既定値は、SQL Server が実行されているホスト プラットフォームに設定されます。 そのため、ユーザーが値を指定する必要はありません。 複数のプラットフォームがサポートされている場合、またはユーザーが別のプラットフォームを指定する必要がある場合に必要です。
-SQL Server 2017 では、サポートされているプラットフォームは Windows のみです。
-::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **PLATFORM**
@@ -211,8 +205,6 @@ SQL Server 2019 でサポートされているプラットフォームは、Wind
 
 パッケージの言語を指定します。 値は `R`、`Python`、または外部言語の名前にできます (「[CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)」を参照してください)。
 ::: moniker-end
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>解説
 
