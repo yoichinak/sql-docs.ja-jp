@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FOR
 - FOR CLAUSE
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a3f8fb497c95bd7f1df6f1ea8a51be938bc1a555
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99b47c3d47e7403e04cfff4b62ff5c1d78bb6071
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479470"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207543"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 句 (Transact-SQL)
 
@@ -192,7 +192,7 @@ JSON
  インライン XDR スキーマを返します。ただし、結果にルート要素は追加されません。 XMLDATA を指定すると、XDR スキーマはドキュメントに追加されます。  
   
 > [!IMPORTANT]
-> XMLDATA ディレクティブは**非推奨**です。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> XMLDATA ディレクティブは **非推奨** です。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
 
 _不要な改行を非表示にする:_ SQL Server Management Studio (SSMS) を使用し、FOR XML 句を使用するクエリを発行することがあります。 大量の XML が返され、1 つのグリッド セルに表示されることがあります。 XML 文字列は、1 つの SSMS グリッド セルで 1 行に保持できる長さを超えることがあります。 このような場合、SSMS では、XML 文字列全体の長いセグメントの間に改行文字が挿入されることがあります。 行をまたいで分割するべきではない部分文字列の真ん中でそのような改行が発生することがあります。 キャスト AS XMLDATA を使用することで、改行を防ぐことができます。 FOR JSON PATH を使用するときもこの解決策を適用できます。 この手法についてはスタック オーバーフローで論じられています。また、次の Transact-SQL サンプル SELECT ステートメントで確認できます。
 

@@ -18,17 +18,17 @@ ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b94d89738312548e187bf9b7ed637b37aeae95f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ec614ae2c6ab7a2e0dad4f4b502fc9726434354b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462633"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206254"
 ---
 # <a name="delete-check-constraints"></a>CHECK 制約の削除
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して CHECK 制約を削除できます。 CHECK 制約を削除すると、制約式に含まれる 1 つ以上の列に入力できるデータ値に対する制限が取り除かれます。  
+  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して CHECK 制約を削除できます。 CHECK 制約を削除すると、制約式に含まれる 1 つ以上の列に入力できるデータ値に対する制限が取り除かれます。  
   
  **このトピックの内容**  
   

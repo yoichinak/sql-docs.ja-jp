@@ -6,18 +6,18 @@ ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 3313 (Database Engine error)
 ms.assetid: a244227b-8553-42df-9435-034f906c4c74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d176bcd729ca1d72b8f1e6b3d3951cb94ca000e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54d19e8b37d0cf4154bb14b3909c1af60afb0743
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456250"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208386"
 ---
 # <a name="mssqlserver_3313"></a>MSSQLSERVER_3313
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "88456250"
 ## <a name="explanation"></a>説明  
 これは、再実行の復旧のロールアップ エラーです。 このエラーによって、データベースは SUSPECT 状態になっています。 プライマリ ファイル グループ、また場合によってはその他のファイル グループには、問題があり、損傷している可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動中はデータベースを復旧できないため、データベースを使用できません。 問題を解決するには、ユーザーによる操作が必要です。  
   
-このエラーが **tempdb**で発生した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスはシャットダウンします。  
+このエラーが **tempdb** で発生した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスはシャットダウンします。  
   
 ## <a name="user-action"></a>ユーザーの操作  
 このエラーは、サーバー インスタンスの起動またはデータベースの復旧を試行したときのシステム上の一時的な状態が原因である可能性があります。 また、データベースを起動しようとするたびに発生する永続的なエラーが原因である可能性もあります。 原因の詳細については、Windows イベント ログで、具体的な問題点を示しているこれより前のエラーを調べてください。  
   
-このエラー状態が発生すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、通常、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **LOG** フォルダーに 3 つのファイルが生成されます。 SQLDump*nnnn*.txt ファイルには、問題が発生したトランザクションやページの詳細など、エラーに関する詳しい診断情報が含まれています。 この情報は、通常、失敗の理由を分析するために製品サポート チームが使用します。  
+このエラー状態が発生すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、通常、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **LOG** フォルダーに 3 つのファイルが生成されます。 SQLDump *nnnn*.txt ファイルには、問題が発生したトランザクションやページの詳細など、エラーに関する詳しい診断情報が含まれています。 この情報は、通常、失敗の理由を分析するために製品サポート チームが使用します。  
   
 このエラー 3313 の発生の原因については、Windows イベント ログをさかのぼって、具体的な問題点を示すエラーを調べてください。 ユーザーに求められる適切な対処は、Windows イベント ログが示している情報、つまり、その [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーが一時的な状態によって引き起こされたのか、永続的なエラーが原因で引き起こされたのかによって異なります。 エラー 3313 をトラブルシューティングするためのユーザー操作の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
   

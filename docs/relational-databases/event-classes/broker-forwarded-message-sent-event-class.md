@@ -6,19 +6,19 @@ ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Broker:Forwarded Message Sent event class
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb738df03a1e4ea5e9472a6bf0ff2646756d500d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: eb714e530973b719cf89a860534af7799ad31d31
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476233"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205683"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent イベント クラス
 
@@ -53,7 +53,7 @@ ms.locfileid: "97476233"
 |ServerName|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |SPID|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|成功|**int**|転送処理にかかった時間。|23|いいえ|  
+|Success|**int**|転送処理にかかった時間。|23|いいえ|  
 |TargetLoginName|**nvarchar**|このインスタンスがメッセージを送信したネットワーク アドレス。 このネットワーク アドレスはメッセージの最終送信先とは異なる場合があるので注意してください。|42|いいえ|  
 |TargetUserName|**nvarchar**|メッセージを発信したサービスの名前。|39|いいえ|  
 |TransactionID|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
