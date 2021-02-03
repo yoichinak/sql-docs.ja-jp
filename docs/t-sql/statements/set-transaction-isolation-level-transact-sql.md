@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - LEVEL
 - LEVEL_TSQL
@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0310498564525293dba5dde525c24d4ffd620aad
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7fd0098e9b4e213619e65973c2367a03f0197852
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98080322"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161094"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -164,12 +164,12 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 |分離レベル|Transact SQL アクセス|ファイル システムへのアクセス|  
 |---------------------|-------------------------|------------------------|  
-|READ UNCOMMITTED|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|サポートされていない|  
-|READ COMMITTED|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|REPEATABLE READ|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|サポートされていない|  
-|シリアル化可能|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|サポートされていない|  
-|READ COMMITTED SNAPSHOT|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|スナップショット|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|READ UNCOMMITTED|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|サポートされていない|  
+|READ COMMITTED|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|REPEATABLE READ|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|サポートされていない|  
+|シリアル化可能|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|サポートされていない|  
+|READ COMMITTED SNAPSHOT|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|スナップショット|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="examples"></a>例  
  次の例では、セッションの `TRANSACTION ISOLATION LEVEL` を設定します。 後続の各 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではトランザクションが完了するまですべての共有ロックが保持されます。  

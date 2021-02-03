@@ -12,12 +12,12 @@ ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67d1c661f7157081f2693555667c439d589292e4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: acfdadf0216bd243f61339982615c4bf83796dfa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472563"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177977"
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>メモリ最適化およびシステム バージョン管理されたテンポラル テーブルの使用
 
@@ -28,7 +28,7 @@ ms.locfileid: "97472563"
 このトピックでは、メモリ最適化およびシステム バージョン管理されたテンポラル テーブルと、ディスク ベースのシステム バージョン管理されたテンポラル テーブルの違いについて説明します。
 
 > [!NOTE]
-> メモリ最適化されたテンポラル テーブルの使用は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にのみ適用され、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]には適用されません。
+> メモリ最適化されたテンポラル テーブルの使用は [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] にのみ適用され、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]には適用されません。
 
 ## <a name="discovering-metadata"></a>メタデータの検索
 

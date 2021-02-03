@@ -6,7 +6,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7efecb0dbecf4ae7e4d9d142eb6f3bff3f94d616
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 6882fa93bb1d4837f909bc00f74fdf9e83e7c5c4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116546"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174383"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ with Expression2
 値を更新するノードを特定します。 ノードを 1 つだけ指定する必要があります。 つまり、*Expression1* は静的なシングルトンである必要があります。 XML が型指定されている場合、ノードの型は単純型でなければなりません。 複数のノードを選択すると、エラーが発生します。 *Expression1* が空のシーケンスを返す場合は、値の置換は行われず、エラーは返されません。 *Expression1* からは、単純型に型指定された内容 (リストまたはアトミック型)、テキスト ノード、または属性ノードを持つ 1 つの要素が返される必要があります。 *Expression1* に共用体型、複合型、処理命令、ドキュメント ノード、またはコメント ノードを指定することはできません。指定すると、エラーが返されます。  
   
 *Expression2*  
-ノードの新しい値を特定します。 暗黙的に **data()** が使用されるので、単純型に型指定されたノードを返す式にすることができます。 この値が値のリストの場合、**update** ステートメントにより、古い値がそのリストと置き換えられます。 型指定された XML インスタンスを変更する場合、*Expression2* は *Expression*1 と同じ型またはサブタイプにする必要があります。 それ以外の場合は、エラーが返されます。 型指定されていない XML インスタンスを変更する場合、*Expression2* にはアトミック化可能な式を指定する必要があります。 それ以外の場合は、エラーが返されます。  
+ノードの新しい値を特定します。 暗黙的に **data()** が使用されるので、単純型に型指定されたノードを返す式にすることができます。 この値が値のリストの場合、**update** ステートメントにより、古い値がそのリストと置き換えられます。 型指定された XML インスタンスを変更する場合、*Expression2* は *Expression* 1 と同じ型またはサブタイプにする必要があります。 それ以外の場合は、エラーが返されます。 型指定されていない XML インスタンスを変更する場合、*Expression2* にはアトミック化可能な式を指定する必要があります。 それ以外の場合は、エラーが返されます。  
   
 ## <a name="examples"></a>例  
 **replace value of** を使用した次の XML DML ステートメントの例は、XML ドキュメント内のノードを更新する方法を示しています。  

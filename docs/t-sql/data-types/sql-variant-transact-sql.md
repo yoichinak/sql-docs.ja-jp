@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sql_variant
 - sql_variant_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d6d5bac616d1c83cda53a055b00951cced2de19f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3787a49e6488a2b43ba8ef6e7b67c2a94b6347b1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111207"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179697"
 ---
 # <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
 
@@ -47,7 +47,7 @@ sql_variant
 ## <a name="remarks"></a>解説  
 **sql_variant** 列、パラメーター、変数、およびユーザー定義関数の戻り値で使用できます。 **sql_variant** 他のデータ型の値をサポートするためにこれらのデータベース オブジェクトを使用します。
   
-型の列 **sql_variant** 別のデータ型の行を含めることができます。 たとえば、列として定義されている **sql_varian**t 格納できる **int**, 、**バイナリ**, と **char** 値。
+型の列 **sql_variant** 別のデータ型の行を含めることができます。 たとえば、列として定義されている **sql_varian** t 格納できる **int**, 、**バイナリ**, と **char** 値。
   
 **sql_variant** 8,016 バイトの最大長を持つことができます。 これには、基本データ型に関する情報と値の両方が含まれます。 実際の基本データ型値の最大長は、8,000 バイトです。
   
@@ -61,7 +61,7 @@ A **sql_variant** 加算や減算などの操作に参加する前に、基本�
   
 **sql_variant** CONTAINSTABLE と FREETEXTTABLE では使用できません。
   
-ODBC でサポートされていません **sql_variant**です。 クエリではそのため、 **sql_variant** Microsoft OLE DB Provider for ODBC (MSDASQL) を使用すると、列はバイナリ データとして返されます。 たとえば、 **sql_variant** "ps2091 という"文字列データが含まれている列は 0x505332303931 として返されます。
+ODBC でサポートされていません **sql_variant** です。 クエリではそのため、 **sql_variant** Microsoft OLE DB Provider for ODBC (MSDASQL) を使用すると、列はバイナリ データとして返されます。 たとえば、 **sql_variant** "ps2091 という"文字列データが含まれている列は 0x505332303931 として返されます。
   
 ## <a name="comparing-sql_variant-values"></a>sql_variant 値の比較  
 **Sql_variant** データ型変換のためには、データ型階層リストの上部に属しています。 **Sql_variant** 、比較、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型階層の順序は、データ型ファミリにグループ化します。
@@ -137,7 +137,7 @@ FROM      tableA
 WHERE     colB = 1689  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)] これら 3 つの値の各ことに注意してください、 **sql_variant**です。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] これら 3 つの値の各ことに注意してください、 **sql_variant** です。  
   
 ```  
 Base Type    Precision    Scale  
