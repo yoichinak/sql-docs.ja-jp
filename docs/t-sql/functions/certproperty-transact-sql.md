@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CERTPROPERTY
 - CERTPROPERTY_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bbba412b97f88d52afa9a304c3cbbb101f74772b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3b345594914d4fcb4439def47251cb63c22d07b1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88367278"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193442"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,9 +75,9 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 プロパティは単一引用符で囲んで指定する必要があります。
   
 戻り値の型は、関数の呼び出しで指定されたプロパティによって異なります。 戻り値の型 **sql_variant** は、すべての戻り値をラップします。
--   *Expiry_Date* と *Start_Date* 返す **datetime**です。  
+-   *Expiry_Date* と *Start_Date* 返す **datetime** です。  
 -   *Cert_Serial_Number*、*Issuer_Name*、*String_SID*、*Subject* はすべて **nvarchar** を返します。  
--   *SID* 返します **varbinary**です。  
+-   *SID* 返します **varbinary** です。  
   
 ## <a name="remarks"></a>注釈  
 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) カタログ ビューの証明書情報を参照してください。
