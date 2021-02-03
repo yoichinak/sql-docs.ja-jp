@@ -16,12 +16,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2b2d569c3f37370bd132485e843da005b1769b17
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482344"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211534"
 ---
 # <a name="use-sparse-columns"></a>スパース列の使用
 
@@ -39,7 +39,7 @@ ms.locfileid: "97482344"
   
      スパース列は、NULL 値の行が多数あるため、フィルター選択されたインデックスに特に適しています。 スパース列でフィルター選択されたインデックスを使用すると、値が設定された行にのみインデックスを作成できます。 これにより、より小さく効率的なインデックスが作成されます。 詳細については、「 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  
   
- スパース列とフィルター選択されたインデックスを併用することで、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]などのアプリケーションでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して多数のユーザー定義プロパティを効率よく格納およびアクセスできます。  
+ スパース列とフィルター選択されたインデックスを併用することで、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]などのアプリケーションでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]を使用して多数のユーザー定義プロパティを効率よく格納およびアクセスできます。  
   
 ## <a name="properties-of-sparse-columns"></a>スパース列のプロパティ  
  スパース列には次の特性があります。  

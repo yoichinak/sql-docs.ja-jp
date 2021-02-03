@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 78a84099b202ca55588e1365b27d80004d2cdaa5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: adf908dbd20532903ba8bcc40251419d0bb956d6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172614"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233227"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -156,7 +156,7 @@ MAXDOP
          この論理的な一貫性のチェックでは、インデックス オブジェクトの内部インデックス テーブルが参照先のユーザー テーブルと照合されます。 行の不整合を検出するために、内部テーブルとユーザー テーブルの完全な積集合を実行する内部クエリが作成されます。 このクエリを実行するとパフォーマンスに多大な影響を及ぼす可能性があり、その進行状況は追跡できません。 したがって、物理的な破損とは無関係のインデックスの問題があると考えられる場合、またはページ レベルのチェックサムがオフになっており、列レベルのハードウェアの破損が考えられる場合にのみ、WITH EXTENDED_LOGICAL_CHECKS を指定することをお勧めします。    
     -   インデックスがフィルター選択されたインデックスである場合、DBCC CHECKDB は一貫性チェックを実行して、インデックス エントリがフィルター述語に適合していることを確認します。   
       
-- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、コストの高い式の評価を避けるため、既定では、保存される計算列、UDT 列、およびフィルター選択されたインデックスへの追加のチェックは実行されません。 この変更により、これらのオブジェクトを含むデータベースに対する CHECKDB の時間が大幅に短縮されます。 ただし、これらのオブジェクトの物理的な整合性チェックは常に実行されます。 EXTENDED_LOGICAL_CHECKS オプションが指定されている場合にのみ、既存の論理チェック (インデックス付きビュー、XML インデックス、および空間インデックス) に加え、EXTENDED_LOGICAL_CHECKS オプションの一部として式の評価が行われます。
+- [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、コストの高い式の評価を避けるため、既定では、保存される計算列、UDT 列、およびフィルター選択されたインデックスへの追加のチェックは実行されません。 この変更により、これらのオブジェクトを含むデータベースに対する CHECKDB の時間が大幅に短縮されます。 ただし、これらのオブジェクトの物理的な整合性チェックは常に実行されます。 EXTENDED_LOGICAL_CHECKS オプションが指定されている場合にのみ、既存の論理チェック (インデックス付きビュー、XML インデックス、および空間インデックス) に加え、EXTENDED_LOGICAL_CHECKS オプションの一部として式の評価が行われます。
 -  互換性レベルが 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) 以下で NOINDEX が指定されていない場合、DBCC CHECKTABLE は、1 つのテーブルまたはインデックス付きビューと、そのすべての非クラスター化インデックスおよび XML インデックスについて、物理的な一貫性と論理的な一貫性の両方をチェックします。 空間インデックスはサポートされません。
     
  **データベースの互換性レベルを調べるには**    

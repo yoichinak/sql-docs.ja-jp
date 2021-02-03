@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 893400411c6f3d2faf6313923aa0f6127a3f2cf0
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dc1ff18d464c03d1eb5e96834f4d753bfead5559
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171074"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233975"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>access check cache サーバー構成オプション
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "98171074"
 
 **access check cache quota** オプションは、access check result cache に格納されるエントリの数を制御します。 エントリが最大数に達すると、最も古いエントリが access check result cache から削除されます。
   
-既定値は 0 で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこれらのオプションを管理していることを示します。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、既定値は次の内部構成に変換されます。
+既定値は 0 で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこれらのオプションを管理していることを示します。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、既定値は次の内部構成に変換されます。
 -   access check cache bucket count の値が 0 の場合、バケット数の既定値は 256 になります。
 -   access check cache quota の値が 0 の場合、エントリの既定値は 1,024 になります。
 

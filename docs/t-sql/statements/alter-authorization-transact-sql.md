@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER_AUTHORIZATION_TSQL
 - ALTER AUTHORIZATION
@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1afee97fd7b7c70d30def7383e4b83453b90f19b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9ffbdfc1fb808a10e32ec4eb0c294acea2249867
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472033"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233546"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -196,7 +196,7 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|プリンシパルは、ログインであることが必要です。|    
   
 ## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a> データベースに対する ALTER AUTHORIZATION  
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 ### <a name="for-sql-server"></a>SQL Server の場合:  
 **新しい所有者の要件:**    
 新しい所有者プリンシパルは、次のいずれかである必要があります。  

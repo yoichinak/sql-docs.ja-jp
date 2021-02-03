@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP_DEFAULT_TSQL
 - DROP DEFAULT
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 2762305952b7c2e189a9c399f614974e1fc32e11
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: bf1a262a80fdf78eaff96c4f1483403de40b3bf8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688791"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99232913"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] から [現在のバージョン](/troubleshoot/sql/general/determine-version-edition-update-level)まで)。  
   
  条件付きでは既に存在する場合にのみ、既定値を削除します。  
   
@@ -79,7 +79,7 @@ IF EXISTS (SELECT name FROM sys.objects
 GO  
 ```  
   
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、次の構文を使うことができます。  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、次の構文を使うことができます。  
   
 ```sql  
 DROP DEFAULT IF EXISTS datedflt;  

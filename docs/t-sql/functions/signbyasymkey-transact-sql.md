@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SIGNBYASYMKEY_TSQL
 - SIGNBYASYMKEY
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b90807f116b115e3e4756791d821ea9bad85f14e
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 786c196f985a8e9328af23fba6ba3857a1fb27bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91378944"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212181"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
 
 ## <a name="arguments"></a>引数
  *Asym_Key_ID*  
- 現在のデータベース内の非対称キーの ID を指定します。 *Asym_Key_ID* は**int**です。  
+ 現在のデータベース内の非対称キーの ID を指定します。 *Asym_Key_ID* は **int** です。  
   
  **\@plaintext**  
  非対称キーを使って署名するデータを格納する **nvarchar**、**char**、**varchar**、または **nchar** 型の変数を指定します。  

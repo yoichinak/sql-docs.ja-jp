@@ -6,19 +6,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - 'TM: Promote Tran Completed event class'
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecee5a571114b5421630655f015354e1c3abeead
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a5c90225a528380198011fddbe4c7529555c77ac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483524"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210518"
 ---
 # <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed イベント クラス
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "97483524"
 |SessionLoginName|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|成功|**int**|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|23|はい|  
+|Success|**int**|1 = 成功。 0 = 失敗 (たとえば、1 は権限チェックの成功を表し、0 は失敗を表します)。|23|はい|  
 |TransactionID|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   
