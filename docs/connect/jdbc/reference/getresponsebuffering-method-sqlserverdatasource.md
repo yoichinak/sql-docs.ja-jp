@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.getResponseBuffering()
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 387f5442224f26095b0803891725ab8af81996ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0162e8aa1b4adcd83cbb4226edd67464fa7fd7d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434804"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162438"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>getResponseBuffering メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 小文字の **full** または **adaptive** を含む**文字列**です。  
+ 小文字の **full** または **adaptive** を含む **文字列** です。  
   
 ## <a name="remarks"></a>解説  
  **full** 値は、実行時にサーバーから結果全体を読み取ることを示します。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.supportsResultSetHoldability
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0ed1388fd8e3d137fbaae9d7bc8b66235a8a5fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 429848642c35b5e872faa0568b500e975dfc3975
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353998"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158247"
 ---
 # <a name="supportsresultsetholdability-method-sqlserverdatabasemetadata"></a>supportsResultSetHoldability メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public boolean supportsResultSetHoldability(int holdability)
  ResultSet.CLOSE_CURSORS_AT_COMMIT  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

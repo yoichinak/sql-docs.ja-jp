@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.getDate (java.lang.String)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 821058ae-cbe3-4a14-aa02-d55e45491437
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 774923c62c8fcbe70bfee39b975e14e47adebaf1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 442b4f8e8c8c8ed6f6ab24191c3c2c98fcdb8361
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436354"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163209"
 ---
 # <a name="getdate-method-javalangstring-sqlserverresultset"></a>getDate (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public java.sql.Date getDate(java.lang.String columnName)
 #### <a name="parameters"></a>パラメーター  
  *columnName*  
   
- 列名を含む**文字列**です。  
+ 列名を含む **文字列** です。  
   
 ## <a name="return-value"></a>戻り値  
  Date オブジェクト。  

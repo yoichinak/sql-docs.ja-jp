@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_fetch_object
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 6b173c2676f25b4866e1981611c1375e4cd1bf6b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92080671"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99154472"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 *$className* [省略可能]: インスタンス化するクラスの名前を指定する文字列。 *$className* パラメーターの値が指定されていない場合、PHP **stdClass** のインスタンスがインスタンス化されます。  
   
-*$ctorParams* [省略可能]: *$className* パラメーターで指定されたクラスのコンストラクターに渡される値を含む配列。 指定したクラスのコンストラクターがパラメーター値を受け取る場合、 *$ctorParams* object **sqlsrv_fetch_object**パラメーターを使用する必要があります。  
+*$ctorParams* [省略可能]: *$className* パラメーターで指定されたクラスのコンストラクターに渡される値を含む配列。 指定したクラスのコンストラクターがパラメーター値を受け取る場合、 *$ctorParams* object **sqlsrv_fetch_object** パラメーターを使用する必要があります。  
   
 *row* [省略可能]: 次の値のいずれかで、スクロール可能なカーソルを使用して結果セットにアクセスする行を指定します。 (*row* が指定されている場合、*$className* と *$ctorParams* に null を指定しなければならない場合でも、*$className* と *$ctorParams* を明示的に指定する必要があります。)  
   
@@ -86,7 +86,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-このクエリで返される結果が **sqlsrv_fetch_object**で取得される場合、 `SELECT SCOPE_IDENTITY()` で返される値は破棄され、警告が発行されます。 これを回避するために、Transact-SQL ステートメントに返されたフィールドの名前を指定できます。 次は、Transact-SQL に列名を指定する方法の 1 つです。  
+このクエリで返される結果が **sqlsrv_fetch_object** で取得される場合、 `SELECT SCOPE_IDENTITY()` で返される値は破棄され、警告が発行されます。 これを回避するために、Transact-SQL ステートメントに返されたフィールドの名前を指定できます。 次は、Transact-SQL に列名を指定する方法の 1 つです。  
   
 ```sql
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="class-example"></a>クラスの例  
-次の例では、スクリプトに定義されている *Product* クラスのインスタンスとして結果セットの各行が取得されます。 この例では、指定納期 *DueDate* で在庫数 *StockQty* が指定値より少ない製品の情報が AdventureWorks データベースの *Purchasing.PurchaseOrderDetail* テーブルと *Production.Product* テーブルから取得されます。 この例では、 **sqlsrv_fetch_object**の呼び出しにクラスを指定したときに適用される規則の一部が強調表示されています。  
+次の例では、スクリプトに定義されている *Product* クラスのインスタンスとして結果セットの各行が取得されます。 この例では、指定納期 *DueDate* で在庫数 *StockQty* が指定値より少ない製品の情報が AdventureWorks データベースの *Purchasing.PurchaseOrderDetail* テーブルと *Production.Product* テーブルから取得されます。 この例では、 **sqlsrv_fetch_object** の呼び出しにクラスを指定したときに適用される規則の一部が強調表示されています。  
   
 -   *$product* 変数は *Product* クラスのインスタンスです。「Product」が *$className* パラメーターで指定され、 *Product* クラスが存在するからです。  
   
@@ -243,7 +243,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-このクエリで返される結果が **sqlsrv_fetch_object**で取得される場合、 `SELECT SCOPE_IDENTITY()` で返される値は破棄され、警告が発行されます。 これを回避するために、Transact-SQL ステートメントに返されたフィールドの名前を指定できます。 次は、Transact-SQL に列名を指定する方法の 1 つです。  
+このクエリで返される結果が **sqlsrv_fetch_object** で取得される場合、 `SELECT SCOPE_IDENTITY()` で返される値は破棄され、警告が発行されます。 これを回避するために、Transact-SQL ステートメントに返されたフィールドの名前を指定できます。 次は、Transact-SQL に列名を指定する方法の 1 つです。  
   
 ```sql
 SELECT SCOPE_IDENTITY() AS PictureID
