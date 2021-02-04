@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - API Reference, sqlsrv_has_rows
 - sqlsrv_has_rows
 ms.assetid: 4da7f640-cf12-409f-9e00-95b30a8d5e17
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b1964568848aaab67483dc019ee73b3d5ed552e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eaef86b083291f8ae73ab5d9a89060f634d30491
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426244"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99153924"
 ---
 # <a name="sqlsrv_has_rows"></a>sqlsrv_has_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ sqlsrv_has_rows( resource $stmt )
 *$stmt*: 実行されたステートメント。  
   
 ## <a name="return-value"></a>戻り値  
-結果セットに行がある場合、戻り値は **true**になります。 行がない場合、あるいは関数を呼び出せない場合、戻り値は **false**になります。  
+結果セットに行がある場合、戻り値は **true** になります。 行がない場合、あるいは関数を呼び出せない場合、戻り値は **false** になります。  
   
 ## <a name="example"></a>例  
   

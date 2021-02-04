@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.setBinaryStream
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5b23d225c1cfeef0ca4008b221475af3cc901bfe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 56d28d3b2ebfc01c319c87983359f33281f1252c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88432464"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99173883"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>setBinaryStream (java.lang.String, java.io.InputStream, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public void setBinaryStream(java.lang.String parameterName,
 #### <a name="parameters"></a>パラメーター  
  *parameterName*  
   
- パラメーターの名前を表す**文字列**です。  
+ パラメーターの名前を表す **文字列** です。  
   
  *value*  
   

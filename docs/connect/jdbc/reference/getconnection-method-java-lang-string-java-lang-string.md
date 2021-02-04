@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.getConnection (java.lang.String, java.lang.String)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bfc2a318fad442edcae2af4df1a51c521ed9bda9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bdb2c566b6cbd89ac01c9dc5b990268055a3fe09
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436544"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163297"
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,11 +39,11 @@ public java.sql.Connection getConnection(java.lang.String username,
 #### <a name="parameters"></a>パラメーター  
  *username*  
   
- ユーザー名を含む**文字列**です。  
+ ユーザー名を含む **文字列** です。  
   
  *password*  
   
- パスワードを含む**文字列**です。  
+ パスワードを含む **文字列** です。  
   
 ## <a name="return-value"></a>戻り値  
  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトです。  
