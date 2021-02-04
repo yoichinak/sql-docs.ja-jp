@@ -15,12 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3eb77e6ed1dec97736c856c6b9c3c827470e31ce
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 27e6a98231e66a24a66233092e3e7e245a4e3d74
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463303"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536401"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client のシステム要件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "97463303"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (サーバー)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client には、Windows インストーラー 3.0 が必要です。 Windows インストーラー 3.0 は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムに既にインストールされています。 他のすべてのプラットフォームには、明示的にインストールする必要があります。 詳細については、「 [Windows インストーラー3.0 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=16821)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client には Windows インストーラー3.1 が必要です。 Windows インストーラー3.1 は、Windows オペレーティングシステムに既にインストールされてい [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 他のすべてのプラットフォームには、明示的にインストールする必要があります。 詳細については、「 [Windows インストーラー3.1 再頒布可能パッケージ (v2)](https://www.microsoft.com/download/details.aspx?id=25)」を参照してください。  
   
 > [!NOTE]  
 >  このソフトウェアは、必ず管理者特権でログオンしてからインストールしてください。  
