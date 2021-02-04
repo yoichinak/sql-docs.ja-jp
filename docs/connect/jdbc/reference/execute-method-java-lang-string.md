@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerPreparedStatement.execute (java.lang.String)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0375eb9dd2d9252ed914fa554beb54faa7e345ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46b910fc5c4a2d9762679bae0d98ca109e3becaf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437754"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168499"
 ---
 # <a name="execute-method-javalangstring"></a>execute (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public final boolean execute(java.lang.String sql)
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- SQL ステートメントを含む**文字列**です。  
+ SQL ステートメントを含む **文字列** です。  
   
 ## <a name="return-value"></a>戻り値  
  このステートメントで結果セットを返す場合は **true** です。 これが更新数を返す場合、または結果を返さない場合は **false** です。  

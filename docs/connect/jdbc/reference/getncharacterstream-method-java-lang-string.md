@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 45d2695b-0727-419d-8921-a51d6feef0aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f11e621f7acedee8d5a37ec055d45a388fe275b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fbf13e4757ccf709d6b6d3151b454bc87b037a3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88435334"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175424"
 ---
 # <a name="getncharacterstream-method-javalangstring"></a>getNCharacterStream (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ public final java.io.Reader getNCharacterStream(java.lang.String columnLabel)
 #### <a name="parameters"></a>パラメーター  
  *columnLabel*  
   
- 列ラベルを含む**文字列**です。  
+ 列ラベルを含む **文字列** です。  
   
 ## <a name="return-value"></a>戻り値  
  Reader オブジェクト。  

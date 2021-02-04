@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.getBoolean (java.lang.String)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: ba98a27b-722d-4904-ac65-0f082fde1fe6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db6e0b69c4135780db0bb55c74de311a1674b438
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28886a0ceea38b0c465de8bde215cbdc277ee829
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437064"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168134"
 ---
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>getBoolean (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public boolean getBoolean(java.lang.String columnName)
 #### <a name="parameters"></a>パラメーター  
  *columnName*  
   
- 列名を含む**文字列**です。  
+ 列名を含む **文字列** です。  
   
 ## <a name="return-value"></a>戻り値  
- **ブール**値です。  
+ **ブール** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

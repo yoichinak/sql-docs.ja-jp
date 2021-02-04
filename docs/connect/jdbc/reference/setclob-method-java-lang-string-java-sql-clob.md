@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 256b5f55-7a6d-44fb-9a09-19fa39f19c35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e3c02a7fa960e07f10a94b99a23e75d41368801
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68d2f07c77e3476d32fb437358f863ec0b0ddfb2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88432124"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99173594"
 ---
 # <a name="setclob-method-javalangstring-javasqlclob"></a>setClob (java.lang.String, java.sql.Clob) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ public final void setClob(java.lang.String parameterName,
 #### <a name="parameters"></a>パラメーター  
  *parameterName*  
   
- パラメーターの名前を含む**文字列**です。  
+ パラメーターの名前を含む **文字列** です。  
   
  *x*  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerStatement.execute (java.lang.String.java.lang.String[])
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9451c7c2-4c0d-4d1e-9b42-a26ff28e3f6a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 807b1ea0a1c81c85b6b715f881858bf88c733cc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4103e4a10aff5f16c68cfc584d31a1e6600e723
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88437804"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168477"
 ---
 # <a name="execute-method-javalangstring-javalangstring"></a>execute (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,14 +39,14 @@ public final boolean execute(java.lang.String sql,
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- SQL ステートメントを含む**文字列**です。  
+ SQL ステートメントを含む **文字列** です。  
   
  *columnNames*  
   
  検索可能にする自動生成キーの列名を示す文字列の配列です。  
   
 ## <a name="return-value"></a>戻り値  
- 最初の結果が結果セットの場合は **true** です。 それ以外の場合は、 **false**です。  
+ 最初の結果が結果セットの場合は **true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
