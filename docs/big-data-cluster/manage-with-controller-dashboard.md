@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 64352409e567c5854d348dce8e6545317b41bc01
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 414b91a39f82b7d3de5822bc64bf829d8aee4c2f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725823"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235700"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>SQL Server コントローラー ダッシュボードのビッグ データ クラスターを管理する
 
@@ -28,7 +28,7 @@ ms.locfileid: "91725823"
 ノートブックを起動するには、次の前提条件が要件です。
 
 * [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) の最新版
-* [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 拡張機能が Azure Data Studio にインストールされている](../azure-data-studio/data-virtualization-extension.md)
+* [[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 拡張機能が Azure Data Studio にインストールされている](../azure-data-studio/data-virtualization-extension.md)
 
 上記に加えて、SQL Server 2019 ビッグ データ クラスターでは以下のものも必要です。
 
@@ -59,9 +59,9 @@ ms.locfileid: "91725823"
 
 1. コントローラー ダッシュボードには、次の 3 つの主要なコンポーネントがあります。
 
-    - ダッシュボードの操作が含まれている上部の**ツール バー**。
-    - ダッシュボードのさまざまなビューを変更する左側の**ナビゲーション ウィンドウ**。
-    - ページの大部分をカバーしている**ビュー**。
+    - ダッシュボードの操作が含まれている上部の **ツール バー**。
+    - ダッシュボードのさまざまなビューを変更する左側の **ナビゲーション ウィンドウ**。
+    - ページの大部分をカバーしている **ビュー**。
 
 2. **[Big data cluster overview]\(ビッグ データ クラスターの概要\)** ページでは、次の情報を確認できます。
 
@@ -69,7 +69,7 @@ ms.locfileid: "91725823"
     - すべてのクラスター コンポーネントの概要と異常なコンポーネントが表示される **[Cluster Overview]\(クラスターの概要\)**
     - SQL Server ビッグ データ クラスター内のさまざまなサービスをコピーしたり、サービスにアクセスしたりするための **[Service Endpoints]\(サービス エンドポイント\)** 。
 
-3. **ナビゲーション ウィンドウ**では、サービスの一覧を見ることができ、クリックすると追加のクラスターの詳細が表示されます。 これは、 **[Cluster Overview]\(クラスターの概要\)** でサービスをクリックしたときのビューと同じです。
+3. **ナビゲーション ウィンドウ** では、サービスの一覧を見ることができ、クリックすると追加のクラスターの詳細が表示されます。 これは、 **[Cluster Overview]\(クラスターの概要\)** でサービスをクリックしたときのビューと同じです。
 
 4. **[Cluster Details]\(クラスターの詳細\)** の各ビューは、同じ UI コンポーネントで構成されています。
 

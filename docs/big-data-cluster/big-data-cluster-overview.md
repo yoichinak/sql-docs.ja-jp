@@ -9,18 +9,18 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ced001726b7a8306f2064c1436ddb41cf65a6eb0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: cda3b252ddfb602cca02d8dc09322769339e33e9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091810"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235737"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]とは
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 以降、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を使用すると、Kubernetes 上で動作する SQL Server、Spark、および HDFS コンテナーのスケーラブルなクラスターを展開できます。 これらのコンポーネントを並行して実行し、Transact-SQL または Spark からのビッグ データの読み取り、書き込み、処理を行うことができるので、高価値のリレーショナル データと大量のビッグ データを簡単に組み合わせて分析できます。
+[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] 以降、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を使用すると、Kubernetes 上で動作する SQL Server、Spark、および HDFS コンテナーのスケーラブルなクラスターを展開できます。 これらのコンポーネントを並行して実行し、Transact-SQL または Spark からのビッグ データの読み取り、書き込み、処理を行うことができるので、高価値のリレーショナル データと大量のビッグ データを簡単に組み合わせて分析できます。
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を使用して以下の操作を実行できます。
 
@@ -43,7 +43,7 @@ ms.locfileid: "98091810"
 
 ### <a name="data-virtualization"></a>データの仮想化
 
-[PolyBase](../relational-databases/polybase/polybase-guide.md) を利用することで、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]では、データを移動またはコピーすることなく、外部データ ソースに対してクエリを実行できます。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] では、データ ソースに新しいコネクタが導入されています。
+[PolyBase](../relational-databases/polybase/polybase-guide.md) を利用することで、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]では、データを移動またはコピーすることなく、外部データ ソースに対してクエリを実行できます。 [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] では、データ ソースに新しいコネクタが導入されています。
 
 ![データの仮想化](media/big-data-cluster-overview/data-virtualization.png)
 

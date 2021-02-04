@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.supportsSchemasInProcedureCalls
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8955457a-b176-4674-9366-39a1942164a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af893074db8559d3eee5a7b671b86f85f17e9741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 760c3ab25277ca36dd46aeb53e5a4c189cbff26d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450214"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181402"
 ---
 # <a name="supportsschemasinprocedurecalls-method-sqlserverdatabasemetadata"></a>supportsSchemasInProcedureCalls メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean supportsSchemasInProcedureCalls()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

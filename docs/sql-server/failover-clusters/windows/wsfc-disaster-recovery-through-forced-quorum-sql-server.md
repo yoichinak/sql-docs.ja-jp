@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fcdd0f1d34ed4107cbe3c90708abe286efbf0837
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6aa2a07da107a5283a4dacc8323dc5d6a928702a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642659"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251192"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC の強制クォーラムによる災害復旧 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "97642659"
 1.  **障害の範囲を特定します。** 応答しない可用性グループや SQL Server インスタンス、災害後に使用できるオンラインのクラスター ノードをそれぞれ特定し、Windows イベント ログと SQL Server システム ログを確認します。  必要に応じて、後で分析できるように解析データやシステム ログを保存しておきます。  
   
     > [!TIP]  
-    >  応答している [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インスタンスで、 [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) 動的管理ビュー (DMV) クエリを実行して、ローカル サーバー インスタンスに可用性レプリカを保持している可用性グループの正常性に関する情報を取得できます。  
+    >  応答している [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]インスタンスで、 [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) 動的管理ビュー (DMV) クエリを実行して、ローカル サーバー インスタンスに可用性レプリカを保持している可用性グループの正常性に関する情報を取得できます。  
   
 2.  **1 つのノードで強制クォーラムを使用して WSFC クラスターを起動します。** WSFC クラスター サービスがシャットダウンしたもの以外で、コンポーネントの障害が最も少ないノードを特定し、  そのノードが他の大半のノードと通信できることを確認します。  
   

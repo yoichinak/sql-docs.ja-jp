@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4c230a793b81960b29e66813ba392eeb6395d5ee
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 40c1f3b925612611d1fe925f87bd2d4dd9d926c4
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642755"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251240"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server マルチサブネット クラスタリング (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "97642755"
   
    
 ##  <a name="sql-server-multi-subnet-failover-cluster-two-nodes-two-subnets"></a><a name="VisualElement"></a> SQL Server マルチサブネット フェールオーバー クラスター (2 ノード、2 サブネット)  
- 次の図は、2 ノード、2 サブネットの [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のフェールオーバー クラスター インスタンス (FCI) を表します。  
+ 次の図は、2 ノード、2 サブネットの [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]のフェールオーバー クラスター インスタンス (FCI) を表します。  
   
  ![マルチサブネット アーキテクチャと MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "マルチサブネット アーキテクチャと MultiSubnetFailover")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "97642755"
 ##  <a name="client-recovery-latency-during-failover"></a><a name="DNS"></a> フェールオーバー中のクライアント回復待機時間  
  複数サブネットの FCI 既定で RegisterAllProvidersIP のクラスター リソースのネットワーク名を有効にします。 マルチサブネット構成では、ネットワーク名のオンラインおよびオフライン両方の IP アドレスが DNS サーバーに登録されます。 クライアント アプリケーションは、すべての登録済み IP アドレスを DNS サーバーから取得し、受信した順序または並列で使用してアドレスへの接続を試みます。 つまり、マルチサブネット フェールオーバーのクライアント回復時間は DNS 更新の待機時間に依存しません。 既定では、クライアントは IP アドレスを順番に試行します。 クライアントが新しいオプションの **MultiSubnetFailover=True** パラメーターを接続文字列で使用している場合、IP アドレスを同時に試し、最初に応答したサーバーに接続します。 これにより、フェールオーバー発生時のクライアント回復待機時間を最小限に抑えることができます。 詳細については、「 [AlwaysOn クライアント接続 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) 」および「 [可用性グループ リスナーの作成または構成 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)」を参照してください。  
   
- レガシ クライアント ライブラリまたはサードパーティ データ プロバイダーでは、接続文字列に **MultiSubnetFailover** パラメーターを使用できません。 クライアント アプリケーションが [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のマルチサブネット FCI と最適な状態で連携して動作するように、クライアント接続文字列の接続タイムアウトを追加の IP アドレスごとに 21 秒で調整を試みてください。 これにより、クライアントの再接続の試みは、マルチサブネット FCI のすべての IP アドレスへの切り替えができるまでタイムアウトしません。  
+ レガシ クライアント ライブラリまたはサードパーティ データ プロバイダーでは、接続文字列に **MultiSubnetFailover** パラメーターを使用できません。 クライアント アプリケーションが [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]のマルチサブネット FCI と最適な状態で連携して動作するように、クライアント接続文字列の接続タイムアウトを追加の IP アドレスごとに 21 秒で調整を試みてください。 これにより、クライアントの再接続の試みは、マルチサブネット FCI のすべての IP アドレスへの切り替えができるまでタイムアウトしません。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio および **sqlcmd** の既定のクライアント接続タイムアウト期間は 15 秒です。  
  

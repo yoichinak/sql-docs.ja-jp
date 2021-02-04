@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.updateTimestamp (java.lang.String, java.sql.Timestamp)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6d468357-bf73-484c-9a30-3671e399cf26
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: acd267a2f15486bf650bf76de97f3fd3cb95daa6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22f4b07489276629dc9989dbfa46f7e4f8f08bf8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88396448"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195686"
 ---
 # <a name="updatetimestamp-method-javalangstring-javasqltimestamp"></a>updateTimestamp (java.lang.String, java.sql.Timestamp) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public void updateTimestamp(java.lang.String columnName,
 #### <a name="parameters"></a>パラメーター  
  *columnName*  
   
- 列名を含む**文字列**です。  
+ 列名を含む **文字列** です。  
   
  *x*  
   

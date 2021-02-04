@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 56cfc62709e24fc48704ed44b86a866b07a0b0ef
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 11e424ef4f32b91a7c4d65faf796335a3f7faf26
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642668"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251221"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server フェールオーバー クラスタリングと SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  *Windows Server フェールオーバー クラスター* (WSFC) は、アプリケーションとサービスの可用性を高めるために連携する独立したサーバーのグループです。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] は、WSFC サービスと機能を活用して [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスをサポートします。  
+  *Windows Server フェールオーバー クラスター* (WSFC) は、アプリケーションとサービスの可用性を高めるために連携する独立したサーバーのグループです。 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] は、WSFC サービスと機能を活用して [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスをサポートします。  
   
    
 ##  <a name="terms-and-definitions"></a><a name="TermsAndDefs"></a> 用語と定義  
@@ -76,7 +76,7 @@ ms.locfileid: "97642668"
  詳細については、「 [フェールオーバー クラスタリングの概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))」を参照してください。  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> SQL Server Always On テクノロジと WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* は、WSFC を利用する、高可用性およびディザスター リカバリー ソリューションです。 Always On 機能は、アプリケーションの可用性を高め、ハードウェア投資の回収率を上げ、高可用性配置と管理を簡素化する、統合された柔軟なソリューションを提供します。  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] *Always On* は、WSFC を利用する、高可用性およびディザスター リカバリー ソリューションです。 Always On 機能は、アプリケーションの可用性を高め、ハードウェア投資の回収率を上げ、高可用性配置と管理を簡素化する、統合された柔軟なソリューションを提供します。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンスのどちらも WSFC をプラットフォーム テクノロジとして使用して、コンポーネントを WSFC クラスター リソースとして登録します。  関連するリソースは *ロール* としてまとめられ、他の WSFC クラスター リソースに依存するように設定できます。 これによって、WSFC は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを再起動する必要がある場合はこれを検出して通知したり、WSFC 内の他のサーバー ノードに自動的にフェールオーバーしたりできます。  
   

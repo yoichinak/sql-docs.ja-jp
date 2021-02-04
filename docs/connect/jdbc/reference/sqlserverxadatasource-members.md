@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed2d2515dc742eca0ece6036dbf0b06dd9a9530c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e93f7fe568f66686ff6d71b569c040cdea45cad2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458204"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181181"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88458204"
 |[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との通信に使用される現在のポート番号が返されます。|  
 |[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverxadatasource.md)|この [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) オブジェクトへの参照が返されます。|  
 |[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) この DataSource オブジェクトを使用して作成されるすべての結果セットで使用される、既定のカーソルの種類が返されます。|  
-|[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) サーバーへの**文字列**パラメーターの UNICODE 形式による送信が有効になっているかどうかを示す、**Boolean** 値が返されます。|  
+|[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) サーバーへの **文字列** パラメーターの UNICODE 形式による送信が有効になっているかどうかを示す、**Boolean** 値が返されます。|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているコンピューターの名前が返されます。|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) データ ソースへの接続に使用される URL が返されます。|  
 |[getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) データ ソースへの接続に使用されるユーザー名が返されます。|  
@@ -78,7 +78,7 @@ ms.locfileid: "88458204"
 |[setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続に使用されるパスワードが設定されます。|  
 |[setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との通信に使用されるポート番号が設定されます。|  
 |[setSelectMethod](../../../connect/jdbc/reference/setselectmethod-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) DataSource オブジェクトを使用して作成されるすべての結果セットで使用される、既定のカーソルの種類が設定されます。|  
-|[setSendStringParametersAsUnicode](../../../connect/jdbc/reference/setsendstringparametersasunicode-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) サーバーへの**文字列**パラメーターの UNICODE 形式による送信が有効になっているかどうかを示す、**Boolean** 値が設定されます。|  
+|[setSendStringParametersAsUnicode](../../../connect/jdbc/reference/setsendstringparametersasunicode-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) サーバーへの **文字列** パラメーターの UNICODE 形式による送信が有効になっているかどうかを示す、**Boolean** 値が設定されます。|  
 |[setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているコンピューターの名前が設定されます。|  
 |[setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) データ ソースへの接続に使用される URL が設定されます。|  
 |[setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) データ ソースへの接続に使用されるユーザー名が設定されます。|  

@@ -1,7 +1,7 @@
 ---
 title: Microsoft ODBC Driver for SQL Server をインストールする (Linux)
 description: Linux クライアントに Microsoft ODBC Driver for SQL Server をインストールして、データベース接続を有効にする方法について説明します。
-ms.date: 07/31/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa0873f6c45b2447dafe1e664e05e7a8099f14aa
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: f94b959cdbdf1ce3c32b5f832c630428a51246ff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807056"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186363"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>Microsoft ODBC Driver for SQL Server をインストールする (Linux)
 
@@ -41,22 +41,22 @@ ms.locfileid: "87807056"
 
 ```bash
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.6.1.1-1_amd64.apk
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.6.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.7.1.1-1_amd64.apk
 
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.6.1.1-1_amd64.sig
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.6.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.7.1.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql17_17.6.1.1-1_amd64.sig msodbcsql17_17.6.1.1-1_amd64.apk
-gpg --verify mssql-tools_17.6.1.1-1_amd64.sig mssql-tools_17.6.1.1-1_amd64.apk
+gpg --verify msodbcsql17_17.7.1.1-1_amd64.sig msodbcsql17_17.7.1.1-1_amd64.apk
+gpg --verify mssql-tools_17.7.1.1-1_amd64.sig mssql-tools_17.7.1.1-1_amd64.apk
 
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql17_17.6.1.1-1_amd64.apk
-sudo apk add --allow-untrusted mssql-tools_17.6.1.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql17_17.7.1.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools_17.7.1.1-1_amd64.apk
 ```
 
 > [!NOTE]
@@ -108,7 +108,7 @@ sudo su
 #RedHat Enterprise Server 6
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
-#RedHat Enterprise Server 7
+#RedHat Enterprise Server 7 and Oracle Linux 7
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
 #RedHat Enterprise Server 8 and Oracle Linux 8
@@ -176,6 +176,9 @@ curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sou
 
 #Ubuntu 20.04
 curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Ubuntu 20.10
+curl https://packages.microsoft.com/config/ubuntu/20.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update
@@ -487,9 +490,9 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 3. `msodbcsql-11.0.2270.0` のディレクトリに移動すると、ディレクトリ内に **install.sh** というファイルがあることを確認できます。  
   
-4. 使用可能なインストール オプションの一覧を表示するには、コマンド **./install.sh**を実行します。  
+4. 使用可能なインストール オプションの一覧を表示するには、コマンド **./install.sh** を実行します。  
   
-5. **odbcinst.ini**のバックアップを作成します。 ドライバーのインストールで、 **odbcinst.ini**を更新します。 odbcinst.ini には、unixODBC ドライバー マネージャーで登録されたドライバーの一覧が含まれます。 コンピューターの odbcinst.ini の場所を検出するには、コマンド ```odbc_config --odbcinstini``` を実行します。  
+5. **odbcinst.ini** のバックアップを作成します。 ドライバーのインストールで、 **odbcinst.ini** を更新します。 odbcinst.ini には、unixODBC ドライバー マネージャーで登録されたドライバーの一覧が含まれます。 コンピューターの odbcinst.ini の場所を検出するには、コマンド ```odbc_config --odbcinstini``` を実行します。  
   
 6. ドライバーをインストールする前に、コマンド `./install.sh verify` を実行します。 Linux で ODBC ドライバーをサポートするためにコンピューターに必要なソフトウェアがある場合、`./install.sh verify` の出力でレポートされます。  
   

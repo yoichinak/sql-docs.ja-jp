@@ -14,18 +14,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: c684e2fd784c6b12c2512f2ceef59946ede90101
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c16a849f9bff99059415bbd4027d376b3dee717b
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468569"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250453"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>登録済みサーバーへの接続 (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーに接続する方法について説明します。 サーバーが実行されていない場合、またはネットワーク上に見つからない場合、登録済みサーバーではエラーが表示されます。  
+このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーに接続する方法について説明します。 サーバーが実行されていない場合、またはネットワーク上に見つからない場合、登録済みサーバーではエラーが表示されます。  
 
 ##  <a name="SSMSProcedure"></a>
 

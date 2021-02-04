@@ -17,18 +17,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 1c976735ddc6ce9e602969e06abc13b076a74144
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: a71bebde2525a18e062832aba064a4b9aecf7f3a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037585"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250476"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のエクスポート (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で登録済みサーバーの情報を保存およびエクスポートして、他の従業員またはサーバーに配布する方法について説明します。 このエクスポート機能を使用すると、複数のコンピューターに一貫性のあるユーザー インターフェイスを提供できます。  
+このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]で登録済みサーバーの情報を保存およびエクスポートして、他の従業員またはサーバーに配布する方法について説明します。 このエクスポート機能を使用すると、複数のコンピューターに一貫性のあるユーザー インターフェイスを提供できます。  
   
  [登録済みサーバー] のファイルのエクスポートとインポートを順に行うことにより、[登録済みサーバー] の同一サーバーを使用して、複数のコンピューターを簡単に構成できます。 これは、複数の場所にあるコンピューターから多数のサーバーを管理する場合、また、経験の少ないユーザーを基本接続設定で構成する場合に便利です。  
   

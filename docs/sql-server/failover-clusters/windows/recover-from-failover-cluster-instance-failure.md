@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 91e18137748b34012c73860071fa0be93af0277f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 45b917246037b9c333ba07bece6f6630e0ae2464
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642761"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251233"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>フェールオーバー クラスター インスタンス障害からの復旧
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]でフェールオーバーが発生した後にフェールオーバー クラスター マネージャー スナップインを使用してクラスター障害から復旧する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
+  このトピックでは、 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]でフェールオーバーが発生した後にフェールオーバー クラスター マネージャー スナップインを使用してクラスター障害から復旧する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
   
 -   [修復不可能な障害からの復旧](#Scenario1)  
   

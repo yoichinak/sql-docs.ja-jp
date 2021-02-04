@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.getReference
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8916c339a4a1d6c8373e3fbaf5a130dcc168155e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d44e8f10c1e4160504d20de7d5a9b3e36b31b950
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434884"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175207"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>getReference メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public javax.naming.Reference getReference()
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 がリリースされる前は、SQLServerDataSource オブジェクトの SQLServerDataSource.setTrustStorePassword が呼び出された場合、対応するパスワードが、SQLServerDataSource.getReference から返されるオブジェクトに内包される形で開示され、結果、そのオブジェクトを使用することによって、別の接続を確立することが可能でした。 JDBC Driver 3.0 では、SQLServerDataSource.getReference から返されたオブジェクトにパスワードを設定してから、そのオブジェクトとの接続を確立する必要があります。  
   
- また、SQLServerDataSource.setTrustStorePassword を設定してから、データ ソースのプロパティをバインドする場合は、SQLServerDataSource.setTrustStorePassword を呼び出してから接続を取得する必要があります。 たとえば、オブジェクトに適用された  
+ また、SQLServerDataSource.setTrustStorePassword を設定してから、データ ソースのプロパティをバインドする場合は、SQLServerDataSource.setTrustStorePassword を呼び出してから接続を取得する必要があります。 たとえば、次のように入力します。  
   
 ```  
 ctx = new InitialContext(System.getProperties());  

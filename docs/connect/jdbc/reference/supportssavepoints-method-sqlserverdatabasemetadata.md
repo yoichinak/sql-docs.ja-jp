@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.supportsSavepoints
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: cd2418c9-e95d-4820-82bd-944287387b60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5e1ac3b793c664f9de683ae41b135a3d5b50e54e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c0191aaa1f7df26c2ab2fa2f4c496c1638f1d43
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450251"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187193"
 ---
 # <a name="supportssavepoints-method-sqlserverdatabasemetadata"></a>supportsSavepoints メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean supportsSavepoints()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f77af027-c021-4a17-b264-1ee592bfdd84
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bcd792e3029a1591eaa05f88de80569e750429e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be904d675a160e70bfa2f8a9ad37859e24926c00
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433324"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177149"
 ---
 # <a name="iswrapperfor-method-sqlserverdatasource"></a>isWrapperFor メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean isWrapperFor(Class iface)
  インターフェイスを定義する **class** です。  
   
 ## <a name="return-value"></a>戻り値  
- このオブジェクトがインターフェイスを実装しているか、インターフェイスを実装しているオブジェクトをラップしている場合は **true** です。 それ以外の場合は、 **false**です。  
+ このオブジェクトがインターフェイスを実装しているか、インターフェイスを実装しているオブジェクトをラップしている場合は **true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-description: " の各エディションとサポートされる機能[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]"
+description: " の各エディションとサポートされる機能[!INCLUDE[sssql19-md](../includes/sssql19-md.md)]"
 title: SQL Server 2019 の各エディションとサポートされている機能 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -34,18 +34,18 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e0a8f226602ab41422715368fb12c13809fa6b40
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9987384899eeb9087a938d8fd8e8b156ff8e1962
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477153"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236265"
 ---
-# <a name="editions-and-supported-features-of-sssqlv15-md"></a> の各エディションとサポートされる機能[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+# <a name="editions-and-supported-features-of-sssql19-md"></a> の各エディションとサポートされる機能[!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/sqlserver.md)]
 
-このトピックでは、[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] のさまざまなエディションでサポートされている機能の詳細を説明します。
+このトピックでは、[!INCLUDE[sssql19-md](../includes/sssql19-md.md)] のさまざまなエディションでサポートされている機能の詳細を説明します。
 
 以前のバージョンについては、以下を参照してください。
 
@@ -58,10 +58,10 @@ ms.locfileid: "97477153"
 
 最新のリリース ノートと新機能については、以下の情報を参照してください。
 
-* [[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] リリース ノート](../sql-server/sql-server-version-15-release-notes.md)
+* [[!INCLUDE[sssql19-md](../includes/sssql19-md.md)] リリース ノート](../sql-server/sql-server-version-15-release-notes.md)
 * [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] をお試しください。[Evaluation Center から [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] をダウンロードしてください](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
+**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] をお試しください。[Evaluation Center から [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] をダウンロードしてください](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
 
 ## <a name="ssnoversion-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] のエディション
 
@@ -103,8 +103,8 @@ ms.locfileid: "97477153"
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、表形式、マトリックス形式、グラフィカル形式、および自由形式のレポートを作成、管理、配置するためのサーバー コンポーネントとクライアント コンポーネントが含まれます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、レポート アプリケーション開発用の拡張可能プラットフォームとしても使用できます。|
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、データを移動、コピー、変換するためのグラフィカル ツールおよびプログラミング可能なオブジェクトのセットです。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 用の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)](DQS) コンポーネントも含まれています。|
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) は、マスター データ管理のための [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ソリューションです。 MDS は、あらゆるドメイン (製品、顧客、アカウント) を管理するように構成できます。MDS には、データの管理に使用できる [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] のほかに、階層、きめ細かいセキュリティ、トランザクション、データのバージョン管理、およびビジネス ルールが含まれています。|
-|Machine Learning Services (データベース内)|Machine Learning Services (データベース内) は、エンタープライズ データ ソースを使用する分散型のスケーラブルな機械学習ソリューションをサポートします。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 では、R 言語がサポートされていました。 [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] では、R と Python がサポートされています。|
-|Machine Learning Server (スタンドアロン)|Machine Learning Server (スタンドアロン) では、Linux や Hadoop などの複数のエンタープライズ データ ソースを使用する分散型のスケーラブルな機械学習ソリューションを複数のプラットフォームに配置できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 では、R 言語がサポートされていました。 [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] では、R と Python がサポートされています。|
+|Machine Learning Services (データベース内)|Machine Learning Services (データベース内) は、エンタープライズ データ ソースを使用する分散型のスケーラブルな機械学習ソリューションをサポートします。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 では、R 言語がサポートされていました。 [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] では、R と Python がサポートされています。|
+|Machine Learning Server (スタンドアロン)|Machine Learning Server (スタンドアロン) では、Linux や Hadoop などの複数のエンタープライズ データ ソースを使用する分散型のスケーラブルな機械学習ソリューションを複数のプラットフォームに配置できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 では、R 言語がサポートされていました。 [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] では、R と Python がサポートされています。|
 
 |管理ツール|説明|
 |----------------------|-----------------|
@@ -188,7 +188,7 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> RDBMS のスケーラビリティとパフォーマンス
 
-|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------:|:--------:|:------:|:-:|:-------------------------------:|:------:|
 |列ストア<sup>1</sup> <sup>2</sup>|はい|はい|はい|はい|はい|
 |クラスター化列ストア インデックス内のラージ オブジェクト バイナリ|はい|はい|はい|はい|はい|
@@ -246,7 +246,7 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="replication"></a><a name="Replication"></a> レプリケーション
 
-|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:---------:|:-------:|:--:|:--------------------------------:|:------:|
 |異種サブスクライバー|はい|はい|いいえ|いいえ|いいえ|
 |マージ レプリケーション|はい|はい|可<sup>1</sup>|可<sup>1</sup>|可<sup>1</sup>|
@@ -287,7 +287,7 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="rdbms-manageability"></a><a name="RDBMSM"></a> RDBMS の管理の容易性
 
-|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |ユーザー インスタンス|いいえ|いいえ|いいえ|はい|はい|
 |LocalDB|いいえ|いいえ|いいえ|はい|いいえ|
@@ -320,7 +320,7 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="development-tools"></a><a name="DevTools"></a> 開発ツール
 
-|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |Microsoft Visual Studio の統合|はい|はい|はい|はい|はい|
 |Intellisense (Transact-SQL および MDX)|はい|はい|はい|はい|はい|
@@ -408,14 +408,14 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="additional-database-services"></a><a name="ADS"></a> その他のデータベース サービス
 
-|機能名|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能名|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|はい|はい|はい|はい|はい|
 |データベース メール|はい|はい|はい|いいえ|いいえ|
 
 ## <a name="other-components"></a><a name="Other"></a> その他のコンポーネント
 
-|機能名|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能名|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|いいえ|いいえ|
 |StreamInsight HA|StreamInsight Premium Edition|いいえ|いいえ|いいえ|いいえ|

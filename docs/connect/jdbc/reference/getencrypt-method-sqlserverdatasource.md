@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - getEncrypt Method (SQLServerDataSource)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1cdb12dd-6e6f-4bbd-8f5f-9e630f3ee2c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09beeea5d623e50d5fcdbf562151631cbc67124d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9bbcb5adb686825132b2ae166beecd5846693f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436134"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175853"
 ---
 # <a name="getencrypt-method-sqlserverdatasource"></a>getEncrypt メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean getEncypt()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- encrypt プロパティが有効である場合は、**true** です。 それ以外の場合は、 **false**です。  
+ encrypt プロパティが有効である場合は、**true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="remarks"></a>解説  
  encrypt プロパティが **true** に設定されている場合、サーバーに証明書がインストールされていれば、サーバーとクライアント間で送信されるすべてのデータで TLS 暗号化が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で確実に使用されることを [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] は保証します。  

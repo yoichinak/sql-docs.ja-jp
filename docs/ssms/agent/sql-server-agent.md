@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016
-ms.openlocfilehash: 58d9f3921500e2fd7fd1fa02046d4f89d67ccbeb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cc8adae5672f14e25e9094befd455ac6ee599850
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478793"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250996"
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
 
@@ -29,7 +29,7 @@ ms.locfileid: "97478793"
 > [!IMPORTANT]  
 > 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の *ジョブ* と呼ばれる管理タスクをスケジュールに従って実行する Microsoft Windows サービスです。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の *ジョブ* と呼ばれる管理タスクをスケジュールに従って実行する Microsoft Windows サービスです。  
 
 ## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>SQL Server エージェントの利点 
 
@@ -38,7 +38,7 @@ ms.locfileid: "97478793"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでは、スケジュールに従って、特定のイベントに応答して、または必要に応じてジョブを実行できます。 たとえば、毎平日の業務終了後に会社のすべてのサーバーをバックアップする必要がある場合は、そのタスクを自動化できます。 月曜から金曜までの 22:00 以降にバックアップを実行するスケジュールを設定します。バックアップに問題が発生した場合、イベントが記録され、通知を受け取ることができます。  
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされるときに、サービスを自動起動することをユーザーが明示的に選択しない限り、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] エージェント サービスは既定で無効になります。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされるときに、サービスを自動起動することをユーザーが明示的に選択しない限り、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] エージェント サービスは既定で無効になります。  
   
 ## <a name="sql-server-agent-components"></a><a name="Components"></a>sysadmin  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでは、次のコンポーネントを使用して、実行するタスク、タスクを実行する時期、タスクの成功/失敗の報告方法を定義します。  

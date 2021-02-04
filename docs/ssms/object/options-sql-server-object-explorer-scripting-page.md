@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 35a255bb4df3779897ec40da29da9cc15f62ba1f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: cbaf09a88e5856bfd5c8f36826d8894b947e3c0d
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037630"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250501"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
- このページを使用すると、**オブジェクト エクスプローラー**内にあるオブジェクトのコンテキスト メニューの次の各コマンドに適用されるスクリプト オプションを設定できます。  
+ このページを使用すると、**オブジェクト エクスプローラー** 内にあるオブジェクトのコンテキスト メニューの次の各コマンドに適用されるスクリプト オプションを設定できます。  
   
 -   ユーザー テーブルおよびビューに対する **[編集]** コマンド。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "92037630"
   
 -   ユーザーが作成したオブジェクトに対する **[変更]** コマンド。  
   
--   このページでは、 **SQL Server スクリプト生成ウィザード**で使用するスクリプト オプションの既定値も設定できます。  
+-   このページでは、 **SQL Server スクリプト生成ウィザード** で使用するスクリプト オプションの既定値も設定できます。  
   
 ## <a name="remarks"></a>解説  
 **[編集]** コマンドおよび **[変更]** コマンドを実行した場合は、同じオプション設定に対して **[<object> をスクリプト化]** コマンドを実行した場合と異なる結果になることがあります。 **[編集]** コマンドおよび **[変更]** コマンドは、クエリ エディター セッション中に現在のデータベースでオブジェクトを変更するために設計されています。 **[<object> をスクリプト化]** コマンドは、後でオブジェクトの作成に使用できるスクリプトを生成するために設計されています。  
@@ -44,7 +44,7 @@ ms.locfileid: "92037630"
   
 ### <a name="general-scripting-options"></a>全般スクリプト作成オプション  
 **[各ステートメントを区切る]**  
-バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [GO (Transact-SQL)](../../t-sql/language-elements/sql-server-utilities-statements-go.md)」を参照してください。  
+バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター** の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [GO (Transact-SQL)](../../t-sql/language-elements/sql-server-utilities-statements-go.md)」を参照してください。  
   
 **[説明用ヘッダーを含める]**  
 スクリプトをオブジェクトごとのセクションに分割し、説明用のコメントを追加します。 既定値は True です。 詳細については、「 [/ *...* / (コメント) (Transact-SQL)](../../t-sql/language-elements/slash-star-comment-transact-sql.md)」を参照してください。  
@@ -146,12 +146,12 @@ FOREIGN KEY 制約のテーブル参照にスキーマ名を追加します。 �
 
 **[スクリプト設定をソースに一致させる]** ターゲット バージョンが有効な場合、生成されたスクリプトのエンジン エディションとエンジンの種類が、スクリプト化されるオブジェクトのサーバーの値に設定されます。 これにより他のバージョンのオプションが無効化 (無視) されます。 
 
-**[データベース エンジン エディションのスクリプト]** 生成されたスクリプトは、指定した[エンジン エディション](/dotnet/api/microsoft.sqlserver.management.smo.edition)のターゲットになります。
+**[データベース エンジン エディションのスクリプト]** 生成されたスクリプトは、指定した [エンジン エディション](/dotnet/api/microsoft.sqlserver.management.smo.edition)のターゲットになります。
 
-**[データベース エンジンの種類に対応したスクリプト]** 生成されたスクリプトは、指定した[データベース エンジンの種類](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120))のターゲットになります。
+**[データベース エンジンの種類に対応したスクリプト]** 生成されたスクリプトは、指定した [データベース エンジンの種類](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120))のターゲットになります。
 
 **[サーバーのバージョン互換のスクリプト]**  
-生成されたスクリプトは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定したバージョンのターゲットになります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の新機能のスクリプトを以前のバージョン用に生成することはできません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用に作成したスクリプトには、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で動作しているサーバーや、以前の [データベース互換性レベルの設定](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)が適用されているデータベースに対して実行できないものもあります。  
+生成されたスクリプトは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定したバージョンのターゲットになります。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の新機能のスクリプトを以前のバージョン用に生成することはできません。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 用に作成したスクリプトには、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で動作しているサーバーや、以前の [データベース互換性レベルの設定](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)が適用されているデータベースに対して実行できないものもあります。  
 
 ## <a name="see-also"></a>関連項目  
 [スクリプトの生成 (SQL Server Management Studio)](../scripting/generate-scripts-sql-server-management-studio.md)  

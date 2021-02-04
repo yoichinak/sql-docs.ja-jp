@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_fetch_array
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 6e0df700729db03d2d0dd52ac5d0a251827db7d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92080642"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195655"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -83,7 +83,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 結果セットに名前のない複数の列が含まれている場合は、名前のない最後の列の値が、空の文字列 ("") キーに割り当てられます。  
   
 ## <a name="associative-array-example"></a>連想配列の例  
-次の例では、結果セットの各行を連想 **配列**として取得します。 この例では、SQL Server と [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、結果セットの各行を連想 **配列** として取得します。 この例では、SQL Server と [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
