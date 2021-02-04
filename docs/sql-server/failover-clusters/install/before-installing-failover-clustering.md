@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a2ed61eb89deb29b22f82f39de4091f65be43cea
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 87294a8d20bf1c297c1629509a85cde7493b6ef5
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595321"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076610"
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98595321"
   
 -   前提条件となるソフトウェアをインストールします。 セットアップで [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のインストールまたはアップグレードを行う前に、以下に示す前提条件となるソフトウェアをインストールすると、インストール時間を短縮できます。 各フェールオーバー クラスター ノードでの前提条件となるソフトウェアのインストール、およびその後のノードの再起動は、セットアップを実行する前に 1 回だけ行います。  
   
-    -   Windows PowerShell は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりました。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] のコンポーネントおよび [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]をインストールするには、Windows PowerShell が必要です。 Windows PowerShell がコンピューターで表示されない場合は、 [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) に関するページの手順に従って有効にすることができます。  
+    -   Windows PowerShell は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりました。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] のコンポーネントおよび [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]をインストールするには、Windows PowerShell が必要です。 Windows PowerShell がコンピューターで表示されない場合は、 [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview) に関するページの手順に従って有効にすることができます。  
   
     -   .NET Framework 3.5 SP1 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりましたが、古い Windows オペレーティング システムに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールする際に必要になる場合があります。 詳細については、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][リリース ノート](/previous-versions/sql/sql-server-15/dn169381(v=sql.15))をインストールするには、Windows PowerShell が必要です。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "98595321"
   
 -   「 [SQL Server インストールにおけるセキュリティの考慮事項](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)の内容について検討してください。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で Kerberos 認証を有効にするには、 [サポート技術情報の「](https://support.microsoft.com/kb/319723) SQL Server で Kerberos 認証を使用する方法 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で Kerberos 認証を有効にするには、 [サポート技術情報の「](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/319723) SQL Server で Kerberos 認証を使用する方法 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 」を参照してください。  
 
 -   SQL Server フェールオーバー クラスター インスタンス (FCI) では、クラスター ノードをドメイン参加させる必要があります。 次の構成は **サポートされていません**。 
     *   ワークグループ クラスター上の SQL FCI。 

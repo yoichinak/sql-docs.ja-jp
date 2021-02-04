@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 29c96381f9781df7cb1cbedb351cce1524f440fd
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4909975e83ea4438d969685ed9b76ae9f02a5631
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642640"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077080"
 ---
 # <a name="install-distributed-replay"></a>分散再生のインストール
 
@@ -31,7 +31,7 @@ ms.locfileid: "97642640"
 -   [構成ファイルを使用した分散再生のインストール](#bkmk_configuration_file)  
   
 ##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> インストール ウィザードからの分散再生のインストール  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードでインストールします。 機能をインストールする場所を計画する際には、以下について検討してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インストール ウィザードでインストールします。 機能をインストールする場所を計画する際には、以下について検討してください。  
   
 -   管理ツールは、分散再生コントローラーと同じコンピューター上、または別のコンピューター上にインストールできます。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "97642640"
 -   インストール後は、クライアント上で 分散再生クライアント サービスを開始する前に、コントローラー サービスである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラーを実行する必要があります。  
   
 > [!NOTE]  
->  分散再生の機能を削除または変更するには、 **コントロール パネル** で Windows の **[プログラムと機能]** ウィンドウを使用します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [プログラムのアンインストールまたは変更] **ウィンドウで** を選択し、 **[削除]** をクリックして [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードを開きます。 **[機能の選択]** ページで、削除する分散再生機能を選択します。  
+>  分散再生の機能を削除または変更するには、 **コントロール パネル** で Windows の **[プログラムと機能]** ウィンドウを使用します。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [プログラムのアンインストールまたは変更] **ウィンドウで** を選択し、 **[削除]** をクリックして [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インストール ウィザードを開きます。 **[機能の選択]** ページで、削除する分散再生機能を選択します。  
   
  **前提条件:**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "97642640"
   
 #### <a name="to-install-distributed-replay-features"></a>分散再生機能をインストールするには  
   
-1.  分散再生の機能のインストールを開始するには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードを開始します。  
+1.  分散再生の機能のインストールを開始するには、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インストール ウィザードを開始します。  
   
 2.  **[セットアップ サポート ルール]** ページでは、SQL Server セットアップ サポート ファイルをインストールするときに発生する可能性がある問題が特定されています。 セットアップを続行する前に、セットアップ サポートの失敗を修正する必要があります。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "97642640"
   
 4.  **[ライセンス条項]** ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の機能向上に役立てるため、機能の使用状況オプションを有効にしてレポートを [!INCLUDE[msCoName](../../includes/msconame-md.md)]に送信することもできます。  
   
-5.  **[セットアップ サポート ファイル]** ページで **[インストール]** をクリックして、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のセットアップ サポート ファイルをインストールまたは更新します。  
+5.  **[セットアップ サポート ファイル]** ページで **[インストール]** をクリックして、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]のセットアップ サポート ファイルをインストールまたは更新します。  
   
 6.  **[セットアップ ロール]** ページで、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能のインストール** をクリックし、 **[次へ]** をクリックして **[機能の選択]** ページに進みます。  
   

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: fe74893641ae7aa69b7e388631a418a1ab973cd3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0aff998d79d79c2ac2ef06c37ffba4b01eb73973
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470723"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076860"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad のサービスの構成
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -61,7 +61,7 @@ SQL Server サービスの実行に必要なアクセス許可の詳細につい
 
 このファイルを変更するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターの管理者になる必要があります。 ファイルを編集する場合は、変更を保存する前に、バックアップ コピーを作成することをお勧めします。
 
-次の表に、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の詳細設定と、許容される値を示します。
+次の表に、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の詳細設定と、許容される値を示します。
 
 |**設定名**|**Type**|**説明**|
 |----|----|----|
