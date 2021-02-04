@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 968de0f9cf8c95b13a67f3fb2b0f36e3d8c09ced
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 74bf6f0da0daa0df248243ffbce505c75c55db5e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986114"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076324"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング
 このトピックでは、レポート サーバーへの接続時に発生する問題のトラブルシューティングを行います。 また、"予期しないエラー" メッセージについての情報も提供します。 データ ソースの構成と、レポート サーバーの接続情報の構成については、「[レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」、および[レポート サーバー データベース接続の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) に関する記事を参照してください。  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>データ ソース 'datasourcename' への接続を作成できません (rsErrorOpeningConnection)。  
-レポートにデータを提供する外部データ ソースに、レポート サーバーが接続できなかったときに発生する、一般的なエラーです。 このエラーと共に、根本原因を示したもう 1 つのエラー メッセージが表示されます。 **rsErrorOpeningConnection**では、その他のエラーが表示される場合があります。  
+レポートにデータを提供する外部データ ソースに、レポート サーバーが接続できなかったときに発生する、一般的なエラーです。 このエラーと共に、根本原因を示したもう 1 つのエラー メッセージが表示されます。 **rsErrorOpeningConnection** では、その他のエラーが表示される場合があります。  
   
 ### <a name="login-failed-for-user-username"></a>ユーザー 'UserName' はログインできませんでした。  
 ユーザーにはデータ ソースにアクセスする権限がありません。 SQL Server データベースを使用している場合は、ユーザーが使用しているデータベース ユーザー ログインが有効であるかどうかを確認してください。 データベース ユーザーまたは SQL Server ログインを作成する方法については、「 [データベース ユーザーの作成](../../relational-databases/security/authentication-access/create-a-database-user.md) 」と「 [ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)」を参照してください。  
@@ -35,7 +35,7 @@ SQL Server に接続している場合、既定の設定では SQL Server によ
 * レポート サーバーの URL およびレポート サーバー データベースの接続文字列が正しいことを確認します。 Reporting Services またはデータベース エンジンが名前付きインスタンスとしてインストールされている場合、セットアップ中に作成された既定の接続文字列にインスタンス名が含まれています。 たとえば、DEVSRV01 というサーバー上に SQL Server Express with Advanced Services の既定のインスタンスをインストールした場合、Web ポータルの URL は DEVSRV01\Reports$SQLEXPRESS になります。 さらに、接続文字列内のデータベース サーバー名は、DEVSRV01\SQLEXPRESS のようになります。 SQL Server Express の URL とデータ ソース接続文字列については、「 [SQL Server Express with Advanced Services の Reporting Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105))」を参照してください。 レポート サーバー データベースの接続文字列を確認するには、Reporting Services 構成ツールを起動し、[データベースのセットアップ] ページを確認します。  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>接続できません。 サーバーが実行中であることを確認してください。  
-このエラーは ADOMD.NET プロバイダーから返されます。 このエラーの発生原因はいくつかあります。 サーバーを "localhost" と指定した場合は、代わりにサーバー名を指定してください。 新しい接続にメモリを割り当てることができない場合にも、このエラーが発生します。 詳細については、サポート技術情報の記事 912017「 [Error message when you connect to an instance of SQL Server 2005 Analysis Services (SQL Server 2005 Analysis Services のインスタンスに接続するときのエラー メッセージ)](https://support.microsoft.com/kb/912017)」を参照してください。  
+このエラーは ADOMD.NET プロバイダーから返されます。 このエラーの発生原因はいくつかあります。 サーバーを "localhost" と指定した場合は、代わりにサーバー名を指定してください。 新しい接続にメモリを割り当てることができない場合にも、このエラーが発生します。 詳細については、サポート技術情報の記事 912017「 [Error message when you connect to an instance of SQL Server 2005 Analysis Services (SQL Server 2005 Analysis Services のインスタンスに接続するときのエラー メッセージ)](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/912017)」を参照してください。  
   
 エラーに "そのようなホストは不明です" が含まれている場合は、Analysis Services サーバーが使用できないか接続が拒否されています。 Analysis Services サーバーが名前付きインスタンスとしてリモート コンピューター上にインストールされている場合は、このインスタンスが使用するポート番号を取得するために、SQL Server Browser サービスを実行する必要が生じることがあります。  
   

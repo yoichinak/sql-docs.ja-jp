@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6d76229a17951c4b0bad35ee78e95a903bb590e3
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 0532c42a5bd080b7f686c1663c6f88d8066bc9ff
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594962"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076264"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでの TLS 接続の構成
 
@@ -86,7 +86,7 @@ ms.locfileid: "98594962"
   
  TLS バインドは Microsoft Windows の共有リソースです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーや、IIS マネージャーなどのその他のツールを使用して行われた変更は、同じコンピューター上の他のアプリケーションに影響を与えます。 バインドを編集するには、バインドを作成するときに使用したものと同じツールを使用することをお勧めします。  たとえば、Configuration Manager を使用して TLS バインドを作成した場合は、Configuration Manager を使用してバインドのライフ サイクルを管理することをお勧めします。 IIS マネージャーを使用してバインドを作成した場合は、IIS マネージャーを使用してバインドのライフ サイクルを管理することをお勧めします。 コンピューターに IIS をインストールしてから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールする場合は、IIS で TLS 構成を確認してから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を構成してください。  
   
- レポート サーバー構成マネージャーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に対する TLS バインドを削除すると、インターネット インフォメーション サービス (IIS) が実行されているサーバーまたは別の HTTP.SYS サーバー上の Web サイトに対して、TLS が機能しなくなる場合があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーによって、次のレジストリ キーが削除されます。**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** このレジストリ キーが削除されると、IIS の TLS バインドも削除されます。 このバインドがない場合、HTTPS プロトコルに TLS が提供されません。 この問題を診断するには、IIS マネージャーまたは HTTPCFG.exe コマンド ライン ユーティリティを使用します。 問題を解決するには、IIS マネージャーを使用して、Web サイトの TLS バインドを復元します。 今後この問題を防ぐためには、IIS マネージャーを使って TLS バインドを削除してから、IIS マネージャーを使って目的の Web サイトのバインドを復元します。 詳細については、サポート技術情報の記事の [SSL バインドを削除すると SSL が機能しなくなる問題に関するページ (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n) を参照してください。  
+ レポート サーバー構成マネージャーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に対する TLS バインドを削除すると、インターネット インフォメーション サービス (IIS) が実行されているサーバーまたは別の HTTP.SYS サーバー上の Web サイトに対して、TLS が機能しなくなる場合があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーによって、次のレジストリ キーが削除されます。**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** このレジストリ キーが削除されると、IIS の TLS バインドも削除されます。 このバインドがない場合、HTTPS プロトコルに TLS が提供されません。 この問題を診断するには、IIS マネージャーまたは HTTPCFG.exe コマンド ライン ユーティリティを使用します。 問題を解決するには、IIS マネージャーを使用して、Web サイトの TLS バインドを復元します。 今後この問題を防ぐためには、IIS マネージャーを使って TLS バインドを削除してから、IIS マネージャーを使って目的の Web サイトのバインドを復元します。 詳細については、サポート技術情報の記事の [SSL バインドを削除すると SSL が機能しなくなる問題に関するページ (https://support.microsoft.com/kb/956209/n)](https://web.archive.org/web/20150215042139/http://support.microsoft.com:80/kb/956209) を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)   

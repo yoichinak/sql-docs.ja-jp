@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67f25ef21a7d4897bba7242da796bd41f9fc655e
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9422651db34ab9c423a960b9d945d1c748f25d93
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642211"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075954"
 ---
 # <a name="sqlservr-application"></a>sqlservr アプリケーション
 
@@ -81,7 +81,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 ほとんどの場合、sqlserver.exe プログラムはトラブルシューティングや主なメンテナンスのみに使用されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がコマンド プロンプトから sqlservr.exe で起動された場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はサービスとしては起動しないため、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **コマンドを使用して** を停止することはできません。 ユーザーは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に接続することができますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ツールによってサービスのステータスが表示されるため、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーはサービスが停止されたことを適切に示すことができます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] もサーバーに接続することができますが、同じようにサービスが停止されたことを示すことができます。
 
 ## <a name="compatibility-support"></a>互換性サポート
-次のパラメーターは廃止され、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] でサポートされていません。
+次のパラメーターは廃止され、[!INCLUDE[sssql19-md](../includes/sssql19-md.md)] でサポートされていません。
 
 |パラメーター | 詳細情報|
 |:-----|:-----|

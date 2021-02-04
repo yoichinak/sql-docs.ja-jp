@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e29a5be172bdf00f9c57358cbbaa1e9bae5a09
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: b13ca53aad69647aee5158d86de2cfb16ac04710
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594818"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076104"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services での認証の拡張保護
 
@@ -25,7 +25,7 @@ ms.locfileid: "98594818"
 SQL Server Reporting Services (SSRS) でサポートおよび適用されるのは、オペレーティング システムで有効化し、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で構成した拡張保護です。 既定では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はネゴシエート認証または NTLM 認証を指定する要求を受け入れるため、オペレーティング システムでの拡張保護のサポートと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能を活用できます。  
   
 > [!IMPORTANT]  
->  既定では、Windows の拡張保護は有効になっていません。 Windows で拡張保護を有効にする方法の詳細については、「 [認証に対する保護の強化](https://go.microsoft.com/fwlink/?LinkID=178431)」を参照してください。 認証を成功させるためには、オペレーティング システムとクライアントの認証スタックが両方とも拡張保護をサポートしている必要があります。 旧バージョンのオペレーティング システムを使用している場合は、拡張保護に対応したコンピューターを準備するために、1 つ以上の更新プログラムのインストールが必要になることがあります。 拡張保護の最新情報については、 [こちら](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100))を参照してください。  
+>  既定では、Windows の拡張保護は有効になっていません。 Windows で拡張保護を有効にする方法の詳細については、「 [認証に対する保護の強化](https://support.microsoft.com/topic/microsoft-security-advisory-extended-protection-for-authentication-7dd2ee6d-c2e9-3484-2d8e-466261d3f0c7)」を参照してください。 認証を成功させるためには、オペレーティング システムとクライアントの認証スタックが両方とも拡張保護をサポートしている必要があります。 旧バージョンのオペレーティング システムを使用している場合は、拡張保護に対応したコンピューターを準備するために、1 つ以上の更新プログラムのインストールが必要になることがあります。 拡張保護の最新情報については、 [こちら](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100))を参照してください。  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services の拡張保護の概要
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0ff8cd92d090424bbf7a17315dc09dfb7b8a06f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 7a58a11e71c471bf02ca68ddaf4a416c3d9c554b
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934780"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075704"
 ---
 # <a name="configure-a-url--report-server-configuration-manager"></a>URL の構成 (レポート サーバー構成マネージャー)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] やレポート サーバー Web サービスを使用するには、まず、各アプリケーションに対して少なくとも 1 つの URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を "ファイルのみ" モードでインストールした場合 (インストール ウィザードの [レポート サーバー インストール オプション] ページで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、URL の構成は必須です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合は、各アプリケーションの URL が既に構成されています。  
@@ -57,7 +57,7 @@ ms.locfileid: "91934780"
   
      要求が確実に目的の宛先に届くように、仮想ディレクトリ名には一意の値を指定する必要があります。 この値は必須です。 大文字と小文字は区別されません。 仮想ディレクトリ名と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションのインスタンスは一対一に対応しています。 同じアプリケーション インスタンスへの URL を複数作成する場合は、すべての URL で同じ仮想ディレクトリ名を使用する必要があります。  
   
-     レポート サーバー Web サービスの既定の仮想ディレクトリ名は、 **ReportServer**です。  
+     レポート サーバー Web サービスの既定の仮想ディレクトリ名は、 **ReportServer** です。  
   
 4.  ネットワーク上のレポート サーバー コンピューターを一意に識別する IP アドレスを指定します。 ホスト ヘッダーを指定したり、同じアプリケーション インスタンスに対して追加の URL を定義したりする場合は、 **[詳細設定]** をクリックする必要があります。 URL の詳細プロパティを設定する方法については、このトピックで後ほど説明します。 詳細プロパティを設定しない場合は、 **[Web サービス URL]** ページを使用して値を次の中から選択します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "91934780"
   
          `netstat -anp tcp`  
   
-    -   Microsoft サポート技術情報の「 [TCP/IP ポートの割り当てについて](https://support.microsoft.com/kb/174904)」を読んで、TCP ポートの割り当てと、Well Known ポート (0 ～ 1023)、予約済みポート (1024 ～ 49151)、および動的/プライベート ポート (49152 ～ 65535) の違いについて確認します。  
+    -   Microsoft サポート技術情報の「 [TCP/IP ポートの割り当てについて](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/174904)」を読んで、TCP ポートの割り当てと、Well Known ポート (0 ～ 1023)、予約済みポート (1024 ～ 49151)、および動的/プライベート ポート (49152 ～ 65535) の違いについて確認します。  
   
     -   Windows ファイアウォールを使用している場合はポートを開く必要があります。 手順については、「 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)」を参照してください。  
   

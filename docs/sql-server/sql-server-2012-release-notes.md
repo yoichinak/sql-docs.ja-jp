@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: fff3b6de7e2e83c535997194ca2622d9cd9e9595
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 06294cb2dbf588ed5f7588d05ee5aa1c5af971bc
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766176"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076074"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 リリース ノートします。
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -192,7 +192,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
     -   Windows 7 SP1 または Windows Server 2008 R2 SP1 オペレーティング システムを使用しているコンピューターに SQL Server 2012 をインストールする場合、更新プログラムは既にコンピューターにインストールされています。  
   
--   Windows PowerShell 2.0 は SQL Server 2012 のデータベース エンジン コンポーネントおよび SQL Server Management Studio のインストール前提条件ですが、Windows PowerShell は SQL Server セットアップでインストールされなくなりました。 PowerShell 2.0 がコンピューターで表示されない場合は、「 [Windows 管理フレームワーク](https://support.microsoft.com/kb/968929) 」の手順に従って有効にすることができます。 Windows PowerShell 2.0 をインストールする方法は、使用するオペレーティング システムによって異なります。  
+-   Windows PowerShell 2.0 は SQL Server 2012 のデータベース エンジン コンポーネントおよび SQL Server Management Studio のインストール前提条件ですが、Windows PowerShell は SQL Server セットアップでインストールされなくなりました。 PowerShell 2.0 がコンピューターで表示されない場合は、「 [Windows 管理フレームワーク](https://mskb.pkisolutions.com/kb/968929) 」の手順に従って有効にすることができます。 Windows PowerShell 2.0 をインストールする方法は、使用するオペレーティング システムによって異なります。  
   
     -   Windows Server 2008 - Windows PowerShell 1.0 は機能のため、追加することができます。 Windows PowerShell 2.0 はダウンロードしてインストールすることができます (実際には OS 修正プログラムとして適用されます)。  
   

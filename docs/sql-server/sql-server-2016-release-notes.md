@@ -14,12 +14,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: 720da25fe19f064c6a6eb3b363832b76113e2c5b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dad7665ffa825a80aa6bcb3050b04a96060c3f65
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97409698"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076044"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -60,7 +60,7 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 |可用性グループ内のデータベースでの完全な DTC サポート   |   可用性グループの一部であるデータベースでの複数データベース間トランザクションは現在 SQL Server 2016 でサポートされていません。 SQL Server 2016 SP2 では、可用性グループ データベースでの分散トランザクションの完全なサポートを導入しています。   |      |
 |TempDB の暗号化の状態を正確に反映するための sys.database の is_encrypted 列の更新   |   すべてのユーザー データベースの暗号化をオフにし、SQL Server を再起動した後でも、TempDB の sys.databases の is_encrypted 列の値は 1 です。 この状況では TempDB が暗号化されないため、この値が 0 になることが予想されます。 SQL Server 2016 SP2 以降では、sys.databases.is_encrypted で TempDB の暗号化の状態が正確に反映されます。   |      |
 |検証済みのクローンとバックアップを生成するための新しい DBCC CLONEDATABASE オプション   |   SQL Server 2016 SP2 では、DBCC CLONEDATABASE によって、検証済みのクローンの作成、またはバックアップ クローンの生成という 2 つのオプションを使用できるようになります。 WITH VERIFY_CLONEDB オプションによってクローン データベースが作成されると、実稼働環境で Microsoft によってサポートされる一貫性のあるデータベース クローンが作成され、検証されます。 クローンが検証されるかどうかを検証する新しいプロパティ SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone') が導入されています。 クローンが BACKUP_CLONEDB オプションで作成されると、顧客が簡単にクローンを別のサーバーに移動したり、トラブルシューティングのために Microsoft カスタマー サポート (CSS) に送信したりできるように、データ ファイルと同じフォルダーにバックアップが生成されます。   |      |
-|DBCC CLONEDATABASE の Service Broker (SSB) のサポート   |   SSB オブジェクトのスクリプト作成を許可するように、DBCC CLONEDATABASE コマンドが拡張されました。   |   [KB4092075](https://support.microsoft.com/help/4092075)   |
+|DBCC CLONEDATABASE の Service Broker (SSB) のサポート   |   SSB オブジェクトのスクリプト作成を許可するように、DBCC CLONEDATABASE コマンドが拡張されました。   |      |
 |TempDB のバージョン ストア領域の使用量を監視する新しい DMV   |   TempDB のバージョン ストア使用量の監視が可能になるように、SQL Server 2016 SP2 に新しい sys.dm_tran_version_store_space_usage の DMV が導入されました。 運用サーバーでの実行時にパフォーマンスのオーバーヘッドを発生させることなく、データベースごとのバージョン ストア使用量の要件に基づいて DBA で TempDB のサイズを事前に計画できるようになりました。   |      |
 |レプリケーション エージェントの完全なダンプのサポート | 現在は、レプリケーション エージェントがハンドルされない例外に遭遇すると、既定により例外の現象のミニ ダンプが作成されます。 これにより、未処理の例外の問題のトラブルシューティングが非常に難しくなっています。 今回の変更では新しいレジストリ キーが導入され、レプリケーション エージェントの完全なダンプが作成できるようになっています。   |      |
 |可用性グループのルーティング読み取りエラーの拡張イベントの機能強化   |   以前は、ルーティング リストが存在する場合、read_only_rout_fail の xEvent が起動していましたが、ルーティング リストのどのサーバーも、接続に使用できませんでした。 SQL Server 2016 SP2 には、トラブルシューティングに役立つ追加情報と、xEvent が起動するコード ポイントの拡張も含まれます。   |      |
