@@ -17,18 +17,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 9188b822e7bf0e0024e6c6fcdbe81db7ea05002f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 2066f5a90f27b892827c1a36034a3f9e57f4f0ea
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037545"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250474"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>サーバー グループの削除 (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーからサーバー グループを削除する方法について説明します。 サーバー グループはいつでも削除できます。 サーバー グループが空でない場合は、削除するサーバー グループ内のサーバーまたはサーバー グループもすべて削除されます。 残しておくサーバーまたはサーバー グループがあれば、サーバー グループを削除する前に、別のサーバー グループに移動します。  
+このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーからサーバー グループを削除する方法について説明します。 サーバー グループはいつでも削除できます。 サーバー グループが空でない場合は、削除するサーバー グループ内のサーバーまたはサーバー グループもすべて削除されます。 残しておくサーバーまたはサーバー グループがあれば、サーバー グループを削除する前に、別のサーバー グループに移動します。  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -38,6 +38,6 @@ ms.locfileid: "92037545"
   
 2.  **[削除の確認]** ダイアログ ボックスで **[はい]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [登録済みサーバーまたは登録済みサーバー グループの移動 &#40;SQL Server Management Studio&#41;](./move-a-registered-server-or-registered-server-group.md)  
   

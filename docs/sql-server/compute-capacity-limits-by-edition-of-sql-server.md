@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f169f8a88c13cc6b12b060405285c963dd9524e3
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: fd76f7fb9da663c5768ec9d60679a14b797655fc
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988064"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250379"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server のエディション別の計算容量制限
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の各エディションの計算容量の制限と、ハイパースレッド プロセッサを持つ物理環境と仮想化環境での違いについて説明します。  
+  このトピックでは、[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] の各エディションの計算容量の制限と、ハイパースレッド プロセッサを持つ物理環境と仮想化環境での違いについて説明します。  
   
  ![容量制限計算のためのマッピング](../sql-server/media/compute-capacity-limits.gif "容量制限計算のためのマッピング")  
   
@@ -76,7 +76,7 @@ ms.locfileid: "91988064"
   
 これらの制限は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の 1 つのインスタンスに適用され、 1 つのインスタンスが使用する最大計算容量を表します。 これらの制限には、インスタンスが配置される可能性があるサーバーは含まれません。 実際、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の複数のインスタンスを同じ物理サーバーに配置することは、以下に示す容量制限よりも多くのソケットまたはコアを搭載した物理サーバーの計算容量を使用するための効果的な方法です。  
   
-次の表に、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の各エディションの 1 つのインスタンスに適用される計算容量制限を示します。  
+次の表に、 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]の各エディションの 1 つのインスタンスに適用される計算容量制限を示します。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|1 つのインスタンスの最大計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|1 つのインスタンスの最大計算容量 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  

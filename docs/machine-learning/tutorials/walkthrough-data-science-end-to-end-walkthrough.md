@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: afd34354290134d0973c1105a902b96c4bbdd706
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0537e602d5c6773c4978c7fff0f5bf0f927985c6
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470003"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536343"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>チュートリアル:R データ サイエンティスト向けの SQL 開発
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -25,7 +25,7 @@ R コード、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デー�
 
 この例は、販売キャンペーンに対する顧客の反応の予測やイベントでの支出や出席の予測など、あらゆる種類の実際の問題に合わせて拡張できます。 このモデルはストアド プロシージャから呼び出すことができるため、アプリケーションに簡単に埋め込むことができます。
 
-このチュートリアルは、R 開発者に [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を紹介する目的で設計されているため、可能な場合には R が使用されています。 ただしこれは、各タスクにとって必ずしも R が最適なツールであるという意味ではありません。 多くの場合、特にデータ集計と機能エンジニアリングについては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の方が優れたパフォーマンスを示す可能性があります。  このようなタスクでは、特に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の新機能 (メモリ最適化列ストア インデックスなど) のメリットが得られます。 可能な最適化については、レッスンの中でご紹介します。
+このチュートリアルは、R 開発者に [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を紹介する目的で設計されているため、可能な場合には R が使用されています。 ただしこれは、各タスクにとって必ずしも R が最適なツールであるという意味ではありません。 多くの場合、特にデータ集計と機能エンジニアリングについては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の方が優れたパフォーマンスを示す可能性があります。  このようなタスクでは、特に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新機能 (メモリ最適化列ストア インデックスなど) のメリットが得られます。 可能な最適化については、レッスンの中でご紹介します。
 
 ## <a name="prerequisites"></a>前提条件
 

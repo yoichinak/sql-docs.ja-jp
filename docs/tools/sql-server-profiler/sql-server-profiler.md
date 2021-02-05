@@ -4,24 +4,23 @@ titleSuffix: SQL Server Profiler
 description: SQL Server プロファイラーの機能について説明します。 このツールを使用してトレースを作成し、トレース結果を分析および再生することにより、問題のトラブルシューティングに役立つ情報を得ることができます。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 3169f8fbbc86fc95a62631c0cc93d77b6a46b0a4
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 3066ac1b16a1a294955825dc35b40f422bd79df3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643417"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203539"
 ---
 # <a name="sql-server-profiler"></a>SQL Server プロファイラー
 
- [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、トレースを作成および管理し、トレースの結果を分析および再生するためのインターフェイスです。 イベントはトレース ファイルに保存され、後で分析したり、問題を診断する際に具体的な一連のステップを再現するために利用できます。
 
@@ -46,7 +45,7 @@ ms.locfileid: "97643417"
 
 ## <a name="capture-and-replay-trace-data"></a>トレース データをキャプチャし再生する
 
-以下の表に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でトレース データのキャプチャおよび再生を行うために使用が推奨される機能を示します。
+以下の表に、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でトレース データのキャプチャおよび再生を行うために使用が推奨される機能を示します。
 
 ||||
 |-|-|-|

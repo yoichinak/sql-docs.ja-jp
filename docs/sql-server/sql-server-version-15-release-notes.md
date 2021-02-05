@@ -10,23 +10,23 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15
-ms.openlocfilehash: 9762de193eae8ad4e67e77ae54c9778e92357c45
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bcd105fac1dcb534d6c287c0daa8b0fa0e692db2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97402681"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237834"
 ---
-# <a name="sql-server-2019-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] リリース ノート
+# <a name="sql-server-2019-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] リリース ノート
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-この記事では、[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] の制限事項と既知の問題について説明します。 関連情報については、以下をご覧ください。
+この記事では、[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] の制限事項と既知の問題について説明します。 関連情報については、以下をご覧ください。
 
-> [[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)
+> [[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
+## [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] は、[!INCLUDE[SQL Server 2019](../includes/ssnoversion-md.md)] の最新のパブリック リリースです。
+[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] は、[!INCLUDE[SQL Server 2019](../includes/ssnoversion-md.md)] の最新のパブリック リリースです。
 
 ライセンスの詳細については、インストール メディアの `License Terms` フォルダーをご覧ください。
 
@@ -42,16 +42,16 @@ SQL Server 2019 の RTM ビルド番号は `15.0.2000.5` です。
 
 ## <a name="sql-server-installation-may-fail-if-ssms-18x-is-installed"></a>SSMS 18.x がインストールされていると SQL Server のインストールが失敗する場合がある
 
-- **問題およびユーザーへの影響**: 次のインストールをこの順序で実行すると、[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] のインストールが失敗します。
+- **問題およびユーザーへの影響**: 次のインストールをこの順序で実行すると、[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] のインストールが失敗します。
   1. SQL Server Management Studio (SSMS) バージョン 18.0、18.1、18.2、または 18.3 がサーバーにインストールされています。
-  1. リムーバブル メディアから [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] のインストールを試みます。 たとえば、DVD などのインストール メディアです。
+  1. リムーバブル メディアから [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] のインストールを試みます。 たとえば、DVD などのインストール メディアです。
 
 - **回避策**:
   1. SSMS 18.3.1 より古いバージョンの SSMS をすべてアンインストールします。
   1. 新しいバージョンの SSMS (18.3.1 以降) をインストールします。 最新のバージョンについては、[SSMS のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)に関するページを参照してください。
-  1. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] を普通にインストールします。
+  1. [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] を普通にインストールします。
 
-- **適用対象**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
+- **適用対象**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]
 
 ## <a name="utf-8-collations"></a>UTF-8 対応の照合順序
 
@@ -65,7 +65,7 @@ SQL Server 2019 の RTM ビルド番号は `15.0.2000.5` です。
   > [!NOTE]
   > Azure Data Studio および SQL Server Data Tools (SSDT) では、UTF-8 対応の照合順序を選択するための UI は現在のところサポートされていません。 最新の [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) バージョン 18 では、UTF-8 対応の照合順序を UI で選択することができます。
 
-- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
+- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] RTM
 
 ## <a name="master-data-service-notification-email-contains-broken-link"></a>マスター データ サービスの通知電子メールに壊れたリンクが含まれる
 
@@ -75,7 +75,7 @@ SQL Server 2019 の RTM ビルド番号は `15.0.2000.5` です。
 
 - **回避策**:MDS ポータルを開き、リソースに手動で移動します。
 
-- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
+- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] RTM
 
 ## <a name="see-also"></a>関連項目
 

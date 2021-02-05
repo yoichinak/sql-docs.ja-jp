@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: b499c7236391c7286c4a267c433ad991a963dab5
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 3a33f274b18e36859e697dd4c0a6bdb5c171930e
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688927"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536399"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd ユーティリティ
 
@@ -57,7 +57,7 @@ ms.locfileid: "98688927"
 **[![x64 用 sqlcmd のダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2142258)**
 <br>**[![x86 用 sqlcmd のダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
-コマンドライン ツールは一般提供 (GA) ですが、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] のインストーラー パッケージと共にリリースされています。
+コマンドライン ツールは一般提供 (GA) ですが、[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] のインストーラー パッケージと共にリリースされています。
 
 **バージョン情報**
 
@@ -70,7 +70,7 @@ ms.locfileid: "98688927"
 
 **システム要件** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008-2019。
 
-このコンポーネントには、[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483) と [Microsoft ODBC Driver for SQL Server 17](../connect/odbc/download-odbc-driver-for-sql-server.md) の両方が必要です。
+このコンポーネントには、[Windows インストーラー 4.5](https://windows-installer.soft32.com/) と [Microsoft ODBC Driver for SQL Server 17](../connect/odbc/download-odbc-driver-for-sql-server.md) の両方が必要です。
  
 SQLCMD のバージョンを確認するには、`sqlcmd -?` コマンドを実行し、15.0.2000.5 以降のバージョンが使用されていることを確認します。
 

@@ -17,21 +17,21 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: eafa770651260fb99931556308ccce58f1bf681c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: acf4033e4f4a7faed1fc771612fd038916da52ec
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037565"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250718"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のインポート (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で保存されている登録済みサーバー情報をインポートする方法について説明します。 登録済みサーバー ファイルをエクスポートした後にインポートすることで、[登録済みサーバー] の同じサーバーを使用して、複数のコンピューターを簡単に構成できます。 この方法は、複数の場所に配置されているコンピューターから多数のサーバーを管理する場合や、経験の浅いユーザーのために基本的な接続設定を構成する場合に便利です。  
+このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]で保存されている登録済みサーバー情報をインポートする方法について説明します。 登録済みサーバー ファイルをエクスポートした後にインポートすることで、[登録済みサーバー] の同じサーバーを使用して、複数のコンピューターを簡単に構成できます。 この方法は、複数の場所に配置されているコンピューターから多数のサーバーを管理する場合や、経験の浅いユーザーのために基本的な接続設定を構成する場合に便利です。  
   
 > [!NOTE]  
->  登録済みサーバーの情報を、以前のバージョンの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートすることはできません。  
+>  登録済みサーバーの情報を、以前のバージョンの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートすることはできません。  
   
 ##  <a name="SSMSProcedure"></a>  
   

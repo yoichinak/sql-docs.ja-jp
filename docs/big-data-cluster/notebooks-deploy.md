@@ -10,22 +10,22 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 868c7685c59ae1ccf43057fdd03dfbb0b5bdaf21
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ac8d7bb761b95edea14d18008fbd96a968665725
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637394"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235715"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを展開する
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、展開ノートブックを含む Azure Data Studio の拡張機能が提供されています。 展開ノートブックには、SQL Server ビッグ データ クラスターを作成するために Azure Data Studio 内で使用できるドキュメントとコードが含まれています。
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] では、展開ノートブックを含む Azure Data Studio の拡張機能が提供されています。 展開ノートブックには、SQL Server ビッグ データ クラスターを作成するために Azure Data Studio 内で使用できるドキュメントとコードが含まれています。
 
 もともとは、オープン ソース プロジェクトとして実装され、[ノートブック](../azure-data-studio/notebooks/notebooks-guidance.md)は [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) 内に実装されていました。 テキスト セル内のテキストに対してはマークダウンを、また、コード セル内にコードを記述するには利用可能なカーネルの 1 つを使用できます。
 
-ノートブックを使用して、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対してビッグ データ クラスターを展開できます。
+ノートブックを使用して、[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] に対してビッグ データ クラスターを展開できます。
 
 ## <a name="prerequisites"></a>前提条件
 

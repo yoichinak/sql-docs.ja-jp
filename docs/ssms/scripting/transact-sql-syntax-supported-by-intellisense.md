@@ -16,19 +16,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbc08b695d0909ed0656a8bb2dd416f17a2c79e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 05e99b82272241221ba43e65a881bf0bdc4a29bf
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480603"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250469"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense でサポートされている Transact-SQL 構文
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の IntelliSense でサポートされる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ステートメントと構文要素について説明します。  
+  このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の IntelliSense でサポートされる [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]ステートメントと構文要素について説明します。  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense でサポートされるステートメント  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の IntelliSense では、特に一般的な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのみがサポートされます。 いくつかの一般的な [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの状態が原因で IntelliSense が動作しなくなる場合があります。 詳細については、「[IntelliSense のトラブルシューティング &#40;SQL Server Management Studio&#41;](./troubleshooting-intellisense.md)」を参照してください。  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]の IntelliSense では、特に一般的な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのみがサポートされます。 いくつかの一般的な [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの状態が原因で IntelliSense が動作しなくなる場合があります。 詳細については、「[IntelliSense のトラブルシューティング &#40;SQL Server Management Studio&#41;](./troubleshooting-intellisense.md)」を参照してください。  
   
 > [!NOTE]  
 >  IntelliSense は、暗号化されたデータベース オブジェクト (たとえば暗号化されたストアド プロシージャまたはユーザー定義関数) に対しては利用できません。 拡張されたストアド プロシージャおよび CLR 統合のユーザー定義型のパラメーターに対しては、パラメーターのヘルプおよびクイック ヒントを利用できません。  

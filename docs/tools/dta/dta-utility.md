@@ -21,12 +21,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
-ms.openlocfilehash: a80c3fc49962ad4a67430163f81d00b37c05329b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 68efd346dad72b36e98f5ce0f0c659eed81c5966
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169220"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236717"
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
 
@@ -184,7 +184,7 @@ dta -d AdventureWorks2012 ...
 「[データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)」を参照してください。
  ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。|  
+|**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降。|  
 
   
  **-fk** _keep_existing_option_  
@@ -222,7 +222,7 @@ dta -d AdventureWorks2012 ...
  クエリ ストアをワークロードとして使用することを指定します。 明示的に選択したデータベースについての上位 1,000 個のクエリ ストアのイベントが分析されます。 この値は **-n** オプションを使用して変更できます。  詳細については、[クエリ ストア](../../relational-databases/performance/how-query-store-collects-data.md)に関するページと、「[クエリ ストアのワークロードを使用してデータベースをチューニングする](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。
  ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。|  
+|**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降。|  
      
  **-if** _workload_file_  
  チューニングの入力として使用するワークロード ファイルのパスとファイルの名前を指定します。 ファイルは、.trc (SQL Server Profiler トレース ファイル)、.sql (SQL ファイル)、.log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トレース ファイル) のいずれかの形式になっている必要があります。 ワークロード ファイル、またはワークロード テーブルを 1 つ指定する必要があります。  
@@ -281,7 +281,7 @@ dta -iq -I 48
 この場合、DTA ではクエリ ストアをワークロードのソースとして使用し、過去 48 時間に実行されたクエリのみが考慮されます。  
   ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。|  
+|**適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降。|  
 
 
   

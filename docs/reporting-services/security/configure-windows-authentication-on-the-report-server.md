@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 53e005fcd5c4a11270a5bc2f7c307f521311c548
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 22a9134ed3caf220dbe895d7e4de8b9d52290e08
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596650"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536333"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>レポート サーバーで Windows 認証を構成する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、既定では、ネゴシエート認証または NTLM 認証を指定する要求を受け入れます。 これらのセキュリティ プロバイダーを使用するクライアント アプリケーションおよびブラウザーが配置に含まれている場合は、追加の構成なしで既定値を使用できます。 Windows 統合セキュリティの別のセキュリティ プロバイダーを使用する場合 (たとえば Kerberos を直接使用する場合)、または既定値を変更した後に元の設定を復元する場合は、このトピックの情報を使用して、レポート サーバーで認証設定を指定できます。  
@@ -197,7 +197,7 @@ ms.locfileid: "98596650"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   Kerberos とレポート サーバーの詳細については、 [SharePoint、Reporting Services、PerformancePoint Monitoring Server と Kerberos を使用したビジネス インテリジェンス ソリューションの展開](https://go.microsoft.com/fwlink/?LinkID=177751)に関する記事を参照してください。  
+-   Kerberos とレポート サーバーの詳細については、 [SharePoint、Reporting Services、PerformancePoint Monitoring Server と Kerberos を使用したビジネス インテリジェンス ソリューションの展開](https://www.kasperonbi.com/deploying-a-business-intelligence-solution-using-sharepoint-reporting-services-and-performancepoint-monitoring-server-with-kerberos/)に関する記事を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)   

@@ -10,22 +10,22 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9020f8745c22a9e6382b6538d5bf650c17e923e4
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a526f4d1da472a8d5bae9c5bceb296978d24986b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196126"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235713"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを管理する
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] は、ノートブックを含む Azure Data Studio の拡張機能を提供します。 ノートブックには、SQL Server 2019 ビッグ データ クラスターを管理するために Azure Data Studio で使用できるドキュメントとコードが用意されています。
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] は、ノートブックを含む Azure Data Studio の拡張機能を提供します。 ノートブックには、SQL Server 2019 ビッグ データ クラスターを管理するために Azure Data Studio で使用できるドキュメントとコードが用意されています。
 
 もともとは、オープン ソース プロジェクトとして実装され、[ノートブック](../azure-data-studio/notebooks/notebooks-guidance.md)は [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) 内に組み込まれていました。 テキスト セル内のテキストに対してはマークダウンを、また、コード セル内にコードを記述するには利用可能なカーネルの 1 つを使用できます。
 
-ノートブックを使用して、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対してビッグ データ クラスターを展開できます。
+ノートブックを使用して、[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] に対してビッグ データ クラスターを展開できます。
 
 ノートブックに加え、ユーザーは Jupyter Book と呼ばれるノートブックのコレクションを表示できます。 Jupyter Book には、ノートブックのコレクション内を移動できる目次が用意されています。これにより、必要なノートブックを見つけたり、SQL Server のトラブルシューティングを行ったり、クラスターの状態を表示したりすることができます。
 
@@ -34,7 +34,7 @@ ms.locfileid: "92196126"
 ノートブックを開くには、次のコンポーネントが必要です。
 
 * [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) の最新バージョン
-* [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 拡張機能が Azure Data Studio にインストールされている
+* [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] 拡張機能が Azure Data Studio にインストールされている
 
 これらのコンポーネントに加えて、SQL Server 2019 ビッグ データ クラスターを展開するには、次のコンポーネントも必要です。
 
@@ -50,7 +50,7 @@ ms.locfileid: "92196126"
 
 1. **[ビュー]**  >  **[コマンド パレット]** を選択します。
 
-2. 「 **Jupyter Books:SQL Server 2019 Guide** 」と入力します。
+2. 「**Jupyter Books:SQL Server 2019 Guide**」と入力します。
 
 SQL Server ビッグ データ クラスターに関連するトラブルシューティング ノートブックを含む Jupyter Book が含まれている Jupyter Books Viewlet が開きます。
 

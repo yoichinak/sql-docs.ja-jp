@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9fcfeed749aea4fa18ac74ba4e78cc9dfa368828
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 508240f27248cb4cc618441948c40b72c9311398
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99196293"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552611"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,10 @@ ms.locfileid: "99196293"
   拡張キー管理 (EKM: Extensible Key Management) プロバイダーによって提供されるキーに関する情報を返します。  
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+
+> [!IMPORTANT]
+> この動的管理ビューは、現在、SQL Server EKM コネクタではサポートされていません。 SQL Server 製品チームはこの問題を認識しており、今後この問題に対処する予定です。
+
 ## <a name="syntax"></a>構文  
   
 ```  
@@ -61,7 +64,7 @@ dm_cryptographic_provider_keys ( provider_id )
   
  ユーザーが EKM プロバイダーで認証できない場合、キー情報は返されません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、の識別番号を持つプロバイダーのキープロパティを示して `1234567` います。  
   
 ```  
