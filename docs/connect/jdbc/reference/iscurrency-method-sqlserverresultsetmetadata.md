@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSetMetaData.isCurrency
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4b5c127dab64cfd77599fb9f2dfb50b4605c64e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2866e1a232f3ed51315971c0fb052d8e718cb74c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433664"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177443"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>isCurrency メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean isCurrency(int column)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- 列がキャッシュの値の場合は **true** です。 それ以外の場合は、 **false**です。  
+ 列がキャッシュの値の場合は **true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

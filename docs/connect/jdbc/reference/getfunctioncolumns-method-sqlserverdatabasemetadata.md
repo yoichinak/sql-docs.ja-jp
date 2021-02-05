@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4cb46e108c2a6c3842d55af9e07f06f909e721ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03a5bbe04c9fdf511659a2abef7e6e4135e87370
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436024"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175753"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,19 +36,19 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>パラメーター  
  *catalog*  
   
- カタログ名を含む**文字列**です。 空の文字列 "" の場合、結果にはカタログのない関数が含まれます。 **null** の場合、カタログ名は検索に使用されません。  
+ カタログ名を含む **文字列** です。 空の文字列 "" の場合、結果にはカタログのない関数が含まれます。 **null** の場合、カタログ名は検索に使用されません。  
   
  *schemaPattern*  
   
- スキーマ名のパターンを含む**文字列**です。 空の文字列 "" の場合、結果にはスキーマのない関数が含まれます。 **null** の場合、スキーマ名は検索に使用されません。  
+ スキーマ名のパターンを含む **文字列** です。 空の文字列 "" の場合、結果にはスキーマのない関数が含まれます。 **null** の場合、スキーマ名は検索に使用されません。  
   
  *functionNamePattern*  
   
- 関数の名前を含む**文字列**です。  
+ 関数の名前を含む **文字列** です。  
   
  *columnNamePattern*  
   
- パラメーターの名前を含む**文字列**です。  
+ パラメーターの名前を含む **文字列** です。  
   
 ## <a name="return-value"></a>戻り値  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
@@ -63,7 +63,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
   
  結果セットの各行には、パラメーターの説明、列の説明、または戻り値の型に対する次の列が含まれます。  
   
-|名前|種類|説明|  
+|名前|Type|説明|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|関数が存在するデータベースの名前です。|  
 |FUNCTION_SCHEM|**String**|関数のスキーマです。|  

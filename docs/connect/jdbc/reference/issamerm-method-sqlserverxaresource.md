@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerXAResource.isSameRM
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6b35a775c8a8ed02dbbb634868e38b1d6c1579a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9aad0f3be995f371a797fb2bf4c36d86776ad014
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433414"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177252"
 ---
 # <a name="issamerm-method-sqlserverxaresource"></a>isSameRM メソッド (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean isSameRM(javax.transaction.xa.XAResource xares)
  XAResource オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- インスタンスが同一である場合は **true** です。 それ以外の場合は、 **false**です。  
+ インスタンスが同一である場合は **true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="exceptions"></a>例外  
  javax.transaction.xa.XAException  

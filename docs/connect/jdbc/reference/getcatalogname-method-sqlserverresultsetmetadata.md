@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSetMetaData.getCatalogName
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae1f48197f4ed5dc47e8ea84ad245c929908d9a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a9edb8432698fb513b8424b329b0420419e9d86f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436844"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176174"
 ---
 # <a name="getcatalogname-method-sqlserverresultsetmetadata"></a>getCatalogName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.lang.String getCatalogName(int column)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- カタログ名を含む**文字列**です。  
+ カタログ名を含む **文字列** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

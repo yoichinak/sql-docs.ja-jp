@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.setTrustManagerClass
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 74a82516e982e9bf84d00939cb93bc5f9eda502e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c9e7b2772a3037d0fcec60550a9d3f5265140de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88354958"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178481"
 ---
 # <a name="settrustmanagerclass-method-sqlserverdatasource"></a>setTrustManagerClass メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setTrustManagerClass(java.lang.String trustManagerClass)
 #### <a name="parameters"></a>パラメーター  
  *trustManagerClass*  
   
- カスタム javax.net.ssl.TrustManager の完全修飾クラス名を含む**文字列**。
+ カスタム javax.net.ssl.TrustManager の完全修飾クラス名を含む **文字列**。
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

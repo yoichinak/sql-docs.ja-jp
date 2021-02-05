@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerSavepoint.getLabel
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: ccc32b87-8451-46c8-a173-068d33374e57
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f65d439d2132a269aa0c3c601d1e425815af84b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53313a891456c63d22e0bf4d1302ef383438b033
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88435764"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175635"
 ---
 # <a name="getlabel-method-sqlserversavepoint"></a>getLabel メソッド (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.lang.String getLabel()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- セーブポイント ラベルの名前を含む**文字列**です。  
+ セーブポイント ラベルの名前を含む **文字列** です。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerSavepoint のメソッド](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.registerOutParameter (java.lang.String, int)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5d00242c-4d9c-42cc-86bb-b76f5ef876b8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a3d7c0a511f630683682c427fe73d0808e418375
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77bcd61ec0343b6202725838094c6e3b4a76a9d6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88432784"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176679"
 ---
 # <a name="registeroutparameter-method-javalangstring-int"></a>registerOutParameter (java.lang.String, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public void registerOutParameter(java.lang.String s,
 #### <a name="parameters"></a>パラメーター  
  *s*  
   
- パラメーターの名前を含む**文字列**です。  
+ パラメーターの名前を含む **文字列** です。  
   
  *n*  
   
