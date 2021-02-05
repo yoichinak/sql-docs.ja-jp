@@ -7,21 +7,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0b6b65a1-8e62-4cd5-ab28-6231c3e20d81
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f8791a639f6b3ed605c90e3e32095b05211de76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f93882afa82ef6f18afbfc665d805ab04a81a54a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450094"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182939"
 ---
 # <a name="updatenstring-method-sqlserverresultset"></a>updateNString メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された列を**文字列**の値で更新します。  
+  指定された列を **文字列** の値で更新します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   

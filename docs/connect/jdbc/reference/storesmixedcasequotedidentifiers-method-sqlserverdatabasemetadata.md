@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDatabaseMetaData.storesMixedCaseQuotedIdentifiers
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1ffa599c-d0c8-43b6-8e9b-7c856a846630
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb740b77c42bb80f6effb86e5f731ea2c7cd3588
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 759469523ead8e239569832f224600427f27a927
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458124"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182973"
 ---
 # <a name="storesmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesMixedCaseQuotedIdentifiers メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean storesMixedCaseQuotedIdentifiers()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 識別子を大文字小文字混在で格納する場合は **true** です。 それ以外の場合は、 **false**です。  
+ 識別子を大文字小文字混在で格納する場合は **true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

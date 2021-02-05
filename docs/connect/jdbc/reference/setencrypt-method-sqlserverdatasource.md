@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - setEncrypt Method (SQLServerDataSource)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e7da98aa70be2066c370b75e2bc213c25ba16e03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a041a866e825cef59441cbfd42ca408d1d3cfd0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431974"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179019"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>setEncrypt メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setEncypt(boolean encrypt)
 #### <a name="parameters"></a>パラメーター  
  *encrypt*  
   
- クライアントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の間で TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets Layer)) 暗号化が有効である場合は、**true** です。 それ以外の場合は、 **false**です。  
+ クライアントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の間で TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets Layer)) 暗号化が有効である場合は、**true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="remarks"></a>解説  
  encrypt プロパティが **true** に設定されている場合、サーバーに証明書がインストールされていれば、サーバーとクライアント間で送信されるすべてのデータで TLS 暗号化が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で確実に使用されることを [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] は保証します。 既定値は **false** です。  

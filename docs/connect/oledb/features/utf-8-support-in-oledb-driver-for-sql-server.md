@@ -6,16 +6,16 @@ ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: b16ba1f6fef9ec82de0e3c4877a52aee344a2b70
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 3b59abddd3cd64302137ec0a0347bde929d478ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727276"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190345"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server の UTF-8 のサポート
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ Microsoft OLE DB Driver for SQL Server (version 18.2.1) によって、UTF-8 サ
 |DBTYPE_WSTR|DBTYPE_WSTR|UTF-16 から列の照合順序のコード ページへのサーバーの変換。|[なし] :|
 
 ## <a name="data-retrieval-from-a-utf-8-encoded-char-or-varchar-column"></a>UTF-8 でエンコードされた CHAR または VARCHAR 列からのデータ取得
-データ取得用のバッファーが作成されるとき、そのバッファーは、[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))の配列を使用して記述されます。 各 DBBINDING 構造体には、取得された行の単一の列が関連付けられます。 列データを CHAR として取得するには、DBBINDING 構造体の*wType* を DBTYPE_STR に設定します。 列データを WCHAR として取得するには、DBBINDING 構造体の*wType* を DBTYPE_WSTR に設定します。
+データ取得用のバッファーが作成されるとき、そのバッファーは、[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))の配列を使用して記述されます。 各 DBBINDING 構造体には、取得された行の単一の列が関連付けられます。 列データを CHAR として取得するには、DBBINDING 構造体の *wType* を DBTYPE_STR に設定します。 列データを WCHAR として取得するには、DBBINDING 構造体の *wType* を DBTYPE_WSTR に設定します。
 
 結果のバッファーの型インジケーターが DBTYPE_STR の場合は、ドライバーによって UTF-8 エンコード データがクライアントのエンコードに変換されます。 ユーザーは、UTF-8 列からのデータをクライアントのエンコードで表現できることを確認する必要があります。そうでない場合は、データ損失が発生する可能性があります。
 

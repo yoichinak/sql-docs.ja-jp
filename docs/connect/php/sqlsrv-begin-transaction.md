@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_begin_transaction
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6ac4ca8e892fdc24af003ba69db6129a57c7870b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8b64d0d37ca716d11a9b1a945480fe8a19d238dc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414308"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190275"
 ---
 # <a name="sqlsrv_begin_transaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "88414308"
 指定した接続でトランザクションを開始します。 現在のトランザクションには、 **sqlsrv_begin_transaction** の呼び出しの後、 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) または [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)の呼び出しの前に指定した接続で実行されたすべてのステートメントが含まれています。  
   
 > [!NOTE]  
-> [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は、既定で自動コミット モードになっています。 これは、すべてのクエリは、 **sqlsrv_begin_transaction**を使用してトランザクションを開始します。  
+> [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は、既定で自動コミット モードになっています。 これは、すべてのクエリは、 **sqlsrv_begin_transaction** を使用してトランザクションを開始します。  
   
 > [!NOTE]  
-> 接続でトランザクションが既に開始された後で、 **sqlsrv_begin_transaction** rollback **sqlsrv_commit** または **sqlsrv_rollback**を呼び出すと、 **false** が返され、 *Already in Transaction* エラーがエラー コレクションに追加されます。  
+> 接続でトランザクションが既に開始された後で、 **sqlsrv_begin_transaction** rollback **sqlsrv_commit** または **sqlsrv_rollback** を呼び出すと、 **false** が返され、 *Already in Transaction* エラーがエラー コレクションに追加されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +47,7 @@ sqlsrv_begin_transaction( resource $conn)
 *$conn*: トランザクションが関連付けられている接続。  
   
 ## <a name="return-value"></a>戻り値  
-ブール値: トランザクションが正常に開始された場合は **true** です。 それ以外の場合は、 **false**です。  
+ブール値: トランザクションが正常に開始された場合は **true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="example"></a>例  
 次の例では、トランザクションの一部として 2 つのクエリを実行します。 両方のクエリが成功すると、トランザクションはコミットされます。 いずれか (または両方) のクエリが失敗した場合、トランザクションはロールバックされます。  

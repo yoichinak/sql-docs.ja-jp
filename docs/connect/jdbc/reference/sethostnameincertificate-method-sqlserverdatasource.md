@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - setHostNameInCertificate Method (SQLServerDataSource)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 886a32898b04cc8907a832d54a3051222e4d0fb7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37405a18c794b1fa7cbddf0fdaed92a4727f9907
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431824"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178969"
 ---
 # <a name="sethostnameincertificate-method-sqlserverdatasource"></a>setHostNameInCertificate メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setHostNameInCertificate(java.lang.String hostNameInCertificate)
 #### <a name="parameters"></a>パラメーター  
  *hostNameInCertificate*  
   
- ホスト名を含む**文字列**です。  
+ ホスト名を含む **文字列** です。  
   
 ## <a name="remarks"></a>解説  
  hostNameInCertificate 値は、通信レイヤーが TLS で暗号化されているときに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の TLS/SSL 証明書を検証するために使用します。 既定値は、null です。  

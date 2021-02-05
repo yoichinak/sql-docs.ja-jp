@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9619cbfa343af4dee48a459a9a69981e3ea7511f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d72c1356f075170913179ed8c2e06ea2d060e967
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431304"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193328"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>updateNCharacterStream (java.lang.String, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>パラメーター  
  *columnLabel*  
   
- 列ラベルを含む**文字列**です。  
+ 列ラベルを含む **文字列** です。  
   
  *reader*  
   

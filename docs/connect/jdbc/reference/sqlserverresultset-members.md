@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dd331cec7252fb0fd0b3099800837cf667fce336
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf8e9b71b638a3836ebefb71e3d574183372267e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458234"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180107"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -133,13 +133,13 @@ ms.locfileid: "88458234"
 |[updateLong](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)|指定された列を **long** 値で更新します。|  
 |[updateNCharacterStream](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)|指定された列を文字ストリームの値で更新します。|  
 |[updateNClob](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)|指定された列を指定されたオブジェクト値で更新します。|  
-|[updateNString](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)|指定された列を**文字列**の値で更新します。|  
+|[updateNString](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)|指定された列を **文字列** の値で更新します。|  
 |[updateNull](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)|指定された列を null 値で更新します。|  
 |[updateObject](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)|指定した列を **Object** 値で更新します。|  
 |[updateRef](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)|指定された列を java.sql.Ref 値で更新します。|  
 |[updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)|基になるデータベースを [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行に含まれる新しい内容で更新します。|  
 |[updateShort](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)|指定された列を **short** 値で更新します。|  
-|[updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)|指定された列を**文字列**の値で更新します。|  
+|[updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)|指定された列を **文字列** の値で更新します。|  
 |[updateSQLXML](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)|指定された列を **SQLXML** 値で更新します。|  
 |[updateTime](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)|指定された列を時刻の値で更新します。|  
 |[updateTimestamp](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)|指定された列をタイムスタンプ値で更新します。|  

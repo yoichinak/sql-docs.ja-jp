@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21edbf36ab5817f02bcf049654bc083d2cd7624a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6bc68d5ba10e98a439f94a979a32a9b1404193b6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450111"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181650"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ public void updateNString(java.lang.String columnLabel,
 #### <a name="parameters"></a>パラメーター  
  *columnLabel*  
   
- 列ラベルを含む**文字列**です。  
+ 列ラベルを含む **文字列** です。  
   
  *nString*  
   
