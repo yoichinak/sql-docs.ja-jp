@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 600ab1bce27f4fa53c2e25ae7562a870f2ccf6a6
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196440"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536357"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
 
@@ -81,7 +81,7 @@ ms.locfileid: "92196440"
  ディスクへのページングが開始される大きさにまでバッファー サイズを増やさないでください。 ディスクへのページングが行われると、バッファー サイズが最適化されていない場合よりもパフォーマンスが低下します。 ページングが行われているかどうかを判断するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) のパフォーマンス スナップインで "Buffers spooled" パフォーマンス カウンターを監視します。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>並列実行用のパッケージの構成  
- 並列実行を行うと、複数の物理プロセッサまたは論理プロセッサが搭載されているコンピューターのパフォーマンスが向上します。 パッケージ内で各種タスクの並列実行をサポートするには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で と **MaxConcurrentExecutables** と **EngineThreads**の 2 つのプロパティを使用します。  
+ 並列実行を行うと、複数の物理プロセッサまたは論理プロセッサが搭載されているコンピューターのパフォーマンスが向上します。 パッケージ内で各種タスクの並列実行をサポートするには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で と **MaxConcurrentExecutables** と **EngineThreads** の 2 つのプロパティを使用します。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables プロパティ  
  **MaxConcurrentExecutables** プロパティは、パッケージ自体のプロパティです。 このプロパティによって、同時に実行できるタスクの数が定義されます。 既定値は -1 です。これは、物理プロセッサまたは論理プロセッサの数に 2 を加えた数を示します。  
@@ -115,7 +115,7 @@ ms.locfileid: "92196440"
   
  ソース データは、下流コンポーネントで使用される前に既に並べ替えられている場合があります。 このような状況は、SELECT クエリで ORDER BY 句を使用した場合、またはデータが並べ替え順でソースに挿入された場合に発生することがあります。 このようにソース データが事前に並べ替えられている場合、データが並べ替え済みである旨のヒントを示すことで、並べ替え変換の使用を回避し、特定の下流変換の並べ替え要件を満たすことができます (たとえば、マージ変換およびマージ結合変換では、並べ替え済みの入力が必要です)。データが並べ替え済みである旨のヒントを示すには、次の作業を行う必要があります。  
   
--   上流データ フロー コンポーネントの出力の **IsSorted** プロパティを **True**に設定します。  
+-   上流データ フロー コンポーネントの出力の **IsSorted** プロパティを **True** に設定します。  
   
 -   データを並べ替える並べ替えキー列を指定します。  
   
@@ -179,15 +179,15 @@ ms.locfileid: "92196440"
   
 -   technet.microsoft.com の技術記事、「 [Integration Services のパフォーマンス チューニング技法](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10))」。  
   
--   _BI と分析に関する SQLCAT のガイド_の技術資料「[同期変換を複数タスクに分割してパイプラインのスループットを向上](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)」
+-   _BI と分析に関する SQLCAT のガイド_ の技術資料「[同期変換を複数タスクに分割してパイプラインのスループットを向上](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)」
   
 -   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))  
   
 -   msdn.microsoft.com の技術記事「 [SSIS なら 1 TB を 30 分で読み込むことが可能](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100))」  
   
--   sqlcat.com の技術記事「 [SQL Server Integration Services のベスト プラクティス ベスト 10](https://go.microsoft.com/fwlink/?LinkId=220818)」  
+-   sqlcat.com の技術記事「 [SQL Server Integration Services のベスト プラクティス ベスト 10](https://techcommunity.microsoft.com/t5/datacat/top-10-sql-server-integration-services-best-practices/ba-p/305163)」  
   
--   sqlcat.com の技術記事とサンプル「[SSIS の "Balanced Data Distributor"](https://go.microsoft.com/fwlink/?LinkId=220822)」  
+-   sqlcat.com の技術記事とサンプル「[SSIS の "Balanced Data Distributor"](https://www.sqlshack.com/ssis-balanced-data-distributor-overview/)」  
   
 -   blogs.msdn.com のブログ投稿「 [SSIS パッケージのパフォーマンスに関する問題のトラブルシューティング](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553)」  
   
@@ -201,7 +201,7 @@ ms.locfileid: "92196440"
   
 -   channel9.msdn.com のビデオ「 [Microsoft SQL Server Integration Services パフォーマンス デザイン パターン](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)」  
   
--   sqlcat.com のプレゼンテーション「 [Microsoft IT による SQL Server 2008 SSIS データ フロー エンジンの機能強化の利用方法](https://go.microsoft.com/fwlink/?LinkId=217660)」  
+-   sqlcat.com のプレゼンテーション「 [Microsoft IT による SQL Server 2008 SSIS データ フロー エンジンの機能強化の利用方法](https://channel9.msdn.com/Shows/TechNet+Radio/TechNet-Radio-How-Microsoft-IT-Leverages-SQL-Server-2008-SSIS-Dataflow-Engine-Enhancements)」  
   
 -   technet.microsoft.com のビデオ「 [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10))」  
   

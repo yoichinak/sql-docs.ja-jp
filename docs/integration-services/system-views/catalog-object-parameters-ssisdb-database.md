@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 856676c6ad5330e6039711d7a391bdd264a2b062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 423f96cba79018230b7121bf25f93337a48a2fd6
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422046"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835188"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (SSISDB データベース)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのすべてのパッケージおよびプロジェクトのパラメーターを表示します。  
   
@@ -43,8 +40,8 @@ ms.locfileid: "88422046"
 |value_type|**char(1)**|パラメーター値の型を示します。 このフィールドには、parameter_value がリテラル値の場合は `V`、環境変数を参照することによって値が割り当てられる場合は `R` が表示されます。|  
 |value_set|**bit**|値が `1` の場合、パラメーター値は割り当てられています。 値が `0` の場合、パラメーター値は割り当てられていません。|  
 |referenced_variable_name|**nvarchar(128)**|パラメーターの値が割り当てられる環境変数の名前。 既定値は **NULL** です。|  
-|validation_status|**char(1)**|単に情報を示すためだけに特定されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では使用されません。|  
-|last_validation_time|**datetimeoffset(7)**|単に情報を示すためだけに特定されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では使用されません。|  
+|validation_status|**char(1)**|単に情報を示すためだけに特定されます。 [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] では使用されません。|  
+|last_validation_time|**datetimeoffset(7)**|単に情報を示すためだけに特定されます。 [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] では使用されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  このビュー内の行を表示するには、次のアクセス権限のいずれかが必要です。  

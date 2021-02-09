@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 462c48c7d0ade07c62a154927c352962f454cc46
-ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
+ms.openlocfilehash: 6b68cb2b2ff3712502ef4e0862fe71ad78705d7c
+ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97103301"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99623762"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux-using-adutil"></a>チュートリアル:adutil を使用して SQL Server on Linux で Active Directory 認証を構成する
 
@@ -85,6 +85,7 @@ Linux ホスト マシンで、次のコマンドを使用して adutil-preview 
 1. 次のコマンドを実行して adutil-preview をインストールします。 `ACCEPT_EULA=Y` により、adutil のプレビュー EULA が受け入れられます。 EULA はパス "/usr/share/adutil/" に格納されます。
 
     ```bash
+    sudo apt-get update
     sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
     ```
 

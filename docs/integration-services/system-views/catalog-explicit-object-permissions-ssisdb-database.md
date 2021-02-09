@@ -11,21 +11,18 @@ ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7052caddf7087239e734d6474c4d829f13e9948
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 63db338fa18e3efbf0739acca2c1b97ad388e985
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422086"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835211"
 ---
 # <a name="catalogexplicit_object_permissions-ssisdb-database"></a>catalog.explicit_object_permissions (SSISDB データベース)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
-  ユーザーに明示的に割り当てられた権限のみを表示します。  
+ ユーザーに明示的に割り当てられた権限のみを表示します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

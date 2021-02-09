@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5e2a52bcfa2e95aa364bbdf3079e2f8666f0e1e0
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646062"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978794"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
 
@@ -46,7 +46,7 @@ XML ドキュメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 詳細については、次の各トピックを参照してください。
 - [bcp ユーティリティを使用した一括データのインポートとエクスポート (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 - [BULK INSERT または OPENROWSET(BULK...) を使用した一括データのインポート (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-- [XML 一括ロード コンポーネントを使用して XML を SQL Server にインポートする方法](https://support.microsoft.com/kb/316005)
+- [XML 一括ロード コンポーネントを使用して XML を SQL Server にインポートする方法](https://mskb.pkisolutions.com/kb/316005)
 - [XML スキーマ コレクション (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>例  

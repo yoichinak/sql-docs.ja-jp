@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 87ed2882d8276b3a92add3349b73bf38fe821dc9
+ms.sourcegitcommit: 10ae200635b9e8554e6bc6f658125e1a80d4d5ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462963"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589310"
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
 
@@ -84,7 +84,7 @@ geometry 型の円弧セグメントは、XY デカルト座標平面上に定�
 
 楕円体座標系でのポリゴンの内部は、"左手の法則" によって定義されています。geography のポリゴンのリングに沿って歩いていると想像する場合、点が一覧表示されている順序に従って、左側の領域がポリゴンの内部として扱われ、右側の領域がポリゴンの外部として扱われます。
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で互換性レベルが 100 以下である場合、 **geography** データ型には次の制約があります。
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で互換性レベルが 100 以下である場合、 **geography** データ型には次の制約があります。
 
 - 各 **geography** インスタンスが 1 つの半球に収まる必要があります。 半球よりも大きい空間オブジェクトを格納することはできません。
 
@@ -92,7 +92,7 @@ geometry 型の円弧セグメントは、XY デカルト座標平面上に定�
 
 - 2 つの **geography** インスタンスの入力を必要とする **geography** データ型のメソッド (STIntersection()、STUnion()、STDifference()、STSymDifference() など) では、メソッドの結果が 1 つの半球に収まらない場合に null が返されます。 STBuffer() でも、出力が 1 つの半球に収まらない場合に null が返されます。  
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の **FullGlobe** は、球全体を覆う特殊な多角形です。 領域はありますが、境界や頂点はありません。  
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]の **FullGlobe** は、球全体を覆う特殊な多角形です。 領域はありますが、境界や頂点はありません。  
 
 ### <a name="outer-and-inner-rings-in-geography-data-type"></a>`geography` データ型の外部および内部のリング
 

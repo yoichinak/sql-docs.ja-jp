@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+ms.openlocfilehash: 398d8d1aaf626fdc65674ee1d5eb959951dcd5e2
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674204"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552618"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux のエディションとサポートされる機能
 
@@ -97,7 +97,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 |-------------|----------------|--------------|---------|------------------------|  
 |ログ配布|はい|はい|はい|いいえ|  
 |バックアップ圧縮|はい|はい|いいえ|いいえ| 
-|データベース スナップショット|はい|いいえ|いいえ|いいえ|
+|データベース スナップショット|はい|はい|いいえ|いいえ|
 |Always On フェールオーバー クラスター インスタンス<sup>1</sup>|はい|はい|いいえ|いいえ| 
 |Always On 可用性グループ<sup>2</sup>|はい|いいえ|いいえ|いいえ|
 |基本的な可用性グループ <sup>3</sup>|いいえ|はい|いいえ|いいえ|
