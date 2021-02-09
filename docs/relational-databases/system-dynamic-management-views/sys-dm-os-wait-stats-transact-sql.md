@@ -1,7 +1,7 @@
 ---
 description: sys.dm_os_wait_stats (Transact-SQL)
 title: sys.dm_os_wait_stats (Transact-SQL)
-ms.custom: ''
+ms.custom: contperf-fy21q3
 ms.date: 01/27/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4ee480fe158c431f0f9b477bfab2ea4c17aa36c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e2620a3e5df464e964f0bc911897481093aca245
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99145074"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835334"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ GO
   
  次の表は、タスクで発生する待機の種類の一覧です。  
 
-|type |説明| 
+|type |Description| 
 |-------------------------- |--------------------------| 
 |ABR |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| | 
 |AM_INDBUILD_ALLOCATION |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
@@ -165,8 +165,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |COUNT/YMGR |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |CREATE_DATINISERVICE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
-|CXCONSUMER <a name="cxconsumer"></a>|コンシューマースレッド (親) がプロデューサースレッドによる行の送信を待機しているときに、並列クエリプランで発生します。 CXCONSUMER の待機は、そのプロデューサースレッドから行を使い果たした Exchange 反復子によって発生します。 これは、並列クエリの実行の通常の部分です。 <br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2、CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] )、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]|
-|CXPACKET <a name="cxpacket"></a>|クエリプロセッサ [交換反復子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)の同期を待機しているとき、および行を生成および使用しているときに、並列クエリプランで発生します。 待機時間が長く、クエリのチューニング (インデックスの追加など) によって減らすことができない場合は、並列処理のコストしきい値を調整するか、並列処理の最大限度 (MaxDOP) を下げることを検討してください。 <br /><br /> **注:**[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]SP2 と CU3 以降では [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 、CXPACKET は、Exchange 反復子の同期と行の生成を待機していることのみを指します。 行を消費するスレッドは、CXCONSUMER の待機の種類で個別に追跡されます。 コンシューマースレッドが遅すぎると、交換反復子バッファーがいっぱいになり、CXPACKET 待機が発生する可能性があります。 <br /><br /> **注:** とでは [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 、CXPACKET は、行を生成するスレッドを待機することのみを参照します。 交換反復子の同期は、CXSYNC_PORT と CXSYNC_CONSUMER の待機の種類で個別に追跡されます。 行を消費するスレッドは、CXCONSUMER の待機の種類で個別に追跡されます。<br /> | 
+|CXCONSUMER <a name="cxconsumer"></a>|コンシューマースレッド (親) がプロデューサースレッドによる行の送信を待機しているときに、並列クエリプランで発生します。 CXCONSUMER の待機は、そのプロデューサースレッドから行を使い果たした Exchange 反復子によって発生します。 これは、並列クエリの実行の通常の部分です。 <br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2、CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] )、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]|
+|CXPACKET <a name="cxpacket"></a>|クエリプロセッサ [交換反復子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)の同期を待機しているとき、および行を生成および使用しているときに、並列クエリプランで発生します。 待機時間が長く、クエリのチューニング (インデックスの追加など) によって減らすことができない場合は、並列処理のコストしきい値を調整するか、並列処理の最大限度 (MaxDOP) を下げることを検討してください。 <br /><br /> **注:**[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]SP2 と CU3 以降では [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 、CXPACKET は、Exchange 反復子の同期と行の生成を待機していることのみを指します。 行を消費するスレッドは、CXCONSUMER の待機の種類で個別に追跡されます。 コンシューマースレッドが遅すぎると、交換反復子バッファーがいっぱいになり、CXPACKET 待機が発生する可能性があります。 <br /><br /> **注:** とでは [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 、CXPACKET は、行を生成するスレッドを待機することのみを参照します。 交換反復子の同期は、CXSYNC_PORT と CXSYNC_CONSUMER の待機の種類で個別に追跡されます。 行を消費するスレッドは、CXCONSUMER の待機の種類で個別に追跡されます。<br /> | 
 |CXSYNC_PORT|プロデューサーとコンシューマーのスレッド間で [交換反復子](../../relational-databases/showplan-logical-and-physical-operators-reference.md) ポートのオープン、終了、同期を待機しているときに、並列クエリプランで発生します。 たとえば、クエリプランに長い並べ替え操作が含まれている場合、CXSYNC_PORT の待機が長くなる可能性があります。これは、Exchange の反復子ポートを同期する前に並べ替えを完了する必要があるためです。 <br /><br /> **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]| 
 |CXSYNC_CONSUMER|すべてのコンシューマースレッド間で [交換反復子](../../relational-databases/showplan-logical-and-physical-operators-reference.md) 同期ポイントに到着するのを待機しているときに、並列クエリプランで発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]| 
 |CXROWSET_SYNC |範囲の並列スキャン中に発生します。| 
@@ -220,7 +220,7 @@ GO
 |EXECSYNC  |並列クエリの実行時、交換反復子に関係のない領域での、クエリ プロセッサによる同期中に発生します。 このような領域の例としては、ビットマップ、ラージ バイナリ オブジェクト (LOB)、スプール反復子などがあります。 LOB では、この待機状態が頻繁に使用されることがあります。| 
 |EXECUTION_PIPE_EVENT_INTERNAL |バッチ実行のプロデューサー部とコンシューマー部との間で同期しているときに発生します。これらの部は接続コンテキストを通じて送信されます。| 
 |EXTERNAL_RG_UPDATE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
-|EXTERNAL_SCRIPT_NETWORK_IO |内部使用のみ。 <br /><br /> **に適用さ** れます: を [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 通じて現在のです。| 
+|EXTERNAL_SCRIPT_NETWORK_IO |内部使用のみ。 <br /><br /> **に適用さ** れます: を [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 通じて現在のです。| 
 |EXTERNAL_SCRIPT_PREPARE_SERVICE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |EXTERNAL_SCRIPT_SHUTDOWN |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |EXTERNAL_WAIT_ON_LAUNCHER、 |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
@@ -259,7 +259,7 @@ GO
 |FILESTREAM_FILE_OBJECT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |FILESTREAM_WORKITEM_QUEUE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |FILETABLE_SHUTDOWN |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
-|FOREIGN_REDO |内部使用のみ。 <br /><br /> **に適用さ** れます: を [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 通じて現在のです。| 
+|FOREIGN_REDO |内部使用のみ。 <br /><br /> **に適用さ** れます: を [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 通じて現在のです。| 
 |FORWARDER_TRANSITION |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |FS_FC_RWLOCK |FILESTREAM ガベージ コレクターが次のいずれかを実行するために待機しているときに発生します。| 
 |FS_GARBAGE_COLLECTOR_SHUTDOWN |FILESTREAM ガベージ コレクターがクリーンアップ タスクの完了を待機しているときに発生します。| 
@@ -281,12 +281,12 @@ GO
 |FT_RESTART_CRAWL |一時的なエラーから復旧するために、正常と認識されている最後の時点からフルテキスト クロールを再開する必要があるときに発生します。 この待機が発生した場合、その設定を現在処理中のワーカー タスクは、現在のステップを完了するか終了することを許可されます。| 
 |FULLTEXT GATHERER |フルテキスト操作の同期中に発生します。| 
 |GDMA_GET_RESOURCE_OWNER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
-|GHOSTCLEANUP_UPDATE_STATS |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|GHOSTCLEANUP_UPDATE_STATS |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |GHOSTCLEANUPSYNCMGR |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
-|GLOBAL_QUERY_CANCEL |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|GLOBAL_QUERY_CANCEL |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |GLOBAL_QUERY_CLOSE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
-|GLOBAL_QUERY_CONSUMER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
-|GLOBAL_QUERY_PRODUCER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|GLOBAL_QUERY_CONSUMER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
+|GLOBAL_QUERY_PRODUCER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |GLOBAL_TRAN_CREATE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |GLOBAL_TRAN_UCS_SESSION |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |GUARDIAN |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
@@ -346,9 +346,9 @@ GO
 |HADR_TDS_LISTENER_SYNC_PROCESSING |可用性グループリスナーの開始または停止を必要とする Always On Transact-sql ステートメントの最後に使用されます。 開始/停止操作は非同期的に実行されるため、リスナーの状況が判明するまで、ユーザースレッドはこの待機の種類を使用してブロックします。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | Geo レプリケーションのセカンダリが、プライマリよりも低いコンピューティングサイズ (SLO) で構成されている場合に発生します。 プライマリデータベースは、セカンダリによるログの遅延消費によって制限されます。 これは、セカンダリデータベースのコンピューティング能力が、プライマリデータベースの変化率に対応しきれないことが原因で発生します。 <br /><br /> **適用対象**: Azure SQL Database| 
-|HADR_THROTTLE_LOG_RATE_LOG_SIZE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
-|HADR_THROTTLE_LOG_RATE_SEEDING |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
-|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|HADR_THROTTLE_LOG_RATE_LOG_SIZE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
+|HADR_THROTTLE_LOG_RATE_SEEDING |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
+|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |HADR_TIMER_TASK |タイマー タスク オブジェクトのロックを待機しています。またこれは、実行される作業の間の実際の待機に使用されます。 たとえば、10秒ごとに実行されるタスクの場合、1回の実行後に Always On 可用性グループはタスクの再スケジュールを10秒間待機し、待機はここに含めます。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_TRANSPORT_DBRLIST |トランスポート層のデータベース レプリカの一覧に対するアクセスを待機しています。 一覧に対するアクセスを許可するスピンロックで使用されます。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_TRANSPORT_FLOW_CONTROL |未応答の Always On メッセージの数が、フロー制御のしきい値を超えたときに待機しています。 これは可用性レプリカ間の処理です (データベース間ではありません)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
@@ -471,9 +471,9 @@ GO
 |MD_AGENT_YIELD |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |MD_LAZYCACHE_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |MEMORY_ALLOCATION_EXT |内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリプールまたはオペレーティングシステムのいずれかからメモリを割り当てているときに発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
-|MEMORY_GRANT_UPDATE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|MEMORY_GRANT_UPDATE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |METADATA_LAZYCACHE_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] のみ。 |  
-|MIGRATIONBUFFER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|MIGRATIONBUFFER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |その他 |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
 |その他 |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
 |MSQL_DQ |タスクが分散クエリ操作の終了を待機しているときに発生します。 これは、複数のアクティブな結果セット (MARS) アプリケーションにデッドロックの可能性があるかどうかを検出するために使用されます。 分散クエリ呼び出しが終了すると、待機は終了します。| 
@@ -733,12 +733,12 @@ GO
 |PWAIT_MD_RELATION_CACHE |テーブルまたはインデックスに関するメタデータの内部同期中に発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |PWAIT_MD_SERVER_CACHE |リンク サーバーに関するメタデータの内部同期中に発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |PWAIT_MD_UPGRADE_CONFIG |サーバー全体の構成に関するアップグレードの内部同期中に発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
-|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |PWAIT_PREEMPTIVE_AUDIT_ACCESS_WINDOWSLOG |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |PWAIT_QRY_BPMEMORY |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |PWAIT_REPLICA_ONLINE_INIT_MUTEX |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
-|PWAIT_SBS_FILE_OPERATION |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|PWAIT_SBS_FILE_OPERATION |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |PWAIT_XTP_FSSTORAGE_MAINTENANCE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |PWAIT_XTP_HOST_STORAGE_WAIT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |QDS_ASYNC_CHECK_CONSISTENCY_TASK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
@@ -752,7 +752,7 @@ GO
 |QDS_DB_DISK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |QDS_DYN_VECTOR |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |QDS_EXCLUSIVE_ACCESS |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
-|QDS_HOST_INIT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|QDS_HOST_INIT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |QDS_LOADDB |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |QDS_PERSIST_TASK_MAIN_LOOP_SLEEP |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |QDS_QDS_CAPTURE_INIT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
@@ -777,7 +777,7 @@ GO
 |QUERY_OPTIMIZER_PRINT_MUTEX |クエリ オプティマイザー診断の出力作成の同期中に発生します。 この待機の種類は、Microsoft 製品サポートの指示に基づいて診断設定が有効になっている場合にのみ発生します。| 
 |QUERY_TASK_ENQUEUE_MUTEX |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |QUERY_TRACEOUT |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
-|RBIO_WAIT_VLF |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|RBIO_WAIT_VLF |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |RBIO_RG_STORAGE |ページサーバーでの遅延ログの使用により、ハイパースケールデータベース計算ノードが制限されている場合に発生します。 <br /><br /> **適用対象**: Azure SQL Database ハイパースケール。|
 |RBIO_RG_DESTAGE |長期的なログストレージによる遅延ログの使用により、ハイパースケールデータベース計算ノードが制限されている場合に発生します。 <br /><br /> **適用対象**: Azure SQL Database ハイパースケール。|
 |RBIO_RG_REPLICA |読み取り可能なセカンダリレプリカノードによる遅延ログの使用により、ハイパースケールデータベース計算ノードが制限されている場合に発生します。 <br /><br /> **適用対象**: Azure SQL Database ハイパースケール。|
@@ -786,7 +786,7 @@ GO
 |RECOVERY_MGR_LOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |REDO_THREAD_PENDING_WORK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |REDO_THREAD_SYNC |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
-|REMOTE_BLOCK_IO |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|REMOTE_BLOCK_IO |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |REMOTE_DATA_ARCHIVE_MIGRATION_DMV |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_DMV |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
@@ -803,7 +803,7 @@ GO
 |RESMGR_THROTTLED |新しい要求が着信し、GROUP_MAX_REQUESTS 設定に基づいて絞り込まれたときに発生します。| 
 |RESOURCE_GOVERNOR_IDLE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |RESOURCE_QUEUE |さまざまな内部リソース キューの同期中に発生します。| 
-|RESOURCE_SEMAPHORE |他の同時実行クエリがあるため、クエリ メモリの要求がすぐに許可されない場合に発生します。 待機および待機時間が高い値を示している場合は、同時実行クエリの数が多すぎるか、またはメモリ要求の数が多すぎる可能性があります。| 
+|RESOURCE_SEMAPHORE |他の同時実行クエリが原因で、クエリの実行中にクエリメモリ要求がすぐに許可されない場合に発生します。 待機および待機時間が高い値を示している場合は、同時実行クエリの数が多すぎるか、またはメモリ要求の数が多すぎる可能性があります。 この型を過度に待機すると、"クエリ実行のためのメモリリソースを待機中にタイムアウトが発生しました。" という SQL [エラー 8645](../errors-events/mssqlserver-8645-database-engine-error.md)が発生する可能性があります。 クエリを再実行してください。 "<br /><br /> メモリ許可待機の詳細とトラブルシューティングのアイデアについては、こちらの[ブログ投稿](https://techcommunity.microsoft.com/t5/sql-server-support/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)を参照してください。| 
 |RESOURCE_SEMAPHORE_MUTEX |クエリが、スレッドを予約するための要求を待機しているときに発生します。 この待機は、クエリのコンパイルとメモリの要求許可を同期しているときにも発生します。| 
 |RESOURCE_SEMAPHORE_QUERY_COMPILE |コンパイルされる同時実行クエリの数が、スロットルの制限値に達したときに発生します。 待機時間と待機時間が長い場合は、過剰なコンパイル、再コンパイル、または、可能なプランがないことを示している可能性があります。| 
 |RESOURCE_SEMAPHORE_SMALL_QUERY |他の同時実行クエリがあるため、サイズの小さいクエリからのメモリ要求がすぐに許可されない場合に発生します。 待機時間は数秒以内である必要があります。要求したメモリが数秒以内に許可されないと、サーバーによって要求がメイン クエリのメモリ プールに転送されます。 待機が高い値を示している場合は、待機クエリによって主要なメモリ プールがブロックされているときに、サイズの小さい同時実行クエリの数が多すぎる可能性があります。 <br /><br /> **適用対象**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] のみ。 |  
@@ -816,12 +816,12 @@ GO
 |SATELLITE_CARGO |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |SATELLITE_SERVICE_SETUP |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |SATELLITE_TASK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
-|SBS_DISPATCH |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
-|SBS_RECEIVE_TRANSPORT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
-|SBS_TRANSPORT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|SBS_DISPATCH |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
+|SBS_RECEIVE_TRANSPORT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
+|SBS_TRANSPORT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |SCAN_CHAR_HASH_ARRAY_INITIALIZATION |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |SEC_DROP_TEMP_KEY |一時セキュリティ キーを削除しようとして失敗した後、再試行するまでの間に発生します。| 
-|SECURITY_CNG_PROVIDER_MUTEX |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|SECURITY_CNG_PROVIDER_MUTEX |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |SECURITY_CRYPTO_CONTEXT_MUTEX |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |SECURITY_DBE_STATE_MUTEX |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |SECURITY_KEYRING_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
@@ -856,7 +856,7 @@ GO
 |SNI_HTTP_WAITFOR_0_DISCON |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシャットダウン中、未完了の HTTP 接続が終了するのを待機している間に発生します。| 
 |SNI_LISTENER_ACCESS |NUMA (non-uniform memory access) ノードが状態の変化を更新するのを待機している間に発生します。 状態の変化へのアクセスはシリアル化されます。| 
 |SNI_TASK_COMPLETION |NUMA ノード状態の変化中にすべてのタスクが終了するのを待機しているときに発生します。| 
-|SNI_WRITE_ASYNC |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|SNI_WRITE_ASYNC |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |SOAP_READ |HTTP ネットワークの読み取り完了を待機しているときに発生します。| 
 |SOAP_WRITE |HTTP ネットワークの書き込み完了を待機しているときに発生します。| 
 |SOCKETDUPLICATEQUEUE_CLEANUP |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
@@ -907,7 +907,7 @@ GO
 |TDS_INIT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |TDS_PROXY_CONTAINER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |TEMPOBJ |一時オブジェクトの削除が同期されるときに発生します。 この待機が発生するのはまれで、タスクが temp テーブルに対して削除操作を行うための排他アクセスを要求した場合にのみ発生します。| 
-|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |TERMINATE_LISTENER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |THREADPOOL |タスクがワーカーの実行を待機しているときに発生します。 ワーカー数の最大設定値が低すぎるか、バッチ実行時間が長すぎるため、他のバッチ用にワーカー数が削減されている可能性があります。| 
 |TIMEPRIV_TIMEPERIOD |拡張イベント タイマーの内部初期化中に発生します。| 
@@ -935,16 +935,16 @@ GO
 |VIA_ACCEPT |起動中に仮想インターフェイス アダプター (VIA) プロバイダー接続が完了すると発生します。| 
 |VIEW_DEFINITION_MUTEX |キャッシュされたビュー定義へのアクセスの同期中に発生します。| 
 |WAIT_FOR_RESULTS |クエリ通知が行われるのを待機しているときに発生します。| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |クエリのコンパイルと実行を再開する前に、同期統計の更新が完了するのを待機しているときに発生します。<br /><br /> **適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |クエリのコンパイルと実行を再開する前に、同期統計の更新が完了するのを待機しているときに発生します。<br /><br /> **適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|WAIT_XLOGREAD_SIGNAL |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|WAIT_XLOGREAD_SIGNAL |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |WAIT_XTP_ASYNC_TX_COMPLETION |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |WAIT_XTP_CKPT_AGENT_WAKEUP |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |WAIT_XTP_CKPT_CLOSE |チェックポイントの完了を待機しているときに発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |WAIT_XTP_CKPT_ENABLED |チェックポイント処理が無効になっており、チェックポイント処理が有効になるのを待機しているときに発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |WAIT_XTP_CKPT_STATE_LOCK |チェックポイントの状態のチェックを同期するときに発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|WAIT_XTP_COMPILE_WAIT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|WAIT_XTP_COMPILE_WAIT |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |WAIT_XTP_GUEST |データベースメモリアロケーターがメモリ不足通知の受信を停止する必要がある場合に発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |WAIT_XTP_HOST_WAIT |待機がデータベースエンジンによってトリガーされ、ホストによって実装されると発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
@@ -952,7 +952,7 @@ GO
 |WAIT_XTP_OFFLINE_CKPT_NEW_LOG |オフラインチェックポイントが、新しいログレコードのスキャンを待機しているときに発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |WAIT_XTP_PROCEDURE_ENTRY |DROP PROCEDURE がその現在のすべての実行が完了するのを待機しているときに発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |WAIT_XTP_RECOVERY |データベース復旧が、メモリ最適化オブジェクトの復旧が完了するのを待機しているときに発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|WAIT_XTP_SERIAL_RECOVERY |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|WAIT_XTP_SERIAL_RECOVERY |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |WAIT_XTP_SWITCH_TO_INACTIVE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |WAIT_XTP_TASK_SHUTDOWN |In-Memory OLTP スレッドの完了を待機しているときに発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |WAIT_XTP_TRAN_DEPENDENCY |トランザクションの依存関係を待機しているときに発生します。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
@@ -1001,10 +1001,10 @@ GO
 |XE_TIMER_TASK_DONE |内部使用のみ。| 
 |XIO_CREDENTIAL_MGR_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |XIO_CREDENTIAL_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
-|XIO_EDS_MGR_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
-|XIO_EDS_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
-|XIO_IOSTATS_BLOBLIST_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
-|XIO_IOSTATS_FCBLIST_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降。| 
+|XIO_EDS_MGR_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
+|XIO_EDS_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
+|XIO_IOSTATS_BLOBLIST_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
+|XIO_IOSTATS_FCBLIST_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降。| 
 |XIO_LEASE_RENEW_MGR_RWLOCK |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |XTP_HOST_DB_COLLECTION |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |XTP_HOST_LOG_ACTIVITY |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
