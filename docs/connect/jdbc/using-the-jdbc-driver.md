@@ -2,7 +2,7 @@
 title: JDBC ドライバーの使用 | Microsoft Docs
 description: このセクションでは、Microsoft JDBC Driver for SQL Server を使用して SQL Server データベースへの単純な接続を作成する方法について簡単に説明します。
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e042e1604c9a59bc823272743ed675b682882c94
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 6b3550536a3512315d511efc831adc27b35ec974
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042555"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195256"
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC ドライバーの使用
 
@@ -27,6 +27,8 @@ ms.locfileid: "89042555"
 ## <a name="choosing-the-right-jar-file"></a>適切な JAR ファイルの選択
 
 Microsoft JDBC Driver には、次の Java Runtime Environment (JRE) 設定との通信で使用される複数の Jar が用意されています。
+
+Microsoft JDBC Driver 9.2 for SQL Server では、**mssql-jdbc-9.2.0.jre8.jar**、**mssql-jdbc-9.2.0.jre11.jar**、**mssql-jdbc-9.2.0.jre15.jar** の各クラス ライブラリ ファイルが提供されます。
 
 Microsoft JDBC Driver 8.4 for SQL Server では、**mssql-jdbc-8.4.1.jre8.jar**、**mssql-jdbc-8.4.1.jre11.jar**、**mssql-jdbc-8.4.1.jre14.jar** の各クラス ライブラリ ファイルが提供されます。
 
@@ -40,7 +42,7 @@ Microsoft JDBC Driver 7.0 for SQL Server には、**mssql-jdbc-7.0.0.jre8.jar** 
 
 Microsoft JDBC Driver 6.4 for SQL Server には、**mssql-jdbc-6.4.0.jre7.jar**、**mssql-jdbc-6.4.0.jre8.jar**、および **mssql-jdbc-6.4.0.jre9.jar** クラス ライブラリ ファイルが提供されます。
 
-Microsoft JDBC Driver 6.2 for SQL Server には、**mssql-jdbc-6.2.2.jre7.jar**および **mssql-jdbc-6.2.2.jre8.jar** クラス ライブラリ ファイルが提供されます。
+Microsoft JDBC Driver 6.2 for SQL Server には、**mssql-jdbc-6.2.2.jre7.jar** および **mssql-jdbc-6.2.2.jre8.jar** クラス ライブラリ ファイルが提供されます。
   
 Microsoft JDBC Driver 6.0 および 4.2 SQL Server には、**sqljdbc41.jar**、および **sqljdbc42.jar** クラス ライブラリ ファイルが提供されます。
   
@@ -58,9 +60,9 @@ JDBC Driver 6.2 を使用する場合は、**mssql-jdbc-6.2.2.jre7.jar** また�
 
 JDBC Driver 6.4 を使用する場合は、**mssql-jdbc-6.4.0.jre7.jar**、**mssql-jdbc-6.4.0.jre8.jar**、または **mssql-jdbc-6.4.0.jre9.jar** が含まれるようにクラスパスを設定します。
 
-JDBC Driver 7.0 を使用する場合は、**mssql-jdbc-7.0.0.jre8.jar** または **mssql-jdbc-7.0.0.jre10.ja**r を含むようにクラスパスを設定します。
+JDBC Driver 7.0 を使用する場合は、**mssql-jdbc-7.0.0.jre8.jar** または **mssql-jdbc-7.0.0.jre10.ja** r を含むようにクラスパスを設定します。
 
-JDBC Driver 7.2 を使用する場合は、**mssql-jdbc-7.2.2.jre8.jar** または **mssql-jdbc-7.2.2.jre11.jar**を含むようにクラスパスを設定します。
+JDBC Driver 7.2 を使用する場合は、**mssql-jdbc-7.2.2.jre8.jar** または **mssql-jdbc-7.2.2.jre11.jar** を含むようにクラスパスを設定します。
 
 JDBC Driver 7.4 を使用する場合は、**mssql-jdbc-7.4.1.jre8.jar**、**mssql-jdbc-7.4.1.jre11.jar**、または **mssql-jdbc-7.4.1.jre12.jar** が含まれるようにクラスパスを設定します。
 
@@ -68,7 +70,32 @@ JDBC Driver 8.2 を使用する場合は、**mssql-jdbc-8.2.2.jre8.jar**、**mss
 
 JDBC Driver 8.4 を使用する場合は、**mssql-jdbc-8.4.1.jre8.jar**、**mssql-jdbc-8.4.1.jre11.jar**、または **mssql-jdbc-8.4.1.jre14.jar** が含まれるようにクラスパスを設定します。
 
+JDBC Driver 9.2 を使用する場合は、**mssql-jdbc-9.2.0.jre8.jar**、**mssql-jdbc-9.2.0.jre11.jar**、または **mssql-jdbc-9.2.0.jre15.jar** が含まれるようにクラスパスを設定します。
+
 クラスパスに適切な Jar ファイルのエントリがない場合、アプリケーションでは `Class not found` という一般的な例外がスローされます。  
+
+### <a name="for-microsoft-jdbc-driver-92"></a>Microsoft JDBC Driver 9.2 の場合
+
+**mssql-jdbc-9.2.0.jre8.jar**、**mssql-jdbc-9.2.0.jre11.jar**、または **mssql-jdbc-9.2.0.jre15.jar** ファイルが次の場所にインストールされます。
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.0.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.0.jre15.jar
+```
+
+次のスニペットは、Windows アプリケーションで使用される CLASSPATH ステートメントの例です。
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 9.2 for SQL Server\sqljdbc_9.2\enu\mssql-jdbc-9.2.0.jre11.jar`
+
+次のスニペットは、Unix/Linux アプリケーションで使用される CLASSPATH ステートメントの例です。
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_9.2/enu/mssql-jdbc-9.2.0.jre11.jar`
+
+CLASSPATH ステートメントに [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が 1 つだけ含まれていることを確認します (**mssql-jdbc-9.2.0.jre8.jar**、**mssql-jdbc-9.2.0.jre11.jar**、または **mssql-jdbc-9.2.0.jre15.jar** など)。
+
 
 ### <a name="for-microsoft-jdbc-driver-84"></a>Microsoft JDBC Driver 8.4 の場合
 
@@ -260,7 +287,7 @@ CLASSPATH ステートメントに含まれている [!INCLUDE[jdbcNoVersion](..
   
 ### <a name="enterprise-java-beans"></a>Enterprise Java Beans  
 
-Enterprise Java Beans (EJB) は、EJB コンテナーで実行されます。 EJB コンテナーは、さまざまなベンダーから供給されています。 Java アプレットはブラウザー上で動作しますが、Web サーバーからダウンロードされます。 sqljdbc.jar、sqljdbc4.jar、または sqljdbc41.jar を Web サーバーのルートにコピーし、アプレットの [HTML archive] タブで JAR ファイル名を指定します。たとえば、`<applet ... archive=mssql-jdbc-***.jar>` のようになります。  
+Enterprise Java Beans (EJB) は、EJB コンテナーで実行されます。 EJB コンテナーは、さまざまなベンダーから供給されています。 Java アプレットはブラウザー上で動作しますが、Web サーバーからダウンロードされます。 sqljdbc.jar、sqljdbc4.jar、または sqljdbc41.jar を Web サーバーのルートにコピーし、アプレットの [HTML archive] タブで JAR ファイル名を指定します。たとえば、`<applet ... archive=mssql-jdbc-**_.jar>` のようになります。  
   
 ## <a name="making-a-simple-connection-to-a-database"></a>データベースへの単純な接続を行う
 
@@ -272,7 +299,7 @@ sqljdbc.jar クラス ライブラリを使用するアプリケーションで�
 
 ```java
 String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-   "databaseName=AdventureWorks;user=MyUserName;password=*****;";  
+   "databaseName=AdventureWorks;user=MyUserName;password=_****;";  
 Connection con = DriverManager.getConnection(connectionUrl);  
 ```
 

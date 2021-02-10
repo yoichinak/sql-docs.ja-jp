@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 44080250d95d21cecca16ff605ca22683e5b4440
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+ms.openlocfilehash: 36ed1466decd88686647302e65cf24746393d1f3
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900815"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495738"
 ---
 # <a name="create-a-jupyter-notebook-extension"></a>Jupyter Notebook 拡張機能を作成する
 
@@ -48,7 +48,7 @@ Azure Data Studio は Visual Studio Code と同じフレームワーク上に構
 
 - `$PATH` にインストールされ、利用できる [Node.js](https://nodejs.org)。 Node.js には、拡張機能ジェネレーターのインストールに使用される [npm](https://www.npmjs.com/) (Node.js パッケージ マネージャー) が含まれています。
 - 拡張機能をデバッグするための [Visual Studio Code](https://code.visualstudio.com)。
-- 確実に `azuredatastudio` をパスに含めます。 Windows の場合、setup.exe で **[Add to Path]\(パスに追加\)** オプションを選択します。 Mac または Linux の場合、**[PATH 内に 'azuredatastudio' コマンドをインストールします]** オプションを実行します。
+- 確実に `azuredatastudio` をパスに含めます。 Windows の場合、setup.exe で **[Add to Path]\(パスに追加\)** オプションを選択します。 Mac または Linux の場合、Azure Data Studio のコマンド パレットから **[PATH 内に 'azuredatastudio' コマンドをインストールします]** を実行します。
 
 ## <a name="install-the-extension-generator"></a>拡張機能ジェネレーターをインストールする
 

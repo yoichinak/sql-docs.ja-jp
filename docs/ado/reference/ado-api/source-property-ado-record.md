@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 232bebc8eabf96584a4513c3197f329ecf70fe87
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 850f3d493962db94671bb1f2e8ef65c1b2120f51
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170233"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051403"
 ---
 # <a name="source-property-ado-record"></a>Source プロパティ (ADO Record)
 [レコード](./record-object-ado.md)によって表されるデータソースまたはオブジェクトを示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "99170233"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **レコード** によって表されるエンティティを示す **バリアント** 値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Source** プロパティは、 **Record** オブジェクト [Open](./open-method-ado-record.md)メソッドの *source* 引数を返します。 絶対 URL または相対 URL 文字列を含めることができます。 絶対 URL を使用する場合は、 [ActiveConnection](./activeconnection-property-ado.md) プロパティを設定しなくても **レコード** オブジェクトを直接開くことができます。 この場合、暗黙的な **接続** オブジェクトが作成されます。  
   
  **ソース** プロパティには、既に開いている **レコードセット** への参照を含めることもできます。これにより、レコード **セット** の現在の行を表す **Record** オブジェクトが開きます。  

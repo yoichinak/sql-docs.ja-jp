@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1370f83c4214047038eadf4b84813f0b48c3b72
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4f84fe2157e9da38ad55a56334436a5d54128823
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164544"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051153"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy オブジェクト (ADO MD)
 [ディメンション](./dimension-object-ado-md.md)のメンバーを集計または "ロールアップ" できる1つの方法を表します。 ディメンションは、1つまたは複数の階層に沿って集計できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Hierarchy** オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
 -   [Name](./name-property-ado-md.md)プロパティと [UniqueName](./uniquename-property-ado-md.md)プロパティを使用して、**階層** を識別します。  

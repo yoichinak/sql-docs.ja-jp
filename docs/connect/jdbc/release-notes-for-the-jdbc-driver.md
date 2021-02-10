@@ -2,7 +2,7 @@
 title: JDBC ドライバーのリリース ノート
 description: この記事には、Microsoft JDBC Driver for SQL Server の各リリースが記載されています。 リリース バージョンごとに、変更された点とそれに関する説明が示されています。
 ms.custom: ''
-ms.date: 08/27/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,71 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 0ffc7d8e4090673f3fc8feb96aa3650d35361281
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005670"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234863"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server のリリース ノート
 
 この記事では、_Microsoft JDBC Driver for SQL Server_ のリリースを示します。 リリース バージョンごとに、変更された点とそれに関する説明が示されています。
+
+## <a name="92"></a><a id="92"></a> 9.2
+
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft JDBC Driver 9.2 for SQL Server (zip) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2153622)**  
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft JDBC Driver 9.2 for SQL Server (tar.gz) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2153521)**  
+
+バージョン番号: 9.2.0 リリース日: 2021 年 1 月 29 日
+
+自動的に検出されたもの以外の言語でドライバーをダウンロードする必要がある場合は、以下の直接リンクを使用できます。  
+zip ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
+tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
+
+### <a name="compliance"></a>コンプライアンス
+
+| コンプライアンスの変更 | 詳細 |
+| :---------------- | :------ |
+| JDBC Driver 9.2 用の最新の更新プログラムのダウンロード。 | &bull; &nbsp; [GitHub、9.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| JDBC API 仕様 4.2 への完全準拠。 | 9\.2 パッケージ内の jar は、Java のバージョンの互換性に従って名前付けされています。<br/><br/>たとえば、9.2 パッケージの mssql-jdbc-9.2.0.jre15.jar ファイルは、Java 15 で使用する必要があります。 |
+| Java Development Kit (JDK) バージョン 15.0、11.0 および 1.8 と互換性があります。 | Microsoft JDBC Driver 9.2 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 15.0 と互換性を持つようになりました。 |
+| &nbsp; | &nbsp; |
+
+### <a name="releases"></a>リリース
+
+バージョン番号: 9.2.0 リリース日: 2021 年 1 月 29 日
+
+### <a name="support-for-jdk-15"></a>JDK 15 のサポート
+
+Microsoft JDBC Driver 9.2 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 15.0 と互換性を持つようになりました。
+
+### <a name="added-support-for-azure-active-directory-interactive-authentication"></a>Azure Active Directory 対話型認証のサポートの追加
+| 認証の種類の追加 | 説明 |
+| :---------- | :------ |
+| Microsoft JDBC Driver 9.2 for SQL Server で、対話型認証を使用した Azure Key Vault への認証がサポートされるようになりました。 | 「[Azure Active Directory 認証を利用した接続](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)」を参照してください。 |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-azure-active-directory-service-principal-authentication"></a>Azure Active Directory サービス プリンシパル認証のサポートの追加
+| 認証の種類の追加 | 説明 |
+| :---------- | :------ |
+| Microsoft JDBC Driver 9.2 for SQL Server で、サービス プリンシパル ID のクライアント ID とシークレットを使用した Azure Key Vault への認証がサポートされるようになりました。 | 「[Azure Active Directory 認証を利用した接続](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)」を参照してください。 |
+| &nbsp; | &nbsp; |
+
+### <a name="updated-azure-key-vault-library-to-use-modern-azure-key-vault-library"></a>最新の Azure Key Vault ライブラリを使用するための Azure Key Vault ライブラリの更新
+| Azure Key Vault のライブラリの変更 | 詳細 |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 9.2 は、前の世代の Azure Key Vault ライブラリおよび ADAL ライブラリから、最新の Azure Key Vault および Azure ID の同等のものに移行されました。 | **依存関係の変更** Azure Active Directory 認証または Azure Key Vault を利用する場合は、アプリケーションの依存関係を必ず更新してください。 [Azure Key Vault プロバイダー](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-the-azure-key-vault-provider)または [Azure Active Directory 認証の操作](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-azure-active-directory-authentication)時の依存関係の要件を参照してください |
+| &nbsp; | &nbsp; |
+
+### <a name="enabled-usebulkcopyforbatchinsert-for-non-azure-synapse-analytics-servers"></a>Azure Synapse Analytics サーバー以外での useBulkCopyForBatchInsert の有効化
+| Azure Synapse Analytics サーバー以外での useBulkCopyForBatchInsert の変更 | 詳細 |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 9.2 では、Azure Synapse Analytics サーバー以外に対するバッチ挿入操作に一括コピー API が許可されるようになりました。 | 「[バッチ挿入操作に一括コピー API を使用する](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)」を参照してください。 |
+| &nbsp; | &nbsp; |
+
+
+## <a name="previous-releases"></a>以前のリリース
 
 ## <a name="84"></a><a id="84"></a> 8.4
 
@@ -90,11 +145,9 @@ Microsoft JDBC Driver 8.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 
 ### <a name="added-support-for-client-certificate-authentication-for-loopback-scenarios"></a>Loopback シナリオにおけるクライアント証明書認証のサポートを追加
 
-| クライアント証明書認証 | 説明 |
+| クライアント証明書認証 | 詳細 |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 8.4 for SQL Server には、Loopback シナリオ向けにクライアント証明書認証と呼ばれる新しい認証方法が追加されました。 | 「[Loopback シナリオにおけるクライアント証明書の認証](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)」を参照してください。 |
-
-## <a name="previous-releases"></a>以前のリリース
 
 ## <a name="82"></a><a id="82"></a> 8.2
 
@@ -290,7 +343,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 | OSGi の変更 | 詳細 |
 | :---------- | :------ |
 | **DataSourceFactory** の実装の追加。 | &bull; &nbsp; `org.osgi.service.jdbc.DataSourceFactory`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory` |
-| **アクティベーター**の実装の追加。 | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
+| **アクティベーター** の実装の追加。 | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
 | &nbsp; | &nbsp; |
 
 ### <a name="introduces-_sqlservererror_-apis"></a>_SQLServerError_ API を導入

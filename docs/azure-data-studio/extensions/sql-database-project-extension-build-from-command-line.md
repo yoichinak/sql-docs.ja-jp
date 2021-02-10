@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 08/07/2020
-ms.openlocfilehash: 060039496d5877951e5255fce5e6cac2321731c6
-ms.sourcegitcommit: 31f3405be08441471f441395f1d0f0017ebc0ad5
+ms.openlocfilehash: 1233b8319c4fbd893159ba88fbcd1c3401f05ce0
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94617930"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495720"
 ---
 # <a name="build-a-database-project-from-command-line"></a>コマンド ラインからデータベース プロジェクトをビルドする
 
-Azure Data Studio 用の SQL Database プロジェクト拡張機能では、[データベース プロジェクトをビルドする](sql-database-project-extension-build.md)ためのグラフィカル ユーザー インターフェイスが提供されていますが、Windows、macOS、Linux 環境では、コマンド ラインのビルド エクスペリエンスも使用できます。 この記事では、コマンド ラインで SQL プロジェクトをビルドして DACPAC を作成するために必要な前提条件と構文について説明します。
+Azure Data Studio 用の SQL Database プロジェクト拡張機能 (プレビュー) では、[データベース プロジェクトをビルドする](sql-database-project-extension-build.md)ためのグラフィカル ユーザー インターフェイスが提供されていますが、Windows、macOS、Linux 環境では、コマンド ラインのビルド エクスペリエンスも使用できます。 この記事では、コマンド ラインで SQL プロジェクトをビルドして DACPAC を作成するために必要な前提条件と構文について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 

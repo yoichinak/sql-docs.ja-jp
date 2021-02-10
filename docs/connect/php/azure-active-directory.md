@@ -1,7 +1,7 @@
 ---
 title: Azure Active Directory
 description: Microsoft Drivers for PHP for SQL Server と共に Azure Active Directory 認証を使用する方法について説明します。
-ms.date: 02/25/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f7abb90d32f93975c9a984670ca450dc791a46ae
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: ae3e734dee5f8ac46de2646cca9c37a7ed7748df
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004559"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076960"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を使用して接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,6 +33,7 @@ Azure AD を使用するには、次の表で示すように、**Authentication*
 ||`SqlPassword`|ユーザー名とパスワードを使用して、SQL Server インスタンス (Azure インスタンスである可能性があります) に対して直接認証を行います。 **UID** と **PWD** キーワードを使用して、ユーザー名とパスワードを接続文字列に渡す必要があります。 |
 ||`ActiveDirectoryPassword`|ユーザー名とパスワードを使用して、Azure Active Directory の ID で認証を行います。 **UID** と **PWD** キーワードを使用して、ユーザー名とパスワードを接続文字列に渡す必要があります。 |
 ||`ActiveDirectoryMsi`|システム割り当てのマネージド ID またはユーザー割り当てのマネージド ID を使用して、認証を行います (ODBC ドライバー バージョン 17.3.1.1 以降が必要です)。 概要とチュートリアルについては、「[Azure リソースのマネージド ID とは](/azure/active-directory/managed-identities-azure-resources/overview)」を参照してください。|
+||`ActiveDirectoryServicePrincipal`|サービス プリンシパル オブジェクトによる認証 (ODBC Driver バージョン 17.7 以降が必要)。 詳細と例については、「[Azure Active Directory のアプリケーションとサービス プリンシパルのオブジェクト](/azure/active-directory/develop/app-objects-and-service-principals)」をご覧ください。|
 
 **Authentication** キーワードは、接続のセキュリティ設定に影響します。 それが接続文字列で設定されている場合、既定で **Encrypt** キーワードが true に設定されます。これは、クライアントが暗号化を要求することを意味します。 さらに、**TrustServerCertificate** が true に設定されていない限り (既定では **false**)、暗号化の設定に関係なくサーバー証明書が検証されます。 この機能は、接続文字列で暗号化が明示的に要求されている場合にのみサーバー証明書が検証される、セキュリティが劣る古いログイン方法とは異なります。
 
@@ -233,6 +234,63 @@ try {
 }
 ?>
 ```
+
+## <a name="example---connect-using-service-principal-objects-in-azure-active-directory"></a>例 - Azure Active Directory のサービス プリンシパル オブジェクトを利用して接続する
+
+サービス プリンシパル オブジェクトを使用して認証するには、対応する[アプリケーション クライアント ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) と[クライアント シークレット](/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret)が必要です。
+
+
+### <a name="sqlsrv-driver"></a>SQLSRV ドライバー
+
+```php
+<?php
+
+$adServer = 'myazureserver.database.windows.net';
+$adDatabase = 'myazuredatabase';
+$adSPClientId = 'myAppClientId';
+$adSPClientSecret = 'myClientSecret';
+
+$conn = false;
+$connectionInfo = array("Database"=>$adDatabase, 
+                        "Authentication"=>"ActiveDirectoryServicePrincipal",
+                        "UID"=>$adSPClientId,
+                        "PWD"=>$adSPClientSecret);
+
+$conn = sqlsrv_connect($adServer, $connectionInfo);
+if ($conn === false) {
+    echo "Could not connect using Azure AD Service Principal." . PHP_EOL;
+    print_r(sqlsrv_errors());
+}
+
+sqlsrv_close($conn);
+
+?>
+```
+
+### <a name="pdo_sqlsrv-driver"></a>PDO_SQLSRV ドライバー
+
+```php
+<?php
+
+$adServer = 'myazureserver.database.windows.net';
+$adDatabase = 'myazuredatabase';
+$adSPClientId = 'myAppClientId';
+$adSPClientSecret = 'myClientSecret';
+
+$conn = false;
+try {
+    $connectionInfo = "Database = $adDatabase; Authentication = ActiveDirectoryServicePrincipal;";
+    $conn = new PDO("sqlsrv:server = $adServer; $connectionInfo", $adSPClientId, $adSPClientSecret);
+} catch (PDOException $e) {
+    echo "Could not connect using Azure AD Service Principal.\n";
+    print_r($e->getMessage());
+    echo PHP_EOL;
+}
+
+unset($conn);
+?>
+```
+
 
 ## <a name="see-also"></a>参照
 [ODBC ドライバーでの Azure Active Directory の使用](../odbc/using-azure-active-directory.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55a55d39117f2367b1b13c1a25b3785fe2d9cacc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5a58781196393471255f2cb00eddd153373e0cd0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170309"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051493"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 [OpenSchema](./openschema-method.md)メソッドによって取得されるスキーマ **レコードセット** の種類を指定します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  各 ADO 定数に対して返される関数と列に関する追加情報については、 [「付録 B:](/previous-versions/windows/desktop/ms712921(v=vs.85)) OLE DB プログラマーリファレンスのスキーマ行セット」のトピックを参照してください。 各トピックの名前は、次の表の説明セクションにかっこで囲まれています。  
   
  ADO MD 定数ごとに返される関数と列に関する追加情報については、オンライン分析処理 (OLAP) のドキュメントの OLE DB の「 [Olap オブジェクトおよびスキーマ行セットの OLE DB](/previous-versions/windows/desktop/ms723056(v=vs.85)) 」のトピックを参照してください。 各トピックの名前は、次の表の説明列にかっこで囲まれています。  

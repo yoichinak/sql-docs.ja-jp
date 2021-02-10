@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: 8555a183dc1f888e6ae80b78999b5fc234b431cf
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: ef49071f97d255d98f8086b9ff329c77d7b4afad
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594408"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983665"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -23,13 +23,13 @@ ms.locfileid: "98594408"
   
 - [バージョン](#version):SqlPackage アプリケーションのビルド番号が返されます。  バージョン 18.6 で追加されました。
 
-- [Extract](sqlpackage-extract.md): ライブ SQL Server または Azure SQL Database からデータベース スナップショット (.dacpac) ファイルを作成します。  
+- [Extract](sqlpackage-extract.md): 接続されている SQL データベースから、スキーマまたはスキーマとユーザー データを含め、データ層アプリケーション (.dacpac) ファイルを作成します。  
   
 - [発行](sqlpackage-publish.md):ソース .dacpac ファイルのスキーマに合わせてデータベース スキーマの増分更新を行います。 データベースがサーバーに存在しない場合は、公開操作によって作成されます。 存在する場合は、既存のデータベースが更新されます。  
   
-- [Export](sqlpackage-export.md):SQL Server または Azure SQL Database のライブ データベース (データベース スキーマとユーザー データを含む) を BACPAC パッケージ (.bacpac ファイル) にエクスポートします。  
+- [Export](sqlpackage-export.md):接続されている SQL データベースを、データベース スキーマとユーザー データを含め、BACPAC ファイル (.bacpac) にエクスポートします。  
   
-- [Import](sqlpackage-import.md):BACPAC パッケージのスキーマとテーブル データを、SQL Server または Azure SQL Database インスタンス内の新しいユーザー データベースにインポートします。  
+- [Import](sqlpackage-import.md):BACPAC ファイルから新しいユーザー データベースにスキーマとテーブル データをインポートします。  
   
 - [DeployReport](sqlpackage-deploy-drift-report.md): 公開操作によって行われる変更の XML レポートを作成します。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb5652e61cb798f4e8710c5fc22da151d1a972d8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f39af5f61e010a60a10aeb47788e862dd7b16064
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166643"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051593"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command プロパティ - 動的 (ADO)
 [一意のテーブル](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動的プロパティに指定されたテーブル内のデータを更新するために再[同期](./resync-method.md)メソッドによって発行される、ユーザーが指定したコマンド文字列を指定します。  
@@ -27,7 +27,7 @@ ms.locfileid: "99166643"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  コマンド文字列である **文字列** 値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [レコードセット](./recordset-object-ado.md)オブジェクトは、複数のベーステーブルに対して実行される結合操作の結果です。 影響を受ける行は、 [Resync](./resync-method.md)メソッドの反映された *レコード* のパラメーターによって異なります。 [一意のテーブル](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)と再 **同期コマンド** のプロパティが設定されていない場合は、標準の再 **同期** メソッドが実行されます。  
   
  再 **同期コマンド** プロパティのコマンド文字列は、更新対象の行を一意に識別するパラメーター化されたコマンドまたはストアドプロシージャで、更新する行と同じ数と順序の列を含む単一の行を返します。 コマンド文字列には、 **一意テーブル** の主キー列ごとのパラメーターが含まれています。それ以外の場合は、実行時エラーが返されます。 パラメーターは、更新する行の主キーの値で自動的に入力されます。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61d34ef2afa96babbb194d4f52a560239f033154
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e2a9cfdd30460b790527c6c8a8eb5bcd7d05b7bf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164408"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050853"
 ---
 # <a name="state-property-ado-md"></a>State プロパティ (ADO MD)
 セルセットの現在の状態を示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "99164408"
 ## <a name="return-values"></a>戻り値  
  [セルセット](./cellset-object-ado-md.md)オブジェクトの現在の条件を示す **長** 整数を返し、読み取り専用です。 有効な値は次のとおりです: **adStateClosed** (0) と **adstateopen** (1)。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [ObjectStateEnum](../ado-api/objectstateenum.md)定数名を使用するには、プロジェクトで ADO タイプライブラリが参照されている必要があります。 詳細については、「 [USING ADO with ADO MD](../../guide/multidimensional/using-ado-with-ado-md.md) 」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  

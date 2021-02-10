@@ -2,7 +2,7 @@
 title: Microsoft SQL Server 用 Drivers for PHP をダウンロードする
 description: SQL Server や Azure SQL Database に接続する PHP アプリケーションを開発するには、Microsoft Drivers for PHP for SQL Server をダウンロードします。
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,30 +10,30 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24dfef1b33b2a61c0d82c07ce6306e0b0449b8f3
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: bc1cc9339fa0f5a53f8781bc0afecc0fd614e0dd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680767"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198338"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP をダウンロードする
 
-Microsoft Drivers for PHP for SQL Server を使用すると、PHP アプリケーション用に SQL Server を統合することができます。 このドライバーは、PHP スクリプト内から SQL Server データの読み取りと書き込みを可能にする PHP 拡張機能であり、 Azure SQL Database 内のデータおよび SQL Server 2005 以降のすべてのエディション (Express Edition を含む) 内のデータにアクセスするためのインターフェイスを備えています。 このドライバーは、PHP ストリームなどの PHP 機能を使用して、ラージ オブジェクトの読み取りと書き込みを行います。
+Microsoft Drivers for PHP for SQL Server を使用すると、PHP アプリケーション用に SQL Server を統合することができます。 このドライバーは、PHP スクリプト内から SQL Server データの読み取りと書き込みを可能にする PHP 拡張機能であり、 Azure SQL Database 内のデータおよび SQL Server 2012 以降のすべてのエディション (Express Edition を含む) 内のデータにアクセスするためのインターフェイスを備えています。 このドライバーは、PHP ストリームなどの PHP 機能を使用して、ラージ オブジェクトの読み取りと書き込みを行います。
 
 Linux と macOS では、PECL を使用して PHP 用のドライバーを簡単にダウンロードしてインストールできます。 詳細については、[Linux および macOS のインストール チュートリアル](installation-tutorial-linux-mac.md)に関する記事を参照してください。 Linux および macOS で PHP 用のドライバーを手動でダウンロードしてインストールする必要がある場合は、GitHub リリース タグにこれらのプラットフォーム用のパッケージがあります。
 
 ## <a name="download"></a>ダウンロード
 
-Microsoft Drivers 5.8 for PHP for SQL Server は、最新の一般提供 (GA) バージョンです。
+Microsoft Drivers 5.9 for PHP for SQL Server は、最新の一般提供 (GA) バージョンです。
 
-**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft Drivers for PHP for SQL Server (Windows) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2120362)**  
-[GitHub リリース タグ v5.8.0 (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft Drivers for PHP for SQL Server (Windows) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2152937)**  
+[GitHub リリース タグ v5.9.0 (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
 
 ### <a name="version-information"></a>バージョン情報
 
-- リリース番号:5.8.0
-- リリース日:2019 年 1 月 31 日
+- リリース番号:5.9.0
+- リリース日:2021 年 1 月 29 日
 
 フィードバックがある場合、Microsoft Drivers for PHP for SQL Server チームに連絡する最善の方法は、[GitHub リポジトリ](https://github.com/Microsoft/msphpsql/issues)で問題を報告することです。
 

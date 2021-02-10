@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01c9a494376ebe2215d074bc9cd8ebac438eb677
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 291bd48eb9a1d5cc31bbff6526591220f2f09fe2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169784"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051113"
 ---
 # <a name="levels-collection-ado-md"></a>Levels コレクション (ADO MD)
 階層を構成する [レベル](./level-object-ado-md.md) オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **レベル** は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用すると、次の操作を実行できます。  
   
 -   [Count](../ado-api/count-property-ado.md)プロパティを使用して、コレクション内のオブジェクトの数を取得します。  

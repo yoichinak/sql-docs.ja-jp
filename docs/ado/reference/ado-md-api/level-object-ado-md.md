@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ebbebb2150cbe9c03e51ac296c39c362a6670e1d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 501a7e3eda723579a63b39cf7fd09c9a39216604
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169811"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051143"
 ---
 # <a name="level-object-ado-md"></a>Level オブジェクト (ADO MD)
 にはメンバーのセットが含まれており、各メンバーは階層内で同じランクを持ちます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Level** オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
 -   [Name](./name-property-ado-md.md)プロパティと [UniqueName](./uniquename-property-ado-md.md)プロパティを使用して、**レベル** を識別します。  

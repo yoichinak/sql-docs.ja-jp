@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP のリリース ノート
 description: このページでは、Microsoft Drivers for PHP for SQL Server の各バージョンで変更された内容について説明します。
 ms.custom: ''
-ms.date: 09/11/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be2317f95adc1a94ee85805aecfaed37d05e875a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 2d62068af3e6ec4a8f2711a5c11ab1f01388be8e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005725"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076304"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のリリース ノート
 
@@ -39,6 +39,36 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## <a name="59"></a>5.9
+
+![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=?????)
+[GitHub リリース タグ (こちらから Linux と macOS のパッケージを入手できます)](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
+
+### <a name="version-information"></a>バージョン情報
+
+- リリース番号:5.9.0<sup>1</sup>
+- リリース日:2021 年 1 月 29 日
+
+### <a name="whats-new-in-59"></a>5\.9 の新機能
+
+| [新しい項目] | 詳細 |
+| :------- | :------ |
+| PHP 8.0 のサポートが追加されました。 | &nbsp; |
+| PHP 7.2 のサポートを終了しました。 | &nbsp; |
+| すべてのプラットフォーム上で Microsoft ODBC Driver 17.7 のサポートが追加されました。 | &nbsp; |
+| macOS Big Sur、Ubuntu 20.04、Ubuntu 20.10 および Alpine 3.12 のサポートが追加されました。 | ODBC Driver 17.5 以降が必要になるものもあります。 |
+| macOS High Sierra、Debian 8、および Ubuntu 19.10 のサポートを終了しました。 | &nbsp; |
+| GB18030 ロケールのサポート。 | &nbsp; |
+| 追加の odbc メッセージ (使用可能な場合) を含めるために PDO errorinfo が拡張されました。 | &nbsp; |
+| 順位情報を使用したデータ分類のサポート。 | SQL Server 2019 および ODBC Driver 17.4.2 以降が必要になります。 |
+| Azure Active Directory サービス プリンシパル認証のサポートが追加されました。 | ODBC ドライバー 17.7 以降が必要です。 |
+| 入力または出力として 10 進数を処理するときのパフォーマンスが向上し、数値の不要な変換が行われないようになりました。 | &nbsp; |
+| クライアント バッファーを使用して数値をフェッチするときのパフォーマンスが向上しました。 | &nbsp; |
+| ロック タイムアウトを使用せずにクエリ タイムアウトを設定します。これにより、サーバーに必要以上に接続せずに済みます。 | &nbsp; |
+| &nbsp; | &nbsp; |
+
+<sup>1</sup> このリリースには ODBC Driver 17.4.2 以降が必要です。 これがないと、属性の設定に失敗したことに関する警告が示されます。 この警告は、古い ODBC ドライバーの使用時に抑制されることがあります。 SQLSRV を使用する場合は、「[方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](https://docs.microsoft.com/sql/connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver)」を参照してください。 PDO_SQLSRV を使用する場合、警告は既定で抑制されますが、ログに記録することはできます。 詳細については、「[アクティビティのログ記録](https://docs.microsoft.com/sql/connect/php/logging-activity)」を確認してください。
 
 ## <a name="581"></a>5.8.1
 

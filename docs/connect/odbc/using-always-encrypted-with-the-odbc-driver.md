@@ -2,19 +2,19 @@
 title: ODBC ドライバーで Always Encrypted を使用する
 description: Always Encrypted と Microsoft ODBC Driver for SQL Server を使用して ODBC アプリケーションを開発する方法について説明します。
 ms.custom: ''
-ms.date: 01/15/2021
+ms.date: 01/29/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: f066c8b1429a11b67cd6fc78fd93eaad1a6fc110
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: ab1b5b73ad1bd6ba02baa5ee31bb4be4b42bb63f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534711"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199012"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -74,7 +74,7 @@ Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定
 - `<attestation URL>` - 構成証明 URL (構成証明サービス エンドポイント) を指定します。 構成証明サービス管理者から、ご利用の環境用の構成証明 URL を取得する必要があります。
 
   - [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、「[HGS 構成証明 URL を確認して共有する](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)」を参照してください。
-  - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)」を参照してください。
+  - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation)」を参照してください。
 
 
 データベース接続に対してエンクレーブ計算を有効にする接続文字列の例:
@@ -279,6 +279,50 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 }
 ```
 
+#### <a name="moneysmallmoney-encryption"></a>Money/SmallMoney 暗号化
+
+ドライバー バージョン 17.7 より、MONEY と SMALLMONEY で Always Encrypted を使用できます。 ただし、追加の手順がいくつかあります。
+暗号化された MONEY 列または SMALLMONEY 列に挿入するとき、次の C 型のいずれかを使用します。
+```
+SQL_C_CHAR
+SQL_C_WCHAR
+SQL_C_SHORT
+SQL_C_LONG
+SQL_C_FLOAT
+SQL_C_DOUBLE
+SQL_C_BIT
+SQL_C_TINYINT
+SQL_C_SBIGINT
+SQL_C_NUMERIC
+```
+
+また、SQL 型の `SQL_NUMERIC` か `SQL_DOUBLE` を使用します (この型を使用する場合、有効桁数が失われる可能性があります)。
+
+##### <a name="binding-the-variable"></a>変数のバインド
+
+暗号化された列に MONEY/SMALLMONEY 変数をバインドするたびに、次の記述子フィールドを設定する必要があります。
+
+```
+// n is the descriptor record of the MONEY/SMALLMONEY parameter
+// the type is assumed to be SMALLMONEY if isSmallMoney is true and MONEY otherwise
+
+SQLHANDLE ipd = 0;
+SQLGetStmtAttr(hStmt, SQL_ATTR_IMP_PARAM_DESC, (SQLPOINTER)&ipd, SQL_IS_POINTER, NULL);
+SQLSetDescField(ipd, n, SQL_CA_SS_SERVER_TYPE, isSmallMoney ? (SQLPOINTER)SQL_SS_TYPE_SMALLMONEY :
+                                                              (SQLPOINTER)SQL_SS_TYPE_MONEY, SQL_IS_INTEGER);
+                                                              
+                                                              
+// If the variable is bound as SQL_NUMERIC, additional descriptor fields have to be set
+// var is SQL_NUMERIC_STRUCT containing the value to be inserted
+
+SQLHDESC   hdesc = NULL;
+SQLGetStmtAttr(hStmt, SQL_ATTR_APP_PARAM_DESC, &hdesc, 0, NULL);
+SQLSetDescField(hdesc, n, SQL_DESC_PRECISION, (SQLPOINTER)(var.precision), 0);
+SQLSetDescField(hdesc, n, SQL_DESC_SCALE, (SQLPOINTER)(var.scale), 0);
+SQLSetDescField(hdesc, n, SQL_DESC_DATA_PTR, &var, 0);
+```
+
+
 #### <a name="avoiding-common-problems-when-querying-encrypted-columns"></a>暗号化された列をクエリする際の一般的な問題を回避する
 
 ここでは、暗号化された列を ODBC アプリケーションからクエリする際のエラーの一般的なカテゴリと、その対処方法に関するいくつかのガイドラインを示します。
@@ -419,6 +463,8 @@ Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納�
 
 - マネージド ID (17.5.2+) - システムまたはユーザー割り当てについては、「[Azure リソースのマネージド ID](/azure/active-directory/managed-identities-azure-resources/)」を参照してください。
 
+- Azure Key Vault 対話型 (17.7+ Windows ドライバー) - この方法を使用すると、資格情報が Azure Active Directory とログイン ID によって認証されます。
+
 ドライバーが AKV に格納されている CMK を列暗号化に使用できるようにするには、次の接続文字列限定のキーワードを使用します。
 
 |[資格情報の種類]|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
@@ -426,6 +472,7 @@ Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納�
 |ユーザー名/パスワード| `KeyVaultPassword`|ユーザー プリンシパル名|Password|
 |クライアント ID/シークレット| `KeyVaultClientSecret`|クライアント ID|Secret|
 |マネージド ID|`KeyVaultManagedIdentity`|オブジェクト ID (省略可能、ユーザー割り当ての場合のみ)|(指定なし)|
+|AKV 対話型|`KeyVaultInteractive`|(未設定)|(未設定)|
 
 #### <a name="example-connection-strings"></a>接続文字列の例
 
@@ -455,10 +502,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
 ```
 
+**AKV 対話型**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultInteractive;UID=<userID>;PWD=<password>
+```
+
 CMK ストレージで AKV を使用する場合、ODBC アプリケーションに他の変更を加える必要はありません。
 
 > [!NOTE]
-> ドライバーには、それが信頼する AKV エンドポイントの一覧が含まれています。 ドライバー バージョン 17.5.2 以降では、この一覧を構成できます。ドライバー内の `AKVTrustedEndpoints` プロパティ、DSN の ODBCINST.INI または ODBC.INI レジストリ キー (Windows)、あるいは `odbcinst.ini` または `odbc.ini` ファイル セクション (Linux/macOS) を、セミコロン区切りの一覧に設定します。 DSN 内でそれを設定すると、ドライバー内の設定よりも優先されます。 値がセミコロンで始まる場合、既定のリストが拡張されます。それ以外の場合は、既定のリストが置き換えられます。 既定の一覧 (17.5 現在) は `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de` となります。
+> ドライバーには、それが信頼する AKV エンドポイントの一覧が含まれています。 ドライバー バージョン 17.5.2 以降では、この一覧を構成できます。ドライバー内の `AKVTrustedEndpoints` プロパティ、DSN の ODBCINST.INI または ODBC.INI レジストリ キー (Windows)、あるいは `odbcinst.ini` または `odbc.ini` ファイル セクション (Linux/macOS) を、セミコロン区切りの一覧に設定します。 DSN 内でそれを設定すると、ドライバー内の設定よりも優先されます。 値がセミコロンで始まる場合、既定のリストが拡張されます。それ以外の場合は、既定のリストが置き換えられます。 既定の一覧 (17.5 現在) は `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de` となります。 17.7 以降、一覧には `managedhsm.azure.net;managedhsm.azure.cn;managedhsm.usgovcloudapi.net;managedhsm.microsoftazure.de` も含まれます。
 
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Windows 証明書ストア プロバイダーの使用
@@ -642,14 +695,14 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 |名前|説明|  
 |----------|-----------------|  
 |`ColumnEncryption`|指定できる値は `Enabled`/`Disabled` です。<br>`Enabled` -- 接続の Always Encrypted 機能を有効にします。<br>`Disabled` -- 接続の Always Encrypted 機能を無効にします。<br>"*構成証明プロトコル*"、"*構成証明 URL*" -- (バージョン 17.4 以降) 指定した構成証明プロトコルと構成証明 URL を使用して、セキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にできます。 <br><br>既定では、 `Disabled`です。|
-|`KeyStoreAuthentication` | 有効な値: `KeyVaultPassword`、`KeyVaultClientSecret` |
+|`KeyStoreAuthentication` | 有効な値: `KeyVaultPassword`、`KeyVaultClientSecret`、`KeyVaultInteractive` |
 |`KeyStorePrincipalId` | `KeyStoreAuthentication` = `KeyVaultPassword` の場合は、この値を有効な Azure Active Directory ユーザー プリンシパル名に設定します。 <br>`KeyStoreAuthetication` = `KeyVaultClientSecret` の場合は、この値を有効な Azure Active Directory アプリケーション クライアント ID に設定します。 |
 |`KeyStoreSecret` | `KeyStoreAuthentication` = `KeyVaultPassword` の場合は、この値を対応するユーザー名のパスワードに設定します。 <br>`KeyStoreAuthentication` = `KeyVaultClientSecret` の場合は、この値を、有効な Azure Active Directory アプリケーション クライアント ID に関連付けられたアプリケーション シークレットに設定します。 |
 
 
 ### <a name="connection-attributes"></a>接続属性
 
-|名前|種類|説明|  
+|名前|Type|説明|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|接続前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Always Encrypted を無効にします <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Always Encrypted を有効にします<br> "*構成証明プロトコル*"、"*構成証明 URL*" 文字列へのポインター -- (バージョン 17.4 以降) セキュリティで保護されたエンクレーブと共に有効になります|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|接続後|[設定] CEKeystoreProvider の読み込みを試みます<br>[取得] CEKeystoreProvider 名を返します|

@@ -2,7 +2,7 @@
 title: ODBC Driver for SQL Server on Windows のリリース ノート
 description: このリリース ノート記事では、Windows 上の SQL Server 用 Microsoft ODBC ドライバーの各リリースにおける変更点について説明します。
 ms.custom: ''
-ms.date: 10/29/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: e587d8938cd5c63172f9e27622b680de62cb7cea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043807"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168007"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows のリリース ノート
 
@@ -43,6 +43,28 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="177"></a>17.7
+
+![ダウンロード](../../../ssms/media/download-icon.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2153471)  
+![ダウンロード](../../../ssms/media/download-icon.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2153469)  
+
+バージョン番号: 17.7.1.1  
+リリース日:2021 年 1 月 29 日
+
+自動的に検出されたもの以外の言語でインストーラーをダウンロードする必要がある場合は、以下の直接リンクを使用できます。  
+X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x40a)  
+X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x40a)
+
+| 追加された機能 | 詳細 |
+| :------- | :------ |
+| Azure Key Vault 対話型認証 | [Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページを参照してください。 |
+| サービス プリンシパル認証 | [DSN および接続文字列の属性とキーワード](../dsn-connection-string-attribute.md)に関する記事を参照してください。 |
+| 暗号化された money 列と smallmoney 列に挿入する機能 | [Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページを参照してください。 |
+| バグが修正されました。 | [バグの修正](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>以前のリリース
+
 ## <a name="176"></a>17.6
 
 ![ダウンロード](../../../ssms/media/download-icon.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2137027)  
@@ -61,8 +83,6 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 | 自動 BEGIN TRANSACTION が ROLLBACK または COMMIT の後に行われるかどうかを制御する SQL_COPT_SS_AUTOBEGINTXN 接続属性 | [DSN および接続文字列の属性とキーワード](../dsn-connection-string-attribute.md)に関する記事を参照してください。 |
 | バグが修正されました。 | [バグの修正](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>以前のリリース
 
 ## <a name="1752"></a>17.5.2
 

@@ -10,15 +10,15 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: 8b6293359306006d7ed6402bf630919a947c6e53
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: e1a70d9b69306e4394bc726fd58a48923bb2a937
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596394"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983675"
 ---
 # <a name="sqlpackage-export-parameters-and-properties"></a>SqlPackage Export のパラメーターとプロパティ
-SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure SQL のライブ データベースが BACPAC パッケージ (.bacpac ファイル) にエクスポートされます。 既定では、すべてのテーブルのデータが .bacpac ファイルに含まれます。 必要に応じて、データをエクスポートする対象のテーブルの一部のみを指定できます。 Export 操作の検証によって、エクスポート対象にテーブルの一部を指定した場合でも、完全な対象データベースに対する Azure SQL Database の互換性が維持されます。 
+SqlPackage.exe Export 操作によって、接続されているデータベースが BACPAC ファイル (.bacpac) にエクスポートされます。 既定では、すべてのテーブルのデータが .bacpac ファイルに含まれます。 必要に応じて、データをエクスポートする対象のテーブルの一部のみを指定できます。 Export 操作の検証によって、エクスポート対象にテーブルの一部を指定した場合でも、完全な対象データベースに対する Azure SQL Database の互換性が維持されます。 
 
 ## <a name="command-line-syntax"></a>コマンドライン構文
 

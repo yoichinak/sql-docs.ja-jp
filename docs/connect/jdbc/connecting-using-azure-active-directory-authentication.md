@@ -2,7 +2,7 @@
 title: Azure Active Directory 認証を利用した接続
 description: Microsoft JDBC Driver for SQL Server で Azure Active Directory 認証機能を使用する Java アプリケーションを開発する方法について説明します。
 ms.custom: ''
-ms.date: 01/04/2020
+ms.date: 01/29/2021
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68d8b2a131fa6ab1c9e287f70cb584db3aeedacc
-ms.sourcegitcommit: 6154ee7f20bccce9d458ac7f3b0a21b9613d1131
+ms.openlocfilehash: cbcf01d51ef4abe344b66529d72476a7d1385bbc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97902640"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168727"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を利用した接続
 
@@ -29,11 +29,17 @@ Azure Active Directory の ID を使用して Azure SQL Database v12 に接続�
 Microsoft JDBC Driver for SQL Server で Azure Active Directory 認証をサポートする接続プロパティは次のとおりです。
 *   **authentication**:このプロパティを使用して、接続に使用する SQL 認証方法を指定します。 次のいずれかの値になります。 
     * **ActiveDirectoryMSI**
-        * ドライバー バージョン **v7.2** 以降でサポートされています。`authentication=ActiveDirectoryMSI` を使用して、"ID" サポートが有効になっている Azure リソース内から Azure SQL Database および Data Warehouse に接続することができます。 必要に応じて、この認証モードと共に、**msiClientId** を Connection または DataSource プロパティで指定することもできます。これには、接続を確立するための **accessToken** を取得するために使用される、マネージド ID のクライアント ID が含まれている必要があります。
+        * ドライバー バージョン **v7.2** 以降でサポートされている `authentication=ActiveDirectoryMSI` を使用すると、"ID" サポートが有効になっている Azure リソース内から Azure SQL Database と Synapse Analytics に接続することができます。 必要に応じて、この認証モードと共に、**msiClientId** を Connection または DataSource プロパティで指定することもできます。これには、接続を確立するための **accessToken** を取得するために使用される、マネージド ID のクライアント ID が含まれている必要があります。
     * **ActiveDirectoryIntegrated**
-        * ドライバー バージョン **v6.0** 以降でサポートされています。`authentication=ActiveDirectoryIntegrated` を使用し、統合認証を使って Azure SQL Database および Data Warehouse に接続することができます。 この認証モードを使用するには、オンプレミスの Active Directory フェデレーション サービス (ADFS) をクラウドの Azure Active Directory とフェデレーションする必要があります。 これが設定されたら、Windows OS のアプリケーション クラス パスにネイティブ ライブラリ 'mssql-jdbc_auth-\<version>-\<arch>.dll' を追加するか、クロスプラットフォーム認証されるよう Kerberos チケットを設定します。 ドメインに参加しているマシンにログインしているときに、資格情報の入力を求められることなく、Azure SQL Database と Azure Synapse Analytics にアクセスできるようになります。
+        * ドライバー バージョン **v6.0** 以降でサポートされている `authentication=ActiveDirectoryIntegrated` を使用すると、統合認証を使用して Azure SQL Database と Synapse Analytics に接続することができます。 この認証モードを使用するには、オンプレミスの Active Directory フェデレーション サービス (ADFS) をクラウドの Azure Active Directory とフェデレーションする必要があります。 これが設定されたら、Windows OS のアプリケーション クラス パスにネイティブ ライブラリ 'mssql-jdbc_auth-\<version>-\<arch>.dll' を追加するか、クロスプラットフォーム認証されるよう Kerberos チケットを設定します。 ドメインに参加しているマシンにログインしているときに、資格情報の入力を求められることなく、Azure SQL Database と Azure Synapse Analytics にアクセスできるようになります。
+
     * **ActiveDirectoryPassword**
-        * ドライバー バージョン **v6.0** 以降でサポートされています。`authentication=ActiveDirectoryPassword` を使用し、Azure AD ユーザー名とパスワードを使って Azure SQL Database および Data Warehouse に接続することができます。
+        * ドライバー バージョン **v6.0** 以降でサポートされている `authentication=ActiveDirectoryPassword` を使用すると、Azure AD のユーザー名とパスワードを使用して Azure SQL Database と Synapse Analytics に接続することができます。
+    * **ActiveDirectoryInteractive**
+        * ドライバー バージョン **v9.2** 以降でサポートされている `authentication=ActiveDirectoryInteractive` を使用すると、対話型認証フロー (多要素認証) を使用して Azure SQL Database と Synapse Analytics に接続することができます。
+    * **ActiveDirectoryServicePrincipal**
+        * ドライバー バージョン **v9.2** 以降でサポートされている `authentication=ActiveDirectoryServicePrincipal` を使用すると、サービス プリンシパル ID のクライアント ID とシークレットを使用して Azure SQL Database と Synapse Analytics に接続することができます。
+
     * **SqlPassword**
         * `authentication=SqlPassword` を使用し、userName または user および password プロパティを使って SQL Server に接続します。
     * **NotSpecified**
@@ -54,9 +60,12 @@ Microsoft JDBC Driver for SQL Server で Azure Active Directory 認証をサポ�
 その他の認証モードの場合は、以下のコンポーネントをクライアント コンピューターにインストールする必要があります。
 * Java 7 以上
 * SQL Server 用 Microsoft JDBC Driver 6.0 (またはそれ以降)
-* アクセス トークン ベースの認証モードを使用する場合に、この記事の例を実行するには、[azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) とその依存関係が必要です。 詳細については、「**アクセス トークンを使用した接続**」セクションを参照してください。
-* **ActiveDirectoryPassword** 認証モードを使用する場合は、[azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) とその依存関係が必要です。 詳細については、「**ActiveDirectoryPassword 認証モードを使用した接続**」セクションを参照してください。
-* **ActiveDirectoryIntegrated** モードを使用する場合は、azure-activedirectory-library-for-java とその依存関係が必要です。 詳細については、「**ActiveDirectoryIntegrated 認証モードを使用した接続**」セクションを参照してください。
+* アクセス トークン ベースの認証モードを使用している場合に、この記事の例を実行するには、[microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) とその依存関係が必要です。 詳細については、「[アクセス トークンを使用した接続](#connecting-using-access-token)」セクションを参照してください。
+* **ActiveDirectoryPassword** 認証モードを使用している場合は、[microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) とその依存関係が必要です。 詳細については、「[ActiveDirectoryPassword 認証モードを使用した接続](#connecting-using-activedirectorypassword-authentication-mode)」セクションを参照してください。
+* **ActiveDirectoryIntegrated** モードを使用している場合は、[microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) とその依存関係が必要です。 詳細については、「[ActiveDirectoryIntegrated 認証モードを使用した接続](#connecting-using-activedirectoryintegrated-authentication-mode)」セクションを参照してください。
+* **ActiveDirectoryInteractive** モードを使用している場合は、[microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) とその依存関係が必要です。 詳細については、「[ActiveDirectoryInteractive 認証モードを使用した接続](#connecting-using-activedirectoryinteractive-authentication-mode)」セクションを参照してください。
+* **ActiveDirectoryServicePrincipal** モードを使用している場合は、[microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) とその依存関係が必要です。 詳細については、「[ActiveDirectoryServicePrincipal 認証モードを使用した接続]()#connecting-using-activedirectoryserviceprincipal-authentication-mode」セクションを参照してください。
+
 
 ## <a name="connecting-using-activedirectorymsi-authentication-mode"></a>ActiveDirectoryMSI 認証モードを使用した接続
 次の例では、`authentication=ActiveDirectoryMSI` モードの使用方法を示します。 この例は、Azure リソース (Azure Virtual Machine、App Service、または Azure Active Directory とフェデレーションされている Function App など) 内から実行します。
@@ -266,13 +275,131 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > 包含ユーザー データベースが存在している必要あり、指定された Azure AD ユーザー、または指定された Azure AD ユーザーが属しているグループの 1 つを表す包含データベース ユーザーが、データベースに存在している必要があり、CONNECT 権限を持っている必要があります (Azure Active Directory サーバー管理者やグループを除く)
 
+## <a name="connecting-using-activedirectoryinteractive-authentication-mode"></a>ActiveDirectoryInteractive 認証モードを使用した接続 
+次の例では、`authentication=ActiveDirectoryInteractive` モードの使用方法を示します。
+
+例をビルドして実行する前に、次のようにします。
+1.  (例を実行する) クライアント コンピューターに、[azure-activedirectory-library-for-java ライブラリ](https://github.com/AzureAD/azure-activedirectory-library-for-java)とその依存関係をダウンロードし、それらを Java ビルド パスに含めます
+2.  次のコード行を見つけて、サーバーとデータベースの名前を、実際のサーバーとデータベースの名前に置き換えます。
+    ```java
+    ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+    ds.setDatabaseName("demo"); // replace with your database name
+    ```
+3.  次のコード行を見つけて、ユーザー名を、接続する場合に使用する Azure AD ユーザーの名前に置き換えます。
+    ```java
+    ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+    ```
+
+ActiveDirectoryInteractive 認証モードを使用する例:
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AADInteractive {
+    public static void main(String[] args) throws Exception{
+        
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database
+    ds.setAuthentication("ActiveDirectoryInteractive");
+      
+    // Optional
+        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+プログラムを実行すると、ユーザーの認証を行うためにブラウザーが表示されます。 正確にどのような内容がユーザーに表示されるかは、Azure AD の構成方法によって決まります。 たとえば、ユーザー名、パスワード、PIN、または電話による 2 番目のデバイスの認証などに対する多要素認証のプロンプトが含まれる場合もあれば、含まれない場合もあります。 複数の対話型認証要求が同じプログラム内で行われ、認証ライブラリが以前にキャッシュされた認証トークンを再利用できる場合は、後続の要求でユーザーへのプロンプトが表示されない場合もあります。
+
+多要素認証を要求するように Azure AD を構成する方法については、「[クラウドベースの Azure AD Multi-Factor Authentication をデプロイする](/azure/active-directory/authentication/howto-mfa-getstarted)」をご覧ください。
+
+これらのダイアログのスクリーンショットについては、「[SQL Server Management Studio と Azure AD 用に多要素認証を構成する](/azure/azure-sql/database/authentication-mfa-ssms-configure)」をご覧ください。
+
+ユーザー認証が正常に完了した場合、ブラウザーに次のメッセージが表示されます。
+```
+Authentication complete. You can close the browser and return to the application.
+```
+これは、ユーザーの認証が成功したことだけを示しており、サーバーへの接続が成功したとは限らないことに注意してください。 アプリケーションに戻った時点で、サーバーへの接続が確立されていると、次のメッセージが出力として表示されます。
+```
+You have successfully logged on as: <your user name>
+```
+
+> [!NOTE]  
+> 包含ユーザー データベースが存在している必要があり、指定された Azure AD ユーザーを表す、または指定された Azure AD ユーザーが属しているグループの 1 つを表す包含データベース ユーザーが、データベースに存在し、CONNECT 権限を持っている必要があります (Azure Active Directory サーバー管理者やグループを除く)
+
+## <a name="connecting-using-activedirectoryserviceprincipal-authentication-mode"></a>ActiveDirectoryServicePrincipal 認証モードを使用した接続
+次の例では、`authentication=ActiveDirectoryServicePrincipal` モードの使用方法を示します。
+
+例をビルドして実行する前に、次のようにします。
+1.  (例を実行する) クライアント コンピューターに、[azure-activedirectory-library-for-java ライブラリ](https://github.com/AzureAD/azure-activedirectory-library-for-java)とその依存関係をダウンロードし、それらを Java ビルド パスに含めます
+2.  次のコード行を見つけて、サーバーとデータベースの名前を、実際のサーバーとデータベースの名前に置き換えます。
+    ```java
+    ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+    ds.setDatabaseName("demo"); // replace with your database name
+    ```
+3.  次のコード行を見つけて、ユーザー名を、接続する場合に使用する Azure AD ユーザーの名前に置き換えます。
+    ```java
+    ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+    ```
+
+ActiveDirectoryInteractive 認証モードを使用する例:
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AADServicePrincipal {
+    public static void main(String[] args) throws Exception{
+        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD secure principal ID.
+        String principalSecret = "..."; // Replace with your AAD principal secret.
+
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database
+    ds.setAuthentication("ActiveDirectoryServicePrincipal");
+    ds.setAADSecurePrincipalId(principalId);
+    ds.setAADSecurePrincipalSecret(principalSecret);
+      
+    // Optional
+        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+接続が確立された場合、出力として次のメッセージが表示されるはずです。
+```
+You have successfully logged on as: <your user name>
+```
+
+> [!NOTE]  
+> 包含ユーザー データベースが存在している必要があり、指定された Azure AD ユーザーを表す、または指定された Azure AD ユーザーが属しているグループの 1 つを表す包含データベース ユーザーが、データベースに存在し、CONNECT 権限を持っている必要があります (Azure Active Directory サーバー管理者やグループを除く)
+
 ## <a name="connecting-using-access-token"></a>アクセス トークンを使用した接続
-アプリケーションとサービスでは、Azure Active Directory からアクセス トークンを取得し、それを使用して Azure SQL Database および Data Warehouse に接続することができます。
+アプリケーションとサービスで、Azure Active Directory からアクセス トークンを取得し、それを使用して Azure SQL Database と Synapse Analytics に接続することができます。
 
 > [!NOTE] 
 > **accessToken** は、DriverManager クラスの getConnection () メソッドの Properties パラメーターを使用してのみ設定できます。 接続文字列では使用できません。
 
-以下の例には、アクセス トークンベースの認証を使用して、Azure SQL Database および Data Warehouse に接続するシンプルな Java アプリケーションが含まれています。 例をビルドして実行する前に、次の手順を行います。
+以下の例には、アクセス トークン ベースの認証を使用して、Azure SQL Database と Synapse Analytics に接続するシンプルな Java アプリケーションが含まれています。 例をビルドして実行する前に、次の手順を行います。
 1.  サービスの Azure Active Directory でアプリケーション アカウントを作成します。
     1. Azure portal にサインインします。
     2. 左側のナビゲーションで、[Azure Active Directory] をクリックします。
@@ -293,7 +420,7 @@ You have successfully logged on as: <your user name>
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
     ```
 
-3.  (例を実行する) クライアント コンピューターに、[azure-activedirectory-library-for-java ライブラリ](https://github.com/AzureAD/azure-activedirectory-library-for-java) とその依存関係をダウンロードし、それらを Java ビルド パスに含めます。 azure-activedirectory-library-for-java は、この特定の例を実行する場合にのみ必要であることに注意してください。 この例では、このライブラリの API を使用して、Azure AD からアクセス トークンを取得します。 アクセス トークンが既にある場合は、この手順をスキップできます。 また、アクセス トークンを取得する例でセクションを削除する必要もあることに注意してください。
+3.  (例を実行する) クライアント コンピューターに、[microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) ライブラリとその依存関係をダウンロードし、それらを Java ビルド パスに含めます。 microsoft-authentication-library-for-java は、この特定の例を実行する場合にのみ必要であることに注意してください。 この例では、このライブラリの API を使用して、Azure AD からアクセス トークンを取得します。 アクセス トークンが既にある場合は、この手順をスキップできます。 また、アクセス トークンを取得する例でセクションを削除する必要もあることに注意してください。
 
 次の例では、STS URL、クライアント ID、クライアント シークレット、サーバー、データベース名を実際の値に置き換えます。
 
@@ -306,9 +433,11 @@ import java.util.concurrent.Future;
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 // The azure-activedirectory-library-for-java is needed to retrieve the access token from the AD.
-import com.microsoft.aad.adal4j.AuthenticationContext;
-import com.microsoft.aad.adal4j.AuthenticationResult;
-import com.microsoft.aad.adal4j.ClientCredential;
+import com.microsoft.aad.msal4j.ClientCredentialFactory;
+import com.microsoft.aad.msal4j.ClientCredentialParameters;
+import com.microsoft.aad.msal4j.ConfidentialClientApplication;
+import com.microsoft.aad.msal4j.IAuthenticationResult;
+import com.microsoft.aad.msal4j.IClientCredential;
 
 public class AADTokenBased {
 
@@ -320,11 +449,19 @@ public class AADTokenBased {
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
-        AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));
-        ClientCredential cred = new ClientCredential(clientId, clientSecret);
-
-        Future<AuthenticationResult> future = context.acquireToken(spn, cred, null);
-        String accessToken = future.get().getAccessToken();
+    String scope = spn +  "/.default";
+    Set<String> scopes = new HashSet<>();
+        scopes.add(scope);
+    
+    ExecutorService executorService = Executors.newSingleThreadExecutor();
+    IClientCredential credential = ClientCredentialFactory.createFromSecret(clientSecret);
+    ConfidentialClientApplication clientApplication = ConfidentialClientApplication
+            .builder(clientId, credential).executorService(executorService).authority(stsurl).build();
+    CompletableFuture<IAuthenticationResult> future = clientApplication
+            .acquireToken(ClientCredentialParameters.builder(scopes).build());
+            
+    IAuthenticationResult authenticationResult = future.get();
+    String accessToken = authenticationResult.accessToken();
 
         System.out.println("Access Token: " + accessToken);
 

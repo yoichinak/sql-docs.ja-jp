@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ebacade44d53ddf142f22f9e30bce140e375592
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0f6d10db3da5ea8c1b6d5daba3062e53d2f35244
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170220"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051343"
 ---
 # <a name="sqlstate-property"></a>SQLState プロパティ
 指定された [エラー](./error-object.md) オブジェクトの SQL 状態を示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "99170220"
 ## <a name="return-value"></a>戻り値  
  は、ANSI SQL 標準に従った5文字の **文字列** 値を返し、エラーコードを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  SQL ステートメントの処理中にエラーが発生した場合にプロバイダーが返す5文字のエラーコードを読み取るには、 **SQLState** プロパティを使用します。 たとえば、Microsoft SQL Server データベースを使用して Microsoft OLE DB Provider for ODBC を使用すると、odbc からの SQL 状態エラーコードが生成されます。これは、ODBC に固有のエラーや、Microsoft SQL Server から発生したエラーに基づいて行われ、ODBC エラーにマップされます。 これらのエラーコードは ANSI SQL 標準に記載されていますが、データソースによって実装方法が異なる場合があります。  
   
 ## <a name="applies-to"></a>適用対象  

@@ -2,7 +2,7 @@
 title: JDBC ドライバーのよくあるご質問 (FAQ)
 description: このページでは、Microsoft SQL Server 用 JDBC Driver についてよく寄せられる質問に対する回答をご紹介します。
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1fe92ec4216998d36826c518a5dce40c26253c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 634bbd66e2ad00ccda3b60f6f2fccfea976d09b0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725464"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163614"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC ドライバーのよくあるご質問 (FAQ)
 
@@ -36,6 +36,15 @@ JDBC Driver はオープンソースであり、[GitHub](https://github.com/micr
 Microsoft JDBC ドライバー用の GitHub リポジトリで入手できる JDBC ドライバー ファイルは JDBC ドライバーの中核であり、リポジトリに示されているオープンソース ライセンスの対象です。 [Microsoft ダウンロード ページ](download-microsoft-jdbc-driver-for-sql-server.md)のドライバー パッケージには、Windows に統合された認証と JDBC ドライバーとの XA トランザクションを可能にするための追加ライブラリが含まれています。 これらの追加ライブラリは、ダウンロード可能パッケージに含まれているライセンスの対象です。
 
 **ドライバーをアップグレードする場合に知っておく必要があることは何ですか。**  
+Microsoft JDBC Driver 9.2 では、JDBC 4.2 および 4.3 (一部) 仕様がサポートされ、インストール パッケージには次に示す 3 つの JAR クラス ライブラリが含まれます。
+
+| JAR                        | JDBC 仕様            | JDK のバージョン |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-9.2.0.jre15.jar | JDBC 4.3 (一部) および 4.2 | JDK 15.0    |
+| mssql-jdbc-9.2.0.jre11.jar | JDBC 4.3 (一部) および 4.2 | JDK 11.0    |
+| mssql-jdbc-9.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 Microsoft JDBC Driver 8.4 では、DBC 4.2 および 4.3 (一部) 仕様がサポートされ、インストール パッケージには次に示す 3 つの JAR クラス ライブラリが含まれます。
 
 | JAR                        | JDBC 仕様            | JDK のバージョン |

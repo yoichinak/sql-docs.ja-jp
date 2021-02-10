@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+ms.openlocfilehash: d933f9bdff4279b841522f8a0e09f66e01364630
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900875"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495757"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Azure Data Studio ダッシュボード拡張機能を作成する
 
@@ -37,7 +37,7 @@ Azure Data Studio は Visual Studio Code と同じフレームワーク上に構
 - `$PATH` にインストールされ、利用できる [Node.js](https://nodejs.org)。 Node.js には、拡張機能ジェネレーターのインストールに使用される [npm](https://www.npmjs.com/) (Node.js パッケージ マネージャー) が含まれています。
 - 拡張機能をデバッグするための [Visual Studio Code](https://code.visualstudio.com)。
 - The Azure Data Studio [Debug 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (任意)。 このデバッグ拡張機能を使用すると、拡張機能は、パッケージ化して Azure Data Studio にインストールしなくてもテストできます。
-- 確実に `azuredatastudio` をパスに含めます。 Windows の場合、setup.exe で **[Add to Path]\(パスに追加\)** オプションを選択します。 Mac または Linux の場合、**[PATH 内に 'azuredatastudio' コマンドをインストールします]** オプションを実行します。
+- 確実に `azuredatastudio` をパスに含めます。 Windows の場合、setup.exe で **[Add to Path]\(パスに追加\)** オプションを選択します。 Mac または Linux の場合、Azure Data Studio のコマンド パレットから **[PATH 内に 'azuredatastudio' コマンドをインストールします]** を実行します。
 
 ## <a name="install-the-extension-generator"></a>拡張機能ジェネレーターをインストールする
 

@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 10/02/2020
-ms.openlocfilehash: c86dde50390bdf14719da96f7fc3d0cc35a9c440
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 45aad0892dbc187e50368f7abcf6c0b02cbc7cca
+ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577946"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99510293"
 ---
 # <a name="download-and-install-sqlpackage"></a>sqlpackage をダウンロードしてインストールする
 
@@ -31,6 +31,9 @@ sqlpackage は Windows、macOS、Linux 上で実行されます。
 |[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2143496)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
 
 最新リリースに関する詳細については、[リリース ノート](release-notes-sqlpackage.md)をご覧ください。 追加の言語をダウンロードするには、「[使用できる言語](#available-languages)」を参照してください。
+
+
+最新の sqlpackage で環境を自動化するときに利用できる、[Linux .NET Core](#get-sqlpackage-net-core-for-linux) の最新版 sqlpackage を指すエバーグリーン リンク ([https://aka.ms/sqlpackage-linux](https://aka.ms/sqlpackage-linux)) が利用できます。
 
 ## <a name="dacfx"></a>DacFx
 SqlPackage は DacFx フレームワークのコマンドライン インターフェイスであり、一部のパブリック DacFx API が公開されます。 DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) は、データベースの配置をアプリケーション パイプラインに統合するための関連メカニズムです。  DacServices API は、NuGet ([Microsoft.SqlServer.DACFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DACFx)) を介してパッケージ内で使用できます。  現在の DacFx のバージョンは 150.4897.1 です。
@@ -90,7 +93,7 @@ dotnet add package Microsoft.SqlServer.DACFx
 
 ## <a name="get-sqlpackage-net-core-for-linux"></a>Linux 用の sqlpackage .NET Core を取得する
 
-1. インストーラーのいずれか、または tar.gz アーカイブを使って、[Linux 用の sqlpackage](https://go.microsoft.com/fwlink/?linkid=2143497) をダウンロードします。
+1. インストーラーのいずれか、または tar.gz アーカイブを使用して [Linux 用の sqlpackage](https://go.microsoft.com/fwlink/?linkid=2143497) をダウンロードします。
 2. ファイルを抽出して sqlpackage を起動するには、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    ```bash

@@ -2,7 +2,7 @@
 title: '[SQL Server ログイン] ダイアログ ボックス (ODBC)'
 description: データベースに接続するための情報を寿分に指定せずにアプリケーションで ODBC 接続が行われると、SQL Server ログイン ダイアログが表示されることがあります。
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: 7c0a2be5961e4fab07941d999da1a2b2fe5f9dbe
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 9a2ba6a75457b2c4742603368d153f5636d3b541
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898808"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158213"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>[SQL Server ログイン] ダイアログ ボックス (ODBC)
 
@@ -26,7 +26,7 @@ ms.locfileid: "87898808"
 
 ### <a name="server"></a>サーバー
 
-ネットワーク上の SQL Server のインスタンスの名前です。 一覧から server\instance 形式の名前を選択するか、 **[サーバー]** ボックスに server\instance 形式の名前を入力します。 必要に応じて、**SQL Server 構成マネージャー**を使用してクライアント コンピューターでサーバーの別名を作成し、 **[サーバー]** ボックスにその名前を入力することができます。
+ネットワーク上の SQL Server のインスタンスの名前です。 一覧から server\instance 形式の名前を選択するか、 **[サーバー]** ボックスに server\instance 形式の名前を入力します。 必要に応じて、**SQL Server 構成マネージャー** を使用してクライアント コンピューターでサーバーの別名を作成し、 **[サーバー]** ボックスにその名前を入力することができます。
 
 SQL Server と同じコンピューターを使用している場合は、「(local)」と入力することができます。 その後、ネットワークに接続されていない SQL Server を実行している場合でも、SQL Server のローカル インスタンスに接続することができます。
 
@@ -36,11 +36,12 @@ SQL Server と同じコンピューターを使用している場合は、「(lo
 
 次のいずれかの認証モードを選択します。
 - ログイン ID とパスワードを使用した **SQL Server**
-- 現在ログインしているユーザーのアカウントを使用した **Windows 統合**認証
+- 現在ログインしているユーザーのアカウントを使用した **Windows 統合** 認証
 - ログイン ID とパスワードを使用した **Active Directory パスワード**
-- 現在ログインしているユーザーのアカウントを使用した **Active Directory 統合**認証
-- ログイン ID を使用した **Active Directory 対話型**認証
-- マネージド ID による**マネージド サービス ID** 認証
+- 現在ログインしているユーザーのアカウントを使用した **Active Directory 統合** 認証
+- ログイン ID を使用した **Active Directory 対話型** 認証
+- マネージド ID による **マネージド サービス ID** 認証
+- Azure Active Directory サービス プリンシパルによる **Active Directory サービス プリンシパル** 認証
 
 認証モードの詳細については、「[データ ソース ウィザード画面 2](../../../connect/odbc/windows/dsn-wizard-2.md)」を参照してください。
 
@@ -50,7 +51,7 @@ SQL Server と同じコンピューターを使用している場合は、「(lo
 
 ### <a name="login-id"></a>Login ID
 
-**[認証モード]** が **[SQL Server]** 、 **[Active Directory パスワード]** 、 **[Active Directory 対話型]** 、 **[マネージド サービス ID]** に設定されている場合は、接続に使用する SQL Server または Azure Active Directory のログイン ID を指定します。 それ以外の場合、 **[ログイン ID]** ボックスは無効になります。
+**[認証モード]** が **[SQL Server]** 、 **[Active Directory パスワード]** 、 **[Active Directory 対話型]** 、 **[マネージド サービス ID]** または **[Active Directory サービス プリンシパル]** に設定されている場合は、接続に使用する SQL Server または Azure Active Directory のログイン ID を指定します。 それ以外の場合、 **[ログイン ID]** ボックスは無効になります。
 
 ### <a name="password"></a>Password
 
@@ -84,7 +85,7 @@ SQL Server と同じコンピューターを使用している場合は、「(lo
 
 必要に応じて、ミラー サーバーに SPN を指定できます。 ミラー サーバーの SPN は、クライアントとサーバー間の相互認証に使用されます。
 
-### <a name="language"></a>Language
+### <a name="language"></a>言語
 
 SQL Server システム メッセージに使用する言語を指定します。 SQL Server を実行しているコンピューターには言語がインストールされている必要があります。 この設定は、サーバーのログインに指定されている既定の言語をオーバーライドします。 言語が指定されていない場合、接続はサーバーのログインに指定されている既定の言語を使用します。
 

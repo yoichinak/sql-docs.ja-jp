@@ -2,7 +2,7 @@
 description: データ ソース ウィザード画面 2 (ODBC Driver for SQL Server)
 title: データ ソース ウィザード画面 2 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: d1e18939ab9d3f2e86452dd3f1847971157ca92c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 749ba8963234955e4893a2c5197bcfd4c26f2584
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462211"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159562"
 ---
 # <a name="data-source-wizard-screen-2"></a>データ ソース ウィザード画面 2
 
@@ -49,6 +49,11 @@ ms.locfileid: "88462211"
 ### <a name="with-managed-identity-authentication"></a>マネージド ID の認証を使用する
 
 ドライバーがマネージド ID を使用して SQL Server に対する認証を行うように指定します。
+
+### <a name="with-active-directory-service-principal-authentication"></a>Active Directory サービス プリンシパル認証の使用
+
+ドライバーが Azure Active Directory のサービス プリンシパルを使用して SQL Server に対する認証を行うように指定します。
+
 
 ### <a name="login-id"></a>Login ID
 

@@ -1,8 +1,8 @@
 ---
 title: JDBC のバッチ挿入に対する一括コピー API
-description: Microsoft JDBC Driver for SQL Server では、Azure Data Warehouse に対するバッチ挿入操作に一括コピーを使用することがサポートされています。データベースにデータを読み込むスピードが速くなります。
+description: Microsoft JDBC Driver for SQL Server では、バッチ挿入に一括コピーを使用することがサポートされており、データベースにデータを読み込むスピードが速くなります。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,26 +11,25 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 14074b0136baf800b038e4b113325e81d65dc3e7
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 4a769d73f799b8ca0b4b806a3e656517377e23ad
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442598"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161565"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>バッチ挿入操作に一括コピー API を使用する
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver 7.0 for SQL Server では、Azure Data Warehouse に対するバッチ挿入操作に一括コピー API の使用がサポートされています。 この機能を使用すると、ユーザーは、バッチ挿入操作の実行時に、一括コピー操作をドライバーにバックグラウンドで実行させることができるようになります。 このドライバーは、通常のバッチ挿入操作で行われるのと同じデータを挿入したときのパフォーマンスを向上させることを目的としています。 ドライバーでは、通常のバッチ挿入操作の代わりに、一括コピー API を利用して、ユーザーの SQL クエリが解析されます。 バッチ挿入機能に対して一括コピー API を有効にするためのさまざまな方法と、その制限事項の一覧を以下に示します。 このページには、使用とパフォーマンスの向上を示す小さなサンプル コードも含まれています。
+Microsoft JDBC Driver for SQL Server バージョン 9.2 以降では、バッチ挿入操作に一括コピー API を使用することがサポートされています。 この機能を使用すると、ユーザーはバッチ挿入操作の実行時に、ドライバーで一括コピー操作をバックグラウンドで行うことができます。 このドライバーは、通常のバッチ挿入操作で行われるのと同じデータを挿入したときのパフォーマンスを向上させることを目的としています。 ドライバーでは、通常のバッチ挿入操作の代わりに、一括コピー API を使用して、ユーザーの SQL クエリが解析されます。 バッチ挿入機能に対して一括コピー API を有効にするためのさまざまな方法と、その制限事項の一覧を以下に示します。 このページには、使用とパフォーマンスの向上を示す小さなサンプル コードも含まれています。
 
 この機能は、PreparedStatement および CallableStatement の `executeBatch()` & `executeLargeBatch()` API にのみ適用できます。
 
 ## <a name="prerequisites"></a>前提条件
 
-バッチ挿入に一括コピー API を有効にするには、次の 2 つの前提条件があります。
+バッチ挿入に対して一括コピー API を有効にするための前提条件。
 
-* サーバーは Azure Data Warehouse であること。
 * クエリは挿入クエリであること (クエリにコメントを含めることはできますが、この機能を有効にするには、クエリの先頭に INSERT キーワードを使用する必要があります)。
 
 ## <a name="enabling-bulk-copy-api-for-batch-insert"></a>バッチ挿入に一括コピー API を有効にする
@@ -51,7 +50,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 
 **SQLServerConnection.getUseBulkCopyForBatchInsert()** で **useBulkCopyForBatchInsert** 接続プロパティの現在の値が取得されます。
 
-**useBulkCopyForBatchInsert** の値は、初期化時には各 PreparedStatement に対して一定のままです。 後続の **SQLServerConnection.setUseBulkCopyForBatchInsert()** への呼び出しは、その値に関して、既に作成された PreparedStatement には影響しません。
+**useBulkCopyForBatchInsert** の値は、初期化時には各 PreparedStatement に対して一定のままです。 後続の **SQLServerConnection.setUseBulkCopyForBatchInsert()** への呼び出しは、既に作成されている PreparedStatement の値には影響しません。
 
 ### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3.SQLServerDataSource オブジェクトから setUseBulkCopyForBatchInsert() メソッドを使用して有効にする
 
@@ -64,14 +63,14 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 * パラメーター化されていない値 (`INSERT INTO TABLE VALUES (?, 2`) など) を含む挿入クエリはサポートされていません。 この関数でサポートされているパラメーターは、ワイルドカード (?) だけです。
 * INSERT-SELECT 式 (`INSERT INTO TABLE SELECT * FROM TABLE2` など) を含む挿入クエリはサポートされていません。
 * 複数の VALUE 式 (`INSERT INTO TABLE VALUES (1, 2) (3, 4)` など) を含む挿入クエリはサポートされていません。
-* OPTION 句が後に続く挿入クエリ、複数のテーブルと結合された挿入クエリ、または別のクエリが後に続く挿入クエリはサポートされていません。
+* OPTION 句が後に続くか、複数のテーブルと結合されているか、または別のクエリが後に続く挿入クエリはサポートされていません。
 * 一括コピー API の制限により、`MONEY`、`SMALLMONEY`、`DATE`、`DATETIME`、`DATETIMEOFFSET`、`SMALLDATETIME`、`TIME`、`GEOMETRY`、`GEOGRAPHY` の各データ型は、現在、この機能ではサポートされていません。
 
 "SQL Server" に関連しないエラーが原因でクエリが失敗した場合、ドライバーによってエラー メッセージがログに記録され、バッチ挿入の元のロジックにフォールバックされます。
 
 ## <a name="example"></a>例
 
-次に示すのは、通常と一括コピー API の両方のシナリオで、1,000 行の Azure Synapse Analytics に対するバッチ挿入操作のユース ケースを示すコード例です。
+これは、通常と一括コピー API の両方のシナリオで、1,000 行のバッチ挿入操作のユース ケースを示す例です。
 
 ```java
     public static void main(String[] args) throws Exception
@@ -79,9 +78,9 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
         String tableName = "batchTest";
         String tableNameBulkCopyAPI = "batchTestBulk";
 
-        String azureDWconnectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
 
-        try (Connection con = DriverManager.getConnection(azureDWconnectionUrl); // connects to an Azure Data Warehouse.
+        try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement();
                 PreparedStatement pstmt = con.prepareStatement("insert into " + tableName + " values (?, ?)");) {
 
@@ -105,7 +104,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
             System.out.println("Finished. Time taken : " + (end - start) + " milliseconds.");
         }
 
-        try (Connection con = DriverManager.getConnection(azureDWconnectionUrl + ";useBulkCopyForBatchInsert=true"); // connects to an Azure Data Warehouse, with useBulkCopyForBatchInsert connection property set to true.
+        try (Connection con = DriverManager.getConnection(connectionUrl + ";useBulkCopyForBatchInsert=true");
                 Statement stmt = con.createStatement();
                 PreparedStatement pstmt = con.prepareStatement("insert into " + tableNameBulkCopyAPI + " values (?, ?)");) {
 

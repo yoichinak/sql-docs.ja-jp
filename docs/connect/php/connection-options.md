@@ -2,7 +2,7 @@
 title: 接続オプション
 description: このトピックでは、SQLSRV ドライバーの sqlsrv_connect の連想配列で許可されているオプション、または PDO_SQLSRV ドライバーのデータ ソース名で許可されているキーワードを一覧表示します。
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98f6899c1bfc7652c4a2facee95cf5fd62e4e521
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a8718cc04972e74ffc39b1528ed73eb00664eda8
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632962"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076254"
 ---
 # <a name="connection-options"></a>接続オプション
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "81632962"
 |APP|String|トレースで使用されるアプリケーション名を指定します。|未設定。|  
 |ApplicationIntent|String|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 有効値は、**ReadOnly** と **ReadWrite** です。<br /><br />[!INCLUDE[ssHADR](../../includes/sshadr_md.md)] に対する [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] サポートの詳細については、「[高可用性、障害復旧のサポート](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」を参照してください。|ReadWrite|
 |AttachDBFileName|String|サーバーがアタッチするデータベース ファイルを指定します。|未設定。|
-|認証|次の文字列のいずれかです。<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**|認証モードを指定します。<br /><br />詳細については、「[Azure Active Directory 認証を使用して接続する](azure-active-directory.md)」を参照してください。|未設定。|
+|認証|次の文字列のいずれかです。<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**<br /><br />**ActiveDirectoryServicePrincipal**|認証モードを指定します。<br /><br />詳細については、「[Azure Active Directory 認証を使用して接続する](azure-active-directory.md)」を参照してください。|未設定。|
 |CharacterSet<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|String|サーバーにデータを送信するために使用する文字セットを指定します。<br /><br />可能な値は SQLSRV_ENC_CHAR と UTF-8 です。 詳細については、「[組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)」をご覧ください。|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|次の文字列のいずれかです。<br /><br />**有効**<br /><br />**Disabled**<br /><br />エンクレーブの構成を証明するための構成証明プロトコルと URL を識別する文字列|Always Encrypted 機能が有効かどうかを指定します。 構成証明プロトコルと URL を指定している場合は、[こちら](always-encrypted-secure-enclaves.md)の説明に従い、他の要件が満たされていれば、セキュリティで保護されたエンクレーブが設定された Always Encrypted が有効になります。|無効|  
 |ConnectionPooling|接続プールを有効にするには、1 または **true** 。<br /><br />接続プールを無効にするには、0 または **false** 。|接続を接続プールから割り当てる (1 または **true**) か、割り当てない (0 または **false**) かを指定します。<sup>1</sup>|**true** (1)|  
@@ -40,7 +40,7 @@ ms.locfileid: "81632962"
 |データベース|String|確立中の接続に使用されているデータベースの名前を指定します<sup>2</sup>。|使用されているログインの既定のデータベース。|  
 |小数点以下表示桁数<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|0 から 4 までの整数|フェッチされた通貨値の書式設定時に、小数点以下の桁数を指定します。<br /><br />このオプションは `FormatDecimals` が true の場合のみ機能します。 負の整数値または 4 を超える値は無視されます。|既定の有効桁数と小数点以下桁数|
 |Driver|String|SQL Server との通信に使用する Microsoft ODBC ドライバーを指定します。<br /><br />次のいずれかの値になります。<br />ODBC Driver 17 for SQL Server<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (Windows のみ)。|Driver キーワードが指定されていない場合、Microsoft Drivers for PHP for SQL Server では、ODBC の最新バージョン以降など、システムでサポートされている Microsoft ODBC ドライバーの検索が試行されます。| 
-|Encrypt|暗号化を有効にするには、1 または **true** 。<br /><br />暗号化を無効にするには、0 または **false** 。|SQL Server との通信を暗号化する (1 または **true**) か、暗号化しない (0 または **false**) かを指定します<sup>3</sup>。|**false** (0)|  
+|Encrypt|暗号化を有効にするには、1 または **true** 。<br /><br />暗号化を無効にするには、0 または **false** 。|SQL Server との通信を暗号化する (1 または **true**) か、暗号化しない (0 または **false**) かを指定します <sup>3</sup>。|**false** (0)|  
 |Failover_Partner|String|プライマリ サーバーが利用できないときに使用する、データベースのミラーのサーバーおよびインスタンス (有効かつ構成されている場合) を指定します。<br /><br />`Failover_Partner` と `MultiSubnetFailover` を併用するには制限があります。 詳細については、「[高可用性、障害復旧のサポート](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」をご覧ください。<br /><br />このオプションは、Linux または macOS ではサポートされていません。Linux または macOS 上の ODBC ドライバーではデータベース ミラーリングがサポートされていないためです。 代わりに、Always On 可用性グループを使用し、`MultiSubnetFailover` と `TransparentNetworkIPResolution` のオプションを設定します。|未設定。|
 |FormatDecimals<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|フェッチされた 10 進文字列の書式を設定するには、1 または **true**。<br /><br />既定の 10 進書式設定の動作にするには、0 または **false**。|該当する場合に 10 進文字列の前にゼロを追加するかどうかを指定し、通貨型を書式設定するための `DecimalPlaces` オプションを有効にします。 false のままにすると、正確な有効桁数を戻し、1 未満の値の前にあるゼロを省略するという既定の動作が使用されます。<br /><br />詳細については、[10 進数文字列と金額の書式設定](formatting-decimals-sqlsrv-driver.md)に関するページをご覧ください。|**false** (0)|
 |KeyStoreAuthentication|**KeyVaultPassword**<br /><br />**KeyVaultClientSecret**|Azure Key Vault にアクセスするための認証方法。 `KeyStorePrincipalId` と `KeyStoreSecret` で使用される資格情報の種類を制御します。 詳細については、「[Azure Key Vault の使用](using-always-encrypted-php-drivers.md#using-azure-key-vault)」を参照してください。|未設定。|

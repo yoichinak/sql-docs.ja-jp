@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a560b34e6ec55892a6f779c4808e5a7c69d99bca
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0ff25700d58b2f1101a7819d6c8faa914c2b0ae6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169735"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051013"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Ordinal プロパティ (ADO MD 位置)
 軸に沿った [位置](./position-object-ado-md.md) を一意に識別します。  
@@ -30,7 +30,7 @@ ms.locfileid: "99169735"
 ## <a name="return-values"></a>戻り値  
  **長** 整数を返し、読み取り専用です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  位置オブジェクトの **序** プロパティは、 [position](./position-object-ado-md.md) [コレクション内](./positions-collection-ado-md.md)の **位置** のインデックスに対応します。  
   
  セルは、セル [セット](./cellset-object-ado-md.md)オブジェクトの [Item](./item-property-ado-md-cellset.md)プロパティを使用して、各軸に沿った **位置** の **序数** を使用してすばやく取得できます。  

@@ -2,7 +2,7 @@
 title: Microsoft SQL Server 用 JDBC Driver のサポート表
 description: このページには、Microsoft JDBC Driver for SQL Server のサポート表とサポート ライフサイクル ポリシーがあります。
 ms.custom: ''
-ms.date: 08/27/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 341b021bbc582b2273f7601bfb993b4db40a4590
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 21b977b950babad552246925d78878c08cd36af3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725453"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163604"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft SQL Server 用 JDBC Driver のサポート表
 
@@ -26,7 +26,7 @@ ms.locfileid: "91725453"
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Microsoft JDBC Driver サポート ライフサイクルの表とポリシー  
 
-マイクロソフト サポート ライフサイクル (MSL) ポリシーでは、マイクロソフト製品のサポート ライフサイクルを理解しやすくする、予測可能な情報を提供しています。 JDBC ドライバーのバージョン 3.0、4.x、6.x、7.x、および 8.x には、ドライバーのリリース日から 5 年間のメインストリーム サポートが含まれています。 メインストリーム サポートについては、Microsoft ライフサイクル ポリシーの Web サイトで定義されています。  
+マイクロソフト サポート ライフサイクル (MSL) ポリシーでは、マイクロソフト製品のサポート ライフサイクルを理解しやすくする、予測可能な情報を提供しています。 JDBC ドライバーのバージョン 4.x、6.x、7.x、8.x、9.x には、ドライバーのリリース日から 5 年間のメインストリーム サポートが含まれています。 メインストリーム サポートについては、Microsoft ライフサイクル ポリシーの Web サイトで定義されています。  
   
 延長サポートとカスタム サポートのオプションは、Microsoft JDBC Driver では使用できません。  
 
@@ -34,6 +34,7 @@ ms.locfileid: "91725453"
   
 |ドライバー名|ドライバー パッケージのバージョン|適用できる JAR|メインストリーム サポートの終了|
 |-|-|-|-|  
+|Microsoft JDBC Driver 9.2 for SQL Server|9.2|mssql-jdbc-9.2.0.jre15.jar<br> mssql-jdbc-9.2.0.jre11.jar<br> mssql-jdbc-9.2.0.jre8.jar|2026 年 1 月 29 日|
 |Microsoft JDBC Driver 8.4 for SQL Server|8.4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|2025 年 7 月 31 日|
 |Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|2025 年 1 月 31 日|
 |Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2024 年 7 月 31 日|
@@ -42,12 +43,12 @@ ms.locfileid: "91725453"
 |Microsoft SQL Server 用 JDBC Driver 6.4|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 年 2 月 27 日|
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022 年 6 月 30 日|
 |Microsoft SQL Server 用 JDBC Driver 6.0|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 年 7 月 14 日|
-|Microsoft SQL Server 用 JDBC Driver 4.2|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020 年 8 月 24 日|
   
  次の Microsoft JDBC ドライバーはサポートされなくなりました。  
 
 |ドライバー名|ドライバー パッケージのバージョン|メインストリーム サポートの終了|  
 |-|-|-|
+|Microsoft SQL Server 用 JDBC Driver 4.2|4.2|2020 年 8 月 24 日|
 |Microsoft SQL Server 用 JDBC Driver 4.1|4.1|2019 年 12 月 12日|  
 |Microsoft SQL Server 用 JDBC Driver 4.0|4.0|2017 年 3 月 6 日|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|2015 年 4 月 23 日|  
@@ -61,6 +62,7 @@ ms.locfileid: "91725453"
   
 |データベースのバージョン&nbsp;&#8594;<br />&#8595; ドライバーのバージョン|Azure SQL データベース|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
 |---|---|---|---|---|---|---|---|---|---|---|---|
+|9.2|はい|はい|はい|はい|はい|はい|はい|はい|   |   |   |
 |8.4|はい|はい|はい|はい|はい|はい|はい|はい|はい|   |   |
 |8.2|はい|はい|はい|はい|はい|はい|はい|はい|はい|   |   |
 |7.4|はい|はい|はい|はい|はい|はい|はい|はい|はい|   |   |
@@ -91,6 +93,7 @@ ms.locfileid: "91725453"
   
 |JDBC ドライバーのバージョン|JRE のバージョン|JDBC API のバージョン|
 |-|-|-|
+|[9.2](release-notes-for-the-jdbc-driver.md#92)|1.8、11、15|4.2、4.3 (部分)|
 |[8.4](release-notes-for-the-jdbc-driver.md#84)|1.8、11、14|4.2、4.3 (部分)|
 |[8.2](release-notes-for-the-jdbc-driver.md#82)|1.8、11、13|4.2、4.3 (部分)|
 |[7.4](release-notes-for-the-jdbc-driver.md#74)|1.8、11、12|4.2、4.3 (部分)|
@@ -100,7 +103,7 @@ ms.locfileid: "91725453"
 |[6.2](release-notes-for-the-jdbc-driver.md#62)|1.7、1.8|4.1、4.2|
 |[6.1](release-notes-for-the-jdbc-driver.md#61)|1.7、1.8|4.1、4.2|
 |[6.0](release-notes-for-the-jdbc-driver.md#60)|1.7、1.8|4.1、4.2|
-|[4.2](release-notes-for-the-jdbc-driver.md#42)|1.7、1.8|4.1、4.2|
+|4.2|1.7、1.8|4.1、4.2|
 |4.1|1.7|4.0|
 |4.0|1.5, 1.6, 1.7|3.0, 4.0|
 |3.0|1.5, 1.6,|3.0, 4.0|

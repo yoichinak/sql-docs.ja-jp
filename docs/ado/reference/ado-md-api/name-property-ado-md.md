@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce785bf3c9ca351331f071bf74cdf98a6e118618
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 96d411c00ee6f0c7d062a5bda4ca2295d4f36d5d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164474"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051073"
 ---
 # <a name="name-property-ado-md"></a>Name プロパティ (ADO MD)
 オブジェクトの名前を示します。  
@@ -36,7 +36,7 @@ ms.locfileid: "99164474"
 ## <a name="return-values"></a>戻り値  
  は **文字列** を返し、読み取り専用です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  オブジェクトの **name** プロパティは、序数参照によって取得できます。その後、オブジェクトを名前で直接参照できます。 たとえば、に `cdf.CubeDefs(0).Name` よって "Bobs ビデオストア" が生成された場合、この [CubeDef](./cubedef-object-ado-md.md) をと呼び出すことができ `cdf.CubeDefs("Bobs Video Store")` ます。  
   
 ## <a name="applies-to"></a>適用対象  

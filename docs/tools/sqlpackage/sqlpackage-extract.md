@@ -10,15 +10,15 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: abefb39814213426d863fa3839c4095eadc82249
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: c4a9947520ef3914a2ccb34aba5ffaacc1bc6bb2
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577921"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983645"
 ---
 # <a name="sqlpackage-extract-parameters-and-properties"></a>SqlPackage Extract のパラメーターとプロパティ
-SqlPackage.exe の Extract 操作を実行すると、SQL Server または Azure SQL Database から DACPAC パッケージ (.dacpac ファイル) へのライブ データベースのスキーマが作成されます。 既定では、データは .dacpac ファイルに含まれません。 データを含めるには、[Export アクション](sqlpackage-export.md)を使用します。 
+SqlPackage.exe Extract 操作によって、DACPAC ファイル (.dacpac) で、接続されたデータベースのスキーマが作成されます。 既定では、データは .dacpac ファイルに含まれません。 データを含めるには、[Export 操作](sqlpackage-export.md)を活用するか、Extract プロパティ *ExtractAllTableData*/*TableData* を使用します。 
 
 ## <a name="command-line-syntax"></a>コマンドライン構文
 

@@ -2,7 +2,7 @@
 title: Linux および macOS 上の ODBC Driver for SQL Server のリリース ノート
 description: Microsoft ODBC Driver for SQL Server のリリース済みバージョンにおける新機能と変更内容について学習します。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 79c86e34a759e65f858621932fea5772e51756e2
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 43f6be9103f000150d8069888b6129b36ccf29e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899521"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194607"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
 
@@ -37,6 +37,15 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## <a name="177-january-2021"></a>17.7 - 2021 年 1 月
+
+| [新しい項目] | 詳細 |
+| :------- | :------ |
+| 新しいディストリビューションのサポート。 | Ubuntu 20.10、macOS Big Sur (11.0)、Oracle Linux 7 |
+| サービス プリンシパル認証 | [DSN および接続文字列の属性とキーワード](../dsn-connection-string-attribute.md)に関する記事を参照してください。 |
+| 暗号化された money 列と smallmoney 列に挿入する機能 | [Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページを参照してください。 |
+| バグが修正されました。 | [バグの修正](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="176-july-2020"></a>17.6、2020 年 7 月
 

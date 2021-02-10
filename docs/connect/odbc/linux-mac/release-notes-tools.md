@@ -2,27 +2,36 @@
 title: Linux および macOS の mssql-tools のリリース ノート
 description: Microsoft SQL Server ツールのリリース済みバージョンにおける新機能と変更内容について説明します。
 ms.custom: ''
-ms.date: 07/13/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-zhangw
 ms.author: v-zhangw
 manager: kenvh
-ms.openlocfilehash: 85f7115dbf138055df83a7bb07e5a78f505b5794
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 75f1144e84792b3c9361dcab74dcdbcb7b072268
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87812357"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075924"
 ---
 # <a name="release-notes-for-the-microsoft-sql-server-tools-on-linux-and-macos"></a>Linux および macOS の Microsoft SQL Server ツールのリリース ノート
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 この記事では、Linux および macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] SQL Server ツールのバージョン管理されたリリースの新機能を一覧で説明します。
+
+## <a name="17711-january-2021"></a>17.7.1.1 - 2021 年 1 月
+
+| 追加された機能 | 詳細 |
+| :------------ | :------ |
+| Sqlcmd バグ修正 | 実行の繰り返しを引き起こす、入力リダイレクトのバグと空の行を修正しました。 |
+| Sqlcmd バグ修正 | 特定の書式設定で r、p、X、k オプションについて間違ったエラーが報告される現象を解消しました。 |
+| Sqlcmd -z/-Z "Password" オプション | サポートされるようになりました。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="17611-july-2020"></a>17.6.1.1、2020 年 7 月
 

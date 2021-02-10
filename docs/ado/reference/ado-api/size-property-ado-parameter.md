@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f47c76cd0c79d1ffade6ff163558be5e5a254be
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 57682be31c8640dc68b149495df2b0b36639d419
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166546"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051443"
 ---
 # <a name="size-property-ado-parameter"></a>Size プロパティ (ADO Parameter)
 [パラメーター](./parameter-object.md)オブジェクトの最大サイズをバイト数または文字数で示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99166546"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **パラメーター** オブジェクトの値の最大サイズをバイトまたは文字単位で示す **Long 型** の値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Size** プロパティを使用して、**パラメーター** オブジェクトの [Value](./value-property-ado.md)プロパティに対して書き込みまたは読み取りを行う値の最大サイズを決定します。  
   
  **パラメーター** オブジェクトに可変長データ型 (たとえば、 **adVarChar** などの任意の **文字列** 型) を指定する場合は、[パラメーター](./parameters-collection-ado.md)コレクションに追加する前に、オブジェクトの **Size** プロパティを設定する必要があります。それ以外の場合は、エラーが発生します。  

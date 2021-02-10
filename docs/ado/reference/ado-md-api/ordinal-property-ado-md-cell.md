@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: caadd690a43683b4e31ae73b99a7f24217fb8529
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4d76ed341fe71f7a5927f6a7e84a63322adcf13f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164454"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051043"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal プロパティ (ADO MD セル)
 セルセット内の位置によって [セル](./cell-object-ado-md.md) を一意に識別します。  
@@ -30,7 +30,7 @@ ms.locfileid: "99164454"
 ## <a name="return-values"></a>戻り値  
  **長** 整数を返し、読み取り専用です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  セルの序数値は、セルセット内のセルを一意に識別します。 概念的には、セルセット内のセルには、セルセットが *p* 次元配列であるかのように番号が付けられます。ここで、 *p* は [軸](./axes-collection-ado-md.md)の数です。 セルは、行優先順で0から始まる番号が付けられます。 セルの序数を計算するための式を次に示します。  
   
  セルの序数値を[Cellset](./cellset-object-ado-md.md)オブジェクトの[Item](./item-property-ado-md-cellset.md)プロパティと共に使用して、[セル](./cell-object-ado-md.md)をすばやく取得できます。  
