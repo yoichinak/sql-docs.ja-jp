@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26de39ffdd918a8281998b32d89c68fd1babf75e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 474d2d1f076188b22224e62f0e487872440c6eb5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170090"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056467"
 ---
 # <a name="supports-method"></a>Supports メソッド
 指定した [レコードセット](./recordset-object-ado.md) オブジェクトが特定の種類の機能をサポートするかどうかを判断します。  
@@ -41,7 +41,7 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  1つ以上の [カーソルオプションの列挙](./cursoroptionenum.md)値で構成される **Long** 式です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **サポート** メソッドを使用して、**レコードセット** オブジェクトがサポートする機能の種類を決定します。 対応する定数が *カーソルオプション* に含まれる機能を **レコードセット** オブジェクトがサポートしている場合、 **supports** メソッドは **True** を返します。 それ以外の場合は **False** を返します。  
   
 > [!NOTE]

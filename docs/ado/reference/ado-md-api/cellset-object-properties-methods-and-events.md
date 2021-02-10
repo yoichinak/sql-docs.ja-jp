@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ffc1a3e6a96a3910d02bf7d94b2a655cad5b1381
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 241181a8e6333959cb2d38d21470f7ef88e6916d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169934"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055687"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Cellset オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -41,7 +41,7 @@ ms.locfileid: "99169934"
   
  [Open メソッド](./open-method-ado-md.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3f433434833ee07e4ebbf999e2ef2ca122f44fc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 41ef9c6809302e39d63e5cca53bc3c0f29963683
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170064"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056417"
 ---
 # <a name="type-property-example-field-vc"></a>Type プロパティの例 (Field) (VC++)
-この例では、**_Employees_* _ テーブル内のすべての [フィールド](./field-object.md)オブジェクトの **type** プロパティの値に対応する定数の名前を表示することによって、 [type](./type-property-ado.md)プロパティを示しています。 このプロシージャを実行するには、FieldType 関数が必要です。  
+この例では、 **_Employees_** テーブル内のすべての [Field](./field-object.md)オブジェクトの **type** プロパティの値に対応する定数の名前を表示することによって、 [type](./type-property-ado.md)プロパティを示します。 このプロシージャを実行するには、FieldType 関数が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -154,7 +154,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- *Employee テーブルの _ フィールド:**  
+ **Employee テーブルのフィールド:**  
  **Name: emp_id**  
  **種類: adChar**  
  **名前: fname**  

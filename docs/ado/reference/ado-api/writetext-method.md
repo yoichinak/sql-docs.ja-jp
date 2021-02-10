@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4c05ab892ce442db5eefefddf3eb0796af5dec9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8d310e2beaf69968721e2edc5c65c57cb88cf492
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166243"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056037"
 ---
 # <a name="writetext-method"></a>WriteText メソッド
 指定したテキスト文字列を [ストリーム](./stream-object-ado.md) オブジェクトに書き込みます。  
@@ -38,10 +38,10 @@ Stream.WriteText Data, Options
  *データ*  
  書き込む文字のテキストを含む **文字列** 値。  
   
- *Options*  
+ *[オプション]*  
  任意。 指定した文字列の末尾に行区切り記号を書き込む必要があるかどうかを指定する [Streamwriteenum](./streamwriteenum.md) 値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  指定された文字列は、 **ストリーム** オブジェクトに書き込まれます。文字列の間にスペースや文字は含まれません。  
   
  現在の [位置](./position-property-ado.md) は、書き込まれたデータに続く文字に設定されます。 **WriteText** メソッドは、ストリーム内の残りのデータを切り捨てません。 これらの文字を切り捨てたい場合は、 [SetEOS](./seteos-method.md)を呼び出します。  

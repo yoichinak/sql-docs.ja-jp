@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c9324c76a515a4b6ca300cdf15d23174ff8935c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dc64756d2b2ac679e185c4dff8888352a7865f83
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99174309"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055727"
 ---
 # <a name="cellset-object-ado-md"></a>CellSet オブジェクト (ADO MD)
 多次元クエリの結果を表します。 これは、キューブまたは他のセルセットから選択されたセルのコレクションです。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **セルセット** 内のデータは、配列に似た直接アクセスを使用して取得されます。 特定のメンバーにドリルダウンして、そのメンバーに関するデータを取得することができます。 たとえば、次のコードは、という名前のセルセットの最初の軸の最初の位置にある最初のメンバーのキャプションを返し `cst` ます。  
   
 ```  

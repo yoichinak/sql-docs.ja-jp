@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cffc2e0a79ff4bffd83eadac20cf522df6d0c9cc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 53be0dbdb8ecebb6b81c1b4300353a07c0f442e5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172368"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056083"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute イベント (ADO)
 この **イベントは、接続** で保留中のコマンドが実行される直前に呼び出されます。  
@@ -44,7 +44,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  開かれる **レコードセット** のロックの種類を格納する [locktypeenum](./locktypeenum.md) 。 このパラメーターを使用すると、 **RecordsetOpen** 操作中に任意の型にロックを変更できます。 他の操作では、 *LockType* は無視されます。  
   
- *Options*  
+ *[オプション]*  
  コマンドを実行したり、**レコードセット** を開いたりするために使用できるオプションを示す **Long 型** の値です。  
   
  *adStatus*  
@@ -59,7 +59,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  このイベント通知を適用する [接続オブジェクト (ADO)](./connection-object-ado.md) オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  接続によっ **てイベントが発生する可能性** があります。  [Execute メソッド (Ado Connection)](./execute-method-ado-connection.md)、 [EXECUTE メソッド (ado Command)](./execute-method-ado-command.md)、または [Open method (Ado Recordset)](./open-method-ado-recordset.md) メソッド。 *Pconnection* パラメーターには、常に **接続** オブジェクトへの有効な参照を含める必要があります。 イベントが **Connection.Exeかわいらしい** のために発生した場合、 *Precordset* パラメーターと *precordset* パラメーターは **Nothing** に設定されます。 イベントが **レコードセット** によって発生した場合、 *Precordset* パラメーターは **レコードセット** オブジェクトを参照し、 *precordset* パラメーターは **Nothing** に設定されます。 イベントが **Command.Exeかわいらしい** のために発生した場合、 *Pcommand* パラメーターは **コマンド** オブジェクトを参照し、 *pcommand* パラメーターは **Nothing** に設定されます。  
   
  を **実行** すると、保留中の実行パラメーターを確認および変更できます。 このイベントは、保留中のコマンドがキャンセルされたことを示す要求を返す場合があります。  

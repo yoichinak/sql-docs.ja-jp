@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: a443b615a6a04b588ed6dc84c6a8a4f6ed12e2f0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7086a69625b6ba365e5efb8ce3422799442cb05d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726760"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058403"
 ---
 ## <a name="specifying-application-intent"></a>アプリケーション インテントの指定
 
@@ -48,7 +48,7 @@ ms.locfileid: "91726760"
 
 - AlwaysOn 可用性グループ リスナーに接続する必要があります。
 
-- **ApplicationIntent** 接続文字列キーワードを **ReadOnly**に設定する必要があります。
+- **ApplicationIntent** 接続文字列キーワードを **ReadOnly** に設定する必要があります。
 
 - データベース管理者が可用性グループを構成し、読み取り専用のルーティングを有効にする必要があります。
 

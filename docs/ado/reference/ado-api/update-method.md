@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 279d0e82bff4d71a2c3b18bbdc7ff88f0b9581a9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 17959e475214a23998ac7242f90e29da9de5ecfe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172425"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056316"
 ---
 # <a name="update-method"></a>Update メソッド
 レコード[セット](./recordset-object-ado.md)オブジェクトの現在の行、または[レコード](./record-object-ado.md)オブジェクトの[Fields](./fields-collection-ado.md)コレクションに対して行ったすべての変更を保存します。  
@@ -41,7 +41,7 @@ record.Fields.Update
  *値*  
  任意。 単一の値を表す **バリアント** 、または新しいレコードのフィールドの値を表す **バリアント** 配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="recordset"></a>レコードセット  
  [AddNew](./addnew-method-ado.md)メソッドを呼び出した後、または既存のレコードのフィールド値を変更した後に、**レコードセット** オブジェクトの現在のレコードに対して行った変更を保存するには、 **Update** メソッドを使用します。 **レコードセット** オブジェクトは更新をサポートしている必要があります。  

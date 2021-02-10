@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6246eaa8dbdd92236a891fa56189e104b594b64c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 27ee83f558c13be2c8db2ede2b93cfa3a9d90111
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172358"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056117"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset および RecordsetChangeComplete イベント (ADO)
 **WillChangeRecordset** イベントは、保留中の操作によって [レコードセット](./recordset-object-ado.md)が変更される前に呼び出されます。 **RecordsetChangeComplete** イベントは、**レコードセット** が変更された後に呼び出されます。  
@@ -59,7 +59,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  **レコードセット** オブジェクトです。 このイベントが発生した **レコードセット** 。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **WillChangeRecordset** または **RecordsetChangeComplete** イベントは、**レコードセット** の再 [実行または](./requery-method.md) [Open](./open-method-ado-recordset.md)メソッドが原因で発生する可能性があります。  
   
  プロバイダーがブックマークをサポートしていない場合、プロバイダーから新しい行が取得されるたびに **RecordsetChange** イベント通知が発生します。 このイベントの頻度は、 **RecordsetCacheSize** プロパティによって異なります。  

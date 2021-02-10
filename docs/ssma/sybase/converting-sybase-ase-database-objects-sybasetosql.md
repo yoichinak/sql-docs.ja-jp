@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 66384c27490bbc9d330f5f2d186bad1b4f4b97ee
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 07560faaa3fb3316864216859f79cd5e1b7ff950
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038864"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056837"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE データベースオブジェクトの変換 (SybaseToSQL)
 SAP Adaptive Server Enterprise (ASE) に接続した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE sql に接続し、プロジェクトとデータのマッピングオプションを設定した後、Sap Adaptive Server enterprise (ase) データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または azure sql database オブジェクトに変換できます。  
@@ -137,7 +137,7 @@ SSMA for SAP ASE では、オンプレミス SQL Server への変換中に次の
   
 6.  右ペインで、[ **レポート** ] タブを選択します。  
   
-7.  [ **レポート** ] タブの上部にドロップダウンリストが表示されます。 一覧に **統計**が表示されている場合は、選択範囲を **Source**に変更します。  
+7.  [ **レポート** ] タブの上部にドロップダウンリストが表示されます。 一覧に **統計** が表示されている場合は、選択範囲を **Source** に変更します。  
   
     SSMA では、コードのすぐ上にソースコードといくつかのボタンが表示されます。  
   
@@ -147,13 +147,13 @@ SSMA for SAP ASE では、オンプレミス SQL Server への変換中に次の
   
 変換できなかった項目ごとに、そのオブジェクトをどのように処理するかを決定する必要があります。  
   
--   **SQL**タブでプロシージャおよびトリガーのソースコードを編集できます。  
+-   **SQL** タブでプロシージャおよびトリガーのソースコードを編集できます。  
   
 -   問題のあるコードを削除または変更するには、SAP ASE オブジェクトを変更します。 更新されたコードを SSMA に読み込むには、メタデータを更新する必要があります。 詳細については、「 [SAP ASE &#40;SybaseToSQL&#41;への接続 ](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)」を参照してください。  
   
 -   オブジェクトを移行から除外することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または AZURE Sql Metadata explorer と Sybase メタデータエクスプローラーで、オブジェクトをまたは AZURE sql に読み込む前に項目の横のチェックボックスをオフにし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SAP ASE からデータを移行します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 移行プロセスの次のステップでは、変換された [データベースオブジェクトを SQL Server/SQL Azure (SybaseToSQL) に読み込み](./loading-converted-database-objects-into-sql-server-sybasetosql.md)ます。  
   
 ## <a name="see-also"></a>関連項目  

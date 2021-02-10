@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64cb464f4843476dda737609596da148e304c2fc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 591e3ea0a1fd9ebc3e6d8321da1af1638102749c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169988"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055777"
 ---
 # <a name="axis-object-ado-md"></a>Axis オブジェクト (ADO MD)
 1つ以上のディメンションの選択されたメンバーを含むセルセットの位置指定軸またはフィルター軸を表します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **軸** オブジェクトは、[軸](./axes-collection-ado-md.md)コレクションに含めることも、[セルセット](./cellset-object-ado-md.md)の [filteraxis](./filteraxis-property-ado-md.md)プロパティによって返すこともできます。  
   
  **軸** オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6fcca84f52f5a6b9b8c033c00980374a0c17d7be
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 6b3598ebd679a85b8965babccfee4fc3658a08b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036686"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056607"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>データ移行の設定 (SybaseToSQL)
   
@@ -26,7 +26,7 @@ ms.locfileid: "92036686"
   
 -   カスタム SQL ステートメントの解析は、テーブルノードの [ **データ移行の設定** ] タブで実装されます。  
   
--   **データ移行設定**可視化で使用できる2つのチェックボックスを次に示します。  
+-   **データ移行設定** 可視化で使用できる2つのチェックボックスを次に示します。  
   
     1.  SQL Server テーブルの切り捨て  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a57b99597bea639eddb5e73b2d6e4c7137333bc2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d135747f0599f646035d2e70e768bf755ac6fa21
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166270"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056107"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect イベント (ADO)
 接続が開始 **される前に、イベントが** 呼び出されます。  
@@ -46,7 +46,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *パスワード*  
  保留中の接続のパスワードを含む **文字列** 。  
   
- *Options*  
+ *[オプション]*  
  プロバイダーが *ConnectionString* を評価する方法を示す **Long 型** の値。 唯一のオプションは **adAsyncOpen** です。  
   
  *adStatus*  
@@ -59,7 +59,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *pConnection*  
  このイベント通知を適用する [接続](./connection-object-ado.md) オブジェクト。 に **よって接続の** パラメーターを **変更して****も、接続** に影響はありません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  を **呼び出すと、** *ConnectionString*、 *UserID*、 *Password*、および *Options* の各パラメーターは、このイベントの原因となった操作によって確立された値 (保留中の接続) に設定され、イベントが返される前に変更できます。 **接続** によって、保留中の接続が取り消されたという要求が返される場合があります。  
   
  このイベントがキャンセルされると、 **Connectcomplete** が呼び出され、 *Adstatus* パラメーターが **Adstatuserrorの curred** に設定されます。  

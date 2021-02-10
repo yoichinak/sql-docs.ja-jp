@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8bc846e849df5980efca8f5e28982c964276f8bb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4e754d71d3b616ebd8b44af399c6386e940c8ada
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166317"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056227"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch メソッド
 すべての保留中のバッチ更新をディスクに書き込みます。  
@@ -41,7 +41,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  *PreserveStatus*  
  任意。 [Status](./status-property-ado-recordset.md)プロパティによって示されるローカルの変更をコミットする必要があるかどうかを指定する **ブール** 値です。 この値が **True** に設定されている場合、更新が完了した後も、各レコードの **Status** プロパティは変更されません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  バッチ更新モードで **レコードセット** オブジェクトを変更する場合は、 **UpdateBatch** メソッドを使用して、**レコードセット** オブジェクトに加えられたすべての変更を基になるデータベースに転送します。  
   
  **レコードセット** オブジェクトでバッチ更新がサポートされている場合は、 **UpdateBatch** メソッドを呼び出すまで、1つ以上のレコードに対して複数の変更をローカルにキャッシュできます。 現在のレコードを編集している場合、または **UpdateBatch** メソッドを呼び出したときに新しいレコードを追加している場合、ADO は [Update](./update-method.md) メソッドを自動的に呼び出して、保留中の変更を現在のレコードに保存してから、バッチされた変更をプロバイダーに送信します。 バッチ更新は、キーセットまたは静的カーソルのいずれかでのみ使用してください。  

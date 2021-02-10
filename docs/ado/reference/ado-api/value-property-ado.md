@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b809a24429b490961e1d0d009656539db9fe81d9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7796f70b1652c479d958477dd244f836477c64e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172405"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056217"
 ---
 # <a name="value-property-ado"></a>Value プロパティ (ADO)
 
@@ -32,7 +32,7 @@ ms.locfileid: "99172405"
 
 オブジェクトの値を示す **バリアント** 値を設定または返します。 既定値は [Type](./type-property-ado.md) プロパティによって異なります。
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **Value** プロパティを使用して、**フィールド** オブジェクトのデータを設定または取得します。また、**パラメーターオブジェクトを** 使用してパラメーター値を設定または取得するか、プロパティオブジェクトを使用し **てプロパティ設定** を設定または取得します。 **値** プロパティが読み取り/書き込みか、読み取り専用かは、さまざまな要因によって決まります。 詳細については、各オブジェクトのトピックを参照してください。
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46c28cd74fcf7a580d6695e21cd1e5e2750f0519
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a2476447e5da8baa89a2df326eba3d41225c698e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166255"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056057"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove および MoveComplete イベント (ADO)
 "イベントの **移動** " は、保留中の操作が [レコードセット](./recordset-object-ado.md)内の現在の位置を変更する前に呼び出されます。 **MoveComplete** イベントは、**レコードセット** 内の現在の位置が変更された後に呼び出されます。  
@@ -59,7 +59,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  [レコードセット](./recordset-object-ado.md)オブジェクトです。 このイベントが発生した **レコードセット** 。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [Open](./open-method-ado-recordset.md)、 [Move](./move-method-ado.md)、 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [AddNew](./addnew-method-ado.md)、および [Requery](./requery-method.md)の各 **レコードセット** 操作によって、 **MoveComplete** イベントが **発生する可能性** があります。 これらのイベントは、 [Filter](./filter-property.md)、 [Index](./index-property.md)、 [Bookmark](./bookmark-property-ado.md)、 [AbsolutePage](./absolutepage-property-ado.md)、および [AbsolutePosition](./absoluteposition-property-ado.md)の各プロパティによって発生することがあります。 これらのイベントは、子 **レコード** セットに **レコードセット** イベントが関連付けられていて、親 **レコードセット** が移動された場合にも発生します。  
   
  *AdReason* パラメーターを含むイベントのイベント通知を完全に停止するには、使用可能な *adReason* 値ごとに *adstatus* パラメーターを **adStatusUnwantedEvent** に設定する必要があります。  

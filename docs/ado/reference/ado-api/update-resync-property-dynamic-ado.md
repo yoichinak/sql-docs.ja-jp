@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d92f70c5091ec2468199874c4a79843398bc7833
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8e52c07a4f776c740079ae1460a2890d7aac02ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170032"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056297"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Update Resync プロパティ - 動的 (ADO)
 [UpdateBatch](./updatebatch-method.md)メソッドの後に暗黙の再[同期](./resync-method.md)メソッド操作を実行するかどうかを指定します。それを行う場合は、その操作のスコープを指定します。  
@@ -27,7 +27,7 @@ ms.locfileid: "99170032"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  1つ以上の [ADCPROP_UPDATERESYNC_ENUM](./adcprop-updateresync-enum.md) 値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ADCPROP_UPDATERESYNC_ENUM の値は、他の値の組み合わせを既に表している adResyncAll を除き、組み合わせて使用できます。  
   
  定数 **adResyncConflicts** は、再同期値を基になる値として格納しますが、保留中の変更はオーバーライドしません。  

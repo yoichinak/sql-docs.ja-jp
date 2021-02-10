@@ -14,12 +14,12 @@ ms.assetid: 002f129e-0868-48ad-a4b4-c68b5007e12e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 51a1d9d5f23f93233a20f46f081e6172a7bc5135
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32d8bb51bd602a1da6fec11d3a101f984cab18a0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468821"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058507"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>サーバー接続ファイルの作成 (OracleToSQL)
 サーバー情報は、スクリプトファイルの [サーバー] セクションで、または別のサーバー接続ファイルで指定できます。 サーバー接続ファイルのコマンドラインパラメーターは、 `-c <serverconnectionfile>` です。 スクリプトファイルとサーバー接続ファイルの両方に同じサーバー id が存在する場合は、スクリプトファイル内のサーバー定義が考慮されます。  
@@ -106,6 +106,6 @@ ms.locfileid: "88468821"
 ## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、 [SSMA コンソール &#40;OracleToSQL を実行](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)して&#41;  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [SSMA コンソールの実行](executing-the-ssma-console-oracletosql.md)  
   

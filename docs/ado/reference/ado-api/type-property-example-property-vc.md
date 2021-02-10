@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 647eca0b17066d46ff8ae3f9a39e22c87d4c07fa
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 39941627af5bdbcbcacac123ee3543f8963eb6d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170059"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056407"
 ---
 # <a name="type-property-example-property-vc"></a>Type プロパティの例 (プロパティ) (VC++)
 この例では、 [Type](./type-property-ado.md) プロパティを示します。 これは、 [プロパティ](./properties-collection-ado.md)、 [フィールド](./fields-collection-ado.md)などのコレクションの名前と種類を一覧表示するためのユーティリティのモデルです。  

@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed3add4b0920c493e7f83ccad14032a1ff227166
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bed4948faafc02def05964eca19653d5373560dd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170005"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055847"
 ---
 # <a name="ado-md-properties"></a>ADO MD のプロパティ
 
 |プロパティ|説明|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-ado-md.md)|現在のセルセットまたはカタログが現在どの ADO **接続** オブジェクトに属しているかを示します。|  
-|[キャプション](./caption-property-ado-md.md)|**レベル** または **メンバー** オブジェクトを表示するときに使用するテキストキャプションを示します。|  
+|[Caption](./caption-property-ado-md.md)|**レベル** または **メンバー** オブジェクトを表示するときに使用するテキストキャプションを示します。|  
 |[ChildCount](./childcount-property-ado-md.md)|現在の **メンバー** オブジェクトが階層内の親であるメンバーの数を示します。|  
 |[Children](./children-property-ado-md.md)|現在の **メンバー** が階層内の親である **メンバー** のコレクションを返します。|  
-|[カウント](../ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
+|[Count](../ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
 |[Depth](./depth-property-ado-md.md)|**レベル** と階層レベルのルートとの間のレベル数を示します。|  
 |[説明](./description-property-ado-md.md)|現在のオブジェクトの説明テキストを返します。|  
 |[DimensionCount](./dimensioncount-property-ado-md.md)|軸上のディメンションの数を示します。|  

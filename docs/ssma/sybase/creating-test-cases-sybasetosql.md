@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fb3fe4816faeb050a1c4321def0e7dd4e6937bdb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 460ea84af51b872841eb82cd405cc29ebfe59e65
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463154"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056687"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>テスト ケースの作成 (SybaseToSQL)
 テストケースウィザードを使用して、テストを作成します。 このウィザードでは、テスト済みオブジェクトと検証済みオブジェクトを選択し、テストパラメーターを指定することによって、テストケースを作成できます。  
   
 ## <a name="starting-the-test-case-wizard"></a>テストケースウィザードの開始  
-テストケースウィザードを開始するには、[テスト**担当**者] メニューの [**新しいテストケース**] をクリックします。  
+テストケースウィザードを開始するには、[テスト **担当** 者] メニューの [**新しいテストケース**] をクリックします。  
   
 ウィザードを開始すると、ソースの Sybase サーバーでデータベースの ssmatester2005db または ssmatester2008db (プロジェクトの種類によって異なります) が検索されます。 補助オブジェクトを格納するために使用される Tester 拡張機能スキーマです。 テストケースウィザードで ssmatester2005db または ssmatester2008db が見つからない場合は、テスト担当者拡張データベースを作成するように提案するダイアログウィンドウが表示されます。 (通常、この状況は SSMA Tester の初回実行時に発生します)。  
   

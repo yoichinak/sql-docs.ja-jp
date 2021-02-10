@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 485fe00e6f55e6916341fd4420f0aaaa395fe54b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1cd94edb4b1e2c2fba12221a3371592c34eb8c50
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170049"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056363"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>一意のテーブル、一意のスキーマ、一意のカタログ Properties-Dynamic (ADO)
 複数のベーステーブルに対する結合操作によって形成された [レコードセット](./recordset-object-ado.md) 内の特定のベーステーブルに対する変更を厳密に制御できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "99170049"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  テーブル、スキーマ、またはカタログの名前を示す **文字列** 値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  目的のベーステーブルは、そのカタログ名、スキーマ名、およびテーブル名によって一意に識別されます。 一意の **テーブル** プロパティが設定されている場合は、 **一意のスキーマ** または一意の **カタログ** プロパティの値を使用してベーステーブルが検索されます。 一意の **テーブル** プロパティが設定される前に、一意の **スキーマ** と **一意のカタログ** プロパティのどちらかまたは両方が設定されていることを前提としていますが、必須ではありません。  
   
  **一意のテーブル** の主キーは、**レコードセット** 全体の主キーとして扱われます。 これは、主キーを必要とする任意のメソッドに使用されるキーです。  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 757d833da689c3d5097540571074292ec1bd2d69
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a22c2fdf2ee3a8b3397e51643c728f1c860384b8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166189"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055837"
 ---
 # <a name="axes-collection-ado-md"></a>Axes コレクション (ADO MD)
 セルセットを定義する [軸](./axis-object-ado-md.md) オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [Cellset](./cellset-object-ado-md.md)オブジェクトには、 **Axes** コレクションが含まれています。 **セルセット** を開くと、このコレクションには少なくとも1つの **軸** が含まれます。 **軸** オブジェクトの使用方法の詳細については、 [axis](./axis-object-ado-md.md)オブジェクトに関する説明を参照してください。  
   
 > [!NOTE]

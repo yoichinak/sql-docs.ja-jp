@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca5aa421eff2048ebce6af5c8db4c6791a67259c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4aef5291d7e4c539200eb0cfd34edf3174c44c0b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172374"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056137"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField および FieldChangeComplete イベント (ADO)
 イベントは、保留 **中の操作** によって [レコードセット](./recordset-object-ado.md)内の1つまたは複数の [フィールド](./field-object.md)オブジェクトの値が変更される前に呼び出されます。 **FieldChangeComplete** イベントは、1つまたは複数の **フィールド** オブジェクトの値が変更された後に呼び出されます。  
@@ -62,7 +62,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *pRecordset*  
  **レコードセット** オブジェクトです。 このイベントが発生した **レコードセット** 。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [Value](./value-property-ado.md)プロパティを設定し 、フィールドと値の配列パラメーターを使用して [Update](./update-method.md)メソッドを呼び出す **と、が** 発生する可能性があります。  
   
 ## <a name="see-also"></a>参照  

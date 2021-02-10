@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5ac29f4a13f61882ccc007de2bcc54b74d1e68ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41fa50fba0f6d1398788246422a84b825594a5f4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492305"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056667"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>サーバー接続ファイルの作成 (SybaseToSQL)
 サーバー情報は、スクリプトファイルの [サーバー] セクションで、または別のサーバー接続ファイルで指定できます。 サーバー接続ファイルのコマンドラインパラメーターは、 `-c <serverconnectionfile>` です。 スクリプトファイルとサーバー接続ファイルの両方に同じサーバー id が存在する場合は、スクリプトファイル内のサーバー定義が考慮されます。  
