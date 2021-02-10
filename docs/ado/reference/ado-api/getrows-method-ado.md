@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df59c3d464d1c19a3b98e8611e2db2983db2a833
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 717569716fa6191cfb4fc7258c32240d9ebd2e17
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171002"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100021039"
 ---
 # <a name="getrows-method-ado"></a>GetRows メソッド (ADO)
 [レコードセット](./recordset-object-ado.md)オブジェクトの複数のレコードを配列に取得します。  
@@ -47,7 +47,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Fields*  
  任意。 1つのフィールド名または序数位置、またはフィールド名または序数位置の配列を表す **バリアント** 。 ADO は、これらのフィールド内のデータのみを返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **GetRows** メソッドを使用して、レコード **セット** から2次元配列にレコードをコピーします。 最初の添字はフィールドを識別し、2番目のインデックスはレコード番号を識別します。 **GetRows** メソッドがデータを返すと、*配列* 変数は自動的に正しいサイズに設定されます。  
   
  *Rows* 引数の値を指定しない場合、 **GetRows** メソッドは **Recordset** オブジェクト内のすべてのレコードを自動的に取得します。 使用可能な数より多くのレコードを要求した場合、 **GetRows** は使用できるレコードの数のみを返します。  

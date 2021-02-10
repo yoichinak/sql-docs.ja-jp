@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 906f895eade7120b57d401851a0e19203f943980
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b7ed585adcfc9542e3d396f2b0fd1a82d65cdcf4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991713"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028354"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO イベントのインスタンス化: ADO と WFC
 Windows Foundation クラス用の ADO (ADO/WFC) は ADO イベントモデルに基づいて構築されており、簡略化されたアプリケーションプログラミングインターフェイスを提供します。 一般に、ADO/WFC は ADO イベントをインターセプトし、イベントパラメーターを1つのイベントクラスに統合してから、イベントハンドラーを呼び出します。  
   
 ### <a name="to-use-ado-events-in-adowfc"></a>Ado/WFC で ADO イベントを使用するには  
   
-1.  イベントを処理する独自のイベントハンドラーを定義します。 たとえば、 **connectionevent**ファミリで**connectcomplete**イベントを処理する場合は、次のコードを使用できます。  
+1.  イベントを処理する独自のイベントハンドラーを定義します。 たとえば、 **connectionevent** ファミリで **connectcomplete** イベントを処理する場合は、次のコードを使用できます。  
   
     ```  
     public void onConnectComplete(Object sender,ConnectionEvent e)  
@@ -32,20 +32,20 @@ Windows Foundation クラス用の ADO (ADO/WFC) は ADO イベントモデル�
     }  
     ```  
   
-2.  イベントハンドラーを表すハンドラーオブジェクトを定義します。 ハンドラーオブジェクトは、 **Connectionevent**型のイベントの場合はデータ型**Connecteventhandler** 、 **RecordsetEvent**型のイベントの場合はデータ型**RecordsetEventHandler**である必要があります。 たとえば、 **Connectcomplete** イベントハンドラーに対して次のコードを記述します。  
+2.  イベントハンドラーを表すハンドラーオブジェクトを定義します。 ハンドラーオブジェクトは、 **Connectionevent** 型のイベントの場合はデータ型 **Connecteventhandler** 、 **RecordsetEvent** 型のイベントの場合はデータ型 **RecordsetEventHandler** である必要があります。 たとえば、 **Connectcomplete** イベントハンドラーに対して次のコードを記述します。  
   
     ```  
     ConnectionEventHandler handler =   
         new ConnectionEventHandler(this, "onConnectComplete");  
     ```  
   
-     **Connectioneventhandler**コンストラクターの最初の引数は、2番目の引数で指定されたイベントハンドラーを含むクラスへの参照です。  
+     **Connectioneventhandler** コンストラクターの最初の引数は、2番目の引数で指定されたイベントハンドラーを含むクラスへの参照です。  
   
 3.  特定の種類のイベントを処理するために指定されたハンドラーの一覧に、イベントハンドラーを追加します。 メソッドには、 **addOn**_EventName_(*handler*) などの名前を指定します。  
   
 4.  ADO/WFC は、内部的にすべての ADO イベントハンドラーを実装します。 このため、 **接続** または **レコードセット** 操作によって発生したイベントは、ADO/WFC イベントハンドラーによってインターセプトされます。  
   
-     Ado/WFC イベントハンドラーは、ado/wfc **connectionevent**クラスのインスタンス、または ADO/wfc **RecordsetEvent**クラスのインスタンスの ADO **RecordsetEvent**パラメーターに ado **connectionevent**パラメーターを渡します。 これらの ADO/WFC クラスは、ADO イベントパラメーターを統合します。つまり、各 ADO/WFC クラスには、すべての ADO **Connectionevent** メソッドまたは **RecordsetEvent** メソッドの一意のパラメーターごとに1つのデータメンバーが含まれています。  
+     Ado/WFC イベントハンドラーは、ado/wfc **connectionevent** クラスのインスタンス、または ADO/wfc **RecordsetEvent** クラスのインスタンスの ADO **RecordsetEvent** パラメーターに ado **connectionevent** パラメーターを渡します。 これらの ADO/WFC クラスは、ADO イベントパラメーターを統合します。つまり、各 ADO/WFC クラスには、すべての ADO **Connectionevent** メソッドまたは **RecordsetEvent** メソッドの一意のパラメーターごとに1つのデータメンバーが含まれています。  
   
 5.  ADO/WFC は、ADO/WFC イベントオブジェクトを使用してイベントハンドラーを呼び出します。 たとえば、 **Onconnectcomplete** ハンドラーには次のようなシグネチャがあります。  
   

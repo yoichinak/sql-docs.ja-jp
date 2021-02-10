@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9369b22c012773627c17da55a336aac116dc4e06
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9f917dbcf9f89edd22a06a8b95726333ffb342b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171227"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025136"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset イベント (ADO)
 **Endofrecordset** イベントは、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の末尾を越えて行を移動しようとしたときに呼び出されます。  
@@ -48,7 +48,7 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *pRecordset*  
  **レコードセット** オブジェクトです。 このイベントが発生した **レコードセット** 。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  MoveNext **レコードセット** イベントは、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 操作が失敗した場合に発生する可能性があります。  
   
  このイベントハンドラーは、おそらく **MoveNext** を呼び出した結果として、**レコードセット** オブジェクトの末尾を越えて移動しようとしたときに呼び出されます。 ただし、このイベントでは、データベースからより多くのレコードを取得し、レコード **セット** の末尾に追加することができます。 その場合は、 *Ffar データ* を VARIANT_TRUE に設定し、 **endofrecordset** からを返します。 次に、再度 **MoveNext** を呼び出して、新しく取得したレコードにアクセスします。  

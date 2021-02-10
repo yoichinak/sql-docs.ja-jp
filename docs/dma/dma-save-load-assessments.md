@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 02a6d49202ad2607d862246eee232e599788244a
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 9f427c7d706e3665cc5cbca092bfbc99a333a1ea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885859"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030630"
 ---
 # <a name="save-and-load-assessments-with-data-migration-assistant"></a>Data Migration Assistant を使用した評価の保存と読み込み
 
@@ -30,34 +30,34 @@ ms.locfileid: "82885859"
 
 ## <a name="saving-an-assessment-to-a-file"></a>評価をファイルに保存する
 
-1. Data Migration Assistant を使用して評価を実行した後、[**評価の保存**] を選択します。
+1. Data Migration Assistant を使用して評価を実行した後、[ **評価の保存**] を選択します。
 
    ![[評価の保存] ダイアログボックスを開く](../dma/media/dma-save-load-assessments/dma-open-save-dialog.png)
 
-   標準の**保存...** ダイアログボックスが表示されます。
+   標準の **保存...** ダイアログボックスが表示されます。
 
    > [!NOTE]
    > Data Migration Assistant で評価を実行する方法の詳細については、 [Data Migration Assistant を使用した SQL Server 移行の評価の実行](../dma/dma-assesssqlonprem.md)に関する記事を参照してください。
 
-2. ファイルの名前を指定し、[**保存**] を選択します。
+2. ファイルの名前を指定し、[ **保存**] を選択します。
 
    ![評価ファイルに名前を付けて保存する](../dma/media/dma-save-load-assessments/dma-name-save-assessment.png)
 
 ## <a name="loading-an-assessment-saved-to-a-file"></a>ファイルに保存された評価を読み込んでいます
 
-1. 以前にファイルに保存した評価を読み込むには Data Migration Assistant を開始し、[**すべての評価**] タブで [**負荷評価**] を選択します。
+1. 以前にファイルに保存した評価を読み込むには Data Migration Assistant を開始し、[ **すべての評価** ] タブで [ **負荷評価**] を選択します。
 
    ![[負荷評価] ダイアログボックスを開く](../dma/media/dma-save-load-assessments/dma-open-load-dialog.png)
 
-2. 読み込む保存済みの評価ファイルに移動し、ファイルを選択して、[**開く**] を選択します。
+2. 読み込む保存済みの評価ファイルに移動し、ファイルを選択して、[ **開く**] を選択します。
 
    ![評価ファイルを開く](../dma/media/dma-save-load-assessments/dma-open-assessment.png)
 
-   [**すべての評価**] タブに、読み込まれた評価のエントリが表示されます。
+   [ **すべての評価** ] タブに、読み込まれた評価のエントリが表示されます。
 
    ![評価エントリの表示](../dma/media/dma-save-load-assessments/dma-display-assessment-entry.png)
 
-3. [評価] エントリを選択し、[**評価を開く**] を選択します。
+3. [評価] エントリを選択し、[ **評価を開く**] を選択します。
 
    ![評価の詳細を開く](../dma/media/dma-save-load-assessments/dma-open-assessment-detail.png)
 

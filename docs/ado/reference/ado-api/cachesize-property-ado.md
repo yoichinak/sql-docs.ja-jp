@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9aef38a384c352648d5487ee9dae9a79d605e8e3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ac840d510bbfeebc575ada36e76462930ffaf19f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167820"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027498"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize プロパティ (ADO)
 メモリ内にローカルにキャッシュされているレコード [セット](./recordset-object-ado.md) オブジェクトのレコードの数を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99167820"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  0より大きくなければならない **Long 型** の値を設定または返します。 既定値は 1 です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  プロバイダーからローカルメモリに一度に取得するレコードの数を制御するには、 **CacheSize** プロパティを使用します。 たとえば、 **CacheSize** が10の場合、最初に **レコードセット** オブジェクトを開いた後、プロバイダーは最初の10個のレコードをローカルメモリに取得します。 **レコードセット** オブジェクト内を移動すると、プロバイダーはローカルメモリバッファーからデータを返します。 キャッシュ内の最後のレコードを越えて移動すると、プロバイダーは、次の10個のレコードをデータソースからキャッシュに取得します。  
   
 > [!NOTE]

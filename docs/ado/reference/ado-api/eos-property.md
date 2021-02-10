@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68b95970715bbcd009f8ae4fce7befd280f894eb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 45268bfba7669f3c202cec9bc652424981e1234e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171214"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025126"
 ---
 # <a name="eos-property"></a>EOS プロパティ
 現在の位置が [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)の末尾にあるかどうかを示します。  

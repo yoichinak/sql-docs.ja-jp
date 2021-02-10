@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ddec7c573c7d208d80fe05dc8f15ba2d0d02c428
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a447c149769d892149096c980b35e77e49de05da
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991723"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028364"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 接続およびレコードセットイベント
-2つの ADO オブジェクトがイベントを発生させることができます。 [接続](../../reference/ado-api/connection-object-ado.md) オブジェクトと [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトです。 **Connectionevent**ファミリは**接続**オブジェクトに対する操作に関連し、 **RecordsetEvent**ファミリは**レコードセット**オブジェクトの操作に関連します。
+2つの ADO オブジェクトがイベントを発生させることができます。 [接続](../../reference/ado-api/connection-object-ado.md) オブジェクトと [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトです。 **Connectionevent** ファミリは **接続** オブジェクトに対する操作に関連し、 **RecordsetEvent** ファミリは **レコードセット** オブジェクトの操作に関連します。
 
 -   **接続イベント**: イベントは、接続のトランザクションが開始、コミット、またはロールバックされるときに発行されます。 [コマンド](../../reference/ado-api/command-object-ado.md) が実行されたとき。 **接続イベント** の操作中に警告が発生した場合は、 **接続** が開始または終了したとき。
 
--   **レコードセットイベント**: 非同期フェッチ操作に加えて、 **レコードセット** オブジェクトの行を移動したり、 **レコードセットの**行のフィールドを変更したり **、レコードセット**の行を変更したり、 **レコードセットを** 閉じたり **、レコードセット**を閉じたり、 **レコードセットに**変更を加えたりするときに、イベントが発行されます。
+-   **レコードセットイベント**: 非同期フェッチ操作に加えて、 **レコードセット** オブジェクトの行を移動したり、 **レコードセットの** 行のフィールドを変更したり **、レコードセット** の行を変更したり、 **レコードセットを** 閉じたり **、レコードセット** を閉じたり、 **レコードセットに** 変更を加えたりするときに、イベントが発行されます。
 
  次の表は、イベントとその説明をまとめたものです。
 
@@ -41,7 +41,7 @@ ms.locfileid: "88991723"
 |--------------------|-----------------|
 |[Fetchprogress](../../reference/ado-api/fetchprogress-event-ado.md)、 [fetchprogress](../../reference/ado-api/fetchcomplete-event-ado.md)|[**取得ステータス**]-データ取得操作の進行状況の通知、または取得操作が完了したことを示す通知。 これらのイベントは、 **レコードセット** がクライアント側カーソルを使用して開かれた場合にのみ使用できます。|
 |[FieldChangeComplete、Changefield、](../../reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**フィールド変更管理** -現在のフィールドの値が変更されるか、または変更されたことを通知します。|
-|[を移動、MoveComplete](../../reference/ado-api/willmove-and-movecomplete-events-ado.md)、 [endofrecordset](../../reference/ado-api/endofrecordset-event-ado.md)|**ナビゲーション管理** - **レコードセット** 内の現在の行の位置が変更されたか、変更されたか、 **レコードセット**の末尾に達したことを通知します。|
+|[を移動、MoveComplete](../../reference/ado-api/willmove-and-movecomplete-events-ado.md)、 [endofrecordset](../../reference/ado-api/endofrecordset-event-ado.md)|**ナビゲーション管理** - **レコードセット** 内の現在の行の位置が変更されたか、変更されたか、 **レコードセット** の末尾に達したことを通知します。|
 |[RecordChangeComplete、](../../reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**行の変更管理** - **レコードセット** の現在の行に何らかの変更が行われたこと、または変更されたことを通知します。|
 |[WillChangeRecordset, RecordsetChangeComplete](../../reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**レコードセットの変更管理** -現在の **レコードセット** の内容が変更されるか、変更されたことを通知します。|
 

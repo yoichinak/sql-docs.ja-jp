@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02b1296a81bed339071995d66bc9c1454ae86aa8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c95c60e0d10b1dfd361af1c93ba5810ae35eb95c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164796"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027582"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)
 この例では、データベースの ***Titles** _ テーブルにあるすべての心理学表の書籍の種類を変更します。 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドによって、_ *_Titles_** テーブルに対して行われたすべての変更を分離するトランザクションが開始された後、 [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドは変更を保存します。 [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して、 [Update](./update-method.md)メソッドを使用して保存した変更を元に戻すことができます。  

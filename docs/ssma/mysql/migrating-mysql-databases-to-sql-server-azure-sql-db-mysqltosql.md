@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7f42e460be6dd4f4b36b0ddaf3c52880775df8e0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2f4599389fd313447a926cfbc898735fc60f4823
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935261"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014652"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-database-mysqltosql"></a>MySQL データベースの SQL Server Azure SQL Database への移行 (MySQLToSql)
 SQL Server Migration Assistant (SSMA) for MySQL は、MySQL データベースを SQL Server または SQL Azure にすばやく移行するのに役立つ包括的な環境です。 SSMA for MySQL を使用すると、データベースオブジェクトとデータの確認、データベースオブジェクトの移行の評価、SQL Server または SQL Azure へのデータベースオブジェクトの移行、SQL Server または SQL Azure へのデータの移行を行うことができます。  
@@ -23,21 +23,21 @@ SQL Server Migration Assistant (SSMA) for MySQL は、MySQL データベース�
 ## <a name="recommended-migration-process"></a>推奨される移行プロセス  
 MySQL データベースから SQL Server または SQL Azure にオブジェクトとデータを正常に移行するには、次の手順を使用します。  
   
-1.  [SSMA プロジェクトを操作するには &#40;MySQLToSQL&#41;を](../../ssma/mysql/working-with-ssma-projects-mysqltosql.md)使用します。  
+1.  [SSMA プロジェクトを操作するには &#40;MySQLToSQL&#41;を ](../../ssma/mysql/working-with-ssma-projects-mysqltosql.md)使用します。  
   
-    プロジェクトを作成した後、プロジェクトの変換、移行、および種類のマッピングオプションを設定できます。 プロジェクト設定の詳細については、「[プロジェクトオプションの設定 &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)」を参照してください。 データ型マッピングをカスタマイズする方法の詳細については、「 [MySQLToSQL データ型 &#40;&#41;の SQL Server マップ](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)」を参照してください。  
+    プロジェクトを作成した後、プロジェクトの変換、移行、および種類のマッピングオプションを設定できます。 プロジェクト設定の詳細については、「 [プロジェクトオプションの設定 &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)」を参照してください。 データ型マッピングをカスタマイズする方法の詳細については、「 [MySQLToSQL データ型 &#40;&#41;の SQL Server マップ](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)」を参照してください。  
   
-2.  [MySQL &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+2.  [MySQL &#40;MySQLToSQL&#41;に接続しています ](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
-3.  [SQL Server &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+3.  [SQL Server &#40;MySQLToSQL&#41;に接続しています ](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-4.  [MySQL データベースを SQL Server スキーマ &#40;MySQLToSQL&#41;にマッピングする](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+4.  [MySQL データベースを SQL Server スキーマ &#40;MySQLToSQL&#41;にマッピングする ](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
-5.  [Azure SQL Database &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+5.  [Azure SQL Database &#40;MySQLToSQL&#41;に接続しています ](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   
-6.  必要に応じて、 [MySQLToSQL&#41;への変換のために MySQL データベースを評価](../../ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md)して、変換対象のデータベースオブジェクトを評価し、変換時間を見積もる &#40;ます。  
+6.  必要に応じて、 [MySQLToSQL&#41;への変換のために MySQL データベースを評価 ](../../ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md) して、変換対象のデータベースオブジェクトを評価し、変換時間を見積もる &#40;ます。  
   
-7.  [MySQL データベース &#40;MySQLToSQL&#41;に変換しています](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+7.  [MySQL データベース &#40;MySQLToSQL&#41;に変換しています ](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 8.  [同期](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
@@ -47,7 +47,7 @@ MySQL データベースから SQL Server または SQL Azure にオブジェク
   
     -   データベースオブジェクトを同期します。  
   
-10. [MySQL データの SQL Server Azure SQL Database &#40;MySQLToSQL&#41;への移行](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+10. [MySQL データの SQL Server Azure SQL Database &#40;MySQLToSQL&#41;への移行 ](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
 11. 必要に応じて、データベースアプリケーションを更新します。  
   

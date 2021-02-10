@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19192cdf3d85e2b25297f59d91e64be4653441ac
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 00000e6e053cc7782f234f1e59005c831402dc46
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170988"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020856"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows メソッドの例 (VB)
 この例では、 [GetRows](./getrows-method-ado.md) メソッドを使用して、 [レコードセット](./recordset-object-ado.md) から指定された数の行を取得し、結果のデータを配列に格納します。 **Getrows** メソッドは、必要な数の行を返します。2つの場合は、 [EOF](./bof-eof-properties-ado.md)に達した場合、または別のユーザーによって削除されたレコードを **getrows** が取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ **False** を返します。 このプロシージャを実行するには、GetRowsOK 関数が必要です。  

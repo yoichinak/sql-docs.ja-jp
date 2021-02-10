@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12ec3d30de9fc938d51ea342c468b522674b0086
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 02d173995501e6c8bf2ae987ba88727f4e06aad9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167800"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027147"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate メソッド (ADO)
 [Update](./update-method.md)メソッドを呼び出す前に、[レコードセット](./recordset-object-ado.md)オブジェクトの現在または新しい行、または[レコード](./record-object-ado.md)オブジェクトの[Fields](./fields-collection-ado.md)コレクションに対して行われたすべての変更をキャンセルします。  

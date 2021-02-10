@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03e454407c1b01b34ea918f81a404d579f8a3809
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 099cce7da61fbfa9f3a70904a6c8593b9be4d304
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167887"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027858"
 ---
 # <a name="append-method-ado"></a>Append メソッド (ADO)
 オブジェクトをコレクションに追加します。 コレクションが [フィールド](./fields-collection-ado.md)の場合は、コレクションに追加する前に新しい [Field](./field-object.md) オブジェクトを作成できます。  
@@ -59,7 +59,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  任意。 新しいフィールドの値を表す **バリアント** 。 指定しない場合、フィールドには null 値が付加されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="parameters-collection"></a>Parameters コレクション  
  [Parameters](./parameters-collection-ado.md)コレクションに追加する前に、 [Parameter](./parameter-object.md)オブジェクトの[Type](./type-property-ado.md)プロパティを設定する必要があります。 可変長データ型を選択する場合は、 [Size](./size-property-ado-parameter.md) プロパティも0より大きい値に設定する必要があります。  

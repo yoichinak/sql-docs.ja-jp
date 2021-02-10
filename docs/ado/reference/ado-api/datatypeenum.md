@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 700f7aa4053a1e99bcae5cdabe01a5fc6c440258
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e815d834ffbab6276f4ee6a9069f1163ac9e4cd5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171314"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025639"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 [フィールド](../../../ado/reference/ado-api/field-object.md)、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)のデータ型を指定します。 対応する OLE DB 型インジケーターは、次の表の説明列にかっこで囲まれています。  

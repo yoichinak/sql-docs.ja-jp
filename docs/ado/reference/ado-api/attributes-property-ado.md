@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72cbd650b2ab3c66231383e89b048bb03c42b6f5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 25899a7e6c22b119e58d21c51a514ebe311576f0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164807"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027592"
 ---
 # <a name="attributes-property-ado"></a>Attributes プロパティ (ADO)
 オブジェクトの1つまたは複数の特性を示します。  
@@ -39,7 +39,7 @@ ms.locfileid: "99164807"
   
  [プロパティ](./property-object-ado.md)オブジェクトの場合、 **Attributes** プロパティは読み取り専用であり、その値は1つ以上の [propertyattributes 列挙](./propertyattributesenum.md)値の合計になります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **接続** オブジェクト、**パラメーター** オブジェクト、**フィールド** オブジェクト、または **プロパティ** オブジェクトの特性を設定または取得するには、 **Attributes** プロパティを使用します。  
   
  複数の属性を設定すると、適切な定数を合計することができます。 互換性のない定数を含む合計にプロパティ値を設定すると、エラーが発生します。  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9be4f47033616f56177027bc83c4621cef57847
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8f0ed083766464cccd504da7ad9270600fe0050c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164867"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027929"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction インターフェイス
 **ADORecordsetConstruction** インターフェイスは、C/c + + アプリケーションの OLE DB **行** セットオブジェクトから ADO **レコードセット** オブジェクトを構築するために使用されます。  
@@ -37,9 +37,9 @@ ms.locfileid: "99164867"
 |[[行セット]](./rowset-property-ado.md)|読み取り/書き込み。<br />この ADO **レコードセット** オブジェクトの/から OLE DB **行** セットオブジェクトを取得/設定します。|  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="remarks"></a>解説  
@@ -72,7 +72,7 @@ ms.locfileid: "99164867"
   
  また、OLE DB **チャプター** または **ROWPOSITION** オブジェクトから ADO **レコードセット** オブジェクトを構築することもできます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **バージョン:** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  

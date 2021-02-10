@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 013df2c56a973d8df6b51434f016ee7642fc4f71
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2c00bcdbbfb477f4f612fedd0a71fe8131858588
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164783"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027572"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、CommitTransComplete、および RollbackTransComplete イベント (ADO)
 これらのイベントは、 [接続](./connection-object-ado.md) オブジェクトの関連付けられた操作の実行が終了した後に呼び出されます。  
@@ -63,7 +63,7 @@ RollbackTransComplete pError, adStatus, pConnection
  *pConnection*  
  このイベントが発生した **接続** オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  Visual C++ では、複数の **接続** で同じイベント処理方法を共有できます。 メソッドは、返された **接続** オブジェクトを使用して、イベントの原因となったオブジェクトを特定します。  
   
  [Attributes](./attributes-property-ado.md)プロパティが **AdXactCommitRetaining** または **Adxactabortretaining 保持** するように設定されている場合、トランザクションをコミットまたはロールバックした後に新しいトランザクションが開始されます。 **Begintranscomplete** イベントを使用すると、最初のトランザクション開始イベント以外はすべて無視されます。  

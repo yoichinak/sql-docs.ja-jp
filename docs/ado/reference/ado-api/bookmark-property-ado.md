@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd484230ba2801abcb553fa8f9013dce53799b09
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 218303ca86738ce4fab8b944dec6d1bfe114cf30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171554"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027552"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark プロパティ (ADO)
 [レコードセット](./recordset-object-ado.md)オブジェクト内の現在のレコードを一意に識別するブックマークを示します。または、**レコードセット** オブジェクトの現在のレコードを、有効なブックマークによって識別されるレコードに設定します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99171554"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  有効なブックマークに評価される **バリアント** 式を設定または返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Bookmark** プロパティを使用して、現在のレコードの位置を保存し、いつでもそのレコードに戻るようにします。 ブックマークは、ブックマーク機能をサポートする **レコードセット** オブジェクトでのみ使用できます。  
   
  レコード **セット** オブジェクトを開くと、各レコードに一意のブックマークが作成されます。 現在のレコードのブックマークを保存するには、 **bookmark** プロパティの値を変数に割り当てます。 別のレコードに移動した後、いつでもそのレコードにすばやく戻るには、 **レコードセット** オブジェクトの **Bookmark** プロパティをその変数の値に設定します。  

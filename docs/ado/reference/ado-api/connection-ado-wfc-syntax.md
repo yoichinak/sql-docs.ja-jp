@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0100fb432156a3f970fadfa0f39f2d72daee8b2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1c63fe3a2f5e5d9dc02b6dfc8ae2c499049fad6b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171458"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026540"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -86,7 +86,7 @@ public AdoProperties getProperties()
 public com.ms.wfc.data.Errors getErrors()  
 ```  
   
-### <a name="events"></a>events  
+### <a name="events"></a>イベント  
  ADO/WFC イベントの詳細については、「 [言語別の Ado イベントのインスタンス化](../../guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
   
 ```  

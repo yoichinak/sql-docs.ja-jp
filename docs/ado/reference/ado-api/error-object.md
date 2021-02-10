@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eba5b63bc766161556779dd261393b0dfe06822d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: aa7a9f478398c1e6348513076ac9e9f3d8b815a5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171193"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025059"
 ---
 # <a name="error-object"></a>Error オブジェクト
 プロバイダーに関連する1つの操作に関連するデータアクセスエラーの詳細が含まれています。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ADO オブジェクトに関連する操作では、1つ以上のプロバイダーエラーが発生することがあります。 各エラーが発生すると、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの [エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションに1つまたは複数の **エラー** オブジェクトが配置されます。 別の ADO 操作によっ **てエラーが** 生成されると、 **errors** コレクションがクリアされ、エラーオブジェクトの新しいセットが **errors** コレクションに配置されます。  
   
 > [!NOTE]

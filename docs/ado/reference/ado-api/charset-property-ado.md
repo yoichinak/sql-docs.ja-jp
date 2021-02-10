@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fa8b9b5d657208784cd6e9f78e033ebc84f51b6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e796c9a079bda856aaf6c1e25e19e1fe6d4d21b3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167787"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027120"
 ---
 # <a name="charset-property-ado"></a>Charset プロパティ (ADO)
 **ストリーム** オブジェクトの内部バッファーに格納するテキスト [ストリーム](./stream-object-ado.md)の内容を変換する文字セットを示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99167787"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **ストリーム** の内容が変換される文字セットを指定する **文字列** 値を設定または返します。 既定値は **Unicode** です。 使用できる値は、インターネット文字セット名としてインターフェイスで渡される一般的な文字列です (たとえば、"iso-8859-1"、"Windows-1252" など)。 システムによって認識される文字セット名の一覧については、Windows レジストリの HKEY_CLASSES_ROOT\MIME\Database\Charset のサブキーを参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  テキスト **ストリーム** オブジェクトでは、テキストデータは **Charset** プロパティによって指定された文字セットに格納されます。 既定値は Unicode です。 **Charset** プロパティは、**ストリーム** に入ってくるデータまたは **ストリーム** から出てくるデータを変換するために使用されます。 たとえば、 **ストリーム** に ISO-8859-1 データが含まれていて、そのデータが BSTR にコピーされる場合、 **ストリーム** オブジェクトはデータを Unicode に変換します。 この逆も当てはまります。  
   
  開いている **ストリーム** の場合、**文字** セットを設定するには、現在の [位置](./position-property-ado.md)が **ストリーム** の先頭 (0) である必要があります。  

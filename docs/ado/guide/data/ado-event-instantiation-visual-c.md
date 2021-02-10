@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68ccc1f5cc173f4ebd80ed093e88968c137c954f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fd479847766b8682025b2e4c6f047a5f4549d077
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991653"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028048"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO イベントのインスタンス化: Visual C++
 ここでは、Microsoft® Visual C++®で ADO イベントをインスタンス化する方法について説明します。 詳細については、「 [ADO Events Model example (VC + +)](../../reference/ado-api/ado-events-model-example-vc.md) 」を参照してください。  
@@ -50,7 +50,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- 両方のクラスに各イベントハンドラーメソッドを実装します。 各メソッドが S_OK の HRESULT を返すだけで十分です。 ただし、イベントハンドラーが使用できることがわかっている場合は、既定で継続的に呼び出されます。 代わりに、 **Adstatus** を **adStatusUnwantedEvent**に設定することによって、それ以上の通知を初めて要求することもできます。  
+ 両方のクラスに各イベントハンドラーメソッドを実装します。 各メソッドが S_OK の HRESULT を返すだけで十分です。 ただし、イベントハンドラーが使用できることがわかっている場合は、既定で継続的に呼び出されます。 代わりに、 **Adstatus** を **adStatusUnwantedEvent** に設定することによって、それ以上の通知を初めて要求することもできます。  
   
 ```  
 // BeginEventExampleVC02  
@@ -66,11 +66,11 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- イベントクラスは **IUnknown**から継承するため、 **QueryInterface**、 **AddRef**、および **Release** メソッドも実装する必要があります。 また、クラスコンストラクターとデストラクターも実装します。 タスクのこの部分を簡略化するために最も使いやすい Visual C++ ツールを選択します。  
+ イベントクラスは **IUnknown** から継承するため、 **QueryInterface**、 **AddRef**、および **Release** メソッドも実装する必要があります。 また、クラスコンストラクターとデストラクターも実装します。 タスクのこの部分を簡略化するために最も使いやすい Visual C++ ツールを選択します。  
   
- **IConnectionPointContainer**インターフェイスと**IConnectionPoint**インターフェイスの[レコードセット](../../reference/ado-api/recordset-object-ado.md)オブジェクトと[接続](../../reference/ado-api/connection-object-ado.md)オブジェクトに対して**QueryInterface**を発行して、イベントハンドラーが使用できることを認識していることを確認します。 次に、各クラスに対して **IConnectionPoint:: Advise** を発行します。  
+ **IConnectionPointContainer** インターフェイスと **IConnectionPoint** インターフェイスの [レコードセット](../../reference/ado-api/recordset-object-ado.md)オブジェクトと [接続](../../reference/ado-api/connection-object-ado.md)オブジェクトに対して **QueryInterface** を発行して、イベントハンドラーが使用できることを認識していることを確認します。 次に、各クラスに対して **IConnectionPoint:: Advise** を発行します。  
   
- たとえば、イベントハンドラーが使用可能であることを**レコードセット**オブジェクトに正常に通知する場合に**True**を返すブール関数を使用しているとします。  
+ たとえば、イベントハンドラーが使用可能であることを **レコードセット** オブジェクトに正常に通知する場合に **True** を返すブール関数を使用しているとします。  
   
 ```  
 // BeginEventExampleVC03  

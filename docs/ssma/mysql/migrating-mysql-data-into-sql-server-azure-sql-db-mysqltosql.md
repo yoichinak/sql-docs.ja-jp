@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 16b6c68c520291b0f9ae6613940832c0fa77af68
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 3207dc38dd777ee6ccc36e37e9b18414dbea085e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988168"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017540"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-database-mysqltosql"></a>MySQL データの SQL Server Azure SQL Database への移行 (MySQLToSQL)
 変換されたオブジェクトをまたは SQL Azure に正常に同期した後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、MySQL からまたは SQL Azure にデータを移行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -31,9 +31,9 @@ ms.locfileid: "91988168"
   
 -   このダイアログボックスを使用すると、移行バッチサイズ、テーブルロック、制約チェック、null 値処理、id 値処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、「 [プロジェクトの設定 (移行)](./project-settings-migration-mysqltosql.md)」を参照してください。  
   
-    **拡張データ移行設定**の詳細については、「[データ移行の設定](data-migration-settings-mysqltosql.md)」を参照してください。  
+    **拡張データ移行設定** の詳細については、「[データ移行の設定](data-migration-settings-mysqltosql.md)」を参照してください。  
   
--   [**プロジェクトの設定**] ダイアログボックスの**移行エンジン**を使用すると、ユーザーは2種類のデータ移行エンジンを使用して移行プロセスを実行できます。  
+-   [**プロジェクトの設定**] ダイアログボックスの **移行エンジン** を使用すると、ユーザーは2種類のデータ移行エンジンを使用して移行プロセスを実行できます。  
   
     1.  クライアント側のデータ移行エンジン  
   
@@ -46,7 +46,7 @@ ms.locfileid: "91988168"
 -   [ **プロジェクトの設定**] で、[ **クライアント側のデータ移行エンジン** ] オプションが設定されています。  
   
     > [!NOTE]  
-    > **クライアント側のデータ移行エンジン**は ssma アプリケーション内に存在するため、拡張パックの可用性には依存しません。  
+    > **クライアント側のデータ移行エンジン** は ssma アプリケーション内に存在するため、拡張パックの可用性には依存しません。  
   
 **サーバー側のデータ移行:**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "91988168"
   
     **クライアント側のデータ移行:**  
   
-    -   **クライアント側のデータ移行**を実行するには、[**プロジェクトの設定**] ダイアログボックスで [**クライアント側のデータ移行エンジン**] オプションを選択します。  
+    -   **クライアント側のデータ移行** を実行するには、[**プロジェクトの設定**] ダイアログボックスで [**クライアント側のデータ移行エンジン**] オプションを選択します。  
   
     **サーバー側のデータ移行:**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "91988168"
   
         2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスは、のインスタンスで実行されて SQL Server  
   
-    -   **サーバー側のデータ移行**を実行するには、[**プロジェクトの設定**] ダイアログボックスで [**サーバー側のデータ移行エンジン**] オプションを選択します。  
+    -   **サーバー側のデータ移行** を実行するには、[**プロジェクトの設定**] ダイアログボックスで [**サーバー側のデータ移行エンジン**] オプションを選択します。  
   
 4.  MySQL メタデータエクスプローラーで [ **スキーマ** ] を右クリックし、[ **データの移行**] をクリックします。 また、個々のオブジェクトまたはオブジェクトのカテゴリのデータを移行することもできます。オブジェクトまたはその親フォルダーを右クリックします。[ **データの移行** ] オプションを選択します。  
   

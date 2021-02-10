@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f84bc8a6ce834cecbdbe64b485cf52430d399e6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 657f89014ba808d67e593f04a02c91694927a86c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99155510"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026560"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks メソッドの例 (VC++)
 この例は、 [Comparebookmarks](./comparebookmarks-method-ado.md) メソッドを示しています。 ブックマークの相対値は、特定のブックマークが特別に特殊な場合を除き、ほとんど必要ありません。  
   
- 検索の対象として ***Authors** _ テーブルから派生した [レコードセット](./recordset-object-ado.md)のランダムな行を指定します。 次に、そのターゲットに対して相対的な各行の位置を表示します。  
+ ***Authors*** テーブルから派生した [レコードセット](./recordset-object-ado.md)のランダムな行を検索の対象として指定します。 次に、そのターゲットに対して相対的な各行の位置を表示します。  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -66,7 +66,7 @@ void CompareBookMarksX() {
    try {      
       TESTHR(pRstAuthors.CreateInstance(__uuidof(Recordset)));  
   
-      pRstAuthors->Open("SELECT _ FROM authors ORDER BY au_id", strCnn, adOpenStatic, adLockReadOnly, adCmdText);  
+      pRstAuthors->Open("SELECT * FROM authors ORDER BY au_id", strCnn, adOpenStatic, adLockReadOnly, adCmdText);  
   
       long count = pRstAuthors->RecordCount;  
       printf("Rows in the Recordset = %d\n", count);  

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67a57da52bd73bd90d630ac84e4afeca6a0b16c7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 73058aa92e594528ef214a9ffa93fa0f58d29b76
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171339"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025669"
 ---
 # <a name="datasource-property-ado"></a>DataSource プロパティ (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトとして表されるデータを格納するオブジェクトを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このプロパティは、データ環境を使用してデータバインドコントロールを作成するために使用されます。 データ環境では、 **レコードセット** オブジェクトとして表される名前付きオブジェクト (データメンバー) を含むデータ (データソース) のコレクションを保持します。  
   
  [DataMember](../../../ado/reference/ado-api/datamember-property.md)プロパティと **DataSource** プロパティは、組み合わせて使用する必要があります。  

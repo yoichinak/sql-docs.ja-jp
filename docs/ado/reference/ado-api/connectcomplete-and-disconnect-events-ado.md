@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b451f72d33baf52642f00926e644892f5b955ed
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 73966677eb224c2549954f80525d88ee5622dd0c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164619"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026570"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete および Disconnect イベント (ADO)
 **Connectcomplete** イベントは、接続の開始後に呼び出されます。 **切断** イベントは、接続が終了した後に呼び出されます。  

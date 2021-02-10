@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1626dd9ff1c97426a0597b010015adada4c17c7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b1cfaa8b75f7e8d1dfb5fc0cecf7e5d99634960a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167247"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020815"
 ---
 # <a name="getstring-method-ado"></a>GetString メソッド (ADO)
 [レコードセット](./recordset-object-ado.md)を文字列として返します。  
@@ -53,7 +53,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  *NullExpr*  
  任意。 Null 値の代わりに使用される式 (指定されている場合)。それ以外の場合は空の文字列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  行データは文字列に保存されますが、スキーマデータは保存されません。 このため、この文字列を使用して **レコードセット** を再度開くことはできません。  
   
  このメソッドは、RDO **Getclipstring** メソッドに相当します。  

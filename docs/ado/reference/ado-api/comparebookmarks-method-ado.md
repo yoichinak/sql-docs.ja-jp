@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63fc23d638a3ffecf29d6f3d3ad56e803d914072
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 41a286cc53e03947f0fa37a2378627de880cebd3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99155683"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026580"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks メソッド (ADO)
 2つのブックマークを比較し、それらの相対値を示す値を返します。  
@@ -45,7 +45,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Bookmark2*  
  2番目の行のブックマーク。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ブックマークは、同じ [レコードセット](./recordset-object-ado.md) オブジェクト、または **レコードセット** オブジェクトとその [複製](./clone-method-ado.md)に適用する必要があります。 同じソースまたはコマンドから作成されたものであっても、異なる **レコードセット** オブジェクトのブックマークを確実に比較することはできません。 また、基になるプロバイダーで比較がサポートされていない **レコードセット** オブジェクトのブックマークを比較することもできません。  
   
  ブックマークは、 **レコードセット** オブジェクト内の行を一意に識別します。 ブックマークを取得するには、現在の行の [bookmark](./bookmark-property-ado.md) プロパティを使用します。  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: debd8c2630ba9fa7369b356950f979a64eee59d0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 883887b32a46025c1fc60f5b8ca782241b201ab3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99155714"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026590"
 ---
 # <a name="commandtype-property-ado"></a>CommandType プロパティ (ADO)
 [Command](./command-object-ado.md)オブジェクトの種類を示します。  
@@ -32,7 +32,7 @@ ms.locfileid: "99155714"
 > [!NOTE]
 >  **Adcmdfile** の **commandtypeenum** 値、または **CommandType** と共に **adcmdtabledirect** を使用しないでください。 これらの値は、[レコードセット](./recordset-object-ado.md)の[Open](./open-method-ado-recordset.md)メソッドおよび[Requery](./requery-method.md)メソッドでオプションとしてのみ使用できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **CommandType** プロパティを使用して、 [CommandText](./commandtext-property-ado.md)プロパティの評価を最適化します。  
   
  **CommandType** プロパティ値が既定値の **adcmdunknown** に設定されている場合、 **ado.net プロパティが** SQL ステートメント、ストアドプロシージャ、またはテーブル名であるかどうかを確認するために ADO がプロバイダーの呼び出しを行う必要があるため、パフォーマンスが低下する可能性があります。 使用しているコマンドの種類がわかっている場合は、 **CommandType** プロパティを設定することによって、関連するコードに直接アクセスするように ADO に指示します。 **CommandType** プロパティが **CommandText** プロパティ内のコマンドの型と一致しない場合、 [Execute](./execute-method-ado-command.md)メソッドを呼び出すとエラーが発生します。  
