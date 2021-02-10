@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cdac33c235e50abf35fbed670d872ca631403b5d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 63872db8007b6f3b51a840eb6d079f8b4df0c042
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166991"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041411"
 ---
 # <a name="open-method-ado-record"></a>Open メソッド (ADO Record)
 既存の [レコード](./record-object-ado.md) オブジェクトを開くか、ファイルやディレクトリなどの **レコード** によって表される新しい項目を作成します。  
@@ -47,7 +47,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *CreateOptions*  
  任意。 既存のファイルまたはディレクトリを開くか、新しいファイルまたはディレクトリを作成する必要があるかを指定する [Recordcreateoptionsenum](./recordcreateoptionsenum.md) 値。 既定値は **Adfailifnotexists** です。 既定値に設定されている場合、アクセスモードは [mode](./mode-property-ado.md) プロパティから取得されます。 *Source* パラメーターに URL が含まれていない場合、このパラメーターは無視されます。  
   
- *Options*  
+ *[オプション]*  
  任意。 **レコード** を開くためのオプションを指定する [RecordOpenOptionsEnum](./recordopenoptionsenum.md)値です。 既定値は **Adopenrecordunspecified** です。 これらの値は組み合わせることができます。  
   
  *UserName*  
@@ -56,7 +56,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *パスワード*  
  任意。 必要に応じて *ユーザー名* を確認するパスワードを含む **文字列** 値です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *ソース* は次のようになります。  
   
 -   URL。 URL のプロトコルが http の場合、インターネットプロバイダーが既定で呼び出されます。 URL が、のような実行可能スクリプトを含むノードを指している場合は。ASP ページ) 既定では、実行されたコンテンツではなく、ソースを含む **レコード** が開かれます。 この動作を変更するには、 *Options* 引数を使用します。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a6c7b68f817bd3e4937833a4385819bd8de8aac
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0f9cf81ef9845875db984e4cba0fcd7bc23e380c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170693"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041402"
 ---
 # <a name="open-method-ado-recordset"></a>Open メソッド (ADO Recordset)
 [レコードセット](./recordset-object-ado.md)オブジェクトのカーソルを開きます。  
@@ -47,7 +47,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  *LockType*  
  任意。 **レコードセット** を開くときにプロバイダーが使用するロックの種類 (同時実行) を決定する [locktypeenum](./locktypeenum.md)値。 既定値は **Adlockreadonly** です。  
   
- *Options*  
+ *[オプション]*  
  任意。 プロバイダーが **Command** オブジェクト以外の値を表す場合に *ソース* 引数を評価する方法、または **レコードセット** を以前に保存したファイルから復元する必要があるかどうかを示す **Long** 値。 1つ以上の [Commandtypeenum](./commandtypeenum.md) 値または [executeoptionenum](./executeoptionenum.md) 値を指定できます。この値は、ビットごとの or 演算子と組み合わせることができます。  
   
 > [!NOTE]
@@ -56,7 +56,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  **AdExecuteNoRecords** または **AdExecuteStream** の **executeopenenum** 値は、 **Open** では使用できません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ADO **レコードセット** の既定のカーソルは、サーバー上にある順方向専用の読み取り専用カーソルです。  
   
  **Recordset** オブジェクトで **Open** メソッドを使用すると、ベーステーブル、クエリの結果、または以前に保存した **レコードセット** のレコードを表すカーソルが開きます。  

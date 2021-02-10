@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e8e0d8013df4ec6d58aeeb059baa655e1980005
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 897fa99e44e6d5c9f31250be0157bacaa92c211a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170749"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041523"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale および Precision プロパティの例 (VB)
 この例では、 [numericscale](./numericscale-property-ado.md)プロパティと [precision](./precision-property-ado.md)プロパティを使用して、_ *_Pubs_** データベースの ***割引** _ テーブルのフィールドの数値の小数点以下桁数と有効桁数を表示します。  

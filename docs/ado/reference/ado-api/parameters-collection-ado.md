@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cd94745a6ec2d4f34245b53f509752c13688d45
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 93d34581e7ea19ad584161e12375101a06256cbd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170596"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041112"
 ---
 # <a name="parameters-collection-ado"></a>Parameters コレクション (ADO)
 [Command](./command-object-ado.md)オブジェクトのすべての[パラメーター](./parameter-object.md)オブジェクトを含みます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Command** オブジェクトには、 **Parameter** オブジェクトで構成される **Parameters** コレクションがあります。  
   
  **Command** オブジェクトの **Parameters** コレクションに対して [Refresh](./refresh-method-ado.md)メソッドを使用すると、 **command** オブジェクトで指定されたストアドプロシージャまたはパラメーター化クエリのプロバイダーパラメーター情報が取得されます。 一部のプロバイダーでは、ストアドプロシージャ呼び出しまたはパラメーター化クエリをサポートしていません。このようなプロバイダーを使用するときに **Parameters** コレクションの **Refresh** メソッドを呼び出すと、エラーが返されます。  

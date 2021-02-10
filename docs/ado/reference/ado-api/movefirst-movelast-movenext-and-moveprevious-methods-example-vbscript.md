@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9695c1a7d2c24ca01b06c46be78afbf7a5c4029
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9f4e5e04f47121c341ac88a3b98199b60f5956d3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167088"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041692"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例 (VBScript)
 この例では、 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) メソッドを使用して、指定されたコマンドに基づいてレコード [セット](./recordset-object-ado.md) のレコードポインターを移動します。  

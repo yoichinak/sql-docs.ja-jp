@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd954184f8ea2227427a5668968714e9c61dfe23
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 982c266811743a65f717e02ac4ca3612db6ca3f8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167023"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041513"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale および Precision プロパティの例 (VC++)
 この例では、 [numericscale](./numericscale-property-ado.md)プロパティと [precision](./precision-property-ado.md)プロパティを使用して、_ *_Pubs_** データベースの ***割引** _ テーブルのフィールドの数値の小数点以下桁数と有効桁数を表示します。  

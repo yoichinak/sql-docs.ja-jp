@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e52fe6b3b26a8bc4832952940c7e84c736f2da5e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: febf5627d46bbb464ff01c41a0eee23b2242c801
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166584"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040702"
 ---
 # <a name="savetofile-method"></a>SaveToFile メソッド
 [ストリーム](./stream-object-ado.md)のバイナリコンテンツをファイルに保存します。  
@@ -44,7 +44,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  既存のファイルを上書きする場合 ( **adSaveCreateOverwrite** が設定されている場合)、 **SaveToFile** は新しい [EOS](./eos-property.md)の後にある元の既存のファイルからすべてのバイトを切り捨てます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **SaveToFile** は、 **ストリーム** オブジェクトの内容をローカルファイルにコピーするために使用できます。 **ストリーム** オブジェクトの内容またはプロパティに変更はありません。 **ストリーム** オブジェクトは、 **SaveToFile** を呼び出す前に開いている必要があります。  
   
  このメソッドは、 **ストリーム** オブジェクトと基になるソースとの関連付けを変更しません。 **ストリーム** オブジェクトは、開いたときにソースであった元の URL または **レコード** と関連付けられたままになります。  

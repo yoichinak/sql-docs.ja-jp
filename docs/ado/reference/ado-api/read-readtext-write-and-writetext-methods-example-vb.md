@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7889a43427c8752ba30a4ccae1b6fc5db77db549
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6be85fef5e69e879034536c8785eccfd72c9f331
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166772"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040762"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read、ReadText、Write、WriteText の各メソッドの例 (VB)
 この例では、テキストボックスの内容をテキスト [ストリーム](./stream-object-ado.md) とバイナリ **ストリーム** の両方に読み取る方法を示します。 表示されるその他のプロパティとメソッドには、 [Position](./position-property-ado.md)、 [Size](./size-property-ado-parameter.md)、 [Charset](./charset-property-ado.md)、および [SetEOS](./seteos-method.md)があります。  

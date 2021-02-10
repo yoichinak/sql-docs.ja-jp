@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 839c2cb27fc14546523272c1c5b6d69f233557fa
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 60fb0e98e2adbd57ad9fa3a98d4d04f7def8d30d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166952"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041292"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize プロパティ - 動的 (ADO)
 [フィールド](./field-object.md)にインデックスを作成するかどうかを指定します。  
@@ -27,7 +27,7 @@ ms.locfileid: "99166952"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  インデックスを作成する必要があるかどうかを示す **ブール** 値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  インデックスを使用すると、 [レコードセット](./recordset-object-ado.md)内の値を検索したり並べ替えたりする操作のパフォーマンスを向上させることができます。 インデックスは ADO の内部にあります。アプリケーションで明示的にアクセスしたり、使用したりすることはできません。  
   
  フィールドにインデックスを作成するには、 **Optimize** プロパティを **True** に設定します。 インデックスを削除するには、このプロパティを **False** に設定します。  

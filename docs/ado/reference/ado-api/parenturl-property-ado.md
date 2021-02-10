@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89b3caf606d47c2be1add80a20830570be3f7fd2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fe54516f1721cdc24da9fbdeaf72688a6c0960a2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166869"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041042"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL プロパティ (ADO)
 現在の **レコード** オブジェクトの親 [レコード](./record-object-ado.md)を指す絶対 URL 文字列を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99166869"
 ## <a name="return-value"></a>戻り値  
  親 **レコード** の URL を示す **文字列** 値を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Parenturl** プロパティは、 **Record** オブジェクトを開くために使用されるソースによって異なります。 たとえば、 [ActiveConnection](./activeconnection-property-ado.md)プロパティによって参照されるディレクトリの相対パス名を含むソースで **レコード** を開くことができます。  
   
  "Second" が "first" の下に含まれるフォルダーであるとします。 次の構文を使用して、 **レコード** オブジェクトを開きます。  

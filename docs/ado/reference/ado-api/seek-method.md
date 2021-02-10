@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7974464ad6302e7ce59b1ce458a46c8b43bcf45
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9819ce55d8898fb55e0cc98fb9dab10f339cfb17
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170285"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041702"
 ---
 # <a name="seek-method"></a>Seek メソッド
 [レコードセット](./recordset-object-ado.md)のインデックスを検索して、指定した値と一致する行をすばやく検索し、現在の行の位置をその行に変更します。  
@@ -41,7 +41,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  インデックスの列とそれに対応する *Keyvalues* の間で行われる比較の種類を指定する [seekenum](./seekenum.md)値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  基になるプロバイダーが **レコードセット** オブジェクトのインデックスをサポートしている場合は、 [Index](./index-property.md)プロパティと共に **Seek** メソッドを使用します。 [サポート](./supports-method.md)**(adseek)** メソッドを使用して、基になるプロバイダーが **Seek** をサポートするかどうかを判断し、**サポート (adseek)** メソッドを使用して、プロバイダーがインデックスをサポートしているかどうかを判断します。 (たとえば、 [Microsoft Jet の OLE DB プロバイダー](../../guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) では、 **Seek** および **Index** がサポートされています)。  
   
  **Seek** が目的の行を見つけられない場合、エラーは発生せず、行は **レコードセット** の末尾に配置されます。 このメソッドを実行する前に、 **index** プロパティを目的のインデックスに設定します。  

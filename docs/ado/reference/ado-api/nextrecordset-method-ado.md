@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acf9105b6d28e34de0351002063251d49196829a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3388a5f37fa8d82aa951f1cc82eb9f43556d9d37
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170768"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041582"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset メソッド (ADO)
 一連のコマンドを進めて、現在の [レコードセット](./recordset-object-ado.md) オブジェクトをクリアし、次の **レコードセット** を返します。  
@@ -45,7 +45,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 > [!NOTE]
 >  このパラメーターは、操作によって影響を受けたレコードの数のみを返します。レコード **セット** の生成に使用される select ステートメントからは、レコードの数は返されません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **NextRecordset** メソッドを使用して、複合コマンドステートメントまたは複数の結果を返すストアドプロシージャで、次のコマンドの結果を返します。 複合コマンドステートメントに基づいて **レコードセット** オブジェクトを開く場合 (例: "SELECT \* FROM table1;"SELECT \* FROM table2 ")[コマンド](./command-object-ado.md)の [Execute](./execute-method-ado-command.md)メソッド、または **レコードセット** の [Open](./open-method-ado-recordset.md)メソッドを使用して、ADO は最初のコマンドのみを実行し、結果を *レコードセット* に返します。 ステートメント内の後続のコマンドの結果にアクセスするには、 **NextRecordset** メソッドを呼び出します。  
   
  追加の結果が存在し、複合ステートメントを含む **レコードセット** がプロセスの境界を越えて切断またはマーシャリングされていない限り、 **NextRecordset** メソッドは **レコードセット** オブジェクトを返し続けます。 行を返すコマンドが正常に実行されても、レコードが返されない場合、返された **レコードセット** オブジェクトは開かれますが、空になります。 このケースをテストするには、 [BOF](./bof-eof-properties-ado.md) プロパティと [EOF](./bof-eof-properties-ado.md) プロパティが両方とも **True** であることを確認します。 行を返さないコマンドが正常に実行されると、返された **レコードセット** オブジェクトは閉じられます。このオブジェクトは、**レコードセット** の [State](./state-property-ado.md)プロパティをテストすることで確認できます。 これ以上結果がない場合、 *レコードセット* は *Nothing* に設定されます。  

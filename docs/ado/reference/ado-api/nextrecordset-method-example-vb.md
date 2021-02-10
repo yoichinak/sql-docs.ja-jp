@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af703b24bc3c1f2e94ccc5979ac9b7977cb087e2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d2508879bff3bb5335001dbe76b26814382f6a6a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167052"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041572"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset メソッドの例 (VB)
 この例では、 [NextRecordset](./nextrecordset-method-ado.md) メソッドを使用して、3つの個別の **SELECT** ステートメントで構成された複合コマンドステートメントを使用するレコードセットのデータを表示します。  

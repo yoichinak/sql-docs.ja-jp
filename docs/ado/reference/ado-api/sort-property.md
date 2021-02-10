@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57f46248dc23d92752a6354a557285daeaf0a0f8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ffd17de7783ff6d27b8b14d70e41fa6839e211dc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170248"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040602"
 ---
 # <a name="sort-property"></a>Sort プロパティ
 [レコードセット](./recordset-object-ado.md)が並べ替えられる1つ以上のフィールド名と、各フィールドを昇順と降順のどちらで並べ替えるかを示します。  
@@ -35,7 +35,7 @@ ms.locfileid: "99170248"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  並べ替えの対象となる **レコードセット** 内のフィールド名を示す **文字列** 値を設定または返します。 各名前はコンマで区切られます。オプションで、空白とキーワード **ASC** を使用します。この場合、フィールドは昇順に並べ替えられ、 **DESC** はフィールドが降順に並べ替えられます。 既定では、キーワードが指定されていない場合、フィールドは昇順に並べ替えられます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このプロパティでは、 [カーソル位置](./cursorlocation-property-ado.md) プロパティを **adUseClient** に設定する必要があります。 インデックスがまだ存在しない場合は、 **Sort** プロパティで指定された各フィールドに対して一時インデックスが作成されます。  
   
  データは物理的には再配置されませんが、単純にインデックスで指定された順序でアクセスされるため、並べ替え操作は効率的です。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9151af754b245acc04dae70c120f01e37ac587cf
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ba1b13e92b4c26be0c117693b807371e66e651ce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166979"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041362"
 ---
 # <a name="open-method-ado-stream"></a>Open メソッド (ADO Stream)
 [ストリーム](./stream-object-ado.md)オブジェクトを開き、バイナリデータまたはテキストデータのストリームを操作します。  
@@ -50,7 +50,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *パスワード*  
  任意。 必要に応じて **ストリーム** オブジェクトにアクセスするパスワードを含む **文字列** 値です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Record** オブジェクトが source パラメーターとして渡された場合、**レコード** オブジェクトへのアクセスは既に使用可能であるため、 *UserID* パラメーターと *Password* パラメーターは使用されません。 同様に、 **record** オブジェクトの [モード](./mode-property-ado.md)が **ストリーム** オブジェクトに転送されます。 *Source* が指定されていない場合、開いている **ストリーム** にはデータが含まれず、[サイズ](./size-property-ado-stream.md)はゼロ (0) になります。 **ストリーム** が閉じられ **たときにストリームに** 書き込まれるデータが失われないようにするには、 [CopyTo](./copyto-method-ado.md)メソッドまたは [SaveToFile](./savetofile-method.md)メソッドを使用して **ストリーム** を保存するか、別のメモリ位置に保存します。  
   
  **Adopenstreamfromrecord** の *openoptions* 値は、 *Source* パラメーターの内容が既に開いている **レコード** オブジェクトであることを示します。 既定の動作では、 *ソース* は、ファイルなどのツリー構造のノードを直接指す URL として扱われます。 そのノードに関連付けられている既定のストリームが開きます。  

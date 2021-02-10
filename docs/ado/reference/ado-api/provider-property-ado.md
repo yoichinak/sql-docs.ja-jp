@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f30bd886941909dd072e0eb5d5fafc9cff3b26dc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3e022db374dc818529ed241f9d2ed5b525c8f374
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170499"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040832"
 ---
 # <a name="provider-property-ado"></a>Provider プロパティ (ADO)
 [接続](./connection-object-ado.md)オブジェクトのプロバイダーの名前を示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "99170499"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  プロバイダー名を示す **文字列** 値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **プロバイダー** のプロパティを使用して、接続のプロバイダーの名前を設定または取得します。 このプロパティは、 [connectionstring](./connectionstring-property-ado.md)プロパティの内容、または [Open](./open-method-ado-connection.md)メソッドの *connectionstring* 引数によって設定することもできます。ただし、 **Open** メソッドを呼び出しているときに複数の場所でプロバイダーを指定すると、予期しない結果になる可能性があります。 プロバイダーが指定されていない場合、プロパティは既定で MSDASQL ([Microsoft OLE DB provider FOR ODBC](../../guide/appendixes/microsoft-ole-db-provider-for-odbc.md)) に設定されます。  
   
  **プロバイダー** プロパティは、接続が閉じられている場合は読み取り/書き込みが、開いている場合は読み取り専用になります。 **接続オブジェクトを** 開くか、**接続** オブジェクトの [Properties](./properties-collection-ado.md)コレクションにアクセスするまで、この設定は有効になりません。 設定が有効でない場合は、エラーが発生します。  

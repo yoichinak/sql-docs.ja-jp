@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c76d26032d9986cba52442d62bb7ef8c10db5419
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0eafd067cdad9c107c591d09b5b5f50fdc6bc501
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166612"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040692"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save および Open メソッドの例 (VB)
 次の3つの例は、 [Save](./save-method.md) メソッドと [Open](./open-method-ado-recordset.md) メソッドを一緒に使用する方法を示しています。  
   
  データベースからテーブルを使用して、事業旅行を行っているとします。 前に、データを [レコードセット](./recordset-object-ado.md) としてアクセスし、転送可能な形式で保存します。 宛先に到達すると、 **レコードセット** にローカルの切断された **レコードセット** としてアクセスします。 **レコードセット** に変更を加え、再度保存します。 最後に、home を返したときに、もう一度データベースに接続し、その時点で行った変更を反映して更新します。  
   
- まず、**_Authors_* _ テーブルにアクセスして保存します。  
+ まず、 ***Authors*** テーブルにアクセスして保存します。  
   
 ```  
 'BeginSaveVB  
@@ -85,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- この時点で、宛先に到達しました。 _*_Authors_*_ テーブルには、ローカルの接続されていない _ * レコードセット * * としてアクセスします。 保存したファイルへのアクセスに使用しているコンピューターに、a:\Pubs.xml の **Mspersist** プロバイダーが必要です。  
+ この時点で、宛先に到達しました。 ***Authors** _ テーブルには、ローカルの接続されていない _ * レコードセット * * としてアクセスします。 保存したファイルへのアクセスに使用しているコンピューターに、a:\Pubs.xml の **Mspersist** プロバイダーが必要です。  
   
 ```  
 Attribute VB_Name = "Save"  

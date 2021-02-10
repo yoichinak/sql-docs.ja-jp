@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8c76615971b00bdd492d20178933cea15a638da
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f81d72eb6c6d6da6bb57208b65727ab63d580f36
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166997"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041442"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open および Close メソッドの例 (VC++)
 この例では、開いている [レコードセット](./recordset-object-ado.md)と [接続](./connection-object-ado.md)オブジェクトの両方に対して、 **Open** メソッドと [Close](./close-method-ado.md)メソッドを使用します。  

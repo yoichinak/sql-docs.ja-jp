@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0ae4ed8f72dca085edd0c82220296d65795d6ac
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d8ec88ad85b4f0432ce4740e8f54647640f2e7bd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166463"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040612"
 ---
 # <a name="status-property-ado-field"></a>Status プロパティ (ADO Field)
 [フィールド](./field-object.md)オブジェクトの状態を示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "99166463"
 ## <a name="return-value"></a>戻り値  
  [Fieldstatusenum](./fieldstatusenum.md)値を返します。 既定値は **adFieldOK** です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="record-field-status"></a>レコードフィールドの状態  
  [Record](./record-object-ado.md)オブジェクトの Fields コレクション内の **Field** オブジェクトの値に対する変更は、オブジェクトの [Update](./update-method.md)メソッドが呼び出されるまでキャッシュされます。 その時点で、フィールドの値の変更によってエラーが発生した場合、OLE DB によってエラー **DB_E_ERRORSOCCURRED** (2147749409) が発生します。 エラーの原因となった **フィールド** コレクション内のいずれかの **フィールド** オブジェクトの Status プロパティには、問題の原因を説明する [fieldstatusenum](./fieldstatusenum.md)の値が含まれます。  

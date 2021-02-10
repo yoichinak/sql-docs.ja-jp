@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3bca1379c776f6fad1f4ab2aa7368b424ff9e7f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ada69c67cbd6d76973391ba1076129e5ee6baa24
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170712"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041432"
 ---
 # <a name="open-method-ado-connection"></a>Open メソッド (ADO Connection)
 データソースへの接続を開きます。  
@@ -45,10 +45,10 @@ connection.Open ConnectionString, UserID, Password, Options
  *パスワード*  
  任意。 接続を確立するときに使用するパスワードを含む **文字列** 値です。  
   
- *Options*  
+ *[オプション]*  
  任意。 このメソッドが (同期的に) 後に返すか、または (非同期に) 接続を確立するかを決定する [ConnectOptionEnum](./connectoptionenum.md) 値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [Connection](./connection-object-ado.md)オブジェクトで **Open** メソッドを使用すると、データソースへの物理的な接続が確立されます。 このメソッドが正常に完了すると、接続が有効になり、その接続に対してコマンドを発行して結果を処理できるようになります。  
   
  省略可能な *ConnectionString* 引数を使用して、一連の *引数* を含む接続文字列、セミコロンで区切られた *値* ステートメント、または URL で識別されるファイルまたはディレクトリリソースのいずれかを指定します。 **Connectionstring** プロパティは、 *connectionstring* 引数に使用される値を自動的に継承します。 このため、**接続** オブジェクトを開く前に **connectionstring** プロパティを設定するか、 *connectionstring* 引数を使用して **Open** メソッド呼び出し中に現在の接続パラメーターを設定またはオーバーライドできます。  

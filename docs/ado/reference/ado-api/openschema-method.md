@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b5ca92e42a68639f6b9e3044894ec779109fff5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b764f9a28665d31667e9c502c7ad8bdf0b9bbcad
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170679"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041312"
 ---
 # <a name="openschema-method"></a>OpenSchema メソッド
 プロバイダーからデータベーススキーマ情報を取得します。  
@@ -47,7 +47,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *SchemaID*  
  OLE DB 仕様で定義されていないプロバイダースキーマクエリの GUID。 *QueryType* が **Adschemaproviderspecific** に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **OpenSchema** メソッドは、データソース内のテーブル、テーブル内の列、サポートされるデータ型など、データソースに関する自己記述的な情報を返します。  
   
  *QueryType* 引数は、返される列 (スキーマ) を示す GUID です。 OLE DB 仕様には、スキーマの完全な一覧が含まれています。  

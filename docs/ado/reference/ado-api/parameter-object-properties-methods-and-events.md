@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cfd83682aba5dfe41037347b2701f44161729f9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4aca50430564d09e05a6a2eee4020fc0d4ba00e1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166911"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041162"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Parameter オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -43,7 +43,7 @@ ms.locfileid: "99166911"
 ## <a name="methods"></a>メソッド  
  [AppendChunk メソッド](./appendchunk-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

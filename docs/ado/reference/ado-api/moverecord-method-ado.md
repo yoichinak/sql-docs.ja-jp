@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d55a2a2aacc281271789d2c456ea5bdc8de44499
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a92b7bc00b2deed4047dca5ed8bcf67fcd14ced9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167073"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041642"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord メソッド (ADO)
 [レコード](./record-object-ado.md)によって表されるエンティティを別の場所に移動します。  
@@ -47,16 +47,16 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *パスワード*  
  任意。 必要に応じて *ユーザー名* を確認するパスワードを含む **文字列**。  
   
- *Options*  
+ *[オプション]*  
  任意。 既定値が **Admoveunspecified** である [MoveRecordOptionsEnum](./moverecordoptionsenum.md)値。 このメソッドの動作を指定します。  
   
- *非同期*  
+ *Async*  
  任意。 **ブール** 値。 **True** の場合、この操作は非同期であることを指定します。  
   
 ## <a name="return-value"></a>戻り値  
  **文字列** 値です。 通常、 *Destination* の値が返されます。 ただし、返される正確な値はプロバイダーに依存します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *Source* と *Destination* の値を同じにすることはできません。それ以外の場合は、実行時エラーが発生します。 少なくともサーバー、パス、およびリソース名が異なる必要があります。  
   
  インターネット公開プロバイダーを使用して移動されたファイルの場合、このメソッドは、 *オプション* で指定されていない限り、移動されるファイル内のすべてのハイパーテキストリンクを更新します。 このメソッドは、 **Admoveoverwrite** が指定されていない限り、 *Destination* が既存のオブジェクト (ファイルやディレクトリなど) を識別する場合に失敗します。  
