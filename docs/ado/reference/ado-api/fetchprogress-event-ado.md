@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53cd3be90492bb601c06138a3829d428d3abcaeb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fa10ddcef5adfd340d2cbd690ff54d8ab62f35ff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167399"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034072"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress イベント (ADO)
 **Fetchprogress** イベントは、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に現在取得されている行の数を報告するために、長い非同期操作中に定期的に呼び出されます。  
@@ -47,7 +47,7 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
  *pRecordset*  
  レコードを取得する対象のオブジェクトである **レコードセット** オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  子 **レコードセット** で **fetchprogress** を使用する場合は、 *Progress* および *maxprogress* パラメーターの値が基になる [Cursor Service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)行セットから派生することに注意してください。 返される値は、現在のチャプター内のレコード数だけでなく、基になる行セット内のレコードの合計数を表します。  
   
 > [!NOTE]

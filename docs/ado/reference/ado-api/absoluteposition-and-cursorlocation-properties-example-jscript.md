@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36c914ecdcf216c3f11f6e4afae3efbfb167c18e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e9f928cccd455af05804e35efe25fb1aa537cd25
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159285"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031660"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition およびカーソルのプロパティの例 (JScript)
 この例では、 [AbsolutePosition](./absoluteposition-property-ado.md) プロパティを使用して、 [レコードセット](./recordset-object-ado.md)のすべてのレコードを列挙するループの進行状況を追跡する方法を示します。 カーソルをクライアントカーソルに設定することによって、 **AbsolutePosition** プロパティを有効にするには、cursor [location](./cursorlocation-property-ado.md)プロパティを使用します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **AbsolutePositionJS** として保存します。  

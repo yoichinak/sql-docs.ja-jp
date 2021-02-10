@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bc27de85c9c8e1e47ec3fb89ec8fadce07713c3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 74e86bfb03ca77d103594009b7ddbbddb6b5b894
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171155"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034162"
 ---
 # <a name="execute-method-ado-command"></a>Execute メソッド (ADO Command)
 [Command オブジェクト](../../../ado/reference/ado-api/command-object-ado.md)の[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[commandstream](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティで指定されたクエリ、SQL ステートメント、またはストアドプロシージャを実行します。  
@@ -44,13 +44,13 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *パラメーター*  
  任意。 **CommandText** または **commandstream** で指定された入力文字列またはストリームと組み合わせて使用されるパラメーター値の **Variant** 配列。 (この引数で渡された場合、出力パラメーターは正しい値を返しません)。  
   
- *Options*  
+ *[オプション]*  
  任意。 プロバイダーが [コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または [commandstream](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティをどのように評価するかを示す **Long** 値。 [Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値または[executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md)値を使用して作成されたビットマスク値を指定できます。 たとえば、 **Adcmdtext** と **adExecuteNoRecords** を組み合わせて使用すると、 **ado.net プロパティの** 値をテキストとして評価し、コマンドテキストの実行時に生成される可能性のあるレコードがコマンドによって破棄され、返されないようにすることができます。  
   
 > [!NOTE]
 >  **Executeoptionenum** 値 **adExecuteNoRecords** を使用すると、内部処理を最小限に抑えてパフォーマンスを向上させることができます。 **AdExecuteStream** を指定した場合、 **adasyncfetch** と **adAsynchFetchNonBlocking** オプションは無視されます。 **Execute** を使用して **adcmdfile** または **Adcmdtabledirect** の **commandtypeenum** 値を使用しないでください。 これらの値は、**レコードセット** の [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドおよび [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドでオプションとしてのみ使用できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Command** オブジェクトに対して **Execute** メソッドを使用すると、オブジェクトの **CommandText** プロパティまたは **commandstream** プロパティで指定されたクエリが実行されます。  
   
  結果は、 **レコードセット** (既定では) またはバイナリ情報のストリームとして返されます。 バイナリストリームを取得するには、 *Options* で **adExecuteStream** を指定してから、コマンドを設定してストリームを指定し **ます ("出力ストリーム")**。 結果を受け取るために ADO **ストリーム** オブジェクトを指定することも、IIS 応答オブジェクトなどの別のストリームオブジェクトを指定することもできます。 **AdExecuteStream** で **Execute** を呼び出す前にストリームが指定されなかった場合は、エラーが発生します。 **Execute** から戻るときのストリームの位置は、プロバイダー固有です。  

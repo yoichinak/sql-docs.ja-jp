@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40a74a489a39d0bbb4c11c27e16225aec8779606
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2e31ee8fb294dc66b52630d79a585961b1f360d7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980453"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032754"
 ---
 # <a name="internet-publishing-scenario"></a>インターネットへの発行のシナリオ
 このコード例では、Microsoft OLE DB Provider for Internet Publishing を使用して ADO を使用する方法を示します。 このシナリオでは、 **レコードセット**、 **レコード**、および **ストリーム** オブジェクトを使用して、インターネット発行プロバイダーによって発行されたリソースの内容を表示する Visual Basic アプリケーションを作成します。  

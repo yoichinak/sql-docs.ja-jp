@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d592835b148c6307e49583fac3e4a9cbffbfbf23
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c0708e50451d58dc6732ed9ffa2714716fb0c55e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171142"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034132"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Execute、Requery、および Clear メソッドの例 (VBScript)
 この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の **Execute** メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md) メソッドを使用して [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md) メソッドを使用して [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションの内容をクリアします。 この手順を実行するには、ExecuteCommand および PrintOutput プロシージャが必要です。  

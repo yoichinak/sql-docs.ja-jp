@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a8d8dab4944cfa2d43bc571442e294699154f12
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7cb446e14f0ac6887ef81234343c330f5caf4788
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159267"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031639"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand プロパティ (ADO)
 関連付けられた[レコードセット](./recordset-object-ado.md)オブジェクトを作成した[Command](./command-object-ado.md)オブジェクトを示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99159267"
 ## <a name="return-value"></a>戻り値  
  **Command** オブジェクトを含む **Variant** を返します。 既定値は null オブジェクト参照です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Activecommand** プロパティは読み取り専用です。  
   
  **Command** オブジェクトを使用して現在の **レコードセット** を作成しなかった場合は、 **Null** オブジェクト参照が返されます。  

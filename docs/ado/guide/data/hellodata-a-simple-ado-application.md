@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bec2b55f7daee865489c3f32e1ee70e53b9102a6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ec46ed0f94ffe9bd50d0576ab7b3855011bcf775
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980633"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033162"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
 この単純なアプリケーションでは、データの取得、検査、編集、および更新の4つの主要な ADO 操作を実行します。 これらの操作は、Microsoft® SQL Server に含まれる Northwind サンプルデータベースに対して実行されます。 ADO の基礎に注目し、コードが乱雑にならないようにするために、この例のエラー処理は最小限に抑えられています。  
@@ -34,7 +34,7 @@ ms.locfileid: "88980633"
   
 4.  次の表に示すように、グリッドの下のフォームに **テキストボックス** を作成し、そのプロパティを設定します。 完了すると、フォームは次の図のようになります。  
   
-5.  最後に、 [HelloData コード](./hellodata-code.md)に一覧表示されているコードをコピーし、フォームのコードエディターウィンドウに貼り付けます。 **F5**キーを押してコードを実行します。  
+5.  最後に、 [HelloData コード](./hellodata-code.md)に一覧表示されているコードをコピーし、フォームのコードエディターウィンドウに貼り付けます。 **F5** キーを押してコードを実行します。  
   
 > [!NOTE]
 >  次の例では、ガイド全体を通して、ユーザー id "MyId" とパスワード "123aBc" を使用してサーバーに対する認証を行います。 これらの値は、サーバーの有効なログオン資格情報に置き換える必要があります。 また、"MySQLServer" の値をサーバーの名前に置き換えます。  
@@ -43,19 +43,19 @@ ms.locfileid: "88980633"
   
  ![HelloData VB アプリケーションの Form1](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|コントロール型|プロパティ|[値]|  
+|コントロール型|プロパティ|値|  
 |------------------|--------------|-----------|  
-|フォーム|Name|Form1|  
+|フォーム|名前|Form1|  
 ||[高さ]|6500|  
 ||幅|6500|  
-|MS DataGrid|Name|grdDisplay1|  
-|TextBox|Name|txtDisplay1|  
+|MS DataGrid|名前|grdDisplay1|  
+|TextBox|名前|txtDisplay1|  
 ||Multiline|true|  
-|コマンドボタン|Name|cmdGetData|  
+|コマンドボタン|名前|cmdGetData|  
 ||Caption|Get Data|  
-|コマンドボタン|Name|cmdExamineData|  
+|コマンドボタン|名前|cmdExamineData|  
 ||Caption|データの調査|  
-|コマンドボタン|Name|cmdEditData|  
+|コマンドボタン|名前|cmdEditData|  
 ||Caption| データの編集|  
-|コマンドボタン|Name|cmdUpdateData|  
+|コマンドボタン|名前|cmdUpdateData|  
 ||Caption|更新データ|

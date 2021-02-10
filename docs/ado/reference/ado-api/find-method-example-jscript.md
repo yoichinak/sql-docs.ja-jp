@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff3dc581bffd20bd5192306dd50b0afce6369c66
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3136609c4b5300808c4561b7bc71d076ee6d6849
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171028"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024588"
 ---
 # <a name="find-method-example-jscript"></a>Find メソッドの例 (JScript)
 この例では、 [レコードセット](./recordset-object-ado.md) オブジェクトの [Find](./find-method-ado.md) メソッドを使用して、名前が G で始まる ***Northwind** _ データベース内の会社を検索して表示します。次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、_ * findjs. asp * * として保存します。  

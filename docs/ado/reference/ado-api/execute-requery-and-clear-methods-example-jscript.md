@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd54db0b75b6b4e35333ea74ea3a84683e09545a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b7d0e9eef28942ad53a234811b2ee061e9685a1a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171152"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034142"
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute、Requery、および Clear メソッドの例 (JScript)
 この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の **Execute** メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md) メソッドを使用して [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md) メソッドを使用して [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションの内容をクリアします。 (**エラー** コレクションには、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティの **Connection** オブジェクトを使用してアクセスします)。ファイルに「 **Executejs. asp**」という名前を指定します。  

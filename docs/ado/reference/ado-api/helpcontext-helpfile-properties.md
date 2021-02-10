@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 355f3047a31e82d034cfe23b2d1c069d07a7bbab
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ee683a07b0a581788657af2233944dccf5ab05b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170948"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020789"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile プロパティ
 [エラー](./error-object.md)オブジェクトに関連付けられたヘルプファイルとトピックを示します。  
@@ -38,7 +38,7 @@ ms.locfileid: "99170948"
   
 -   **HelpFile** ヘルプファイルへの完全に解決されたパスに評価される **文字列** 値を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ヘルプファイルが **HelpFile** プロパティに指定されている場合、 **helpcontext** プロパティを使用して、識別するヘルプトピックが自動的に表示されます。 関連するヘルプトピックが使用できない場合、 **Helpcontext** プロパティは0を返し、 **HelpFile** プロパティは長さ0の文字列 ("") を返します。  
   
 ## <a name="applies-to"></a>適用対象  

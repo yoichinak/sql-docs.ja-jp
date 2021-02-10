@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07c5a4bc4db5fc05cb24ee51ac7a9ec989dd1e29
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 09cb9764b113d01d8742d3fe951c55991dc3c8cf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171394"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026020"
 ---
 # <a name="copyto-method-ado"></a>CopyTo メソッド (ADO)
 [ストリーム](./stream-object-ado.md)内の指定した文字数またはバイト数 ([型](./type-property-ado-stream.md)によって異なる) を別の **ストリーム** オブジェクトにコピーします。  
@@ -44,7 +44,7 @@ Stream.CopyTo DestStream, NumChars
  *NumChars*  
  任意。 ソース **ストリーム** 内の現在位置からコピー先の **ストリーム** にコピーするバイト数または文字数を指定する **整数** 値。 既定値は-1 です。これは、すべての文字またはバイトが現在の位置から [EOS](./eos-property.md)にコピーされることを指定します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このメソッドは、 [position](./position-property-ado.md) プロパティによって指定された現在位置を起点として、指定された文字数またはバイト数をコピーします。 指定された数が **eos** までの使用可能なバイト数を超えている場合は、現在の位置から **eos** までの文字またはバイトだけがコピーされます。 *Numchars* の値が-1 であるか省略されている場合は、現在の位置から始まるすべての文字またはバイトがコピーされます。  
   
  コピー先のストリームに既存の文字またはバイトが含まれている場合、コピーが終了した時点以降のすべてのコンテンツは切り捨てられません。 **位置** は、コピーされた最後のバイトの直後のバイトになります。 これらのバイトを切り捨てる場合は、 [SetEOS](./seteos-method.md)を呼び出します。  

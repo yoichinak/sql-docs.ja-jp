@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: fad0a1121d9d7d9e8cc37970022f1c5bbf028e10
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 636a16d8656572e6fe2505f58bafc9eca9f6ce18
+ms.sourcegitcommit: 78b3096c2be89bcda92244f78663d8b38811bec5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184777"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100009290"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-sql)
 
@@ -51,7 +51,7 @@ ms.locfileid: "99184777"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。    
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  
  sys.dm_os_spinlock_stats は、スピンロックの競合の原因を特定するために使用できます。 場合によっては、スピンロックの競合を解決または減少させることができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
@@ -131,7 +131,7 @@ GO
 |DIGEST_CACHE|内部使用のみ。|
 |DINPBUF|内部使用のみ。|
 |DIRECTLOGCONSUMER|内部使用のみ。|
-|DP_LIST|間接チェックポイントが有効になっているデータベースのダーティページの一覧へのアクセスを制御します。 詳細については、[この記事](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)を参照してください。|
+|DP_LIST|間接チェックポイントが有効になっているデータベースのダーティページの一覧へのアクセスを制御します。 [記事 4497928](https://support.microsoft.com/kb/4497928)、[記事 4040276](https://support.microsoft.com/kb/4040276)の修正プログラムを適用するか、[トレースフラグ 3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を使用してください。 詳細については、[この記事](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)を参照してください。|
 |DROP|内部使用のみ。|
 |DROP_TEMPO|内部使用のみ。|
 |DROPPED_ALLOC_UNIT|内部使用のみ。|

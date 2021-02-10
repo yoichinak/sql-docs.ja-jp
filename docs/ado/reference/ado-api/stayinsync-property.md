@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7546889953e748d730a3b47ebc4cee5fcae3e10
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8e30e9f8157be0ab7644eedb51a2956b232baa56
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170149"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020391"
 ---
 # <a name="stayinsync-property"></a>StayInSync プロパティ
 親の行位置が変更されたときに、基になる子レコード (つまり、*チャプター*) への参照が変更されるかどうかを階層 [レコードセット](./recordset-object-ado.md)オブジェクトで示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "99170149"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **ブール** 値を設定または返します。 既定値は **True** です。 **True** の場合、親の **Recordset** オブジェクトが行の位置を変更すると、チャプターが更新されます。**False** の場合、親の **Recordset** オブジェクトが行の位置を変更した場合でも、チャプターは前の章のデータを参照し続けます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このプロパティは、 [OLE DB 用の Microsoft データ整形サービス](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)によってサポートされるレコードセットなどの階層的なレコードセットに適用されます。子 **レコード** セットを取得する前に、親 **レコード** セットに設定する必要があります。 このプロパティは、階層的なレコードセットの移動を簡略化します。  
   
 ## <a name="applies-to"></a>適用対象  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa12f6e7c6e2451f6323f4d25dfed6894d7b5c26
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ffd44947f767aa98a835d89d7809b4cb31667615
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171465"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034812"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout プロパティ (ADO)
 コマンドの実行中に、試行を終了してエラーを生成するまでの待機時間を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99171465"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  コマンドの実行を待機する時間を秒単位で示す **Long 型** の値を設定または返します。 既定値は 30 です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [接続](./connection-object-ado.md)オブジェクトまたは [コマンド](./command-object-ado.md)オブジェクトの **CommandTimeout** プロパティを使用して、ネットワークトラフィックまたはサーバーの使用量の遅延が原因で [Execute](./execute-method-ado-command.md)メソッド呼び出しをキャンセルできるようにします。 コマンドの実行が完了する前に、 **CommandTimeout** プロパティに設定された間隔が経過すると、エラーが発生し、ADO によってコマンドがキャンセルされます。 このプロパティを0に設定すると、ADO は実行が完了するまで無制限に待機します。 コードを記述しているプロバイダーとデータソースで、 **CommandTimeout** 機能がサポートされていることを確認します。  
   
  **接続** オブジェクトの **CommandTimeout** 設定は、同じ **接続** 上の **Command** オブジェクトの **CommandTimeout** 設定には影響しません。つまり、 **Command** オブジェクトの **CommandTimeout** プロパティは、 **Connection** オブジェクトの **CommandTimeout** 値の値を継承しません。  

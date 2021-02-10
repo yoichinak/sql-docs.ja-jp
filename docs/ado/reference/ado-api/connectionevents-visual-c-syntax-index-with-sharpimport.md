@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28ab260b939f7e12ba0d84fd69d89a1039251d0f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1309aa97f296af58e5fd2ee9fb8bfcdc7eaf8a13
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167730"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026445"
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents (Visual C++ 構文インデックス #import)
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
   
 ```  
 HRESULT InfoMessage( struct Error * pError, enum  

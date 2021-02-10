@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a4cb18c49513ff5f80e5be22f5480e4f6464cb4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b09ba2f8f026b6c08d64acab6701a0d3da4013f5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167742"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034772"
 ---
 # <a name="connection-object-ado"></a>Connection オブジェクト (ADO)
 データ ソースへの開いた接続を表します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **接続** オブジェクトは、データソースとの一意のセッションを表します。 クライアント/サーバーデータベースシステムでは、サーバーへの実際のネットワーク接続と同じになる場合があります。 プロバイダーでサポートされている機能によっては、 **接続** オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  
   
  **接続** オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  

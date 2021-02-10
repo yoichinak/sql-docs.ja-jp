@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc3f0e4748df671e3fdecefe6c41ca5475eac746
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ea41c5e83c779f825837ed197ef5e0376197ca4b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167763"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034842"
 ---
 # <a name="command-object-properties-methods-and-events"></a>Command オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -53,7 +53,7 @@ ms.locfileid: "99167763"
   
  [Execute メソッド (ADO Command)](./execute-method-ado-command.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

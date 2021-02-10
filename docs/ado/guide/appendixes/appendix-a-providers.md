@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d50f77959b21031b03ae9591181c61a3419577fd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a49518c1fcc1618884751d503def46a29dd9c048
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991173"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029486"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>付録 A: データおよびサービスプロバイダー
-このセクションでは、データプロバイダー、サービスプロバイダー、およびサービスコンポーネントの3種類のプロバイダーについて説明します。 プロバイダーは、データを提供するカテゴリとサービスを提供するカテゴリの2つのカテゴリに分類されます。 *データプロバイダー*は独自のデータを所有し、アプリケーションに表形式で公開します。 *サービスプロバイダー*は、データを生成して使用することによってサービスをカプセル化し、ADO アプリケーションの機能を強化します。 サービスプロバイダーは、他のサービスプロバイダーまたはコンポーネントと連携して動作する必要がある *サービスコンポーネント*としてさらに定義することもできます。
+このセクションでは、データプロバイダー、サービスプロバイダー、およびサービスコンポーネントの3種類のプロバイダーについて説明します。 プロバイダーは、データを提供するカテゴリとサービスを提供するカテゴリの2つのカテゴリに分類されます。 *データプロバイダー* は独自のデータを所有し、アプリケーションに表形式で公開します。 *サービスプロバイダー* は、データを生成して使用することによってサービスをカプセル化し、ADO アプリケーションの機能を強化します。 サービスプロバイダーは、他のサービスプロバイダーまたはコンポーネントと連携して動作する必要がある *サービスコンポーネント* としてさらに定義することもできます。
 
 ## <a name="data-providers"></a>データ プロバイダー
  ADO は、さまざまなデータプロバイダーのいずれかに接続でき、特定のプロバイダーの特定の機能に関係なく同じプログラミングモデルを公開できるため、強力で柔軟性があります。
@@ -51,10 +51,10 @@ ms.locfileid: "88991173"
 |インターネット公開|[Microsoft OLE DB Provider for Internet Publishing](./microsoft-ole-db-provider-for-internet-publishing.md)|
 |単純なデータソース|[Microsoft OLE DB Simple プロバイダー](./microsoft-ole-db-simple-provider.md)|
 
-## <a name="provider-specific-dynamic-properties"></a>プロバイダー固有の動的プロパティ
+## <a name="provider-specific-dynamic-properties"></a>動的プロパティの Provider-Specific
  [Connection](../../reference/ado-api/connection-object-ado.md)、 [Command](../../reference/ado-api/command-object-ado.md)、および[Recordset](../../reference/ado-api/recordset-object-ado.md)オブジェクトの[properties](../../reference/ado-api/properties-collection-ado.md)コレクションには、プロバイダー固有の動的プロパティが含まれます。 これらのプロパティは、ADO がサポートする組み込みプロパティ以外のプロバイダー固有の機能に関する情報を提供します。
 
- 接続を確立し、これらのオブジェクトを作成したら、オブジェクトの**properties**コレクションに対して[Refresh](../../reference/ado-api/refresh-method-ado.md)メソッドを使用して、プロバイダー固有のプロパティを取得します。 これらの動的プロパティの詳細については、プロバイダーのドキュメントと [OLE DB プログラマーガイド](/previous-versions/windows/desktop/ms713643(v=vs.85)) を参照してください。
+ 接続を確立し、これらのオブジェクトを作成したら、オブジェクトの **properties** コレクションに対して [Refresh](../../reference/ado-api/refresh-method-ado.md)メソッドを使用して、プロバイダー固有のプロパティを取得します。 これらの動的プロパティの詳細については、プロバイダーのドキュメントと [OLE DB プログラマーガイド](/previous-versions/windows/desktop/ms713643(v=vs.85)) を参照してください。
 
 ## <a name="service-providers"></a>サービス プロバイダー
  サービスプロバイダーを使用するには、キーワードを指定する必要があります。 また、各サービスプロバイダーに関連付けられているプロバイダー固有の動的プロパティにも注意する必要があります。 プロバイダー固有の詳細については、Microsoft から現在提供されているサービスプロバイダーごとに記載されています。

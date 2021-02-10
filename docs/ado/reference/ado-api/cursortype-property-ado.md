@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 703c89fb8f5e1479e09162429ac93fa43c66e0be
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7dc8d34ccc631d9ecea19fdfceb36743adbaa5e0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167618"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034452"
 ---
 # <a name="cursortype-property-ado"></a>CursorType プロパティ (ADO)
 [レコードセット](./recordset-object-ado.md)オブジェクトで使用されるカーソルの種類を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99167618"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [カーソル Typeenum](./cursortypeenum.md)値を設定または返します。 既定値は **adOpenForwardOnly** です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **CursorType** プロパティを使用して、**レコードセット** オブジェクトを開くときに使用するカーソルの種類を指定します。  
   
  [カーソル位置](./cursorlocation-property-ado.md)プロパティが **adUseClient** に設定されている場合は、 **adopenstatic** の設定のみがサポートされます。 サポートされていない値が設定されている場合、エラーは発生しません。サポートされている最も近い **CursorType** が代わりに使用されます。  

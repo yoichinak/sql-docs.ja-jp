@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6de01bb420a7e2c5fadd2970064d5e84d22328b3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 11fa07dd7af4512f8b7f41917d2778fecd6584ce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980143"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032644"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>名前付きコマンドにパラメーターを渡す
 コマンドの結果が名前付きコマンドの *out* 変数として渡されるのと同じように、パラメーター化されたコマンドのパラメーターを *、変数と* して名前付きコマンドに渡すことができます。  
   
- 次のコード例では、 **CustomerID** が Northwind データベースの "ALKFI" である顧客によって配置されたすべての注文を取得しようとしています。 **CustomerID**の値は、名前付きコマンドが呼び出された時点で指定されます。  
+ 次のコード例では、 **CustomerID** が Northwind データベースの "ALKFI" である顧客によって配置されたすべての注文を取得しようとしています。 **CustomerID** の値は、名前付きコマンドが呼び出された時点で指定されます。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -83,7 +83,7 @@ Set objComm = Nothing
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -必要な入力パラメーターが**整数**型ではなく**文字列**型であるため、データ型が一致しないというエラーが発生します。  
+ -必要な入力パラメーターが **整数** 型ではなく **文字列** 型であるため、データ型が一致しないというエラーが発生します。  
   
  次の呼び出し:  
   

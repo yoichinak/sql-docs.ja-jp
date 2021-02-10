@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25eea144ab0f9301f79a74773258cf399802af9d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7e70762a2cbaa6e2dd3d8d91b824591799605748
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980183"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032664"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB プロバイダー (ADO)
 OLE DB は、さまざまな情報ソースに格納されているデータへの一貫したアクセスをアプリケーションに提供する一連の COM インターフェイスを定義します。 この方法を使用すると、データソースは、データソースに適した DBMS 機能の量をサポートするインターフェイスを介してデータを共有できます。 設計上、OLE DB の高パフォーマンスアーキテクチャは、柔軟なコンポーネントベースのサービスモデルを使用することに基づいています。 OLE DB は、アプリケーションとデータの間に指定された数の中間層を用意するのではなく、特定のタスクを実行するために必要な数のコンポーネントのみを必要とします。  
   
- たとえば、ユーザーがクエリを実行したいとします。 次のシナリオで考えてみましょう。  
+ たとえば、ユーザーがクエリを実行したいとします。 以下のようなシナリオが考えられます。  
   
 -   データは、現在 ODBC ドライバーが存在していて、ネイティブ OLE DB プロバイダーが存在しないリレーショナルデータベースに存在します。このアプリケーションでは、ADO を使用して OLE DB Provider for ODBC と対話し、適切な ODBC ドライバーを読み込みます。 ドライバーは SQL ステートメントを DBMS に渡し、データを取得します。  
   

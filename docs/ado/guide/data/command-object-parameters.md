@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2adb1e8d6dc516de2077416ce7e866efa6a03c54
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a49f7099e45e92cac31653f5c3f08442dda2459b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991553"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033322"
 ---
 # <a name="command-object-parameters"></a>Command オブジェクトのパラメーター
-前のトピックでは、 [単純なコマンドの作成と実行に](./creating-and-executing-a-simple-command.md)ついて説明しました。 [コマンド](../../reference/ado-api/command-object-ado.md)オブジェクトのより興味深い使用方法を次の例に示します。この例では、SQL コマンドがパラメーター化されています。 この変更により、コマンドを再利用し、毎回パラメーターに別の値を渡すことができます。 **Command**オブジェクトの[準備済みプロパティ](../../reference/ado-api/prepared-property-ado.md)プロパティが**true**に設定されているため、ADO では、最初に実行する前に、 [CommandText](../../reference/ado-api/commandtext-property-ado.md)で指定されたコマンドをコンパイルする必要があります。 また、コンパイルされたコマンドをメモリ内に保持します。 これにより、準備に必要なオーバーヘッドによってコマンドの初回実行時の処理が少し遅くなりますが、その後、コマンドが呼び出されるたびにパフォーマンスが向上します。 したがって、コマンドは、複数回使用する場合にのみ準備する必要があります。  
+前のトピックでは、 [単純なコマンドの作成と実行に](./creating-and-executing-a-simple-command.md)ついて説明しました。 [コマンド](../../reference/ado-api/command-object-ado.md)オブジェクトのより興味深い使用方法を次の例に示します。この例では、SQL コマンドがパラメーター化されています。 この変更により、コマンドを再利用し、毎回パラメーターに別の値を渡すことができます。 **Command** オブジェクトの [準備済みプロパティ](../../reference/ado-api/prepared-property-ado.md)プロパティが **true** に設定されているため、ADO では、最初に実行する前に、 [CommandText](../../reference/ado-api/commandtext-property-ado.md)で指定されたコマンドをコンパイルする必要があります。 また、コンパイルされたコマンドをメモリ内に保持します。 これにより、準備に必要なオーバーヘッドによってコマンドの初回実行時の処理が少し遅くなりますが、その後、コマンドが呼び出されるたびにパフォーマンスが向上します。 したがって、コマンドは、複数回使用する場合にのみ準備する必要があります。  
   
 ```  
 'BeginManualParamCmd  
@@ -119,4 +119,4 @@ End Function
 'EndNewConnection  
 ```  
   
- すべてのプロバイダーが準備コマンドをサポートしているわけではありません。 プロバイダーがコマンドの準備をサポートしていない場合、このプロパティが **True**に設定されるとすぐにエラーが返されることがあります。 エラーが返されない場合は、コマンドを準備する要求を無視し、 **準備** されたプロパティを **false**に設定します。
+ すべてのプロバイダーが準備コマンドをサポートしているわけではありません。 プロバイダーがコマンドの準備をサポートしていない場合、このプロパティが **True** に設定されるとすぐにエラーが返されることがあります。 エラーが返されない場合は、コマンドを準備する要求を無視し、 **準備** されたプロパティを **false** に設定します。

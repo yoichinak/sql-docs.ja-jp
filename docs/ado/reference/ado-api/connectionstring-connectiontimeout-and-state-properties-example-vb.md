@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51f92f1bef619dca21947fd5fae030f2618e4e7c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3b0ca72dbe15f8c27f4ac85245a4545a2b207a5f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171437"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034682"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout、State プロパティの例 (VB)
 この例では、 [ConnectionString](./connectionstring-property-ado.md) プロパティを使用して [接続](./connection-object-ado.md) オブジェクトを開くさまざまな方法を示します。 また、 [ConnectionTimeout](./connectiontimeout-property-ado.md) プロパティを使用して接続タイムアウト期間を設定し、 [state](./state-property-ado.md) プロパティを使用して接続の状態を確認します。 このプロシージャを実行するには、GetState 関数が必要です。  

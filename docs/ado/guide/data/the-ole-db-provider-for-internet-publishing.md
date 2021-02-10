@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7556d3857142a4762fd411f5175a38c2e4d58cf3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9282bdc81d71ecd938f3d115678769915f8e3367
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979363"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032404"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>OLE DB Provider for Internet Publishing
 ADO [レコード](../../../ado/reference/ado-api/record-object-ado.md) および [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md) オブジェクトは、Microsoft OLE DB Provider For Internet Publishing (internet publishing provider) と共に使用して、microsoft FrontPage によって提供される Web フォルダーやファイルなどのリソースにアクセスしたり操作したりすることができます。 ADO では、 **レコード**、 **ストリーム**、または [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) のソースを URL に指定できます。 その後、リソースのアップロード、ダウンロード、移動、コピー、削除、またはリソースプロパティの直接操作を行うことができます。  
@@ -53,6 +53,6 @@ ADO [レコード](../../../ado/reference/ado-api/record-object-ado.md) およ�
     ```  
   
 > [!NOTE]
->  *プロバイダーの接続文字列*キーワードまたは**プロバイダー**プロパティを使用して、プロバイダーの値として Msdaipp が明示的に指定されている場合、接続文字列で "URL =" を使用することはできません。 そうすると、エラーが発生します。 代わりに、前述のように URL を指定するだけです。  
+>  *プロバイダーの接続文字列* キーワードまたは **プロバイダー** プロパティを使用して、プロバイダーの値として Msdaipp が明示的に指定されている場合、接続文字列で "URL =" を使用することはできません。 そうすると、エラーが発生します。 代わりに、前述のように URL を指定するだけです。  
   
  インターネット公開プロバイダーの詳細については、「 [Microsoft OLE DB provider For Internet publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)」または「インターネット発行用の OLE DB プロバイダーがインストールされているソースアプリケーションに付属のプロバイダードキュメント (Windows 2000、Office 2000、または internet Explorer 5.0)」を参照してください。

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d445a6bfc705821b49408027c13ef1474cdc0d94
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 81caf2da7f342cc7c31d1e4cd2bbad5b83852e9a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167564"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034402"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete メソッド (ADO Recordset)
 現在のレコードまたはレコードのグループを削除します。  
@@ -41,7 +41,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **adAffectAll** と **AdAffectAllChapters** は、 **削除** する有効な引数ではありません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Delete** メソッドを使用すると、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト内の現在のレコードまたはレコードのグループが削除対象としてマークされます。 レコード **セット** オブジェクトでレコードの削除が許可されていない場合、エラーが発生します。 即時更新モードの場合、削除はすぐにデータベースで発生します。 たとえば、データベースの整合性違反が原因でレコードを正常に削除できない場合、レコードは [更新](../../../ado/reference/ado-api/update-method.md)の呼び出し後も編集モードのままになります。 つまり、現在のレコードから移動する前に、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) で更新プログラムをキャンセルする必要があります (たとえば、 [Close](../../../ado/reference/ado-api/close-method-ado.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)など)。  
   
  バッチ更新モードの場合、レコードはキャッシュから削除対象としてマークされ、実際の削除は、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) メソッドを呼び出したときに行われます。 削除されたレコードを表示するには、 [Filter](../../../ado/reference/ado-api/filter-property.md) プロパティを使用します。  

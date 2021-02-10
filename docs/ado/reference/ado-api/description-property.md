@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2a982c21cbab3a93db6c6c64cec997d9f3bb4fe
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7181bffdad12291c08bf4fb5c6a00b4b1b2a6cc5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167532"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034312"
 ---
 # <a name="description-property"></a>Description プロパティ
 [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトについて説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "99167532"
 ## <a name="return-value"></a>戻り値  
  エラーの説明を含む **文字列** 値を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Description** プロパティを使用して、エラーの簡単な説明を取得します。 このプロパティを表示して、処理できない、または処理したくないエラーをユーザーに通知します。 文字列は、ADO またはプロバイダーから取得されます。  
   
  プロバイダーは、ADO に特定のエラーテキストを渡す役割を担います。 ADO は、受信したプロバイダーエラーまたは警告ごとに [エラー](../../../ado/reference/ado-api/error-object.md) オブジェクトを **エラーコレクションに** 追加します。 **エラー** コレクションを列挙して、プロバイダーが成功したエラーをトレースします。  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3896ec0e36fb5416d97cf3e6e6ad8409843cae3a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ddc69b4d66266732d784f0546a52a222f5fe23ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164633"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034802"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks メソッドの例 (VB)
 この例は、 [Comparebookmarks](./comparebookmarks-method-ado.md) メソッドを示しています。 ブックマークの相対値は、特定のブックマークが特別に特殊な場合を除き、ほとんど必要ありません。  
   
- 検索の対象として ***Authors** _ テーブルから派生した [レコードセット](./recordset-object-ado.md)のランダムな行を指定します。 次に、そのターゲットに対して相対的な各行の位置を表示します。  
+ ***Authors*** テーブルから派生した [レコードセット](./recordset-object-ado.md)のランダムな行を検索の対象として指定します。 次に、そのターゲットに対して相対的な各行の位置を表示します。  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -59,7 +59,7 @@ Public Sub Main()
   
      ' Open recordset as a static cursor type recordset  
     Set rstAuthors = New ADODB.Recordset  
-    strSQLAuthors = "SELECT _ FROM Authors"  
+    strSQLAuthors = "SELECT * FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
   
     count = rstAuthors.RecordCount  

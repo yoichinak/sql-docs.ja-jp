@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3554898451228afee73914a82907f6348ad1cff0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dbcf0b6aef651e90c90df1cb49af2dbe6a29c674
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991133"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029436"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl オブジェクトのエラーコード
 次の表に、RDS の一覧を示し [ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md) オブジェクトのエラーコード。 小さい2バイトの正の10進変換、完全なエラーコードの負の10進変換、および16進数の値が表示されます。
@@ -41,7 +41,7 @@ ms.locfileid: "88991133"
 |**IDS_NotReentrant**|4111-2146824171 0x800A1015|イベントハンドラーがまだ処理中であるため、要求を実行できません。|
 |**IDS_ObjectNotSafe**|4103-2146824185 0x800A1007|このコンピューターの安全性の設定により、ビジネスオブジェクトの作成が禁止されています。|
 |**IDS_RecordsetNotOpen**|4109-2146824173 0x800A1013|**レコードセット** が開かれていません。|
-|**IDS_ResetInvalidField**|4108-2146824174 0x800A1012|**Sortcolumn**または**filtercolumn**に指定された列が存在しません。|
+|**IDS_ResetInvalidField**|4108-2146824174 0x800A1012|**Sortcolumn** または **filtercolumn** に指定された列が存在しません。|
 |**IDS_RowsetNotUpdateable**|4104-2146824184 0x800A1008|行セットは更新できません。|
 |**IDS_UnexpectedError**|4351-2146823937 0x800A10FF|予期しないエラー。|
 |**IDS_UpdatesFailed**|4098-2146824190 0x800A1002|データベースを更新できません。|

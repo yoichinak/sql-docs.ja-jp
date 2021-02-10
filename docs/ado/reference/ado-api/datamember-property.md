@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71b4f59b4315d61f1d8f6d4d3fe840cc64016e5b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1026951122336e67760f74077044ff5fd9b9fd76
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167603"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034432"
 ---
 # <a name="datamember-property"></a>DataMember プロパティ
 [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)プロパティによって参照される[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から取得されるデータメンバーの名前を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99167603"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **文字列** 値を設定または返します。 名前の大文字と小文字は区別されません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このプロパティは、データ環境を使用してデータバインドコントロールを作成するために使用されます。 データ環境では、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトとして表される名前付きオブジェクト (データメンバー) を含むデータ (データソース) のコレクションを保持します。  
   
  **DataMember** プロパティと **DataSource** プロパティを一緒に使用する必要があります。  

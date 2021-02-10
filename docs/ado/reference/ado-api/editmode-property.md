@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5854dce12ddb2303077111f3129274861a340ebd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5cec956ced454f0220b8d545e8e05c8fbcf8a760
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171237"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025413"
 ---
 # <a name="editmode-property"></a>EditMode プロパティ
 現在のレコードの編集状態を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99171237"
 ## <a name="return-value"></a>戻り値  
  [Editmodeenum](../../../ado/reference/ado-api/editmodeenum.md)値を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ADO は、現在のレコードに関連付けられている編集バッファーを保持します。 このプロパティは、このバッファーに変更が加えられたかどうか、または新しいレコードが作成されたかどうかを示します。 現在のレコードの編集状態を確認するには、 **EditMode** プロパティを使用します。 編集プロセスが中断されている場合は、保留中の変更をテストし、 [Update](../../../ado/reference/ado-api/update-method.md) または [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) メソッドを使用する必要があるかどうかを判断できます。  
   
  *即時更新モード* では、**更新** メソッドが正常に呼び出された後に、 **EditMode** プロパティが **adEditNone** にリセットされます。 [削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)を呼び出すと、データソース内のレコードが正常に削除されない (参照整合性違反があるなど) 場合、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)は編集モード (**EditMode**  =  **adEditInProgress**) のままになります。 したがって、現在のレコードから移動する前に、 **CancelUpdate** を呼び出す必要があります (たとえば、 [Move](../../../ado/reference/ado-api/move-method-ado.md)、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)、 [Close](../../../ado/reference/ado-api/close-method-ado.md) など)。  

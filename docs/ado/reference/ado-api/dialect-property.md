@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed95df8ca18a60cf34108258e7b3f624cb0cb1fe
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 50bca564323d2094dc5e5ceaec5b703fb0a06a23
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171248"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025437"
 ---
 # <a name="dialect-property"></a>Dialect プロパティ
 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[commandstream](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティの言語を示します。 この言語では、文字列またはストリームを解析するためにプロバイダーが使用する構文と一般規則が定義されています。  
@@ -29,7 +29,7 @@ ms.locfileid: "99171248"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **Dialect** プロパティには、コマンドテキストまたはストリームの言語を表す有効な GUID が含まれています。 このプロパティの既定値は {C8B521FB-5CF3-11CE-ADE5-00AA0044773D} です。これは、プロバイダーがコマンドテキストまたはストリームを解釈する方法を選択する必要があることを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ADO は、ユーザーがこのプロパティの値を読み取ったときにプロバイダーに対してクエリを実行しません。このメソッドは、現在 [Command](../../../ado/reference/ado-api/command-object-ado.md) オブジェクトに格納されている値の文字列形式を返します。  
   
  ユーザーが **Dialect** プロパティを設定すると、ADO によって guid が検証され、指定した値が有効な guid でない場合はエラーが発生します。 **Dialect** プロパティでサポートされている GUID 値を確認するには、プロバイダーのドキュメントを参照してください。  

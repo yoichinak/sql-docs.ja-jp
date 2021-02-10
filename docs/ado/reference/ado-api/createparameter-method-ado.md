@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61793ca158cee6d4143128eae7fdecf3722ae61e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c5156f48f17d2d389646f4f752033cf88faf83f8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171373"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025966"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter メソッド (ADO)
 指定したプロパティを使用して、新しい [Parameter](./parameter-object.md) オブジェクトを作成します。  
@@ -53,7 +53,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Value*  
  任意。 **Parameter** オブジェクトの値を指定する **バリアント** です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Createparameter** メソッドを使用して、指定した名前、型、方向、サイズ、および値を使用して新しい **パラメーター** オブジェクトを作成します。 引数で渡す値は、対応する **パラメーター** プロパティに書き込まれます。  
   
  このメソッドは、 **Parameter** オブジェクトを [Command](./command-object-ado.md)オブジェクトの **Parameters** コレクションに自動的に追加しません。 これにより、 **パラメーター** オブジェクトをコレクションに追加したときに ADO によって検証される値を持つ追加のプロパティを設定できます。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2f6cd1b8bb40b4c62ad2c75fef63fd641201e9a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4f5a6e6f7d607bbc2f50bfad701056aca93fb822
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171412"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026040"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord メソッド (ADO)
 [レコード](./record-object-ado.md)によって表されるエンティティを別の場所にコピーします。  
@@ -47,16 +47,16 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *パスワード*  
  任意。 必要に応じて *ユーザー名* を確認するパスワードを含む **文字列** 値です。  
   
- *Options*  
+ *[オプション]*  
  任意。 **Adcopyunspecified** の既定値を持つ [CopyRecordOptionsEnum](./copyrecordoptionsenum.md)値。 このメソッドの動作を指定します。  
   
- *非同期*  
+ *Async*  
  任意。 **ブール** 値。 **True** の場合、この操作は非同期であることを指定します。  
   
 ## <a name="return-value"></a>戻り値  
  通常、*変換先* の値を返す **文字列** 値。 ただし、返される正確な値はプロバイダーに依存します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *Source* と *Destination* の値を同じにすることはできません。それ以外の場合は、実行時エラーが発生します。 少なくとも1つのサーバー、パス、またはリソース名が異なる必要があります。  
   
  **AdCopyNonRecursive** が指定されていない場合、*ソース* のすべての子 (サブディレクトリなど) が再帰的にコピーされます。 再帰演算では、 *Destination* を *Source* のサブディレクトリにすることはできません。それ以外の場合、操作は完了しません。  

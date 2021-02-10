@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dc5925a68b977e8beda03a0cb105739e323ebb1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7c2808a47eb2a8afb566776877738325bf4608b3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167650"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034583"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset メソッドの例 (VB)
 [レコードセット](./recordset-object-ado.md)オブジェクトを作成し、列情報を指定できます。 その後、 **レコードセット** オブジェクトにデータを挿入できます。基になる行セットは、挿入をバッファーします。  

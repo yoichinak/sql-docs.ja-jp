@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a6975e606544ddc05a838fa0238d95132c13bf1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d111bac142126b8d5c4d9ec14616c91a18e70d4f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171082"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024628"
 ---
 # <a name="fieldenum"></a>FieldEnum
 [レコード](./record-object-ado.md)オブジェクトの[fields](./fields-collection-ado.md)コレクションで参照される特殊なフィールドを指定します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  これらの定数は、 **レコード** に関連付けられている特殊なフィールドにアクセスするための "ショートカット" を提供します。 **フィールドコレクションから**[フィールド](./field-object.md)オブジェクトを取得し、**フィールド** オブジェクトの [Value](./value-property-ado.md)プロパティを使用してその内容を取得します。  
   
 |定数|値|説明|  

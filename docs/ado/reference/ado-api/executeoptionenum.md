@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f88d235c7ec38cd2f60ab5e07e1590f0f28e97ad
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b5d363e1255a1f34554dc6aceec212f5a79a7df8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167408"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034082"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 プロバイダーがコマンドを実行する方法を指定します。  

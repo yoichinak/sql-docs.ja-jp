@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6064030bd26ab6abb0bb003b2fcf26e72c4f24d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 48fa1fcb993531f8644b931f216f9b38ed427282
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166743"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020361"
 ---
 # <a name="record-object-ado"></a>Record オブジェクト (ADO)
 [レコードセット](./recordset-object-ado.md)またはデータプロバイダーの行、またはファイルやディレクトリなどの半構造化データプロバイダーによって返されるオブジェクトを表します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **レコード** オブジェクトは1行のデータを表し、1行の **レコードセット** と概念的に似ています。 プロバイダーの機能によっては、 **レコード** オブジェクトが1行の **レコードセット** ではなく、プロバイダーから直接返される場合があります。たとえば、1つの行のみを選択する SQL クエリが実行された場合などです。 または、 **レコード** オブジェクトを **レコードセット** オブジェクトから直接取得することもできます。 または、 **レコード** をプロバイダーから、Microsoft Exchange OLE DB プロバイダーなどの半構造化データに直接返すことができます。  
   
  **レコードオブジェクト** に関連付けられているフィールドは、**レコード** オブジェクトの [フィールド](./fields-collection-ado.md)コレクションを使用して表示できます。 ADO では、**レコード** オブジェクトの **Fields** コレクションで、レコード **セット**、 **SafeArray**、スカラー値を含むオブジェクト値列を使用できます。  

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8926e551f97d60256758b7df6c9dabca5584123
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c8cb910eef7ef810b444813c1e6678b745c524e8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171491"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026958"
 ---
 # <a name="command-object-ado"></a>Command オブジェクト (ADO)
 データソースに対して実行する特定のコマンドを定義します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **コマンド** オブジェクトを使用して、データベースに対してクエリを実行し、レコード [セット](./recordset-object-ado.md)オブジェクトのレコードを返します。また、一括操作を実行したり、データベースの構造を操作したりします。 プロバイダーの機能によっては、 **コマンド** のコレクション、メソッド、またはプロパティによっては、参照時にエラーが発生することがあります。  
   
  **Command** オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  

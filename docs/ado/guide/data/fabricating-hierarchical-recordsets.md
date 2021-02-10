@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24941f8fbf2aedb5fb61cea176ef26d3172012cc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 836c1e0091166485f68c04226c632e9999038469
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991283"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033116"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>階層レコードセットの作成
-次の例では、データシェイプの文法を使用して、親、子、および孫 **レコードセット**の列を定義することで、基になるデータソースのない階層レコードセットを作成する方法を示します。  
+次の例では、データシェイプの文法を使用して、親、子、および孫 **レコードセット** の列を定義することで、基になるデータソースのない階層レコードセットを作成する方法を示します。  
   
- 階層**レコードセット**を作成するには、 [OLE DB (ADO サービスプロバイダー) (MSDataShape) 用の Microsoft データ整形サービス](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)を指定する必要があります。また、 [connection](../../reference/ado-api/connection-object-ado.md)オブジェクトの[OPEN](../../reference/ado-api/open-method-ado-connection.md)メソッドの接続文字列パラメーターで NONE の Data Provider 値を指定できます。 詳細については、「 [データシェイプの必須プロバイダー](./required-providers-for-data-shaping.md)」を参照してください。  
+ 階層 **レコードセット** を作成するには、 [OLE DB (ADO サービスプロバイダー) (MSDataShape) 用の Microsoft データ整形サービス](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)を指定する必要があります。また、 [connection](../../reference/ado-api/connection-object-ado.md)オブジェクトの [OPEN](../../reference/ado-api/open-method-ado-connection.md)メソッドの接続文字列パラメーターで NONE の Data Provider 値を指定できます。 詳細については、「 [データシェイプの必須プロバイダー](./required-providers-for-data-shaping.md)」を参照してください。  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -53,7 +53,7 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- **レコードセット**が作成されるとすぐに、データセットの設定、操作、またはファイルへの保存を行うことができます。  
+ **レコードセット** が作成されるとすぐに、データセットの設定、操作、またはファイルへの保存を行うことができます。  
   
 ## <a name="see-also"></a>参照  
  [階層レコードセット内の行へのアクセス](./accessing-rows-in-a-hierarchical-recordset.md)   

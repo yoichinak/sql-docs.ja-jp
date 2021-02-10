@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4d156c6e117d5597569918496c161729cf6fc41
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e570ba46c7e890d0bf5123b50d2d59ce72d5f8a0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164727"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035521"
 ---
 # <a name="chapter-property-ado"></a>Chapter プロパティ (ADO)
 [ADORecordsetConstruction Interface](./adorecordsetconstruction-interface.md)オブジェクトから OLE DB **チャプター** オブジェクトを取得します。値の設定もできます。 **Put_Chapter** を使用して **チャプター** オブジェクトを設定すると、行のサブセットが ADO [レコードセットオブジェクト](./recordset-object-ado.md)オブジェクトに変換されます。 これにより、 **行セット** オブジェクトの現在のチャプターが設定されます。 このプロパティは読み取り/書き込み可能です。  
