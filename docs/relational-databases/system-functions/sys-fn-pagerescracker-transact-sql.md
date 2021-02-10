@@ -1,6 +1,6 @@
 ---
 title: sys.fn_PageResCracker (Transact-sql) |Microsoft Docs
-description: Sys.fn_PageResCracker システム関数について説明します。 例を参照し、使用可能なその他のリソースを確認します。
+description: Sys.fn_PageResCracker システム関数について説明します。 サンプルを参照し、使用可能なその他のリソースを確認します。
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: a60b83d3b494ba705399effd9412ef0549f2f3e4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 49e8472353f19bcca00e68969579d4cbf6f0b538
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198692"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064827"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-sql)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
@@ -56,7 +56,7 @@ sys.fn_PageResCracker ( page_resource )
 |file_id|**int**|ファイル ID|  
 |page_id|**int**|ページ ID|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
 `sys.fn_PageResCracker` は、データベースページの8バイトの16進数表現を、ページのデータベース ID、ファイル ID、およびページ ID を含む行セットに変換するために使用されます。   
 
 有効なページリソースを取得するには、 `page_resource` sys.dm_exec_requests の列から [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 動的管理ビュー、または [sys.sys](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) の &#40;システムビュー&#41;ます。 無効なページリソースが使用されている場合、戻り値は NULL になります。  

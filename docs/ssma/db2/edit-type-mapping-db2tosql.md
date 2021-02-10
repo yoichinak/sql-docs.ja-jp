@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3e31f1422415a14c4e1fb497ff56806feeb9439e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38ececbe6ded0d2482f6ad93bf7be84b022e3bcd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463538"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064357"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>型マッピングの編集 (DB2ToSQL)
 [ **型マッピングの編集** ] ダイアログボックスでは、転送元データベースオブジェクトと転送先データベースオブジェクトの間で型がどのようにマップされるかを指定できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "88463538"
 **To**  
 このマッピングの最大長を指定します。 たとえば、 **nchar** データ型の場合は、「20」と入力すると、このマッピングが **nchar (20)** で終わる範囲に対して指定されます。  
   
-**変換後の型**  
+**ターゲットの種類**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換元のデータ型がマップされるデータ型を選択します。 SSMA によってテーブルまたはストアドプロシージャが作成されると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、変換元のデータ型はこのデータ型に変更されます。  
   
 データ型が可変長の場合、[ **対象の型**] の下に次のフィールドが表示されます。  

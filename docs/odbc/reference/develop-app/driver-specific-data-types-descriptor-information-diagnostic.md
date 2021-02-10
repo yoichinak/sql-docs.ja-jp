@@ -1,6 +1,6 @@
 ---
 description: ドライバー固有のデータ型、記述子の種類、情報の種類、診断型、および属性
-title: ドライバー固有の種類-データ、記述子、情報、診断 |Microsoft Docs
+title: Driver-Specific の種類-データ、記述子、情報、診断 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a0ac3fd67e07f23f14420ee46ccda5cd409f87a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03cd6b0ed9a424a161f88f4bd525941895d3d201
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483005"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062567"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>ドライバー固有のデータ型、記述子の種類、情報の種類、診断型、および属性
 ドライバーは、次の目的でドライバー固有の値を割り当てることができます。  
   
--   **SQL データ型インジケーター**これらは、 **SQLBindParameter**の*ParameterType*と**SQLGetTypeInfo**の*データ型*で使用され、 **sqlcolattribute**、 **Sqlcolumns**、 **SQLDescribeCol**、 **SQLGetTypeInfo**、 **SQLDescribeParam**、 **SQLProcedureColumns**、および**sql 列**によって返されます。  
+-   **SQL データ型インジケーター** これらは、 **SQLBindParameter** の *ParameterType* と **SQLGetTypeInfo** の *データ型* で使用され、 **sqlcolattribute**、 **Sqlcolumns**、 **SQLDescribeCol**、 **SQLGetTypeInfo**、 **SQLDescribeParam**、 **SQLProcedureColumns**、および **sql 列** によって返されます。  
   
--   **記述子フィールド**これらは、 **Sqlcolattribute**、 **SQLGetDescField**、および**SQLSetDescField**の*FieldIdentifier*で使用されます。  
+-   **記述子フィールド** これらは、 **Sqlcolattribute**、 **SQLGetDescField**、および **SQLSetDescField** の *FieldIdentifier* で使用されます。  
   
--   **診断フィールド**これらは、 **SQLGetDiagField**および**SQLGetDiagRec**の*DiagIdentifier*で使用されます。  
+-   **診断フィールド** これらは、 **SQLGetDiagField** および **SQLGetDiagRec** の *DiagIdentifier* で使用されます。  
   
--   **情報の種類**これらは、 **SQLGetInfo**の*InfoType*で使用されます。  
+-   **情報の種類** これらは、 **SQLGetInfo** の *InfoType* で使用されます。  
   
--   **接続属性とステートメント属性**これらは、 **Sqlgetconnectattr**、 **SQLGetStmtAttr**、 **SQLSetConnectAttr**、および**SQLSetStmtAttr**の*属性*で使用されます。  
+-   **接続属性とステートメント属性** これらは、 **Sqlgetconnectattr**、 **SQLGetStmtAttr**、 **SQLSetConnectAttr**、および **SQLSetStmtAttr** の *属性* で使用されます。  
   
  これらの各項目には、2つの値のセットがあります。 ODBC によって使用されるように予約されている値と、ドライバーで使用するために予約されている値です。 ドライバー固有の値を実装する前に、ドライバーの作成者は、開いているグループのドライバー固有の型、フィールド、または属性ごとに値を要求する必要があります。 新しいドライバーを開発する場合は、次の表に記載されている範囲を使用します。 次に示す範囲外の不明な値が使用されている場合、ODBC 3.8 Driver Manager ではエラーは生成されません。 ただし、それ以降のバージョンのドライバーマネージャーでは、範囲外の不明な値を受信した場合にエラーが発生する可能性があります。  
   

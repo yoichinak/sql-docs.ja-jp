@@ -24,12 +24,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 53fbbd5a865594f46eacb75c9799b9c956efb2da
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938446"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059045"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>SQL Server Azure SQL Database への Access アプリケーションのリンク (アクセス許可)
 既存の Access アプリケーションをで使用する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行されたテーブルまたは SQL Azure のテーブルに元の access テーブルをリンクすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 リンクを使用すると Access データベースが変更されるため、クエリ、フォーム、レポート、およびデータアクセスページで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、access データベースのデータではなく、または Azure SQL Database のデータが使用されます。  
@@ -47,9 +47,9 @@ Access テーブルをまたは SQL Azure テーブルにリンクすると、 [
   
 1.  Access Metadata Explorer で、リンクするテーブルを選択します。  
   
-2.  [**テーブル**] を右クリックし、[**リンク**] を選択します。  
+2.  [ **テーブル**] を右クリックし、[ **リンク**] を選択します。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access の Migration Assistant (SSMA) は、元の Access テーブルをバックアップし、リンクテーブルを作成します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access の Migration Assistant (SSMA) は、元の Access テーブルをバックアップし、リンクテーブルを作成します。  
   
 テーブルをリンクすると、SSMA のテーブルに小さなリンクアイコンが表示されます。 Access では、テーブルに "リンク" アイコンが表示されます。このアイコンは、矢印が付いた地球です。  
   
@@ -66,7 +66,7 @@ Access でテーブルを開くと、キーセットカーソルを使用して�
   
 1.  Access Metadata Explorer で、リンクを解除するテーブルを選択します。  
   
-2.  [**テーブル**] を右クリックし、[**リンクの解除**] をクリックします。  
+2.  [ **テーブル**] を右クリックし、[ **リンクの解除**] をクリックします。  
   
 ## <a name="linking-tables-to-a-different-server"></a>別のサーバーへのテーブルのリンク  
 Access テーブルを1つの SQL Server インスタンスにリンクし、後で別のインスタンスへのリンクを変更する場合は、テーブルを再リンクする必要があります。  
@@ -75,15 +75,15 @@ Access テーブルを1つの SQL Server インスタンスにリンクし、後
   
 1.  Access Metadata Explorer で、リンクを解除するテーブルを選択します。  
   
-2.  [**テーブル**] を右クリックし、[**リンク解除**] を選択します。  
+2.  [ **テーブル** ] を右クリックし、[ **リンク解除**] を選択します。  
   
-3.  [ **SQL Server に再接続**] ボタンをクリックします。  
+3.  [ **SQL Server に再接続** ] ボタンをクリックします。  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセステーブルのリンク先となるまたは SQL Azure のインスタンスに接続します。  
   
 5.  Access Metadata Explorer で、リンクするテーブルを選択します。  
   
-6.  [**テーブル**] を右クリックし、[**リンク**] を選択します。  
+6.  [ **テーブル**] を右クリックし、[ **リンク**] を選択します。  
   
 ## <a name="updating-linked-tables"></a>リンクテーブルの更新  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure テーブルの定義が変更された場合は、このトピックで前述した手順に従って、SSMA のテーブルのリンクを解除してから再リンクできます。 また、Access を使用してテーブルを更新することもできます。  
@@ -92,9 +92,9 @@ Access テーブルを1つの SQL Server インスタンスにリンクし、後
   
 1.  Access データベースを開きます。  
   
-2.  [**オブジェクト**] ボックスの一覧の [**テーブル**] をクリックします。  
+2.  [ **オブジェクト** ] ボックスの一覧の [ **テーブル**] をクリックします。  
   
-3.  リンクテーブルを右クリックし、[**リンクテーブルマネージャー**] をクリックします。  
+3.  リンクテーブルを右クリックし、[ **リンクテーブルマネージャー**] をクリックします。  
   
 4.  更新するリンクテーブルの横にあるチェックボックスをオンにし、[ **OK]** をクリックします。  
   
@@ -110,7 +110,7 @@ Access テーブルを1つの SQL Server インスタンスにリンクし、後
   
 **解決策:** 実行速度の遅いクエリをパススルークエリ、ストアドプロシージャ、またはビューに変換します。 パススルークエリへの変換には、次の問題があります。  
   
--   パススルークエリは変更できません。 クエリ結果を変更したり、新しいレコードを追加したりするには、クエリにバインドされているフォームに [明示的に**変更**] または [**追加**] ボタンを使用するなど、別の方法で行う必要があります。  
+-   パススルークエリは変更できません。 クエリ結果を変更したり、新しいレコードを追加したりするには、クエリにバインドされているフォームに [明示的に **変更** ] または [ **追加** ] ボタンを使用するなど、別の方法で行う必要があります。  
   
 -   一部のクエリではユーザー入力が必要ですが、パススルークエリではユーザー入力がサポートされていません。 ユーザー入力は、パラメーターの入力を求める (VBA) コード、または入力コントロールとして使用されるフォームによって取得することができます Visual Basic for Applications ます。 どちらの場合も、VBA コードはクエリをユーザー入力と共にサーバーに送信します。  
   
@@ -145,9 +145,9 @@ Recordset.LastModified
 **解決策:** を使用してテーブルスキーマを変更し、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Access のリンクを更新します。  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>データの移行後にハイパーリンク機能が失われる  
-**原因:** データを移行すると、列内のハイパーリンクの機能が失われ、単純な**nvarchar (max)** 列になります。  
+**原因:** データを移行すると、列内のハイパーリンクの機能が失われ、単純な **nvarchar (max)** 列になります。  
   
-**解決策:** なし。  
+**解決策:** [なし] :  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>一部の SQL Server データ型はアクセスでサポートされていません  
 **原因:** Access でサポートされて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] いないデータ型を含むテーブルまたは SQL Azure テーブルを後で更新する場合は、access でテーブルを開くことはできません。  

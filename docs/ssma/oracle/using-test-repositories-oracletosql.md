@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6b070a45c7990efbb598401b241083fcb2d804f5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: f73dd1aabecee8625ace5cc4af0d342124306815
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035141"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063457"
 ---
 # <a name="using-test-repositories-oracletosql"></a>テスト リポジトリの使用 (OracleToSQL)
-SSMA テストリポジトリには、後で使用するために SSMA Tester テストケースとテスト結果が格納されます。 リポジトリデータは、 **ssmatesterdb**データベースのスキーマ**ssma_oracle_utilities**の SQL Server テーブル**TestCaseRepository**および**runtestcaseresultrepository**に保存されます。  
+SSMA テストリポジトリには、後で使用するために SSMA Tester テストケースとテスト結果が格納されます。 リポジトリデータは、 **ssmatesterdb** データベースのスキーマ **ssma_oracle_utilities** の SQL Server テーブル **TestCaseRepository** および **runtestcaseresultrepository** に保存されます。  
   
 [テストケースのリポジトリ] ダイアログボックスでは、次のボタンを使用できます。  
   
@@ -30,7 +30,7 @@ SSMA テストリポジトリには、後で使用するために SSMA Tester �
 -   [ **閉じる** ] ボタンをクリックして、[テストケースのリポジトリ] ダイアログボックスを閉じます。  
   
 ## <a name="test-cases-repository"></a>テストケースリポジトリ  
-テストケースリポジトリを表示するには、テスト**担当**者メニューの [**テストケース**] をクリックします。 SSMA は、[テストケース **] ページに**保存されているテストケースの一覧を含む [テストケース] ダイアログウィンドウ**のリポジトリ**を表示します。  
+テストケースリポジトリを表示するには、テスト **担当** 者メニューの [**テストケース**] をクリックします。 SSMA は、[テストケース **] ページに** 保存されているテストケースの一覧を含む [テストケース] ダイアログウィンドウ **のリポジトリ** を表示します。  
   
 グリッドには、各テストケースに関する次の情報が表示されます。  
   
@@ -53,9 +53,9 @@ SSMA テストリポジトリには、後で使用するために SSMA Tester �
 -   [ **実行** ] ボタンをクリックして [ [実行中のテストケース (OracleToSQL)](./running-test-cases-oracletosql.md) ] ダイアログを開き、選択したテストを実行します。  
   
 ## <a name="test-results-repository"></a>テスト結果リポジトリ  
-テスト結果リポジトリは、[**テストケース**] ウィンドウの [リポジトリ] の [**テスト結果**] ページで確認できます。 [**テスト担当**者] メニューの [**テスト結果...** ] をクリックして開きます。  
+テスト結果リポジトリは、[**テストケース**] ウィンドウの [リポジトリ] の [**テスト結果**] ページで確認できます。 [**テスト担当** 者] メニューの [**テスト結果...** ] をクリックして開きます。  
   
-**テスト結果**のページでは、次の2つのフィルターを使用できます。  
+**テスト結果** のページでは、次の2つのフィルターを使用できます。  
   
 -   テストケース名フィルター: テストケース名でテスト結果を選択できます。 このフィルターの **すべてのテストケース** 値で、すべてのテストケースのテスト結果を表示できます。  
   

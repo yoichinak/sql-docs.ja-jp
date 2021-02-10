@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a1a73e1dbc1c494080427ae5dfd686dd3c18abc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0276efc988eca1674410c31a2f83379ee1e875b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497634"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064992"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>SSMA プロジェクトでの作業 (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) データベースをまたは SQL Azure に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、まず SSMA プロジェクトを作成します。 このプロジェクトは、移行または SQL Azure する ASE データベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移行されたオブジェクトとデータを受け取るまたは SQL Azure のターゲットインスタンスに関するメタデータ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 接続情報、およびプロジェクト設定を含むファイルです。  
@@ -114,7 +114,7 @@ ASE データベースからまたは SQL Azure にデータを移行するに [
   
 2.  ASE に再接続するには、[ **ファイル** ] メニューの [ **Sybase に再接続**] を選択します。  
   
-3.  再接続 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure するには、[**ファイル**] メニューの [再接続] を選択して**Reconnect to SQL Server**  /  **SQL Azure に再接続**SQL Server ます。  
+3.  再接続 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure するには、[**ファイル**] メニューの [再接続] を選択して  /  **SQL Azure に再接続** SQL Server ます。  
   
 ## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順は、 [SYBASE ASE に接続](connecting-to-sybase-ase-sybasetosql.md)することです。  

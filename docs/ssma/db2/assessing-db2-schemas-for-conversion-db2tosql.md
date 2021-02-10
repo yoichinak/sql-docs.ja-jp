@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7516b8abce9e5a3d147796ec0acb101a92fc18f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fd80f6dda35ffbdbb28bbe783047bd787bc81ac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480529"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065977"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>変換のための DB2 スキーマの評価 (DB2ToSQL)
 オブジェクトを読み込み、データをに移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行の複雑さと移行にかかる時間を決定する必要があります。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーの原因となる具体的な問題を確認することもできます。  

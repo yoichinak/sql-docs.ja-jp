@@ -21,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 8580ae3857b4c8c7f54599e70134879a076e89ca
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1044577add08fe1c9d6337f67244a185d98db8e4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99131366"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065564"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-sql)
 
@@ -95,7 +95,7 @@ ms.locfileid: "99131366"
 
 このビューには、VIEW DATABASE STATE 権限が必要です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 Azure SQL Database でのリソースガバナンスの詳細については、「 [SQL Database リソースの制限](/azure/sql-database/sql-database-resource-limits-database-server)」を参照してください。
 

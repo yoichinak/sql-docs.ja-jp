@@ -11,12 +11,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 2bab82a2fe9cc10b100cc49a4f18c1aa0bfaacff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb02391afdcb082e69d4848c47d5f4caabd8e8cf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492505"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065999"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>SSMA for Access コンソールを使用した作業 (アクセス権のある Sql)
 コマンドラインでコンソールアプリケーションを使用して、アクセスの Microsoft SQL Server Migration Assistant (SSMA) にアクセスできるようになりました。 スクリプトファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 SSMA では、コンソールアプリケーションとして、スクリプトレベルのインターフェイスを有効にし、移行サイクルを短縮し、移行作業をスケールします。  

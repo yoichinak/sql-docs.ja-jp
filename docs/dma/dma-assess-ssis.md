@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: a893ad7e086abfdf0cc61c785ad6d93c3eeed184
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439406"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061527"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server 統合サービスの移行評価を実行する
 
@@ -38,11 +38,11 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 
 ## <a name="create-an-assessment"></a>評価を作成する
 
-1. [**新規**] (+) アイコンを選択し、[**統合サービス**] として**評価**プロジェクトの種類を選択します。
+1. [**新規**] (+) アイコンを選択し、[**統合サービス**] として **評価** プロジェクトの種類を選択します。
 
 1. ソースとターゲットのサーバーの種類を設定します。
 
-    ソースを **SQL Server**として選択し、対象サーバーの種類を **Azure SQL Database** または **Azure SQL Managed Instance**として設定します。
+    ソースを **SQL Server** として選択し、対象サーバーの種類を **Azure SQL Database** または **Azure SQL Managed Instance** として設定します。
 
 1. **Create** をクリックしてください。
 
@@ -50,7 +50,7 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 
 ## <a name="connect-to-a-server"></a>サーバーに接続する
 
-1. 既定のオプションに従い、[ソースの**選択**] の横にある [**次へ**] をクリックします。
+1. 既定のオプションに従い、[ソースの **選択**] の横にある [**次へ**] をクリックします。
 1. SQL server インスタンス名を入力し、認証の種類を選択して、適切な接続プロパティを設定します。
 1. OptionalSSIS パッケージが格納されているフォルダーパスを入力します。
 1. Optional該当する場合は、パッケージ暗号化パスワードを入力します。

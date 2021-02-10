@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f5a725d0e2c6d9651884c399caabe2a8833826f3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988678"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059054"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>ソースとターゲットのデータ型のマッピング (データ型)
 Access データベースの種類は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データベースの種類とは異なります。 Access データベースオブジェクトをオブジェクトに変換する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データ型をアクセスからにマップする方法を指定する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の手順に示すように、既定のデータ型マッピングをそのまま使用することも、マッピングをカスタマイズすることもできます。  

@@ -13,12 +13,12 @@ ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 641d97868dcd308dbe487d43b7eba84a8b772371
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ac1ea4b1193fbf2a65d948983c071aad817ffbd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320738"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058947"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>変換のための Oracle Schemas へのアクセス (OracleToSQL)
 オブジェクトを読み込み、データをに移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行の複雑さと移行にかかる時間を決定する必要があります。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーの原因となる具体的な問題を確認することもできます。  

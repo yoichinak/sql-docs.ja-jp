@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 69753bb7f8b873ebdd74a8c18262034557844c55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0139d7583a06f9e197504cf15b5b59974a92d90d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463492"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065907"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>変数値ファイルの作成 (DB2ToSQL)
 変数値ファイルは、などのコマンドのパラメーター値を構成する XML ファイルです。サーバーの移行から別のサーバーへの移行に頻繁に変更される転送元または転送先のサーバー名を指定します。 多数のデータベースの移行が行われると、各ソースサーバーの値を格納するための複数の変数ファイルが作成され、コマンドラインで **-v** スイッチを使用してマスタースクリプトファイルに参照されます。 これにより、複数の変数ファイルの変数値を使用して、いくつかのスクリプトファイルで静的な値を保持することができます。  
@@ -87,6 +87,6 @@ ms.locfileid: "88463492"
 ## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、[サーバー接続ファイル &#40;DB2ToSQL&#41;作成し](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)ます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [サーバー接続ファイルの作成](../oracle/creating-the-server-connection-files-oracletosql.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: 8688fa61a1ccaede3bd370e1d19ccd66531f5739
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496810"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060937"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD: SQL Server のデータ資産の準備状態を評価して Azure SQL に移行する 
 
@@ -93,8 +93,8 @@ DMACMD に渡される XML 要素は、次の表で定義されています。
 |---------|---------|
 |`AssessmentName`|評価の名前|
 |`AssessmentSourcePlatform`|ソース SQL Server プラットフォーム。 既定値は `SqlOnPrem` です。|
-|`AssessmentTargetPlatform`|ターゲット SQL Server プラットフォーム。  </br> `AzureSqlDatabase` は Azure SQL Database 対象のです。 </br> `ManagedSqlServer` は、Azure SQL Managed Instance ターゲットを対象としています。 </br></br>**AzureSQLMI**サンプルでは、SQL Managed Instance ターゲットを評価します。|
-|`AssessmentDatabases`|インスタンス内のすべてのデータベースを評価する必要がある場合は、インスタンス名だけを指定します。それ以外の場合は、各行に特定のデータベースを一覧表示します。 </br></br>**AzureSQLMI**サンプルでは、インスタンス内のすべてのデータベース `Servername\SQL2017` と、インスタンス内の2つの特定のデータベースを評価し `Servername\SQL2016` ます。  |
+|`AssessmentTargetPlatform`|ターゲット SQL Server プラットフォーム。  </br> `AzureSqlDatabase` は Azure SQL Database 対象のです。 </br> `ManagedSqlServer` は、Azure SQL Managed Instance ターゲットを対象としています。 </br></br>**AzureSQLMI** サンプルでは、SQL Managed Instance ターゲットを評価します。|
+|`AssessmentDatabases`|インスタンス内のすべてのデータベースを評価する必要がある場合は、インスタンス名だけを指定します。それ以外の場合は、各行に特定のデータベースを一覧表示します。 </br></br>**AzureSQLMI** サンプルでは、インスタンス内のすべてのデータベース `Servername\SQL2017` と、インスタンス内の2つの特定のデータベースを評価し `Servername\SQL2016` ます。  |
 |`AssessmentResultDma` </br> `AssessmentResultJson` </br> `AssessmentResultCsv` | 結果ファイルの形式を指定します。 `.DMA`、 `.JSON` 、および `.CSV` 。 ダブルクリックし `.DMA` て、DMA UI で開きます。 <br> `AssessmentResultDma` は、評価結果を Azure Migrate hub にアップロードするために必要です。  |
 |`AssessmentOverwriteResult`| 、、またはと同じパスの既存の評価結果ファイルを上書きするかどうかを示し `AssessmentResultJson` `AssessmentResultDma` `AssessmentResultCsv` ます。|
 |`AssessmentEvaluateCompatibilityIssues` </br> `AssessmentEvaluateFeatureParity` |評価を実行して、互換性の問題と機能のパリティに関する問題をそれぞれ評価します。|
@@ -103,7 +103,7 @@ DMACMD に渡される XML 要素は、次の表で定義されています。
 |`AzureMigrateProjectName`|評価結果をアップロードするプロジェクト名 Azure Migrate ます。|
 |`ResourceGroupName`|Azure Migrate リソースグループ名。|
 |`AzureAuthenticationInteractiveAuthentication`|認証ウィンドウをポップアップ表示するには、に設定し `true` ます。|
-|`AzureAuthenticationTenantId`|Azure Active Directory テナント ID。 </br></br>これは、 [Azure portal](https://portal.azure.com)の Azure Active Directory の**概要**ブレードから取得します。 |
+|`AzureAuthenticationTenantId`|Azure Active Directory テナント ID。 </br></br>これは、 [Azure portal](https://portal.azure.com)の Azure Active Directory の **概要** ブレードから取得します。 |
 |`EnableAssessmentUploadToAzureMigrate`| `true`評価結果をアップロードして Azure Migrate hub に発行するには、に設定します。|
 |   |   |
 

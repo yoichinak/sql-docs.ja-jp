@@ -10,18 +10,18 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 ms.author: alexiva
-ms.openlocfilehash: 72c6797bfc8d673069cab41002a4a93596d7e5d9
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 8d43e6a48746fbb1587327b430b67c6959731013
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779414"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064097"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Sybase への接続 (SybaseToSQL)
 
-[ **Sybase への接続**] ダイアログボックスを使用して、移行する Sybase Adaptive Server ENTERPRISE (ASE) インスタンスに接続します。
+[ **Sybase への接続** ] ダイアログボックスを使用して、移行する Sybase Adaptive Server ENTERPRISE (ASE) インスタンスに接続します。
 
-このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **Sybase に接続**] を選択します。 以前に接続している場合は、コマンドが**Sybase に再接続**されます。
+このダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **Sybase に接続**] を選択します。 以前に接続している場合は、コマンドが **Sybase に再接続** されます。
 
 ## <a name="options"></a>オプション
 
@@ -34,7 +34,7 @@ Sybase サーバーに接続するコンピューター上のインストール�
 **サーバー名**  
 アダプティブサーバーの名前または IP アドレスを入力または選択します。 既定のサーバー名は、コンピューター名と同じです。 これは標準モードオプションです。
 
-**サーバーポート**  
+**[サーバー ポート]**  
 ASE への接続に既定以外のポートを使用している場合は、ポート番号を入力します。 既定のポート番号は5000です。 これは標準モードオプションです。
   
 **ユーザー名**  
@@ -50,13 +50,13 @@ ASE への接続に使用する完全な接続文字列を入力します。
 
 **さまざまなプロバイダーの接続パラメーターは次のとおりです。**
 
-1. **OLE DB プロバイダー**の接続パラメーター
+1. **OLE DB プロバイダー** の接続パラメーター
 
    |設定|Sybase 12.5 パラメーター|Sybase 15 パラメーター|
    |-----------|-------------------------|-----------------------|
    |サーバー名|サーバー名|サーバー|
    |Port|サーバーポートアドレス|Port|
-   |ユーザー名|User ID|User ID|
+   |ユーザー名|ユーザー ID|ユーザー ID|
    |Password|Password|Password|
    |プロバイダー|プロバイダー|プロバイダー|
 
@@ -68,7 +68,7 @@ ASE への接続に使用する完全な接続文字列を入力します。
 
    `Server=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=ASEOLEDB;Port=5000;`
 
-2. **ODBC プロバイダー**の接続パラメーター
+2. **ODBC プロバイダー** の接続パラメーター
 
    |設定|Sybase 12.5/15 パラメーター|
    |-----------|-----------------------------|
@@ -82,7 +82,7 @@ ASE への接続に使用する完全な接続文字列を入力します。
 
    `driver=Adaptive Server Enterprise;Server=sybserver;uid=MyUserID;pwd=MyP@$$word;Port=5000;`
 
-3. **ADO.NET Provider**の接続パラメーター
+3. **ADO.NET Provider** の接続パラメーター
 
    |設定|Sybase 12.5/15 パラメーター|
    |-----------|-----------------------------|
@@ -99,6 +99,6 @@ ASE への接続に使用する完全な接続文字列を入力します。
 
    これは高度なモードオプションです。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 移行プロセスの次の手順では、 [SQL Server に接続](connect-to-sql-server-sybasetosql.md)します。

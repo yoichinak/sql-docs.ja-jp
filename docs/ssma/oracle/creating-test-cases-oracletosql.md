@@ -13,18 +13,18 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 4f7183089fd67f413515034a557e4b73388f950f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0465aeb3d014213891796c33c4cacc2ec0e4256
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418388"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058537"
 ---
 # <a name="creating-test-cases-oracletosql"></a>テスト ケースの作成 (OracleToSQL)
 テストケースウィザードを使用して、テストを作成します。 このウィザードでは、テスト済みオブジェクトと検証済みオブジェクトを選択し、テストパラメーターを指定することによって、テストケースを作成できます。  
   
 ## <a name="starting-the-test-case-wizard"></a>テストケースウィザードの開始  
-テストケースウィザードを開始するには、[テスト**担当**者] メニューの [**新しいテストケース**] をクリックします。  
+テストケースウィザードを開始するには、[テスト **担当** 者] メニューの [**新しいテストケース**] をクリックします。  
   
 ウィザードを開始すると、ソース Oracle サーバーでスキーマ SSMATESTER_ORACLE が検索されます。 補助オブジェクトを格納するために使用される Tester 拡張機能スキーマです。 テストケースウィザードで SSMATESTER_ORACLE が見つからない場合は、スキーマの作成を提案するダイアログウィンドウが表示されます。 (通常、この状況は SSMA Tester の初回実行時に発生します)。  
   

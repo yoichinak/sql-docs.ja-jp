@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 13b0775dd7a20d37e80eaddb39f649f65c43b129
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f56976c9140cb4ac18c048d7d57d6949fc4ae74d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886179"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065161"
 ---
 # <a name="assess-an-apps-data-access-layer-with-data-migration-assistant"></a>Data Migration Assistant を使用したアプリのデータアクセス層の評価
 
@@ -40,7 +40,7 @@ ms.locfileid: "82886179"
 この評価を有効にするために、データアクセス移行ツールキット (DAMT)、Visual Studio Code の拡張機能が最近導入されました。 この拡張機能の最新バージョン (0.2) では、.Net アプリケーションと T-sql 言語のサポートが追加されています。
 
 1. [ここ](https://code.visualstudio.com/download)から VS Code をダウンロードしてインストールします。
-2. 拡張機能マーケットプレースから[Data Access Migration Toolkit 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit)を有効にします。
+2. 拡張機能マーケットプレースから [Data Access Migration Toolkit 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit) を有効にします。
 
    ![データアクセス移行ツールキットの拡張機能ページ](../dma/media/dma-assess-app-data-layer/dma-damt-extension-page.png)
 
@@ -48,7 +48,7 @@ ms.locfileid: "82886179"
 
    ![Visual Studio Code のアプリケーションプロジェクト](../dma/media/dma-assess-app-data-layer/dma-app-project-in-vscode.png)
 
-4. 拡張機能コンソール (Ctrl-Shft-P) を起動し、**データアクセス: [ワークスペースの分析**] コマンドを実行します。
+4. 拡張機能コンソール (Ctrl-Shft-P) を起動し、 **データアクセス: [ワークスペースの分析** ] コマンドを実行します。
 
    ![Visual Studio Code の拡張コンソール](../dma/media/dma-assess-app-data-layer/dma-vscode-extension-console.png)
 

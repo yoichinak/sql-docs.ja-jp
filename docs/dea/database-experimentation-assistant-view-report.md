@@ -12,24 +12,24 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 017b7a1e06fca4a1f682050b99f8c8412b44aaf4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d1666d4ba2279623065dd3c0d8faf5e0653de82e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951127"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065947"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Database Experimentation Assistant で分析レポートを表示する
 
-Database Experimentation Assistant (DEA) を使用して[分析レポートを作成](database-experimentation-assistant-create-report.md)した後、実行した A/B テストに基づいて、パフォーマンスの洞察をレポートで確認できます。
+Database Experimentation Assistant (DEA) を使用して [分析レポートを作成](database-experimentation-assistant-create-report.md)した後、実行した A/B テストに基づいて、パフォーマンスの洞察をレポートで確認できます。
 
 ## <a name="open-an-existing-analysis-report"></a>既存の分析レポートを開く
 
-1. DEA で、リストアイコンを選択し、サーバー名と認証の種類を指定して、シナリオに応じて [**接続の暗号化**] と [**サーバー証明書の信頼**] チェックボックスをオンまたはオフにし、[**接続**] を選択します。
+1. DEA で、リストアイコンを選択し、サーバー名と認証の種類を指定して、シナリオに応じて [ **接続の暗号化** ] と [ **サーバー証明書の信頼** ] チェックボックスをオンまたはオフにし、[ **接続**] を選択します。
 
    ![レポートを使用してサーバーに接続する](./media/database-experimentation-assistant-view-report/dea-connect-to-server-with-report-files.png)
 
-2. [**分析レポート**] 画面の左側で、表示するレポートのエントリを選択します。
+2. [ **分析レポート** ] 画面の左側で、表示するレポートのエントリを選択します。
 
    ![既存のレポートファイルを開く](./media/database-experimentation-assistant-view-report/dea-select-report-to-view.png)
 
@@ -39,7 +39,7 @@ Database Experimentation Assistant (DEA) を使用して[分析レポートを�
 
 レポートの最初のページには、実験が実行された対象サーバーのバージョンとビルド情報に関する情報が表示されます。 しきい値を使用すると、A/B テスト分析の感度や許容範囲を調整できます。 既定では、しきい値は 5%; に設定されます。パフォーマンスの向上 (>= 5%) は、"向上" として分類されます。  ドロップダウンリストを使用すると、パフォーマンスしきい値が異なるレポートを評価できます。
 
-レポート内のデータを CSV ファイルにエクスポートするには、[**エクスポート**] ボタンを選択します。  分析レポートの任意のページで [**印刷**] を選択すると、その時点で画面に表示される内容を印刷できます。
+レポート内のデータを CSV ファイルにエクスポートするには、[ **エクスポート** ] ボタンを選択します。  分析レポートの任意のページで [ **印刷** ] を選択すると、その時点で画面に表示される内容を印刷できます。
 
 ### <a name="query-distribution"></a>クエリの配布
 
@@ -64,7 +64,7 @@ Database Experimentation Assistant (DEA) を使用して[分析レポートを�
   - **解決済みのエラー**: ターゲット1に存在するが、ターゲット2で解決されるエラー。
   - **アップグレードブロッカー**: 対象サーバーへのアップグレードをブロックするエラー。
 
-  グラフの横棒または円のセクションをクリックすると、カテゴリにドリルダウンされ、[**評価できません**] カテゴリの場合でも、パフォーマンスメトリックが表示されます。
+  グラフの横棒または円のセクションをクリックすると、カテゴリにドリルダウンされ、[ **評価できません** ] カテゴリの場合でも、パフォーマンスメトリックが表示されます。
 
   さらに、ダッシュボードには、パフォーマンスの概要をすばやく向上させるために、上位5つの改善および低下したクエリが表示されます。
 
@@ -78,11 +78,11 @@ Database Experimentation Assistant (DEA) を使用して[分析レポートを�
 
    ![比較の概要](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-   実行回数、平均期間、平均 CPU、平均読み取り/書き込み数、エラー数など、そのクエリの概要統計情報を確認できます。  クエリがエラークエリの場合、エラーの詳細が [**エラー情報**] タブに表示されます。  [**クエリプラン情報**] タブでは、ターゲット1とターゲット2でクエリに使用されるクエリプランに関する情報を確認できます。
+   実行回数、平均期間、平均 CPU、平均読み取り/書き込み数、エラー数など、そのクエリの概要統計情報を確認できます。  クエリがエラークエリの場合、エラーの詳細が [ **エラー情報** ] タブに表示されます。  [ **クエリプラン情報** ] タブでは、ターゲット1とターゲット2でクエリに使用されるクエリプランに関する情報を確認できます。
 
    > [!NOTE]
    > 拡張イベントを分析している場合 (の場合)。XEL) ファイル、クエリプラン情報は収集されず、ユーザーのコンピューターのメモリ負荷が制限されます。
 
 ## <a name="see-also"></a>関連項目
 
-- コマンドプロンプトで分析レポートを生成する方法については、「[コマンドプロンプトでの実行](database-experimentation-assistant-run-command-prompt.md)」を参照してください。
+- コマンドプロンプトで分析レポートを生成する方法については、「 [コマンドプロンプトでの実行](database-experimentation-assistant-run-command-prompt.md)」を参照してください。

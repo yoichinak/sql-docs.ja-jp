@@ -11,12 +11,12 @@ ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 7b90da225116a2221d5a2492e1b7e5bfdc33ab91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79da4985cef777225cbf805c103c782b512e2d5b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492399"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058670"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>型のマッピングの編集 (OracleToSQL)
 [ **型マッピングの編集** ] ダイアログボックスでは、転送元データベースオブジェクトと転送先データベースオブジェクトの間で型がどのようにマップされるかを指定できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "88492399"
 **To**  
 このマッピングの最大長を指定します。 たとえば、 **nchar** データ型の場合は、「20」と入力すると、このマッピングが **nchar (20)** で終わる範囲に対して指定されます。  
   
-**変換後の型**  
+**ターゲットの種類**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換元のデータ型がマップされるデータ型を選択します。 SSMA によってテーブルまたはストアドプロシージャが作成されると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、変換元のデータ型はこのデータ型に変更されます。  
   
 データ型が可変長の場合、[ **対象の型**] の下に次のフィールドが表示されます。  

@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9e07c42e272728943f30198c8800c86aaa9443e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 966ec1472737f0e4d67615d4e7eb65df01a52cf4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938161"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059053"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>ソースデータベースとターゲットデータベースのマッピング (Sql server)
 または SQL Azure に接続する場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、移行するターゲットデータベースを指定する必要があります。 複数の Access データベースがある場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、複数のデータベース (またはスキーマ)、または接続された Azure SQL Database の複数のスキーマにマップできます。  
   
 ## <a name="sql-server-or-azure-sql-database-schemas"></a>スキーマの SQL Server または Azure SQL Database  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースでは、スキーマの概念を使用して、データベース内のオブジェクトを論理グループに分割します。 たとえば、ライブラリデータベースでは、 **books**、 **audio**、video という3つのスキーマを使用して、書籍、オーディオ、およびビデオオブジェクトを相互に**分離すること**ができます。 既定では、access データベースは、の**master**データベースおよび**dbo**スキーマに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure の接続されたデータベースおよび**dbo**スキーマにマップされます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースでは、スキーマの概念を使用して、データベース内のオブジェクトを論理グループに分割します。 たとえば、ライブラリデータベースでは、 **books**、 **audio**、video という3つのスキーマを使用して、書籍、オーディオ、およびビデオオブジェクトを相互に **分離すること** ができます。 既定では、access データベースは、の **master** データベースおよび **dbo** スキーマに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure の接続されたデータベースおよび **dbo** スキーマにマップされます。  
   
 各 Access データベースとデータベースおよびスキーマ間のマッピングをカスタマイズしない限り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SSMA は、access データベースに関連付けられているすべてのスキーマとデータを、マップされた既定のデータベースに移行します。  
   
@@ -38,17 +38,17 @@ SSMA を使用すると、各 Access データベースを [!INCLUDE[ssNoVersion
   
 **ターゲットデータベースとスキーマを変更するには**  
   
-1.  [メタデータエクスプローラーにアクセス] ウィンドウで、[**アクセス-メタデータ**] を選択します。  
+1.  [メタデータエクスプローラーにアクセス] ウィンドウで、[ **アクセス-メタデータ**] を選択します。  
   
-    スキーママッピングは、[**データベース**] ノードまたは任意のデータベースノードを選択した場合にも使用できます。 [スキーママッピング] の一覧は、選択したオブジェクトに合わせてカスタマイズされています。  
+    スキーママッピングは、[ **データベース** ] ノードまたは任意のデータベースノードを選択した場合にも使用できます。 [スキーママッピング] の一覧は、選択したオブジェクトに合わせてカスタマイズされています。  
   
-2.  右ペインで、[**スキーママッピング**] タブをクリックします。  
+2.  右ペインで、[ **スキーママッピング** ] タブをクリックします。  
   
     Access データベース名とそれに対応する ssNoVersion または Sql Azure スキーマを含むテーブルが表示されます。 ターゲットスキーマは、2つの部分表記 (データベーススキーマ) で示されます。  
   
-3.  カスタマイズするマッピングが含まれている行を選択し、[**変更**] をクリックします。  
+3.  カスタマイズするマッピングが含まれている行を選択し、[ **変更**] をクリックします。  
   
-4.  [**ターゲットスキーマの選択**] ダイアログボックスで、使用可能なターゲットデータベースとスキーマを参照するか、2つの部分表記 (データベーススキーマ) のテキストボックスにデータベースとスキーマ名を入力し、[ **OK**] をクリックします。  
+4.  [ **ターゲットスキーマの選択** ] ダイアログボックスで、使用可能なターゲットデータベースとスキーマを参照するか、2つの部分表記 (データベーススキーマ) のテキストボックスにデータベースとスキーマ名を入力し、[ **OK**] をクリックします。  
   
 **マッピングのモード**  
   
@@ -58,14 +58,14 @@ SSMA を使用すると、各 Access データベースを [!INCLUDE[ssNoVersion
   
 -   SQL Azure へのマッピング  
   
-接続先データベースまたは接続先データベースの任意のスキーマに、ソースデータベースをマップでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 送信元スキーマを [接続されたターゲットデータベース] の既存ではないスキーマにマップすると、 **"スキーマはターゲットメタデータに存在しません" というメッセージが表示されます。同期中に作成されます。続行しますか?[はい] をクリックし**ます。  
+接続先データベースまたは接続先データベースの任意のスキーマに、ソースデータベースをマップでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 送信元スキーマを [接続されたターゲットデータベース] の既存ではないスキーマにマップすると、 **"スキーマはターゲットメタデータに存在しません" というメッセージが表示されます。同期中に作成されます。続行しますか?[はい] をクリックし** ます。  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>最初のデータベースとスキーマに戻す  
 Access データベースとまたはの Azure SQL Database 間のマッピングをカスタマイズする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続時に指定したデータベース、または SQL Azure にマッピングを戻すことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 **既定のデータベースとスキーマにリセットするには**  
   
-1.  [スキーママッピング] タブで、任意の行を選択し、[既定**値にリセット**] をクリックして既定のデータベースとスキーマに戻します。  
+1.  [スキーママッピング] タブで、任意の行を選択し、[既定 **値にリセット** ] をクリックして既定のデータベースとスキーマに戻します。  
   
 ## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、[データベースオブジェクトを変換](converting-access-database-objects-accesstosql.md)します。  

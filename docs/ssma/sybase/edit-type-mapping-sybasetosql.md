@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3f9f5e0f498dbe6a8fe45a9c80cbf3c512f04bac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fc5d4a2e2e907feb867d5cd9e44d2b7d8e77bd4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492283"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064227"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>型のマッピングの編集 (SybaseToSQL)
 [ **型マッピングの編集** ] ダイアログボックスでは、転送元データベースオブジェクトと転送先データベースオブジェクトの間で型がどのようにマップされるかを指定できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "88492283"
 **To**  
 このマッピングの最大長を指定します。 たとえば、 **nchar** データ型の場合は、「20」と入力すると、このマッピングが **nchar (20)** で終わる範囲に対して指定されます。  
   
-**変換後の型**  
+**ターゲットの種類**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換元のデータ型がマップされるデータ型を選択します。 SSMA によってテーブルまたはストアドプロシージャが作成されると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、変換元のデータ型はこのデータ型に変更されます。  
   
 データ型が可変長の場合、[ **対象の型**] の下に次のフィールドが表示されます。  

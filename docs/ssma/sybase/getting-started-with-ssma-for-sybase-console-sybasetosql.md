@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 34e0a493140a31099dc4b9ed9f6234743bf0c8c1
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 19fca27ba0606a8e56c1594df852edbc439e7a92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235369"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064967"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>SSMA for Sybase コンソールを使用したはじめに (SybaseToSQL)
 このセクションでは、SSMA for Sybase コンソールアプリケーションを起動して作業を開始する手順について説明します。 ここでは、一般的な SSMA コンソールの出力ウィンドウで使用される規則についても説明します。  
@@ -61,7 +61,7 @@ SSMA スクリプトコマンドとオプションを実行すると、コンソ
 |---------|---------------|  
 |[赤]|実行中に致命的なエラーが発生した|  
 |グレー|日付と時刻のタイムスタンプ、ユーザーへのメッセージ|  
-|White|スクリプトファイルのコマンド、メッセージの種類|  
+|白|スクリプトファイルのコマンド、メッセージの種類|  
 |黄|警告|  
 |[緑]|ユーザー入力を要求する|  
 |シアン|操作の開始、終了、および結果|  

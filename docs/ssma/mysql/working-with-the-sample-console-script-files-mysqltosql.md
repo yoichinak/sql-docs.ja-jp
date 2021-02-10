@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6c60c48b2c22dfb414710e305986b16d3ee31e17
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ea2e364dd5c09a288b94ed60a7bff93ac16c6bd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463291"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064147"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>サンプルのコンソールスクリプトファイルの操作 (MySQLToSQL)
 ユーザー参照および使用のために、いくつかのサンプルファイルが製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせて、これらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "88463291"
   
     -   このサンプルでは、ソースとターゲットのデータベースで使用できるさまざまなモードの接続を提供し、ユーザーは要件に従って任意のモードを選択できます。 このサンプルには、サーバー定義が含まれています。  
   
-    -   ユーザーは、必要なソースとターゲットのサーバー定義に値を変更するだけで、必要なデータベースに接続できます。 この例では、すべての値は、 **VariableValueFileSample.xml**で使用できる変数値として提供されています。  その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
+    -   ユーザーは、必要なソースとターゲットのサーバー定義に値を変更するだけで、必要なデータベースに接続できます。 この例では、すべての値は、 **VariableValueFileSample.xml** で使用できる変数値として提供されています。  その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
   
     -   ソースサーバーとターゲットサーバーへの接続の詳細については、「 [MySQLToSQL&#41;&#40;のサーバー接続ファイルの作成 ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) 」を参照してください。  
   

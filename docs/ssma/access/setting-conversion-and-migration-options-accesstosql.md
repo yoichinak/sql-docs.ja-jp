@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cc9a5328095f2ef839eb0c9617798299e46371fd
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 154eaa42bf08f622f3e08359f025284752134bc5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987685"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066320"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>変換オプションと移行オプションの設定 (アップグレード)
 SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションでは、オブジェクトの変換方法、データの移行方法、およびソースデータ型とターゲットデータ型のマッピング方法を指定します。 オブジェクトをに変換したり、データを SQL Azure または SQL Azure に移行したりする前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、構成オプションがプロジェクトに適していることを確認してください。  

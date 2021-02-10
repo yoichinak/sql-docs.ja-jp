@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 072073fae690812ed2a51cb74073eea95552392a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee3257ef5cdf136c39bc6af3d2a0047ecfd3d69f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497609"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064907"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>サンプルのコンソール スクリプト ファイルの操作 (SybaseToSQL)
 ユーザー参照および使用のために、いくつかのサンプルファイルが製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせて、これらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "88497609"
   
     -   このサンプルでは、ソースとターゲットのデータベースで使用できるさまざまなモードの接続を提供し、ユーザーは要件に従って任意のモードを選択できます。 このサンプルには、サーバー定義が含まれています。  
   
-    -   ユーザーは、必要なソースとターゲットのサーバー定義に値を変更するだけで、必要なデータベースに接続できます。 この例では、すべての値は、 **VariableValueFileSample.xml**で使用できる変数値として提供されています。  その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
+    -   ユーザーは、必要なソースとターゲットのサーバー定義に値を変更するだけで、必要なデータベースに接続できます。 この例では、すべての値は、 **VariableValueFileSample.xml** で使用できる変数値として提供されています。  その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
   
     -   ソースサーバーとターゲットサーバーへの接続の詳細については、「 [SybaseToSQL&#41;&#40;サーバー接続ファイルを作成する ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)」を参照してください。  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67c14205590ccdf9d20a30f44c13aa2da5abbe8d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9bb65299be2778897b72303cccb99043a3b01406
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99212564"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061107"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>付録 B: ODBC の状態遷移テーブル
 この付録の表は、ODBC 関数が環境、接続、ステートメント、および記述子の状態の遷移をどのように引き起こしているかを示しています。 環境、接続、ステートメント、または記述子の状態は、通常、対応する種類のハンドル (環境、接続、ステートメント、または記述子) を使用する関数を呼び出すことができる場合に指定されます。 次の図に示すように、環境、接続、ステートメント、および記述子の状態は、ほぼ重複しています。 たとえば、接続状態 C5 と C6 およびステートメントの状態 S1 から S12 の正確な重複は、データソースに依存します。これは、トランザクションが異なるデータソース上で開始され、記述子状態 D1i (暗黙的に割り当てられた記述子) は、記述子が関連付けられているステートメントの状態に依存し、状態 D1e (明示的に割り当てられた記述子 各状態の説明については、この付録の「 [環境遷移](../../../odbc/reference/appendixes/environment-transitions.md)、 [接続遷移](../../../odbc/reference/appendixes/connection-transitions.md)、 [ステートメント遷移](../../../odbc/reference/appendixes/statement-transitions.md)、 [記述子遷移](../../../odbc/reference/appendixes/descriptor-transitions.md)」を参照してください。  

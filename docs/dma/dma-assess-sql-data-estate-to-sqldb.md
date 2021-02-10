@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c6e5a3878011de396568c4649ea5575635e96aec
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 4c59fb5228ef46a693e343716d1e58e56c042a53
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489556"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061557"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server のデータ資産の準備状況を評価する
 
@@ -101,7 +101,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
     オンプレミスの SQL Server インスタンスを SQL Server の新しいバージョンまたは Azure VM でホストされている SQL Server にアップグレードする場合は、ソースとターゲットのサーバーの種類を **SQL Server** に設定します。 Azure SQL Database (PaaS) ターゲット準備の評価については、対象サーバーの種類を **AZURE SQL Managed Instance** に設定します。
 
-3. **[作成]** を選択します。
+3. **［作成］** を選択します
 
    ![Azure Migrate-Data Migration Assistant インターフェイス](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -178,7 +178,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
    ![Azure Migrate-移行ブロックの確認](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: 構成設定](../dma/dma-configurationsettings.md)

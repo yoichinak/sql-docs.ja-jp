@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: af91274d4e48ce99894316c730a58d68fd633242
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985124"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062907"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマの変換 (DB2ToSQL)
 DB2 に接続し、に接続して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトとデータのマッピングオプションを設定したら、db2 データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースオブジェクトに変換できます。  
@@ -33,7 +33,7 @@ DB2 に接続し、に接続して、 [!INCLUDE[ssNoVersion](../../includes/ssno
   
 |DB2 オブジェクト|結果の SQL Server オブジェクト|  
 |-----------|----------------------------|  
-|データ型|**SSMA は、次の一覧を除くすべての型をマップします。**<br /><br />CLOB: この型を操作するための一部のネイティブ関数はサポートされていません (例: CLOB_EMPTY ())<br /><br />BLOB: この型を使用する一部のネイティブ関数はサポートされていません (例: BLOB_EMPTY ())<br /><br />DBLOB: この型を操作するための一部のネイティブ関数はサポートされていません (例: DBLOB_EMPTY ())|  
+|データの種類|**SSMA は、次の一覧を除くすべての型をマップします。**<br /><br />CLOB: この型を操作するための一部のネイティブ関数はサポートされていません (例: CLOB_EMPTY ())<br /><br />BLOB: この型を使用する一部のネイティブ関数はサポートされていません (例: BLOB_EMPTY ())<br /><br />DBLOB: この型を操作するための一部のネイティブ関数はサポートされていません (例: DBLOB_EMPTY ())|  
 |ユーザー定義型|**SSMA は、次のユーザー定義をマップします。**<br /><br />Distinct 型<br /><br />構造化型<br /><br />SQL PL データ型-注意: 弱いカーソルの種類はサポートされていません。|  
 |特別なレジスタ|**SSMA は、以下に示すレジスタのみをマップします。**<br /><br />現在のタイムスタンプ<br /><br />現在の日付<br /><br />現在の時刻<br /><br />現在のタイムゾーン<br /><br />現在のユーザー<br /><br />SESSION_USER とユーザー<br /><br />SYSTEM_USER<br /><br />現在の CLIENT_APPLNAME<br /><br />現在の CLIENT_WRKSTNNAME<br /><br />現在のロックタイムアウト<br /><br />現在のスキーマ<br /><br />現在のサーバー<br /><br />現在の分離<br /><br />その他の特別なレジスタは SQL server のセマンティックにマップされません。|  
 |CREATE TABLE|**SSMA には CREATE TABLE 次の例外があります。**<br /><br />多次元クラスタリング (MDC) テーブル<br /><br />範囲-クラスター化テーブル (.RCT)<br /><br />パーティション テーブル<br /><br />デタッチされたテーブル<br /><br />データキャプチャ句<br /><br />暗黙的に非表示にするオプション<br /><br />VOLATILE オプション|  
@@ -44,7 +44,7 @@ DB2 に接続し、に接続して、 [!INCLUDE[ssNoVersion](../../includes/ssno
 |SELECT ステートメント|**SSMA maps SELECT では、次の例外があります。**<br /><br />データ変更テーブル参照句-部分的にマップされていますが、最終テーブルはサポートされていません<br /><br />テーブル参照句-部分的にマップされていますが、テーブル参照、外部テーブル参照、analyze_table 式、コレクション派生テーブル、xmltable-式は SQL server のセマンティクスにマップされていません<br /><br />期間指定句-マップされていません。<br /><br />Continue-handler 句-マップされていません。<br /><br />型指定された相関句-マップされていません。<br /><br />同時実行アクセス解決句-マップされていません。|  
 |VALUES ステートメント|がマップされています。|  
 |INSERT ステートメント|がマップされています。|  
-|UPDATE ステートメント|S**SMA は、次の例外で更新されます。**<br /><br />テーブル参照句-のみ-テーブル参照は SQL server セマンティクスにマップされません<br /><br />Period 句-マップされていません。|  
+|UPDATE ステートメント|S **SMA は、次の例外で更新されます。**<br /><br />テーブル参照句-のみ-テーブル参照は SQL server セマンティクスにマップされません<br /><br />Period 句-マップされていません。|  
 |MERGE ステートメント|**SSMA マップマージでは、次の例外がマージされます。**<br /><br />各句の1回以上の繰り返しが、SQL server のセマンティクスにマップされ、各句の発生回数が制限されます。<br /><br />SIGNAL 句-SQL Server セマンティクスにマップされません<br /><br />混合 UPDATE 句と DELETE 句-SQL Server セマンティクスにマップされません<br /><br />Period 句-SQL Server セマンティクスにマップされません|  
 |DELETE ステートメント|**SSMA maps DELETE では、次の例外があります。**<br /><br />テーブル参照句-のみ-テーブル参照は SQL server セマンティクスにマップされません<br /><br />Period 句-SQL Server セマンティクスにマップされません|  
 |分離レベルとロックの種類|がマップされています。|  
@@ -72,7 +72,7 @@ DB2 に接続し、に接続して、 [!INCLUDE[ssNoVersion](../../includes/ssno
 |動的 SQL|マップされていません。|  
 |エイリアス|マップされます。|  
 |ニックネーム|部分マッピング。 基になるオブジェクトには手動処理が必要です|  
-|シノニム|マップされます。|  
+|Synonyms|マップされます。|  
 |DB2 の標準関数|SSMA maps DB2 standard 関数は、SQL Server で同等の関数を使用できる場合に使用できます。|  
 |承認|マップされていません。|  
 |述語|マップされます。|  
@@ -130,7 +130,7 @@ DB2 データベースオブジェクトを変換するには、まず変換す�
   
 5.  右ペインで、[ **レポート** ] タブをクリックします。  
   
-6.  [ **レポート** ] タブの上部にドロップダウンリストが表示されます。 一覧に **統計**が表示されている場合は、選択範囲を **Source**に変更します。  
+6.  [ **レポート** ] タブの上部にドロップダウンリストが表示されます。 一覧に **統計** が表示されている場合は、選択範囲を **Source** に変更します。  
   
     SSMA では、コードのすぐ上にソースコードといくつかのボタンが表示されます。  
   

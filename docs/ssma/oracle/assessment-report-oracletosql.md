@@ -11,12 +11,12 @@ ms.assetid: 168b7465-a6d6-4329-b46e-fc6c5a3f2d9d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 955c87838f92f15f22e937829f95a34ad8cccdad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4f66820e4745d16484b81a5723e03c0acad5cbe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320598"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058737"
 ---
 # <a name="assessment-report-oracletosql"></a>評価レポート (OracleToSQL)
 [評価レポート] ウィンドウには、データベースオブジェクトを構文に変換した結果が表示され [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。また、移行プロジェクトの複雑さとコストを見積もるのにも役立ちます。  

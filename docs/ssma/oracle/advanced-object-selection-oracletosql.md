@@ -11,12 +11,12 @@ ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b42b166d9f7eaa358878bad8c87ae997c2cfe691
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a6cfada9527a31ab16831ebd46e4b6228b221168
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480484"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064127"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>高度なオブジェクトの選択 (OracleToSQL)
 [オブジェクトの **詳細設定** ] ダイアログボックスでは、オブジェクト名に文字列と部分文字列を使用してデータベースオブジェクトをフィルター処理し、そのオブジェクトを選択または選択解除できます。 SSMA は、選択したオブジェクトに対して変換操作と移行操作を実行します。  
@@ -49,5 +49,5 @@ ms.locfileid: "88480484"
 項目がフィルター条件に一致する場合は、文字列を入力したときにカテゴリまたは項目が表示されます。 一致する項目を表示するには、[ **読み込まれた項目のみ** ] をクリックすることをお勧めします。  
   
 **[フィルターのクリア]**  
-**フィルター**ボックスをクリアします。  
+**フィルター** ボックスをクリアします。  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 91ccdde50fc0e4f031f376132213881db0a85449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 519706bd731c9590676cfef3c0363f49ea903e8a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418528"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066048"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>SSMA コンソールを使用したサンプルコンソールスクリプトの操作 (FilesExecuting)
 ユーザー参照および使用のために、いくつかのサンプルファイルが製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせて、これらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "88418528"
   
     -   このサンプルでは、ソースとターゲットのデータベースで使用できるさまざまなモードの接続を提供し、ユーザーは要件に従って任意のモードを選択できます。 このサンプルには、サーバー定義が含まれています。  
   
-    -   ユーザーは、必要なソースとターゲットのサーバー定義に値を変更するだけで、必要なデータベースに接続できます。 この例では、すべての値は、 **VariableValueFileSample.xml**で使用できる変数値として提供されています。 その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
+    -   ユーザーは、必要なソースとターゲットのサーバー定義に値を変更するだけで、必要なデータベースに接続できます。 この例では、すべての値は、 **VariableValueFileSample.xml** で使用できる変数値として提供されています。 その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
   
     -   移行元サーバーと移行先サーバーへの接続の詳細については、「 [サーバー接続ファイルの作成 ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) 」を参照してください &#40;&#41;。  
   

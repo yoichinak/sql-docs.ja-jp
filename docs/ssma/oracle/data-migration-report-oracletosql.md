@@ -11,12 +11,12 @@ ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6a8db3e4025ddbb434c07448d576ec18828a403e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cee9e42386aa76616e049261a4d1f5b6d965fe26
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468891"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058677"
 ---
 # <a name="data-migration-report--oracletosql"></a>データ移行レポート (OracleToSQL)
 [ **データ移行レポート** ] ダイアログボックスは、にデータを移行した後に表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -43,6 +43,6 @@ ms.locfileid: "88468891"
 **詳細**  
 データの移行に失敗した場合は、クリックすると、レポート内の選択した行の移行の詳細が表示されます。 SSMA には、エラーの理由が表示されます。  
   
-**[レポートの保存]**  
+**レポートの保存**  
 レポートをに保存します。CSV (コンマ区切り値) ファイル。 Microsoft Excel を使用して調べることができます。  
   
