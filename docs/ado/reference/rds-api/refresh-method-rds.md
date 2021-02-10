@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f35574b0e9623560ddfafe123340e302a9fc5220
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0f9e23ed4b6c17f4d1f3ffa7489490f40c25f8b7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168800"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049192"
 ---
 # <a name="refresh-method-rds"></a>Refresh メソッド (RDS)
 [接続](./connect-property-rds.md)プロパティで指定されたデータソースを再クエリし、クエリ結果を更新します。  
@@ -42,7 +42,7 @@ DataControl.Refresh
  *DataControl*  
  RDS を表すオブジェクト変数です [。DataControl](./datacontrol-object-rds.md) オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Refresh** メソッドを使用する前に、 [Connect](./connect-property-rds.md)、 [Server](./server-property-rds.md)、および [SQL](./sql-property.md)の各プロパティを設定する必要があります。 RDS に関連付けられているフォーム上のすべてのデータバインドコントロール。 **DataControl** オブジェクトには、新しいレコードのセットが反映されます。 既存の [レコードセット](../ado-api/recordset-object-ado.md) オブジェクトがすべて解放され、保存されていない変更はすべて破棄されます。 **Refresh** メソッドでは、最初のレコードが自動的に現在のレコードになります。  
   
  データを操作するときは、 **Refresh** メソッドを定期的に呼び出すことをお勧めします。 データを取得し、しばらくの間クライアントコンピューターに残しておくと、最新の状態にならない可能性があります。 他のユーザーがレコードを変更して変更を送信した可能性があるため、変更が失敗する可能性があります。  

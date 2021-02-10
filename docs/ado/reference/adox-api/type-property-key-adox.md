@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f87e422c42a0421fbdf12eb9b51ade82e9cfe9c2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a23a9bc6749d97978a9f5ab686aa0c1f0eb7a023
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169153"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049702"
 ---
 # <a name="type-property-key-adox"></a>Type プロパティ (キー) (ADOX)
 キーの種類を示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "99169153"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Keytypeenum](./keytypeenum.md)定数のいずれかを指定できる **Long 型** の値を設定または返します。 既定値は **adKeyPrimary** です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このプロパティは、既にコレクションに追加されている [キー](./key-object-adox.md) オブジェクトに対しては読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  

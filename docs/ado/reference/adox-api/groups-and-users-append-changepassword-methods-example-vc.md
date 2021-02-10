@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d442d0ce32c7cdb7aa249c21172a6c8db8966f05
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 70368dba6eb121219ef871f1c87034e1764f0e94
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172049"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050062"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Groups および Users Append、ChangePassword メソッドの例 (VC++)
 この例では、[グループ](./groups-collection-adox.md)の[append](./append-method-adox-groups.md)メソッドと、システムに新しい[グループ](./group-object-adox.md)と新しい[ユーザー](./user-object-adox.md)を追加することによる[ユーザー](./users-collection-adox.md)の[追加](./append-method-adox-users.md)方法を示します。 新しい **グループ** は、新しい **ユーザー** の **Groups** コレクションに追加されます。 その結果、新しい **ユーザー** が **グループ** に追加されます。 また、 [ChangePassword](./changepassword-method-adox.md) メソッドを使用して **ユーザー** パスワードを指定します。  

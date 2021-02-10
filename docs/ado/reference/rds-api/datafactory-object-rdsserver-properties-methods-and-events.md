@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6e85fd6082a1fe9d86df2fa453b3f56eee5e4e0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8914a431bdc1e13398087cced7cc4e1b8124fc21
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168983"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049452"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory オブジェクト (RDSServer) のプロパティ、メソッド、およびイベント
 > [!IMPORTANT]
@@ -40,7 +40,7 @@ ms.locfileid: "99168983"
 |[Synchronize メソッド (RDS)](./synchronize-method-rds.md)|接続文字列で指定されたデータベースと、指定されたレコードセットを同期します (ADO 2.5 以降で使用)。|  
 |[Synchronize21 メソッド (RDS)](./synchronize21-method-rds.md)|接続文字列で指定されたデータベースと、指定されたレコードセットを同期します (ADO 2.1 で使用)。|  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af9276f641a3a9c419cc0dc49595bcddc049336e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 44e1eca1ac4a949a3d46fe3a1ec58ff0c0b882dc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163763"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049392"
 ---
 # <a name="filtervalue-property-rds"></a>FilterValue プロパティ (RDS)
 レコードのフィルター処理に使用する値を示します。  
@@ -41,7 +41,7 @@ DataControl.FilterValue = String
  *String*  
  レコードをフィルター処理するために使用するデータ値を表す **文字列** 値 ( `'Programmer'` やなど `125` )。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [Sortcolumn](./sortcolumn-property-rds.md)、 [sortcolumn](./sortdirection-property-rds.md)、 **filtervalue**、 [filterfilter、](./filtercriterion-property-rds.md)および [filtervalue](./filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能は、1つの列の値でレコードを並べ替えます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な [レコードセット](../ado-api/recordset-object-ado.md) はキャッシュに保持されます。 [Reset](./reset-method-rds.md)メソッドは、条件を実行し、現在の **レコードセット** を更新可能な **レコードセット** に置き換えます。  
   
  Null 値を指定すると、型の不一致エラーが発生します。  

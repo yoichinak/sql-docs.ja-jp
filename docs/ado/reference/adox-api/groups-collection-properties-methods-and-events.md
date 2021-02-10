@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f99405db467d6c84f380a2f516e02b6e9d06a581
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5f8adfc874fa34ccf1f00d8273c6d2130e3a5e13
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169375"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050052"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Groups コレクションのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>Properties  
@@ -33,7 +33,7 @@ ms.locfileid: "99169375"
   
  [Refresh メソッド](../ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

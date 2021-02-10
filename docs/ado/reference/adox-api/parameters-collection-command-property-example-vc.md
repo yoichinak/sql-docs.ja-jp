@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 722c671c25edbc3246c4433acc95cf3e3827f99e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 159b5ed5da68a0ac9fe92b2c696bc3084066b27d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164142"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049882"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Parameters コレクションおよび Command プロパティの例 (VC++)
 次のコード [は、command プロパティを](./command-property-adox.md) [command](../ado-api/command-object-ado.md) オブジェクトと共に使用して、プロシージャのパラメーター情報を取得する方法を示しています。  

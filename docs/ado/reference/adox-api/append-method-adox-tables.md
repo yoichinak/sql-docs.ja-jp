@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56ead8ee314cb5b6bffa31a3292b395c0c990927
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d7f8ccacd9b81205ddd58a1b58290548db8bec92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172287"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050483"
 ---
 # <a name="append-method-adox-tables"></a>Append メソッド (ADOX Tables)
 [Tables](./tables-collection-adox.md)コレクションに新しい[Table](./table-object-adox.md)オブジェクトを追加します。  
@@ -35,10 +35,10 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *テーブル*  
+ *Table*  
  追加する **テーブル** への参照、または作成および追加するテーブルの名前を含む **バリアント** 値です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  プロバイダーがテーブルの作成をサポートしていない場合は、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  

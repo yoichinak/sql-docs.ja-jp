@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 757778961d7b66dd147b8b013b48062dae0cbd91
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 15a22e293262c414278db7f6e7e266b562d61de3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172275"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050443"
 ---
 # <a name="append-method-adox-views"></a>Append メソッド (ADOX Views)
 新しい [ビュー](./view-object-adox.md) オブジェクトを作成し、 [Views](./views-collection-adox.md) コレクションに追加します。  
@@ -41,7 +41,7 @@ Views.Append Name, Command
  *コマンド*  
  作成するビューを表す ADO [コマンド](../ado-api/command-object-ado.md) オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **コマンド** オブジェクトで指定された名前と属性を使用して、データソースに新しいビューを作成します。  
   
  ユーザーが指定したコマンドテキストがビューではなくプロシージャを表している場合、その動作はプロバイダーに依存します。 プロバイダーがコマンドの永続化をサポートしていない場合、 **Append** は失敗します。  

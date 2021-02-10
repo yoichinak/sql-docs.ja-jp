@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5ca59cb5900643202c2d541072c48b275b5b5df
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e37c09d4793a96056ab5d8003bf022b1d250b744
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169133"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049682"
 ---
 # <a name="user-object-adox"></a>User オブジェクト (ADOX)
 セキュリティで保護されたデータベース内でアクセス許可を持つユーザーアカウントを表します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [カタログ](./catalog-object-adox.md)の[ユーザー](./users-collection-adox.md)コレクションは、すべてのカタログのユーザーを表します。 [グループ](./group-object-adox.md)の **ユーザー** コレクションは、特定のグループのユーザーのみを表します。  
   
  **ユーザー** オブジェクトのプロパティ、コレクション、およびメソッドを使用すると、次のことができます。  

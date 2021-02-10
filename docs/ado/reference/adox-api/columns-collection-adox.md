@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65b84850b8da3d85e8b4a013371119d4109eb6cf
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 81a7e0c521b96b737c44e3c88f2b14be42176a31
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169474"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050272"
 ---
 # <a name="columns-collection-adox"></a>Columns コレクション (ADOX)
 テーブル、インデックス、またはキーのすべての [Column](./column-object-adox.md) オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
- **Columns** コレクションの [Append](./append-method-adox-columns.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
+## <a name="remarks"></a>解説  
+ **Columns** コレクションの [Append](./append-method-adox-columns.md)メソッドは、ADOX で一意です。 次の操作を行うことができます。  
   
 -   **追加** メソッドを使用して、新しい列をコレクションに追加します。  
   
- その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次の操作を行うことができます。  
   
 -   [Item](../ado-api/item-property-ado.md)プロパティを使用して、コレクション内の列にアクセスします。  
   

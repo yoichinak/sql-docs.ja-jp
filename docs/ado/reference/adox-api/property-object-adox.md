@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff7c450ea1812ee5e0a9441640e2884b0394ac43
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3fba73c2f9b0f1c722feaab311f1b74fbcf91a35
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164072"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049792"
 ---
 # <a name="property-object-adox"></a>Property オブジェクト (ADOX)
 ADOX オブジェクトの特性を表します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ADOX オブジェクトには、組み込みと動的の2種類のプロパティがあります。  
   
  組み込みプロパティは、新しいオブジェクトですぐに使用できるプロパティで、MyObject 構文を使用します。 オブジェクトの [プロパティコレクション](../ado-api/properties-collection-ado.md)にはプロパティオブジェクトとして表示されません。そのため、値を変更することはできますが、その特性を変更することはできません。  

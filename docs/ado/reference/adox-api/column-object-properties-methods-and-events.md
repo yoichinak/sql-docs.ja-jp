@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2715d8a4acd788c0db553068070cadfa35f13e64
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6862c54095377bcb652b6ccafe66a23c0b5dd7d1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169499"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050292"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Column オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -43,9 +43,9 @@ ms.locfileid: "99169499"
  [Type プロパティ (Column)](./type-property-column-adox.md)  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

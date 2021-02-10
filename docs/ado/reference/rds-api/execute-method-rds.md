@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e5ad157ffccc07ba0b64064122f7f0e55ccd422
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 862ded514855d6ac0cd3c18bcb014463eecf1e76
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163803"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049482"
 ---
 # <a name="execute-method-rds"></a>Execute メソッド (RDS)
 要求を実行し、ado 2.5 以降で使用する ADO レコードセットを作成します。  
@@ -78,7 +78,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  Execute によって返された情報エラーへのポインター。 NULL の場合、エラー情報は返されません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *ハンドラー文字列* パラメーターは null にすることができます。 この場合の動作は、RDS サーバーがどのように構成されているかによって異なります。 "MSDFMAP. handler" のハンドラー文字列は、Microsoft 提供のハンドラー (Msdfmap.dll) を使用する必要があることを示します。 "sample.ini" のハンドラー文字列は、Msdfmap.dll ハンドラーを使用する必要があり、引数 "sample.ini" をハンドラーに渡す必要があることを示します。 MSDFMAP.dll は、sample.ini を使用して接続とクエリ文字列を確認する方向として引数を解釈します。  
   
 ## <a name="applies-to"></a>適用対象  

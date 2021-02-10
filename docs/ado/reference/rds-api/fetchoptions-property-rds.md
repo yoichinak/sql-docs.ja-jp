@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1809c23267057a34c0f2f594a41bdfe62304545c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2299e0b918206a1eadfa3d3352a01ec0d7320152
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163789"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049412"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions プロパティ (RDS)
 非同期フェッチの種類を示します。  
@@ -39,7 +39,7 @@ ms.locfileid: "99163789"
 > [!NOTE]
 >  これらの定数を使用するクライアント側の実行可能ファイルは、それぞれの宣言を提供する必要があります。 RDS ライブラリの既定のインストールフォルダーにある Adcvbs. inc. ファイルから、必要な定数宣言を切り取って貼り付けることができます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  Web アプリケーションでは、通常、 **Adcfetchasync** (既定値) を使用することをお勧めします。これは、パフォーマンスが向上するためです。 コンパイルされたクライアントアプリケーションでは、通常、 **Adcfetchbackground** を使用します。  
   
 ## <a name="applies-to"></a>適用対象  

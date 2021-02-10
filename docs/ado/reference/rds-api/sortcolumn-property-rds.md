@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: edbfa8f6c4dbb1296e9bf86aed43148bb7b12ec2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5a2acfc204928fb23cea7a466e3baaa0a1ebb8aa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168782"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049172"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn プロパティ (RDS)
 レコードを並べ替える列を指定します。  
@@ -41,7 +41,7 @@ DataControl.SortColumn = String
  *String*  
  レコードの並べ替えに使用する列の名前または別名を表す **文字列** 値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Sortcolumn**、 [sortcolumn](./sortdirection-property-rds.md)、 [filtervalue](./filtervalue-property-rds.md)、 [filterfilter、](./filtercriterion-property-rds.md)および [filtervalue](./filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能は、1つの列の値でレコードを並べ替えます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な [レコードセット](../ado-api/recordset-object-ado.md) はキャッシュに保持されます。 [Reset](./reset-method-rds.md)メソッドは、条件を実行し、現在の **レコードセット** を更新可能な **レコードセット** に置き換えます。  
   
  **レコードセット** を並べ替えるには、保留中の変更を最初に保存する必要があります。 RDS を使用している場合 **。DataControl** では、 [SubmitChanges](./submitchanges-method-rds.md) メソッドを使用できます。 たとえば、RDS の場合など **です。DataControl** の名前は ADC1 で、コードはになり `ADC1.SubmitChanges` ます。 ADO **レコードセット** を使用している場合は、その [UpdateBatch](../ado-api/updatebatch-method.md) メソッドを使用できます。 [CreateRecordset](./createrecordset-method-rds.md)メソッドを使用して作成された **レコードセット** オブジェクトには、 **UpdateBatch** を使用することをお勧めします。 たとえば、コードはまたはのようになり `myRS.UpdateBatch` `ADC1.Recordset.UpdateBatch` ます。  

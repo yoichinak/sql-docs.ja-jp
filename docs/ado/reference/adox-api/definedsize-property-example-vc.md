@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7915ec1c9f19e5a111196ae4d6029d903b6594f5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ff16d18f3584fbc97dc9b605afe7dc13d56636d2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169433"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050152"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize プロパティの例 (VC++)
 この例では、[列](./column-object-adox.md)の "値の[サイズ](./definedsize-property-adox.md)" プロパティを示します。 コードによって、 *Northwind* データベースの **Employees** テーブルの FirstName 列のサイズが再定義されます。 次に、 **Employees** テーブルに基づいて [レコードセット](../ado-api/recordset-object-ado.md)の FirstName [フィールド](../ado-api/field-object.md)の値が変更されます。 既定では、"定義された **サイズ** " プロパティを再定義した後、[FirstName] フィールドに空白が埋め込まれていることに注意してください。  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85f6cb74b25d7664bdf7b87c4290edd19a49dcd3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ab663c6a6a0cad3b6093c8bc6eefb5bb98d7ed16
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164328"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050583"
 ---
 # <a name="adox-properties"></a>ADOX のプロパティ
 
@@ -29,7 +29,7 @@ ms.locfileid: "99164328"
 |[属性](./attributes-property-adox.md)|列の特性について説明します。|  
 |[クラスター化](./clustered-property-adox.md)|インデックスがクラスター化されているかどうかを示します。|  
 |[コマンド](./command-property-adox.md)|プロシージャを作成または実行するために使用できる ADO **コマンド** オブジェクトを指定します。|  
-|[カウント](../ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
+|[Count](../ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
 |[DateCreated](./datecreated-property-adox.md)|オブジェクトが作成された日付を示します。|  
 |[DateModified](./datemodified-property-adox.md)|オブジェクトが最後に変更された日付を示します。|  
 |[DefinedSize](./definedsize-property-adox.md)|列の最大サイズを示します。|  

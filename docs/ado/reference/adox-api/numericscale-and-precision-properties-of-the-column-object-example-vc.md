@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34af2be89d8253ca0a777ff509936ed896748a7d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b8923ad7ea8adb0de769af264f39eb031c4c6d46
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169306"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049922"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Column オブジェクトの NumericScale および Precision プロパティの例 (VC++)
 この例では、[列](./column-object-adox.md)オブジェクトの[Numericscale](./numericscale-property-adox.md)プロパティと[Precision](./precision-property-adox.md)プロパティを示します。 このコードでは、 *Northwind* データベースの **Order Details** テーブルの値が表示されます。  

@@ -9,12 +9,12 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 18bec3d694985e15b1ae2d813fddf2f378c9d78a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243476"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049108"
 ---
 # <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>並列データウェアハウスで PolyBase を構成して Hadoop の外部データにアクセスする
 
@@ -55,7 +55,7 @@ PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (
   
 1. PDW コントロールノードへのリモートデスクトップ接続を開きます。
 
-2. コントロールノードで**yarn-site.xml**ファイルを見つけます。 通常、このパスは次のとおりです。  
+2. コントロールノードで **yarn-site.xml** ファイルを見つけます。 通常、このパスは次のとおりです。  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -63,7 +63,7 @@ PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (
 
 3. Hadoop コンピューターで、Hadoop 構成ディレクトリ内の対応するファイルを検索します。 このファイル内の構成キー yarn.application.classpath の値をコピーします。  
   
-4. [コントロール] ノードの**yarn.site.xml ファイル**で、 **yarn**プロパティを見つけます。 Hadoop コンピューターからこの値要素に値を貼り付けます。  
+4. [コントロール] ノードの **yarn.site.xml ファイル** で、 **yarn** プロパティを見つけます。 Hadoop コンピューターからこの値要素に値を貼り付けます。  
   
 5. すべての CDH 5.X バージョンで、yarn.site.xml file の最後か mapred-site.xml file に mapreduce.application.classpath 構成パラメーターを追加する必要があります。 HortonWorks では、yarn.application.classpath 構成内にこれらの構成が含まれます。 例については、「[PolyBase の構成](../relational-databases/polybase/polybase-configuration.md)」を参照してください。
 
@@ -278,7 +278,7 @@ Hadoop データ ソース内のデータのクエリを実行するには、Tra
 
 PolyBase が適している機能には、次の 3 つがあります。  
   
-- 外部テーブルに対するアドホッククエリ。  
+- 外部テーブルに対するアドホック クエリ。  
 - データのインポート。  
 - データのエクスポート。  
 
@@ -286,7 +286,7 @@ PolyBase が適している機能には、次の 3 つがあります。
 
 ### <a name="ad-hoc-queries"></a>アドホック クエリ  
 
-次のアドホッククエリは、Hadoop データとリレーショナルに結合します。 これは、35 mph を上回る顧客を選択し、AP に格納されている構造化顧客データを、Hadoop に格納されている車両センサーデータと結合します。  
+次のアドホック クエリでは、Hadoop データを結合します。 これは、35 mph を上回る顧客を選択し、AP に格納されている構造化顧客データを、Hadoop に格納されている車両センサーデータと結合します。  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -336,7 +336,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>SSDT で PolyBase オブジェクトを表示する  
 
-SQL Server Data Tools では、外部テーブルが別のフォルダー**外部テーブル**に表示されます。 外部データ ソースおよび外部ファイル形式は、 **[外部リソース]** の下のサブフォルダーにあります。  
+SQL Server Data Tools では、外部テーブルが別のフォルダー **外部テーブル** に表示されます。 外部データ ソースおよび外部ファイル形式は、 **[外部リソース]** の下のサブフォルダーにあります。  
   
 ![SSDT の PolyBase オブジェクト](media/polybase/external-tables-datasource.png)  
 

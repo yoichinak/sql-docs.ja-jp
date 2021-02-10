@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3173dc9623c10bf24e80ebee98810a04c199d9e8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8772a9af79c6b107adda010a94d16b69124232bc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169527"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050333"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Catalog オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -41,7 +41,7 @@ ms.locfileid: "99169527"
   
  [SetObjectOwner メソッド](./setobjectowner-method.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

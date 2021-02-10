@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e321d3cf41e8edcd5a5bd29452050542257a908b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6df2a76aa32ceec8e77bf27424345fc6bae52233
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169568"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050473"
 ---
 # <a name="append-method-adox-users"></a>Append メソッド (ADOX Users)
 新しい [ユーザー](./user-object-adox.md) オブジェクトを [Users](./users-collection-adox.md) コレクションに追加します。  
@@ -35,13 +35,13 @@ Users.Append User[,Password]
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *ユーザー*  
+ *User*  
  追加する **ユーザー** オブジェクトまたは作成して追加するユーザーの名前を含む **バリアント** 値。  
   
  *パスワード*  
  任意。 ユーザーのパスワードを含む **文字列** 値です。 *Password* パラメーターは、**ユーザー** オブジェクトの [ChangePassword](./changepassword-method-adox.md)メソッドによって指定された値に対応します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [カタログ](./catalog-object-adox.md)の **ユーザー** コレクションは、すべてのカタログのユーザーを表します。 [グループ](./group-object-adox.md)の **ユーザー** コレクションは、特定のグループのメンバーシップを持つユーザーのみを表します。  
   
  プロバイダーがユーザーの作成をサポートしていない場合、エラーが発生します。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 639df02036554d9c0276a8040a4bdbde183ced53
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c21daefed73bd93bf0c0adc15e24b7648979ea09
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169460"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050242"
 ---
 # <a name="command-property-adox"></a>Command プロパティ (ADOX)
 プロシージャを作成または実行するために使用できる ADO [コマンド](../ado-api/command-object-ado.md) オブジェクトを指定します。  
@@ -30,7 +30,7 @@ ms.locfileid: "99169460"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  有効な ADO **コマンド** オブジェクトを設定または返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  プロバイダーがコマンドの永続化をサポートしていない場合、このプロパティを取得して設定すると、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  

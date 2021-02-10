@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4f8f1db220bdf68205e3bd4628a27d0b57705b8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 531a832c5519b7a049c96de15971c74bc9a607a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168804"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049202"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset、SourceRecordset プロパティ (RDS)
 カスタムビジネスオブジェクトから返される **レコードセット** オブジェクトを示します。  
@@ -44,7 +44,7 @@ Recordset = DataControl.Recordset
  *レコードセット*  
  **レコードセット** オブジェクトを表すオブジェクト変数です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **SourceRecordset** プロパティは、カスタムビジネスオブジェクトから返された [レコードセット](../ado-api/recordset-object-ado.md)に設定できます。  
   
  これらのプロパティを使用すると、アプリケーションはカスタムプロセスを使用してバインドプロセスを処理できます。 レコードセットを直接操作し **て、プロパティ** の設定や **レコードセット** の反復処理などのアクションを実行できるように、**レコード** セットにラップされた行セットを受け取ります。  
