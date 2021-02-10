@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c9b7563b940cd4340b7f07238fe50af56cf66e6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a61fc0351c7d7b7008ef34d048e66a39908562e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721413"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037582"
 ---
 # <a name="rds-scenario"></a>RDS のシナリオ
 > [!IMPORTANT]

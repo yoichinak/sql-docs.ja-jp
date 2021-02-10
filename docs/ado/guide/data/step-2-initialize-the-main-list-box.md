@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63dd3524ddd70885495c116ff875369ac34784ef
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1b1daa60ce9cb93f46ccdc852052f61ec5b58e6a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979533"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036972"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>手順 2:Main リスト ボックスを初期化する
 グローバルレコードとレコードセットオブジェクトを宣言するには、Form1 の (宣言) に次のコードを挿入します。  

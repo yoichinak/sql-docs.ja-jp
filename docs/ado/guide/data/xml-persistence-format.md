@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2da0090b9e06a9df7692a27242a08303174f51aa
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3a1a1b832f9e34cbf99e5fd01c424bf54c50c3bc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978833"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036722"
 ---
 # <a name="xml-persistence-format"></a>XML 保存形式
 ADO は、永続化する XML ストリームに UTF-8 エンコードを使用します。  
@@ -67,7 +67,7 @@ xmlns:z="#RowsetSchema">
   
  スキーマには、名前空間、スキーマセクション、およびデータセクションの宣言が示されています。 Schema セクションには、row、ShipperID、CompanyName、および Phone の定義が含まれています。  
   
- スキーマ定義は [W3C XML データ仕様](http://www.w3.org/TR/1998/NOTE-XML-data/) に準拠しており、完全に検証できます (ただし、検証は Internet Explorer 5 では実行されません)。 現在、XML データは、レコードセットの永続化に対してサポートされている唯一のスキーマ形式です。  
+ スキーマ定義は [W3C XML-Data 仕様](http://www.w3.org/TR/1998/NOTE-XML-data/) に準拠しており、完全に検証できます (ただし、検証は Internet Explorer 5 では実行されません)。 現時点では、レコードセットの永続化に対してサポートされているスキーマ形式は XML-Data だけです。  
   
  データセクションには、運送会社に関する情報を含む3つの行があります。 空の行セットの場合、data セクションは空になることがありますが、 \<rs:data> タグが存在している必要があります。 データがない場合は、単にタグの短縮形を記述でき \<rs:data/> ます。 "Rs" で始まるすべてのタグは、urn: schema-microsoft-com: rowset によって定義された名前空間にあることを示します。  
   

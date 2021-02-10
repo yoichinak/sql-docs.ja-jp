@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 09b79b0001ff448ecd333a4ec601c4ff42febf6d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991453"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037662"
 ---
 # <a name="data-section"></a>データ セクション
 データセクションでは、保留中の更新、挿入、または削除と共に、行セットのデータを定義します。 Data セクションには、0個以上の行を含めることができます。 行がスキーマによって定義されている場合にのみ、1つの行セットからデータを格納できます。 また、前述のように、データのない列は省略できます。 Data セクションで属性またはサブ要素が使用されていて、そのコンストラクトが schema セクションで定義されていない場合、そのコンストラクトは警告なしで無視されます。  
   
-## <a name="string"></a>文字列型  
+## <a name="string"></a>String  
  テキストデータ内の予約済み XML 文字は、適切な文字エンティティに置き換える必要があります。 たとえば、"Joe's ガレージ" という会社名では、単一引用符をエンティティに置き換える必要があります。 実際の行は次のようになります。  
   
 ```  
@@ -32,15 +32,15 @@ ms.locfileid: "88991453"
   
  次の文字は XML で予約されており、文字エンティティ {'、"、&、} で置き換える必要があり \<,> ます。  
   
-## <a name="binary"></a>Binary  
+## <a name="binary"></a>2 項  
  バイナリデータは、16進数でエンコードされます (つまり、1バイトが2文字にマップされ、1つの文字がニブルごとに1文字)。  
   
 ## <a name="datetime"></a>DateTime  
- バリアント VT_DATE 形式は、XML データ型で直接サポートされていません。 データと時間の両方の要素を含む日付の正しい形式は、Yyyy-mm-ddthh: mm: ss です。  
+ バリアント VT_DATE 形式は、XML-Data データ型によって直接サポートされていません。 データと時間の両方の要素を含む日付の正しい形式は、Yyyy-mm-ddthh: mm: ss です。  
   
- XML で指定された日付形式の詳細については、「 [W3C xml-Data specification](https://go.microsoft.com/fwlink/?LinkId=5692)」を参照してください。  
+ XML で指定された日付形式の詳細については、「 [W3C XML-Data specification](https://go.microsoft.com/fwlink/?LinkId=5692)」を参照してください。  
   
- XML データ仕様で2つの同等のデータ型が定義されている場合 (たとえば、i4 = = int)、ADO はフレンドリ名を書き込みますが、両方を読み取ります。  
+ XML-Data 指定で2つの同等のデータ型が定義されている場合 (たとえば、i4 = = int)、ADO はフレンドリ名を書き込みますが、両方を読み取ります。  
   
 ## <a name="managing-pending-changes"></a>保留中の変更の管理  
  レコードセットは、即時更新モードまたはバッチ更新モードで開くことができます。 クライアント側カーソルを使用してバッチ更新モードで開かれた場合、レコードセットに加えられたすべての変更は、UpdateBatch メソッドが呼び出されるまで保留状態になります。 保留中の変更は、レコードセットが保存されるときにも保持されます。 XML では、urn: schema-microsoft-com: rowset で定義された "update" 要素を使用して表されます。 また、行セットを更新できる場合は、行の定義で更新可能なプロパティを true に設定する必要があります。 たとえば、仕入先テーブルに保留中の変更が含まれていることを定義する場合、行定義は次のようになります。  

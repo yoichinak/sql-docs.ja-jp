@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 608ad67d531573d0124ea312252e6d30c289bf15
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 82557d241ff804ec2da6f97a1dc96073da2a2b7d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978793"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036712"
 ---
 # <a name="xml-security-considerations"></a>XML のセキュリティに関する考慮事項
 Recordset オブジェクトの ADO Save および Open メソッドは、Internet Explorer で実行するための安全な操作とは見なされません。 このため、これらのメソッドが、ブラウザーでホストされているアプリケーションまたはコントロールで実行されているスクリプトコードで使用されている場合、ブラウザーのセキュリティ構成はその動作に影響します。  

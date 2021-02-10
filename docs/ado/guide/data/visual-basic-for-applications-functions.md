@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 960e0f8cf42a2ef1f0b2b30f73a784d208777dae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1c7b1b8493e6e8dd066ad2208e35d374cc0fadff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978933"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036742"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications の関数
 次の Visual Basic for Applications 関数は、データシェイプの CALC 式で使用できます。  
@@ -58,20 +58,20 @@ ms.locfileid: "88978933"
         DatePart  
         DateSerial  
         DateValue  
-        日  
+        Day  
         DDB  
         エラー  
         Error$  
         Exp  
         Fix  
-        書式  
+        Format  
         Format$  
         FV  
         Hex  
     :::column-end:::
     :::column:::
         Hex$  
-        時  
+        Hour  
         IIF  
         InStr  
         int  
@@ -99,7 +99,7 @@ ms.locfileid: "88978933"
         Mid$  
         分  
         MIRR  
-        Month  
+        月  
         Now  
         NPer  
         NPV  
@@ -120,7 +120,7 @@ ms.locfileid: "88978933"
         Rnd  
         RTrim  
         RTrim $  
-        秒  
+        Second  
         Sgn  
         Sin  
         SLN  
@@ -133,11 +133,11 @@ ms.locfileid: "88978933"
         StrConv  
     :::column-end:::
     :::column:::
-        文字列型  
+        String  
         String$  
         SYD  
         Tan  
-        時間  
+        時刻  
         Time$  
         Timer  
         TimeSerial  
@@ -150,7 +150,7 @@ ms.locfileid: "88978933"
         Val  
         VarType  
         平日  
-        年  
+        Year  
     :::column-end:::
 :::row-end:::
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be65ff094518defcbf27ba2aa2ffa69835ee8ca3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cd626fe6887f784ec62e22ccc276e64feb4a9b14
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991273"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037462"
 ---
 # <a name="formal-shape-grammar"></a>Shape の正式文法
 これは、任意のシェイプコマンドを作成するための正式な文法です。  
@@ -40,7 +40,7 @@ ms.locfileid: "88991273"
   
  それ以外のすべての用語はリテラルです。  
   
-|期間|定義|  
+|項目|定義|  
 |----------|----------------|  
 |\<shape-command>|図形 [ \<table-exp> []]] \<alias> [ \<shape-action> ]|  
 |\<table-exp>|{ \<provider-command-text> } &#124;<br /><br /> ( \<shape-command> ) &#124;<br /><br /> テーブル \<quoted-name> &#124;<br /><br /> \<quoted-name>|  

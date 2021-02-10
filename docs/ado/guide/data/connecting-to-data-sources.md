@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 988eef3a3eb706480e50f0feb6d2fe363b4faabd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4234cf0e54ae3f3427264835e9f88a715052c2fa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991523"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037702"
 ---
 # <a name="connecting-to-data-sources"></a>データ ソースへの接続
 ADO **接続** オブジェクトは、DBMS、ファイルストア、またはコンマ区切りのテキストファイルを含む、データソースとの一意のセッションを表します。 クライアント/サーバーデータベースシステムの場合、ADO 接続はサーバーへの実際のネットワーク接続にすることができます。  
   
  接続 **オブジェクトは** 、接続構成の指定、接続の開始と終了、データソースに対するコマンドの作成と実行、および基になるデータソースのデザインに関する情報のスキーマ行セットの形式での提供など、さまざまな [プロパティとメソッド](../../reference/ado-api/connection-object-properties-methods-and-events.md) をサポートしています。プロバイダーでサポートされている機能によっては、 **接続** オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  
   
- **接続**オブジェクトを使用するか、**レコードセット**オブジェクトを使用して、データソースに接続できます。  
+ **接続** オブジェクトを使用するか、**レコードセット** オブジェクトを使用して、データソースに接続できます。  
   
  このセクションでは、次のトピックを扱います。  
   

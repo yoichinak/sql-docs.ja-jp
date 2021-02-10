@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c52989f83608b33756ae90778485bfddab08173
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: caa8fe846651f65e4316c81f29f2f18078628658
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724803"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036572"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Windows 2000 での RDS の構成
 Windows 2000 にアップグレードした後に RDS を正常に機能させることが困難な場合は、次の手順に従って問題のトラブルシューティングを行ってください。  
@@ -27,11 +27,11 @@ Windows 2000 にアップグレードした後に RDS を正常に機能させ�
   
 2.  [スタート] メニューで、[実行] を選択します。 「msdfmap.ini」と入力し、[OK] をクリックして、メモ帳で msdfmap.ini ファイルを開きます。 [CONNECT DEFAULT] セクションを確認し、ACCESS パラメーターが NOACCESS に設定されている場合は、[READONLY] に変更します。  
   
-3.  RegEdit ユーティリティを使用して、"HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\DataFactory\HandlerInfo" に移動し、 **ハンドラ required** が0に設定されていて、 **defaulthandler** が "" (Null 文字列) に設定されていることを確認します。  
+3.  RegEdit ユーティリティを使用して "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo" に移動し、 **ハンドラ required** が0に設定されていて、 **defaulthandler** が "" (Null 文字列) に設定されていることを確認します。  
   
      **メモ** レジストリのこのセクションに変更を加える場合は、コマンドプロンプトで次のコマンドを入力して、World Wide Web 公開サービスを停止して再起動する必要があります: "NET STOP W3SVC" と "NET START W3SVC"。  
   
-4.  RegEdit ユーティリティを使用して、レジストリ内を "HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch" に移動し、 **RDSServer**という名前のキーがあることを確認します。 そうでない場合は、作成します。  
+4.  RegEdit ユーティリティを使用して、レジストリ内を "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch" に移動し、RDSServer という名前のキーが **Datafactory** にあることを確認します。 そうでない場合は、作成します。  
   
 5.  インターネットサービスマネージャーを使用して、既定の Web サイトに移動し、MSADC 仮想ルートのプロパティを表示します。 ディレクトリのセキュリティ/IP アドレスとドメイン名の制限を調べます。 [アクセスが拒否されました] がオンになっている場合は、[許可] を選択します。  
   

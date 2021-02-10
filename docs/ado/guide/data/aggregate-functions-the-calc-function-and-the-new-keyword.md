@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b62e392325306bc358283874f4638077d8a4178
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 458a0f051e9bbf21c04b0c84125a1c438693f00d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991633"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037838"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>集計関数、CALC 関数、NEW キーワード
-データシェイプは、次の関数をサポートしています。 操作対象の列を含むチャプターに割り当てられた名前は、 *チャプターエイリアス*です。  
+データシェイプは、次の関数をサポートしています。 操作対象の列を含むチャプターに割り当てられた名前は、 *チャプターエイリアス* です。  
   
  チャプターエイリアスは完全修飾することができます。各チャプター列名は、 *列名* を含む章に至るまで、ピリオドで区切られています。 たとえば、親章 chap1 に、amount 列を含む chap2 という子のチャプターが含まれている場合、修飾名は chap1 になります。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "88991633"
   
 |NEW キーワード|説明|  
 |-----------------|-----------------|  
-|新しい *フィールドの種類* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|指定した型の空の列を **レコードセット**に追加します。|  
+|新しい *フィールドの種類* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|指定した型の空の列を **レコードセット** に追加します。|  
   
  NEW キーワードで渡される *フィールド型* には、次のいずれかのデータ型を指定できます。  
   

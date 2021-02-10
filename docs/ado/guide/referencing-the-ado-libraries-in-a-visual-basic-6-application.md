@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71ae81dc98d0fffe7463759be0846afccd708f0f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 431a58609ff26ace443b012bc2835e5ba89736db
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978513"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036612"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 アプリケーションで ADO ライブラリを参照する
 Microsoft Visual Basic 6 アプリケーションに ADO ライブラリをインポートするには、Visual Basic プロジェクトで参照を設定する必要があります。  
@@ -33,11 +33,11 @@ Microsoft Visual Basic 6 アプリケーションに ADO ライブラリをイ�
   
 2.  [ **プロジェクト** ] メニュー項目をクリックし、ドロップダウンメニューパネルから [ **参照** ] を選択します。  
   
-3.  [ **使用可能な参照**] で、[ **Microsoft ActiveX データオブジェクト *n. n* ライブラリ**] のチェックボックスをオンにします。 n は最新のバージョン番号 ***を表します*** 。 下の [ **場所** ] フィールドでは、選択したものを *$installDir\msado15.dll*として指定する必要があります。ここで *$installDir* は、ADO ライブラリがインストールされているディレクトリのパスを表します。  
+3.  [**使用可能な参照**] で、[ **Microsoft ActiveX データオブジェクト *n. n* ライブラリ**] のチェックボックスをオンにします。 n **_. n_*_ は、最新のバージョン番号を表します。下の [* 場所**] フィールドでは、選択内容を *$installDir\msado15.dll* として指定する必要があります。ここで *$installDir* は、ADO ライブラリがインストールされているディレクトリのパスを表します。  
   
-4.  ADO MD を使用する場合は、手順 3. を繰り返して **Microsoft ActiveX データオブジェクト (多次元) *n. n* ライブラリ**を選択します。 [ **場所** ] フィールドでは、この選択を *$installDir\msadomd.dll*として指定する必要があります。  
+4.  ADO MD を使用する場合は、手順 3. を繰り返して **Microsoft ActiveX データオブジェクト (多次元) *n. n* ライブラリ** を選択します。 [ **場所** ] フィールドでは、この選択を *$installDir\msadomd.dll* として指定する必要があります。  
   
-5.  ADOX を使用する場合は、手順 3. を繰り返して、 **DDL およびセキュリティ用に MICROSOFT ADO Ext. *n. n* **を選択します。 [ **場所** ] フィールドでは、この選択を *$installDir\msadox.dll*として指定する必要があります。  
+5.  ADOX を使用する場合は、手順 3. を繰り返して、 **DDL およびセキュリティ用に MICROSOFT ADO Ext. *n. n*** を選択します。 [ **場所** ] フィールドでは、この選択を *$installDir\msadox.dll* として指定する必要があります。  
   
 6.  [ **OK** ] をクリックして、参照の設定を完了します。  
   
@@ -54,4 +54,4 @@ Microsoft Visual Basic 6 アプリケーションに ADO ライブラリをイ�
   
 -   *msado20*、ADO 2.0 タイプライブラリ  
   
- 旧バージョンとの互換性を保つために、アプリケーションでこれらの ADO ライブラリを使用する必要がある場合は、適切なバージョンのタイプライブラリをインポートする必要があります。 これを行うには、前のセクションの手順に従って *msado15.dll* を *msadoXX*で置き換えます。ここで、 *XX* はインポートする必要があるバージョン番号を表します。
+ 旧バージョンとの互換性を保つために、アプリケーションでこれらの ADO ライブラリを使用する必要がある場合は、適切なバージョンのタイプライブラリをインポートする必要があります。 これを行うには、前のセクションの手順に従って *msado15.dll* を *msadoXX* で置き換えます。ここで、 *XX* はインポートする必要があるバージョン番号を表します。

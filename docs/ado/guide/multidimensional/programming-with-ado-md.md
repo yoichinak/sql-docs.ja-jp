@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5073aa8334f1f86689085ec87dc5a5d9c832fd44
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d2d99315d0cef54709d8c5313f2961dc0e43cfe7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978603"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036642"
 ---
 # <a name="programming-with-ado-md"></a>ADO MD を使用したプログラミング
 開発ツールで ADO MD を使用するには、ADO MD タイプライブラリへの参照を設定する必要があります。 ADO MD ライブラリの説明は、Microsoft ActiveX データオブジェクト (多次元) ライブラリです。 ADO MD ライブラリのファイル名は msadomd.dll、プログラム ID (ProgID) は "ADOMD" です。 ライブラリへの参照を設定する方法の詳細については、開発ツールのドキュメントを参照してください。  

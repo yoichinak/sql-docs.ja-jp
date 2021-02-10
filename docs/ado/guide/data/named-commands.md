@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 986c82ca73e202ea2f07ab20822c73dbfe6e7832
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f93c158a5572286e61ceacdaf95c5a0cd2153242
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980273"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037252"
 ---
 # <a name="named-commands"></a>名前付きコマンド
-[単純なコマンドを作成して実行すると](./creating-and-executing-a-simple-command.md) 、コマンドを実行する1つの方法が表示されます。 別の方法として、名前付きコマンドを作成し、この名前付きコマンドを**接続**オブジェクト ( **Command**オブジェクトの**ActiveConnection**プロパティに割り当てられている) で直接呼び出すことができます。 コマンドに名前を付けるということは、**コマンド**オブジェクトの**name**プロパティに名前を割り当てることを意味します。 たとえば、次のように入力します。  
+[単純なコマンドを作成して実行すると](./creating-and-executing-a-simple-command.md) 、コマンドを実行する1つの方法が表示されます。 別の方法として、名前付きコマンドを作成し、この名前付きコマンドを **接続** オブジェクト ( **Command** オブジェクトの **ActiveConnection** プロパティに割り当てられている) で直接呼び出すことができます。 コマンドに名前を付けるということは、**コマンド** オブジェクトの **name** プロパティに名前を割り当てることを意味します。 たとえば、オブジェクトに適用された  
   
 ```  
 objCmd.Name = "GetCustomers"  

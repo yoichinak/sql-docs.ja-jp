@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc65c6d9ad0b97f6d7f98a26fec173fc0fd630c3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 34485c91a20b8c5df668e5eddd11e442418844a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724773"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036532"
 ---
 # <a name="customization-file-logs-section"></a>カスタマイズ ファイルの Logs セクション
-**Logs**セクションには、 **DataFactory**の操作中にエラーを記録するファイルの名前を指定する、ログファイルのエントリが含まれています。  
+**Logs** セクションには、 **DataFactory** の操作中にエラーを記録するファイルの名前を指定する、ログファイルのエントリが含まれています。  
   
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
@@ -39,10 +39,10 @@ FileName
   
 ## <a name="remarks"></a>解説  
   
-|要素|説明|  
+|パーツ|説明|  
 |----------|-----------------|  
 |**警戒**|これがログファイルエントリであることを示すリテラル文字列。|  
-|*FileName*|完全なパスとファイル名。 一般的なファイル名は **c:\msdfmap.log**です。|  
+|*FileName*|完全なパスとファイル名。 一般的なファイル名は **c:\msdfmap.log** です。|  
   
  ログファイルには、各エラーのユーザー名、HRESULT、日付、時刻が含まれます。  
   

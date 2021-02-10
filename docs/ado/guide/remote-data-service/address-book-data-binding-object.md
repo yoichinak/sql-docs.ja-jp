@@ -1,6 +1,6 @@
 ---
 description: アドレス帳のデータ バインディング オブジェクト
-title: アドレス帳のデータバインディングオブジェクト |Microsoft Docs
+title: アドレス帳 Data-Binding オブジェクト |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f5c98370ebb1a1b16e09e900455888d0c201905
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 91489445aef2034ed273a6d13cc5d6ae02b7f519
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721573"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036592"
 ---
 # <a name="address-book-data-binding-object"></a>アドレス帳のデータ バインディング オブジェクト
 アドレス帳アプリケーションは、RDS を使用し [ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md) データベースの SQL Server データを、アプリケーションのクライアント HTML ページ内のビジュアルオブジェクト (この場合は DHTML テーブル) にバインドするオブジェクト。 イベントドリブンの VBScript プログラムロジックは、RDS を使用し [ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md) :  
@@ -53,11 +53,11 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|***CLASSID***|システムに埋め込まれたオブジェクトの型を識別する、128ビットの一意の数値。 この識別子は、ローカルコンピューターのシステムレジストリに保持されます。 (RDS のクラス Id の場合) **。DataControl** オブジェクト、「RDS」を参照してください [。DataControl オブジェクト](../../reference/rds-api/datacontrol-object-rds.md)。)|  
+|***CLASSID** _|システムに埋め込まれたオブジェクトの型を識別する、128ビットの一意の数値。 この識別子は、ローカルコンピューターのシステムレジストリに保持されます。 (_ RDS のクラス Id の場合)*。DataControl** オブジェクト、「RDS」を参照してください [。DataControl オブジェクト](../../reference/rds-api/datacontrol-object-rds.md)。)|  
 |***ID***|コード内で識別するために使用される埋め込みオブジェクトのドキュメント全体の識別子を定義します。|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS.DataControl タグパラメーター  
- 次の表では、RDS に固有のパラメーターについて説明し **ます。DataControl** オブジェクト。 (RDS の完全な一覧については、 **RDS.DataControl**オブジェクトのパラメーターを DataControl し、実装するタイミングについては、「RDS」を参照してください[。DataControl オブジェクト](../../reference/rds-api/datacontrol-object-rds.md)。)  
+ 次の表では、RDS に固有のパラメーターについて説明し **ます。DataControl** オブジェクト。 (RDS の完全な一覧については、 オブジェクトのパラメーターを DataControl し、実装するタイミングについては、「RDS」を参照してください[。DataControl オブジェクト](../../reference/rds-api/datacontrol-object-rds.md)。)  
   
 |パラメーター|説明|  
 |---------------|-----------------|  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff36542abb462ffc63e8704a5c6c3cdd6670d280
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e3bcc0d4d436afcc10b4d079938adf2bad237d88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980703"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037412"
 ---
 # <a name="handling-ado-events"></a>ADO イベントの処理
 ADO イベントモデルでは、操作の開始前または完了後に *イベント*(通知) を発行する、特定の同期および非同期の ado 操作がサポートされています。 イベントは実際には、アプリケーションで定義するイベントハンドラールーチンの呼び出しです。  

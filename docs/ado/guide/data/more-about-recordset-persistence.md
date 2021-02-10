@@ -16,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1dca646b07c441a4fccd617723aba98536f1a7e1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ce3b22ecd5913db0045f82e72aa20b0833a5109b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980333"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037262"
 ---
 # <a name="more-about-recordset-persistence"></a>レコードセットの保持に関する詳細情報
-ADO レコードセットオブジェクトは、 [Save](../../reference/ado-api/save-method.md)メソッドを使用して、**レコードセット**オブジェクトの内容をファイルに格納することをサポートしています。 永続的に格納されたファイルは、ローカルドライブ、サーバー、または Web サイト上の URL として存在する場合があります。 その後、**レコードセット**オブジェクトの[Open](../../reference/ado-api/open-method-ado-recordset.md)メソッドまたは[Connection](../../reference/ado-api/connection-object-ado.md)オブジェクトの[Execute](../../reference/ado-api/execute-method-ado-connection.md)メソッドのいずれかを使用して、ファイルを復元できます。  
+ADO レコードセットオブジェクトは、 [Save](../../reference/ado-api/save-method.md)メソッドを使用して、**レコードセット** オブジェクトの内容をファイルに格納することをサポートしています。 永続的に格納されたファイルは、ローカルドライブ、サーバー、または Web サイト上の URL として存在する場合があります。 その後、**レコードセット** オブジェクトの [Open](../../reference/ado-api/open-method-ado-recordset.md)メソッドまたは [Connection](../../reference/ado-api/connection-object-ado.md)オブジェクトの [Execute](../../reference/ado-api/execute-method-ado-connection.md)メソッドのいずれかを使用して、ファイルを復元できます。  
   
  さらに、 [GetString](../../reference/ado-api/getstring-method-ado.md) メソッドは、 **レコードセット** オブジェクトを、指定した文字で区切られた列と行を含む形式に変換します。  
   
- **レコードセット**を永続化するには、まず、ファイルに格納できる形式に変換します。 **レコードセット** オブジェクトは、独自の高度なデータ tablegram (ADTG) 形式または open 拡張マークアップ言語 (XML) 形式で格納できます。 ADTG の例については、次のセクションで説明します。 XML 永続化の詳細については、「 [xml 形式でのレコードの永続](./persisting-records-in-xml-format.md)化」を参照してください。  
+ **レコードセット** を永続化するには、まず、ファイルに格納できる形式に変換します。 **レコードセット** オブジェクトは、独自の高度なデータ tablegram (ADTG) 形式または open 拡張マークアップ言語 (XML) 形式で格納できます。 ADTG の例については、次のセクションで説明します。 XML 永続化の詳細については、「 [xml 形式でのレコードの永続](./persisting-records-in-xml-format.md)化」を参照してください。  
   
- 保留中の変更を保存ファイルに保存します。 これにより、 **レコード** セットオブジェクトを返すクエリの実行、 **レコードセット**の編集、および保留中の変更の保存を行うことができます。後で **レコードセット**を復元し、保存されている保留中の変更を使用してデータソースを更新します。  
+ 保留中の変更を保存ファイルに保存します。 これにより、 **レコード** セットオブジェクトを返すクエリの実行、 **レコードセット** の編集、および保留中の変更の保存を行うことができます。後で **レコードセット** を復元し、保存されている保留中の変更を使用してデータソースを更新します。  
   
- **ストリーム**オブジェクトを永続的に格納する方法の詳細については、「[ストリームと永続](./streams-and-persistence.md)化」を参照してください。  
+ **ストリーム** オブジェクトを永続的に格納する方法の詳細については、「[ストリームと永続](./streams-and-persistence.md)化」を参照してください。  
   
- **レコードセット**の永続化の例については、「XML レコードセットの永続化シナリオ」を参照してください。  
+ **レコードセット** の永続化の例については、「XML レコードセットの永続化シナリオ」を参照してください。  
   
 ## <a name="example"></a>例  
   

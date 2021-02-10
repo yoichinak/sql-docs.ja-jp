@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bd8b88ab3a90669982a752023d8a983c188dcbf
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cecbdd12fd98e6f58d07cfe30c6c0b8a044ed15e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991463"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037689"
 ---
 # <a name="cursor-and-lock-characteristics"></a>カーソルとロックの特性
 カーソルの特性はプロバイダーの機能によって異なりますが、一般的に、次のような長所と短所がさまざまな種類のカーソルやロックに適用されます。  

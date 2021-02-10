@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f40f55f2a7df85078131813015fd584b52c75c2d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d0fac62712f21e2f25416419252a1e13f8b47274
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991483"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037672"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>簡単なコマンドの作成と実行
 単純なコマンドとは、パラメーター化されておらず、永続化が必要ないコマンドです。 簡単なコマンドを作成して実行するには、次の3つの方法があります。  
   
--   **Command**オブジェクトの使用  
+-   **Command** オブジェクトの使用  
   
--   **接続**オブジェクトの使用  
+-   **接続** オブジェクトの使用  
   
--   **レコードセット**オブジェクトの使用  
+-   **レコードセット** オブジェクトの使用  
   
 ## <a name="using-a-command-object"></a>Command オブジェクトの使用  
- **コマンド**オブジェクトを使用して簡単なコマンドを作成するには、**コマンド**オブジェクトの**CommandText**プロパティに命令を割り当て、 **CommandType**プロパティに適切な値を設定する必要があります。 コマンドを実行するには、開いている接続が**command**オブジェクトの**ActiveConnection**プロパティに割り当てられ、その後に**command**オブジェクトの**Execute**メソッドを呼び出す必要があります。  
+ **コマンド** オブジェクトを使用して簡単なコマンドを作成するには、**コマンド** オブジェクトの **CommandText** プロパティに命令を割り当て、 **CommandType** プロパティに適切な値を設定する必要があります。 コマンドを実行するには、開いている接続が **command** オブジェクトの **ActiveConnection** プロパティに割り当てられ、その後に **command** オブジェクトの **Execute** メソッドを呼び出す必要があります。  
   
  次のコードスニペットは、 **command** オブジェクトを使用してデータソースに対してコマンドを実行する基本的な方法を示しています。 この例では、行を返すコマンドを使用し、コマンド実行の結果を **レコードセット** オブジェクトとして返します。  
   
@@ -109,7 +109,7 @@ End Function
 ```  
   
 ## <a name="using-a-recordset-object"></a>レコードセットオブジェクトの使用  
- また、コマンドをテキスト文字列として作成し、そのコマンドをコマンドの種類 (adCmdText) と共に使用して、**レコードセット**オブジェクトの**Open**メソッドに対して実行することもできます。 次のコードスニペットはこれを示しています。  
+ また、コマンドをテキスト文字列として作成し、そのコマンドをコマンドの種類 (adCmdText) と共に使用して、**レコードセット** オブジェクトの **Open** メソッドに対して実行することもできます。 次のコードスニペットはこれを示しています。  
   
 ```  
   
