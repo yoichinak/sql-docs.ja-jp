@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 238c8bf3d0c21625b9317690f70adbe16bd5075f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 519b505c0fcb985e6f0ca9cfd04f890114b3fdb2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171167"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025069"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO ランタイムエラーの種類を指定します。  
@@ -32,14 +32,14 @@ ADO ランタイムエラーの種類を指定します。
   
 -   負の decimal-完全なエラー番号の10進変換。  
   
--   完全なエラー番号の16進数表現 Hexadecimal-The ます。 Windows のファシリティコードは、4番目の数字です。 ADO エラー番号のファシリティ *コードはです。* 例: 0x800 ***A** _0E7B。  
+-   完全なエラー番号の16進数表現 Hexadecimal-The ます。 Windows のファシリティコードは、4番目の数字です。 ADO エラー番号のファシリティ *コードはです。* 例: 0x800 ***A*** 0e7b。  
   
 > [!NOTE]
->  ADO アプリケーションに OLE DB エラーが渡される場合があります。 通常、これらは Windows ファシリティコード4で識別でき _*ます。たとえば、0x800 * * * 4* * のように_ なります。  
+>  ADO アプリケーションに OLE DB エラーが渡される場合があります。 通常、これらは Windows ファシリティコード *4* で識別できます。 たとえば、0x800 ***4*** のようになります。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|_ *Aderrboundtocommand**|3707-2146824581 0x800A0E7B|Source として **Command** オブジェクトを含む **Recordset** オブジェクトの **ActiveConnection** プロパティを変更することはできません。|  
+|**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|Source として **Command** オブジェクトを含む **Recordset** オブジェクトの **ActiveConnection** プロパティを変更することはできません。|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|サーバーは操作を完了できません。|  
 |**adErrCantChangeConnection**|3748-2146824540 0x800A0EA4|接続が拒否されました。 要求された新しい接続は、既に使用されているものとは異なる特性を持っています。|  
 |**adErrCantChangeProvider**|3220-2146825068 0X800A0C94|指定されたプロバイダーは、既に使用されているものと異なります。|  

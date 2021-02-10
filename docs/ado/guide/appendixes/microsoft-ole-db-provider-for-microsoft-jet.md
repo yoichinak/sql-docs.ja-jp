@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc04cce33d3a1170c01b604ef8b71ef82bc98fe2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 87d9e159a9a97a0a929bec72d03118a927aad56e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991033"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029226"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet の概要
 Microsoft Jet の OLE DB プロバイダーにより、ADO は Microsoft Jet データベースにアクセスできます。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- このプロバイダーに接続するには、 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)プロパティの*provider*引数を次のプロパティに設定します。
+ このプロバイダーに接続するには、 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)プロパティの *provider* 引数を次のプロパティに設定します。
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
@@ -53,7 +53,7 @@ Microsoft.Jet.OLEDB.4.0
 > [!NOTE]
 >  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。
 
-## <a name="provider-specific-connection-parameters"></a>プロバイダー固有の接続パラメーター
+## <a name="provider-specific-connection-parameters"></a>Provider-Specific 接続パラメーター
  OLE DB Provider for Microsoft Jet では、ADO によって定義されているものに加えて、いくつかのプロバイダー固有の動的プロパティがサポートされています。 他のすべての **接続** パラメーターと同様に、接続オブジェクトの **Properties** コレクションまた **は接続文字列** の一部として設定できます。
 
  次の表は、これらのプロパティと、対応する OLE DB プロパティ名をかっこで示しています。
@@ -69,7 +69,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: Encrypt Database (DBPROP_JETOLEDB_ENCRYPTDATABASE)|圧縮されたデータベースを暗号化する必要があるかどうかを示します。 このプロパティが設定されていない場合、元のデータベースも暗号化されている場合は、圧縮されたデータベースが暗号化されます。|
 |Jet OLEDB: エンジンの種類 (DBPROP_JETOLEDB_ENGINE)|現在のデータストアにアクセスするために使用するストレージエンジンを示します。|
 |Jet OLEDB: 排他的な非同期遅延 (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|データベースを排他的に開いたときに、Jet がディスクへの非同期書き込みを遅延する最大時間 (ミリ秒単位) を示します。<br /><br /> このプロパティは、 **JET OLEDB: Flush Transaction Timeout** が0に設定されている場合を除き、無視されます。|
-|Jet OLEDB: Flush Transaction Timeout (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|非同期書き込みのためにキャッシュに格納されたデータがディスクに書き込まれるまでの待機時間を示します。 この設定は、 **JET oledb: Shared Async delay** および **Jet Oledb: Exclusive async delay**の値よりも優先されます。|
+|Jet OLEDB: Flush Transaction Timeout (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|非同期書き込みのためにキャッシュに格納されたデータがディスクに書き込まれるまでの待機時間を示します。 この設定は、 **JET oledb: Shared Async delay** および **Jet Oledb: Exclusive async delay** の値よりも優先されます。|
 |Jet OLEDB: グローバル一括トランザクション (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|SQL 一括トランザクションがトランザクション処理されるかどうかを示します。|
 |Jet OLEDB: グローバル部分一括操作 (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|データベースを開くために使用するパスワードを示します。|
 |Jet OLEDB: 暗黙のコミット同期 (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|内部の暗黙のトランザクションで行われた変更が、同期モードと非同期モードのどちらで作成されたかを示します。|
@@ -77,11 +77,11 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: ロックの再試行 (DBPROP_JETOLEDB_LOCKRETRY)|ロックされたページにアクセスしようとした回数を示します。|
 |Jet OLEDB: Max Buffer Size (DBPROP_JETOLEDB_MAXBUFFERSIZE)|ディスクへの変更のフラッシュを開始する前に Jet が使用できる最大メモリ量 (kb 単位) を示します。|
 |Jet OLEDB: 1 ファイルあたりの最大ロック数 (DBPROP_JETOLEDB_MAXLOCKSPERFILE)|Jet がデータベースに配置できるロックの最大数を示します。 既定値は9500です。|
-|Jet OLEDB: 新しいデータベースパスワード (DBPROP_JETOLEDB_NEWDATABASEPASSWORD)|このデータベースに対して設定される新しいパスワードを示します。 古いパスワードは、 **JET OLEDB: Database password**に格納されています。|
+|Jet OLEDB: 新しいデータベースパスワード (DBPROP_JETOLEDB_NEWDATABASEPASSWORD)|このデータベースに対して設定される新しいパスワードを示します。 古いパスワードは、 **JET OLEDB: Database password** に格納されています。|
 |Jet OLEDB: ODBC コマンドのタイムアウト (DBPROP_JETOLEDB_ODBCCOMMANDTIMEOUT)|Jet からのリモート ODBC クエリがタイムアウトするまでのミリ秒数を示します。|
 |Jet OLEDB: テーブルロックへのページロック (DBPROP_JETOLEDB_PAGELOCKSTOTABLELOCK)|Jet がロックをテーブルロックに昇格させようとする前に、トランザクション内でロックする必要があるページ数を示します。 この値が0の場合、ロックは昇格されません。|
 |Jet OLEDB: ページタイムアウト (DBPROP_JETOLEDB_PAGETIMEOUT)|データベースファイルでキャッシュが古くなっているかどうかを確認する前に Jet が待機するミリ秒数を示します。|
-|Jet OLEDB: 長い値ページのリサイクル (DBPROP_JETOLEDB_RECYCLELONGVALUEPAGES)|Jet が解放されたときに BLOB ページを積極的に再利用する必要があるかどうかを示します。|
+|Jet OLEDB: Long-Valued ページのリサイクル (DBPROP_JETOLEDB_RECYCLELONGVALUEPAGES)|Jet が解放されたときに BLOB ページを積極的に再利用する必要があるかどうかを示します。|
 |Jet OLEDB: レジストリパス (DBPROP_JETOLEDB_REGPATH)|Jet データベースエンジンの値を含む Windows レジストリキーを示します。|
 |Jet OLEDB: ISAM の統計をリセットする (DBPROP_JETOLEDB_RESETISAMSTATS)|パフォーマンス情報を返した後に、スキーマ **レコードセット** DBSCHEMA_JETOLEDB_ISAMSTATS がパフォーマンスカウンターをリセットするかどうかを示します。|
 |Jet OLEDB: Shared Async Delay (DBPROP_JETOLEDB_SHAREDASYNCDELAY)|データベースがマルチユーザーモードで開かれた場合に、Jet がディスクへの非同期書き込みを遅延する最大時間をミリ秒単位で示します。|
@@ -89,24 +89,24 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: トランザクションコミットモード (DBPROP_JETOLEDB_TXNCOMMITMODE)|トランザクションがコミットされたときに、Jet がデータを同期的にまたは非同期的に書き込むかどうかを示します。|
 |Jet OLEDB: User Commit Sync (DBPROP_JETOLEDB_USERCOMMITSYNC)|トランザクションで行われた変更を同期モードまたは非同期モードのどちらで作成するかを示します。|
 
-## <a name="provider-specific-recordset-and-command-properties"></a>プロバイダー固有のレコードセットとコマンドのプロパティ
- Jet プロバイダーでは、いくつかのプロバイダー固有の **レコードセット** と **コマンド** プロパティもサポートされています。 これらのプロパティにアクセスして設定するには、**レコードセット**または**コマンド**オブジェクトの**properties**コレクションを使用します。 このテーブルには、ADO プロパティ名とそれに対応する OLE DB プロパティ名がかっこで囲まれて表示されます。
+## <a name="provider-specific-recordset-and-command-properties"></a>レコードセットとコマンドのプロパティの Provider-Specific
+ Jet プロバイダーでは、いくつかのプロバイダー固有の **レコードセット** と **コマンド** プロパティもサポートされています。 これらのプロパティにアクセスして設定するには、**レコードセット** または **コマンド** オブジェクトの **properties** コレクションを使用します。 このテーブルには、ADO プロパティ名とそれに対応する OLE DB プロパティ名がかっこで囲まれて表示されます。
 
 |プロパティ名|説明|
 |-------------------|-----------------|
 |Jet OLEDB: 一括トランザクション (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|SQL 一括操作がトランザクション処理されるかどうかを示します。 大量の一括操作は、リソースの遅延のため、トランザクション処理時に失敗する可能性があります。|
 |Jet OLEDB: Fat カーソルを有効にする (DBPROP_JETOLEDB_ENABLEFATCURSOR)|リモート行ソースのレコードセットを作成するときに Jet が複数の行をキャッシュするかどうかを示します。|
-|Jet OLEDB: Fat カーソルキャッシュサイズ (DBPROP_JETOLEDB_FATCURSORMAXROWS)|リモートデータストアの行キャッシュを使用しているときにキャッシュする行の数を示します。 **JET OLEDB: Enable Fat カーソル**が True の場合を除き、この値は無視されます。|
+|Jet OLEDB: Fat カーソルキャッシュサイズ (DBPROP_JETOLEDB_FATCURSORMAXROWS)|リモートデータストアの行キャッシュを使用しているときにキャッシュする行の数を示します。 **JET OLEDB: Enable Fat カーソル** が True の場合を除き、この値は無視されます。|
 |Jet OLEDB: 一貫性がありません (DBPROP_JETOLEDB_INCONSISTENT)|クエリ結果が不整合な更新を許可するかどうかを示します。|
 |Jet OLEDB: ロックの粒度 (DBPROP_JETOLEDB_LOCKGRANULARITY)|行レベルのロックを使用してテーブルを開くかどうかを示します。|
-|Jet OLEDB: ODBC パススルーステートメント (DBPROP_JETOLEDB_ODBCPASSTHROUGH)|Jet が **Command** オブジェクト内の SQL テキストを変更せずにバックエンドに渡す必要があることを示します。|
+|Jet OLEDB: ODBC Pass-Through ステートメント (DBPROP_JETOLEDB_ODBCPASSTHROUGH)|Jet が **Command** オブジェクト内の SQL テキストを変更せずにバックエンドに渡す必要があることを示します。|
 |Jet OLEDB: 部分一括操作 (DBPROP_JETOLEDB_BULKPARTIAL)|SQL DML 操作が失敗したときの Jet の動作を示します。|
-|Jet OLEDB: パススルークエリ Bulk Op (DBPROP_JETOLEDB_PASSTHROUGHBULKOP)|**レコードセット**を返さないクエリをデータソースに変更せずに渡すかどうかを示します。|
-|Jet OLEDB: パススルークエリの接続文字列 (DBPROP_JETOLEDB_ODBCPASSTHROUGHCONNECTSTRING)|リモートデータストアへの接続に使用される Jet 接続文字列を示します。 **JET OLEDB: ODBC パススルーステートメント**が True でない限り、この値は無視されます。|
+|Jet OLEDB: パススルークエリ Bulk-Op (DBPROP_JETOLEDB_PASSTHROUGHBULKOP)|**レコードセット** を返さないクエリをデータソースに変更せずに渡すかどうかを示します。|
+|Jet OLEDB: パススルークエリの接続文字列 (DBPROP_JETOLEDB_ODBCPASSTHROUGHCONNECTSTRING)|リモートデータストアへの接続に使用される Jet 接続文字列を示します。 **JET OLEDB: ODBC Pass-Through ステートメント** が True の場合を除き、この値は無視されます。|
 |Jet OLEDB: ストアドクエリ (DBPROP_JETOLEDB_STOREDQUERY)|コマンドテキストを SQL コマンドではなく、ストアドクエリとして解釈するかどうかを示します。|
 |Jet OLEDB: Set で規則を検証する (DBPROP_JETOLEDB_VALIDATEONSET)|列データが設定されたとき、または変更がデータベースにコミットされたときに、Jet 検証ルールを評価するかどうかを示します。|
 
- 既定では、microsoft Jet の OLE DB プロバイダーは、Microsoft Jet データベースを読み取り/書き込みモードで開きます。 データベースを読み取り専用モードで開くには、ADO**接続**オブジェクトの[Mode](../../reference/ado-api/mode-property-ado.md)プロパティを**adModeRead**に設定します。
+ 既定では、microsoft Jet の OLE DB プロバイダーは、Microsoft Jet データベースを読み取り/書き込みモードで開きます。 データベースを読み取り専用モードで開くには、ADO **接続** オブジェクトの [Mode](../../reference/ado-api/mode-property-ado.md)プロパティを **adModeRead** に設定します。
 
 ## <a name="command-object-usage"></a>コマンドオブジェクトの使用法
  [コマンド](../../reference/ado-api/command-object-ado.md)オブジェクトのコマンドテキストは、MICROSOFT Jet SQL 言語を使用します。 コマンドテキストで、行を返すクエリ、アクションクエリ、およびテーブル名を指定できます。ただし、ストアドプロシージャはサポートされていないため、指定しないでください。
@@ -115,12 +115,12 @@ Microsoft.Jet.OLEDB.4.0
  Microsoft Jet データベースエンジンでは、動的カーソルはサポートされていません。 そのため、Microsoft Jet の OLE DB プロバイダーは、 **Adlockdynamic** カーソルの種類をサポートしていません。 動的カーソルが要求されると、プロバイダーはキーセットカーソルを返し、 [CursorType](../../reference/ado-api/cursortype-property-ado.md) プロパティをリセットして、返された [レコードセット](../../reference/ado-api/recordset-object-ado.md) の種類を示します。 さらに、更新可能な **レコードセット** が要求された場合 (**LockType** は **adlockoptimistic**、 **Adlockbatchオプティミスティック**、または **adlockoptimistic ペシミスティック**)、プロバイダーはキーセットカーソルも返し、 **CursorType** プロパティをリセットします。
 
 ## <a name="dynamic-properties"></a>動的プロパティ
- OLE DB Provider for Microsoft Jet は、開かれていない[接続](../../reference/ado-api/connection-object-ado.md)、[レコードセット](../../reference/ado-api/recordset-object-ado.md)、および[コマンド](../../reference/ado-api/command-object-ado.md)オブジェクトの**properties**コレクションに動的なプロパティをいくつか挿入します。
+ OLE DB Provider for Microsoft Jet は、開かれていない [接続](../../reference/ado-api/connection-object-ado.md)、[レコードセット](../../reference/ado-api/recordset-object-ado.md)、および [コマンド](../../reference/ado-api/command-object-ado.md)オブジェクトの **properties** コレクションに動的なプロパティをいくつか挿入します。
 
  次の表は、各動的プロパティの ADO と OLE DB 名のクロスインデックスです。 OLE DB プログラマーリファレンスでは、ADO プロパティ名を "Description" という用語で参照しています。 これらのプロパティの詳細については、OLE DB プログラマーリファレンスを参照してください。
 
 ## <a name="connection-dynamic-properties"></a>接続の動的プロパティ
- **接続**オブジェクトの**properties**コレクションには、次のプロパティが追加されます。
+ **接続** オブジェクトの **properties** コレクションには、次のプロパティが追加されます。
 
 |ADO プロパティ名|OLE DB プロパティ名|
 |-----------------------|--------------------------|
@@ -169,7 +169,7 @@ Microsoft.Jet.OLEDB.4.0
 |プロバイダーのフレンドリ名|DBPROP_PROVIDERFRIENDLYNAME|
 |プロバイダー名|DBPROP_PROVIDERFILENAME|
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|
-|読み取り専用データソース|DBPROP_DATASOURCEREADONLY|
+|データソースの Read-Only|DBPROP_DATASOURCEREADONLY|
 |コマンドでの行セットの変換|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |スキーマ用語|DBPROP_SCHEMATERM|
 |スキーマの使用法|DBPROP_SCHEMAUSAGE|
@@ -183,12 +183,12 @@ Microsoft.Jet.OLEDB.4.0
 |ウィンドウ ハンドル|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>レコードセットの動的プロパティ
- 次のプロパティが、**レコードセット**オブジェクトの**properties**コレクションに追加されます。
+ 次のプロパティが、**レコードセット** オブジェクトの **properties** コレクションに追加されます。
 
 |ADO プロパティ名|OLE DB プロパティ名|
 |-----------------------|--------------------------|
 |アクセス順序|DBPROP_ACCESSORDER|
-|追加専用の行セット|DBPROP_APPENDONLY|
+|Append-Only 行セット|DBPROP_APPENDONLY|
 |ブロッキングストレージオブジェクト|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |ブックマークの種類|DBPROP_BOOKMARKTYPE|
 |Bookmarkable|DBPROP_IROWSETLOCATE|
@@ -261,12 +261,12 @@ Microsoft.Jet.OLEDB.4.0
 |ブックマークを使用する|DBPROP_BOOKMARKS|
 
 ## <a name="command-dynamic-properties"></a>コマンドの動的プロパティ
- 次のプロパティは、 **Command**オブジェクトの**properties**コレクションに追加されます。
+ 次のプロパティは、 **Command** オブジェクトの **properties** コレクションに追加されます。
 
 |ADO プロパティ名|OLE DB プロパティ名|
 |-----------------------|--------------------------|
 |アクセス順序|DBPROP_ACCESSORDER|
-|追加専用の行セット|DBPROP_APPENDONLY|
+|Append-Only 行セット|DBPROP_APPENDONLY|
 |ブロッキングストレージオブジェクト|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |ブックマークの種類|DBPROP_BOOKMARKTYPE|
 |Bookmarkable|DBPROP_IROWSETLOCATE|

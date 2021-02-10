@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36ad54e1768b5164294d5de9767757ef3f376144
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 369d9ef5548a0ff30b08dc27c9df38b0f3c1fa1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991783"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028637"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>階層レコードセット内の行へのアクセス (例)
 次の例は、階層 [レコードセット](../../reference/ado-api/recordset-object-ado.md)内の行にアクセスするために必要な手順を示しています。
 
-1.  **Authors**テーブルと**Titleauthor**テーブルの**レコードセット**オブジェクトは、作成者 ID によって関連付けられます。
+1.  **Authors** テーブルと **Titleauthor** テーブルの **レコードセット** オブジェクトは、作成者 ID によって関連付けられます。
 
 2.  外側のループでは、各作成者の姓、州、および id が表示されます。
 
-3.  各行の追加された **レコードセット** は、 [Fields](../../reference/ado-api/fields-collection-ado.md) コレクションから取得され、 *rstTitleAuthor*に割り当てられます。
+3.  各行の追加された **レコードセット** は、 [Fields](../../reference/ado-api/fields-collection-ado.md) コレクションから取得され、 *rstTitleAuthor* に割り当てられます。
 
-4.  内側のループでは、追加された **レコードセット**の各行に4つのフィールドが表示されます。
+4.  内側のループでは、追加された **レコードセット** の各行に4つのフィールドが表示されます。
 
- [StayInSync](../../reference/ado-api/stayinsync-property.md)プロパティは、説明のために**false**に設定されています。これにより、外側のループの各反復でチャプターが明示的に変更されます。 コード例の効率を高めるために、手順 3. の割り当てを手順2の最初の行の前に移動すると、割り当てが1回だけ実行されるようになります。 次に、 [StayInSync](../../reference/ado-api/stayinsync-property.md)プロパティを**true**に設定します。これにより、 *rst*が新しい行に移動するたびに、 *rstTitleAuthor*が暗黙的に対応する章に自動的に変更されます。
+ [StayInSync](../../reference/ado-api/stayinsync-property.md)プロパティは、説明のために **false** に設定されています。これにより、外側のループの各反復でチャプターが明示的に変更されます。 コード例の効率を高めるために、手順 3. の割り当てを手順2の最初の行の前に移動すると、割り当てが1回だけ実行されるようになります。 次に、 [StayInSync](../../reference/ado-api/stayinsync-property.md)プロパティを **true** に設定します。これにより、 *rst* が新しい行に移動するたびに、 *rstTitleAuthor* が暗黙的に対応する章に自動的に変更されます。
 
 ## <a name="example"></a>例
 

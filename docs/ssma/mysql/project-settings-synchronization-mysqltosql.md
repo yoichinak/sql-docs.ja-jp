@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3ea89bcdf9b10fb50e74228a26bfcd5cead83aca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f778b2bd361fab5ac1210005076692c813bb4b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492385"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017312"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>プロジェクトの設定 (同期) (MySQLToSQL)
 同期 **プロジェクトの設定** を使用すると、MySQL データベースオブジェクトを SQL Server データベースオブジェクトと同期する方法を構成できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "88492385"
   
 ##### <a name="misc"></a>その他  
   
-##### <a name="attempts"></a>ログオン  
+##### <a name="attempts"></a>試行回数  
 SQL Server に読み込むオブジェクトの数に関する情報を提供します。 オブジェクトの SQL Server への読み込みは、通常、複数のパスで実行されます。 外部キーなど、最初のパスでの読み込みに失敗したオブジェクトは、次のパスで正常に読み込まれることがあります。  
   
 既定値は2です。  

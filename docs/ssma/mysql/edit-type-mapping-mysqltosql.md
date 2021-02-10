@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7dc968e4e9bd2d33c4a15de625f5abd12a3696a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1ddf264835cf0a9a008335787353d7a1051431f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492454"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016602"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>型のマッピングの編集 (MySQLToSQL)
 [ **型マッピングの編集** ] ダイアログボックスでは、転送元データベースオブジェクトと転送先データベースオブジェクトの間で型がどのようにマップされるかを指定できます。  
@@ -36,10 +36,10 @@ SQL Server データ型にマップするソースデータ型を選択します
 データ型が可変長の場合、[ **Sourcetype**] の下に次のフィールドが表示されます。  
   
 ##### <a name="from"></a>ソース  
-このマッピングの最小の長さを指定します。 たとえば、 **nchar**データ型の場合は、「10」と入力して、このマッピングが**nchar (10)** から始まる範囲になるように指定できます。  
+このマッピングの最小の長さを指定します。 たとえば、 **nchar** データ型の場合は、「10」と入力して、このマッピングが **nchar (10)** から始まる範囲になるように指定できます。  
   
 ##### <a name="to"></a>終了  
-このマッピングの最大長を指定します。 たとえば、 **nchar**データ型の場合は、「20」と入力すると、このマッピングが**nchar (20)** で終わる範囲に対して指定されます。  
+このマッピングの最大長を指定します。 たとえば、 **nchar** データ型の場合は、「20」と入力すると、このマッピングが **nchar (20)** で終わる範囲に対して指定されます。  
   
 ##### <a name="target-type"></a>変換後の型  
 変換元のデータ型のマップ先となる SQL Server データ型を選択します。 SSMA によってテーブルまたは SQL Server が作成されると、変換元のデータ型はこのデータ型に変更されます。  
@@ -47,5 +47,5 @@ SQL Server データ型にマップするソースデータ型を選択します
 データ型が可変長の場合、[ **対象の型**] の下に次のフィールドが表示されます。  
   
 ##### <a name="replace-with"></a>置換後の文字列  
-このマッピングの対象の長さを指定します。 たとえば、 **nvarchar**データ型の場合、「20」と入力すると、指定した変換元データ型を**nvarchar (20)** にマップするように指定できます。  
+このマッピングの対象の長さを指定します。 たとえば、 **nvarchar** データ型の場合、「20」と入力すると、指定した変換元データ型を **nvarchar (20)** にマップするように指定できます。  
   

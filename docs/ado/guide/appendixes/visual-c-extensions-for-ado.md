@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d1586800288d0a2d2984cf08e770f776c5ee3c6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 837ecdb45ead79e9e957a6d2381ccfaf1de6fb2c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991813"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028667"
 ---
 # <a name="visual-c-extensions-for-ado"></a>ADO 用の Visual C++ Extensions
-Visual C++ で ADO をプログラミングする場合は、「 [Ado プログラミングの Microsoft Visual C++](./visual-c-ado-programming.md)」で説明されているように、 **#import**ディレクティブを使用することをお勧めします。 ただし、以前のバージョンの ADO には、Visual C++ を使用した別のプログラミング方法が付属しています。 Visual C++ の拡張機能です。 このセクションでは、Visual C++ の拡張機能のコードを維持する必要があるユーザー向けに、この機能について説明しますが、新しい ADO コードは #**import**を使用して記述する必要があります
+Visual C++ で ADO をプログラミングする場合は、「 [Ado プログラミングの Microsoft Visual C++](./visual-c-ado-programming.md)」で説明されているように、 **#import** ディレクティブを使用することをお勧めします。 ただし、以前のバージョンの ADO には、Visual C++ を使用した別のプログラミング方法が付属しています。 Visual C++ の拡張機能です。 このセクションでは、Visual C++ の拡張機能のコードを維持する必要があるユーザー向けに、この機能について説明しますが、新しい ADO コードは #**import** を使用して記述する必要があります
 
  ADO を使用してデータを取得するときにプログラマが直面する最も面倒な Visual C++ ジョブの1つは、VARIANT データ型として返されたデータを C++ データ型に変換し、変換されたデータをクラスまたは構造体に格納することです。 複雑になるだけでなく、バリアントデータ型を使用して C++ データを取得すると、パフォーマンスが低下します。
 

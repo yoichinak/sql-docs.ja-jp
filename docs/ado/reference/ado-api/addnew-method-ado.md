@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4aedf124f13374c5756519b86a60c1164c0df046
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1dd85acf2d16ad998294bae5ee6490d227e8ede2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161739"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031454"
 ---
 # <a name="addnew-method-ado"></a>AddNew メソッド (ADO)
 更新可能な [レコードセット](./recordset-object-ado.md) オブジェクトの新しいレコードを作成します。  
@@ -44,7 +44,7 @@ recordset.AddNew FieldList, Values
  *値*  
  任意。 単一の値、または新しいレコードのフィールドの値の配列。 *Fieldlist* が配列の場合、*値* も同じメンバー数の配列である必要があります。それ以外の場合は、エラーが発生します。 フィールド名の順序は、各配列のフィールド値の順序と一致している必要があります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **AddNew** メソッドを使用して、新しいレコードを作成して初期化します。 現在の **レコードセット** オブジェクトにレコードを追加できるかどうかを確認するには、 **Adaddnew** で [サポート](./supports-method.md)メソッド ([カーソルオプションの列挙](./cursoroptionenum.md)値) を使用します。  
   
  **AddNew** メソッドを呼び出すと、新しいレコードが現在のレコードになり、 [Update](./update-method.md)メソッドを呼び出した後も最新の状態が維持されます。 新しいレコードは **レコードセット** に追加されるため、更新後の **MoveNext** への呼び出しは、 **レコードセット** の末尾を越えて移動され、 **EOF** が True になります。 **Recordset** オブジェクトがブックマークをサポートしていない場合、別のレコードに移動すると、新しいレコードにアクセスできなくなることがあります。 カーソルの種類によっては、 [Requery](./requery-method.md) メソッドを呼び出して、新しいレコードにアクセスできるようにすることが必要になる場合があります。  

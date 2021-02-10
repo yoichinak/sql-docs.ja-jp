@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd7b34f35ac0fcc747cb30fb35537a33cc5cd4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4ac7f25709cf91e03f9ad8b15f9fb0026ee5e98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471423"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015392"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>サポートされていない Visual FoxPro コマンドと関数 (Visual FoxPro ODBC ドライバー)
 次の表に、Visual foxpro ODBC ドライバーではサポートされていないが、Microsoft® Visual FoxPro®でサポートされている FoxPro コマンドと関数の一覧を示します。  
@@ -33,29 +33,29 @@ ms.locfileid: "88471423"
 
 :::row:::
     :::column:::
-        !コマンド (RUN &#124; を参照してください。メニュー  
-        #<a name="defineundef"></a>定義... #UNDEF  
-        #<a name="ifendifpreprocessordirective"></a>IF #ENDIF プリプロセッサディレクティブ  
-        #<a name="ifdef124ifndef"></a>IFDEF &#124; #IFNDEF  
-        #<a name="includepreprocessordirective"></a>プリプロセッサディレクティブを含める  
+        ! コマンド (RUN &#124; を参照してください。 メニュー  
+        #<a name="define--undef"></a>定義... #UNDEF  
+        #<a name="if--endif-preprocessor-directive"></a>IF #ENDIF プリプロセッサディレクティブ  
+        #<a name="ifdef-124-ifndef"></a>IFDEF &#124; #IFNDEF  
+        #<a name="include-preprocessor-directive"></a>プリプロセッサディレクティブを含める  
         :: スコープ解決演算子  
-        ?&#124; しますか?コマンド  
+        ? &#124; しますか? コマンド  
     :::column-end:::
     :::column:::
-        ???コマンド  
-        @ ...BOX コマンド  
-        @ ...クラスコマンド  
-        @ ...CLEAR コマンド  
-        @ ...エディットボックスの編集コマンド  
-        @ ...FILL コマンド  
-        @ ...取得  
+        ??? コマンド  
+        @ ...BOX コマンド  
+        @ ...クラスコマンド  
+        @ ...CLEAR コマンド  
+        @ ...エディットボックスの編集コマンド  
+        @ ...FILL コマンド  
+        @ ...取得  
     :::column-end:::
     :::column:::
-        @ ...メニューコマンド  
-        @ ...プロンプトコマンド  
-        @ ...コマンドを言います。  
-        @ ...SCROLL コマンド  
-        @ ...TO コマンド  
+        @ ...メニューコマンド  
+        @ ...プロンプトコマンド  
+        @ ...コマンドを言います。  
+        @ ...SCROLL コマンド  
+        @ ...TO コマンド  
         \ &#124; \\ \ コマンド  
     :::column-end:::
 :::row-end:::
@@ -461,7 +461,7 @@ NUMLOCK () 関数
         _PPITCH システムメモリ変数  
         _PQUALITY システムメモリ変数  
         _PRETEXT システムメモリ変数  
-        PRINTJOB ...ENDPRINTJOB コマンド  
+        PRINTJOB ...ENDPRINTJOB コマンド  
     :::column-end:::
     :::column:::
         PRINTSTATUS () 関数  
@@ -527,7 +527,7 @@ QUIT コマンド
         _RMARGIN システムメモリ変数  
         RMDIR コマンド  
         ROW () 関数  
-        &#124; を実行します。コマンド  
+        &#124; を実行します。 コマンド  
         RUNSCRIPT コマンド  
     :::column-end:::
 :::row-end:::

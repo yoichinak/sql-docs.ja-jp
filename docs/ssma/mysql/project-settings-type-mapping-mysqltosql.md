@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a6f4bc99caceeb7011c932c86e636304941c459c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2f3e077a93d90afccf05023e41f8e5f2ea6fabc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418488"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017322"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>プロジェクトの設定 (型のマッピング) (MySQLToSQL)
 型マッピングプロジェクトの設定を使用すると、SSMA プロジェクトの既定の型マッピングを設定できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "88418488"
 ##### <a name="add"></a>追加  
 [マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-##### <a name="edit"></a>編集  
+##### <a name="edit"></a>[編集]  
 [マッピング] ボックスの一覧で選択したデータ型を編集する場合にクリックします。  
   
 ##### <a name="remove"></a>[削除]  
@@ -69,7 +69,7 @@ ms.locfileid: "88418488"
 |blob [0 ..1]|varbinary [1]|  
 |blob [2.. 8000]|varbinary [*]|  
 |blob [8001.. *]|varbinary(max)|  
-|[bool]|bit|  
+|bool|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
 |char byte|バイナリ [1]|  
@@ -197,7 +197,7 @@ ms.locfileid: "88418488"
 ##### <a name="add"></a>追加  
 [マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-##### <a name="edit"></a>編集  
+##### <a name="edit"></a>[編集]  
 [マッピング] ボックスの一覧でデータ型を編集する場合にクリックします。  
   
 ##### <a name="remove"></a>[削除]  

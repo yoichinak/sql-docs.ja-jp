@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6b7f9a9a69fd1f5ac685550fb91ab93ad2220f49
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1b8e266fa67f0f6eb7ef46a9bdd7bd62d09180b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038263"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017638"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>SQL Server への変換されたデータベース オブジェクトの読み込み (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) データベースオブジェクトをまたは SQL Azure に変換した後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、結果として得られるデータベースオブジェクトをまたは SQL Azure に読み込むことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA を使用してオブジェクトを作成するか、オブジェクトのスクリプトを作成して自分でスクリプトを実行することができます。 また、SSMA では、または Azure SQL Database の実際の内容でターゲットメタデータを更新することもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -28,7 +28,7 @@ Sybase Adaptive Server Enterprise (ASE) データベースオブジェクトを�
 [!INCLUDE[tsql](../../includes/tsql-md.md)]または SQL Azure でオブジェクトの作成に使用されるを変更する場合、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure でオブジェクトを作成するタイミングと方法をより細かく制御する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ssma を使用してスクリプトを作成 [!INCLUDE[tsql](../../includes/tsql-md.md)] します。 これらのスクリプトを変更し、各オブジェクトを個別に作成して、または SQL Azure エージェントを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] それらのオブジェクトの作成をスケジュールすることもできます。  
   
 ## <a name="using-ssma-to-load-objects-into-sql-server-or-sql-azure"></a>SSMA を使用して SQL Server または SQL Azure にオブジェクトを読み込む  
-SSMA を使用してオブジェクトを作成または Azure SQL Database するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 手順に示すように、または SQL Azure メタデータエクスプローラーでオブジェクトを選択し、オブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure と同期します。 既定では、オブジェクトが既にまたは SQL Azure に存在する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma メタデータの一部のローカルな変更や、それらのオブジェクトの定義に対する更新がある場合、SSMA はまたは SQL Azure のオブジェクト定義を変更し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定の動作を変更するには、 **プロジェクトの設定**を編集します。  
+SSMA を使用してオブジェクトを作成または Azure SQL Database するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 手順に示すように、または SQL Azure メタデータエクスプローラーでオブジェクトを選択し、オブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure と同期します。 既定では、オブジェクトが既にまたは SQL Azure に存在する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma メタデータの一部のローカルな変更や、それらのオブジェクトの定義に対する更新がある場合、SSMA はまたは SQL Azure のオブジェクト定義を変更し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定の動作を変更するには、 **プロジェクトの設定** を編集します。  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ASE データベースから変換されなかった既存のオブジェクトまたは Azure SQL Database オブジェクトを選択できます。 ただし、これらのオブジェクトは SSMA によって再作成または変更されることはありません。  
@@ -102,7 +102,7 @@ SSMA を使用してオブジェクトを作成または Azure SQL Database す�
   
 クエリエディターを使用してスクリプトを実行する方法の詳細については、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] オンラインブックの「クエリ」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-コマンドラインから **sqlcmd** ユーティリティおよびエージェントからスクリプトを実行することもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **Sqlcmd**の詳細については、オンラインブックの「sqlcmd ユーティリティ」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 エージェントの詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オンラインブックの「管理タスク ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント) の自動化」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+コマンドラインから **sqlcmd** ユーティリティおよびエージェントからスクリプトを実行することもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **Sqlcmd** の詳細については、オンラインブックの「sqlcmd ユーティリティ」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 エージェントの詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オンラインブックの「管理タスク ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント) の自動化」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="securing-objects-in-sql-server"></a>SQL Server でのオブジェクトのセキュリティ保護  
 変換されたデータベースオブジェクトをに読み込むと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、それらのオブジェクトに対する権限を許可および拒否できます。 これは、データをに移行する前に行うことをお勧めし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 でオブジェクトをセキュリティで保護する方法の詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オンラインブックの「データベースおよびデータベースアプリケーションのセキュリティに関する考慮事項」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

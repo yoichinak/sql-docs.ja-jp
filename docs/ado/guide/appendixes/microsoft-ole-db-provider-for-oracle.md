@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8da5e3d5de1ac0ee3f3dfa1b0f989679af3cd1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 04865a03bdb352d36e1ac3b445c7c0b4eb7c3da2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991013"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029296"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle の概要
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ ms.locfileid: "88991013"
  Microsoft OLE DB Provider for Oracle により、ADO は Oracle データベースにアクセスできます。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- このプロバイダーに接続するには、 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)プロパティの*provider*引数を次のように設定します。
+ このプロバイダーに接続するには、 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)プロパティの *provider* 引数を次のように設定します。
 
 ```vb
 MSDAORA
@@ -58,8 +58,8 @@ MSDAORA
 > [!NOTE]
 >  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。
 
-## <a name="provider-specific-connection-parameters"></a>プロバイダー固有の接続パラメーター
- プロバイダーは、ADO によって定義されているものに加えて、いくつかのプロバイダー固有の接続パラメーターをサポートしています。 ADO の接続プロパティと同様に、これらのプロバイダー固有のプロパティは、[接続](../../reference/ado-api/connection-object-ado.md)の[properties](../../reference/ado-api/properties-collection-ado.md)コレクションまたは**ConnectionString**の一部として設定できます。
+## <a name="provider-specific-connection-parameters"></a>Provider-Specific 接続パラメーター
+ プロバイダーは、ADO によって定義されているものに加えて、いくつかのプロバイダー固有の接続パラメーターをサポートしています。 ADO の接続プロパティと同様に、これらのプロバイダー固有のプロパティは、[接続](../../reference/ado-api/connection-object-ado.md)の [properties](../../reference/ado-api/properties-collection-ado.md)コレクションまたは **ConnectionString** の一部として設定できます。
 
  これらのパラメーターの詳細については [OLE DB プログラマーリファレンス](/previous-versions/windows/desktop/ms713643(v=vs.85))」を参照してください。 [ADO 動的プロパティインデックス](../../reference/ado-api/ado-dynamic-property-index.md)は、これらのパラメーター名と、対応する OLE DB プロパティとの間の相互参照を提供します。
 

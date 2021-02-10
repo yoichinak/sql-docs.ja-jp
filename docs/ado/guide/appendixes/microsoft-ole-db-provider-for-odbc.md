@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5a6cfdda6072f8ed51d55569ed68b113a4148642
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991023"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029266"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマーにとって理想的な世界は、ADO がデータソースを直接呼び出すことができるように、すべてのデータソースが OLE DB インターフェイスを公開することです。 OLE DB インターフェイスを実装しているデータベースベンダーはますます増えていますが、一部のデータソースはまだこのように公開されていません。 ただし、現在使用されている DBMS システムのほとんどは、ODBC を使用してアクセスできます。
@@ -33,7 +33,7 @@ ADO または RDS プログラマーにとって理想的な世界は、ADO が�
  これは ADO の既定のプロバイダーであり、プロバイダーに依存するすべての ADO プロパティとメソッドがサポートされています。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- このプロバイダーに接続するには、 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)プロパティの**provider =** 引数をに設定します。
+ このプロバイダーに接続するには、 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)プロパティの **provider =** 引数をに設定します。
 
 ```
 MSDASQL
@@ -82,16 +82,16 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
 ## <a name="remarks"></a>解説
- **DSN**または**FileDSN**を使用する場合は、Windows のコントロールパネルで ODBC データソースアドミニストレーターを使用して定義する必要があります。 Microsoft Windows 2000 では、ODBC 管理者は [管理ツール] の下にあります。 以前のバージョンの Windows では、ODBC 管理者アイコンには、 **32 ビット odbc** または **odbc**のみという名前が付けられていました。
+ **DSN** または **FileDSN** を使用する場合は、Windows のコントロールパネルで ODBC データソースアドミニストレーターを使用して定義する必要があります。 Microsoft Windows 2000 では、ODBC 管理者は [管理ツール] の下にあります。 以前のバージョンの Windows では、ODBC 管理者アイコンには、 **32 ビット odbc** または **odbc** のみという名前が付けられていました。
 
- **DSN**を設定する代わりに、ODBC ドライバー (**driver =**) を指定することもできます。たとえば、"SQL Server;" のようにサーバー名 (**server =**) を指定できます。データベース名 (**データベース =**) を指定します。
+ **DSN** を設定する代わりに、ODBC ドライバー (**driver =**) を指定することもできます。たとえば、"SQL Server;" のようにサーバー名 (**server =**) を指定できます。データベース名 (**データベース =**) を指定します。
 
  また、ODBC 固有のパラメーターのユーザーアカウント名 (**UID =**) と、ユーザーアカウントのパスワード (**PWD =**) を指定することも、ADO によって定義された標準の *ユーザー* パラメーターと *パスワード* パラメーターを指定することもできます。
 
- **Dsn**定義には既にデータベースが指定されていますが、 **dsn**に加えて、別のデータベースに接続するための*データベース*パラメーター*を指定する*こともできます。 **DSN**を使用する場合は *、* 常に*database*パラメーターを含めることをお勧めします。 これにより、 **DSN** 定義を最後に確認した後に、別のユーザーが既定のデータベースパラメーターを変更した場合に、正しいデータベースに接続できるようになります。
+ **Dsn** 定義には既にデータベースが指定されていますが、 **dsn** に加えて、別のデータベースに接続するための *データベース* パラメーター *を指定する* こともできます。 **DSN** を使用する場合は *、* 常に *database* パラメーターを含めることをお勧めします。 これにより、 **DSN** 定義を最後に確認した後に、別のユーザーが既定のデータベースパラメーターを変更した場合に、正しいデータベースに接続できるようになります。
 
-## <a name="provider-specific-connection-properties"></a>プロバイダー固有の接続プロパティ
- ODBC の OLE DB プロバイダーは、 **Connection**オブジェクトの[properties](../../reference/ado-api/properties-collection-ado.md)コレクションにいくつかのプロパティを追加します。 次の表は、これらのプロパティをかっこで囲んで、対応する OLE DB プロパティ名を示しています。
+## <a name="provider-specific-connection-properties"></a>接続プロパティの Provider-Specific
+ ODBC の OLE DB プロバイダーは、 **Connection** オブジェクトの [properties](../../reference/ado-api/properties-collection-ado.md)コレクションにいくつかのプロパティを追加します。 次の表は、これらのプロパティをかっこで囲んで、対応する OLE DB プロパティ名を示しています。
 
 |プロパティ名|説明|
 |-------------------|-----------------|
@@ -117,24 +117,24 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |時刻/日付関数 (KAGPROP_TIMEDATEFUNCTIONS)|ODBC ドライバーでサポートされている時刻と日付の関数を示します。 このビットマスクで使用される関数名と関連する値の一覧については、ODBC のドキュメントの「 [付録 E: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)」を参照してください。|
 |SQL 文法のサポート (KAGPROP_ODBCSQLCONFORMANCE)|ODBC ドライバーがサポートする SQL 文法を示します。|
 
-## <a name="provider-specific-recordset-and-command-properties"></a>プロバイダー固有のレコードセットとコマンドのプロパティ
- OLE DB provider for ODBC では、**レコードセット**オブジェクトと**コマンド**オブジェクトの**properties**コレクションにいくつかのプロパティが追加されます。 次の表は、これらのプロパティをかっこで囲んで、対応する OLE DB プロパティ名を示しています。
+## <a name="provider-specific-recordset-and-command-properties"></a>レコードセットとコマンドのプロパティの Provider-Specific
+ OLE DB provider for ODBC では、**レコードセット** オブジェクトと **コマンド** オブジェクトの **properties** コレクションにいくつかのプロパティが追加されます。 次の表は、これらのプロパティをかっこで囲んで、対応する OLE DB プロパティ名を示しています。
 
 |プロパティ名|説明|
 |-------------------|-----------------|
 |クエリベースの更新/削除/挿入 (KAGPROP_QUERYBASEDUPDATES)|SQL クエリを使用して、更新、削除、および挿入を実行できるかどうかを示します。|
 |ODBC 同時実行の種類 (KAGPROP_CONCURRENCY)|2人のユーザーがデータソースから同じデータに同時にアクセスしようとした場合に発生する可能性のある問題を軽減するために使用される方法を示します。|
-|順方向専用カーソルの BLOB アクセシビリティ (KAGPROP_BLOBSONFOCURSOR)|順方向専用カーソルを使用しているときに、BLOB **フィールド** にアクセスできるかどうかを示します。|
+|Forward-Only カーソルの BLOB アクセシビリティ (KAGPROP_BLOBSONFOCURSOR)|順方向専用カーソルを使用しているときに、BLOB **フィールド** にアクセスできるかどうかを示します。|
 |QBU WHERE 句 (KAGPROP_INCLUDENONEXACT) に SQL_FLOAT、SQL_DOUBLE、および SQL_REAL を含める|SQL_FLOAT、SQL_DOUBLE、および SQL_REAL 値を QBU WHERE 句に含めることができるかどうかを示します。|
 |挿入後の最後の行の位置 (KAGPROP_POSITIONONNEWROW)|新しいレコードがテーブルに挿入された後、テーブルの最後の行が現在の行になることを示します。|
-|IRowsetChangeExtInfo (KAGPROP_IROWSETCHANGEEXTINFO)|**IRowsetChange**インターフェイスが拡張情報サポートを提供するかどうかを示します。|
-|ODBC カーソルの種類 (KAGPROP_CURSOR)|**レコードセット**によって使用されるカーソルの種類を示します。|
+|IRowsetChangeExtInfo (KAGPROP_IROWSETCHANGEEXTINFO)|**IRowsetChange** インターフェイスが拡張情報サポートを提供するかどうかを示します。|
+|ODBC カーソルの種類 (KAGPROP_CURSOR)|**レコードセット** によって使用されるカーソルの種類を示します。|
 |マーシャリング可能な行セットを生成する (KAGPROP_MARSHALLABLE)|ODBC ドライバーがマーシャリング可能なレコードセットを生成することを示します。|
 
 ## <a name="command-text"></a>コマンド テキスト
  [Command](../../reference/ado-api/command-object-ado.md)オブジェクトの使用方法は、データソースと、それが受け入れるクエリまたはコマンドステートメントの種類によって大きく異なります。
 
- ODBC には、ストアドプロシージャを呼び出すための特定の構文が用意されています。 **Command**オブジェクトの[commandtext](../../reference/ado-api/commandtext-property-ado.md)プロパティでは、 [Connection](../../reference/ado-api/connection-object-ado.md)オブジェクトの**Execute**メソッドの*commandtext*引数、または[Recordset](../../reference/ado-api/recordset-object-ado.md)オブジェクトの**Open**メソッドに対する*Source*引数は、次の構文で文字列を渡します。
+ ODBC には、ストアドプロシージャを呼び出すための特定の構文が用意されています。 **Command** オブジェクトの [commandtext](../../reference/ado-api/commandtext-property-ado.md)プロパティでは、 [Connection](../../reference/ado-api/connection-object-ado.md)オブジェクトの **Execute** メソッドの *commandtext* 引数、または [Recordset](../../reference/ado-api/recordset-object-ado.md)オブジェクトの **Open** メソッドに対する *Source* 引数は、次の構文で文字列を渡します。
 
 ```
 "{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
@@ -169,7 +169,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="recordset-behavior"></a>レコードセットの動作
  次の表は、このプロバイダーで開かれた **レコードセット** オブジェクトで使用できる標準の ADO メソッドとプロパティを示しています。
 
- プロバイダー構成の**レコードセット**の動作の詳細については、[サポート](../../reference/ado-api/supports-method.md)メソッドを実行し、**レコードセット**の**properties**コレクションを列挙して、プロバイダー固有の動的プロパティが存在するかどうかを判断します。
+ プロバイダー構成の **レコードセット** の動作の詳細については、[サポート](../../reference/ado-api/supports-method.md)メソッドを実行し、**レコードセット** の **properties** コレクションを列挙して、プロバイダー固有の動的プロパティが存在するかどうかを判断します。
 
  標準の ADO **レコードセット** プロパティの可用性:
 
@@ -192,14 +192,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageSize](../../reference/ado-api/pagesize-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|読み取り/書き込み|利用不可|読み取り専用|読み取り専用|
 |[ソース](../../reference/ado-api/source-property-ado-recordset.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
-|[State](../../reference/ado-api/state-property-ado.md)|読み取り専用|読み取り専用|読み取り専用|読み取り専用|
+|[状態](../../reference/ado-api/state-property-ado.md)|読み取り専用|読み取り専用|読み取り専用|読み取り専用|
 |[状態](../../reference/ado-api/status-property-ado-recordset.md)|読み取り専用|読み取り専用|読み取り専用|読み取り専用|
 
  [AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)プロパティと[AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md)プロパティは、MICROSOFT OLE DB Provider for ODBC のバージョン1.0 で ADO が使用されている場合は書き込み専用です。
 
  標準の ADO **レコードセット** メソッドの可用性:
 
-|方法|ForwardOnly|動的|Keyset|静的|
+|メソッド|ForwardOnly|動的|Keyset|静的|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../reference/ado-api/addnew-method-ado.md)|はい|はい|はい|はい|
 |[キャンセル](../../reference/ado-api/cancel-method-ado.md)|はい|はい|はい|はい|
@@ -225,12 +225,12 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  * Microsoft Access データベースではサポートされていません。
 
 ## <a name="dynamic-properties"></a>動的プロパティ
- Microsoft OLE DB Provider for ODBC では、開かれていない[接続](../../reference/ado-api/connection-object-ado.md)、[レコードセット](../../reference/ado-api/recordset-object-ado.md)、および[コマンド](../../reference/ado-api/command-object-ado.md)オブジェクトの**properties**コレクションに動的なプロパティがいくつか挿入されます。
+ Microsoft OLE DB Provider for ODBC では、開かれていない [接続](../../reference/ado-api/connection-object-ado.md)、[レコードセット](../../reference/ado-api/recordset-object-ado.md)、および [コマンド](../../reference/ado-api/command-object-ado.md)オブジェクトの **properties** コレクションに動的なプロパティがいくつか挿入されます。
 
  次の表は、各動的プロパティの ADO と OLE DB 名のクロスインデックスです。 OLE DB プログラマーリファレンスでは、ADO プロパティ名を "Description" という用語で参照しています。 これらのプロパティの詳細については、OLE DB プログラマーリファレンスを参照してください。 インデックスで OLE DB プロパティ名を検索するか、「 [付録 C: OLE DB のプロパティ](/previous-versions/windows/desktop/ms723130(v=vs.85))」を参照してください。
 
 ## <a name="connection-dynamic-properties"></a>接続の動的プロパティ
- **接続**オブジェクトの**properties**コレクションには、次のプロパティが追加されます。
+ **接続** オブジェクトの **properties** コレクションには、次のプロパティが追加されます。
 
 |ADO プロパティ名|OLE DB プロパティ名|
 |-----------------------|--------------------------|
@@ -285,7 +285,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |プロバイダーのフレンドリ名|DBPROP_PROVIDERFRIENDLYNAME|
 |プロバイダー名|DBPROP_PROVIDERFILENAME|
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|
-|読み取り専用データソース|DBPROP_DATASOURCEREADONLY|
+|データソースの Read-Only|DBPROP_DATASOURCEREADONLY|
 |コマンドでの行セットの変換|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |スキーマ用語|DBPROP_SCHEMATERM|
 |スキーマの使用法|DBPROP_SCHEMAUSAGE|
@@ -299,7 +299,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |ウィンドウ ハンドル|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>レコードセットの動的プロパティ
- **レコードセット**オブジェクトの**properties**コレクションには、次のプロパティが追加されます。
+ **レコードセット** オブジェクトの **properties** コレクションには、次のプロパティが追加されます。
 
 |ADO プロパティ名|OLE DB プロパティ名|
 |-----------------------|--------------------------|

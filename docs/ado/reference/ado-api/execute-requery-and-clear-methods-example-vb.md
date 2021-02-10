@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa5a83c79deb2d9df42e81869476ae856bac322a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 37736aa5c6b2d71d48a2a28aca6f53e6ef021e83
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167427"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024967"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Execute、Requery、および Clear メソッドの例 (VB)
 この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の **Execute** メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md) メソッドを使用して [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md) メソッドを使用して [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションの内容をクリアします。 (**エラー** コレクションには、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティの **Connection** オブジェクトを使用してアクセスします)。この手順を実行するには、ExecuteCommand および PrintOutput プロシージャが必要です。  

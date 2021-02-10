@@ -11,12 +11,12 @@ author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7362bc8069291d2e7d99399180cc147a38217d93
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 09d334d7cfcc313cd36d3b59a6b47c64d441f3ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951247"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017072"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Database Experimentation Assistant の概要
 
@@ -32,7 +32,7 @@ Database Experimentation Assistant (DEA) は SQL Server アップグレードの
 
 ## <a name="get-dea"></a>DEA を取得する
 
-DEA をインストールするには、最新バージョンのツールを[ダウンロード](https://www.microsoft.com/download/details.aspx?id=54090)します。 次に、 **DatabaseExperimentationAssistant.exe**ファイルを実行します。
+DEA をインストールするには、最新バージョンのツールを [ダウンロード](https://www.microsoft.com/download/details.aspx?id=54090) します。 次に、 **DatabaseExperimentationAssistant.exe** ファイルを実行します。
 
 ## <a name="solution-architecture-for-comparing-workloads"></a>ワークロードを比較するためのソリューションアーキテクチャ
 
@@ -50,7 +50,7 @@ DEA を実行するための前提条件を次に示します。
 
 ## <a name="configure-dea"></a>DEA の構成
 
-前提条件となる環境アーキテクチャでは、DEA を*分散再生コントローラーと同じコンピューターに*インストールすることをお勧めします。 これにより、コンピューター間の呼び出しが回避され、構成が簡単になります。
+前提条件となる環境アーキテクチャでは、DEA を *分散再生コントローラーと同じコンピューターに* インストールすることをお勧めします。 これにより、コンピューター間の呼び出しが回避され、構成が簡単になります。
 
 ### <a name="required-configuration-for-workload-comparison-using-dea"></a>DEA を使用したワークロード比較のために必要な構成
 
@@ -65,7 +65,7 @@ DEA は、Windows 認証を使用してデータベースサーバーに接続�
 
 また、ソースデータベースサーバーを実行しているサービスアカウントには、トレースフォルダーパスへの書き込みアクセス権が必要です。
 
-詳細については、「[トレースキャプチャに関してよく寄せられる質問](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)」を参照してください。
+詳細については、「 [トレースキャプチャに関してよく寄せられる質問](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)」を参照してください。
 
 **再生構成の要件**
 
@@ -80,7 +80,7 @@ DEA は、Windows 認証を使用してデータベースサーバーに接続�
 - 分散再生クライアントを実行しているサービスアカウントは、Windows 認証を使用してターゲットデータベースサーバーに接続できます。
 - 分散再生コントローラーで受信した要求に対して TCP ポートが開かれています。 DEA は、COM インターフェイスを使用して、分散再生コントローラーと通信します。
 
-詳細については、「[トレースの再生に関してよく寄せ](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)られる質問」を参照してください。
+詳細については、「 [トレースの再生に関してよく寄せ](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)られる質問」を参照してください。
 
 **分析の構成要件**
 
@@ -89,7 +89,7 @@ DEA は、Windows 認証を使用してデータベースサーバーに接続�
 - では、Windows 認証を使用して分析データベースサーバーに接続できます。
 - には、ソースデータベースサーバーに対する sysadmin 権限があります。
 
-詳細については、「[分析レポートに関してよく寄せ](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)られる質問」を参照してください。
+詳細については、「 [分析レポートに関してよく寄せ](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)られる質問」を参照してください。
 
 ## <a name="set-up-telemetry"></a>テレメトリの設定
 
@@ -99,19 +99,19 @@ DEA にはインターネット対応の機能があり、製品のエクスペ�
 
 - **Traceevent**: アプリケーションの使用状況イベント (たとえば、"トリガーされたキャプチャ停止")。
 - **例外**: アプリケーションの使用中に例外がスローされました。
-- **DiagnosticEvent**: 問題が発生した場合の診断を支援するイベントログ (Microsoft に送信さ*れません*)。
+- **DiagnosticEvent**: 問題が発生した場合の診断を支援するイベントログ (Microsoft に送信さ *れません* )。
 - **FeedbackEvent**: アプリケーションを通じて送信されるユーザーフィードバック。
 
 テレメトリデータの収集と送信は任意です。 収集されるイベントと収集されるイベントを指定するには、次の手順を実行します。
 
 1. DEA がインストールされている場所 (たとえば、C: \\ Program Files (x86) \\ Microsoft Corporation Database Experimentation Assistant) に移動し \\ ます。
-2. 必要に応じてシナリオに対処するには、 **DEA.exe.config** (アプリケーションの場合) および**DEACmd.exe.config** (CLI の場合) を開いて変更します。
-    - イベントの種類の収集を停止するには、*イベント*の値 ( **traceevent**など) を**false**に設定します。 イベントの収集を再開するには、値を**true**に設定します。
-    - イベントのローカルコピーの保存を停止するには、 **TraceLoggerEnabled**の値を**false**に設定します。 ローカルコピーの保存を再び開始するには、値を**true**に設定します。
-    - Microsoft へのイベントの送信を停止するには、 **AppInsightsLoggerEnabled**の値を**false**に設定します。 再度 Microsoft へのイベント送信を開始するには、値を**true**に設定します。
+2. 必要に応じてシナリオに対処するには、 **DEA.exe.config** (アプリケーションの場合) および **DEACmd.exe.config** (CLI の場合) を開いて変更します。
+    - イベントの種類の収集を停止するには、 *イベント* の値 ( **traceevent** など) を **false** に設定します。 イベントの収集を再開するには、値を **true** に設定します。
+    - イベントのローカルコピーの保存を停止するには、 **TraceLoggerEnabled** の値を **false** に設定します。 ローカルコピーの保存を再び開始するには、値を **true** に設定します。
+    - Microsoft へのイベントの送信を停止するには、 **AppInsightsLoggerEnabled** の値を **false** に設定します。 再度 Microsoft へのイベント送信を開始するには、値を **true** に設定します。
 
-DEA は、Microsoft の[プライバシー](https://aka.ms/dea-privacy)に関する声明によって管理されます。
+DEA は、Microsoft の [プライバシー](https://aka.ms/dea-privacy)に関する声明によって管理されます。
 
 ## <a name="see-also"></a>関連項目
 
-- この記事では、2つの環境におけるワークロードの比較に関連するプロセスについて説明します。[ワークロード比較プロセスの概要](database-experimentation-assistant-get-started.md)について説明します。
+- この記事では、2つの環境におけるワークロードの比較に関連するプロセスについて説明します。 [ワークロード比較プロセスの概要](database-experimentation-assistant-get-started.md)について説明します。

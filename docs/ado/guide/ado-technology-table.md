@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cd2f1da937b663b1cc32939c0fb0de17dad8fb7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d067e7bb1adbbb19d08cb87c9ccf4f69004bff55
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991213"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030510"
 ---
 # <a name="products-and-technologies-table"></a>製品とテクノロジの表
 次の表は、ADO プログラマーズガイドで説明されている Microsoft の製品、ツール、およびテクノロジを示しています。 このガイドでは、可能な限りリンクを関連するトピックに掲載しています。
 
-|Microsoft の製品またはテクノロジ|参照|
+|Microsoft の製品またはテクノロジ|関連項目|
 |-------------------------------------|----------------|
 |Access/Jet|[レコードセットの操作](./data/working-with-recordsets.md)<br /><br /> [ADOX の基礎](./extensions/adox-fundamentals.md)<br /><br /> [Microsoft OLE DB Provider for Microsoft Jet](./appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Active Directory サービス インターフェイス (ADSI)|[Microsoft OLE DB Provider for Microsoft Active Directory サービス](./appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
@@ -41,6 +41,6 @@ ms.locfileid: "88991213"
 |[VBScript]|[他の言語でのエラーの処理](./data/handling-errors-in-other-languages.md)<br /><br /> [Visual Basic for Applications 関数](./data/visual-basic-for-applications-functions.md)<br /><br /> [コマンド ストリーム](./data/command-streams.md)<br /><br /> [リモート データ アクセスのソリューション](./remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [RDS のシナリオ](./remote-data-service/rds-scenario.md)<br /><br /> [RDS のチュートリアル (VBScript)](./remote-data-service/rds-tutorial-vbscript.md)<br /><br /> [VBScript での ADO プログラミング](./appendixes/vbscript-ado-programming.md)<br /><br /> [Microsoft Visual Basic Scripting Edition の ADO コード例](../reference/ado-api/ado-code-examples-vbscript.md)|
 |Visual Basic|[エラー](./data/errors-ado.md)<br /><br /> [ADO エラー](./data/ado-errors.md)<br /><br /> [言語による ADO イベントのインスタンス化](./data/ado-event-instantiation-by-language.md)<br /><br /> [Visual Basic for Applications 関数](./data/visual-basic-for-applications-functions.md)<br /><br /> [RDS チュートリアル](./remote-data-service/rds-tutorial.md)<br /><br /> [Microsoft Visual Basic で ADO を使用する](./appendixes/using-ado-with-microsoft-visual-basic.md)<br /><br /> [Microsoft Visual Basic の ADO コード例](../reference/ado-api/ado-code-examples-in-visual-basic.md)|
 |Visual C++|[他の言語でのエラーの処理](./data/handling-errors-in-other-languages.md)<br /><br /> [言語による ADO イベントのインスタンス化](./data/ado-event-instantiation-by-language.md)<br /><br /> [Microsoft Visual C++ での ADO の使用](./appendixes/using-ado-with-microsoft-visual-c.md)<br /><br /> [Microsoft Visual C++ の ADO コード例](../reference/ado-api/ado-code-examples-in-visual-c.md)|
-|Visual Studio|[付録 D: ADO のサンプル](./appendixes/appendix-d-ado-samples.md)|
+|Visual Studio|[付録 D: ADO のサンプル](./appendixes/appendix-d-ado-samples.md)|
 |Windows 2000|[アドレス帳アプリケーションのシステム要件](./remote-data-service/system-requirements-for-the-address-book-application.md)<br /><br /> [Web サーバー コンピューターへのゲスト特権の付与](./remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)<br /><br /> [カスタム ビジネス オブジェクトの登録](./remote-data-service/registering-a-custom-business-object.md)<br /><br /> [RDS アプリケーションの保護](./remote-data-service/securing-rds-applications.md)<br /><br /> [Windows 2000 での RDS の構成](./remote-data-service/configuring-rds-on-windows-2000.md)|
 |XML|[レコードを XML 形式で保持する](./data/persisting-records-in-xml-format.md)<br /><br /> [レコードとストリーム](./data/records-and-streams.md)<br /><br /> [コマンド ストリーム](./data/command-streams.md)<br /><br /> [ストリーム形式で結果セットを取得する](./data/retrieving-resultsets-into-streams.md)|

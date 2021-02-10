@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3e479ca023efb704bf496c9ffaeaca2f1b6ba15
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7d2204a2d91e862616713dbfee6eec3d6d3e8ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991043"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029306"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft Indexing Service の概要
 Microsoft OLE DB Provider for Microsoft Indexing Service は、Microsoft Indexing Service によってインデックス付けされたファイルシステムおよび Web データへのプログラムによる読み取り専用アクセスを提供します。 ADO アプリケーションは、SQL クエリを発行してコンテンツとファイルのプロパティ情報を取得できます。
@@ -58,12 +58,12 @@ MSIDXS
 
  特定のコマンド言語の詳細については、インデックスサービスのドキュメントのクエリ言語に関するドキュメントを参照してください。
 
- プロバイダーは、ストアドプロシージャ呼び出しまたは単純なテーブル名を受け入れません (たとえば、 [CommandType](../../reference/ado-api/commandtype-property-ado.md) プロパティは常に **adcmdtext**になります)。
+ プロバイダーは、ストアドプロシージャ呼び出しまたは単純なテーブル名を受け入れません (たとえば、 [CommandType](../../reference/ado-api/commandtype-property-ado.md) プロパティは常に **adcmdtext** になります)。
 
 ## <a name="recordset-behavior"></a>レコードセットの動作
  次の表は、このプロバイダーで開かれた **レコードセット** オブジェクトで使用できる機能を示しています。 静的カーソルの種類 (**Adopenstatic**) のみを使用できます。
 
- プロバイダー構成の**レコードセット**の動作の詳細については、[サポート](../../reference/ado-api/supports-method.md)メソッドを実行し、**レコードセット**の[properties](../../reference/ado-api/properties-collection-ado.md)コレクションを列挙して、プロバイダー固有の動的プロパティが存在するかどうかを判断します。
+ プロバイダー構成の **レコードセット** の動作の詳細については、[サポート](../../reference/ado-api/supports-method.md)メソッドを実行し、**レコードセット** の [properties](../../reference/ado-api/properties-collection-ado.md)コレクションを列挙して、プロバイダー固有の動的プロパティが存在するかどうかを判断します。
 
  **標準の ADO レコードセットプロパティの可用性:**
 
@@ -87,14 +87,14 @@ MSIDXS
 |[PageSize](../../reference/ado-api/pagesize-property-ado.md)|読み取り/書き込み|
 |[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|読み取り専用|
 |[ソース](../../reference/ado-api/source-property-ado-recordset.md)|読み取り/書き込み|
-|[State](../../reference/ado-api/state-property-ado.md)|読み取り専用|
+|[状態](../../reference/ado-api/state-property-ado.md)|読み取り専用|
 |[状態](../../reference/ado-api/status-property-ado-recordset.md)|読み取り専用|
 
- \*この機能が **レコードセット**に存在するためには、プロバイダーでブックマークを有効にする必要があります。
+ \*この機能が **レコードセット** に存在するためには、プロバイダーでブックマークを有効にする必要があります。
 
  **標準の ADO レコードセットメソッドの可用性:**
 
-|方法|利用可能か|
+|メソッド|利用可能か|
 |------------|----------------|
 |[AddNew](../../reference/ado-api/addnew-method-ado.md)|いいえ|
 |[キャンセル](../../reference/ado-api/cancel-method-ado.md)|はい|

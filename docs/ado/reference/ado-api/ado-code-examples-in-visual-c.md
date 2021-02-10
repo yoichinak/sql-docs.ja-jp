@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0909a55ee439201ecfbcbcd59eac506315d9d31
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b207c024be7854c03354b0ec000bbea80fc56bff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161674"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031354"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ での ADO のコード例
 次のコード例を使用して、Microsoft Visual C++ に書き込むときに ADO のメソッド、プロパティ、およびイベントを使用する方法を学習します。  

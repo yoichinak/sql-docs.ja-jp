@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fc73324160dd46a6d626c0db889a4213c9fc438
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c91fd13744afd106b2a0cb8e986d803f1b722c24
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167488"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025116"
 ---
 # <a name="execute-method-ado-connection"></a>Execute メソッド (ADO Connection)
 指定されたクエリ、SQL ステートメント、ストアドプロシージャ、またはプロバイダー固有のテキストを実行します。  
@@ -45,7 +45,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  *RecordsAffected*  
  任意。 操作によって影響を受けたレコードの数をプロバイダーが返す **長い** 変数。  
   
- *Options*  
+ *[オプション]*  
  任意。 プロバイダーが CommandText 引数を評価する方法を示す **Long** 値。 1つ以上の [Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md) 値または [executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md) 値のビットマスクを指定できます。  
   
  **メモ****Executeoptionenum** 値 **adExecuteNoRecords** を使用すると、内部処理を最小限に抑え、Visual Basic 6.0 から移植するアプリケーションに対して、パフォーマンスを向上させることができます。  
@@ -54,7 +54,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
  Execute を使用して adCmdFile または adCmdTableDirect の CommandTypeEnum 値を使用しないでください。 これらの値は、**レコードセット** の [OPEN メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)および [Requery メソッド](../../../ado/reference/ado-api/requery-method.md)メソッドを使用したオプションとしてのみ使用できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに対して **Execute** メソッドを使用すると、指定された接続の CommandText 引数でメソッドに渡す任意のクエリが実行されます。 CommandText 引数で行を返すクエリが指定されている場合、実行によって生成される結果は、新しい **レコードセット** オブジェクトに格納されます。 コマンドが結果を返すことを意図していない場合 (SQL UPDATE クエリなど)、オプション **adExecuteNoRecords** が指定されていれば、プロバイダーは **何も** 返しません。それ以外の場合は、終了した **レコードセット** が返されます。  
   
  返される **レコードセット** オブジェクトは、常に読み取り専用の順方向専用カーソルです。 より多くの機能を持つ **レコードセット** オブジェクトが必要な場合は、まず、必要なプロパティ設定を使用して **レコードセット** オブジェクトを作成し、次に **レコードセット** オブジェクトの [Open メソッド (ADO recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) メソッドを使用してクエリを実行し、目的のカーソルの種類を返します。  

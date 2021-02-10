@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d485dbb17075033add5e3ee93dbcf9b6bf44e65
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c992b58b6b84f79efa62c63353e3b8f1efcc333d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991223"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030500"
 ---
 # <a name="ado-security-design-features"></a>ADO のセキュリティデザイン機能
 以下のセクションでは、ActiveX データオブジェクト (ADO) 2.8 以降のセキュリティ設計機能について説明します。 これらの変更は、セキュリティを強化するために ADO 2.8 で行われました。 Windows Vista の Windows DAC 6.0 に含まれる ADO 6.0 は、windows XP および Windows Server 2003 の MDAC 2.8 に含まれていた ADO 2.8 と機能的には同等です。 このトピックでは、ADO 2.8 以降でアプリケーションを最適に保護する方法について説明します。
@@ -69,7 +69,7 @@ Website, click OK, otherwise click Cancel.
     >  ADO 2.8 以降では、信頼済みサイトゾーンの一覧にサイトを追加することは、ユーザーには通知されず、推奨されません。 したがって、信頼済みサイトの一覧の管理は、ローカルファイルシステムへのアクセスを必要とする Web サイトベースのアプリケーションを展開またはサポートしているユーザーの責任です。
 
 ### <a name="access-blocked-to-the-activecommand-property-on-recordset-objects"></a>レコードセットオブジェクトの ActiveCommand プロパティへのアクセスがブロックされました
- Internet Explorer で実行されている場合、ADO 2.8 では、アクティブな**レコードセット**オブジェクトの[activecommand](../reference/ado-api/activecommand-property-ado.md)プロパティへのアクセスがブロックされるようになり、エラーが返されるようになりました。 このエラーは、ページが信頼済みサイトの一覧に登録されている Web サイトからのものであるかどうかに関係なく発生します。
+ Internet Explorer で実行されている場合、ADO 2.8 では、アクティブな **レコードセット** オブジェクトの [activecommand](../reference/ado-api/activecommand-property-ado.md)プロパティへのアクセスがブロックされるようになり、エラーが返されるようになりました。 このエラーは、ページが信頼済みサイトの一覧に登録されている Web サイトからのものであるかどうかに関係なく発生します。
 
 ### <a name="changes-in-handling-for-ole-db-providers-and-integrated-security"></a>OLE DB プロバイダーと統合セキュリティの処理の変更
  ADO 2.7 およびそれ以前のバージョンを確認しながら、潜在的なセキュリティの問題と懸念が発生した場合は、次のシナリオが検出されました。
@@ -97,20 +97,20 @@ This Website is using your identity to access a data source. If you trust this W
 >  信頼されていないサイト (つまり、[信頼済みサイト] ゾーンリストに一覧表示されていないサイト) の場合、プロバイダーが信頼できない場合 (このセクションで既に説明したように)、ユーザーには、1行に2つのセキュリティ警告が表示され、unsafe プロバイダーに関する警告が表示されます。 ユーザーが最初の警告に対して [OK] をクリックすると、前の表で説明されている Internet Explorer の設定と応答動作のコードが実行されます。
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>ADO 接続文字列でパスワードテキストを返すかどうかを制御する
- ADO **Connection**オブジェクトの[ConnectionString](../reference/ado-api/connectionstring-property-ado.md)プロパティの値を取得しようとすると、次のイベントが発生します。
+ ADO **Connection** オブジェクトの [ConnectionString](../reference/ado-api/connectionstring-property-ado.md)プロパティの値を取得しようとすると、次のイベントが発生します。
 
 1.  接続が開いている場合は、基になる OLE DB プロバイダーに初期化呼び出しが行われ、接続文字列が取得されます。
 
 2.  [DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO](/previous-versions/windows/desktop/ms714905(v=vs.85))プロパティの OLE DB プロバイダーの設定によっては、パスワードが返されるその他の接続文字列情報と共に使用されます。
 
- たとえば、ADO Connection の動的プロパティ永続化 **セキュリティ情報** が **True**に設定されている場合、パスワード情報は返された接続文字列に含まれます。 それ以外の場合、基になるプロバイダーがプロパティを **False** に設定している場合 (たとえば、SQLOLEDB プロバイダーを使用した場合)、返された接続文字列ではパスワード情報が省略されます。
+ たとえば、ADO Connection の動的プロパティ永続化 **セキュリティ情報** が **True** に設定されている場合、パスワード情報は返された接続文字列に含まれます。 それ以外の場合、基になるプロバイダーがプロパティを **False** に設定している場合 (たとえば、SQLOLEDB プロバイダーを使用した場合)、返された接続文字列ではパスワード情報が省略されます。
 
  ADO アプリケーションコードを使用してサードパーティ (Microsoft 以外の) OLE DB プロバイダーを使用している場合は、 **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** プロパティがどのように実装されているかを確認し、ado 接続文字列でパスワード情報を含めることが許可されているかどうかを確認できます。
 
 ## <a name="checking-for-non-file-devices-when-loading-and-saving-recordsets-or-streams"></a>レコードセットまたはストリームの読み込み時または保存時にファイル以外のデバイスを確認する
  ADO 2.7 以前では、ファイルベースのデータの読み取りと書き込みに使用された、 [Open](../reference/ado-api/open-method-ado-recordset.md) や [Save](../reference/ado-api/save-method.md) などのファイル入出力操作により、ディスクベースでないファイルの種類を指定した URL またはファイル名を使用できる場合がありました。 たとえば、LPT1、COM2、PRN.TXT、AUX は、特定のを使用して、システム上のプリンターと補助デバイス間の入出力のエイリアスとして使用できます。
 
- ADO 2.8 以降では、この機能は更新されています。 **レコードセット**と**ストリーム**オブジェクトを開いたり保存したりするために、ADO では、URL またはファイル名に指定されている入力デバイスまたは出力デバイスが実際のファイルであることを確認するために、ファイルの種類のチェックを実行するようになりました。
+ ADO 2.8 以降では、この機能は更新されています。 **レコードセット** と **ストリーム** オブジェクトを開いたり保存したりするために、ADO では、URL またはファイル名に指定されている入力デバイスまたは出力デバイスが実際のファイルであることを確認するために、ファイルの種類のチェックを実行するようになりました。
 
 > [!NOTE]
 >  このセクションで説明するファイルの種類のチェックは、Windows 2000 以降にのみ適用されます。 Windows 98 など、以前の Windows リリースで ADO 2.8 以降が実行されている場合には適用されません。

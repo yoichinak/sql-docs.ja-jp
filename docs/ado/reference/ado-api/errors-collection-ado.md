@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f75d1a068a3e86ecb9e0d5b1e27afae6ac4a6e5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c243b27a03a5fb80b3444267a184ab995212226d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171184"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025039"
 ---
 # <a name="errors-collection-ado"></a>Errors コレクション (ADO)
 プロバイダーに関連する単一のエラーへの応答として作成されたすべての [エラー](../../../ado/reference/ado-api/error-object.md) オブジェクトが含まれます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ADO オブジェクトに関連する操作では、1つ以上のプロバイダーエラーが発生することがあります。 各エラーが発生すると、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの **エラー** コレクションに1つまたは複数の **エラー** オブジェクトを配置できます。 別の ADO 操作によっ **てエラーが** 生成されると、 **errors** コレクションがクリアされ、エラーオブジェクトの新しいセットを **errors** コレクションに配置できます。  
   
  各 **Error** オブジェクトは、ADO エラーではなく、特定のプロバイダーエラーを表します。 ADO エラーは、ランタイム例外処理機構に公開されます。 たとえば、Microsoft Visual Basic で ADO 固有のエラーが発生すると、 [onError](../../../ado/reference/rds-api/onerror-event-rds.md) イベントがトリガーされ、 **Err** オブジェクトに表示されます。  

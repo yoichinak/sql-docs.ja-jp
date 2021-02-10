@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5a7e1ba17822d339e5ae40e6e6b5828191ce84ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8b2ba53ef5f3dcb895d217e2acef3acc15e8784
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463174"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017649"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Sybase ASE と SQL Server データ型とのマッピング (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) データベースの種類 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、または Azure SQL Database の種類とは異なります。 ASE データベースオブジェクトをまたは SQL Azure オブジェクトに変換する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データ型を ase からまたは SQL Azure にマップする方法を指定する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定のデータ型マッピングをそのまま使用することも、次のセクションに示すようにマッピングをカスタマイズすることもできます。  
