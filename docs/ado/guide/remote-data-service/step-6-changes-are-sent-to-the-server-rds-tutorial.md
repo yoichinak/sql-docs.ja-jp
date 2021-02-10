@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9929177baaf1efd486cb9f628034158b370badc7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d6a769a22a86e145727079af6fc067b1552f2bbf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722863"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031714"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>手順 6:変更がサーバーに送信される (RDS チュートリアル)
-**Recordset**オブジェクトが編集されている場合は、変更 (追加、変更、または削除された行) をサーバーに送り返すことができます。  
+**Recordset** オブジェクトが編集されている場合は、変更 (追加、変更、または削除された行) をサーバーに送り返すことができます。  
   
 > [!NOTE]
->  RDS の既定の動作は、ADO オブジェクトと Microsoft OLE DB リモート処理プロバイダーを使用して暗黙的に呼び出すことができます。 クエリは **レコードセット**を返すことができ、編集された **レコードセット**はデータソースを更新できます。 このチュートリアルでは、ADO オブジェクトを使用した RDS は呼び出されませんが、次のようになります。  
+>  RDS の既定の動作は、ADO オブジェクトと Microsoft OLE DB リモート処理プロバイダーを使用して暗黙的に呼び出すことができます。 クエリは **レコードセット** を返すことができ、編集された **レコードセット** はデータソースを更新できます。 このチュートリアルでは、ADO オブジェクトを使用した RDS は呼び出されませんが、次のようになります。  
   
 ```vb
 Dim rs as New ADODB.Recordset  
@@ -35,7 +35,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **パート A** この場合、RDS のみを使用していると仮定し [ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md) で、 **レコードセット** オブジェクトが RDS に関連付けられていることを確認し **ます。DataControl**。 [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md)メソッドは、[サーバー](../../reference/rds-api/server-property-rds.md)と[接続](../../reference/rds-api/connect-property-rds.md)のプロパティがまだ設定されている場合に、**レコードセット**オブジェクトを変更してデータソースを更新します。  
+ **パート A** この場合、RDS のみを使用していると仮定し [ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md) で、 **レコードセット** オブジェクトが RDS に関連付けられていることを確認し **ます。DataControl**。 [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md)メソッドは、[サーバー](../../reference/rds-api/server-property-rds.md)と [接続](../../reference/rds-api/connect-property-rds.md)のプロパティがまだ設定されている場合に、**レコードセット** オブジェクトを変更してデータソースを更新します。  
   
 ```vb
 Sub RDSTutorial6A()  
@@ -53,7 +53,7 @@ DC.
 ...  
 ```  
   
- **パート B**または、接続と**レコードセット**オブジェクトを指定して、 [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを使用してサーバーを更新することもできます。  
+ **パート B** または、接続と **レコードセット** オブジェクトを指定して、 [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを使用してサーバーを更新することもできます。  
   
 ```vb
 Sub RDSTutorial6B()  

@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e16bf602bd0c54b425587fcf1a50d2cc60b2aa7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7466a56d3b9ae5e9a35968f34bb13f9e748c934d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167357"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034052"
 ---
 # <a name="fields-collection-ado"></a>Fields コレクション (ADO)
 [レコードセット](./recordset-object-ado.md)または[レコード](./record-object-ado.md)オブジェクトのすべての[フィールド](./field-object.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **レコードセット** オブジェクトには、 **Field** オブジェクトで構成された **フィールド** コレクションがあります。 各 **Field** オブジェクトは、 **レコードセット** 内の列に対応します。 コレクションの [Refresh](./refresh-method-ado.md)メソッドを呼び出すことによって、**レコードセット** を開く前に **フィールド** コレクションを設定できます。  
   
 > [!NOTE]

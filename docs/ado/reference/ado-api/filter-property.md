@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7366ba67d36049f1c5df701bc633d76f56bb9af5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7ee0d5e133edbd9c5d8471176e07bce02d19c930
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167329"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033958"
 ---
 # <a name="filter-property"></a>Filter プロパティ
 [レコードセット](./recordset-object-ado.md)内のデータのフィルターを示します。  
@@ -36,7 +36,7 @@ ms.locfileid: "99167329"
   
 -   [Filtergroupenum](./filtergroupenum.md)値。  
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **フィルター** プロパティを使用して、レコード **セット** オブジェクトのレコードを選択的に表示します。 フィルター選択された **レコードセット** が現在のカーソルになります。 現在の **カーソル** に基づいて値を返すその他のプロパティは、 [ABSOLUTEPOSITION property (ado)](./absoluteposition-property-ado.md)、 [AbsolutePage property (ado)](./absolutepage-property-ado.md)、 [RecordCount Property (ADO](./recordcount-property-ado.md))、および [PageCount property (ado)](./pagecount-property-ado.md)などの影響を受けます。 **Filter** プロパティを特定の新しい値に設定すると、現在のレコードが、新しい値を満たす最初のレコードに移動します。
   
@@ -57,7 +57,7 @@ ms.locfileid: "99167329"
 -   代わりに、次のようにこのフィルターを構築します。  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   **LIKE** 句では、パターンの先頭と末尾にワイルドカードを使用できます。 たとえば、`LastName Like '*mit*'` のように使用できます。 また、 **LIKE** では、パターンの最後でのみワイルドカードを使用できます。 たとえば、「 `LastName Like 'Smit*'` 」のように入力します。  
+-   **LIKE** 句では、パターンの先頭と末尾にワイルドカードを使用できます。 たとえば、`LastName Like '*mit*'` を使用できます。 また、 **LIKE** では、パターンの最後でのみワイルドカードを使用できます。 たとえば、「 `LastName Like 'Smit*'` 」のように入力します。  
   
  フィルター定数を使用すると、バッチ更新モード中に個々のレコードの競合を解決しやすくなります。たとえば、最後の [UpdateBatch メソッド](./updatebatch-method.md) メソッド呼び出しの間に影響を受けたレコードだけを表示できます。  
   

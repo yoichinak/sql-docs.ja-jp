@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6042032018ea75eb7b2b13bb677ad48dca56290b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 04e7faf5525c676ecc9c20bb312414742e17fc4e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167382"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034092"
 ---
 # <a name="field-object"></a>Field オブジェクト
 共通のデータ型のデータ列を表します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  各 **Field** オブジェクトは、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の列に対応します。 現在のレコードのデータを設定または取得するには、 **Field** オブジェクトの [Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを使用します。 プロバイダーが公開する機能によっては、 **フィールド** オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  
   
  **Field** オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4350cb9aad6e2ef1d9381cffb6e05b13d09c43c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 0b3508479d6d52799f286421c1bb2c67683088f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724783"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032014"
 ---
 # <a name="customization-file-connect-section"></a>カスタマイズ ファイルの Connect セクション
-ハンドラーの既定の動作では、すべての接続が拒否されます。 **Connect**セクションでは、その動作に対する例外を指定します。 たとえば、すべての **接続** セクションが存在しないか空の場合、既定では接続を確立できませんでした。  
+ハンドラーの既定の動作では、すべての接続が拒否されます。 **Connect** セクションでは、その動作に対する例外を指定します。 たとえば、すべての **接続** セクションが存在しないか空の場合、既定では接続を確立できませんでした。  
   
- **Connect**セクションには次のものを含めることができます。  
+ **Connect** セクションには次のものを含めることができます。  
   
 -   この接続で許可される既定の読み取り操作と書き込み操作を指定する既定のアクセスエントリ。 セクションに既定のアクセスエントリがない場合、セクションは無視されます。  
   
@@ -54,7 +54,7 @@ connectionString
   
 ## <a name="remarks"></a>解説  
   
-|要素|説明|  
+|パーツ|説明|  
 |----------|-----------------|  
 |**接続する**|これが接続文字列エントリであることを示すリテラル文字列。|  
 |**_connectionString_**|クライアント接続文字列全体を置き換える文字列。|  

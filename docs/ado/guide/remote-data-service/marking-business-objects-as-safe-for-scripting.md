@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6681a0b40890db9c344a91adc26694f3e122710d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1866d72f438e263ec6cdb1f66cccb247d460a270
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721504"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031924"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>スクリプト用にビジネス オブジェクトを安全とマークする
 > [!IMPORTANT]
@@ -40,8 +40,8 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  レジストリエディターを使用するか、エクスプローラーで .reg ファイルをダブルクリックして、ファイルを保存し、レジストリにマージします。  
   
- Microsoft Visual Basic で作成されたビジネスオブジェクトは、パッケージおよび配置ウィザードを使用して、自動的に "スクリプトに安全" としてマークできます。 ウィザードで安全性の設定を指定するように求められたら、[ **初期化のために安全** ] を選択し、 **スクリプトの**安全性を確保します。  
+ Microsoft Visual Basic で作成されたビジネスオブジェクトは、パッケージおよび配置ウィザードを使用して、自動的に "スクリプトに安全" としてマークできます。 ウィザードで安全性の設定を指定するように求められたら、[ **初期化のために安全** ] を選択し、 **スクリプトの** 安全性を確保します。  
   
  最後の手順では、アプリケーションのセットアップウィザードによって .htm ファイルと .cab ファイルが作成されます。 この2つのファイルを対象のコンピューターにコピーし、.htm ファイルをダブルクリックしてページを読み込み、サーバーを正しく登録することができます。  
   
- ビジネスオブジェクトは既定では Windows\System32\Occache ディレクトリにインストールされるため、Windows\System32 ディレクトリに移動し、 ** \\ ** \<*MyActiveXGUID*> \\ 正しいパスに一致するように HKEY_CLASSES_ROOT/CLSID**InprocServer32**レジストリキーを変更します。
+ Business オブジェクトは既定で Windows\System32\Occache ディレクトリにインストールされるため、Windows\System32 ディレクトリに移動し、 **\\** \<*MyActiveXGUID*> \\ 正しいパスに一致するようにHKEY_CLASSES_ROOT\CLSID **InprocServer32** レジストリキーを変更します。

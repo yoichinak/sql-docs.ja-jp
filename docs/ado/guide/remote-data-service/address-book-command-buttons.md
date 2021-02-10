@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d234732b90fdd89b6f0e41efe1762bb3a99ddde2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: dccdb22981bb1662cd50da1e28db8fa0a2ce47d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724853"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032050"
 ---
 # <a name="address-book-command-buttons"></a>アドレス帳のコマンド ボタン
 アドレス帳アプリケーションには、次のコマンドボタンが含まれています。  
@@ -75,7 +75,7 @@ End Sub
  が実行されると、 `DC1.SubmitChanges` リモートデータサービスはすべての更新情報をパッケージ化し、HTTP 経由でサーバーに送信します。 更新プログラムがすべて-または何もありません。更新プログラムの一部が正常に実行されなかった場合、変更は一切行われず、ステータスメッセージが返されます。 `DC1.Refresh` リモートデータサービスと **SubmitChanges** した後には必要ありませんが、最新のデータが確保されます。  
   
 ## <a name="cancel-changes-button"></a>[変更の取り消し] ボタン  
- **[変更のキャンセル]** をクリックすると、RDS を実行する VBScript Cancel_OnClick サブプロシージャがアクティブ化され[ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md)オブジェクトの ( `DC1)` [CancelUpdate](../../reference/rds-api/cancelupdate-method-rds.md)メソッド)。  
+ **[変更のキャンセル]** をクリックすると、RDS を実行する VBScript Cancel_OnClick サブプロシージャがアクティブ化され [ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md)オブジェクトの ( `DC1)` [CancelUpdate](../../reference/rds-api/cancelupdate-method-rds.md)メソッド)。  
   
 ```vb
 Sub Cancel_OnClick  

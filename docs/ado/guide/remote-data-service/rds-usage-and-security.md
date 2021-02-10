@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 657250e54c9ea3564e826f2113a94625027fc4a1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1664f953533b46a356f2bab7a601c82662807abe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724893"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031864"
 ---
 # <a name="rds-usage-and-security"></a>RDS の使用方法とセキュリティ
 サーバーをセットアップし、RDS をすばやく使用するには、このセクションの情報を参照してください。 このセクションには、rds を実装するときに必要になる可能性がある特定の構成手順、RDS と他のテクノロジ間の重要な関係について説明し、RDS ソリューションの設定時に発生する可能性がある問題の解決策を特定するのに役立ちます。  

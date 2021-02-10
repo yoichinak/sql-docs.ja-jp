@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13aeddcf9a826cff5caa33172f785f2e42747a3f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f625a4f96aa5ec083057af4118315d9df494530e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979753"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032544"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>ストリーム形式で結果セットを取得する
-ADO では、従来の **Recordset** オブジェクトの結果を受け取る代わりに、クエリの結果をストリームに取得できます。 ADO**ストリーム**オブジェクト (または、ASP**要求**オブジェクトや**応答**オブジェクトなど、COM **IStream**インターフェイスをサポートするその他のオブジェクト) は、これらの結果を格納するために使用できます。 この機能の使用方法の1つは、結果を XML 形式で取得することです。 たとえば、SQL Server では、XML の結果を複数の方法で返すことができます。たとえば、SQL SELECT クエリで FOR XML 句を使用する場合や、XPath クエリを使用する場合などです。  
+ADO では、従来の **Recordset** オブジェクトの結果を受け取る代わりに、クエリの結果をストリームに取得できます。 ADO **ストリーム** オブジェクト (または、ASP **要求** オブジェクトや **応答** オブジェクトなど、COM **IStream** インターフェイスをサポートするその他のオブジェクト) は、これらの結果を格納するために使用できます。 この機能の使用方法の1つは、結果を XML 形式で取得することです。 たとえば、SQL Server では、XML の結果を複数の方法で返すことができます。たとえば、SQL SELECT クエリで FOR XML 句を使用する場合や、XPath クエリを使用する場合などです。  
   
- **レコードセット**ではなくストリーム形式でクエリ結果を受け取るには、 **executeoptionenum**から**adExecuteStream**定数を**Command**オブジェクトの**Execute**メソッドのパラメーターとして指定する必要があります。 プロバイダーがこの機能をサポートしている場合、結果は実行時にストリームで返されます。 コードを実行する前に、追加のプロバイダー固有のプロパティを指定する必要がある場合があります。 たとえば、Microsoft OLE DB Provider for SQL Server では、 **Command**オブジェクトの**properties**コレクション内の**出力ストリーム**などのプロパティを指定する必要があります。 この機能に関連する SQL Server 固有の動的プロパティの詳細については、SQL Server オンラインブックの「XML 関連のプロパティ」を参照してください。  
+ **レコードセット** ではなくストリーム形式でクエリ結果を受け取るには、 **executeoptionenum** から **adExecuteStream** 定数を **Command** オブジェクトの **Execute** メソッドのパラメーターとして指定する必要があります。 プロバイダーがこの機能をサポートしている場合、結果は実行時にストリームで返されます。 コードを実行する前に、追加のプロバイダー固有のプロパティを指定する必要がある場合があります。 たとえば、Microsoft OLE DB Provider for SQL Server では、 **Command** オブジェクトの **properties** コレクション内の **出力ストリーム** などのプロパティを指定する必要があります。 この機能に関連する SQL Server 固有の動的プロパティの詳細については、「SQL Server オンラインブックのプロパティの XML-Related」を参照してください。  
   
 ## <a name="for-xml-query-example"></a>FOR XML クエリの例  
  次の例は、VBScript で Northwind データベースに記述されています。  
@@ -157,7 +157,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- コマンドは、前に示した文字列、 **CommandText**に割り当てられた文字列、または **commandstream**に割り当てられた XML テンプレートクエリの形式で指定できます。 XML テンプレートクエリの詳細については、「ADO の [コマンドストリーム](../../../ado/guide/data/command-streams.md) 」または「SQL Server オンラインブックでのコマンド入力用ストリームの使用」を参照してください。  
+ コマンドは、前に示した文字列、 **CommandText** に割り当てられた文字列、または **commandstream** に割り当てられた XML テンプレートクエリの形式で指定できます。 XML テンプレートクエリの詳細については、「ADO の [コマンドストリーム](../../../ado/guide/data/command-streams.md) 」または「SQL Server オンラインブックでのコマンド入力用ストリームの使用」を参照してください。  
   
  XML テンプレートクエリとして、FOR XML クエリは次のように表示されます。  
   
@@ -165,13 +165,13 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
- この例では、**出力ストリーム**プロパティの ASP**応答**オブジェクトを指定します。  
+ この例では、**出力ストリーム** プロパティの ASP **応答** オブジェクトを指定します。  
   
 ```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
- 次に、 **Execute**の**adExecuteStream**パラメーターを指定します。 この例では、xml タグでストリームをラップして XML データアイランドを作成します。  
+ 次に、 **Execute** の **adExecuteStream** パラメーターを指定します。 この例では、xml タグでストリームをラップして XML データアイランドを作成します。  
   
 ```vb
 Response.write "<XML ID=MyDataIsle>"  

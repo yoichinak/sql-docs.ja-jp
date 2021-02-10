@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd2829c49adb318ae80eeefd2ec2913fd8620d2b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: eb3d91f23666c900f59a6ffc8e6b94af9bcdb4d7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979803"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032534"
 ---
 # <a name="required-providers-for-data-shaping"></a>データ シェイプに必要なプロバイダー
 通常、データシェイプには2つのプロバイダーが必要です。 サービスプロバイダー、 [OLE DB 用のデータ整形サービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)はデータの整形機能を提供し、SQL Server の OLE DB プロバイダーなどのデータプロバイダーが、整形された [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を設定するためのデータ行を提供します。  
   
  サービスプロバイダーの名前 (MSDataShape) は、 [接続](../../../ado/reference/ado-api/connection-object-ado.md) オブジェクト [プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md) プロパティの値、または接続文字列キーワード "provider = MSDataShape;" の値として指定できます。  
   
- データプロバイダーの名前は**Data Provider**動的プロパティの値として指定できます。このプロパティは、OLE DB 用のデータシェイプサービスまたは接続文字列キーワード "**Data Provider =** _Provider_" によって**接続**オブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加されます。  
+ データプロバイダーの名前は **Data Provider** 動的プロパティの値として指定できます。このプロパティは、OLE DB 用のデータシェイプサービスまたは接続文字列キーワード "**Data Provider =** _Provider_" によって **接続** オブジェクト [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加されます。  
   
- **レコードセット**に値が設定されていない場合 (たとえば、新しいキーワードを使用して列が作成される作成済みの**レコードセット**の場合など)、データプロバイダーは必要ありません。 その場合は、"**Data Provider =** none;" を指定します。  
+ **レコードセット** に値が設定されていない場合 (たとえば、新しいキーワードを使用して列が作成される作成済みの **レコードセット** の場合など)、データプロバイダーは必要ありません。 その場合は、"**Data Provider =** none;" を指定します。  
   
 ## <a name="example"></a>例  
   

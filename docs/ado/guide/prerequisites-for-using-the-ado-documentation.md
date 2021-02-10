@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e392b099f66b0ef0ca1c38fe5f3d4982d9018df
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3b518e67ed9e2f8da20c9e518fb27ca92fea9de9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978553"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032134"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>ADO のドキュメントを使用するための前提条件
 このドキュメントを使用するには、少なくとも Microsoft Visual Basic でアプリケーションを開発する経験がある必要があります。これは、ガイドのほとんどの例がこの言語で記述されているためです。 Microsoft Visual C++、Java、Visual Basic Scripting Edition (VBScript)、および Microsoft JScript で記述されたいくつかの例もあります。  

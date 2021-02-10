@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65d5686dc605e1ba254f4b7c39e879eb59733d79
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: e9ee0bb698c64de6fb04f776caa4e34c27b8d49a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724843"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032063"
 ---
 # <a name="address-book-navigation-buttons"></a>アドレス帳のナビゲーション ボタン
 アドレス帳アプリケーションでは、Web ページの下部にナビゲーションボタンが表示されます。 ナビゲーションボタンを使用すると、データの最初の行または最後の行、または現在の選択範囲に隣接する行を選択することにより、HTML グリッドの表示でデータを移動できます。  
@@ -28,9 +28,9 @@ ms.locfileid: "91724843"
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
 ## <a name="navigation-sub-procedures"></a>ナビゲーションサブプロシージャ  
- アドレス帳アプリケーションには、ユーザーが **最初**、 **次**、 **前**へ、および **最後** のボタンをクリックしてデータを移動できるようにするためのいくつかの手順が含まれています。  
+ アドレス帳アプリケーションには、ユーザーが **最初**、 **次**、 **前** へ、および **最後** のボタンをクリックしてデータを移動できるようにするためのいくつかの手順が含まれています。  
   
- たとえば、 **最初** のボタンをクリックすると、VBScript の First_OnClick サブプロシージャがアクティブ化されます。 プロシージャは、 [MoveFirst](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) メソッドを実行します。これにより、データの最初の行が現在の選択範囲になります。 **最後**のボタンをクリックすると、Last_OnClick サブプロシージャがアクティブになります。これにより、 [MoveLast](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)メソッドが呼び出され、データの最後の行が現在の選択範囲になります。 残りのナビゲーションボタンは同様の方法で動作します。  
+ たとえば、 **最初** のボタンをクリックすると、VBScript の First_OnClick サブプロシージャがアクティブ化されます。 プロシージャは、 [MoveFirst](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) メソッドを実行します。これにより、データの最初の行が現在の選択範囲になります。 **最後** のボタンをクリックすると、Last_OnClick サブプロシージャがアクティブになります。これにより、 [MoveLast](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)メソッドが呼び出され、データの最後の行が現在の選択範囲になります。 残りのナビゲーションボタンは同様の方法で動作します。  
   
 ```vb
 ' Move to the first record in the bound Recordset.  

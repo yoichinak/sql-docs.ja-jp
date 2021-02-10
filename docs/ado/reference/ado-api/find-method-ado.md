@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f581b2c4b4861c852a9e5a24aec5a219ee098f4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8335b09bbb7fa044492d1a080b34084be7860a5a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167320"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033921"
 ---
 # <a name="find-method-ado"></a>Find メソッド (ADO)
 [レコードセット](./recordset-object-ado.md)内で、指定した条件を満たす行を検索します。 必要に応じて、開始行からの検索、開始行、およびオフセットの方向を指定することもできます。 条件が満たされた場合は、見つかったレコードに現在の行の位置が設定されます。それ以外の場合、位置は **レコードセット** の末尾 (または先頭) に設定されます。  
@@ -47,7 +47,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *Start*  
  任意。 検索の開始位置として機能する **Variant** ブックマーク。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *条件* には、単一列の名前のみを指定できます。 このメソッドは、複数列の検索をサポートしていません。  
   
  *条件* としての比較演算子には、" **>** " (より大きい)、"* * \<**" (less than), "=" (equal), "> =" (以上)、"<=" (以下)、"<>" (不等号)、"like" (パターンマッチング) などがあります。  

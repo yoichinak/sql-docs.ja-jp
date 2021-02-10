@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eadbd94d0dca864b3d6e9c0a172e60845e7c584e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6bbe519e468921bc014439af148eab6899546771
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167333"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033942"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter および RecordCount プロパティの例 (VB)
 この例では、***Pubs** _ データベースの Publishers テーブルで [レコードセット](./recordset-object-ado.md)を開きます。 次に、 [Filter](./filter-property.md) プロパティを使用して、表示されるレコードの数を特定の国/地域の出版社に限定します。 _ *RecordCount** プロパティは、フィルター処理されたレコードセットとフィルター処理されていないレコードセットの違いを示すために使用されます。  

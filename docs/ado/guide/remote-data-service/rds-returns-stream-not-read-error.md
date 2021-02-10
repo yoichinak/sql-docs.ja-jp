@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6acb603594acdd23f8ad8764c9b9a692acabdb9b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2aba423ab0861b8e97a298b88e6016db1c759b19
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724903"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031884"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS &quot; はストリームの読み取り不可エラーを返します &quot;
 "ストリームオブジェクトが空であるか、または現在の位置がストリームの末尾にあるため、読み取ることができませんでした。 空でないストリームの場合は、Position プロパティを使用して現在の位置を設定します。 ストリームが空かどうかを確認するには、Size プロパティを確認します。  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f711a815614ecc74c46e8d0f7851415bc73ed1d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a1727608476b8522f0e9ec6f09ce471de4ffb419
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724813"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032051"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>安全または無制限モード用の DataFactory の構成
 > [!IMPORTANT]
@@ -32,7 +32,7 @@ ms.locfileid: "91724813"
   
 3.  Windows ディレクトリに Msdfmap.ini ファイルがインストールされています。 3層モードで RDS を使用する前に、必要に応じてこのファイルを構成する必要があります。  
   
- 必要に応じて、無制限の **DataFactory** インストールを構成できます。 **DataFactory** は、カスタムハンドラーなしで直接使用できます。 ユーザーは接続文字列を変更することによってカスタムハンドラーを引き続き使用できますが、必須ではありません。 **RDSServer**オブジェクトを使用した場合の影響の詳細については、「 [RDS アプリケーションのセキュリティ保護](./securing-rds-applications.md)」を参照してください。  
+ 必要に応じて、無制限の **DataFactory** インストールを構成できます。 **DataFactory** は、カスタムハンドラーなしで直接使用できます。 ユーザーは接続文字列を変更することによってカスタムハンドラーを引き続き使用できますが、必須ではありません。 **RDSServer** オブジェクトを使用した場合の影響の詳細については、「 [RDS アプリケーションのセキュリティ保護](./securing-rds-applications.md)」を参照してください。  
   
  セキュリティで保護された構成のハンドラーレジストリエントリを設定するレジストリファイルが提供されています。 セーフモードで実行するには、「」を実行します。  
   

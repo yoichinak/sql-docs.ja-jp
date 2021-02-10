@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a262ef7b71b6618bdfc4ae50cec2eec3fca4a41
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 596e11a51a093be30fab7d9d3b273d6605b48b75
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978483"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032074"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Visual C++ アプリケーションで ADO ライブラリを参照する
 Visual C++ アプリケーションで最新バージョンの ADO を使用するには、次のディレクティブを使用し `#import` ます。  
@@ -32,7 +32,7 @@ Visual C++ アプリケーションで最新バージョンの ADO を使用す�
     no_namespace rename("EOF", "EndOfFile")  
 ```  
   
- ADO MD または ADOX を使用するには、上記の構文を使用して *msadomd.dll* または *msadox.dll*をインポートする必要があります。  
+ ADO MD または ADOX を使用するには、上記の構文を使用して *msadomd.dll* または *msadox.dll* をインポートする必要があります。  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
  以前のバージョンの ADO を使用するには、上記の *msado15.dll* を次のタイプライブラリのいずれかに置き換えます。  
