@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a8738c6e5143a8fc23da2c008a01b28db36ee04
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 311ea31a50bb9004425ad8db14c1beb309e15eb0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99174282"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054807"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension オブジェクト (ADO MD)
 メンバーの1つ以上の階層を含む多次元キューブのディメンションの1つを表します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **ディメンション** オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
 -   [Name](./name-property-ado-md.md)プロパティと [UniqueName](./uniquename-property-ado-md.md)プロパティを使用して、**ディメンション** を識別します。  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6192efed41f24ff9d80ab027d20c29968fa2a452
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6f9d63ef7f7d6a919d76e4e6b6220f423352ff10
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169228"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054857"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn プロパティ (ADOX)
 関連するテーブル内の関連する [列オブジェクト (ADOX)](./column-object-adox.md) の名前を示します (キー列のみ)。  
@@ -33,7 +33,7 @@ ms.locfileid: "99169228"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  関連するテーブル内の関連する列の名前を表す **文字列** 値を設定して返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  既定値は空の文字列 ("") です。  
   
  このプロパティは、既にコレクションに追加されている [列](./column-object-adox.md) オブジェクトに対しては読み取り専用です。  

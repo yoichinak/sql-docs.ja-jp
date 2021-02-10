@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 77d7bcf4ddc6beb29dc04513952050c8ba042c55
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 520087ef5d1afc2024fa5b64fc259cd8ef35439a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164000"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053463"
 ---
 # <a name="type-property-column-adox"></a>Type プロパティ (列) (ADOX)
 列のデータ型を示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "99164000"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [DataTypeEnum](../ado-api/datatypeenum.md)定数のいずれかを指定できる **Long 型** の値を設定または返します。 既定値は **adVarWChar** です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このプロパティは、 [列](./column-object-adox.md) オブジェクトがコレクションまたは別のオブジェクトに追加されるまで、読み取り/書き込みが行われます。その後、読み取り専用になります。  
   
 ## <a name="applies-to"></a>適用対象  

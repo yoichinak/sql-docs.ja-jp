@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 047455edb47650cedeae8ffbd5965e4cc82be940
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 96b0a2b6b8fc0a8d87c51c68701a64c971255ec8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169837"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054627"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject メソッド (ADO MD)
 [UniqueName](./uniquename-property-ado-md.md)によって ADO MD スキーマオブジェクト ([ディメンション](./dimension-object-ado-md.md)、[階層](./hierarchy-object-ado-md.md)、[レベル](./level-object-ado-md.md)、または[メンバー](./member-object-ado-md.md)) を取得します。  
@@ -41,7 +41,7 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
  *UniqueName*  
  取得するオブジェクトの **UniqueName** プロパティ値を指定する **文字列**。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Getschemaobject** は、 **UniqueName** プロパティで指定されているように、一意の名前を使用してオブジェクトを取得します。 親オブジェクトの名前を把握しておく必要はありません。また、スキーマオブジェクトを取得するために親コレクションを設定する必要もありません。  
   
 ## <a name="applies-to"></a>適用対象  

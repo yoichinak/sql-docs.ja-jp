@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f4c065edf9e779887e38f4c09634f6a0bc6a58c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1cc2df470b2b51176cd44433359cf74d31c36863
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163939"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053383"
 ---
 # <a name="views-append-method-example-vb"></a>Views Append メソッドの例 (VB)
 次のコードは、 [コマンド](../ado-api/command-object-ado.md) オブジェクトと [Views](./views-collection-adox.md) collection [Append](./append-method-adox-views.md) メソッドを使用して、基になるデータソースに新しいビューを作成する方法を示しています。  

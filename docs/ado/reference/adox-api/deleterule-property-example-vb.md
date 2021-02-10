@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e06fe258c1baaa01eff25678c312cdb087f9b6c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 938bc2bf316190edf148315c06c777d6db0b75e8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172100"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054237"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule プロパティの例 (VB)
 この例では、[キー](./key-object-adox.md)オブジェクトの[DeleteRule](./deleterule-property-adox.md)プロパティを示します。 コードによって新しい [テーブル](./table-object-adox.md) が追加され、新しい主キーが定義され、 **DeleteRule** が **adRICascade** に設定されます。  

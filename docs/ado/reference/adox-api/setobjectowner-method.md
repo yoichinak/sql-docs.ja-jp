@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00dc951c429053860defe3806042c210f791d2dc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2d75966ce8d5c1f9fddea9c09ff254eca9106e62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169204"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053807"
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner メソッド
 [カタログ](./catalog-object-adox.md)内のオブジェクトの所有者を指定します。  
@@ -47,7 +47,7 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  *ObjectTypeId*  
  任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す **バリアント** 値です。 *ObjectType* が **Adpermobjproviderspecific** に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  プロバイダーがオブジェクトの所有者の指定をサポートしていない場合、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  

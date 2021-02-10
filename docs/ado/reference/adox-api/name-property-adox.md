@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ef51697cd3ad1ad1a01355baead5d90788813f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 51373d1eee3613366c39bd3d18a9f479a0d046c6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171993"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053996"
 ---
 # <a name="name-property-adox"></a>Name プロパティ (ADOX)
 オブジェクトの名前を示します。  
@@ -55,7 +55,7 @@ ms.locfileid: "99171993"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **文字列** 値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  名前はコレクション内で一意である必要はありません。  
   
  **Name** プロパティは、[列](./column-object-adox.md)、[グループ](./group-object-adox.md)、[キー](./key-object-adox.md)、[インデックス](./index-object-adox.md)、[テーブル](./table-object-adox.md)、および [ユーザー](./user-object-adox.md)オブジェクトに対して読み取り/書き込みが可能です。 **Name** プロパティは、[カタログ](./catalog-object-adox.md)、[プロシージャ](./procedure-object-adox.md)、および [ビュー](./view-object-adox.md)オブジェクトでは読み取り専用です。  

@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e30bb754332d52f02d2857dc80d572e227e819ed
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5d95bec64e9751d8663c34d1bf9d9d301c163eb9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164012"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053473"
 ---
 # <a name="tables-collection-adox"></a>Tables コレクション (ADOX)
 カタログのすべての [テーブル](./table-object-adox.md) オブジェクトが含まれます。  
   
-## <a name="remarks"></a>コメント  
- **Tables** コレクションの [Append](./append-method-adox-tables.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
+## <a name="remarks"></a>解説  
+ **Tables** コレクションの [Append](./append-method-adox-tables.md)メソッドは、ADOX で一意です。 次の操作を行うことができます。  
   
 -   **追加** メソッドを使用して、新しいテーブルをコレクションに追加します。  
   
- その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次の操作を行うことができます。  
   
 -   [Item](../ado-api/item-property-ado.md)プロパティを使用して、コレクション内のテーブルにアクセスします。  
   

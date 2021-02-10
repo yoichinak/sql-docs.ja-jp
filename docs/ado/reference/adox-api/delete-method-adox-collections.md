@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a7646288bfb2736671f58a2b158f6047476dbc2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 67d50c34c55543d0ddb870ad6ba5a1fd8cbd5f11
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172105"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054247"
 ---
 # <a name="delete-method-adox-collections"></a>Delete メソッド (ADOX Collections)
 オブジェクトをコレクションから削除します。  
@@ -52,7 +52,7 @@ Collection.Delete Name
  *名前*  
  削除するオブジェクトの名前または序数位置 (インデックス) を指定する **バリアント** です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *名前* がコレクションに存在しない場合、エラーが発生します。  
   
  [テーブル](./tables-collection-adox.md)と[ユーザー](./users-collection-adox.md)のコレクションでは、プロバイダーがテーブルまたはユーザーの削除をサポートしていない場合に、エラーが発生します。 [プロシージャ](./procedures-collection-adox.md)および [ビュー](./views-collection-adox.md)コレクションでは、プロバイダーがコマンドの永続化をサポートしていない場合、 **Delete** は失敗します。  

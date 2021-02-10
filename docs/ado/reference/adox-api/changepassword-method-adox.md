@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4347cb856b1fcb4d76ef6133024335404e32ad5b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c18385154c38d7e55d60cf3286e0340ceacf94c8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164292"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054447"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword メソッド (ADOX)
 [ユーザー](./user-object-adox.md)アカウントのパスワードを変更します。  
@@ -41,7 +41,7 @@ User.ChangePassword OldPassword, NewPassword
  *NewPassword*  
  新しいパスワードを示す **文字列** 値です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  セキュリティ上の理由から、新しいパスワードに加えて古いパスワードも指定する必要があります。  
   
  プロバイダーがトラスティのプロパティの管理をサポートしていない場合、エラーが発生します。  

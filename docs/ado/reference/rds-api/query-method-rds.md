@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0826d80d786f6f6e944c284422e2a891b509025c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ae851f55696232f5bb11e38bfdfc3d0f44ed6709
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163709"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053044"
 ---
 # <a name="query-method-rds"></a>Query メソッド (RDS)
 は、有効な SQL クエリ文字列を使用して [レコードセット](../ado-api/recordset-object-ado.md)を返します。  
@@ -47,7 +47,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *クエリ*  
  SQL クエリを含む **文字列** 。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  クエリでは、データベースサーバーの SQL 言語を使用する必要があります。 実行されたクエリにエラーがある場合は、結果の状態が返されます。 クエリ **メソッドで** は、 **クエリ** 文字列に対する構文チェックは実行されません。  
   
 ## <a name="applies-to"></a>適用対象  

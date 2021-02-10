@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fa625a75bbcadffb37064c04adc7ebd57a48994
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1808130ed87bf3448c9aad12b7dac92244bfcd68
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163870"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053273"
 ---
 # <a name="createobject-method-rds"></a>CreateObject メソッド (RDS)
 対象のビジネスオブジェクトのプロキシを作成し、そのオブジェクトへのポインターを返します。 プロキシは、ビジネスオブジェクトとの通信のためにデータをパッケージ化してサーバー側スタブにマーシャリングし、インターネット経由で要求とデータを送信します。 インプロセスコンポーネントオブジェクトの場合、プロキシは使用されません。オブジェクトへのポインターだけが使用されます。  
@@ -38,7 +38,7 @@ ms.locfileid: "99163870"
 |インプロセス|Set object = を設定します。 CreateObject ("ProgId", "")|  
   
 ## <a name="parameters"></a>パラメーター  
- *Object*  
+ *オブジェクト*  
  *ProgID* で指定された型のオブジェクトに評価されるオブジェクト変数。  
   
  *DataSpace*  
@@ -50,7 +50,7 @@ ms.locfileid: "99163870"
  *awebsrvr* または *computername*  
  サーバービジネスオブジェクトのインスタンスが作成されるインターネットインフォメーションサービス (IIS) Web サーバーを識別する URL を表す **文字列** 値です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *HTTP プロトコル* は標準の Web プロトコルです。*HTTPS* はセキュリティで保護された Web プロトコルです。 HTTP を使用せずにローカルエリアネットワークを実行する場合は、 *DCOM プロトコル* を使用します。 *インプロセス* プロトコルは、ローカルダイナミックリンクライブラリ (DLL) です。ネットワークを使用しません。  
   
 ## <a name="applies-to"></a>適用対象  

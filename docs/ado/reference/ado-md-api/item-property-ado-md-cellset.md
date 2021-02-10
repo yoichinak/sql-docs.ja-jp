@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d2fe7bb3d13b988b7bc25b6d3f17a5b2ccf945a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0fc6d2650619ef0647f32af9101c3e0c895e300a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164535"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054567"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item プロパティ (ADO MD セルセット)
 セルの座標を使用して、セル [セット](./cellset-object-ado-md.md) からセルを取得します。  
@@ -45,7 +45,7 @@ Cell = Cellset.Item ( Positions)
   
 -   序数の位置  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **アイテム** プロパティを使用して、[セル](./cell-object-ado-md.md)[セット](./cellset-object-ado-md.md)オブジェクト内の Cell オブジェクトを返します。 **Item** プロパティが *位置* 引数に対応するセルを見つけることができない場合は、エラーが発生します。  
   
  **アイテム** プロパティは、**セルセット** オブジェクトの既定のプロパティです。 次の構文形式は置き換えることができます。  

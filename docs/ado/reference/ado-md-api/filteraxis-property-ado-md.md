@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 002c7940d192a2a41437818c9708e71bf8f0c5cb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e53967bf577bfc69c07d7c1e5e49e42a3ca613d7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164565"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054717"
 ---
 # <a name="filteraxis-property-ado-md"></a>FilterAxis プロパティ (ADO MD)
 現在の [セルセット](./cellset-object-ado-md.md)に関するフィルター情報を示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "99164565"
 ## <a name="return-values"></a>戻り値  
  は [軸](./axis-object-ado-md.md) オブジェクトを返し、は読み取り専用です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  データのスライスに使用されたディメンションに関する情報を返すには、 **Filteraxis** プロパティを使用します。 **軸** の [dimensioncount](./dimensioncount-property-ado-md.md)プロパティは、スライサーディメンションの数を返します。 通常、この軸には1行しかありません。  
   
  **Filteraxis** によって返された **軸** は、[セルセット](./cellset-object-ado-md.md)オブジェクトの [Axes](./axes-collection-ado-md.md)コレクションに含まれていません。  

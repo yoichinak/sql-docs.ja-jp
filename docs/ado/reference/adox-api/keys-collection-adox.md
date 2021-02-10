@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e3369e181577214a9e4b430dded19110744eb0d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 08bb9e7bb82484080f969bce5e817a1d21724809
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169314"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054037"
 ---
 # <a name="keys-collection-adox"></a>Keys コレクション (ADOX)
 [テーブル](./table-object-adox.md)のすべての[キー](./key-object-adox.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
- [キーコレクション]()の[Append](./append-method-adox-keys.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
+## <a name="remarks"></a>解説  
+ [キーコレクション]()の[Append](./append-method-adox-keys.md)メソッドは、ADOX で一意です。 次の操作を行うことができます。  
   
 -   [追加](./append-method-adox-keys.md)メソッドを使用して、新しいキーをコレクションに追加します。  
   
- その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次の操作を行うことができます。  
   
 -   [項目](../ado-api/item-property-ado.md)プロパティを使用して、コレクション内のキーにアクセスします。  
   

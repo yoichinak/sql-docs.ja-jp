@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fdcaba24180ad333b2c9f556ac9b26fe75f120d2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d628481607e05c2278e5dd1beede08a12b93d740
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164502"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054497"
 ---
 # <a name="members-collection-ado-md"></a>Members コレクション (ADO MD)
 レベルまたは軸に沿った位置からの [メンバー](./member-object-ado-md.md) オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **メンバー** コレクションは、次の種類のメンバーを格納するために使用されます。  
   
 -   キューブ内のレベルを構成するメンバー。 これらは、 [Level](./level-object-ado-md.md)オブジェクトの **Members** コレクションに含まれています。 たとえば、 [多次元スキーマとデータの概要](../../guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)からサンプルを使用すると、国レベルの4つのメンバーがカナダ、USA、英国、およびドイツになります。  

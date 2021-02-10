@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb782b8c61f3ae80c3e37d5ff28b040651eb5669
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 23ea3c2d1399f6d9e592911d8b8ae3fdbee6e523
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166083"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052843"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 メソッド (RDS)
 指定したレコードセットを、ADO 2.1 で使用する接続文字列で指定されたデータベースと同期します。  
@@ -58,7 +58,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  Synchronize の影響を受ける行の状態の安全な配列を返すために使用されるバリアント。 *Refreshwithupdate*、 *Refresh* 、および *refreshconflicts* のいずれの同期オプションも設定されていない場合は設定されません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *ハンドラー文字列* パラメーターには null を指定できます。 この場合の動作は、RDS サーバーがどのように構成されているかによって異なります。 "MSDFMAP. handler" のハンドラー文字列は、Microsoft 提供のハンドラー (Msdfmap.dll) を使用する必要があることを示します。 "sample.ini" のハンドラー文字列は、Msdfmap.dll ハンドラーを使用する必要があり、引数 "sample.ini" をハンドラーに渡す必要があることを示します。 Msdfmap.dll は、sample.ini を使用して接続とクエリ文字列を確認する方向として引数を解釈します。  
   
 > [!NOTE]

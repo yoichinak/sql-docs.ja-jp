@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 225ae29d2fa74d6788115a921590c669c7bb3ba0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f864868d3ad1bb4474b0640862aef20a3f187e4b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164515"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054527"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName プロパティ (ADO MD)
 [メンバー](./member-object-ado-md.md)のレベルの名前を示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "99164515"
 ## <a name="return-values"></a>戻り値  
  は **文字列** を返し、読み取り専用です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Levelname** プロパティを使用して、メンバーが属するレベルの名前を取得します。 これは、 [Level](./level-object-ado-md.md)オブジェクトの[Name](./name-property-ado-md.md)プロパティに対応しています。  
   
 ## <a name="applies-to"></a>適用対象  

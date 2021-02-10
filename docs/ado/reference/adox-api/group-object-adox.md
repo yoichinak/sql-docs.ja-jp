@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d41a816c7c66c4308b2da3f58d8dab51d865ae0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b72179e91ad4c9742ffd42a70ff37e33f402d8e3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164264"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054197"
 ---
 # <a name="group-object-adox"></a>Group オブジェクト (ADOX)
 セキュリティで保護されたデータベース内でアクセス許可を持つグループアカウントを表します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [カタログ](./catalog-object-adox.md)の[Groups](./groups-collection-adox.md)コレクションは、すべてのカタログのグループアカウントを表します。 [ユーザー](./user-object-adox.md)の **Groups** コレクションは、ユーザーが属しているグループのみを表します。  
   
  **Group** オブジェクトのプロパティ、コレクション、およびメソッドを使用すると、次のことができます。  

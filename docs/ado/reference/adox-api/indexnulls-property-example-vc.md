@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eea25b680f578035ae4ca1f4c2dcdf8b1bbe6fdf
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2dcc8a9e84f06665f90e22f0c034f8223af2ff1a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169351"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054087"
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls プロパティの例 (VC++)
 この例では、[インデックス](./index-object-adox.md)の[IndexNulls](./indexnulls-property-adox.md)プロパティを示します。 このコードは、新しいインデックスを作成し、ユーザー入力に基づいて **IndexNulls** の値を設定します。 次に、 *Northwind* [カタログ](./catalog-object-adox.md)の **Employees** [テーブル](./table-object-adox.md)に **インデックス** が追加されます。 **Employees** テーブルに基づいて [レコードセット](../ado-api/recordset-object-ado.md)に新しい **インデックス** が適用され、**レコードセット** が開かれます。 **Employees** テーブルに新しいレコードが追加され、インデックス付きフィールドに **Null** 値が設定されます。 この新しいレコードが表示されるかどうかは、 **IndexNulls** プロパティの設定によって異なります。  

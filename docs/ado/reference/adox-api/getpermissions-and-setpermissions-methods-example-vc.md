@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0fea6bc28e857b9d61d7aa429206fad6a2bb48c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a1a120af3c438876f97e5458308769c94c07c0ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172067"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054187"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions および SetPermissions メソッドの例 (VC++)
 この例では、 [Getpermissions](./getpermissions-method-adox.md) メソッドと [SetPermissions](./setpermissions-method-adox.md) メソッドを示します。 次のコードは、Orders テーブルへのフルアクセスを管理ユーザーに提供します。  

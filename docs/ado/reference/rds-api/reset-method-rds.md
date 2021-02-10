@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4d1fa7427fd4c55ea8c53702ef4ac6a4a68b9b8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2acfa0ad906070e36aeefb94decd8eec76b25713
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166133"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052943"
 ---
 # <a name="reset-method-rds"></a>Reset メソッド (RDS)
 指定された並べ替えとフィルターのプロパティに基づいて、クライアント側の **レコードセット** に対して並べ替えまたはフィルター処理を実行します。  
@@ -41,7 +41,7 @@ DataControl.Reset(value)
  *value*  
  任意。 現在の "フィルター処理された" 行セットをフィルター処理する場合は **True** (**既定値)** です。 **False** は、前のフィルターオプションを削除して、元の行セットに対してフィルター処理を行うことを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [Sortcolumn](./sortcolumn-property-rds.md)、 [sortcolumn](./sortdirection-property-rds.md)、 [filtervalue](./filtervalue-property-rds.md)、 [filterfilter、](./filtercriterion-property-rds.md)および[filtervalue](./filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能は、1つの列の値でレコードを並べ替えます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な [レコードセット](../ado-api/recordset-object-ado.md) はキャッシュ内に保持されます。 **Reset** メソッドは、条件を実行し、現在の **レコードセット** を更新可能な **レコードセット** に置き換えます。  
   
  送信されていない元のデータに変更があった場合、 **Reset** メソッドは失敗します。 まず、 [SubmitChanges](./submitchanges-method-rds.md) メソッドを使用して、読み取り/書き込み **レコードセット** への変更を保存した後、 **Reset** メソッドを使用してレコードの並べ替えまたはフィルター処理を行います。  

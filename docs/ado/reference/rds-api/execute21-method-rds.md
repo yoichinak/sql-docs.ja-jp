@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92ec3f1eb3cf5504bd2a64322e91640bd9518a2e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8bd48d561f9b21997df0f7a77a993f95900e8cdb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168995"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053223"
 ---
 # <a name="execute21-method-rds"></a>Execute21 メソッド (RDS)
 要求を実行し、ado 2.1 で使用する ADO レコードセットを作成します。  
@@ -70,7 +70,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  パラメーター定義のセーフ配列を含むバリアント。 [ *GetInfo* ] オプションが *lexecuteoptions* で指定されている場合、このパラメーターを使用して、OLE DB プロバイダーから取得したパラメーター定義が返されます。 それ以外の場合、このパラメーターは空になることがあります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *ハンドラー文字列* パラメーターは null にすることができます。 この場合の動作は、RDS サーバーの構成方法によって異なります。 "MSDFMAP. handler" のハンドラー文字列は、Microsoft 提供のハンドラー (Msdfmap.dll) を使用する必要があることを示します。 "sample.ini" のハンドラー文字列は、Msdfmap.dll ハンドラーを使用する必要があり、引数 "sample.ini" をハンドラーに渡す必要があることを示します。 MSDFMAP.dll は、sample.ini を使用して接続とクエリ文字列を確認する方向として引数を解釈します。  
   
 > [!NOTE]

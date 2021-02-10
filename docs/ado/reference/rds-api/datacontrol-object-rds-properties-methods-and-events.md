@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b1433924be05693a51083360d8df85870d5dfc3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4c820b3df9be713a1a060fbcd3ddcb81c6d00fe2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163847"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053253"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>DataControl オブジェクト (RDS) のプロパティ、メソッド、およびイベント
 > [!IMPORTANT]
@@ -70,7 +70,7 @@ ms.locfileid: "99163847"
   
  [SubmitChanges メソッド (RDS)](./submitchanges-method-rds.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [onError イベント (RDS)](./onerror-event-rds.md)  
   
  [onReadyStateChange イベント (RDS)](./onreadystatechange-event-rds.md)  

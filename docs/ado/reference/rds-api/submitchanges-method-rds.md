@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 052c131cb430d911d37f6782565c00a1d3cc53d0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9e10cc6cee75234493b8f5feea22593fd1ef94f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166105"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052873"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges メソッド (RDS)
 ローカルにキャッシュされたレコードセットと更新可能な [レコードセット](../ado-api/recordset-object-ado.md) の保留中の変更を、 [接続](./connect-property-rds.md) プロパティまたは [URL](./url-property-rds.md) プロパティで指定されたデータソースに送信します。  
@@ -47,7 +47,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *レコードセット*  
  **レコードセット** オブジェクトを表すオブジェクト変数です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  RDS で **SubmitChanges** メソッドを使用するには、先に [Connect](./connect-property-rds.md)、 [Server](./server-property-rds.md)、および [SQL](./sql-property.md)の各プロパティを設定する必要があり **ます。DataControl** オブジェクト。  
   
  同じ **レコードセット** オブジェクトに対して **SubmitChanges** を呼び出した後に [cancelupdate](./cancelupdate-method-rds.md)メソッドを呼び出すと、変更が既にコミットされているため、 **cancelupdate** 呼び出しは失敗します。  

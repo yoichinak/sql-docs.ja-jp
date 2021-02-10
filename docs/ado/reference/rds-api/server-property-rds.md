@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 373b43f3540d0dcb99349ca34d0a424bc6235f73
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: cc6262e9748a4fd94fd7f4e0a75214c24def0acb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166129"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052933"
 ---
 # <a name="server-property-rds"></a>Server プロパティ (RDS)
 インターネットインフォメーションサービス (IIS) 名と通信プロトコルを示します。  
@@ -117,7 +117,7 @@ DataControl.Server=""
  *DataControl*  
  RDS を表すオブジェクト変数です **。DataControl** オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  サーバーは、RDS が配置されている場所です **。DataControl** 要求 (つまり、クエリまたは更新) が処理されます。 既定では、すべての要求は、 [RDSServer DataFactory](./datafactory-object-rdsserver.md) オブジェクトである Msdfmap によって処理され [ます。ハンドラー](../../guide/remote-data-service/datafactory-customization.md) コンポーネント、および指定されたサーバー上の [MSDFMAP.INI](../../guide/remote-data-service/understanding-the-customization-file.md) ファイル。 古いファイルと新しい **MSDFMAP.INI** ファイルの設定を調整するようにサーバーを変更する場合は注意してください。 非互換性があると、あるサーバーで成功した要求が別のサーバーで失敗する可能性があります。 サーバープロパティが空の文字列 "" に設定されている場合、これらのオブジェクトはローカルコンピューターで使用されます。  
   
 ## <a name="applies-to"></a>適用対象  

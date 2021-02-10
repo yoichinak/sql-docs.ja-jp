@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c24b191e11f95428b80a9ecfb3cced4f605e3e76
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c293915a847a150719754c1df0f9389be3efb863
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166093"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052913"
 ---
 # <a name="sql-property"></a>SQL プロパティ
 [レコードセット](../ado-api/recordset-object-ado.md)を取得するために使用するクエリ文字列を示します。  
@@ -44,7 +44,7 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  RDS を表すオブジェクト変数です **。DataControl** オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  一般に、これは (データベースサーバーの言語を使用した) SQL ステートメントです `"Select * from NewTitles"` 。 レコードが正確に一致して更新されるように、更新可能なクエリには、長いバイナリフィールドまたは計算フィールド以外のフィールドを含める必要があります。  
   
  カスタムのサーバー側ビジネスオブジェクトがクライアントのデータを取得する場合、 **SQL** プロパティは省略可能です。  

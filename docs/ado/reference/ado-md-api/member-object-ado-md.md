@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13831b47dc9c571d02971881626cc555610faf2f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 36c5220d99d9f5bfb8bd8d711f93380e837111f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164492"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054517"
 ---
 # <a name="member-object-ado-md"></a>Member オブジェクト (ADO MD)
 キューブ内のレベルのメンバー、レベルのメンバーの子、またはセルセットの軸に沿った位置のメンバーを表します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  メンバーのプロパティは、 **メンバー** が使用されているコンテキストによって異なります。 [CubeDef](./cubedef-object-ado-md.md)の [レベル](./level-object-ado-md.md)の **メンバー** には、現在の **メンバー** から階層内の次の下位レベルにある **メンバー** を返す [Children](./children-property-ado-md.md)プロパティがあります。 [位置](./position-object-ado-md.md)の **メンバー** の場合、**子** コレクションは常に空です。 また、 [Type](./type-property-ado-md.md)プロパティは、**レベル** の **メンバー** にのみ適用されます。  
   
  **Position** の **メンバー** には、[セルセット](./cellset-object-ado-md.md)を表示するときに便利な2つのプロパティがあります。 [Drilleddown](./drilleddown-property-ado-md.md)および [parentsameasprev](./parentsameasprev-property-ado-md.md)。 **レベル** の **メンバー** でこれらのプロパティにアクセスすると、エラーが発生します。  

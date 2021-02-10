@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a23921220da6cd91d2af8b8f7aac5197301c9175
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8657feb52c09f8d4ef04517985201d9a2aa8f80c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172078"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054207"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner メソッド (ADOX)
 [カタログ](./catalog-object-adox.md)内のオブジェクトの所有者を返します。  
@@ -47,7 +47,7 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  *ObjectTypeId*  
  任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す **バリアント** 値です。 *ObjectType* が **Adpermobjproviderspecific** に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  プロバイダーがオブジェクトの所有者を返すことをサポートしていない場合、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  

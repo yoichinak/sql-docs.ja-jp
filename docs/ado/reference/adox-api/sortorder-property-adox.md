@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff50a29404b063ee8f7eee2d88d93c2ac2cbcf6e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 939630bea7346d1c4602fb04a6d9ed21a7b3fef7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169202"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053513"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder プロパティ (ADOX)
 列の並べ替え順序を示します (インデックス列のみ)。  
@@ -33,7 +33,7 @@ ms.locfileid: "99169202"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  は、 [Sortorderenum](./sortorderenum.md)定数のいずれかを指定できる **Long 型** の値を設定して返します。 既定値は **adSortAscending** です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このプロパティは、[インデックス](./index-object-adox.md)の[Columns](./columns-collection-adox.md)コレクション内の[Column](./column-object-adox.md)オブジェクトにのみ適用されます。  
   
 ## <a name="applies-to"></a>適用対象  
