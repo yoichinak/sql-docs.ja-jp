@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2872340341c6b576a11d52a0b867fdbcd04389b4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d0e59c52ee311c5172b3cdc15f58c5e9448f7110
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723014"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036401"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>手順 1:サーバー プログラムを指定する (RDS チュートリアル)
 最も一般的なケースとして、RDS を使用し[ます。](../../reference/rds-api/dataspace-object-rds.md)既定のサーバープログラム、 [RDSServer DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)、または独自のカスタムサーバープログラム (business オブジェクト) を指定するための、ユーザースペースオブジェクトの[CreateObject](../../reference/rds-api/createobject-method-rds.md)メソッド。 サーバープログラムはサーバー上でインスタンス化され、サーバープログラム ( *プロキシ*) への参照が返されます。  

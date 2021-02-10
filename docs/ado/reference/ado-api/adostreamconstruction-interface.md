@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1138d00d291ffdabf415177a948bf87b1c6502a8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a13cf110fe4b7bd13ad5ce69da23794f5e6d76f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171583"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035642"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction インターフェイス
 **ADOStreamConstruction** インターフェイスは、C/c + + アプリケーションの OLE DB **ISTREAM** オブジェクトから ADO **ストリーム** オブジェクトを構築するために使用されます。  
@@ -33,9 +33,9 @@ ms.locfileid: "99171583"
 |[Stream](./stream-property.md)|読み取り/書き込み。 OLE DB **ストリーム** オブジェクトを取得/設定します。|  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="remarks"></a>解説  
@@ -66,7 +66,7 @@ adoStrConstruct->put_Stream(pUnk);
   
  結果の `adoStr` オブジェクトは、OLE DB **IStream** オブジェクトから構築された ADO **ストリーム** オブジェクトを表します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **バージョン:** ADO 2.0 以降のバージョン  
   
  **ライブラリ:** msado15.dll  

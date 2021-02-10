@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efcb376c9ad27dff5a0c85d73f70ae4000385e3d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 318bb7478bdbc6f3b4007f788045438cdb91dfe3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159235"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035922"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection プロパティ (ADO)
 指定した[コマンド](./command-object-ado.md)、[レコードセット](./recordset-object-ado.md)、または[レコード](./record-object-ado.md)オブジェクトが現在どの[接続](./connection-object-ado.md)オブジェクトに属しているかを示します。  
@@ -31,10 +31,10 @@ ms.locfileid: "99159235"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  接続が閉じられている場合は接続の定義を含む **文字列** 値、または接続が開いている場合は現在の **接続** オブジェクトを含む **バリアント** を設定または返します。 既定値は null オブジェクト参照です。 [ConnectionString](./connectionstring-property-ado.md)プロパティを参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **ActiveConnection** プロパティを使用して、指定した **コマンド** オブジェクトを実行する **接続** オブジェクトを決定します。指定した **レコードセット** が開かれます。  
   
-## <a name="command"></a>command  
+## <a name="command"></a>コマンド  
  **Command** オブジェクトの場合、 **ActiveConnection** プロパティは読み取り/書き込み可能です。  
   
  このプロパティを開いている **接続** オブジェクトまたは有効な接続文字列に設定する前に **Command** オブジェクトで [Execute](./execute-method-ado-command.md)メソッドを呼び出そうとすると、エラーが発生します。  

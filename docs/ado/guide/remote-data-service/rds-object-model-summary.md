@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 456bfdf7e41b10c4a42708eabb21b485de463ca7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 67f6cdaeea36e5ed13e28a7674a0bb4b3d6ef3f2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721423"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036462"
 ---
 # <a name="rds-object-model-summary"></a>RDS オブジェクト モデルの概要
 > [!IMPORTANT]
@@ -28,8 +28,8 @@ ms.locfileid: "91721423"
 |Object|説明|  
 |------------|-----------------|  
 |[RDS.DataSpace](../../reference/rds-api/dataspace-object-rds.md)|このオブジェクトには、サーバープロキシを取得するメソッドが含まれています。 既定のプロキシまたはカスタムサーバープログラム (ビジネスオブジェクト) を指定できます。 サーバープログラムは、インターネット、イントラネット、ローカルエリアネットワーク、またはローカルダイナミックリンクライブラリで呼び出すことができます。<br /><br /> オブジェクト **スペース** オブジェクトは、スクリプト作成には安全です。|  
-|[RDSServer DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)|このオブジェクトは、既定のサーバープログラムを表します。 RDS のデータの取得と更新の既定の動作を実行します。<br /><br /> **DataFactory**オブジェクトは、スクリプト作成には安全ではありません。|  
-|[RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md)|このオブジェクトは、RDS を自動的に呼び出すことができ **ます。RDSServer オブジェクトと** **DataFactory** オブジェクト。<br /><br /> このオブジェクトを使用して、RDS データの既定の取得または更新動作を呼び出します。<br /><br /> このオブジェクトには、返された **レコードセット** オブジェクトにアクセスするためのビジュアルコントロールの手段も用意されています。<br /><br /> **DataControl**オブジェクトは、スクリプト作成には安全です。|  
+|[RDSServer DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)|このオブジェクトは、既定のサーバープログラムを表します。 RDS のデータの取得と更新の既定の動作を実行します。<br /><br /> **DataFactory** オブジェクトは、スクリプト作成には安全ではありません。|  
+|[RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md)|このオブジェクトは、RDS を自動的に呼び出すことができ **ます。RDSServer オブジェクトと** **DataFactory** オブジェクト。<br /><br /> このオブジェクトを使用して、RDS データの既定の取得または更新動作を呼び出します。<br /><br /> このオブジェクトには、返された **レコードセット** オブジェクトにアクセスするためのビジュアルコントロールの手段も用意されています。<br /><br /> **DataControl** オブジェクトは、スクリプト作成には安全です。|  
   
 ## <a name="see-also"></a>参照  
  [RDS の基礎](./rds-fundamentals.md)   

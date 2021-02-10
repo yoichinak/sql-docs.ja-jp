@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e4cafeaf590c07ec52153a2932de3e105e26950
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7129254d609e1bd80853ccf5008527bfbf938c30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723103"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036382"
 ---
 # <a name="running-business-objects-in-component-services"></a>コンポーネント サービスでのビジネス オブジェクトの実行
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "91723103"
 -   .Dll ファイルとして作成されたビジネスオブジェクトは、IIS を介して使用することも、HTTP で使用することもできます。 また、Windows NT を使用している場合は、コンポーネントサービスまたは Microsoft トランザクションサーバーを介して DCOM 経由でのみ使用できます。 IIS を使用してアクセスするには、ビジネスオブジェクト Dll を IIS サーバーコンピューターに登録する必要があります。 DLL を DCOM 上で実行するように構成する方法の詳細については、「 [dcom を有効](./enabling-a-dll-to-run-on-dcom.md)にする」セクションを参照してください。  
   
 > [!NOTE]
->  中間層のビジネスオブジェクトが **Getobjectcontext**、 **SetComplete**、および **SetAbort**を使用してコンポーネントサービスコンポーネントとして実装されている場合、ビジネスオブジェクトはコンポーネントサービス (Windows NT を使用している場合は MTS) を使用して、複数のクライアント呼び出しで状態を維持することができます。 このシナリオは、通常、信頼されたクライアントとイントラネット内のサーバーの間で実装される DCOM で実現できます。 この例では、 [RDS です。](../../reference/rds-api/dataspace-object-rds.md) クライアント側の領域スペースオブジェクトと [CreateObject](../../reference/rds-api/createobject-method-rds.md) メソッドは、トランザクションコンテキストオブジェクトと **CreateInstance** メソッドに置き換えられます。このメソッドは、 **ITransactionContext** インターフェイスによって提供され、コンポーネントサービスによって実装されます。  
+>  中間層のビジネスオブジェクトが **Getobjectcontext**、 **SetComplete**、および **SetAbort** を使用してコンポーネントサービスコンポーネントとして実装されている場合、ビジネスオブジェクトはコンポーネントサービス (Windows NT を使用している場合は MTS) を使用して、複数のクライアント呼び出しで状態を維持することができます。 このシナリオは、通常、信頼されたクライアントとイントラネット内のサーバーの間で実装される DCOM で実現できます。 この例では、 [RDS です。](../../reference/rds-api/dataspace-object-rds.md) クライアント側の領域スペースオブジェクトと [CreateObject](../../reference/rds-api/createobject-method-rds.md) メソッドは、トランザクションコンテキストオブジェクトと **CreateInstance** メソッドに置き換えられます。このメソッドは、 **ITransactionContext** インターフェイスによって提供され、コンポーネントサービスによって実装されます。  
   
 ## <a name="see-also"></a>参照  
  [RDS の基礎](./rds-fundamentals.md)

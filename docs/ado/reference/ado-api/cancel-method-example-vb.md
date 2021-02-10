@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 821b4bd876319306f184fe095f7a45c1a0c3629a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d0464ae5bf88e93ba29c189c17ad84bcfab7387a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171523"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035482"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel メソッドの例 (VB)
 この例では、接続がビジーの場合に、 [cancel](./cancel-method-ado.md) メソッドを使用して、 [接続](./connection-object-ado.md) オブジェクトで実行されているコマンドを取り消します。  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45cf9d5bc72178e5ab56264e9f5ec3475f00eef1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: feb9d7d691c69cefb17054c6162caa5e803da1b0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171597"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035702"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction インターフェイス
 **ADORecordConstruction** インターフェイスは、C/c + + アプリケーションの OLE DB **ROW** オブジェクトから ADO **レコード** オブジェクトを構築するために使用されます。  
@@ -36,9 +36,9 @@ ms.locfileid: "99171597"
 |[行](./row-property-ado.md)|読み取り/書き込み。<br />この ADO **Record** オブジェクトから OLE DB **Row** オブジェクトを取得/設定します。|  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="remarks"></a>解説  
@@ -71,7 +71,7 @@ ms.locfileid: "99171597"
   
  ADO **レコード** オブジェクトは、OLE DB **Row** オブジェクトのコンテナーから構築することもできます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **バージョン:** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  

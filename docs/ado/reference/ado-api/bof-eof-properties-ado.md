@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71424db7a06dc8b1d5d47a3505e90ffaf175cc3b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8dd77c7bd3e7c92ec5eb970d0134db4e6e39258f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167828"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035492"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF プロパティ (ADO)
 -   **BOF** 現在のレコード位置が、 [レコードセット](./recordset-object-ado.md) オブジェクトの最初のレコードの前にあることを示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "99167828"
 ## <a name="return-value"></a>戻り値  
  **BOF** プロパティと **EOF** プロパティは、**ブール** 値を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Recordset** オブジェクトにレコードが含まれているかどうか、またはレコード間の移動時にレコード **セット** オブジェクトの制限を超えていないかどうかを判断するには、 **BOF** プロパティと **EOF** プロパティを使用します。  
   
  **BOF** プロパティは、現在のレコード位置が最初のレコードの前にある場合は **True** (-1) を返し、現在のレコード位置が最初のレコードの前後にある場合は **False** (0) を返します。  

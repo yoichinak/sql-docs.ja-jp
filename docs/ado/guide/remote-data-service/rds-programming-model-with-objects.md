@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ee41cabf8175bc7f2a34c0381193e406d33f38f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 282e272d1d830bfb20f407053a04a6d0b598c490
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724913"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036362"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS のプログラミング モデルとオブジェクト
 RDS の目標は、IIS などの中継局を介してデータソースにアクセスし、更新することです。 プログラミングモデルは、この目標を達成するために必要なアクティビティのシーケンスを指定します。 オブジェクトモデルは、メソッドとプロパティがプログラミングモデルに影響を与えるオブジェクトを指定します。  
@@ -39,7 +39,7 @@ RDS の目標は、IIS などの中継局を介してデータソースにアク
   
 -   クライアントでは、 **レコードセット** オブジェクトは、ビジュアルコントロール (ビジュアルコントロールおよび RDS) で簡単に使用できるフォームに配置され **ます。DataControl**)。  
   
--   **Recordset**オブジェクトへの変更は、サーバーに送り返され、データソースの更新に使用され**ます (RDS.DataControl**または**RDSServer**)。  
+-   **Recordset** オブジェクトへの変更は、サーバーに送り返され、データソースの更新に使用され **ます (RDS.DataControl** または **RDSServer**)。  
   
 ## <a name="see-also"></a>参照  
  [RDS オブジェクトモデルの概要](./rds-object-model-summary.md)   

@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 968a4205a12e9f6ff36c3bff512cf41ae60ca469
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: eab778d35ac9d5f1b5cefa4fdd7001a4772dc56d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167345"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035072"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 [フィールドオブジェクト](./field-object.md)の[状態](./status-property-ado-field.md)を指定します。  
   
- **Adfieldpending \** _ 値は、状態が設定される原因となった操作を示し、他のステータス値と組み合わせることができます。  
+ **Adfieldpending \*** 値は、状態が設定される原因となった操作を示し、他のステータス値と組み合わせることができます。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|_ *Adfieldexists は既に存在します**|26|指定したフィールドが既に存在することを示します。|  
+|**Adfieldexists が既に存在します**|26|指定したフィールドが既に存在することを示します。|  
 |**Adの Dbadstatus**|12|無効な状態値が ADO から OLE DB プロバイダーに送信されたことを示します。 原因としては、1.0 または1.1 プロバイダーの OLE DB、または [値](./value-property-ado.md) と [状態](./status-property-ado-field.md)の不適切な組み合わせが考えられます。|  
 |**adFieldCannotComplete**|20|は、 [Source](./source-property-ado-record.md) によって指定された URL のサーバーが操作を完了できなかったことを示します。|  
 |**adFieldCannotDeleteSource**|23|移動操作中に、ツリーまたはサブツリーが新しい場所に移動されたが、ソースを削除できなかったことを示します。|  

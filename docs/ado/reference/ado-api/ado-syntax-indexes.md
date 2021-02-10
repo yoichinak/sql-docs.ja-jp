@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a1782a6ae084dc4f2384caed471e44a287df95a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d11d6d0ef22e6bcf044ae509b7649478c4779686
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167897"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035712"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 構文のインデックス
 ADO のメソッドとプロパティを呼び出す構文は、開発環境によって異なります。 ADO 言語リファレンスの残りの部分では、Microsoft Visual Basic プログラミング言語を使用して、ADO のメソッドとプロパティの構文を説明します。 ただし、プログラミング言語と方法に基づいた、より具体的な構文例については、次のセクションを参照してください。  

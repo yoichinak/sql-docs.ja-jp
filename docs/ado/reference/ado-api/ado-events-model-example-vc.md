@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15999a2d20aa8374fcd29b007bc95035bb5f6185
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4f88253197d5f8a0ea98a1e088e840d66a25ac41
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161630"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035762"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO イベント モデルの例 (VC++)
 「 [言語による Ado イベントのインスタンス化](../../guide/data/ado-event-instantiation-by-language.md) 」の Visual C++ セクションでは、ado イベントモデルをインスタンス化する方法について一般的な説明を示します。 次に、 **#import** ディレクティブによって作成された環境内でイベントモデルをインスタンス化する具体的な例を示します。  

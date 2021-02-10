@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc5e30aef0162ecc2ffe9016e14fdfa36644aca5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 76f3311a622abbd249aa942e1ebdbda33ad06966
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724883"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036422"
 ---
 # <a name="registering-a-custom-business-object"></a>カスタム ビジネス オブジェクトの登録
 Web サーバーを使用してカスタムビジネスオブジェクト (.dll または .exe) を正常に起動するには、この手順で説明されているように、ビジネスオブジェクトの ProgID をレジストリに入力する必要があります。 この RDS 機能は、承認された実行可能ファイルのみを実行することで、Web サーバーのセキュリティを保護します。  
@@ -37,8 +37,8 @@ Web サーバーを使用してカスタムビジネスオブジェクト (.dll 
   
 2.  「 **RegEdit** 」と入力し、[ **OK]** をクリックします。  
   
-3.  レジストリエディターで、 **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\w3svc\parameters\adclaunch** レジストリキーに移動します。  
+3.  レジストリエディターで、 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch** レジストリキーに移動します。  
   
-4.  **ADCLaunch**キーを選択し、[**編集**] メニューの [**新規作成**] をポイントし、[**キー**] をクリックします。  
+4.  **ADCLaunch** キーを選択し、[**編集**] メニューの [**新規作成**] をポイントし、[**キー**] をクリックします。  
   
-5.  カスタムビジネスオブジェクトの ProgID を入力し、 **Enter キー**を押します。 **値**のエントリは空白のままにします。
+5.  カスタムビジネスオブジェクトの ProgID を入力し、 **Enter キー** を押します。 **値** のエントリは空白のままにします。

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ab7be112f27f16d25d613b21f9ecbe5b14fcbbd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7cc954c19428cf4f2c646408e668a3882fbe357c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167863"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035592"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attributes と Name プロパティの例 (VC + +)
 この例では、[接続](./connection-object-ado.md)、[フィールド](./field-object.md)、および[プロパティ](./property-object-ado.md)オブジェクトの[Attributes](./attributes-property-ado.md)プロパティの値を表示します。 [Name](./name-property-ado.md)プロパティを使用して、各 **フィールド** と **プロパティ** オブジェクトの名前を表示します。  

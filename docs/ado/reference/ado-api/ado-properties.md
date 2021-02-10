@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bdacd558161c09d1d43f590f9f355e14da262b14
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f29b56b54c2800a77ac76134f0c946f09e34a621
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164883"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035722"
 ---
 # <a name="ado-properties"></a>ADO のプロパティ
 
@@ -42,7 +42,7 @@ ms.locfileid: "99164883"
 |[CommandType](./commandtype-property-ado.md)|**Command** オブジェクトの種類を示します。|  
 |[ConnectionString プロパティ](./connectionstring-property-ado.md)|データソースへの接続を確立するために使用される情報を示します。|  
 |[ConnectionTimeout](./connectiontimeout-property-ado.md)|接続の確立中に、試行を終了してエラーを生成するまでの待機時間を示します。|  
-|[カウント](./count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
+|[Count](./count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
 |[CursorLocation](./cursorlocation-property-ado.md)|カーソルサービスの場所を示します。|  
 |[CursorType](./cursortype-property-ado.md)|**レコードセット** オブジェクトで使用されるカーソルの種類を示します。|  
 |[DataMember](./datamember-property.md)|**DataSource** プロパティによって参照されるオブジェクトから取得されるデータメンバーの名前を示します。|  
@@ -66,7 +66,7 @@ ms.locfileid: "99164883"
 |[モード](./mode-property-ado.md)|**接続**、**レコード**、または **ストリーム** オブジェクトのデータを変更するために使用できるアクセス許可を示します。|  
 |[名前](./name-property-ado.md)|オブジェクトの名前を示します。|  
 |[NativeError](./nativeerror-property-ado.md)|特定の **エラー** オブジェクトのプロバイダー固有のエラーコードを示します。|  
-|[Number](./number-property-ado.md)|**エラー** オブジェクトを一意に識別する番号を示します。|  
+|[数値](./number-property-ado.md)|**エラー** オブジェクトを一意に識別する番号を示します。|  
 |[NumericScale](./numericscale-property-ado.md)|**パラメーター** または **フィールド** オブジェクトの数値の小数点以下桁数を示します。|  
 |[OriginalValue](./originalvalue-property-ado.md)|変更が行われる前にレコード内に存在していた **フィールド** の値を示します。|  
 |[PageCount](./pagecount-property-ado.md)|**Recordset** オブジェクトに格納されているデータのページ数を示します。|  
@@ -95,7 +95,7 @@ ms.locfileid: "99164883"
 |[型 (ADO ストリーム)](./type-property-ado-stream.md)|**ストリーム** に格納されているデータの型 (バイナリまたはテキスト) を示します。|  
 |[UnderlyingValue](./underlyingvalue-property.md)|**Field** オブジェクトのデータベースの現在の値を示します。|  
 |[Value](./value-property-ado.md)|**フィールド**、**パラメーター**、または **プロパティ** オブジェクトに割り当てられた値を示します。|  
-|[バージョン](./version-property-ado.md)|ADO のバージョン番号を示します。|  
+|[Version](./version-property-ado.md)|ADO のバージョン番号を示します。|  
   
 ## <a name="see-also"></a>参照  
  [ADO API リファレンス](./ado-api-reference.md)   

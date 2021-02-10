@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 781d20047b170ec5f3d1fc480d65cfc684735f84
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5f5b8019bedb2273c15ee3362f7fd3cb9688308e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161037"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035979"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage プロパティ (ADO)
 現在のレコードが存在するページを示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "99161037"
   
  64ビットコードの場合は、64ビット値を格納するためにに用意されているデータ型を使用します。 たとえば、 **Long 型** の値を使用することも、dbordinal などの64ビットの長さになる別の値を使用することもできます。 **Positionenum** 値は、32ビットの長さに制限されているため、使用しないでください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このプロパティは、現在のレコードが配置されているページ番号を識別するために使用できます。 この例では、 [pagesize](./pagesize-property-ado.md) プロパティを使用して、レコード **セット** オブジェクトの合計行セット数を一連のページに論理的に分割しています。各ページには、レコード数が **pagesize** に等しいものが含まれています (最後のページを除き、レコードが少なくなる場合があります)。 このプロパティを使用できるようにするには、プロバイダーが適切な機能をサポートしている必要があります。  
   
 -   **AbsolutePage** プロパティを取得または設定するとき、ADO は [AbsolutePosition](./absoluteposition-property-ado.md)プロパティと [PageSize](./pagesize-property-ado.md)プロパティを次のように一緒に使用します。  

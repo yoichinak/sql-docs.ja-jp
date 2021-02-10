@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73aebee4e19b8f10f452cdcd89519278cbc0cf77
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b6383e5f7d916321c7e1274048c0cbc8fdf45e2e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161012"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035952"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand プロパティの例 (JScript)
 この例では、 [activecommand](./activecommand-property-ado.md) プロパティを示します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **ActiveCommandJS** として保存します。  

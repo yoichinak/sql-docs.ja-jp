@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7abcebce9f587260d7147745ab99c2b4cecc78a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 937f70d50abb1422f069d555695744c26639dccf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167882"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035602"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk メソッド (ADO)
 大きなテキストまたはバイナリデータ [フィールド](./field-object.md)、または [パラメーター](./parameter-object.md) オブジェクトにデータを追加します。  
@@ -41,7 +41,7 @@ object.AppendChunk Data
  *データ*  
  オブジェクトに追加するデータを格納している **バリアント** 。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **フィールド** または **パラメーター** オブジェクトに対して **appendchunk** メソッドを使用して、長いバイナリまたは文字データを格納します。 システムメモリが制限されている場合は、 **Appendchunk** メソッドを使用して、長い値を全体ではなく部分的に操作することができます。  
   
 ## <a name="field"></a>フィールド  

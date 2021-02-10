@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd98478cad7c13b2f4e6950586c1317c1d5d37dd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1dd1fa22a1d767bd869807233013979c0be4401a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164909"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035732"
 ---
 # <a name="ado-methods"></a>ADO メソッド
 
@@ -32,7 +32,7 @@ ms.locfileid: "99164909"
 |[キャンセル](./cancel-method-ado.md)|保留中の非同期メソッド呼び出しの実行を取り消します。|  
 |[CancelBatch](./cancelbatch-method-ado.md)|保留中のバッチ更新をキャンセルします。|  
 |[CancelUpdate](./cancelupdate-method-ado.md)|**Update** メソッドを呼び出す前に、**レコードセット** オブジェクトの現在または新しい行、または **レコード** オブジェクトの **Fields** コレクションに対して行われたすべての変更を取り消します。|  
-|[Clear](./clear-method-ado.md)|**エラーコレクションから** すべての **エラー** オブジェクトを削除します。|  
+|[[クリア]](./clear-method-ado.md)|**エラーコレクションから** すべての **エラー** オブジェクトを削除します。|  
 |[複製](./clone-method-ado.md)|既存の **レコード** セットオブジェクトから、重複する **レコードセット** オブジェクトを作成します。 必要に応じて、複製が読み取り専用であることを指定します。|  
 |[閉じる](./close-method-ado.md)|開いているオブジェクトとすべての依存オブジェクトを閉じます。|  
 |[CompareBookmarks](./comparebookmarks-method-ado.md)|2つのブックマークを比較し、それらの相対値を示す値を返します。|  
@@ -76,7 +76,7 @@ ms.locfileid: "99164909"
 |[SkipLine](./skipline-method.md)|テキストストリームを読み取るときに、1行全体をスキップします。|  
 |[stat](./stat-method.md)|開いているストリームに関する統計情報を取得します。|  
 |[サポート](./supports-method.md)|指定した **レコードセット** オブジェクトが特定の種類の機能をサポートするかどうかを判断します。|  
-|[更新](./update-method.md)|レコード **セット** オブジェクトの現在の行、または **レコード** オブジェクトの **Fields** コレクションに対して行ったすべての変更を保存します。|  
+|[アップデート](./update-method.md)|レコード **セット** オブジェクトの現在の行、または **レコード** オブジェクトの **Fields** コレクションに対して行ったすべての変更を保存します。|  
 |[UpdateBatch](./updatebatch-method.md)|すべての保留中のバッチ更新をディスクに書き込みます。|  
 |[書き込み](./write-method.md)|バイナリデータを **ストリーム** オブジェクトに書き込みます。|  
 |[WriteText](./writetext-method.md)|指定したテキスト文字列を **ストリーム** オブジェクトに書き込みます。|  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d3d765cbeba49a5c34bbc5529d833cefc5bb1ab
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0a074ca1e5f50e9d9b634fd67cfceeae353c436e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167908"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035752"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO Dynamic プロパティ インデックス
 データプロバイダー、サービスプロバイダー、およびサービスコンポーネントは、開かれていない [接続](./connection-object-ado.md)および [レコードセット](./recordset-object-ado.md)オブジェクトの **プロパティ** コレクションに動的なプロパティを追加できます。 また、これらのオブジェクトを開いたときに、指定したプロバイダーによって追加のプロパティが挿入される場合もあります。 これらのプロパティの一部は、「 [ADO Dynamic properties](./ado-dynamic-properties.md) 」セクションに一覧表示されています。 詳細については、 [「付録 a: providers](../../guide/appendixes/appendix-a-providers.md) 」セクションの特定のプロバイダーに記載されています。  
