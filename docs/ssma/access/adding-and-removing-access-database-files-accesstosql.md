@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12c51ce9a3b4bdd83a1d1c4c7295f2ff438bc707
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d8443eaceb150bd0cf2c936e44cb29fc2292f89c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987718"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042036"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Access データベースファイルの追加と削除 (アクセス許可 Sql)
 アクセスデータをまたは SQL Azure に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、SSMA プロジェクトに1つ以上の access データベースを追加する必要があります。 これらのデータベースは、97以降のバージョンにアクセスする必要があります。 以前のバージョンの Access のデータベースがある場合は、データベースを新しいバージョンに変換する必要があります。 これを行うには、データベースを SSMA に追加する前に Access 97 以降のバージョンで開いて保存します。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 20c47935963473b7b6aced7d6b3eed4a53afbeac
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9d956167cd6a4cea41d9381996a0418b2cd5f4c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987518"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044942"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>サーバー接続ファイルの作成 (の場合)
 サーバー情報は、スクリプトファイルの [サーバー] セクションで指定できます。 サーバー情報は、別のサーバー接続ファイルで指定することもできます。 サーバー接続ファイルのコマンドラインパラメーターが `-c <serverconnectionfile>` です。 スクリプトファイルとサーバー接続ファイルの両方に同じサーバー id が存在する場合は、スクリプトファイル内のサーバー定義が考慮されます。  
@@ -64,7 +64,7 @@ ms.locfileid: "91987518"
 ## <a name="server-connection-file-validation"></a>サーバー接続ファイルの検証  
 ユーザーは、' スキーマ ' フォルダーで使用可能なスキーマ定義ファイル **' A2SSConsoleScriptServersSchema '** に対して、サーバー接続ファイルを簡単に検証できます。  
   
-## <a name="next-step"></a>次の手順  
+## <a name="next-step"></a>次のステップ  
 コンソールを操作する次の手順では、 [SSMA コンソール &#40;実行](../../ssma/access/executing-the-ssma-console-accesstosql.md)して、sql&#41;  
   
 ## <a name="see-also"></a>関連項目  

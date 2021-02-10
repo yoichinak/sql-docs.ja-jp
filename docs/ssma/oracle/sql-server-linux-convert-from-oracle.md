@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 1d28458896d4ae4806db1b0f705c5e33badddfb7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fb21fdc7da82d6dae2390ddcf0884ea1e8ac8a58
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932753"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044392"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant を使用して Oracle スキーマを Linux 上の SQL Server 2017 に移行する
 
-このチュートリアルでは、Windows 上の Oracle の SQL Server Migration Assistant (SSMA) を使用して、 [Linux 上](../../linux/sql-server-linux-overview.md)の Oracle サンプル**HR**スキーマを SQL Server 2017 に変換します。
+このチュートリアルでは、Windows 上の Oracle の SQL Server Migration Assistant (SSMA) を使用して、 [Linux 上](../../linux/sql-server-linux-overview.md)の Oracle サンプル **HR** スキーマを SQL Server 2017 に変換します。
 
 > [!div class="checklist"]
 > * SSMA を Windows にダウンロードしてインストールする
@@ -30,18 +30,18 @@ ms.locfileid: "87932753"
 
 ## <a name="prerequisites"></a>前提条件
 
-- **HR**スキーマがインストールされた Oracle 12c (12.2.0.1.0) のインスタンス
+- **HR** スキーマがインストールされた Oracle 12c (12.2.0.1.0) のインスタンス
 - SQL Server on Linux の作業インスタンス
 
 > [!NOTE]
-> 同じ手順を使用して Windows 上の SQL Server を対象にすることもできますが、[プロジェクト**に移行**] 設定で windows を選択する必要があります。
+> 同じ手順を使用して Windows 上の SQL Server を対象にすることもできますが、[プロジェクト **に移行** ] 設定で windows を選択する必要があります。
 
 ## <a name="download-and-install-ssma-for-oracle"></a>SSMA for Oracle のダウンロードとインストール
 
 ソースデータベースによっては、使用可能な SQL Server Migration Assistant のエディションがいくつかあります。  [Oracle 用の SQL Server Migration Assistant](https://aka.ms/ssmafororacle)の現在のバージョンをダウンロードし、ダウンロードページの指示に従ってインストールします。
 
 > [!NOTE]
-> 現時点では、 **Ssma For Oracle Extension Pack**は Linux ではサポートされていませんが、このチュートリアルでは必要ありません。
+> 現時点では、 **Ssma For Oracle Extension Pack** は Linux ではサポートされていませんが、このチュートリアルでは必要ありません。
 
 ## <a name="create-and-set-up-project"></a>プロジェクトの作成と設定
 
@@ -51,13 +51,13 @@ ms.locfileid: "87932753"
 
 1. プロジェクトに名前を付けます。
 
-1. [**移行先**] フィールドで、[SQL Server 2017 (Linux)-Preview] を選択します。
+1. [ **移行先** ] フィールドで、[SQL Server 2017 (Linux)-Preview] を選択します。
 
 SSMA for Oracle では、既定では Oracle サンプルスキーマが使用されません。 HR スキーマを有効にするには、次の手順に従います。
 
-1. SSMA で、[**ツール**] メニューを選択します。
+1. SSMA で、[ **ツール** ] メニューを選択します。
 
-1. [**既定のプロジェクト設定**] を選択し、[**システムオブジェクトの読み込み**] を選択します。
+1. [ **既定のプロジェクト設定**] を選択し、[ **システムオブジェクトの読み込み**] を選択します。
 
 1. [ **HR** ] がオンになっていることを確認し、[ **OK]** を選択します。
 
@@ -77,9 +77,9 @@ SSMA for Oracle では、既定では Oracle サンプルスキーマが使用�
 
 移行レポートを生成するには、次の手順に従います。
 
-1. **Oracle メタデータエクスプローラー**で、サーバーのノードを展開します。
+1. **Oracle メタデータエクスプローラー** で、サーバーのノードを展開します。
 
-1. [**スキーマ**] を展開し、[ **HR**] を右クリックして、[**レポートの作成**] を選択します。
+1. [ **スキーマ**] を展開し、[ **HR**] を右クリックして、[ **レポートの作成**] を選択します。
 
    ![Oracle メタデータエクスプローラーのレポートの作成](./media/sql-server-linux-convert-from-oracle/CreateReport.png)
 
@@ -98,7 +98,7 @@ SSMA for Oracle では、既定では Oracle サンプルスキーマが使用�
 
 ## <a name="convert-schema"></a>スキーマの変換
 
-**Oracle メタデータエクスプローラー**で**HR**を右クリックし、[スキーマの変換] を選択します。
+**Oracle メタデータエクスプローラー** で **HR** を右クリックし、[スキーマの変換] を選択します。
 
 ![スキーマの変換](./media/sql-server-linux-convert-from-oracle/ConvertSchema.png)
 
@@ -106,9 +106,9 @@ SSMA for Oracle では、既定では Oracle サンプルスキーマが使用�
 
 次に、データベースを同期します。
 
-1. 変換が完了したら、 **SQL Server メタデータエクスプローラー**を使用して、前の手順で作成したデータベースにアクセスします。
+1. 変換が完了したら、 **SQL Server メタデータエクスプローラー** を使用して、前の手順で作成したデータベースにアクセスします。
 
-1. データベースを右クリックし、[**データベースとの同期**] を選択して、[OK] をクリックします。
+1. データベースを右クリックし、[ **データベースとの同期**] を選択して、[OK] をクリックします。
 
    ![データベースとの同期](./media/sql-server-linux-convert-from-oracle/SynchronizeWithDatabase.png)
 
@@ -116,7 +116,7 @@ SSMA for Oracle では、既定では Oracle サンプルスキーマが使用�
 
 最後の手順は、データを移行することです。
 
-1. **Oracle メタデータエクスプローラー**で、[ **HR**] を右クリックし、[**データの移行**] を選択します。
+1. **Oracle メタデータエクスプローラー** で、[ **HR**] を右クリックし、[**データの移行**] を選択します。
 
 1. データ移行手順では、Oracle と SQL Server の資格情報を再入力する必要があります。
 

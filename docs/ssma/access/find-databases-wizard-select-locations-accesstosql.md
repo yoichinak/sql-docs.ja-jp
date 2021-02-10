@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1babfbf6364371cbd1f96b310f29416b84f2b031
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9ab968b72ccffacb776985c8aa43b4210e98324a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984948"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044593"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>データベースの検索ウィザード ([場所の選択])
 データベースの検索ウィザードの [場所の選択] ページで、Access データベースを検索するための検索パラメーターを入力します。  
@@ -40,7 +40,7 @@ SSMA がスキャンする場所を一覧表示します。 [ **追加** ] ボ�
 **Replace**  
 場所の一覧の項目が選択されている場合は、[パス] テキストボックス内の項目が選択した項目に置き換わります。  
   
-**[削除]**  
+**削除**  
 検索する場所の一覧から選択した項目を削除します。  
   
 **ファイル名の全体または一部**  
@@ -56,7 +56,7 @@ SSMA がスキャンする場所を一覧表示します。 [ **追加** ] ボ�
 サイズの条件に一致するデータベースを検索するには、最初のボックスで比較文字を選択し、サイズの数値を入力して、3番目のボックスの [バイト]、[キロバイト]、または [メガバイト] を選択します。  
   
 **所有者**  
-所有者の完全な Windows ユーザー名を入力します。 これは、*ドメイン*ユーザーとしてフォーマットされている可能性があり \\ *user*ます。  
+所有者の完全な Windows ユーザー名を入力します。 これは、*ドメイン* ユーザーとしてフォーマットされている可能性があり \\ ます。  
   
 ## <a name="see-also"></a>参照  
 [Access データベースファイルの追加と削除](adding-and-removing-access-database-files-accesstosql.md)  

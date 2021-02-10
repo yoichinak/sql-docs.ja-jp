@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d1bcf2cdc9997ea33be87184c38447b7cd62973
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c2804bbc185a3aa17d7f50d85b9ef6c2cc84d002
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091608"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044649"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>DMA で企業を評価し評価レポートを統合する
 
@@ -110,7 +110,7 @@ CSV ファイルに対して SQL Server テーブルを使用する利点は、[
 
 - ServerName
 - InstanceName
-- ポート
+- Port
 - AssessmentFlag
 
 ![インスタンスインベントリを使用している場合の SQL Server テーブルの内容のスクリーンショット。](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0b5dfe862f48b2669d0535066fe36e4a892c5dfa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fee1620c3352ff8756f2d69dc9df67f9e9bdf54a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418588"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041962"
 ---
 # <a name="advanced-object-selection--accesstosql"></a>高度なオブジェクトの選択 (拡張機能 Sql)
 [オブジェクトの **詳細設定** ] ダイアログボックスでは、オブジェクト名に文字列と部分文字列を使用してデータベースオブジェクトをフィルター処理し、そのオブジェクトを選択または選択解除できます。 SSMA は、選択したオブジェクトに対して変換操作と移行操作を実行します。  
@@ -48,5 +48,5 @@ ms.locfileid: "88418588"
 項目がフィルター条件に一致する場合は、文字列を入力したときにカテゴリまたは項目が表示されます。 一致する項目を表示するには、[ **読み込まれた項目のみ** ] をクリックすることをお勧めします。  
   
 **[フィルターのクリア]**  
-**フィルター**ボックスをクリアします。  
+**フィルター** ボックスをクリアします。  
   

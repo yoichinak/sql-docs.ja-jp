@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ae6b59ffe896180f5977288bbee16925b7d33b4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3e87e7ae8592afc67b049fb25c4e66392f45eb89
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170913"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041902"
 ---
 # <a name="item-property-ado"></a>Item プロパティ (ADO)
 名前または序数を指定して、コレクションの特定のメンバーを示します。  
@@ -69,7 +69,7 @@ Set object = collection.Item ( Index )
  *Index*  
  コレクション内のオブジェクトの名前または序数に評価される **バリアント** 式。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  コレクション内の特定のオブジェクトを返すには、 **Item** プロパティを使用します。 **Item** が *Index* 引数に対応するコレクション内のオブジェクトを見つけられない場合、エラーが発生します。 また、一部のコレクションでは名前付きオブジェクトがサポートされていません。これらのコレクションでは、序数参照を使用する必要があります。  
   
  **Item** プロパティは、すべてのコレクションの既定のプロパティです。したがって、次の構文形式は置き換えることができます。  

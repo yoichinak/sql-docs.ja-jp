@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ee6cf3bea905b169503851efe375fd614c4589e9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: ba2e567c5675e602cc80382d42adfcbb89bce90a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988198"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045066"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>プロジェクトの作成と管理 (管理用 Sql)
 Access データベースをまたは SQL Azure に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、まず SSMA プロジェクトを作成する必要があります。 このプロジェクトは、移行先または SQL Azure のアクセスデータベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移行されたオブジェクトとデータ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続情報、およびプロジェクト設定を受け取る SQL Azure の対象インスタンスに関するメタデータを含むファイルです。  
@@ -43,7 +43,7 @@ SSMA には、データベースオブジェクトを変換および同期した
   
 5.  必要に応じてオプションを変更します。  
   
-6.  **移行**、 **GUI**、および**種類のマッピング**ページに対して、前の手順を繰り返します。  
+6.  **移行**、 **GUI**、および **種類のマッピング** ページに対して、前の手順を繰り返します。  
   
     -   移行オプションの詳細については、「 [プロジェクトの設定 (移行)](./project-settings-migration-accesstosql.md)」を参照してください。  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 112452e9e6c31810dbf26d9aa1e7b36959c192d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bff5f86bec26994c143195fcbb97aa30ba709e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488335"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044752"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>アクセスインベントリのエクスポート (アクセス許可 Sql)
 複数の Access データベースがあり、どのデータベースに移行するかがわからない場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、プロジェクト内のすべての access データベースのインベントリをエクスポートできます。 次に、インベントリメタデータを確認してクエリを実行し、移行するデータベースとデータベース内のオブジェクトを確認できます。 このインベントリを使用すると、次のような質問に対する回答をすばやく見つけることができます。  
@@ -136,7 +136,7 @@ Access データベースに関するメタデータをエクスポートした�
   
 **メタデータを照会するには**  
   
-1.  [ **スタート** ] ボタンをクリックし、[ **すべてのプログラム**] をポイントします。次に、[ **microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** ] または [microsoft ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008** または **microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**] をポイントし、[ **SQL Server Management Studio**] をクリックします。  
+1.  [ **スタート** ] ボタンをクリックし、[ **すべてのプログラム**] をポイントします。次に、[ **microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** ] または [microsoft **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008** または **microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**] をポイントし、[ **SQL Server Management Studio**] をクリックします。  
   
 2.  [ **サーバーへの接続** ] ダイアログボックスで、設定を確認し、[ **接続**] をクリックします。  
   
@@ -227,6 +227,6 @@ WHERE ColumnName LIKE '%salary%';
 ```  
 列名がわからない場合は、すべての列を返すクエリを記述できます。 これを行うには、前のクエリから WHERE 句を削除します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)  
   

@@ -20,22 +20,22 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d622396e9e650aa3e9fc1b3855e1dfc1634bc34e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e05bc860ec1cc9f3703a1d1c17441c4e1ad3de15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938831"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044622"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>アクセスのための SQL Server Migration Assistant の概要 (アクセス用 SQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access の Migration Assistant (SSMA) を使用すると、Access データベースオブジェクトを Azure SQL Database またはオブジェクトに簡単に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、結果のオブジェクトをまたは Azure SQL Database にアップロードしたり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスからまたは Azure SQL Database にデータを移行したりすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 必要に応じて、または Azure SQL Database テーブルにアクセステーブルをリンクして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 既存のアクセスフロントエンドアプリケーションをまたは Azure SQL Database で引き続き使用できるようにすることもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access の Migration Assistant (SSMA) を使用すると、Access データベースオブジェクトを Azure SQL Database またはオブジェクトに簡単に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、結果のオブジェクトをまたは Azure SQL Database にアップロードしたり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスからまたは Azure SQL Database にデータを移行したりすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 必要に応じて、または Azure SQL Database テーブルにアクセステーブルをリンクして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 既存のアクセスフロントエンドアプリケーションをまたは Azure SQL Database で引き続き使用できるようにすることもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 このトピックでは、インストールプロセスについて説明します。 SSMA ユーザーインターフェイスについて理解するのに役立ちます。  
   
 ## <a name="installing-ssma"></a>SSMA のインストール  
-SSMA を使用するに Azure SQL Database は、まず、移行するデータベースとのターゲットインスタンスの両方にアクセスできるコンピューターに SSMA クライアントプログラムをインストールする必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 インストール手順については、「 [&#41;&#40;Access の SQL Server Migration Assistant をインストールする](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)」を参照してください。  
+SSMA を使用するに Azure SQL Database は、まず、移行するデータベースとのターゲットインスタンスの両方にアクセスできるコンピューターに SSMA クライアントプログラムをインストールする必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 インストール手順については、「 [&#41;&#40;Access の SQL Server Migration Assistant をインストールする ](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)」を参照してください。  
   
-SSMA を開始するには、[**スタート**] をクリックし、[**すべてのプログラム**] をポイントします。次に、[**アクセス SQL Server Migration Assistant**] をポイントし、[**アクセス SQL Server Migration Assistant**] を選択します。  
+SSMA を開始するには、[ **スタート**] をクリックし、[ **すべてのプログラム**] をポイントします。次に、[ **アクセス SQL Server Migration Assistant**] をポイントし、[ **アクセス SQL Server Migration Assistant**] を選択します。  
   
 ## <a name="using-ssma"></a>SSMA の使用  
 SSMA をインストールした後、このツールを使用して Access データベースをまたは Azure SQL Database に移行する前に、SSMA ユーザーインターフェイスに慣れることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA ユーザーインターフェイスは、次の図に示すように、メタデータエクスプローラー、メタデータ、ツールバー、出力ウィンドウ、および [エラー一覧] ウィンドウを含みます。  
@@ -77,19 +77,19 @@ Access Metadata Explorer を使用して、次のタスクを実行できます�
   
 -   変換するオブジェクトを選択し、オブジェクトを構文に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「 [Access データベースオブジェクトの変換](converting-access-database-objects-accesstosql.md)」を参照してください。  
   
--   データ移行用のオブジェクトを選択し、それらのオブジェクトからにデータを移行し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「SQL Server への[アクセスデータの移行](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md)」を参照してください。  
+-   データ移行用のオブジェクトを選択し、それらのオブジェクトからにデータを移行し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「SQL Server への [アクセスデータの移行](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md)」を参照してください。  
   
 -   アクセスとテーブルのリンクとリンク解除を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行います。  
   
 #### <a name="sql-server-or-azure-sql-database-metadata-explorer"></a>SQL Server または Azure SQL Database メタデータエクスプローラー  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database メタデータエクスプローラーでは、または Azure SQL Database のインスタンスに関する情報が表示さ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れます。 または Azure SQL Database のインスタンスに接続すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SSMA はそのインスタンスに関するメタデータを取得し、プロジェクトファイルに格納します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database メタデータエクスプローラーでは、または Azure SQL Database のインスタンスに関する情報が表示さ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れます。 または Azure SQL Database のインスタンスに接続すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SSMA はそのインスタンスに関するメタデータを取得し、プロジェクトファイルに格納します。  
   
 SQL Server または Azure SQL Database メタデータエクスプローラーを使用して、変換された Access データベースオブジェクトを選択し、それらのオブジェクトをのインスタンスまたは Azure SQL Database に読み込んで (同期する) ことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-詳細については、「変換された[データベースオブジェクトの SQL Server への読み込み](loading-converted-database-objects-into-sql-server-accesstosql.md)」を参照してください。  
+詳細については、「変換された [データベースオブジェクトの SQL Server への読み込み](loading-converted-database-objects-into-sql-server-accesstosql.md)」を参照してください。  
   
 ### <a name="metadata"></a>Metadata  
-各メタデータエクスプローラーの右側には、選択したオブジェクトを説明するタブがあります。 たとえば、Access Metadata Explorer でテーブルを選択すると、**テーブル**、**型マッピング**、**プロパティ**、**データ**の4つのタブが表示されます。 メタデータエクスプローラーでテーブルを選択すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、**テーブル**、 **SQL**、**データ**の3つのタブが表示されます。  
+各メタデータエクスプローラーの右側には、選択したオブジェクトを説明するタブがあります。 たとえば、Access Metadata Explorer でテーブルを選択すると、 **テーブル**、 **型マッピング**、 **プロパティ**、 **データ** の4つのタブが表示されます。 メタデータエクスプローラーでテーブルを選択すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **テーブル**、 **SQL**、 **データ** の3つのタブが表示されます。  
   
 ほとんどのメタデータ設定は読み取り専用です。 ただし、次のメタデータを変更できます。  
   
@@ -101,12 +101,12 @@ SQL Server または Azure SQL Database メタデータエクスプローラー�
 SSMA には、[プロジェクト] ツールバーと [移行] ツールバーの2つのツールバーがあります。  
   
 #### <a name="the-project-toolbar"></a>[プロジェクト] ツールバー  
-プロジェクトツールバーには、プロジェクトを操作したり、Access データベースファイルを追加したり、または Azure SQL Database に接続したりするためのボタンが含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これらのボタンは、[**ファイル**] メニューのコマンドに似ています。  
+プロジェクトツールバーには、プロジェクトを操作したり、Access データベースファイルを追加したり、または Azure SQL Database に接続したりするためのボタンが含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これらのボタンは、[ **ファイル** ] メニューのコマンドに似ています。  
   
 #### <a name="the-migration-toolbar"></a>[移行] ツールバー  
 [移行] ツールバーには、次のコマンドがあります。  
   
-|Button|機能|  
+|ボタン|Function|  
 |----------|------------|  
 |**変換、読み込み、および移行**|Access データベースを変換し、変換されたオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database に読み込み、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database に移行します。すべて1回の手順で行うことができます。|  
 |**レポートの作成**|選択したアクセススキーマを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database 構文に変換し、変換が成功したかどうかを示すレポートを作成します。<br /><br />このコマンドは、Access メタデータエクスプローラーでオブジェクトが選択されている場合にのみ使用できます。|  
@@ -120,13 +120,13 @@ SSMA には、次のメニューが含まれています。
 |メニュー|説明|  
 |--------|---------------|  
 |**[最近使ったファイル]**|移行ウィザードのコマンド、プロジェクトの操作、Access データベースファイルの追加と削除、およびへの接続と Azure SQL Database への接続が含まれ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
-|**編集**|[ [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL の詳細] ペインからコピーするなど、詳細ページ内のテキストを検索して操作するためのコマンドが含まれています。 [ブックマークの**管理**] ダイアログを開くには、[編集] メニューの [ブックマークの管理] をクリックします。 ダイアログには、既存のブックマークの一覧が表示されます。 ダイアログの右側にあるボタンを使用して、ブックマークを管理できます。|  
-|**表示**|**メタデータエクスプローラーの同期**コマンドを含みます。 これにより、Access メタデータエクスプローラーと Azure SQL Database メタデータエクスプローラーの間でオブジェクトが同期され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 には、**出力**ペインおよび**エラー一覧**ウィンドウの表示と非表示を切り替えるコマンドと、レイアウトで管理するオプション**レイアウト**も含まれています。|  
+|**編集**|[ [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL の詳細] ペインからコピーするなど、詳細ページ内のテキストを検索して操作するためのコマンドが含まれています。 [ブックマークの **管理** ] ダイアログを開くには、[編集] メニューの [ブックマークの管理] をクリックします。 ダイアログには、既存のブックマークの一覧が表示されます。 ダイアログの右側にあるボタンを使用して、ブックマークを管理できます。|  
+|**表示**|**メタデータエクスプローラーの同期** コマンドを含みます。 これにより、Access メタデータエクスプローラーと Azure SQL Database メタデータエクスプローラーの間でオブジェクトが同期され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 には、 **出力** ペインおよび **エラー一覧** ウィンドウの表示と非表示を切り替えるコマンドと、レイアウトで管理するオプション **レイアウト** も含まれています。|  
 |**ツール**|レポートの作成、データのエクスポート、オブジェクトとデータの移行、テーブルのリンク、および [グローバルおよびプロジェクトの設定] ダイアログボックスへのアクセスを行うためのコマンドが含まれています。|  
-|**ヘルプ**|SSMA ヘルプおよび [**バージョン情報**] ダイアログボックスへのアクセスを提供します。|  
+|**ヘルプ**|SSMA ヘルプおよび [ **バージョン情報** ] ダイアログボックスへのアクセスを提供します。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>出力ウィンドウとエラー一覧ペイン  
-[**表示**] メニューには、[出力] ウィンドウと [エラー一覧] ウィンドウの表示を切り替えるためのコマンドが用意されています。  
+[ **表示** ] メニューには、[出力] ウィンドウと [エラー一覧] ウィンドウの表示を切り替えるためのコマンドが用意されています。  
   
 -   [出力] ウィンドウには、オブジェクトの変換、オブジェクトの同期、およびデータ移行中に SSMA からのステータスメッセージが表示されます。  
   

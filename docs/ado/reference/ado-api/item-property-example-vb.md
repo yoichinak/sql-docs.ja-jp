@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e666705f64897baa769dd453cbbb962c883fe0b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 936c3b481d782c806346f5bb80e039066ddb92f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167184"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041892"
 ---
 # <a name="item-property-example-vb"></a>Item プロパティの例 (VB)
-この例では、 [Item](./item-property-ado.md) プロパティがコレクションのメンバーにアクセスする方法を示します。 この例では、パラメーター化されたコマンドを使用して、 _*_Pubs_*_ データベースの ***Authors** _ テーブルを開きます。  
+この例では、 [Item](./item-property-ado.md) プロパティがコレクションのメンバーにアクセスする方法を示します。 この例では、パラメーター化されたコマンドを使用して、_ *_Pubs_** データベースの ***Authors** _ テーブルを開きます。  
   
  データベースに対して発行されたコマンドのパラメーターは、 [コマンド](./command-object-ado.md) オブジェクトの [Parameters](./parameters-collection-ado.md) コレクションからインデックスと名前によってアクセスされます。 返された [レコードセット](./recordset-object-ado.md) のフィールドは、そのオブジェクトの [fields](./fields-collection-ado.md) コレクションからインデックスと名前によってアクセスされます。  
   
@@ -63,7 +63,7 @@ Public Sub Main()
     Column(7) = "zip"  
     Column(8) = "contract"  
   
-    cmd.CommandText = "SELECT _ FROM Authors WHERE state = ?"  
+    cmd.CommandText = "SELECT * FROM Authors WHERE state = ?"  
     Set prm = cmd.CreateParameter("ItemXparm", adChar, adParamInput, 2, "CA")  
     cmd.Parameters.Append prm  
      ' set connection  

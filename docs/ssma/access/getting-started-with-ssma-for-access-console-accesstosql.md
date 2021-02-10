@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1923323699282e40fcca8afa1a8079edd8163c09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d39f130c2b2ff8edd95fb52a78b7865b5c6dc868
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426984"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044512"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>SSMA for Access コンソールでのはじめに (アクセス可能な Sql)
 このセクションでは、Access コンソールアプリケーションを起動して開始する手順について説明します。 また、ここでは、一般的な SSMA コンソールの出力ウィンドウで使用される規則についても説明します。  
@@ -57,11 +57,11 @@ SSMA スクリプトコマンドとオプションを実行すると、コンソ
 |---------|---------------|  
 |[赤]|実行中に致命的なエラーが発生した|  
 |グレー|日付と時刻のタイムスタンプ、ユーザーへのメッセージ|  
-|White|スクリプトファイルのコマンド、メッセージの種類|  
+|白|スクリプトファイルのコマンド、メッセージの種類|  
 |黄|警告|  
 |[緑]|ユーザー入力を要求する|  
 |シアン|操作の開始、終了、および結果|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [アクセスのための SQL Server Migration Assistant のインストール](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
   

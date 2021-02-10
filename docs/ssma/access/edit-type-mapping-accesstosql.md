@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 246c8187a35b5990497712ab5b83ea4cb3acf59f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c27d6ad48de4b7a16798d8af3344377319cb155
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427064"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044822"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>型のマッピングの編集 (には、()
 [ **型マッピングの編集** ] ダイアログボックスでは、転送元データベースオブジェクトと転送先データベースオブジェクトの間で型がどのようにマップされるかを指定できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "88427064"
 **To**  
 このマッピングの最大長を指定します。 たとえば、 **text** データ型の場合は、20を入力して、このマッピングが **テキスト (20)** で終わる範囲に対して行うことを指定できます。  
   
-**変換後の型**  
+**ターゲットの種類**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換元のデータ型がマップされるデータ型を選択します。 SSMA によってテーブルまたはストアドプロシージャが作成されると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、変換元のデータ型はこのデータ型に変更されます。  
   
 データ型が可変長の場合、[ **対象の型**] の下に次のフィールドが表示されます。  

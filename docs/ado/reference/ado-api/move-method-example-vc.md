@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ba12e7b85dd0434686fdd682818a0a227f7a2ca
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fff61dced7030b56d6f01018860edf0d703e0e65
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170818"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041752"
 ---
 # <a name="move-method-example-vc"></a>Move メソッドの例 (VC++)
 この例では、 [Move](./move-method-ado.md) メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  

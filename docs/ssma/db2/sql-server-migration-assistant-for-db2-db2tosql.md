@@ -11,12 +11,12 @@ ms.assetid: 7633f631-ffad-469a-8441-8831a6a9f932
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: e87f43a74d76f51faf51b7877b6aa1d526a7eafb
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: a379c88eb0d00d9f7fef4197d4c669e868a96649
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594746"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042034"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>DB2 の SQL Server Migration Assistant (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)]Db2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Migration Assistant (SSMA) は、db2 データベースをに移行する [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ためのツールです。2012、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 on Windows および Linux、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2019 (windows と linux)、または Azure SQL Database。 SSMA for DB2 は、DB2 データベースオブジェクトをデータベースオブジェクトに変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、それらのオブジェクトをで作成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] した後、db2 からまたは Azure SQL Database にデータを移行し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  

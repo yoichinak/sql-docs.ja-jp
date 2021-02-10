@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f870db346e384f4c131ec24bf6c15a5d15a009c1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 848074390559e3c40e0cf1a4e8242344c70f6334
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167114"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041762"
 ---
 # <a name="move-method-ado"></a>Move メソッド (ADO)
 [レコードセット](./recordset-object-ado.md)オブジェクト内の現在のレコードの位置を移動します。  
@@ -41,7 +41,7 @@ recordset.Move NumRecords, Start
  *Start*  
  任意。 ブックマークに評価される **文字列** 値または **バリアント** 。 [BookmarkEnum](./bookmarkenum.md)値を使用することもできます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Move** メソッドは、すべての **レコードセット** オブジェクトでサポートされています。  
   
  *NumRecords* 引数が0より大きい場合、現在のレコードの位置は (**レコードセット** の末尾に向かって) 前方に移動します。 *NumRecords* が0未満の場合、現在のレコードの位置は後方 (**レコードセット** の先頭に向かって) に移動します。  

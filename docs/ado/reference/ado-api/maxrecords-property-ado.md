@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec7732203c4341840e6dcd05a9e37101b443a1df
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2e1e6e2ec1be8669976fa155a761f7014a4d4c08
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170862"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044092"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords プロパティ (ADO)
 クエリから [レコードセット](./recordset-object-ado.md) に返されるレコードの最大数を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99170862"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  返されるレコードの最大数を示す **Long 型** の値を設定または返します。 既定値はゼロ (**0**) です。これは制限がないことを意味します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  データソースからプロバイダーが返すレコードの数を制限するには、 **MaxRecords** プロパティを使用します。 このプロパティの既定の設定は0です。これは、プロバイダーが要求されたすべてのレコードを返すことを意味します。  
   
  レコードセットが開いている場合は、**レコードセット** が閉じられ、読み取り専用になっている場合、 **MaxRecords** プロパティは読み取り/書き込み可能です。  

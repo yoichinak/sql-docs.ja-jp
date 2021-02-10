@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc9f116c565321051184d16fa0cdf963cc4bfe0e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2e6b818ef937328d75d5c5425815dbd931ebdd2a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170928"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044312"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel プロパティ
 [接続](./connection-object-ado.md)オブジェクトの分離レベルを示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "99170928"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [IsolationLevelEnum](./isolationlevelenum.md)値を設定または返します。 既定値は **adXactReadCommitted** です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **接続** オブジェクトの分離レベルを設定するには、 **IsolationLevel** プロパティを使用します。 この設定は、次に [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) メソッドを呼び出したときまで有効になりません。 要求した分離レベルが使用できない場合、プロバイダーは、 **IsolationLevel** プロパティを更新せずに、次に高い分離レベルを返すことができます。  
   
  **IsolationLevel** プロパティは読み取り/書き込み可能です。  
