@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 042634d7b08d4aa37c8efccbec2055e984b057a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b99ed0f466ff70caeee93f00837527173b1d7f20
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423016"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066607"
 ---
 # <a name="new-project-ssma-accesstosql"></a>新しいプロジェクト (SSMA) (Sql server への追加)
 新しい SSMA プロジェクトを作成するには、[ **新しいプロジェクト** ] ダイアログボックスを使用します。 [ **新しいプロジェクト** ] ダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **新しいプロジェクト**] をクリックします。  

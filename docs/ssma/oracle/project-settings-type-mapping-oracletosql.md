@@ -11,12 +11,12 @@ ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0facd2ecca0ff6cc0a4bc28fe709a7adfc0c5acf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbb47d74535af0dea97842bdf46680a4376c2ba7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320448"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067747"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>プロジェクトの設定 (型のマッピング) (OracleToSQL)
 [ **プロジェクトの設定** ] ダイアログボックスの [型マッピング] ページには、Ssma が Oracle データ型をデータ型に変換する方法をカスタマイズする設定が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -32,7 +32,7 @@ ms.locfileid: "88320448"
 ## <a name="options"></a>オプション  
 次の表は、[ **型マッピング** ] タブのオプションを示しています。  
   
-**ソースの種類**  
+**変換元の型**  
 マップされた Oracle データ型。  
   
 **ターゲットの種類**  
@@ -43,10 +43,10 @@ ms.locfileid: "88320448"
 **追加**  
 [マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-**[編集]**  
+**編集**  
 [マッピング] ボックスの一覧で選択したデータ型を編集する場合にクリックします。  
   
-**Remove**  
+**削除**  
 クリックすると、選択したデータ型マッピングが [マッピング] ボックスの一覧から削除されます。  
   
 **既定値にリセット**  
@@ -89,7 +89,7 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |各国語文字の変化<sup>*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
 |nclob|nvarchar(max)|  
-|number|float [53]|  
+|数値|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|INT|  
@@ -156,7 +156,7 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |nchar|nchar|  
 |nchar [*]|nchar [*]|  
 |nclob|nvarchar(max)|  
-|number|float [53]|  
+|数値|float [53]|  
 |数値 [*.. \* ]|数値 [*]|  
 |数値 [*.. \* ][\*..\*]|数値 [*] [ \* ]|  
 |numeric|numeric|  
@@ -189,7 +189,7 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |binary_float|float [53]|  
 |binary_interger|INT|  
 |BLOB|varbinary(max)|  
-|ブール型|bit|  
+|Boolean|bit|  
 |Char|char|  
 |char varying [*..8000]|varchar [*]|  
 |文字の変化 [8001.. *]|varchar(max)|  

@@ -13,15 +13,15 @@ ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 263d04b401146ce2975a810b084e4957f1daf718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df992d19ecb90ad78e060dccdfa5e2e015988477
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492408"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067731"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>SSMA for Oracle コンポーネントの削除 (OracleToSQL)
-Oracle からへのデータベースの移行が完了したら [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SSMA コンポーネントのアンインストールが必要になる場合があります。 クライアントコンポーネントはいつでもアンインストールできます。 ただし、移行した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで**sysdb**データベースの**ssma_oracle**スキーマの関数が使用されなくなっていない限り、から拡張パックをアンインストールしないでください。  
+Oracle からへのデータベースの移行が完了したら [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SSMA コンポーネントのアンインストールが必要になる場合があります。 クライアントコンポーネントはいつでもアンインストールできます。 ただし、移行した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで **sysdb** データベースの **ssma_oracle** スキーマの関数が使用されなくなっていない限り、から拡張パックをアンインストールしないでください。  
   
 ## <a name="uninstalling-the-ssma-for-oracle-client"></a>SSMA for Oracle クライアントのアンインストール  
 SSMA をアンインストールするには、[ **プログラムの追加と削除**] を使用します。  
@@ -30,12 +30,12 @@ SSMA をアンインストールするには、[ **プログラムの追加と�
   
 1.  [コントロール] パネルで **[プログラムの追加と削除]** を開きます。  
   
-2.  [ ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle] の [Migration Assistant**] を選択し、[**削除**] をクリックします。  
+2.  [ **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle] の [Migration Assistant**] を選択し、[**削除**] をクリックします。  
   
 3.  SSMA をアンインストールすることを確認するには、[ **はい**] をクリックします。  
   
 ## <a name="uninstalling-the-extension-pack"></a>拡張機能パックのアンインストール  
-移行したデータベースで **ssma_oracle** スキーマのオブジェクトが使用されていないことが確実な場合は、[ **プログラムの追加と削除**] を使用して拡張機能パックを削除できます。  
+移行したデータベースが **sysdb.ssma_oracle** スキーマのオブジェクトを使用していないことが確実な場合は、[ **プログラムの追加と削除**] を使用して拡張機能パックを削除できます。  
   
 **拡張機能パックをアンインストールするには**  
   
@@ -55,9 +55,9 @@ SSMA をアンインストールするには、[ **プログラムの追加と�
   
 7.  [完了] ページで、[ **終了**] をクリックします。  
   
-アンインストール後、を使用して、 **ssma_oracle** スキーマのオブジェクトと、場合によっては **sysdb** データベース全体が削除されたことを確認でき [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。 ただし、他の SSMA 製品を使用する場合は、 **sysdb** データベースも使用します。 データベースが存在し、他のデータベースがこのデータベース内のオブジェクトを参照していない場合は、データベースをデタッチできます。  
+アンインストール後は、を使用して、 **sysdb.ssma_oracle** スキーマ内のオブジェクト、および場合によっては **sysdb** データベース全体が削除されたことを確認でき [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。 ただし、他の SSMA 製品を使用する場合は、 **sysdb** データベースも使用します。 データベースが存在し、他のデータベースがこのデータベース内のオブジェクトを参照していない場合は、データベースをデタッチできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [SSMA for Oracle Client &#40;OracleToSQL&#41;のインストール ](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [SQL Server &#40;OracleToSQL&#41;での SSMA コンポーネントのインストール ](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
   

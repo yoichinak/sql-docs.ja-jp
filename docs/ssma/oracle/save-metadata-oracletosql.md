@@ -11,12 +11,12 @@ ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ceac171c2eed43e1ee0c1feff2db9a3b4f21e7e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51226304bfd8201a841a38a2c95b1c4973225ffb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492325"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067637"
 ---
 # <a name="save-metadata--oracletosql"></a>メタデータの保存 (OracleToSQL)
 [ **メタデータの保存** ] ダイアログボックスでは、メタデータを保存する前に ssma プロジェクトに読み込むように求めるメッセージが表示されます。 これにより、オフラインで使用したり、技術サポート担当者などの他のユーザーに送信したりできる、完全なプロジェクトファイルを作成できます。  
@@ -35,7 +35,7 @@ SSMA は、必要に応じてメタデータをプロジェクトに読み込み
 **[すべて選択]**  
 一覧表示されているすべてのデータベースを選択します。  
   
-**Clear**  
+**[クリア]**  
 メタデータが欠落しているすべてのデータベースのチェックボックスをオフにします。 メタデータが読み込まれている場合は、このチェックボックスをオフにすることはできません。  
   
 **および**  

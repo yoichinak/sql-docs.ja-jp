@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 63952d4e46b1c25e49e7f29f8da1e23543232cb7
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: a7390c30cd245a3f8a46784ec12e97752173a629
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988518"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066487"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>プロジェクトの設定 (変換) (Sql server への変換)
 変換プロジェクトの設定を使用すると、Access データベースオブジェクトからオブジェクトへのオブジェクトの変換方法 Azure SQL Database を構成でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -76,7 +76,7 @@ Null 値を許容する列を含む主キーを検索するときに SSMA が出
 -   **フルモード**: エラー  
   
 **メモ列のインデックスが作成されるときのメッセージの種類**  
-**メモ**列を含むインデックスを検出したときに Ssma が出力ペインに表示するメッセージの種類 (警告、エラー、またはなし) を指定します。  
+**メモ** 列を含むインデックスを検出したときに Ssma が出力ペインに表示するメッセージの種類 (警告、エラー、またはなし) を指定します。  
   
 -   **既定のモード**: 警告  
   

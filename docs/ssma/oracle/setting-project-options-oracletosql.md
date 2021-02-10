@@ -13,12 +13,12 @@ ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 89460a8efb6278d8e4aaa4def6310d6dec687429
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7de2ab3447a35f9d55489673adaa532866a4f89f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492365"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067677"
 ---
 # <a name="setting-project-options-oracletosql"></a>プロジェクト オプションの設定 (OracleToSQL)
 SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換、オブジェクトの読み込み、ユーザーインターフェイス、およびデータ移行の設定を指定します。 オブジェクトをに変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、構成オプションがプロジェクトに適していることを確認してください。  
@@ -46,7 +46,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   [完全]  
   
--   Custom  
+-   カスタム  
   
 ほとんどのユーザーには、既定のモードを使用することをお勧めします。 オプティミスティックモードでは、現在の Oracle 構文がより多く保持されるため、読みやすくなります。 ただし、現在の構文を維持するのは正確ではない可能性があります。 Oracle 構文を同等の構文に変換する必要がある場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、フルモードでは最も完全な変換が実行されますが、結果のコードが読みにくくなる可能性があります。 カスタムモードでは、オプションを設定します。  
   

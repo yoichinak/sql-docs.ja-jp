@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f03b7457d79c573806ffbda2b601f56d0f942a54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2d119ac2c58d0bea25a6f21ba4bf97cb47a8421
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488203"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066367"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>プロジェクトの設定 (オブジェクトの読み込み) (による)
 オブジェクトの読み込みプロジェクトの設定を使用すると、Access データベースオブジェクトを SQL Server データベースオブジェクトと同期する方法を構成できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "88488203"
   
 ##### <a name="misc"></a>その他  
   
-##### <a name="attempts"></a>ログオン  
+##### <a name="attempts"></a>試行回数  
 SQL Server に読み込むオブジェクトの数に関する情報を提供します。 オブジェクトの SQL Server への読み込みは、通常、複数のパスで実行されます。 外部キーなど、最初のパスでの読み込みに失敗したオブジェクトは、次のパスで正常に読み込まれることがあります。  
   
 既定値は2です。  

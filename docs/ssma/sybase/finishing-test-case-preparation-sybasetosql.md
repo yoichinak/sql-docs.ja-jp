@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a1a3c415e8c13bf0ed1eaf4c75baf0230544964c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c1f34f19034042d542cba2d81a55bf32288058e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492223"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067520"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>テスト ケースの準備の終了 (SybaseToSQL)
 ウィザードの最後のページには、テストケースの説明と、テストに関係するオブジェクトに関する情報が表示されます。 また、このページでは、テストの実行オプションを設定することもできます。  
@@ -50,13 +50,13 @@ ms.locfileid: "88492223"
   
 -   [ **常に保存**] を選択した場合、補助テーブルデータは、後で使用するために常に格納されます。  
   
--   [ **テーブル比較に失敗**した場合に保存] を選択すると、補助テーブルデータはエラーが発生した場合にのみ保存されます。  
+-   [ **テーブル比較に失敗** した場合に保存] を選択すると、補助テーブルデータはエラーが発生した場合にのみ保存されます。  
   
 -   [ **常に削除**] を選択した場合は、テストの実行後、補助テーブルは常に削除されます。  
   
--   [ **テーブル比較に失敗**した場合にユーザーに問い合わせる] を選択すると、エラーが発生した場合に、ユーザーは必要な操作を選択できます。  
+-   [ **テーブル比較に失敗** した場合にユーザーに問い合わせる] を選択すると、エラーが発生した場合に、ユーザーは必要な操作を選択できます。  
   
-[ **完了** ] をクリックして、準備されたテストケースをに保存します。これには、 [テストリポジトリ &#40;SybaseToSQL&#41;を使用 ](../../ssma/sybase/using-test-repositories-sybasetosql.md)します。  
+[ **完了** ] をクリックして、準備されたテストケースをに保存します。これには、 [テストリポジトリ &#40;SybaseToSQL&#41;を使用](../../ssma/sybase/using-test-repositories-sybasetosql.md)します。  
   
 ## <a name="see-also"></a>参照  
 [テストリポジトリの使用 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  

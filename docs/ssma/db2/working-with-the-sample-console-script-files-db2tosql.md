@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d609900151e7ced05be4cc92e65c06270b6ef8a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9c19e60d2b4b30724dc750f3a99a604334a2155
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426924"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069237"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>サンプルのコンソールスクリプトファイルの操作 (DB2ToSQL)
 ユーザー参照および使用のために、いくつかのサンプルファイルが製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせて、これらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "88426924"
   
     -   このサンプルでは、ソースとターゲットのデータベースで使用できるさまざまなモードの接続を提供し、ユーザーは要件に従って任意のモードを選択できます。 このサンプルには、サーバー定義が含まれています。  
   
-    -   ユーザーは、必要なソースとターゲットのサーバー定義に値を変更するだけで、必要なデータベースに接続できます。 この例では、すべての値は、 **VariableValueFileSample.xml**で使用できる変数値として提供されています。  その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
+    -   ユーザーは、必要なソースとターゲットのサーバー定義に値を変更するだけで、必要なデータベースに接続できます。 この例では、すべての値は、 **VariableValueFileSample.xml** で使用できる変数値として提供されています。  その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
   
     -   ソースサーバーとターゲットサーバーへの接続の詳細については、「 [DB2ToSQL&#41;&#40;のサーバー接続ファイルの作成 ](../../ssma/db2/creating-the-server-connection-files-db2tosql.md) 」を参照してください。  
   

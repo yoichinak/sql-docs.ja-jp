@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
 ms.author: alexiva
-ms.openlocfilehash: a999bcde42029b50772f18925a1f24432d558a3f
-ms.sourcegitcommit: 8fcee1bc2503bea81a0c9d02827193ab71d8ca32
+ms.openlocfilehash: 828f206c7fc6b8d653e0b141b8041f10093cdf4b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98564231"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068013"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>プロジェクトの設定 (変換) (OracleToSQL)
 
@@ -58,7 +58,7 @@ ms.locfileid: "98564231"
 |**拡張プロパティを省略する**|有効にすると、SSMA は、ターゲットデータベースに作成されたオブジェクトに拡張プロパティを追加しません。<br /><br />[ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** 違います|
 |**エラーコードの変換**|有効にすると、マッピングが見つかった場合、ターゲット SQL Server 側のエラー番号が Oracle エラーコードに変換されます。<br /><br />[ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/フルモード:** うん<br />**オプティミスティックモード:** 違います|
 |**型参照に対して完全な型指定を使用する**|有効にすると、SSMA はルーチンパラメーターと戻り値の完全な型指定 (小数点以下桁数と精度を含む) を尊重します。 Oracle では、ルーチンパラメーターにデータ型の引数を使用することはできませんが、 `%TYPE` および属性が使用されている場合など、暗黙的に派生させることができ `%ROWTYPE` ます。 このような場合、SSMA は SQL Server に変換するときに完全な型の仕様 (有効桁数と小数点以下桁数を含む) を使用できます。<br /><br />[ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティックモード:** うん<br />**フルモード:** 違います|
-|**文字列の連結で ISNULL を使用する**|文字列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連結に値が含まれている場合、Oracle とは異なる結果を返し `NULL` ます。 Oracle では、 `NULL` 空の文字セットと同様に値が処理されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、`NULL` を返します。<br /><br />[ **はい**] を選択すると、Ssma は Oracle 連結文字 (&#124;&#124;) を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連結文字 (+) に置き換えます。 また、SSMA は、連結の両側の式を値としてチェックし `NULL` ます。<br /><br />[ **いいえ**] を選択した場合、ssma によって連結文字が置き換えられますが、値はチェックされません `NULL` 。<br /><br />[ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** うん|
+|**文字列の連結で ISNULL を使用する**|文字列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連結に値が含まれている場合、Oracle とは異なる結果を返し `NULL` ます。 Oracle では、 `NULL` 空の文字セットと同様に値が処理されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は `NULL` を返します。<br /><br />[ **はい**] を選択すると、Ssma は Oracle 連結文字 (&#124;&#124;) を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連結文字 (+) に置き換えます。 また、SSMA は、連結の両側の式を値としてチェックし `NULL` ます。<br /><br />[ **いいえ**] を選択した場合、ssma によって連結文字が置き換えられますが、値はチェックされません `NULL` 。<br /><br />[ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** うん|
 
 ## <a name="objects-conversion"></a>オブジェクトの変換
 

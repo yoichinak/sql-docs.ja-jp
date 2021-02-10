@@ -14,12 +14,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6f46d7714c9da54fde1105671c5be7b3ea090a48
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: cb932aeb30be643b260e3b1e0ce10fea22ffeb1a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987928"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067227"
 ---
 # <a name="user-interface-reference-accesstosql"></a>ユーザーインターフェイスリファレンス (ユーザーインターフェイスリファレンス) (ユーザーインターフェイスリファレンス)
 このセクションには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) のアクセスに関するヘルプトピックが含まれています。  
@@ -32,7 +32,7 @@ ms.locfileid: "91987928"
 |[&#41;&#40;評価レポート ](../../ssma/access/assessment-report-accesstosql.md)|[ **評価レポート** ] ダイアログボックスを使用すると、Access データベースオブジェクトの変換を分析し、移行にかかる時間を見積もることができます。|  
 |[SQL Server への接続](./connect-to-sql-server-accesstosql.md)|[ **SQL Server への接続** ] ダイアログボックスを使用して、移行先ののインスタンスに接続し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |[SQL Azure への接続](connect-to-azure-sql-db-accesstosql.md)|[ **SQL Azure への接続** ] ダイアログボックスを使用して、移行先の SQL Azure のインスタンスに接続します。|  
-|[変換、読み込み、および移行](./convert-load-and-migrate-accesstosql.md)|**変換、読み込み、移行**の各ダイアログは移行ウィザードの一部であり、[変換]、[**読み込み]、および [移行**] コマンドを使用するときにも表示されます。|  
+|[変換、読み込み、および移行](./convert-load-and-migrate-accesstosql.md)|**変換、読み込み、移行** の各ダイアログは移行ウィザードの一部であり、[変換]、[**読み込み]、および [移行**] コマンドを使用するときにも表示されます。|  
 |[データ移行レポート &#40;、Sql&#41;](../../ssma/access/data-migration-report-accesstosql.md)|データの移行とレポートの移行が成功し、各テーブルに失敗した場合に表示されます。|  
 |[&#41;&#40;の型マッピングの編集 ](../../ssma/access/edit-type-mapping-accesstosql.md)|[ **型マッピングの編集** ] ダイアログボックスを使用すると、コピー元とコピー先のデータベースとデータベースオブジェクトの間のデータ型のマッピングを作成または編集できます。|  
 |[データベースのウィザードを検索 (ファイルの選択)](./find-databases-wizard-select-files-accesstosql.md)|SSMA プロジェクトに追加する Access データベースを選択するには、データベースの検索ウィザードの [ファイルの選択] ページを使用します。|  

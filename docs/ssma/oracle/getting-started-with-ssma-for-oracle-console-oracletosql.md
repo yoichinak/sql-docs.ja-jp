@@ -14,12 +14,12 @@ ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a403f515c057349c9717422f99b6de15aede566f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd87502c1eda3dc8d4caf4c654804b164f24f36f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463256"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068047"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>SSMA for Oracle コンソール入門 (OracleToSQL)
 このセクションでは、Oracle コンソールアプリケーションを起動して開始する手順について説明します。 また、ここでは、一般的な SSMA コンソールの出力ウィンドウで使用される規則についても説明します。  
@@ -29,7 +29,7 @@ SSMA コンソールアプリケーションを起動するには、次の手順
   
 1.  [ **スタート** ] にアクセスし、[ **すべてのプログラム**] をポイントします。  
   
-2.  [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle コマンドプロンプトの Migration Assistant** ] ショートカットをクリックします。  
+2.  [ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle コマンドプロンプトの Migration Assistant** ] ショートカットをクリックします。  
   
     ここには、コンソールアプリケーションの使用を開始するための SSMA コンソールの [使用状況] メニューとが表示され `(/? Help)` ます。  
   
@@ -61,7 +61,7 @@ SSMA スクリプトコマンドとオプションを実行すると、コンソ
 |---------|---------------|  
 |[赤]|実行中に致命的なエラーが発生した|  
 |グレー|日付と時刻のタイムスタンプ、ユーザーへのメッセージ|  
-|White|スクリプトファイルのコマンド、メッセージの種類|  
+|白|スクリプトファイルのコマンド、メッセージの種類|  
 |黄|警告|  
 |[緑]|ユーザー入力を要求する|  
 |シアン|操作の開始、終了、および結果|  

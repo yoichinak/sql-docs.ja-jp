@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1652913173dcd7427515db8c74d15afc75077820
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 42f7d0f36f0e0adfcf067ad0bbe55c5e2c169e9e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988638"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068863"
 ---
 # <a name="conversion-settings-mysqltosql"></a>変換の設定 (MySQLToSQL)
 [ **設定** ] タブでは、ユーザーはノードレベルの設定を設定できます。 このタブは、次のメタベースノードで使用できます。  
@@ -30,7 +30,7 @@ ms.locfileid: "91988638"
   
 -   テーブルノード  
   
-## <a name="specifications"></a>仕様  
+## <a name="specifications"></a>仕様:  
 [ **設定** ] タブには、可視化という2つのユーザー設定があります。  
   
 1.  関数の変換  
@@ -41,7 +41,7 @@ ms.locfileid: "91988638"
   
 > [!NOTE]  
 > -   ユーザーによって行われた変更は、プロジェクトワークスペースに個別の基本設定ファイルとして保存されます。  
-> -   このファイルの拡張子は **ccprefs**使用します。  
+> -   このファイルの拡張子は **ccprefs** 使用します。  
   
 1.  **関数の変換の設定:**  
   

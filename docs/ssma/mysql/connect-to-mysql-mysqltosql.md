@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 399946496bbb649f84c9d539a9fe80f3f7919b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33017262982effedd9fa85ea26818fdb7b2ae8ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372698"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068955"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL への接続 (MySQLToSQL)
 [ **Mysql への接続** ] ダイアログボックスを使用して、移行する mysql データベースに接続します。  
   
-このダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **MySQL に接続**] を選択します。 以前に接続している場合は、コマンドが **MySQL に再接続**されます。  
+このダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **MySQL に接続**] を選択します。 以前に接続している場合は、コマンドが **MySQL に再接続** されます。  
   
 ## <a name="options"></a>オプション  
 **プロバイダー**  
@@ -35,7 +35,7 @@ ms.locfileid: "88372698"
   
 MySQL サーバー名を入力します。 これは標準モードオプションです。  
   
-**サーバーポート**  
+**[サーバー ポート]**  
   
 サーバーポートを入力します。 既定のサーバーポートは3306です。 これは標準モードオプションです。  
   
@@ -56,7 +56,7 @@ MySQL に安全に接続する場合は、 **ssl** チェックボックスを�
 Secure Socket Layer (SSL) を介した MySQL への接続を構成するためのオプションが用意されています。  
   
 > [!NOTE]  
-> **構成**を有効にするには、SSL を**True**に設定する必要があります。  
+> **構成** を有効にするには、SSL を **True** に設定する必要があります。  
   
 [構成] ボタンをクリックすると、ダイアログボックスが表示されます。 MySQL データベースへの接続中に暗号化を使用するには、ダイアログボックスに存在する次の3つの証明書ファイルへのパスを定義する必要があります [Privacy Enhanced Mail 証明書 (PEM)]:  
   
@@ -68,5 +68,5 @@ Secure Socket Layer (SSL) を介した MySQL への接続を構成するため�
   
 > [!NOTE]  
 > -   必要な情報が提供されている場合は、 **[OK** ] ボタンが有効になります。 いずれかのファイルパスが無効な場合は、[OK] ボタンが無効のままになります。  
-> -   **[キャンセル**] ボタンをクリックすると、ダイアログボックスが閉じ、メインの接続フォームから SSL オプションが**オフになり**ます。  
+> -   **[キャンセル**] ボタンをクリックすると、ダイアログボックスが閉じ、メインの接続フォームから SSL オプションが **オフになり** ます。  
   

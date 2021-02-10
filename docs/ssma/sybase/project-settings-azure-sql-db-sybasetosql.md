@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 39a099eb243d767d18402bcd6baeb6280dbeaad4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b532fddbc5eda07ab38aedcb806347846cc0ac59
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418278"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068767"
 ---
 # <a name="project-settings-azure-sql-database--sybasetosql"></a>プロジェクトの設定 (Azure SQL Database) (SybaseToSQL)
 Azure SQL Database プロジェクトの設定を使用すると、接続ダイアログに追加する Azure SQL Database データベースサフィックスを構成し、Azure SQL Database 接続でハートビートメカニズムを実装することもできます。  

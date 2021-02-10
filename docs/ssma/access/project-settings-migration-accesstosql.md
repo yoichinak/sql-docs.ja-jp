@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3163da352fa925a821287fc1447fd8b6b5e89cdb
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e1771bebb7619cbbc752485fb649331dab62d0dc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988498"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066417"
 ---
 # <a name="project-settings-migration-accesstosql"></a>プロジェクトの設定 (移行) (Sql server への移行)
 移行プロジェクトの設定を使用して、データを移行する方法や SQL Azure する方法を構成でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  

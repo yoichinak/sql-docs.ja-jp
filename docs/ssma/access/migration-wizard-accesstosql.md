@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c8f03fa27bf8c49cfeef06246c47996860c932ba
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2f5f97b55b4d357c2caa2314c993806c61f51e07
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988650"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066677"
 ---
 # <a name="migration-wizard-accesstosql"></a>移行ウィザード (移動用 Sql)
 移行ウィザードでは、または SQL Azure へのアクセスから、1つまたは複数のデータベースを移行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ウィザードを使用して、プロジェクトを作成し、データベースをプロジェクトに追加し、移行するオブジェクトを選択して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure に接続します。 また、アクセススキーマとデータの変換、読み込み、移行を行います。 必要に応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたは SQL Azure テーブルにアクセステーブルをリンクすることもできます。  
@@ -82,7 +82,7 @@ ms.locfileid: "91988650"
 > 接続が成功するとすぐに [テーブルの **リンク** ] ページが表示され、そこにテーブルをリンクするオプションが表示されます。 [ **次へ** ] をクリックして、移行を開始します。  
   
 ## <a name="connect-to-sql-azure-page"></a>SQL Azure ページに接続する  
-[SQL Azure への接続] ページで、接続プロパティを指定し、SQL Azure に接続します。 新しい Azure データベースを作成するには、[**参照**のクリック] ボタンに表示される [ **Azure データベースの作成**] オプションを使用します。 詳細については、「 [Connect to SQL Azure](connect-to-azure-sql-db-accesstosql.md) 」を参照してください。  
+[SQL Azure への接続] ページで、接続プロパティを指定し、SQL Azure に接続します。 新しい Azure データベースを作成するには、[**参照** のクリック] ボタンに表示される [ **Azure データベースの作成**] オプションを使用します。 詳細については、「 [Connect to SQL Azure](connect-to-azure-sql-db-accesstosql.md) 」を参照してください。  
   
 > [!IMPORTANT]  
 > 接続が成功するとすぐに [テーブルの **リンク** ] ページが表示され、そこにテーブルをリンクするオプションが表示されます。 [リンク] ページの [ **次へ** ] ボタンをクリックして、移行を開始します。  

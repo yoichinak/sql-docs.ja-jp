@@ -11,12 +11,12 @@ ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: fbc74e9129c642ea1b6655deb4e01ee04d92d0ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6b19ddbe9ab7e1bf1e8f88f5c0c4262fa326c56
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480514"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068014"
 ---
 # <a name="global-settings-logging-oracletosql"></a>グローバル設定 (ログ) (OracleToSQL)
 [ **グローバル設定** ] ダイアログボックスを使用して、ssma のログ設定を指定します。 通常、これらの設定を変更するのは、製品サポートを使用する場合のみです。  
@@ -47,10 +47,10 @@ ms.locfileid: "88480514"
 |||  
 |-|-|  
 |**致命的なエラー**|致命的なエラーメッセージのみをログに書き込みます。|  
-|**Error**|エラーメッセージと致命的なエラーメッセージをログに書き込みます。|  
+|**エラー**|エラーメッセージと致命的なエラーメッセージをログに書き込みます。|  
 |**警告**|警告、エラー、および致命的なエラーメッセージをログに書き込みます。|  
 |**情報**|情報、警告、エラー、および致命的なエラーメッセージをログに書き込みます。|  
-|**Debug**|デバッグメッセージを含むすべてのメッセージをログに書き込みます。|  
+|**デバッグ**|デバッグメッセージを含むすべてのメッセージをログに書き込みます。|  
   
 **ログ ファイルのパス**  
 SSMA ログファイルのファイルパスと名前。 別の名前を指定するには、現在のパスをクリックし、参照ボタン ([.**..**]) をクリックします。  

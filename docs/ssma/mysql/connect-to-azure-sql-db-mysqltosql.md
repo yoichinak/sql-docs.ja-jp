@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cf3112f6b431fae9149df76464ed576f89a51dd1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44f97ee6686bbe61a90e5fccf2cfb165e7e97cf0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454134"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069053"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>Azure SQL Database への接続 (MySQLToSQL)
 [SQL Azure への接続] ダイアログボックスを使用して、移行する Azure SQL Database 内のデータベースに接続します。  
@@ -27,7 +27,7 @@ ms.locfileid: "88454134"
   
 SQL Azure に接続するためのサーバー名を選択または入力します。  
   
-**[データベース]**  
+**データベース**  
   
 データベース名を選択、入力、または **参照** します。  
   
@@ -57,7 +57,7 @@ SQL Azure アカウントにデータベースがない場合は、最初のデ�
   
     1.  **(データベースが見つかりません)** が無効化され、常にグレー表示になっている  
   
-    2.  SQL Azure アカウントにデータベースが存在しない場合にのみ有効になる**新しいデータベースを作成**します。 このメニュー項目をクリックすると、[Azure データベースの作成] ダイアログボックスにデータベースの名前とサイズが表示されます。  
+    2.  SQL Azure アカウントにデータベースが存在しない場合にのみ有効になる **新しいデータベースを作成** します。 このメニュー項目をクリックすると、[Azure データベースの作成] ダイアログボックスにデータベースの名前とサイズが表示されます。  
   
 3.  データベースの作成時には、次の2つのパラメーターが入力として指定されます。  
   

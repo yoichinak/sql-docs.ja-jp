@@ -11,12 +11,12 @@ ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 66bb67e64f3b95b78cdcf78d84145df25a02d4b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ecf7edd43af59f2d388f83b118ad8b6a1583b0be
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320178"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067647"
 ---
 # <a name="refresh-from-database-oracletosql"></a>データベースからの更新 (OracleToSQL)
 [ **データベースから更新** ] ダイアログボックスでは、Oracle データベースから更新するオブジェクトを選択できます。 ダイアログボックス内の行は、メタデータの状態に基づいて色分けされています。  
@@ -52,5 +52,5 @@ Oracle データベースと SSMA のオブジェクトメタデータが同じ�
 **凡例**  
 [ **凡例** ] ダイアログボックスを表示します。 凡例には、行の色とメタデータの状態との間のマッピングが含まれます。  
   
-[**データベースからの更新**] ダイアログボックスの上部にある [**凡例**] ダイアログボックスを維持するには、[上**に表示**] チェックボックスをオンにします。  
+[**データベースからの更新**] ダイアログボックスの上部にある [**凡例**] ダイアログボックスを維持するには、[上 **に表示**] チェックボックスをオンにします。  
   

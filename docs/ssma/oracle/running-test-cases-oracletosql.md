@@ -11,12 +11,12 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 9d44b04aba4d1ea1fa437bbd3b957178b361a4db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc811575dd845be43aef7a9398d8b4fb3458db1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418438"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067717"
 ---
 # <a name="running-test-cases-oracletosql"></a>テスト ケースの実行 (OracleToSQL)
 SSMA Tester がテストケースを実行すると、テスト用に選択されたオブジェクトが実行され、検証結果に関するレポートが作成されます。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Oracle との間のオブジェクトの対応 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、現在の SSMA プロジェクトのスキーママッピングの設定に従って決定されます。  
@@ -34,7 +34,7 @@ SSMA Tester がテストケースを実行すると、テスト用に選択さ�
   
 ## <a name="test-case-execution-steps"></a>テストケースの実行ステップ  
   
-### <a name="prerequisites"></a>[前提条件]  
+### <a name="prerequisites"></a>前提条件  
 SSMA Tester は、テストを開始する前に、テストの実行ですべての前提条件が満たされているかどうかを確認します。 条件が満たされていない場合は、エラーメッセージが表示されます。  
   
 ### <a name="initialization"></a>初期化  
@@ -47,10 +47,10 @@ SSMA Tester は、テストを開始する前に、テストの実行ですべ�
 |USER_TABLE $ Trg|トリガー (trigger)|検証されたテーブルの変更の監査をトリガーします。|  
 |USER_TABLE $ AUD|table|削除された行と上書きされた行が保存されるテーブル。|  
 |USER_TABLE $ AUDID|table|新しい行と変更された行が保存されるテーブル。|  
-|USER_TABLE|ビュー|テーブル変更の簡略化された表現。|  
-|USER_TABLE $ NEW|ビュー|挿入行と上書き行の簡略化された表現。|  
-|USER_TABLE $ NEW_ID|ビュー|挿入および変更された行の識別。|  
-|USER_TABLE $ OLD|ビュー|削除行と上書き行の簡略化された表現。|  
+|USER_TABLE|view|テーブル変更の簡略化された表現。|  
+|USER_TABLE $ NEW|view|挿入行と上書き行の簡略化された表現。|  
+|USER_TABLE $ NEW_ID|view|挿入および変更された行の識別。|  
+|USER_TABLE $ OLD|view|削除行と上書き行の簡略化された表現。|  
   
 次のオブジェクトは、で検証されたテーブルのスキーマで作成され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -64,10 +64,10 @@ SSMA Tester は、テストを開始する前に、テストの実行ですべ�
 |-|-|-|  
 |USER_TABLE $ Aud|table|削除された行と上書きされた行が保存されるテーブル。|  
 |USER_TABLE $ AudID|table|新しい行と変更された行が保存されるテーブル。|  
-|USER_TABLE|ビュー|テーブル変更の簡略化された表現。|  
-|USER_TABLE $ new|ビュー|挿入行と上書き行の簡略化された表現。|  
-|USER_TABLE $ new_id|ビュー|挿入および変更された行の識別。|  
-|USER_TABLE $ old|ビュー|削除行と上書き行の簡略化された表現。|  
+|USER_TABLE|view|テーブル変更の簡略化された表現。|  
+|USER_TABLE $ new|view|挿入行と上書き行の簡略化された表現。|  
+|USER_TABLE $ new_id|view|挿入および変更された行の識別。|  
+|USER_TABLE $ old|view|削除行と上書き行の簡略化された表現。|  
   
 ### <a name="test-object-calls"></a>オブジェクト呼び出しのテスト  
 この手順では、SSMA Tester はテスト用に選択された各オブジェクトを呼び出し、結果を比較して、レポートを表示します。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6db16aab94dccd4d347325af36c9957f19168059
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3b132af2d42f22ebcda82eae8e3649fd45026595
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320618"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069137"
 ---
 # <a name="assessment-report-mysqltosql"></a>評価レポート (MySQLToSQL)
 [評価レポート] ウィンドウには、データベースオブジェクトを構文に変換した結果が表示され [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。また、移行プロジェクトの複雑さとコストを見積もるのにも役立ちます。  

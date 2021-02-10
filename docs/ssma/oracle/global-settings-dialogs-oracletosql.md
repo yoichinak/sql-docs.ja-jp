@@ -11,12 +11,12 @@ ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0a0b888c594a46543f3cdec8e9c70bf9b511ed91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b399f44fda5e9ec8cda0edf6c7e198157b4f516d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463194"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068864"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>グローバル設定 (ダイアログ) (OracleToSQL)
 [ **グローバル設定** ] ダイアログボックスの [ダイアログ] ページを使用して、ssma の既定のユーザー操作と警告設定を指定します。  
@@ -34,11 +34,11 @@ SSMA がオブジェクトを SQL Server に変換するときに、プロジェ
 -   [ **False**] を選択すると、既定のアクションを指定したときに、[ **既定のアクションを上書き** する] オプションが表示されます。  
   
 **オブジェクト上書きの既定の操作**  
-このオプションは、[**オブジェクトを上書きする前に警告**する] オプションで [ **False** ] を選択した場合に表示されます。  
+このオプションは、[**オブジェクトを上書きする前に警告** する] オプションで [ **False** ] を選択した場合に表示されます。  
   
 このオプションを使用して、既定のオブジェクトの上書き動作を指定します。  
   
 -   [ **True**] を選択すると、ssma は、同じ名前を持ち、変換するオブジェクトと同じターゲットスキーマ内にある、SQL Server プロジェクトメタデータ内のオブジェクトを自動的に上書きします。  
   
--   **False**を選択した場合、ssma は変換中にオブジェクトメタデータを上書きしません。  
+-   **False** を選択した場合、ssma は変換中にオブジェクトメタデータを上書きしません。  
   

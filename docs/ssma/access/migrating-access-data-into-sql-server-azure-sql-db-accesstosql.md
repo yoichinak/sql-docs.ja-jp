@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cc1cdb31969eb94c29a6c58f974aef92c5cdfc62
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: a86ae9cff414e052865cf0efd1ec5c7889877d0f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988658"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066767"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>SQL Server Azure SQL Database へのアクセスデータの移行 (アクセス許可 SQL)
 データベースオブジェクトをに正常に作成した後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、アクセスからまたは SQL Azure にデータを移行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -49,7 +49,7 @@ ms.locfileid: "91988658"
   
 3.  [ **データベース** ] を右クリックし、[ **データの移行**] を選択します。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Bcp**コマンドラインユーティリティまたはを使用して、ssma の外部でデータを移行することもでき [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。 これらのツールの詳細については、オンラインブックを参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Bcp** コマンドラインユーティリティまたはを使用して、ssma の外部でデータを移行することもでき [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。 これらのツールの詳細については、オンラインブックを参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="next-step"></a>次の手順  
 移行後も引き続き使用するアクセスデータベースアプリケーションがある場合は、Access データベーステーブルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure テーブルにリンクします。 詳細については、「 [SQL Server への Access アプリケーションのリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)」を参照してください。  

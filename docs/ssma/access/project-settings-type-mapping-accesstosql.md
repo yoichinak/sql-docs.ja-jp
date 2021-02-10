@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8c39bc03cb6a1da09c7be6aac41c18b9d3bbd871
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2fc9bbd8092c98d21263d3972ab04d90888fcbae
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987528"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066410"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>プロジェクトの設定 (型のマッピング) (「」)
 型マッピングプロジェクトの設定を使用すると、SSMA プロジェクトの既定の型マッピングを設定できます。 個々のデータベースオブジェクトに対して、型マッピングを指定することもできます。 詳細については、「 [ソースとターゲットのデータ型のマッピング](mapping-source-and-target-data-types-accesstosql.md)」を参照してください。  
@@ -64,10 +64,10 @@ ms.locfileid: "91987528"
 **追加**  
 [マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-**[編集]**  
+**編集**  
 [マッピング] ボックスの一覧でデータ型を編集する場合にクリックします。  
   
-**[削除]**  
+**削除**  
 クリックすると、選択したデータ型マッピングが [マッピング] ボックスの一覧から削除されます。  
   
 **既定値にリセット**  
