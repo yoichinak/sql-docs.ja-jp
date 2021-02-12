@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: hanqin, maghan
 ms.custom: seodec18
 ms.date: 11/24/2020
-ms.openlocfilehash: 1d2483532589cd840f1120cfb0ac3273b41e0bb5
-ms.sourcegitcommit: 2e7154475ba1f31d1aeebc8f48ac05846f793736
+ms.openlocfilehash: 81fb4957672fa2008582b0ab2397322fb2b30043
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95920212"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039972"
 ---
 # <a name="azure-data-studio-troubleshooting"></a>Azure Data Studio のトラブルシューティング
 Azure Data Studio での問題と機能要求の追跡には、`azuredatastudio` リポジトリの [GitHub リポジトリ イシュー トラッカー](https://github.com/Microsoft/azuredatastudio/issues)が使用されます。 

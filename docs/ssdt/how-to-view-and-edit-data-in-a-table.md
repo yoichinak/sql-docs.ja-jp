@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 7c8321f4f1264b8bf0352f459bde02a07e439dd3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ebe23b534590bfb45c4a0bffce78d2139ef8912c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895789"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017992"
 ---
 # <a name="how-to-view-and-edit-data-in-a-table"></a>方法:テーブル内のデータを表示および編集する
 
@@ -29,7 +29,7 @@ ms.locfileid: "85895789"
   
 ### <a name="to-edit-data-in-a-table-visually-using-the-data-editor"></a>データ エディターを使用してテーブル内のデータを視覚的に編集するには  
   
-1.  **SQL Server オブジェクト エクスプローラー**で **Products** テーブルを右クリックして、 **[データの表示]** をクリックします。  
+1.  **SQL Server オブジェクト エクスプローラー** で **Products** テーブルを右クリックして、 **[データの表示]** をクリックします。  
   
 2.  データ エディターが起動します。 これまでの手順でテーブルに追加した行を確認します。  
   
@@ -43,5 +43,5 @@ ms.locfileid: "85895789"
   
 6.  ツール バーの **[スクリプト]** をクリックすると、編集内容をスクリプトとして表示できます。 または、 **[スクリプトをファイルに保存]** を使用して .sql スクリプト ファイルに保存し、後で実行することもできます。  
   
-7.  **SQL Server オブジェクト エクスプローラー**で **Trade** データベースを右クリックし、 **[新しいクエリ]** をクリックします。 エディターで、「`select * from dbo.PerishableFruits`」と入力して **[クエリの実行]** をクリックすると、データが `PerishableFruits` ビューとして返されます。  
+7.  **SQL Server オブジェクト エクスプローラー** で **Trade** データベースを右クリックし、 **[新しいクエリ]** をクリックします。 エディターで、「`select * from dbo.PerishableFruits`」と入力して **[クエリの実行]** をクリックすると、データが `PerishableFruits` ビューとして返されます。  
   

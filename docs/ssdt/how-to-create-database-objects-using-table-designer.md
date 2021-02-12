@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 410b2674f407018b895ed84781bedf5fa8766feb
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: a055bd1f8de41686e1c3477e3e4810e78d6b5025
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364394"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018312"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>方法:テーブル デザイナーを使用してデータベース オブジェクトを作成する
 
@@ -53,21 +53,21 @@ ms.locfileid: "93364394"
     CREATE TABLE [dbo].[Suppliers]  
     ```  
   
-4.  列グリッドで空の行をクリックし、テーブルに新しい列を追加します。  **[名前]** に「 **CompanyName** 」、 **[データ型]** に「 **nvarchar (128)** 」と入力し、 **[Null を許容]** チェック ボックスはオフにします。 Tab キーでフィールドを離れると、スクリプト ペインの内容が直ちに更新されます。  
+4.  列グリッドで空の行をクリックし、テーブルに新しい列を追加します。  **[名前]** に「**CompanyName**」、 **[データ型]** に「**nvarchar (128)** 」と入力し、 **[Null を許容]** チェック ボックスはオフにします。 Tab キーでフィールドを離れると、スクリプト ペインの内容が直ちに更新されます。  
   
-5.  新しい列をもう 1 つ追加します。 **[名前]** に「 **Address** 」、 **[データ型]** に「 **nvarchar (MAX)** 」と入力し、 **[Null を許容]** チェック ボックスはオフにします。  
+5.  新しい列をもう 1 つ追加します。 **[名前]** に「**Address**」、 **[データ型]** に「**nvarchar (MAX)** 」と入力し、 **[Null を許容]** チェック ボックスはオフにします。  
   
     > [!WARNING]  
     > 接続されているデータベースのオブジェクトを編集する場合は、ローカル ドライブに保存しないでください。 データベースへの変更を正しく保存するには、次の「[接続されているデータベースを Power Buffer で更新する方法](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)」に示されている手順に従ってください。  
   
-6.  これまでの手順を繰り返して、テーブルをもう 1 つ、 **Customer** という名前で作成します。 今回は列グリッドを使用して、以下に示す列を Customer テーブルに追加します。 さらに、テーブルの名前が `[dbo].[Customer]` になるようにスクリプトを変更します。  
+6.  これまでの手順を繰り返して、テーブルをもう 1 つ、**Customer** という名前で作成します。 今回は列グリッドを使用して、以下に示す列を Customer テーブルに追加します。 さらに、テーブルの名前が `[dbo].[Customer]` になるようにスクリプトを変更します。  
   
     |名前|データ型|**[NULL を許容]**|  
     |--------|-------------|-------------------|  
     |Id|INT|チェック解除|  
     |名前|nvarchar (128)|チェック解除|  
   
-7.  もう 1 つ、 **Products** という名前のテーブルを作成します。 列グリッドを使用して、以下に示す列を Products テーブルに追加します。 さらに、テーブルの名前が `[dbo].[Products]` になるようにスクリプトを変更します。  
+7.  もう 1 つ、**Products** という名前のテーブルを作成します。 列グリッドを使用して、以下に示す列を Products テーブルに追加します。 さらに、テーブルの名前が `[dbo].[Products]` になるようにスクリプトを変更します。  
   
     |名前|データ型|**[NULL を許容]**|  
     |--------|-------------|-------------------|  

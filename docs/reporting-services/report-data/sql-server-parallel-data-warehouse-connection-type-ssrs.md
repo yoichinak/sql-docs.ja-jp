@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d445092d609be13cca75c06e49f3ae76b51851b
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: dfa373b98dfda2af0c8d18b1cc58fc7f0df5a1cb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935497"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031014"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 並列データ ウェアハウスの接続の種類 (SSRS)
 
@@ -30,7 +30,7 @@ ms.locfileid: "91935497"
  このトピックの情報を使用して、データ ソースを構築してください。 手順については、「 [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="connection-string"></a><a name="Connection"></a> 接続文字列  
- [!INCLUDE[ssDW](../../includes/ssdw-md.md)]に接続する場合、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] アプライアンス内のデータベース オブジェクトに接続します。 クエリ デザイナーで、使用するデータベース オブジェクトを指定します。 接続文字列でデータベースを指定しない場合は、管理者によって割り当てられた既定のデータベースに接続されます。 データ ソースへの接続に使用する接続情報および資格情報については、データベース管理者に問い合わせてください。 **アプライアンスのサンプル データベース**CustomerSales [!INCLUDE[ssDW](../../includes/ssdw-md.md)] を指定する接続文字列の例を次に示します。  
+ [!INCLUDE[ssDW](../../includes/ssdw-md.md)]に接続する場合、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] アプライアンス内のデータベース オブジェクトに接続します。 クエリ デザイナーで、使用するデータベース オブジェクトを指定します。 接続文字列でデータベースを指定しない場合は、管理者によって割り当てられた既定のデータベースに接続されます。 データ ソースへの接続に使用する接続情報および資格情報については、データベース管理者に問い合わせてください。 **アプライアンスのサンプル データベース** CustomerSales [!INCLUDE[ssDW](../../includes/ssdw-md.md)] を指定する接続文字列の例を次に示します。  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  
@@ -109,7 +109,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
 ##  <a name="parameters"></a><a name="Parameters"></a> パラメーター  
  入力パラメーターを含むクエリ変数またはストアド プロシージャがクエリ テキストに含まれている場合、対応するデータセットのクエリ パラメーターとレポートのレポート パラメーターが自動的に生成されます。 クエリ テキストには、各クエリ変数の DECLARE ステートメントを含めないでください。  
   
- たとえば、次の SQL クエリでは、 **EmpID**という名前のレポート パラメーターが作成されます。  
+ たとえば、次の SQL クエリでは、 **EmpID** という名前のレポート パラメーターが作成されます。  
   
 ```  
 SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN  

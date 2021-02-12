@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 0a9c522bf292147852203fb9ac740e7103195b35
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194577"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835997"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル: SSIS パッケージを SQL ビューとして公開する
 
@@ -30,14 +30,14 @@ ms.locfileid: "92194577"
 ## <a name="prerequisites"></a>前提条件  
  このチュートリアルを実行するには、コンピューターに次のソフトウェアがインストールされている必要があります。  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以降と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を起動します。  
+1.  [!INCLUDE[ssNoVersion ](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>手順 1: SSIS プロジェクトを構築して SSIS カタログに配置する  
  この手順では、SSIS 対応データ ソース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用します) からデータを抽出し、そのデータを Data Streaming Destination コンポーネントを使用して出力する SSIS パッケージを作成します。 その後、SSIS プロジェクトを構築して SSIS カタログに配置します。  
   
-1.  **SQL Server Data Tools**を起動します。 **[スタート]** メニューで、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server Data Tools]** をクリックします。  
+1.  **SQL Server Data Tools** を起動します。 **[スタート]** メニューで、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server Data Tools]** をクリックします。  
   
 2.  新しい [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを作成します。  
   
@@ -55,11 +55,11 @@ ms.locfileid: "92194577"
   
 3.  **Data Flow** コンポーネントを、 **SSIS ツールボックス** から **[コントロール フロー]** タブのデザイン画面にドラッグします。  
   
-4.  **コントロール フロー** の **Data Flow** コンポーネントをダブルクリックして **データ フロー デザイナー**を開きます。  
+4.  **コントロール フロー** の **Data Flow** コンポーネントをダブルクリックして **データ フロー デザイナー** を開きます。  
   
 5.  **ソース コンポーネント** を、ツールボックスから **データ フロー デザイナー** にドラッグし、データ ソースからデータを抽出するように構成します。  
   
-    1.  このチュートリアルを実行するために、 **Employee** テーブルがあるテスト データベース **TestDB**を作成します。 **ID**、 **FirstName** 、 **LastName**という 3 つの列があるテーブルを作成します。  
+    1.  このチュートリアルを実行するために、 **Employee** テーブルがあるテスト データベース **TestDB** を作成します。 **ID**、 **FirstName** 、 **LastName** という 3 つの列があるテーブルを作成します。  
   
     2.  **ID** を主キーとして設定します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "92194577"
         |1|John|Doe|  
         |2|Jane|Doe|  
   
-    4.  **OLE DB Source** コンポーネントを **SSIS ツールボックス** から **データ フロー デザイナー**にドラッグします。  
+    4.  **OLE DB Source** コンポーネントを **SSIS ツールボックス** から **データ フロー デザイナー** にドラッグします。  
   
     5.  コンポーネントを、 **TestDB** データベースの **Employee** テーブルからデータを抽出するように構成します。 **[OLE DB 接続マネージャー]** で **[(local).TestDB]** を、 **[データ アクセス モード]** で **[テーブルまたはビュー]** を、 **[テーブルまたはビューの名前]** で **[[dbo].[Employee]]** を選択します。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "92194577"
   
          ![データ フィード公開ウィザード - [公開の設定] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "データ フィード公開ウィザード - [公開の設定] ページ")  
   
-    2.  **ビュー** の **名前**を入力します。 ボックスの一覧から既存のビューを選択することもできます。  
+    2.  **ビュー** の **名前** を入力します。 ボックスの一覧から既存のビューを選択することもできます。  
   
     3.  **[設定]** リストに、ビューと関連付ける **リンク サーバー** の **名前** を指定します。 リンク サーバーが存在しない場合、ウィザードは、ビューを作成する前にリンク サーバーを作成します。 **User32BitRuntime** と **Timeout** の値をここに設定することもできます。  
   

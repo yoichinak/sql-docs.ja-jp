@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fc7abeb4eec6d25e183db5ffcf1923185016b913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b562e886bcb09eae4c02607f17eb7419b313a759
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492545"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072036"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>プロジェクトの設定 (型のマッピング) (DB2ToSQL)
 [ **プロジェクトの設定** ] ダイアログボックスの [型マッピング] ページには、SSMA が DB2 データ型をデータ型に変換する方法をカスタマイズする設定が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -31,7 +31,7 @@ ms.locfileid: "88492545"
 ## <a name="options"></a>オプション  
 次の表は、[ **型マッピング** ] タブのオプションを示しています。  
   
-**ソースの種類**  
+**変換元の型**  
 マップされた DB2 データ型。  
   
 **ターゲットの種類**  
@@ -42,10 +42,10 @@ ms.locfileid: "88492545"
 **追加**  
 [マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-**[編集]**  
+**編集**  
 [マッピング] ボックスの一覧で選択したデータ型を編集する場合にクリックします。  
   
-**Remove**  
+**削除**  
 クリックすると、選択したデータ型マッピングが [マッピング] ボックスの一覧から削除されます。  
   
 **既定値にリセット**  
@@ -88,7 +88,7 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |各国語文字の変化<sup>\*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
 |nclob|nvarchar(max)|  
-|number|float [53]|  
+|数値|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|INT|  
@@ -155,7 +155,7 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |nchar|nchar|  
 |nchar [ \* ]|nchar [ \* ]|  
 |nclob|nvarchar(max)|  
-|number|float [53]|  
+|数値|float [53]|  
 |数値 [ \* .. \* ]|数値 [ \* ]|  
 |数値 [ \* .. \* ][\*..\*]|数値 [ \* ] [ \* ]|  
 |numeric|numeric|  
@@ -188,7 +188,7 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |binary_float|float [53]|  
 |binary_interger|INT|  
 |BLOB|varbinary(max)|  
-|ブール型|bit|  
+|Boolean|bit|  
 |Char|char|  
 |char varying [ \* ..8000]|varchar [ \* ]|  
 |文字の変化 [8001.. \* ]|varchar(max)|  
@@ -265,6 +265,6 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |varchar2 [8001 \* ]|varch a (max)|  
 |Xmltype|xml|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [ユーザーインターフェイスリファレンス &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c76e4cf15edcfeb6cb25b9d205f79ba34386e8d0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f2a6672f3b73a5be8077229019473758b2bf1e95
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123225"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040252"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler の拡張機能 (プレビュー)
 
@@ -35,7 +35,7 @@ SQL Server Profiler の拡張機能 (プレビュー) は、拡張イベント�
 
     ![プロファイラー拡張機能マネージャー](media/sql-server-profiler-extension/profiler-extension.png)
 
-3. 必要な拡張機能を選択して**インストール**します。
+3. 必要な拡張機能を選択して **インストール** します。
 4. **[再読み込み]** を選択して拡張機能を有効にします (拡張機能を初めてインストールするときにのみ必要です)。
 
 ## <a name="start-profiler"></a>Profiler の開始

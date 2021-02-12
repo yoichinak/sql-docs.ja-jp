@@ -1,7 +1,7 @@
 ---
 description: ポイント
 title: ポイント | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 02/02/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e17822f4eb88a1103ab5a214249ec5db7146c74
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bcbdda427a587e06bf1ad678939b8164178112dd
+ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475333"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478577"
 ---
 # <a name="point"></a>ポイント
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "97475333"
   
 ## <a name="examples"></a>例  
 ### <a name="example-a"></a>例 A.
-次の例では、点 (3, 4) を表す `geometry Point`インスタンスを作成します。このインスタンスの SRID は 0 です。  
+次の例では、点 (3, 4) を表す geometry の Point インスタンスを作成します。SRID は 0 です。  
   
 ```sql  
 DECLARE @g geometry;  
@@ -41,7 +41,7 @@ SET @g = geometry::STGeomFromText('POINT (3 4)', 0);
 ```  
   
 ### <a name="example-b"></a>例 B。
-次の例では、SRID が 0 (既定)、Z (昇格) 値が 7、M (メジャー) 値が 2.5 の、点 (3, 4) を表す `geometry``Point` インスタンスを作成します。  
+次の例では、点 (3, 4) を表す geometry の Point インスタンスを作成します。Z (昇格) 値が 7、M (メジャー) 値が 2.5、既定の SRID は 0 です。  
   
 ```  
 DECLARE @g geometry;  
@@ -49,7 +49,7 @@ SET @g = geometry::Parse('POINT(3 4 7 2.5)');
 ```  
   
 ### <a name="example-c"></a>例 C。
-次の例では、`geometry``Point` インスタンスの X、Y、Z、および M の値を返します。  
+次の例では、geometry の Point インスタンスの X、Y、Z、および M の値が返されます。  
   
 ```  
 SELECT @g.STX;  

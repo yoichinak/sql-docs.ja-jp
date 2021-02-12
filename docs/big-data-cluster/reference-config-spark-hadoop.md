@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ecb7fd295eded45995941c8a32e0519f10c8b78b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: ffe9811f165e143179178d1179ccf3595494bc79
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196117"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046144"
 ---
 # <a name="apache-spark--apache-hadoop-hdfs-configuration-properties"></a>Apache Spark と Apache Hadoop (HDFS) の構成プロパティ
 
@@ -149,201 +149,201 @@ JSON に一覧表示されている設定は、BDC 固有の既定値です。 �
 
 次の `spark` 構成はサポートされていないため、ビッグ データ クラスターのコンテキストで変更することはできません。
 
-| カテゴリ  | サブカテゴリ               | ファイル                       | サポートされていない構成                                              |
+| カテゴリ  | サブカテゴリ               | ファイル                       | サポートされていない構成                                              |
 |-----------|----------------------------|----------------------------|-------------------------------------------------------------------------|
-|           | yarn-site                  | yarn-site.xml              | yarn.log-aggregation-enable                                             |
-|           |                            |                            | yarn.log.server.url                                                     |
-|           |                            |                            | yarn.nodemanager.pmem-check-enabled                                     |
-|           |                            |                            | yarn.nodemanager.vmem-check-enabled                                     |
-|           |                            |                            | yarn.nodemanager.aux-services                                           |
-|           |                            |                            | yarn.resourcemanager.address                                            |
-|           |                            |                            | yarn.nodemanager.address                                                |
-|           |                            |                            | yarn.client.failover-no-ha-proxy-provider                               |
-|           |                            |                            | yarn.client.failover-proxy-provider                                     |
-|           |                            |                            | yarn.http.policy                                                        |
-|           |                            |                            | yarn.nodemanager.linux-container-executor.secure-mode.use-pool-user     |
-|           |                            |                            | yarn.nodemanager.linux-container-executor.secure-mode.pool-user-prefix  |
-|           |                            |                            | yarn.nodemanager.linux-container-executor.nonsecure-mode.local-user     |
-|           |                            |                            | yarn.acl.enable                                                         |
-|           |                            |                            | yarn.admin.acl                                                          |
-|           |                            |                            | yarn.resourcemanager.hostname                                           |
-|           |                            |                            | yarn.resourcemanager.principal                                          |
-|           |                            |                            | yarn.resourcemanager.keytab                                             |
-|           |                            |                            | yarn.resourcemanager.webapp.spnego-keytab-file                          |
-|           |                            |                            | yarn.resourcemanager.webapp.spnego-principal                            |
-|           |                            |                            | yarn.nodemanager.principal                                              |
-|           |                            |                            | yarn.nodemanager.keytab                                                 |
-|           |                            |                            | yarn.nodemanager.webapp.spnego-keytab-file                              |
-|           |                            |                            | yarn.nodemanager.webapp.spnego-principal                                |
-|           |                            |                            | yarn.resourcemanager.ha.enabled                                         |
-|           |                            |                            | yarn.resourcemanager.cluster-id                                         |
-|           |                            |                            | yarn.resourcemanager.zk-address                                         |
-|           |                            |                            | yarn.resourcemanager.ha.rm-ids                                          |
-|           |                            |                            | yarn.resourcemanager.hostname.*                                         |
-|           | capacity-scheduler         | capacity-scheduler.xml     | yarn.scheduler.capacity.root.acl_submit_applications                    |
-|           |                            |                            | yarn.scheduler.capacity.root.acl_administer_queue                       |
-|           |                            |                            | yarn.scheduler.capacity.root.default.acl_application_max_priority       |
-|           | yarn-env                   | yarn-env.sh                |                                                                         |
-|           | spark-defaults-conf        | spark-defaults.conf        | spark.yarn.archive                                                      |
-|           |                            |                            | spark.yarn.historyServer.address                                        |
-|           |                            |                            | spark.eventLog.enabled                                                  |
-|           |                            |                            | spark.eventLog.dir                                                      |
-|           |                            |                            | spark.sql.warehouse.dir                                                 |
-|           |                            |                            | spark.sql.hive.metastore.version                                        |
-|           |                            |                            | spark.sql.hive.metastore.jars                                           |
-|           |                            |                            | spark.extraListeners                                                    |
-|           |                            |                            | spark.metrics.conf                                                      |
-|           |                            |                            | spark.ssl.enabled                                                       |
-|           |                            |                            | spark.authenticate                                                      |
-|           |                            |                            | spark.network.crypto.enabled                                            |
-|           |                            |                            | spark.ssl.keyStore                                                      |
-|           |                            |                            | spark.ssl.keyStorePassword  
-|           |                            |                            | spark.ui.enabled                                                        |
-|           | spark-env                  | spark-env.sh               | SPARK_NO_DAEMONIZE                                                      |
-|           |                            |                            | SPARK_DIST_CLASSPATH                                                    |
-|           | spark-history-server-conf  | spark-history-server.conf  | spark.history.fs.logDirectory                                           |
-|           |                            |                            | spark.ui.proxyBase                                                      |
-|           |                            |                            | spark.history.fs.cleaner.enabled                                        |
-|           |                            |                            | spark.ssl.enabled                                                       |
-|           |                            |                            | spark.authenticate                                                      |
-|           |                            |                            | spark.network.crypto.enabled                                            |
-|           |                            |                            | spark.ssl.keyStore                                                      |
-|           |                            |                            | spark.ssl.keyStorePassword                                              |
-|           |                            |                            | spark.history.kerberos.enabled                                          |
-|           |                            |                            | spark.history.kerberos.principal                                        |
-|           |                            |                            | spark.history.kerberos.keytab                                           |
-|           |                            |                            | spark.ui.filters                                                        |
-|           |                            |                            | spark.acls.enable                                                       |
-|           |                            |                            | spark.history.ui.acls.enable                                            |
-|           |                            |                            | spark.history.ui.admin.acls                                             |
-|           |                            |                            | spark.history.ui.admin.acls.groups                                      |
-|           | livy-conf                  | livy.conf                  | livy.keystore                                                           |
-|           |                            |                            | livy.keystore.password                                                  |
-|           |                            |                            | livy.spark.master                                                       |
-|           |                            |                            | livy.spark.deploy-mode                                                  |
-|           |                            |                            | livy.rsc.jars                                                           |
-|           |                            |                            | livy.repl.jars                                                          |
-|           |                            |                            | livy.rsc.pyspark.archives                                               |
-|           |                            |                            | livy.rsc.sparkr.package                                                 |
-|           |                            |                            | livy.repl.enable-hive-context                                           |
-|           |                            |                            | livy.superusers                                                         |
-|           |                            |                            | livy.server.auth.type                                                   |
-|           |                            |                            | livy.server.launch.kerberos.keytab                                      |
-|           |                            |                            | livy.server.launch.kerberos.principal                                   |
-|           |                            |                            | livy.server.auth.kerberos.principal                                     |
-|           |                            |                            | livy.server.auth.kerberos.keytab                                        |
-|           |                            |                            | livy.impersonation.enabled                                              |
-|           |                            |                            | livy.server.access-control.enabled                                      |
-|           |                            |                            | livy.server.access-control.*                                            |
-|           | livy-env                   | livy-env.sh                |                                                                         |
-|           | hive-site                  | hive-site.xml              | javax.jdo.option.ConnectionURL                                          |
-|           |                            |                            | javax.jdo.option.ConnectionDriverName                                   |
-|           |                            |                            | javax.jdo.option.ConnectionUserName                                     |
-|           |                            |                            | javax.jdo.option.ConnectionPassword                                     |
-|           |                            |                            | hive.metastore.uris                                                     |
-|           |                            |                            | hive.metastore.pre.event.listeners                                      |
-|           |                            |                            | hive.security.authorization.enabled                                     |
-|           |                            |                            | hive.security.metastore.authenticator.manager                           |
-|           |                            |                            | hive.security.metastore.authorization.manager                           |
-|           |                            |                            | hive.metastore.use.SSL                                                  |
-|           |                            |                            | hive.metastore.keystore.path                                            |
-|           |                            |                            | hive.metastore.keystore.password                                        |
-|           |                            |                            | hive.metastore.truststore.path                                          |
-|           |                            |                            | hive.metastore.truststore.password                                      |
-|           |                            |                            | hive.metastore.kerberos.keytab.file                                     |
-|           |                            |                            | hive.metastore.kerberos.principal                                       |
-|           |                            |                            | hive.metastore.sasl.enabled                                             |
-|           |                            |                            | hive.metastore.execute.setugi                                           |
-|           |                            |                            | hive.cluster.delegation.token.store.class                               |
-|           | hive-env                   | hive-env.sh                
+|           | yarn-site                  | yarn-site.xml              | yarn.log-aggregation-enable                                             |
+|           |                            |                            | yarn.log.server.url                                                     |
+|           |                            |                            | yarn.nodemanager.pmem-check-enabled                                     |
+|           |                            |                            | yarn.nodemanager.vmem-check-enabled                                     |
+|           |                            |                            | yarn.nodemanager.aux-services                                           |
+|           |                            |                            | yarn.resourcemanager.address                                            |
+|           |                            |                            | yarn.nodemanager.address                                                |
+|           |                            |                            | yarn.client.failover-no-ha-proxy-provider                               |
+|           |                            |                            | yarn.client.failover-proxy-provider                                     |
+|           |                            |                            | yarn.http.policy                                                        |
+|           |                            |                            | yarn.nodemanager.linux-container-executor.secure-mode.use-pool-user     |
+|           |                            |                            | yarn.nodemanager.linux-container-executor.secure-mode.pool-user-prefix  |
+|           |                            |                            | yarn.nodemanager.linux-container-executor.nonsecure-mode.local-user     |
+|           |                            |                            | yarn.acl.enable                                                         |
+|           |                            |                            | yarn.admin.acl                                                          |
+|           |                            |                            | yarn.resourcemanager.hostname                                           |
+|           |                            |                            | yarn.resourcemanager.principal                                          |
+|           |                            |                            | yarn.resourcemanager.keytab                                             |
+|           |                            |                            | yarn.resourcemanager.webapp.spnego-keytab-file                          |
+|           |                            |                            | yarn.resourcemanager.webapp.spnego-principal                            |
+|           |                            |                            | yarn.nodemanager.principal                                              |
+|           |                            |                            | yarn.nodemanager.keytab                                                 |
+|           |                            |                            | yarn.nodemanager.webapp.spnego-keytab-file                              |
+|           |                            |                            | yarn.nodemanager.webapp.spnego-principal                                |
+|           |                            |                            | yarn.resourcemanager.ha.enabled                                         |
+|           |                            |                            | yarn.resourcemanager.cluster-id                                         |
+|           |                            |                            | yarn.resourcemanager.zk-address                                         |
+|           |                            |                            | yarn.resourcemanager.ha.rm-ids                                          |
+|           |                            |                            | yarn.resourcemanager.hostname.*                                         |
+|           | capacity-scheduler         | capacity-scheduler.xml     | yarn.scheduler.capacity.root.acl_submit_applications                    |
+|           |                            |                            | yarn.scheduler.capacity.root.acl_administer_queue                       |
+|           |                            |                            | yarn.scheduler.capacity.root.default.acl_application_max_priority       |
+|           | yarn-env                   | yarn-env.sh                |                                                                         |
+|           | spark-defaults-conf        | spark-defaults.conf        | spark.yarn.archive                                                      |
+|           |                            |                            | spark.yarn.historyServer.address                                        |
+|           |                            |                            | spark.eventLog.enabled                                                  |
+|           |                            |                            | spark.eventLog.dir                                                      |
+|           |                            |                            | spark.sql.warehouse.dir                                                 |
+|           |                            |                            | spark.sql.hive.metastore.version                                        |
+|           |                            |                            | spark.sql.hive.metastore.jars                                           |
+|           |                            |                            | spark.extraListeners                                                    |
+|           |                            |                            | spark.metrics.conf                                                      |
+|           |                            |                            | spark.ssl.enabled                                                       |
+|           |                            |                            | spark.authenticate                                                      |
+|           |                            |                            | spark.network.crypto.enabled                                            |
+|           |                            |                            | spark.ssl.keyStore                                                      |
+|           |                            |                            | spark.ssl.keyStorePassword  
+|           |                            |                            | spark.ui.enabled                                                        |
+|           | spark-env                  | spark-env.sh               | SPARK_NO_DAEMONIZE                                                      |
+|           |                            |                            | SPARK_DIST_CLASSPATH                                                    |
+|           | spark-history-server-conf  | spark-history-server.conf  | spark.history.fs.logDirectory                                           |
+|           |                            |                            | spark.ui.proxyBase                                                      |
+|           |                            |                            | spark.history.fs.cleaner.enabled                                        |
+|           |                            |                            | spark.ssl.enabled                                                       |
+|           |                            |                            | spark.authenticate                                                      |
+|           |                            |                            | spark.network.crypto.enabled                                            |
+|           |                            |                            | spark.ssl.keyStore                                                      |
+|           |                            |                            | spark.ssl.keyStorePassword                                              |
+|           |                            |                            | spark.history.kerberos.enabled                                          |
+|           |                            |                            | spark.history.kerberos.principal                                        |
+|           |                            |                            | spark.history.kerberos.keytab                                           |
+|           |                            |                            | spark.ui.filters                                                        |
+|           |                            |                            | spark.acls.enable                                                       |
+|           |                            |                            | spark.history.ui.acls.enable                                            |
+|           |                            |                            | spark.history.ui.admin.acls                                             |
+|           |                            |                            | spark.history.ui.admin.acls.groups                                      |
+|           | livy-conf                  | livy.conf                  | livy.keystore                                                           |
+|           |                            |                            | livy.keystore.password                                                  |
+|           |                            |                            | livy.spark.master                                                       |
+|           |                            |                            | livy.spark.deploy-mode                                                  |
+|           |                            |                            | livy.rsc.jars                                                           |
+|           |                            |                            | livy.repl.jars                                                          |
+|           |                            |                            | livy.rsc.pyspark.archives                                               |
+|           |                            |                            | livy.rsc.sparkr.package                                                 |
+|           |                            |                            | livy.repl.enable-hive-context                                           |
+|           |                            |                            | livy.superusers                                                         |
+|           |                            |                            | livy.server.auth.type                                                   |
+|           |                            |                            | livy.server.launch.kerberos.keytab                                      |
+|           |                            |                            | livy.server.launch.kerberos.principal                                   |
+|           |                            |                            | livy.server.auth.kerberos.principal                                     |
+|           |                            |                            | livy.server.auth.kerberos.keytab                                        |
+|           |                            |                            | livy.impersonation.enabled                                              |
+|           |                            |                            | livy.server.access-control.enabled                                      |
+|           |                            |                            | livy.server.access-control.*                                            |
+|           | livy-env                   | livy-env.sh                |                                                                         |
+|           | hive-site                  | hive-site.xml              | javax.jdo.option.ConnectionURL                                          |
+|           |                            |                            | javax.jdo.option.ConnectionDriverName                                   |
+|           |                            |                            | javax.jdo.option.ConnectionUserName                                     |
+|           |                            |                            | javax.jdo.option.ConnectionPassword                                     |
+|           |                            |                            | hive.metastore.uris                                                     |
+|           |                            |                            | hive.metastore.pre.event.listeners                                      |
+|           |                            |                            | hive.security.authorization.enabled                                     |
+|           |                            |                            | hive.security.metastore.authenticator.manager                           |
+|           |                            |                            | hive.security.metastore.authorization.manager                           |
+|           |                            |                            | hive.metastore.use.SSL                                                  |
+|           |                            |                            | hive.metastore.keystore.path                                            |
+|           |                            |                            | hive.metastore.keystore.password                                        |
+|           |                            |                            | hive.metastore.truststore.path                                          |
+|           |                            |                            | hive.metastore.truststore.password                                      |
+|           |                            |                            | hive.metastore.kerberos.keytab.file                                     |
+|           |                            |                            | hive.metastore.kerberos.principal                                       |
+|           |                            |                            | hive.metastore.sasl.enabled                                             |
+|           |                            |                            | hive.metastore.execute.setugi                                           |
+|           |                            |                            | hive.cluster.delegation.token.store.class                               |
+|           | hive-env                   | hive-env.sh                
 
 ## <a name="unsupported-hdfs-configurations"></a>サポートされていない `hdfs` 構成
 
 次の `hdfs` 構成はサポートされていないため、ビッグ データ クラスターのコンテキストで変更することはできません。
 
-| カテゴリ  | サブカテゴリ               | ファイル                       | サポートされていない構成                                              |
+| カテゴリ  | サブカテゴリ               | ファイル                       | サポートされていない構成                                              |
 |-----------|----------------------------|----------------------------|-------------------------------------------------------------------------|
-|          | core-site                   | core-site.xml                 | fs.defaultFS                                          |
-|          |                             |                               | ha.zookeeper.quorum                                   |
-|          |                             |                               | hadoop.tmp.dir                                        |
-|          |                             |                               | hadoop.rpc.protection                                 |
-|          |                             |                               | hadoop.security.auth_to_local                         |
-|          |                             |                               | hadoop.security.authentication                        |
-|          |                             |                               | hadoop.security.authorization                         |
-|          |                             |                               | hadoop.http.authentication.simple.anonymous.allowed   |
-|          |                             |                               | hadoop.http.authentication.type                       |
-|          |                             |                               | hadoop.http.authentication.kerberos.principal         |
-|          |                             |                               | hadoop.http.authentication.kerberos.keytab            |
-|          |                             |                               | hadoop.http.filter.initializers                       |
-|          |                             |                               | hadoop.security.group.mapping.*                       |                               |
+|          | core-site                   | core-site.xml                 | fs.defaultFS                                          |
+|          |                             |                               | ha.zookeeper.quorum                                   |
+|          |                             |                               | hadoop.tmp.dir                                        |
+|          |                             |                               | hadoop.rpc.protection                                 |
+|          |                             |                               | hadoop.security.auth_to_local                         |
+|          |                             |                               | hadoop.security.authentication                        |
+|          |                             |                               | hadoop.security.authorization                         |
+|          |                             |                               | hadoop.http.authentication.simple.anonymous.allowed   |
+|          |                             |                               | hadoop.http.authentication.type                       |
+|          |                             |                               | hadoop.http.authentication.kerberos.principal         |
+|          |                             |                               | hadoop.http.authentication.kerberos.keytab            |
+|          |                             |                               | hadoop.http.filter.initializers                       |
+|          |                             |                               | hadoop.security.group.mapping.*                       |                               |
 |          |                             |                               | hadoop.security.key.provider.path                     |                               |
-|          | mapred-env                  | mapred-env.sh                 |                                                       |
-|          | hdfs-site                   | hdfs-site.xml                 | dfs.namenode.name.dir                                 |
-|          |                             |                               | dfs.datanode.data.dir                                 |
-|          |                             |                               | dfs.namenode.acls.enabled                             |
-|          |                             |                               | dfs.namenode.datanode.registration.ip-hostname-check  |
-|          |                             |                               | dfs.client.retry.policy.enabled                       |
-|          |                             |                               | dfs.permissions.enabled                               |
-|          |                             |                               | dfs.nameservices                                      |
-|          |                             |                               | dfs.ha.namenodes.nmnode-0                             |
-|          |                             |                               | dfs.namenode.rpc-address.nmnode-0.*                   |
-|          |                             |                               | dfs.namenode.shared.edits.dir                         |
-|          |                             |                               | dfs.ha.automatic-failover.enabled                     |
-|          |                             |                               | dfs.ha.fencing.methods                                |
-|          |                             |                               | dfs.journalnode.edits.dir                             |
-|          |                             |                               | dfs.client.failover.proxy.provider.nmnode-0           |
-|          |                             |                               | dfs.namenode.http-address                             |
-|          |                             |                               | dfs.namenode.httpS-address                            |
-|          |                             |                               | dfs.http.policy                                       |
-|          |                             |                               | dfs.encrypt.data.transfer                             |
-|          |                             |                               | dfs.block.access.token.enable                         |
-|          |                             |                               | dfs.data.transfer.protection                          |
-|          |                             |                               | dfs.encrypt.data.transfer.cipher.suites               |
-|          |                             |                               | dfs.https.port                                        |
-|          |                             |                               | dfs.namenode.keytab.file                              |
-|          |                             |                               | dfs.namenode.kerberos.principal                       |
-|          |                             |                               | dfs.namenode.kerberos.internal.spnego.principal       |
-|          |                             |                               | dfs.datanode.data.dir.perm                            |
-|          |                             |                               | dfs.datanode.address                                  |
-|          |                             |                               | dfs.datanode.http.address                             |
-|          |                             |                               | dfs.datanode.ipc.address                              |
-|          |                             |                               | dfs.datanode.https.address                            |
-|          |                             |                               | dfs.datanode.keytab.file                              |
-|          |                             |                               | dfs.datanode.kerberos.principal                       |
-|          |                             |                               | dfs.journalnode.keytab.file                           |
-|          |                             |                               | dfs.journalnode.kerberos.principal                    |
-|          |                             |                               | dfs.journalnode.kerberos.internal.spnego.principal    |
-|          |                             |                               | dfs.web.authentication.kerberos.keytab                |
-|          |                             |                               | dfs.web.authentication.kerberos.principal             |
-|          |                             |                               | dfs.webhdfs.enabled                                   |
-|          |                             |                               | dfs.permissions.superusergroup                        |
-|          | hdfs-env                    | hdfs-env.sh                   | HADOOP_HEAPSIZE_MAX                                   |
-|          | zoo-cfg                     | zoo.cfg                       | secureClientPort                                      |
-|          |                             |                               | clientPort                                            |
-|          |                             |                               | dataDir                                               |
-|          |                             |                               | dataLogDir                                            |
-|          |                             |                               | 4lw.commands.whitelist                                |
-|          | zookeeper-java-env          | java.env                      | ZK_LOG_DIR                                            |
-|          |                             |                               | SERVER_JVMFLAGS                                       |
-|          | zookeeper-log4j-properties  | log4j.properties (zookeeper)  | log4j.rootLogger                                      |
-|          |                             |                               | log4j.appender.CONSOLE.*                              |
+|          | mapred-env                  | mapred-env.sh                 |                                                       |
+|          | hdfs-site                   | hdfs-site.xml                 | dfs.namenode.name.dir                                 |
+|          |                             |                               | dfs.datanode.data.dir                                 |
+|          |                             |                               | dfs.namenode.acls.enabled                             |
+|          |                             |                               | dfs.namenode.datanode.registration.ip-hostname-check  |
+|          |                             |                               | dfs.client.retry.policy.enabled                       |
+|          |                             |                               | dfs.permissions.enabled                               |
+|          |                             |                               | dfs.nameservices                                      |
+|          |                             |                               | dfs.ha.namenodes.nmnode-0                             |
+|          |                             |                               | dfs.namenode.rpc-address.nmnode-0.*                   |
+|          |                             |                               | dfs.namenode.shared.edits.dir                         |
+|          |                             |                               | dfs.ha.automatic-failover.enabled                     |
+|          |                             |                               | dfs.ha.fencing.methods                                |
+|          |                             |                               | dfs.journalnode.edits.dir                             |
+|          |                             |                               | dfs.client.failover.proxy.provider.nmnode-0           |
+|          |                             |                               | dfs.namenode.http-address                             |
+|          |                             |                               | dfs.namenode.httpS-address                            |
+|          |                             |                               | dfs.http.policy                                       |
+|          |                             |                               | dfs.encrypt.data.transfer                             |
+|          |                             |                               | dfs.block.access.token.enable                         |
+|          |                             |                               | dfs.data.transfer.protection                          |
+|          |                             |                               | dfs.encrypt.data.transfer.cipher.suites               |
+|          |                             |                               | dfs.https.port                                        |
+|          |                             |                               | dfs.namenode.keytab.file                              |
+|          |                             |                               | dfs.namenode.kerberos.principal                       |
+|          |                             |                               | dfs.namenode.kerberos.internal.spnego.principal       |
+|          |                             |                               | dfs.datanode.data.dir.perm                            |
+|          |                             |                               | dfs.datanode.address                                  |
+|          |                             |                               | dfs.datanode.http.address                             |
+|          |                             |                               | dfs.datanode.ipc.address                              |
+|          |                             |                               | dfs.datanode.https.address                            |
+|          |                             |                               | dfs.datanode.keytab.file                              |
+|          |                             |                               | dfs.datanode.kerberos.principal                       |
+|          |                             |                               | dfs.journalnode.keytab.file                           |
+|          |                             |                               | dfs.journalnode.kerberos.principal                    |
+|          |                             |                               | dfs.journalnode.kerberos.internal.spnego.principal    |
+|          |                             |                               | dfs.web.authentication.kerberos.keytab                |
+|          |                             |                               | dfs.web.authentication.kerberos.principal             |
+|          |                             |                               | dfs.webhdfs.enabled                                   |
+|          |                             |                               | dfs.permissions.superusergroup                        |
+|          | hdfs-env                    | hdfs-env.sh                   | HADOOP_HEAPSIZE_MAX                                   |
+|          | zoo-cfg                     | zoo.cfg                       | secureClientPort                                      |
+|          |                             |                               | clientPort                                            |
+|          |                             |                               | dataDir                                               |
+|          |                             |                               | dataLogDir                                            |
+|          |                             |                               | 4lw.commands.whitelist                                |
+|          | zookeeper-java-env          | java.env                      | ZK_LOG_DIR                                            |
+|          |                             |                               | SERVER_JVMFLAGS                                       |
+|          | zookeeper-log4j-properties  | log4j.properties (zookeeper)  | log4j.rootLogger                                      |
+|          |                             |                               | log4j.appender.CONSOLE.*                              |
 
 ## <a name="unsupported-gateway-configurations"></a>サポートされていない `gateway` 構成
 
 次の `gateway` 構成はサポートされていないため、ビッグ データ クラスターのコンテキストで変更することはできません。
 
-| カテゴリ  | サブカテゴリ               | ファイル                       | サポートされていない構成                                              |
+| カテゴリ  | サブカテゴリ               | ファイル                       | サポートされていない構成                                              |
 |-----------|----------------------------|----------------------------|-------------------------------------------------------------------------|
-|          | gateway-site                | gateway-site.xml              | gateway.port                                          |
-|          |                             |                               | gateway.path                                          |
-|          |                             |                               | gateway.gateway.conf.dir                              |
-|          |                             |                               | gateway.hadoop.kerberos.secured                       |
-|          |                             |                               | java.security.krb5.conf                               |
-|          |                             |                               | java.security.auth.login.config                       |
-|          |                             |                               | gateway.websocket.feature.enabled                     |
-|          |                             |                               | gateway.scope.cookies.feature.enabled                 |
-|          |                             |                               | ssl.exclude.protocols                                 |
-|          |                             |                               | ssl.include.ciphers                                   |
+|          | gateway-site                | gateway-site.xml              | gateway.port                                          |
+|          |                             |                               | gateway.path                                          |
+|          |                             |                               | gateway.gateway.conf.dir                              |
+|          |                             |                               | gateway.hadoop.kerberos.secured                       |
+|          |                             |                               | java.security.krb5.conf                               |
+|          |                             |                               | java.security.auth.login.config                       |
+|          |                             |                               | gateway.websocket.feature.enabled                     |
+|          |                             |                               | gateway.scope.cookies.feature.enabled                 |
+|          |                             |                               | ssl.exclude.protocols                                 |
+|          |                             |                               | ssl.include.ciphers                                   |
 
 ## <a name="next-steps"></a>次のステップ
 

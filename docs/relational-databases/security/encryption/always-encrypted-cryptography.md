@@ -13,12 +13,12 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 630732f9f1d56292a72ddd180ee536008c4ecf83
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 04a4515467265456797fbff8f5dc0446748229ba
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475593"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570471"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted による暗号
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "97475593"
  列暗号化キー (CEK) は、CMK によって保護されているコンテンツ暗号化キー (たとえば、データを保護するために使用されるキー) です。  
   
  すべての [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK ストア プロバイダーでは、RSA-OAEP (RSA with Optimal Asymmetric Encryption Padding) を使用して CEK が暗号化されます。 Microsoft Cryptography API がサポートされているキー ストア プロバイダー:.NET Framework の Next Generation (CNG) ([SqlColumnEncryptionCngProvider クラス](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)) では、RFC 8017 のセクション A.2.1 で指定されている既定のパラメーターが使用されます。 これらの既定パラメーターでは、SHA-1 のハッシュ関数と、SHA-1 による MGF1 のマスク生成関数が使用されます。 他のすべてのキー ストア プロバイダーでは、SHA-256 が使用されます。 
-  
+
+Always Encrypted では内部的に、FIPS 140-2 検証済み暗号化モジュールが使用されます。 
+
 ## <a name="data-encryption-algorithm"></a>データ暗号化のアルゴリズム  
  Always Encrypted では **AEAD_AES_256_CBC_HMAC_SHA_256** アルゴリズムを使用して、データベース内のデータを暗号化します。  
   

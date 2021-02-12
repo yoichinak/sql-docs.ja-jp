@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 06/09/2020
-ms.openlocfilehash: 26570d8b2ca1ac80ce2a6923dc3778154cb345ec
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 3f55f793391e408d96b8c6d07a31c7e790d54853
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137025"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048532"
 ---
 # <a name="import-or-view-models-with-machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio の Machine Learning 拡張機能を使用してモデルをインポートまたは表示する (プレビュー)
 
@@ -37,7 +37,7 @@ ms.locfileid: "91137025"
 
 1. **onnxruntime**、**mlflow**、**mlflow-dbstore** をインストールするように求められた場合は、 **[はい]** を選択します。
 
-1. モデルが格納されている**モデル データベース**と**モデル テーブル**を選択します。
+1. モデルが格納されている **モデル データベース** と **モデル テーブル** を選択します。
 
 これにより、モデルのリストが表示されます。 モデルの名前と説明を編集することも、リストからモデルを削除することもできます。
 
@@ -51,13 +51,13 @@ ms.locfileid: "91137025"
 
 1. **[モデルのインポート]** を選択します。
 
-1. インポートされたモデルを格納する**モデル データベース**を選択します。
+1. インポートされたモデルを格納する **モデル データベース** を選択します。
 
-1. インポートされたモデルを格納する**モデル テーブル**を選択します。 **既存のテーブル**を選択するか、**新しいテーブル**を作成することができます。 **[次へ]** を選択します。
+1. インポートされたモデルを格納する **モデル テーブル** を選択します。 **既存のテーブル** を選択するか、**新しいテーブル** を作成することができます。 **[次へ]** を選択します。
 
 1. モデルが配置されている場所を選択し、 **[次へ]** を選択します。 使用できるもの:
     - **ファイルのアップロード**。 ファイルからモデルを使用する場合は、これを選択します。 **[ソース ファイル]** でモデル ファイルを選択し、 **[次へ]** を選択します。
-    - **Azure Machine Learning**。 Azure Machine Learning のモデルを使用するには、これを選択します。 最初に、**Azure にサインイン**します。 次に、ご自分の **Azure アカウント**、**Azure サブスクリプション**、**Azure リソース グループ**、**Azure ML ワークスペース**を選択します。 使用するモデルを選択し、 **[次へ]** を選択します。
+    - **Azure Machine Learning**。 Azure Machine Learning のモデルを使用するには、これを選択します。 最初に、**Azure にサインイン** します。 次に、ご自分の **Azure アカウント**、**Azure サブスクリプション**、**Azure リソース グループ**、**Azure ML ワークスペース** を選択します。 使用するモデルを選択し、 **[次へ]** を選択します。
 
 1. モデルの **[名前]** と **[説明]** を入力し、 **[デプロイ]** を選択して、モデルをデータベースに格納します。
 

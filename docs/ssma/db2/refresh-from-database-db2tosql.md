@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 973f3aae444b27be93b675d16c9b9a73d8fac518
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c33ccf20e2b90fd967b5b15b491710d31ea83b0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463479"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071938"
 ---
 # <a name="refresh-from-database-db2tosql"></a>データベースからの更新 (DB2ToSQL)
 [ **データベースから更新** ] ダイアログボックスでは、DB2 データベースから更新するオブジェクトを選択できます。 ダイアログボックス内の行は、メタデータの状態に基づいて色分けされています。  
@@ -51,5 +51,5 @@ ms.locfileid: "88463479"
 **凡例**  
 [ **凡例** ] ダイアログボックスを表示します。 凡例には、行の色とメタデータの状態との間のマッピングが含まれます。  
   
-[**データベースからの更新**] ダイアログボックスの上部にある [**凡例**] ダイアログボックスを維持するには、[上**に表示**] チェックボックスをオンにします。  
+[**データベースからの更新**] ダイアログボックスの上部にある [**凡例**] ダイアログボックスを維持するには、[上 **に表示**] チェックボックスをオンにします。  
   

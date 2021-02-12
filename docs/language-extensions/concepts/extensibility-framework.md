@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 344e5f35e35202b6a44a4932db8a27424fdb8753
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f7d4c2e2408bbcc78c0ea74f0d50bd4e0599b826
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471803"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069785"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 言語拡張の機能拡張アーキテクチャ
 
@@ -38,15 +38,15 @@ The following diagram visually describes opportunities and benefits of the exten
 
 このアーキテクチャは、外部コードが SQL Server とは別のプロセスで実行されるが、コンポーネントによって SQL Server のデータと操作に対する要求のチェーンが内部で管理されるように設計されています。 
   
-  ***Windows のコンポーネント アーキテクチャ:** _
+  ***Windows のコンポーネント アーキテクチャ:***
 
   ![Windows 上のコンポーネント アーキテクチャ](../media/generic-architecture-windows.png "Windows 上のコンポーネント アーキテクチャ")
   
-  _*_Linux のコンポーネント アーキテクチャ:_*_
+  ***Linux のコンポーネント アーキテクチャ:***
   
   ![Linux 上のコンポーネント アーキテクチャ](../media/generic-architecture-linux.png "Linux 上のコンポーネント アーキテクチャ")
   
-コンポーネントには_ *スタート パッド** サービスが含まれています。これは、インタープリターとライブラリを読み込むための外部ランタイム (Java など) およびライブラリ固有のロジックを呼び出すために使用されます。
+コンポーネントには **スタート パッド** サービスが含まれています。これは、インタープリターとライブラリを読み込むための外部ランタイム (Java など) およびライブラリ固有のロジックを呼び出すために使用されます。
 
 <a name="launchpad"></a>
 

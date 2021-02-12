@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: df2a29b2d411c2502573ede95feefe9c1e061c5b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 75c4f6ca899135141aa68ec147889fcce8cfa549
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987898"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074513"
 ---
 # <a name="setting-project-options-mysqltosql"></a>プロジェクト オプションの設定 (MySQLToSQL)
 SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションでは、オブジェクトの変換方法、データの移行方法、およびソースデータ型とターゲットデータ型のマッピング方法を指定します。  オブジェクトを SQL Server に変換したり、SQL Server または SQL Azure にデータを SQL Azure または移行したりする前に、構成オプションがプロジェクトに適していることを確認してください。  
@@ -45,7 +45,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   [完全]  
   
--   Custom  
+-   カスタム  
   
 ほとんどのユーザーには、既定のモードを使用することをお勧めします。 オプティミスティックモードでは、現在の MySQL 構文がより多く保持されるため、読みやすくなります。 ただし、現在の構文を維持するのは正確ではない可能性があります。 MySQL 構文を同等の SQL Server または SQL Azure 構文に変換する必要がある場合、フルモードでは完全な変換が実行されます。 ただし、結果として得られるコードは読みにくくなる可能性があります。 カスタムモードでは、オプションを設定できます。  
   

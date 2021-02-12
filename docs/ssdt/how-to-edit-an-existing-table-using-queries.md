@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e1ebdca633ff866d51fcc20aa05993bb5969e4b2
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: bd6ea94af644c981d368608a0fe864dbdf237181
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518812"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018222"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>方法:クエリを使用して既存のテーブルを編集する
 
@@ -26,7 +26,7 @@ Transact\-SQL クエリを記述することによって、テーブルまたは
   
 ### <a name="to-edit-the-definition-of-an-existing-table"></a>既存のテーブルの定義を編集するには  
   
-1.  **SQL Server オブジェクト エクスプローラー**で、**Trade** データベースの **[テーブル]** ノードを展開し、**dbo.Suppliers** を右クリックします。  
+1.  **SQL Server オブジェクト エクスプローラー** で、**Trade** データベースの **[テーブル]** ノードを展開し、**dbo.Suppliers** を右クリックします。  
   
 2.  テーブル スキーマをテーブル デザイナーで表示するには、 **[デザイナーの表示]** をクリックします。  
   

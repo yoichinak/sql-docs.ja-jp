@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cfe57d436eac38052542eb2ed6c2133aab7ca07b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f889538e5232eedaf3bab8006c54d56e1649ea4c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480398"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014792"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>移行されたデータベース オブジェクトのテスト (SybaseToSQL)
 Sybase Tester の Microsoft SQL Server Migration Assistant (SSMA Tester) は、データベースオブジェクトの変換と SSMA によって行われたデータの移行を自動的にテストします。 SSMA の移行手順がすべて完了したら、SSMA Tester を使用して、変換されたオブジェクトが同じように動作することと、すべてのデータが適切に転送されたことを確認します。  
@@ -46,7 +46,7 @@ SSMA Tester は、Sybase のテスト用に選択されたオブジェクトと�
 > [!NOTE]  
 > 注意 実稼働システムでは SSMA Tester を使用しないでください。 テスト担当者の実行中に、送信元スキーマとデータが変更されます。 一方、テスト対象のコードの種類によっては、元の状態を完全に復元できない場合があります。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>前提条件  
 SSMA Tester を使用する場合は、[ **テスト担当者データベースをインストール** する] オプションをオンにして Ssma Sybase Extension Pack をインストールします。  
   
 さらに、次のことを確認します。  

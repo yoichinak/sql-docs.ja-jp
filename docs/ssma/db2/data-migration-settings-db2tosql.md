@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0646fc033f73134a4dfcba62e574ba08e378b9cc
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 17121feedda919034ed8c2ee40fec8b06321d131
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984878"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078250"
 ---
 # <a name="data-migration-settings-db2tosql"></a>データ移行の設定 (DB2ToSQL)
   
@@ -26,7 +26,7 @@ ms.locfileid: "91984878"
   
 -   カスタム SQL ステートメントの解析は、テーブルノードの [ **データ移行の設定** ] タブで実装されます。  
   
--   **データ移行設定**可視化で使用できる2つのチェックボックスを次に示します。  
+-   **データ移行設定** 可視化で使用できる2つのチェックボックスを次に示します。  
   
     1.  SQL Server テーブルの切り捨て  
   

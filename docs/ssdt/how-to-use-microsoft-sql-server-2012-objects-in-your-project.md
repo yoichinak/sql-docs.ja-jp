@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ee09f89463151f0dcf5c1fcd2c1f82a72ba8f350
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9e27db8dbb247c65664006784d44966d0914d8bc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988188"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018042"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>方法:プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する
 
@@ -28,7 +28,7 @@ ms.locfileid: "91988188"
   
 ### <a name="to-add-a-new-sequence-object-to-your-project"></a>新しいシーケンス オブジェクトをプロジェクトに追加するには  
   
-1.  **ソリューション エクスプローラー**で **TradeDev** データベース プロジェクトを右クリックし、 **[追加]** をポイントして、 **[新しい項目]** をクリックします。  
+1.  **ソリューション エクスプローラー** で **TradeDev** データベース プロジェクトを右クリックし、 **[追加]** をポイントして、 **[新しい項目]** をクリックします。  
   
 2.  左ペインの **[プログラミング]** をクリックし、 **[シーケンス]** をクリックします。 **[追加]** をクリックして新しいオブジェクトをプロジェクトに追加します。  
   
@@ -67,4 +67,4 @@ ms.locfileid: "91988188"
   
 3.  **[クエリの実行]** をクリックします。  
   
-4.  **SQL Server オブジェクト エクスプローラー**で、データベース内の **Products** テーブルに移動します。 右クリックして **[データの表示]** をクリックし、新しく追加された行を確認します。  
+4.  **SQL Server オブジェクト エクスプローラー** で、データベース内の **Products** テーブルに移動します。 右クリックして **[データの表示]** をクリックし、新しく追加された行を確認します。  

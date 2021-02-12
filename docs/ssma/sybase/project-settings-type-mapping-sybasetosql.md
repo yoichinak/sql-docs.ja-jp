@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 99ab880b69d2c06d462ed42ca0a2529ba6bf7bc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e9086feb8adcb64ba1a24191e91028fc870d488
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372118"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069924"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>プロジェクトの設定 (型のマッピング) (SybaseToSQL)
 [ **プロジェクトの設定** ] ダイアログボックスの [型マッピング] ページには、Ssma が Sybase Adaptive Server ENTERPRISE (ASE) データ型をデータ型に変換する方法をカスタマイズする設定が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -27,7 +27,7 @@ ms.locfileid: "88372118"
 -   現在のプロジェクトの設定を指定するには、[ **ツール** ] メニューの [ **プロジェクトの設定**] をクリックし、左側のウィンドウの下部にある [ **型マッピング** ] を選択します。  
   
 ## <a name="options"></a>オプション  
-**ソースの種類**  
+**変換元の型**  
 マップされた ASE データ型。  
   
 **ターゲットの種類**  
@@ -38,10 +38,10 @@ ms.locfileid: "88372118"
 **追加**  
 [マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-**[編集]**  
+**編集**  
 [マッピング] ボックスの一覧で選択したデータ型を編集する場合にクリックします。  
   
-**Remove**  
+**削除**  
 クリックすると、選択したデータ型マッピングが [マッピング] ボックスの一覧から削除されます。  
   
 **既定値にリセット**  
@@ -63,7 +63,7 @@ ms.locfileid: "88372118"
 |**文字の変化 [8001.. \* ]**|**varchar(max)**|  
 |**char [ \* ..8000]**|**char [ \* ]**|  
 |**char [8001.. \* ;]**|**varchar(max)**|  
-|**記号**|**char**|  
+|**character**|**char**|  
 |**文字の変化**|**varchar**|  
 |**文字の変化 ( \* ..8000]**|**varchar [ \* ]**|  
 |**文字の変化 [8001.. \* ]**|**varchar(max)**|  
@@ -77,7 +77,7 @@ ms.locfileid: "88372118"
 |**decimal**|**decimal**|  
 |**decimal [ \* .. \* ]**|**decimal [ \* ]**|  
 |**decimal [ \* .. \* ][\*..\*]**|**decimal [ \* ] [ \* ]**|  
-|**double precision**|**float [53]**|  
+|**倍精度**|**float [53]**|  
 |**float**|**float [53]**|  
 |**float [ \* ..最大**|**float [24]**|  
 |**float [16.. \* ]**|**float [53]**|  

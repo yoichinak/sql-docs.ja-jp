@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a2f61a8700c24a2cc41192103f57a51befbbd15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8cf4544579f4a3258d4bc785c98ada5935653dff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390658"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075778"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services のクライアント側印刷機能の有効化と無効化
 
@@ -51,9 +51,9 @@ ms.locfileid: "87390658"
      ![ssrs_html5_switch2html5](../../reporting-services/report-server/media/ssrs-html5-switch2html5.png "ssrs_html5_switch2html5")  
   
 ##  <a name="enable-and-disable-client-side-printing"></a><a name="bkmk_enable"></a> クライアント側印刷機能を有効または無効にする  
- レポート サーバー管理者は、レポート サーバーのシステム プロパティ **EnableClientPrinting** を **false**に設定して、リモート印刷機能を無効にすることができます。 これにより、サーバーが管理しているすべてのレポートでクライアント側印刷機能が無効になります。 既定では、 **EnableClientPrinting** は **true**に設定されています。 クライアント側印刷機能は、次の方法で無効にすることができます。  
+ レポート サーバー管理者は、レポート サーバーのシステム プロパティ **EnableClientPrinting** を **false** に設定して、リモート印刷機能を無効にすることができます。 これにより、サーバーが管理しているすべてのレポートでクライアント側印刷機能が無効になります。 既定では、 **EnableClientPrinting** は **true** に設定されています。 クライアント側印刷機能は、次の方法で無効にすることができます。  
   
--   **ネイティブ モードのレポート サーバー**の場合:  
+-   **ネイティブ モードのレポート サーバー** の場合:  
   
     1.  管理者特権を使用して [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開始します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "87390658"
   
          ![ssrs_ssmsproperties_clientprinting](../../reporting-services/report-server/media/ssrs-ssmsproperties-clientprinting.png "ssrs_ssmsproperties_clientprinting")  
   
--   **SharePoint モードのレポート サーバー**の場合:  
+-   **SharePoint モードのレポート サーバー** の場合:  
   
     1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** をクリックします。  
   

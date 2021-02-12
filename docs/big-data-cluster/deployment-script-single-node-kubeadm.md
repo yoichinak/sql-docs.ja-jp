@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad5509d3718c0ccd579893d1b260e558437b882a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 63e1e3776c62033280287e55c288791901a2d15f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730658"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046936"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>bash スクリプトを使用して単一ノード kubeadm クラスターに展開する
 
@@ -25,7 +25,7 @@ ms.locfileid: "85730658"
 
 ## <a name="prerequisites"></a>前提条件
 
-- バニラ Ubuntu 18.04 または 16.04 **サーバー**の仮想マシンまたは物理マシン。 スクリプトによってすべての依存関係が設定され、VM 内からそのスクリプトを実行します。
+- バニラ Ubuntu 18.04 または 16.04 **サーバー** の仮想マシンまたは物理マシン。 スクリプトによってすべての依存関係が設定され、VM 内からそのスクリプトを実行します。
 
   > [!NOTE]
   > Azure Linux VM の使用は、まだサポートされていません。

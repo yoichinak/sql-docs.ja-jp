@@ -19,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 5888c4735c884721449858af55c928b30a44b1f2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: af05732674dcf09c6bd828125df5fe4773b62018
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99211103"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071364"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -85,7 +85,7 @@ RECONFIGURE
 |**config_value**|**int**|**Sp_configure** ( **sys.configurations** 値) を使用して構成オプションが設定された値。 これらのオプションの詳細については、次を参照してください。 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) および [sys.configUrations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)です。|  
 |**run_value**|**int**|構成オプションの現在実行中の値 ( **sys.configurations.value_in_use**)。<br /><br /> 詳細については、「 [ transact-sql&#41;&#40;sys.configurations ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)を参照してください。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  サーバーレベルの設定を表示または変更するには、 **sp_configure** を使用します。 データベースレベルの設定を変更するには、ALTER DATABASE を使用します。 現在のユーザー セッションのみに影響する設定を変更するには、SET ステートメントを使用します。  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]

@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 828218dcebe5f2e5ab6c0759083f497876dae6b2
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 739501f78f313f8fbff20d71cc63376a8da27343
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813531"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552673"
 ---
 # <a name="row-level-security"></a>行レベルのセキュリティ
 
@@ -302,7 +302,7 @@ DROP SCHEMA Security;
 ### <a name="prerequisites"></a>前提条件
 
 1. 専用 SQL プールが必要です。 [専用 SQL プールの作成](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)に関する記事を参照してください
-1. 専用 SQL プールをホストしているサーバーが AAD に登録されている必要があります。また、Storage Blob Contributor のアクセス許可がある Azure Storage アカウントを持っている必要があります。 それには、[こちら](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) の手順に従います。
+1. 専用 SQL プールをホストしているサーバーは AAD に登録されている必要があります。また、ストレージ BLOB データ共同作成者のアクセス許可がある Azure Storage アカウントを持っている必要があります。 それには、[こちら](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) の手順に従います。
 1. 自分の Azure Storage アカウントにファイル システムを作成します。 Storage Explorer を使用して自分のストレージ アカウントを表示します。 コンテナーを右クリックし、 *[ファイル システムの作成]* を選択します。  
 
 前提条件を満たしたら、別のアクセス機能を示す 3 つのユーザー アカウントを作成します。

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 632d71f69f164ea221f9d11604e6fb07528fd583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c16a93a8354d6dbae410112bfcd494dafcbf293
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454206"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069484"
 ---
 # <a name="global-settings-logging-db2tosql"></a>グローバル設定 (ログ) (DB2ToSQL)
 [ **グローバル設定** ] ダイアログボックスを使用して、ssma のログ設定を指定します。 通常、これらの設定を変更するのは、製品サポートを使用する場合のみです。  
@@ -46,10 +46,10 @@ ms.locfileid: "88454206"
 |||  
 |-|-|  
 |**致命的なエラー**|致命的なエラーメッセージのみをログに書き込みます。|  
-|**Error**|エラーメッセージと致命的なエラーメッセージをログに書き込みます。|  
+|**エラー**|エラーメッセージと致命的なエラーメッセージをログに書き込みます。|  
 |**警告**|警告、エラー、および致命的なエラーメッセージをログに書き込みます。|  
 |**情報**|情報、警告、エラー、および致命的なエラーメッセージをログに書き込みます。|  
-|**Debug**|デバッグメッセージを含むすべてのメッセージをログに書き込みます。|  
+|**デバッグ**|デバッグメッセージを含むすべてのメッセージをログに書き込みます。|  
   
 **ログ ファイルのパス**  
 SSMA ログファイルのファイルパスと名前。 別の名前を指定するには、現在のパスをクリックし、参照ボタン ([.**..**]) をクリックします。  

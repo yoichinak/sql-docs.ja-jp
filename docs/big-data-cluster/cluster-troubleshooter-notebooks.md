@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 51286acc7f963b8d680bd81121cc22bab1c1a0a6
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 550c56a7ceb82b1215e6e921adb68a1438e87464
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364384"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048242"
 ---
 # <a name="troubleshooting-big-data-clusters-bdc-with-notebooks"></a>ノートブックを使用したビッグ データクラスター (BDC) のトラブルシューティング
 
@@ -62,7 +62,7 @@ ms.locfileid: "93364384"
 |TSG079 - コントローラー コア ダンプを生成する|このノートブックを使用してコントローラー コア ダンプを生成します。|
 |TSG086 - すべてのコンテナーで top を実行する|このノートブックを使用して、すべてのコンテナーで top を実行します。|
 |TSG087 - namenode ポッドで hadoop fs CLI を使用する|このノートブックを使用して、namenode ポッドで hadoop fs CLI を使用します。|
-|TSG108 - コントローラーのアップグレード構成マップを表示する|このノートブックを使用して、 **azdata bdc upgrade** を使ってビッグ データ クラスターのアップグレードを実行するときのエラーのトラブルシューティングを行います。|
+|TSG108 - コントローラーのアップグレード構成マップを表示する|このノートブックを使用して、**azdata bdc upgrade** を使ってビッグ データ クラスターのアップグレードを実行するときのエラーのトラブルシューティングを行います。|
 |TSG112 - Active Directory デプロイ前チェック|このノートブックを使用して、Active Directory (AD) デプロイに対して、ビッグ データ クラスター (BDC) の構成が有効であることを検証します。|
 |TSG115 - SQL Server on Linux セキュリティ ログ変換ツール|このノートブックを使用して、SQL Server on Linux の secuirty.ldap および security.kerberos ロガーによって生成されたログを解析します。 これらのロガーを有効にするには、SQL Server on Linux を実行しているコンピューター上の /var/opt/mssql/logger.ini に次の行を配置します。 注: このファイルは大文字と小文字が区別されます。|
 |TSG116 - SQL BDC セキュリティ サポート ログ変換ツール|このノートブックを使用して、SQL BDC のセキュリティ サポート サービスによって生成されたログを解析します。 ログを取得するには、クラスターからデバッグ ログをコピーして抽出します。 手順は次のとおりです。"azdata bdc debug copy-logs -n <namespace> *" を実行します。これにより、いくつかの .tar.gz ファイルが作成されます。debuglogs-* <namespace>-<date>-<time>.tar.gz の内容を抽出します。./<namespace>/control-<…>/security-support/supervisol/log/secsupp-stderr---<…>.log に格納されているセキュリティ サポート ログを確認します。|

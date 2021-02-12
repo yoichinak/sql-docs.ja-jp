@@ -21,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 998777c9a6cbe8a4194997210f1938b09f98df3f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 79e6e53f1fa177fbff0a5e9eff31c99e89700bcb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203285"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078243"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-sql)
 
@@ -104,7 +104,7 @@ ms.locfileid: "99203285"
 
 このビューには VIEW SERVER STATE 権限が必要です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 ユーザーは、この動的管理ビューにアクセスして、ユーザーワークロードプールと Azure SQL Database インスタンスのシステム内部プールについて、ほぼリアルタイムのリソース消費を監視できます。
 

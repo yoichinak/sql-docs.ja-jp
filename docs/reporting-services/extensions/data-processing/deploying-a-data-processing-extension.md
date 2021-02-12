@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 073ff624016cc671883fea551ad4ebd392b54ea6
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: df78278f655d6a11bb560440f86d662c08889059
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529653"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061157"
 ---
 # <a name="deploying-a-data-processing-extension"></a>データ処理拡張機能の配置
   ご自分の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能は、作成して [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ライブラリにコンパイルした後、レポート サーバーおよびレポート デザイナーで検出できるようにする必要があります。 これは、適切なディレクトリに拡張機能をコピーし、適切な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成ファイルにエントリを追加するだけで簡単に行うことができます。  
@@ -32,7 +32,7 @@ ms.locfileid: "84529653"
 |---------------|-----------------|  
 |**名前**|拡張機能の一意な名前。たとえば、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ処理拡張機能に対して "SQL"、OLE DB データ処理拡張機能に対して "OLEDB"。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extension** 要素内にあるすべてのエントリの間で一意にする必要があります。|  
 |**Type**|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
-|**[表示]**|**false** の値は、データ処理拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は **true**になります。|  
+|**[表示]**|**false** の値は、データ処理拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は **true** になります。|  
   
  RSReportServer.config ファイルまたは RSReportDesigner.config ファイルの詳細については、「[Reporting Services 構成ファイル](../../../reporting-services/report-server/reporting-services-configuration-files.md)」を参照してください。  
   

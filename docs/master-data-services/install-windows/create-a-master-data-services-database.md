@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af13d59ddb5c8837959feb83b31fc17dbcd7aa29
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 464bfd4714e7cc7680b2a2800d1c2ae1711feeb1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883875"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272483"
 ---
 # <a name="create-a-master-data-services-database"></a>マスター データ サービス データベースの作成
 
@@ -30,7 +30,7 @@ ms.locfileid: "85883875"
   
 ### <a name="to-create-a-master-data-services-database"></a>Master Data Services データベースを作成するには  
   
-1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
 2.  左ペインで **[データベース構成]** をクリックします。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "85883875"
   
 -   データベースとトランザクション ログをバックアップするように、メンテナンス プランを構成します。 詳細については、「[データベース要件 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2268615b8a8ed25883d7d9dce92d8e775f228a4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 0406997ade10e6ddfc9b13c76240973662255f78
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034986"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076043"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Sybase ASE データの SQL Server Azure SQL Database への移行 (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) データベースオブジェクトをまたは Azure SQL Database に正常に読み込むと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ASE からまたは Azure SQL Database にデータを移行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -31,9 +31,9 @@ Sybase Adaptive Server Enterprise (ASE) データベースオブジェクトを�
   
 -   このダイアログボックスを使用すると、移行バッチサイズ、テーブルロック、制約チェック、null 値処理、id 値の処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、「 [プロジェクトの設定 (移行) (Sybase)](./project-settings-migration-sybasetosql.md)」を参照してください。  
   
-    **拡張データ移行設定**の詳細については、「[データ移行の設定](data-migration-settings-sybasetosql.md)」を参照してください。  
+    **拡張データ移行設定** の詳細については、「[データ移行の設定](data-migration-settings-sybasetosql.md)」を参照してください。  
   
--   [**プロジェクトの設定**] ダイアログボックスの**移行エンジン**を使用すると、ユーザーは2種類のデータ移行エンジン可視化を使用して移行プロセスを実行できます。  
+-   [**プロジェクトの設定**] ダイアログボックスの **移行エンジン** を使用すると、ユーザーは2種類のデータ移行エンジン可視化を使用して移行プロセスを実行できます。  
   
     1.  クライアント側のデータ移行エンジン  
   
@@ -80,7 +80,7 @@ Sybase Adaptive Server Enterprise (ASE) データベースオブジェクトを�
   
     **クライアント側のデータ移行:**  
   
-    **クライアント側のデータ移行**を実行するには、[**プロジェクトの設定**] ダイアログボックスで [**クライアント側のデータ移行エンジン**] オプションを選択します。  
+    **クライアント側のデータ移行** を実行するには、[**プロジェクトの設定**] ダイアログボックスで [**クライアント側のデータ移行エンジン**] オプションを選択します。  
   
     **サーバー側のデータ移行:**  
   
@@ -90,7 +90,7 @@ Sybase Adaptive Server Enterprise (ASE) データベースオブジェクトを�
   
         2.  のインスタンスで SQL Server エージェントサービスが実行されてい SQL Server  
   
-    -   **サーバー側のデータ移行**を実行するには、[**プロジェクトの設定**] ダイアログボックスで [**サーバー側のデータ移行エンジン**] オプションを選択します。  
+    -   **サーバー側のデータ移行** を実行するには、[**プロジェクトの設定**] ダイアログボックスで [**サーバー側のデータ移行エンジン**] オプションを選択します。  
   
 4.  Sybase メタデータエクスプローラーで [ **スキーマ** ] を右クリックし、[ **データの移行**] をクリックします。 また、個々のオブジェクトまたはオブジェクトのカテゴリのデータを移行することもできます。オブジェクトまたはその親フォルダーを右クリックし、[ **データの移行** ] オプションを選択します。  
   

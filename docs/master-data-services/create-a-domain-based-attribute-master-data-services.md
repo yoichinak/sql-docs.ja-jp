@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: daea6bffcefaab4866a27418d48eb2963482a5e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec761b64a614af99a4eddfbaa60c37d93d30bf1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461864"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272693"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>ドメイン ベースの属性を作成する (マスター データ サービス)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88461864"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でドメイン ベースの属性を作成して、属性の値にエンティティのメンバーを設定します。
 
-## <a name="prerequisites"></a>[前提条件]
+## <a name="prerequisites"></a>必須コンポーネント
  この手順を実行するには
 
 -   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。
@@ -42,7 +42,7 @@ ms.locfileid: "88461864"
 ## <a name="attribute-information"></a>属性情報
  作成された属性ごとに、7 列の行がグリッドに追加されます。 次の表で各列について説明します。
 
-|列|説明|
+|Column|説明|
 |------------|-----------------|
 |Status|属性の状態。<br /><br /> [保存] をクリックすると、属性が更新中であることを示す ![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン") が表示されます。<br /><br /> 属性の作成時または編集時にエラーが発生した場合は、 ![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン") が表示されます。|
 |名前|属性名。|

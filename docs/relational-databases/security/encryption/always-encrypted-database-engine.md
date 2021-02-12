@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 534d7238316fe2037ea0ce43e2b4aeeb11e6eea2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 523cd4e58ad340dfaa8751868eccb5e593c67a74
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171334"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536381"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,14 +31,14 @@ ms.locfileid: "98171334"
   
  Always Encrypted は、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベースに格納されたクレジット カード番号や身分登録番号 (アメリカの社会保障番号など) などの機微なデータを保護するために設計された機能です。 Always Encrypted を使用すると、クライアントは [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) に暗号化キーを開示することなく、クライアント アプリケーション内の機微なデータを暗号化することができます。 結果として、Always Encrypted により、データを所有していて見ることができるユーザーと、データを管理するがアクセスできてはならないユーザーが分離されます。 Always Encrypted を使うと、オンプレミスのデータベース管理者、クラウド データベース オペレーター、または高い特権を持つものの許可されていないユーザーは、暗号化されたデータにアクセスできなくなり、顧客は直接管理できない機密データを安心して格納できます。 これにより、組織はデータを Azure に格納し、オンプレミスのデータベースの管理をサード パーティに委任したり、自社の DBA スタッフによる取り扱い許可の要件を緩和したりできます。
 
- Always Encrypted を使うと、暗号化されたデータに対する一部のクエリを [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で処理できるようになる一方で、データの機密性は維持され、上記のセキュリティ上の利点が提供されることにより、機密コンピューティング機能が実現されます。 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)]、[!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)]、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] の Always Encrypted では、決定論的な暗号化により等値比較がサポートされます。 「[明確な暗号化またはランダム化された暗号化の選択](#selecting--deterministic-or-randomized-encryption)」を参照してください。 
+ Always Encrypted を使うと、暗号化されたデータに対する一部のクエリを [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で処理できるようになる一方で、データの機密性は維持され、上記のセキュリティ上の利点が提供されることにより、機密コンピューティング機能が実現されます。 [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)]、[!INCLUDE[sssSQLv14](../../../includes/sssql17-md.md)]、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] の Always Encrypted では、決定論的な暗号化により等値比較がサポートされます。 「[明確な暗号化またはランダム化された暗号化の選択](#selecting--deterministic-or-randomized-encryption)」を参照してください。 
 
   > [!NOTE] 
-  > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] では、セキュリティで保護されたエンクレーブのパターン マッチング、他の比較演算子、およびインプレース暗号化により、Always Encrypted の機密コンピューティング機能が大幅に拡張されます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md)」をご覧ください。
+  > [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] では、セキュリティで保護されたエンクレーブのパターン マッチング、他の比較演算子、およびインプレース暗号化により、Always Encrypted の機密コンピューティング機能が大幅に拡張されます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md)」をご覧ください。
 
  Always Encrypted は、アプリケーションに対して暗号化を透過的に実行します。 クライアント コンピューターにインストールされている、Always Encrypted が有効のドライバーは、クライアント アプリケーション内の機微なデータを自動的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]にデータを渡す前に機微な列のデータを暗号化し、アプリケーションに対するセマンティクスが維持されるように自動的にクエリを書き換えます。 また、暗号化されたデータベース列に格納され、クエリ結果に含まれているデータを、同じように透過的に暗号化解除します。  
   
- Always Encrypted は、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] のすべてのエディション、[!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] 以降、および [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のすべてのサービス レベルで利用できます。 ([!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1 より前は、Always Encrypted は Enterprise Edition 限定でした。)Always Encrypted が含まれている Channel 9 のプレゼンテーションについては、「 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)」 (Always Encrypted を使用して機微なデータの安全を確保する) を参照してください。  
+ Always Encrypted は、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] のすべてのエディション、[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] 以降、および [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のすべてのサービス レベルで利用できます。 ([!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1 より前は、Always Encrypted は Enterprise Edition 限定でした。)Always Encrypted が含まれている Channel 9 のプレゼンテーションについては、「 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)」 (Always Encrypted を使用して機微なデータの安全を確保する) を参照してください。  
 
   
 ## <a name="typical-scenarios"></a>標準のシナリオ  
@@ -70,9 +70,12 @@ ms.locfileid: "98171334"
 
 ## <a name="remarks"></a>解説
 
-暗号化および復号化は、クライアント ドライバーを介して実行されます。 つまり、Always Encrypted を使用する場合、サーバー側でのみ発生する一部のアクションは動作しないことを意味します。 たとえば、UPDATE、BULK INSERT (T-SQL)、SELECT INTO、INSERT..SELECT を使用して、1 つの列から別の列にデータをコピーすることが挙げられます。 
+暗号化および復号化は、クライアント ドライバーを介して実行されます。 つまり、Always Encrypted を使用する場合、サーバー側でのみ発生する一部のアクションは動作しないことを意味します。 このようなアクションには以下のものが含まれます (ただし、これらだけではありません)。 
+- UPDATE、BULK INSERT (T-SQL)、SELECT INTO、INSERT..SELECT を使用して、1 つの列から別の列にデータをコピーすること。 
+- トリガー、テンポラル テーブル、スパース列、フルテキスト、インメモリ OLTP、および変更データ キャプチャ (CDC)。 
 
-結果セットをクライアントに返さず、暗号化された列から暗号化されない列にデータを移動しようとする UPDATE の例を次に示します。 
+
+結果セットをクライアントに返さずに、暗号化された列から暗号化されない列にデータを移動しようとする UPDATE の例を次に示します。 
 
 ```sql
 update dbo.Patients set testssn = SSN
@@ -115,7 +118,7 @@ Always Encrypted による暗号化アルゴリズムの詳細については、
 |選択されたデータベース列内にあるデータを暗号化する|はい|はい|いいえ|
 
 > [!NOTE]
-> [セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) ([!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] で導入) では、Trasact-SQL を使用した既存データの暗号化がサポートされます。 また、暗号化操作対象のデータの外部にあるデータを移動する必要もなくなります。
+> [セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) ([!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] で導入) では、Trasact-SQL を使用した既存データの暗号化がサポートされます。 また、暗号化操作対象のデータの外部にあるデータを移動する必要もなくなります。
 
 > [!NOTE]
 > 必ず、データベースをホストするコンピューターと異なるコンピューターで、キー プロビジョニングまたはデータ暗号化ツールを実行してください。 そうしないと、機密データやキーがサーバー環境に漏れ、Always Encrypted を使用する利点が少なくなる可能性があります。  
@@ -148,7 +151,7 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
   
 -   ランダム化された暗号化を使用して暗号化された列に対するクエリでは、これらの列に対していずれの操作も実行できません。 ランダム化された暗号化を使用して暗号化された列のインデックス作成はサポートされていません。  
  > [!NOTE] 
- > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] で導入された[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) を使うと、ランダム化された暗号化を使用する列に対するパターン マッチング、比較演算子、インデックス作成が有効になり、上記の制限に対処できます。
+ > [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] で導入された[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) を使うと、ランダム化された暗号化を使用する列に対するパターン マッチング、比較演算子、インデックス作成が有効になり、上記の制限に対処できます。
 
 -   列の暗号化キーには、それぞれ異なる列のマスター キーで暗号化された値を最大で 2 つ設定できます。 2 つ設定すると、列マスター キーの交換が容易になります。  
   

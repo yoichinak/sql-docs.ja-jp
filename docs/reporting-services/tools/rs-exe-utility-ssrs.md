@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e92646e27dcabed21aa387a8cf22caf95770ff6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ca10d79178887fa4ed2f9f59c6da7e8c75057f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914980"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077933"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
@@ -47,7 +47,7 @@ rs {-?}
 ```  
   
 ##  <a name="file-location"></a><a name="bkmk_filelocation"></a> ファイルの場所  
- **RS.exe** は **\Program Files\Microsoft SQL Server\110\Tools\Binn**にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
+ **RS.exe** は **\Program Files\Microsoft SQL Server\110\Tools\Binn** にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
   
 ##  <a name="arguments"></a><a name="bkmk_arguments"></a> 引数  
  **-?**  
@@ -82,16 +82,16 @@ rs {-?}
  (省略可) サーバーへの接続がタイムアウトするまでの期間を秒数で指定します。既定値は 60 秒です。 タイムアウト値を指定しない場合、既定値が使用されます。 値が **0** の場合は、接続はタイムアウトしません。  
   
  **-b**  
- (省略可) スクリプト ファイル内のコマンドをバッチで実行します。 いずれかのコマンドが失敗すると、バッチはロールバックされます。 バッチで実行できないコマンドがありますが、それらのコマンドは通常どおり実行されます。 スクリプト内でスローされるが処理されない例外だけが、ロールバックされます。 スクリプトによって例外が処理され、 **Main**から正常に値が返された場合、バッチはコミットされます。 このパラメーターを省略した場合、バッチを作成せずにコマンドが実行されます。 詳細については、「 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)」をご参照ください。  
+ (省略可) スクリプト ファイル内のコマンドをバッチで実行します。 いずれかのコマンドが失敗すると、バッチはロールバックされます。 バッチで実行できないコマンドがありますが、それらのコマンドは通常どおり実行されます。 スクリプト内でスローされるが処理されない例外だけが、ロールバックされます。 スクリプトによって例外が処理され、 **Main** から正常に値が返された場合、バッチはコミットされます。 このパラメーターを省略した場合、バッチを作成せずにコマンドが実行されます。 詳細については、「 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)」をご参照ください。  
   
  **-v** *globalvar*  
  (省略可) スクリプト内で使用するグローバル変数を指定します。 スクリプトでグローバル変数を使用する場合は、この引数を指定する必要があります。 .rss ファイルで定義したグローバル変数に対して有効な値を指定する必要があります。 **-v** 引数ごとに 1 つのグローバル変数を指定できます。  
   
- **-v** 引数はコマンド ラインで指定され、ユーザーのスクリプトに定義されているグローバル変数の値を実行時に設定するために使用されます。 たとえば、スクリプトに *parentFolder*という名前の変数が含まれている場合、そのフォルダーの名前をコマンド ラインで指定することができます。  
+ **-v** 引数はコマンド ラインで指定され、ユーザーのスクリプトに定義されているグローバル変数の値を実行時に設定するために使用されます。 たとえば、スクリプトに *parentFolder* という名前の変数が含まれている場合、そのフォルダーの名前をコマンド ラインで指定することができます。  
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、 **-v a=**"**1**" **-v b=**"**2**" は、" **1** " の値を持つ**a**という名前の変数と、" **2** " の値を持つ**b**という変数を表します。  
+ 指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、 **-v a=**"**1**" **-v b=**"**2**" は、" **1** " の値を持つ **a** という名前の変数と、" **2** " の値を持つ **b** という変数を表します。  
   
  グローバル変数は、スクリプト内のすべての関数で使用できます。 円記号と引用符 ( **\\"** ) は、二重引用符と解釈されます。 引用符は、文字列にスペースが含まれている場合のみ必要です。 変数名は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で有効な名前であることが必要です。また変数名は、アルファベットやアンダースコアで始まり、アルファベット文字、数字、およびアンダースコアを含めることができます。 予約語は、変数名として使用できません。 グローバル変数の使用の詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   

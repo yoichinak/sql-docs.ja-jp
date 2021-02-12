@@ -12,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 12e392d083b9b47e3330d8a95b6c2d199a146cea
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: d5e02aa025d65fd7f3db6d1f5bd8f43e44566ac9
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809923"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552666"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>FileTable の前提条件の有効化
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,14 +68,14 @@ GO
  使用できる非トランザクション アクセスのレベルは、FULL、READ_ONLY、および OFF です。  
   
  **Transact-SQL を使用して非トランザクション アクセスのレベルを指定する**  
- - **新しいデータベースを作成**するときに、**NON_TRANSACTED_ACCESS** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) ステートメントを呼び出します。
+ - **新しいデータベースを作成** するときに、**NON_TRANSACTED_ACCESS** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) ステートメントを呼び出します。
 
    ```sql
    CREATE DATABASE database_name  
      WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
    ```
 
-- **既存のデータベースを変更**するときに、**NON_TRANSACTED_ACCESS** FILESTREAM オプションを使用して [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを呼び出します。
+- **既存のデータベースを変更** するときに、**NON_TRANSACTED_ACCESS** FILESTREAM オプションを使用して [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを呼び出します。
 
    ```sql
    ALTER DATABASE database_name  
@@ -94,7 +94,7 @@ GO
  指定する名前は、データベース レベルで存在するディレクトリに対して一意であることが必要です。  
   
 **Transact-SQL を使用して FileTable のディレクトリを指定する**  
-- **新しいデータベースを作成**するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) ステートメントを呼び出します。
+- **新しいデータベースを作成** するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) ステートメントを呼び出します。
 
    ```sql
    CREATE DATABASE database_name  
@@ -102,7 +102,7 @@ GO
    GO  
    ```
 
--   **既存のデータベースを変更**するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを呼び出します。 これらのオプションを使用してディレクトリ名を変更するとき、データベースを排他的にロックして、開いているファイル ハンドルがないことを確認する必要があります。  
+-   **既存のデータベースを変更** するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを呼び出します。 これらのオプションを使用してディレクトリ名を変更するとき、データベースを排他的にロックして、開いているファイル ハンドルがないことを確認する必要があります。  
   
     ```sql  
     ALTER DATABASE database_name  
@@ -110,7 +110,7 @@ GO
     GO  
     ```  
   
--   **データベースをアタッチ**するときに、**FOR ATTACH** オプションおよび **DIRECTORY_NAME** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) ステートメントを呼び出します。  
+-   **データベースをアタッチ** するときに、**FOR ATTACH** オプションおよび **DIRECTORY_NAME** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) ステートメントを呼び出します。  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -118,7 +118,7 @@ GO
     GO  
     ```  
   
--   **データベースを復元**するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを呼び出します。  
+-   **データベースを復元** するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを呼び出します。  
   
     ```sql  
     RESTORE DATABASE database_name  
@@ -140,15 +140,15 @@ GO
   
 ###  <a name="requirements-and-restrictions-for-the-database-level-directory"></a><a name="ReqDirectory"></a> データベース レベルのディレクトリの要件と制限  
   
--   **CREATE DATABASE** または **ALTER DATABASE** を呼び出すとき、 **DIRECTORY_NAME**をオプションで設定できます。 **DIRECTORY_NAME**の値を指定しなかった場合、ディレクトリ名は null のままになります。 ただし、データベース レベルで **DIRECTORY_NAME** の値を指定しないと、データベースに FileTable を作成できません。  
+-   **CREATE DATABASE** または **ALTER DATABASE** を呼び出すとき、 **DIRECTORY_NAME** をオプションで設定できます。 **DIRECTORY_NAME** の値を指定しなかった場合、ディレクトリ名は null のままになります。 ただし、データベース レベルで **DIRECTORY_NAME** の値を指定しないと、データベースに FileTable を作成できません。  
   
 -   指定するディレクトリ名は、ファイル システムの有効なディレクトリ名に関する要件を満たしている必要があります。  
   
 -   データベースに FileTable が含まれている場合、 **DIRECTORY_NAME** を再度 null 値に設定することはできません。  
   
--   データベースをアタッチまたは復元するときに、対象のインスタンスに既に存在する **DIRECTORY_NAME** の値が新しいデータベースにある場合、操作は失敗します。 **CREATE DATABASE FOR ATTACH** または **RESTORE DATABASE** を呼び出すときは、 **DIRECTORY_NAME**に対して一意の値を指定してください。  
+-   データベースをアタッチまたは復元するときに、対象のインスタンスに既に存在する **DIRECTORY_NAME** の値が新しいデータベースにある場合、操作は失敗します。 **CREATE DATABASE FOR ATTACH** または **RESTORE DATABASE** を呼び出すときは、 **DIRECTORY_NAME** に対して一意の値を指定してください。  
   
--   既存のデータベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードした場合、 **DIRECTORY_NAME** の値は null になります。  
+-   既存のデータベースをアップグレードした場合、**DIRECTORY_NAME** の値は null になります。  
   
 -   非トランザクション アクセスをデータベース レベルで有効または無効にするとき、ディレクトリ名が指定されているかどうか、またはディレクトリ名が一意であるかどうかのチェックは行われません。  
   

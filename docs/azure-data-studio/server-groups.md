@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 293e90c5df31151cf75490f79dd92dc1b15fa02f
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: f84b784cde611f372b44b74f908aa507cf8a036a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745922"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048222"
 ---
 # <a name="server-groups-in-azure-data-studio"></a>Azure Data Studio のサーバー グループ
 
-サーバー グループを使用すると、使用するサーバーやデータベースへの接続を整理することができます。 サーバー グループを作成すると、構成の詳細が*ユーザー設定*に保存されます。
+サーバー グループを使用すると、使用するサーバーやデータベースへの接続を整理することができます。 サーバー グループを作成すると、構成の詳細が *ユーザー設定* に保存されます。
 
 ## <a name="create-and-edit-server-groups"></a>サーバー グループの作成と編集
 

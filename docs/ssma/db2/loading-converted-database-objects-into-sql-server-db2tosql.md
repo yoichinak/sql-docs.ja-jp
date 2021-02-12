@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e89edc66dee92fb74071de952e056d99c91cbf12
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 209b49e3719400b92a5425bdd680d8bed548e285
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985028"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072476"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>変換されたデータベースオブジェクトを SQL Server に読み込んでいます (DB2ToSQL)
 DB2 スキーマをに変換した後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、結果として得られるデータベースオブジェクトをに読み込むことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA を使用してオブジェクトを作成するか、オブジェクトのスクリプトを作成して自分でスクリプトを実行することができます。 また、SSMA では、ターゲットメタデータをデータベースの実際の内容で更新することもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -26,7 +26,7 @@ DB2 スキーマをに変換した後 [!INCLUDE[ssNoVersion](../../includes/ssno
 オブジェクトの作成に使用されるを変更する場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、またはオブジェクトの作成をより細かく制御する場合は、SSMA を使用してスクリプトを作成します。 その後、これらのスクリプトを変更し、各オブジェクトを個別に作成して、エージェントを使用してそれらのオブジェクトの作成をスケジュールすることもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>SSMA を使用してオブジェクトを SQL Server と同期させる  
-SSMA を使用してデータベースオブジェクトを作成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 手順に示すように、メタデータエクスプローラーでオブジェクトを選択し、オブジェクトをと同期します。 既定では、オブジェクトが既にに存在して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] おり、ssma メタデータがのオブジェクトより新しい場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ssma によってのオブジェクト定義が変更され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定の動作を変更するには、 **プロジェクトの設定**を編集します。  
+SSMA を使用してデータベースオブジェクトを作成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 手順に示すように、メタデータエクスプローラーでオブジェクトを選択し、オブジェクトをと同期します。 既定では、オブジェクトが既にに存在して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] おり、ssma メタデータがのオブジェクトより新しい場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ssma によってのオブジェクト定義が変更され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定の動作を変更するには、 **プロジェクトの設定** を編集します。  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 データベースから変換されなかった既存のデータベースオブジェクトを選択できます。 ただし、これらのオブジェクトは SSMA によって再作成または変更されることはありません。  
@@ -98,7 +98,7 @@ SSMA を使用してデータベースオブジェクトを作成するには、
   
 クエリエディターを使用してスクリプトを実行する方法の詳細については、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] オンラインブックの「クエリ」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-また、 **sqlcmd** ユーティリティを使用してコマンドラインからスクリプトを実行したり、エージェントからスクリプトを実行したりすることもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **Sqlcmd**の詳細については、オンラインブックの「sqlcmd ユーティリティ」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 エージェントの詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オンラインブックの「管理タスク ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント) の自動化」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+また、 **sqlcmd** ユーティリティを使用してコマンドラインからスクリプトを実行したり、エージェントからスクリプトを実行したりすることもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **Sqlcmd** の詳細については、オンラインブックの「sqlcmd ユーティリティ」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 エージェントの詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オンラインブックの「管理タスク ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント) の自動化」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="securing-objects-in-sql-server"></a>SQL Server でのオブジェクトのセキュリティ保護  
 変換されたデータベースオブジェクトをに読み込むと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、それらのオブジェクトに対する権限を許可および拒否できます。 これは、データをに移行する前に行うことをお勧めし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 でオブジェクトをセキュリティで保護する方法の詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オンラインブックの「データベースおよびデータベースアプリケーションのセキュリティに関する考慮事項」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

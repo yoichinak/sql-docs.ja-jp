@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ce35c6c0b3025a328c71de657fd1e89358379be
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 33eb988309b6105818e150010dd44627efaced4b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680687"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046126"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用して入力/出力パラメーターを取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88680687"
 > **null**、 **DateTime**、またはストリーム型に初期化または更新される変数は出力パラメーターとして使用できません。  
   
 ## <a name="example-1"></a>例 1
-次の例では、指定された従業員の使用可能な休暇時間から使用済みの休暇時間数を減算するストアド プロシージャを呼び出します。 使用済みの休暇時間数を表す変数 *$vacationHrs*は、入力パラメーターとしてストアド プロシージャに渡されます。 ストアド プロシージャは、使用可能な休暇時間を更新した後、同じパラメーターを使用して残りの休暇時間数を返します。  
+次の例では、指定された従業員の使用可能な休暇時間から使用済みの休暇時間数を減算するストアド プロシージャを呼び出します。 使用済みの休暇時間数を表す変数 *$vacationHrs* は、入力パラメーターとしてストアド プロシージャに渡されます。 ストアド プロシージャは、使用可能な休暇時間を更新した後、同じパラメーターを使用して残りの休暇時間数を返します。  
   
 > [!NOTE]  
 > *$vacationHrs* を 4 に初期化すると、返される PHPTYPE が整数に設定されます。 データ型の整合性を確保するため、ストアド プロシージャを呼び出す前に入力/出力パラメーターを初期化するか、目的の PHPTYPE を指定する必要があります。 PHPTYPE の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  

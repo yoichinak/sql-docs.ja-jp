@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 59df65daf56708a2b30b1e0a75e554750e95cb47
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 4c4a7e894052ec9799039d45ff5bb9e2aa29a23b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235189"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078213"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>SSMA for MySQL コンソール入門 (MySQLToSQL)
 このセクションでは、MySQL コンソールアプリケーションを起動して開始する手順について説明します。 また、ここでは、一般的な SSMA コンソールの出力ウィンドウで使用される規則についても説明します。  
@@ -26,7 +26,7 @@ ms.locfileid: "93235189"
 ## <a name="launching-ssma-console"></a>SSMA コンソールの起動  
 SSMA コンソールアプリケーションを起動するには、次の手順に従います。  
   
-1.  [ **スタート** ] にアクセスし、[ **すべてのプログラム** ] をポイントします。  
+1.  [ **スタート** ] にアクセスし、[ **すべてのプログラム**] をポイントします。  
   
 2.  [ **SQL Server Migration Assistant For MySQL コマンドプロンプト** ] ショートカットをクリックします。  
   
@@ -60,7 +60,7 @@ SSMA スクリプトコマンドとオプションを実行すると、コンソ
 |---------|---------------|  
 |[赤]|実行中に致命的なエラーが発生した|  
 |グレー|日付と時刻のタイムスタンプ、ユーザーへのメッセージ|  
-|White|スクリプトファイルのコマンド、メッセージの種類|  
+|白|スクリプトファイルのコマンド、メッセージの種類|  
 |黄|警告|  
 |[緑]|ユーザー入力を要求する|  
 |シアン|操作の開始、終了、および結果|  
