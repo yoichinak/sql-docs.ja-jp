@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6b23f80859a572ea8bb3f96a0460d0f5eba0183a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 6f0e165c04e303a5cb65046b013df8814bfbf515
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410962"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100038369"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用して出力パラメーターを取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ SQLSRV_SQLTYPE_VARCHAR('max') などのストリーム型が出力パラメー�
 次の例では、指定された従業員による年度累計売上を返すストアド プロシージャを呼び出しています。 PHP 変数 *$lastName* は入力パラメーターで、 *$salesYTD* は出力パラメーターです。  
   
 > [!NOTE]  
-> *$salesYTD* を 0.0 に初期化すると、返される PHPTYPE が **float**に設定されます。 データ型の整合性を確保するため、ストアド プロシージャを呼び出す前に出力パラメーターを初期化するか、目的の PHPTYPE を指定する必要があります。 PHPTYPE の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
+> *$salesYTD* を 0.0 に初期化すると、返される PHPTYPE が **float** に設定されます。 データ型の整合性を確保するため、ストアド プロシージャを呼び出す前に出力パラメーターを初期化するか、目的の PHPTYPE を指定する必要があります。 PHPTYPE の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
 ストアド プロシージャによって返される結果は 1 つだけであるため、 *$salesYTD* には、ストアド プロシージャが実行された直後の出力パラメーターの戻り値が格納されます。  
   

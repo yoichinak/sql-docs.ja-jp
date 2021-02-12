@@ -10,18 +10,18 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 99e62be597e4ce08d38db199116f1bd4d5ab33f6
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 8cbf034873b690262ff6acb395ed8eca5d09ae79
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378424"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039512"
 ---
 # <a name="common-notebooks-for-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスター用の一般的なノートブック
 
 この記事には、SQL Server ビッグ データ クラスター用のノートブックが一覧表示されています。 実行可能ノートブック (.ipynb) は、ビッグ データ クラスターの一般的なシナリオを示すのに役立つように SQL Server 2019 向けに設計されています。
 
-各ノートブックは、独自の依存関係を確認するように設計されています。 **[Run all cells]\(すべてのセルを実行\)** オプションは、正常に完了するか、例外が発生し、欠落している依存関係を解決するための別のノートブックにハイパーリンクされた " *ヒント* " が示されます。 後続のノートブックへのヒント ハイパーリンクに従い、 **[Run all cells]\(すべてのセルを実行\)** をクリックし、成功した場合は元のノートブックに戻り、 **[Run all cells]\(すべてのセルを実行\)** をクリックします。
+各ノートブックは、独自の依存関係を確認するように設計されています。 **[Run all cells]\(すべてのセルを実行\)** オプションは、正常に完了するか、例外が発生し、欠落している依存関係を解決するための別のノートブックにハイパーリンクされた "*ヒント*" が示されます。 後続のノートブックへのヒント ハイパーリンクに従い、 **[Run all cells]\(すべてのセルを実行\)** をクリックし、成功した場合は元のノートブックに戻り、 **[Run all cells]\(すべてのセルを実行\)** をクリックします。
 
 すべての依存関係がインストールされていても、 **[Run all cells]\(すべてのセルを実行\)** に失敗した場合は、各ノートブックを使用して結果を分析し、可能であれば、問題の解決にさらに役立つように別のノートブックにハイパーリンクされたヒントを生成します。
 

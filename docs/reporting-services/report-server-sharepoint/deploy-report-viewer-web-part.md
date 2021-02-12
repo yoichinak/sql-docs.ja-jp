@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 4b8638e0c9a958e8f5dd6b6039540e8492555b03
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933561"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074833"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
 
@@ -77,7 +77,7 @@ SharePoint Server 2013、SharePoint Server 2016 または SharePoint Server 2019
 
 ## <a name="activate-feature"></a>機能のアクティブ化
 
-1. SharePoint サイトで、左上にある**歯車**アイコンを選び、 **[サイトの設定]** を選びます。
+1. SharePoint サイトで、左上にある **歯車** アイコンを選び、 **[サイトの設定]** を選びます。
 
     ![歯車アイコンを使用したサイトの設定。](media/sharepoint-site-settings.png)
 
@@ -85,7 +85,7 @@ SharePoint Server 2013、SharePoint Server 2016 または SharePoint Server 2019
 
 3. **[サイト コレクションの管理]** で **[サイト コレクションの機能]** をクリックします。
 
-4. **レポート ビューアー Web パーツ**機能が表示されるまで、ページをスクロール ダウンします。
+4. **レポート ビューアー Web パーツ** 機能が表示されるまで、ページをスクロール ダウンします。
 
 5. **[アクティブ化]** を選びます。
 
@@ -117,7 +117,7 @@ SharePoint サーバーの全体管理でソリューションの取り消しを
 
 ソリューションを取り消しても、SharePoint サイト内の Web パーツ一覧からレポート ビューアー Web パーツは削除されません。 レポート ビューアー Web パーツを削除するには、次を実行します。
 
-1. SharePoint サイトで、左上にある**歯車**アイコンを選び、 **[サイトの設定]** を選びます。
+1. SharePoint サイトで、左上にある **歯車** アイコンを選び、 **[サイトの設定]** を選びます。
 
     ![歯車アイコンを使用したサイトの設定。](media/sharepoint-site-settings.png)
 
@@ -125,7 +125,7 @@ SharePoint サーバーの全体管理でソリューションの取り消しを
 
 2. **[Web デザイナー ギャラリー]** の **[Web パーツ]** を選択します。
 
-3. **[ReportViewerNativeMode.dwp]** の横の**編集アイコン**を選択します。 これは、結果の最初のページには表示されない場合があります。
+3. **[ReportViewerNativeMode.dwp]** の横の **編集アイコン** を選択します。 これは、結果の最初のページには表示されない場合があります。
 
 4. **[アイテムの削除]** を選択します。
 

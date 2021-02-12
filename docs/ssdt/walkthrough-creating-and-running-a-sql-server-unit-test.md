@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6b0eaf98f4d10c08548e898c261a489ad71f0ff4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987938"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016732"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>チュートリアル:SQL Server の単体テストの作成と実行
 
@@ -238,7 +238,7 @@ ms.locfileid: "91987938"
   
 5.  **[ソース管理に追加]** チェック ボックスがまだオフになっていない場合はオフにし、 **[OK]** をクリックします。  
   
-    データベース プロジェクトが作成され、 **ソリューション エクスプローラー**に表示されます。 次に、スクリプトからデータベース スキーマをインポートします。  
+    データベース プロジェクトが作成され、 **ソリューション エクスプローラー** に表示されます。 次に、スクリプトからデータベース スキーマをインポートします。  
   
 #### <a name="to-import-a-database-schema-from-a-script"></a>スクリプトからデータベース スキーマをインポートするには  
   
@@ -259,9 +259,9 @@ ms.locfileid: "91987938"
   
 #### <a name="to-examine-the-resulting-project"></a>作成されたプロジェクトを確認するには  
   
-1.  **ソリューション エクスプローラー**で、プロジェクトにインポートされたスクリプト ファイルを確認します。  
+1.  **ソリューション エクスプローラー** で、プロジェクトにインポートされたスクリプト ファイルを確認します。  
   
-2.  **SQL Server オブジェクト エクスプローラー**で、[プロジェクト] ノード内のデータベースを確認します。  
+2.  **SQL Server オブジェクト エクスプローラー** で、[プロジェクト] ノード内のデータベースを確認します。  
   
 ## <a name="deploying-to-localdb"></a><a name="DeployDBProj"></a>LocalDB への配置  
 既定では、F5 キーを押すと、データベースが LocalDB データベースに配置 (発行) されます。 プロジェクトのプロパティ ページで、[デバッグ] タブに移動して接続文字列を変更すると、データベースの場所を変更できます。  
@@ -270,7 +270,7 @@ ms.locfileid: "91987938"
   
 #### <a name="to-create-a-sql-server-unit-test-for-the-stored-procedures"></a>ストアド プロシージャに対して SQL Server の単体テストを作成するには  
   
-1.  **SQL Server オブジェクト エクスプローラー**で、 **SimpleUnitTestDB** の [プロジェクト] ノード、 **[プログラミング]** ノード、 **[ストアド プロシージャ]** ノードの順に展開します。  
+1.  **SQL Server オブジェクト エクスプローラー** で、 **SimpleUnitTestDB** の [プロジェクト] ノード、 **[プログラミング]** ノード、 **[ストアド プロシージャ]** ノードの順に展開します。  
   
 2.  ストアド プロシージャの 1 つを右クリックし、 **[単体テストの作成]** をクリックして **[単体テストの作成]** ダイアログ ボックスを表示します。  
   
@@ -729,7 +729,7 @@ ms.locfileid: "91987938"
   
 #### <a name="to-correct-the-error-in-salesuspfillorder"></a>Sales.uspFillOrder のエラーを修正するには  
   
-1.  **SQL Server オブジェクト エクスプローラー**のデータベースの [プロジェクト] ノードで **uspFillOrder** ストアド プロシージャをダブルクリックし、Transact\-SQL エディターで定義を開きます。  
+1.  **SQL Server オブジェクト エクスプローラー** のデータベースの [プロジェクト] ノードで **uspFillOrder** ストアド プロシージャをダブルクリックし、Transact\-SQL エディターで定義を開きます。  
   
 2.  定義内で、次の Transact\-SQL ステートメントを探します。  
   
@@ -770,7 +770,7 @@ ms.locfileid: "91987938"
   
 #### <a name="to-update-the-stored-procedure"></a>ストアド プロシージャを更新するには  
   
-1.  **SQL Server オブジェクト エクスプローラー**で、SimpleUnitTestDB データベースの [プロジェクト] ノードの [プログラミング] ノード、[ストアド プロシージャ] ノードの順に展開し、[uspCancelOrder] をダブルクリックします。  
+1.  **SQL Server オブジェクト エクスプローラー** で、SimpleUnitTestDB データベースの [プロジェクト] ノードの [プログラミング] ノード、[ストアド プロシージャ] ノードの順に展開し、[uspCancelOrder] をダブルクリックします。  
   
 2.  Transact\-SQL エディターで、プロシージャの定義を次のコードに一致するように更新します。  
   
@@ -843,7 +843,7 @@ ms.locfileid: "91987938"
   
 3.  **[ファイル]** メニューの **[uspCancelOrder.sql の保存]** をクリックします。  
   
-4.  F5 キーを押して **SimpleUnitTestDB**を配置します。  
+4.  F5 キーを押して **SimpleUnitTestDB** を配置します。  
   
     uspCancelOrder ストアド プロシージャへの更新を配置します。 その他のオブジェクトは変更していないため、そのストアド プロシージャのみが更新されます。  
   
@@ -956,7 +956,7 @@ ms.locfileid: "91987938"
   
 #### <a name="to-modify-the-code-for-the-unit-test"></a>単体テストのコードを変更するには  
   
-1.  **ソリューション エクスプローラー**で、 **[TestProject1]** を展開し、 **[SqlServerUnitTests1.cs]** を右クリックして、 **[コードの表示]** をクリックします。  
+1.  **ソリューション エクスプローラー** で、 **[TestProject1]** を展開し、 **[SqlServerUnitTests1.cs]** を右クリックして、 **[コードの表示]** をクリックします。  
   
 2.  コード エディターで、Sales_uspCancelOrderTest メソッドに移動します。 メソッドの属性を次のコードのように変更します。  
   

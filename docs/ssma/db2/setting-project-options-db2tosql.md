@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 307c726811d4071754ff118ebd56d7d43abd05f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72e4fadcd1422ea0afacc0af5e8766ebff9e6386
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321018"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071946"
 ---
 # <a name="setting-project-options-db2tosql"></a>プロジェクトオプションの設定 (DB2ToSQL)
 SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換、オブジェクトの読み込み、ユーザーインターフェイス、およびデータ移行の設定を指定します。 オブジェクトをに変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、構成オプションがプロジェクトに適していることを確認してください。  
@@ -43,7 +43,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   [完全]  
   
--   Custom  
+-   カスタム  
   
 ほとんどのユーザーには、既定のモードを使用することをお勧めします。 オプティミスティックモードでは、現在の DB2 構文が多く保持されるため、読みやすくなります。 ただし、現在の構文を維持するのは正確ではない可能性があります。 DB2 構文を同等の構文に変換する必要がある場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、フルモードでは最も完全な変換が実行されますが、結果のコードが読みにくくなる可能性があります。 カスタムモードでは、オプションを設定します。  
   

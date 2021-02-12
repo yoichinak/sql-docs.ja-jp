@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 52a24c1dbe2a239450b440c07de1a7852f9c627a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257122"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046042"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>非ルート ビッグ データ クラスター コンテナー
 
@@ -31,7 +31,7 @@ SQL Server 2019 CU5 では、非ルート コンテナーのサポートが導�
 > クラスターは、既定の非ルート設定を使用して実行することをお勧めします。 CU5 より前の動作に戻して、BDC 内のコンテナーを `root` ユーザーとして実行する場合は、新しい機能スイッチである `allowRunAsRoot` を使用して、既定の動作をオフにすることができます。 これは展開時にのみ設定できます。 これを設定するには、`control.json` 展開構成ファイルの `security` セクションで設定を指定します。
 
 ```json
- "security": {
+ "security": {
   …
     "allowRunAsRoot": true,
   …

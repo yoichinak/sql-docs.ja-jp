@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1f4d616b964a1e9e9eed391e3386b16e9df54e44
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 66d1ce573f464f14e0b738fb4c461be031db64ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195534"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070078"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>プロジェクトの設定 (変換) (SybaseToSQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "92195534"
 |-|-|
 |Default|変換して警告付きでマーク|
 |Optimistic|変換して警告付きでマーク|
-|完全|エラーでマーク|
+|[完全]|エラーでマーク|
 
 ### <a name="conversion-of-like-operator"></a>LIKE 演算子の変換
 
@@ -59,14 +59,14 @@ ms.locfileid: "92195534"
 |-|-|
 |Default|単純な変換|
 |Optimistic|単純な変換|
-|完全|固定長にキャスト|
+|[完全]|固定長にキャスト|
 
 ### <a name="convert-or-cast-empty-strings-to-numeric-types"></a>空の文字列を数値型に変換またはキャストする
 
 `CONVERT`または `CAST` 数値型を datatype 引数として使用する式内で、空の文字列または空の文字列を処理する方法を指定します。 この設定では、次のオプションを使用できます。
 
 - 式を修正せずに変換するには、[ **単純変換** ] を選択します。
-- **空の文字列を0として**指定した場合、文字列パラメーター `{s}` は式で置き換えられ `CASE ltrim(rtrim({s})) WHEN "" THEN 0 else {s} END` ます。
+- **空の文字列を0として** 指定した場合、文字列パラメーター `{s}` は式で置き換えられ `CASE ltrim(rtrim({s})) WHEN "" THEN 0 else {s} END` ます。
 
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。
 
@@ -74,7 +74,7 @@ ms.locfileid: "92195534"
 |-|-|
 |Default|単純な変換|
 |Optimistic|単純な変換|
-|完全|空の文字列がゼロの数値として指定される|
+|[完全]|空の文字列がゼロの数値として指定される|
 
 ### <a name="concatenation-of-null"></a>NULL の連結
 
@@ -89,7 +89,7 @@ ms.locfileid: "92195534"
 |-|-|
 |Default|現在の構文を保持する|
 |Optimistic|現在の構文を保持する|
-|完全|ISNULL 関数を使用した Wrap|
+|[完全]|ISNULL 関数を使用した Wrap|
 
 ### <a name="conversion-of-empty-strings"></a>空の文字列の変換
 
@@ -98,7 +98,7 @@ ms.locfileid: "92195534"
 - **すべての文字列式をスペースで置換する**
 - **空の文字列定数をスペースで置換する**
 
-Azure SQL の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[ **現在の構文を保持**する] を選択します。
+Azure SQL の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[ **現在の構文を保持** する] を選択します。
 
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。
 
@@ -106,7 +106,7 @@ Azure SQL の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/s
 |-|-|
 |Default|現在の構文を保持する|
 |Optimistic|現在の構文を保持する|
-|完全|すべての文字列式をスペースで置換する|
+|[完全]|すべての文字列式をスペースで置換する|
 
 ### <a name="convert-and-cast-binary-string-conversion"></a>変換し、バイナリ文字列変換をキャストする
 
@@ -125,13 +125,13 @@ SSMA で式を変換して修正するには、[変換] を選択して [ **警�
 |-|-|
 |Default|変換して警告付きでマーク|
 |Optimistic|単純な変換|
-|完全|変換と修正|
+|[完全]|変換と修正|
 
 ### <a name="dynamic-sql"></a>動的 SQL
 
 この設定を使用して、ASE コードで動的 SQL が検出されたときに、SSMA が **出力** または **エラー一覧** ペインに表示するメッセージの種類 (警告またはエラー) を指定します。
 
-- [変換] を選択し、 **警告付きでマーク**すると、ssma は動的 SQL を変換し、ステートメントに警告コメントをマークします。
+- [変換] を選択し、 **警告付きでマーク** すると、ssma は動的 SQL を変換し、ステートメントに警告コメントをマークします。
 - [ **エラー付きでマーク**] を選択した場合、ssma は変換をスキップし、ステートメントにエラーコメントをマークします。
 
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。
@@ -140,14 +140,14 @@ SSMA で式を変換して修正するには、[変換] を選択して [ **警�
 |-|-|
 |Default|変換して警告付きでマーク|
 |Optimistic|変換して警告付きでマーク|
-|完全|エラーでマーク|
+|[完全]|エラーでマーク|
 
 ### <a name="equality-check-conversion"></a>等値チェックの変換
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/AZURE sql では、 `ANSI_NULLS` 設定が on の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `UNKNOWN` 等値比較に値が含まれていると、azure sql はを返し `NULL` ます。 `ANSI_NULLS`が off の場合、値を含む等値比較では、 `NULL` 比較対象の列と式、または2つの式の両方が等しい場合に true が返され `NULL` ます。 既定では ( `ANSINULL OFF` )、SAP ASE の等値比較は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /Azure SQL と同じように動作 `ANSI_NULLS OFF` します。
 
-- **単純な変換**を選択した場合、ssma は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追加の値チェックを行わずに、ASE コードを/Azure SQL 構文に変換し `NULL` ます。 `ANSI_NULLS`が `OFF` Azure SQL である場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはケースごとに等値比較を変更する場合は、この設定を使用します。
-- [ **NULL 値を考慮**する] を選択すると、ssma は `NULL` and 句を使用して値のチェックを追加し `IS NULL` `IS NOT NULL` ます。
+- **単純な変換** を選択した場合、ssma は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追加の値チェックを行わずに、ASE コードを/Azure SQL 構文に変換し `NULL` ます。 `ANSI_NULLS`が `OFF` Azure SQL である場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはケースごとに等値比較を変更する場合は、この設定を使用します。
+- [ **NULL 値を考慮** する] を選択すると、ssma は `NULL` and 句を使用して値のチェックを追加し `IS NULL` `IS NOT NULL` ます。
 
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。
 
@@ -155,7 +155,7 @@ SSMA で式を変換して修正するには、[変換] を選択して [ **警�
 |-|-|
 |Default|単純な変換|
 |Optimistic|単純な変換|
-|完全|NULL 値を考慮する|
+|[完全]|NULL 値を考慮する|
 
 ### <a name="format-strings"></a>書式指定文字列
 
@@ -250,13 +250,13 @@ SSMA が引数を検出すると、 `format_string` 変数を使用して文字�
 |-|-|
 |Default|新しい文字列の作成|
 |Optimistic|新しい文字列の作成|
-|完全|新しい変数の作成|
+|[完全]|新しい変数の作成|
 
 ### <a name="insert-an-explicit-value-into-a-timestamp-column"></a>Timestamp 列に明示的な値を挿入する
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Azure SQL では、timestamp 列への明示的な値の挿入はサポートされていません。
 
-- ステートメントから timestamp 列を除外するに `INSERT` は、[ **列を除外**する] を選択します。
+- ステートメントから timestamp 列を除外するに `INSERT` は、[ **列を除外** する] を選択します。
 - タイムスタンプ列がステートメントに含まれるたびにエラーメッセージを出力するには `INSERT` 、[ **エラー付きでマーク**] を選択します。 このモードでは、 `INSERT` ステートメントは変換されず、エラーコメントでマークされます。
 
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。
@@ -265,7 +265,7 @@ SSMA が引数を検出すると、 `format_string` 変数を使用して文字�
 |-|-|
 |Default|列の除外|
 |Optimistic|列の除外|
-|完全|エラーでマーク|
+|[完全]|エラーでマーク|
 
 ### <a name="store-temporary-objects-defined-in-procedures"></a>プロシージャで定義されている一時オブジェクトを格納する
 
@@ -278,7 +278,7 @@ SSMA が引数を検出すると、 `format_string` 変数を使用して文字�
 |-|-|
 |Default|はい|
 |Optimistic|はい|
-|完全|いいえ|
+|[完全]|いいえ|
 
 ### <a name="proxy-table-conversion"></a>プロキシテーブルの変換
 
@@ -293,7 +293,7 @@ ASE プロキシテーブルを [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 |-|-|
 |Default|エラーでマーク|
 |Optimistic|エラーでマーク|
-|完全|エラーでマーク|
+|[完全]|エラーでマーク|
 
 ### <a name="raiserror-base-message-number"></a>RAISERROR base メッセージ番号
 
@@ -306,8 +306,8 @@ ASE ユーザーメッセージは、各データベースに格納されます�
 - 範囲内の ASE メッセージ `17000` - `19999` はシステムテーブルからのものであり、変換され `sysmessages` ません。
 - ステートメントで参照されているメッセージ番号 `RAISERROR` が定数である場合、SSMA は、新しいユーザーメッセージ番号を決定するために、基本メッセージ番号を定数に追加します。
 - 参照されるメッセージ番号が変数または式である場合は、SSMA によって中間のローカル変数が作成されます。
-- **オプティミスティックモード**では、ssma は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オプションがであり、 `CONCAT_NULL_YIELDS_NULL` 引数のチェックを行わないことを前提としてい `OFF` `NULL` ます。
-- **フルモード**では、ssma は `NULL` 引数をチェックします。
+- **オプティミスティックモード** では、ssma は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オプションがであり、 `CONCAT_NULL_YIELDS_NULL` 引数のチェックを行わないことを前提としてい `OFF` `NULL` ます。
+- **フルモード** では、ssma は `NULL` 引数をチェックします。
 - `RAISERROR` with `arg-list` 引数は変換されません。
 
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。
@@ -316,7 +316,7 @@ ASE ユーザーメッセージは、各データベースに格納されます�
 |-|-|
 |Default|30001|
 |Optimistic|30001|
-|完全|30001|
+|[完全]|30001|
 
 ### <a name="system-objects"></a>システム オブジェクト
 
@@ -331,13 +331,13 @@ ASE ユーザーメッセージは、各データベースに格納されます�
 |-|-|
 |Default|変換して警告付きでマーク|
 |Optimistic|変換して警告付きでマーク|
-|完全|エラーでマーク|
+|[完全]|エラーでマーク|
 
 ### <a name="unresolved-identifiers"></a>未解決の識別子
 
 この設定を使用すると、[ **出力** ] ペインまたは [ **エラー一覧** ] ウィンドウで識別子を解決できないときに表示されるメッセージの種類 (警告またはエラー) を指定できます。
 
-- [変換] を選択し、[ **警告付きでマーク**する] を選択すると、ssma は参照を未解決の識別子に変換しようとし、警告コメント付きのステートメントをマークします。
+- [変換] を選択し、[ **警告付きでマーク** する] を選択すると、ssma は参照を未解決の識別子に変換しようとし、警告コメント付きのステートメントをマークします。
 - [ **エラー付きでマーク**] を選択した場合、ssma は参照を未解決の識別子に変換せず、ステートメントにエラーコメントをマークします。
 
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。
@@ -346,7 +346,7 @@ ASE ユーザーメッセージは、各データベースに格納されます�
 |-|-|
 |Default|変換して警告付きでマーク|
 |Optimistic|変換して警告付きでマーク|
-|完全|エラーでマーク|
+|[完全]|エラーでマーク|
 
 ## <a name="system-functions-section"></a>システム関数セクション
 
@@ -355,7 +355,7 @@ ASE ユーザーメッセージは、各データベースに格納されます�
 ASE で `CHARINDEX` は、 `NULL` すべての入力式がの場合にのみ、を返し `NULL` ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Azure SQL は `NULL` 、入力式がの場合にを返し `NULL` ます。
 
 - ASE の動作を使用するには、[ **置換関数**] を選択します。 関数へのすべての呼び出し `CHARINDEX` は、 `CHARINDEX_VARCHAR`  `CHARINDEX_NVARCHAR` `s2ss` SAP ASE の動作をエミュレートするために渡されたパラメーターの型 (スキーマ名の下のユーザーデータベースで作成) に基づいて、またはユーザー定義関数への呼び出しに置き換えられます。
-- Azure SQL の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[ **現在の構文を保持**する] を選択します。
+- Azure SQL の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[ **現在の構文を保持** する] を選択します。
 
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。
 
@@ -363,14 +363,14 @@ ASE で `CHARINDEX` は、 `NULL` すべての入力式がの場合にのみ、�
 |-|-|
 |Default|現在の構文を保持する|
 |Optimistic|現在の構文を保持する|
-|完全|Replace 関数|
+|[完全]|Replace 関数|
   
 ### <a name="datalength-function"></a>DATALENGTH 関数
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Azure SQL と ASE では、値が単一のスペースである場合、関数によって返される値 `DATALENGTH` が異なります。 この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /AZURE SQL はを返し、ASE はを `0` 返し `1` ます。
 
 - ASE の動作を使用するには、[ **置換関数**] を選択します。 SAP ASE の動作をエミュレートするために、関数へのすべて `DATALENGTH` の呼び出しが式に置き換えられ `CASE` ます。
-- 既定の/Azure SQL の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[ **現在の構文を保持**する] を選択します。
+- 既定の/Azure SQL の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[ **現在の構文を保持** する] を選択します。
 
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。
 
@@ -378,7 +378,7 @@ ASE で `CHARINDEX` は、 `NULL` すべての入力式がの場合にのみ、�
 |-|-|
 |Default|現在の構文を保持する|
 |Optimistic|現在の構文を保持する|
-|完全|Replace 関数|
+|[完全]|Replace 関数|
 
 ### <a name="index_col-function"></a>INDEX_COL 関数
 
@@ -391,7 +391,7 @@ ASE では、関数の省略可能な引数をサポートし `user_id` `INDEX_C
 |-|-|
 |Default|エラーでマーク|
 |Optimistic|エラーでマーク|
-|完全|エラーでマーク|
+|[完全]|エラーでマーク|
 
 ### <a name="index_colorder-function"></a>INDEX_COLORDER 関数
 
@@ -406,14 +406,14 @@ ASE では、関数の省略可能な引数をサポートし `user_id` `INDEX_C
 |-|-|
 |Default|エラーでマーク|
 |Optimistic|エラーでマーク|
-|完全|エラーでマーク|
+|[完全]|エラーでマーク|
 
 ### <a name="left-and-right-functions"></a>LEFT および RIGHT 関数
 
 `LEFT``RIGHT`ASE の関数と関数は、負の長さのパラメーターに対して異なる動作をします。
 
 - ASE の動作を使用するには、[ **置換関数**] を選択します。 長さのパラメーターは、 `CASE` 負の値を返す式に置き換えられ `NULL` ます。
-- SQL Server の動作を使用するには、[ **現在の構文を保持**する] を選択します。
+- SQL Server の動作を使用するには、[ **現在の構文を保持** する] を選択します。
 
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。
 
@@ -421,7 +421,7 @@ ASE では、関数の省略可能な引数をサポートし `user_id` `INDEX_C
 |-|-|
 |Default|現在の構文を保持する|
 |Optimistic|現在の構文を保持する|
-|完全|Replace 関数|
+|[完全]|Replace 関数|
 
 > [!NOTE]
 > 長さのパラメーターがリテラル値であり、複雑な式ではない場合、長さの値は常にプロジェクトの設定に関係なく置き換えられ `NULL` ます。
@@ -439,7 +439,7 @@ ASE では、関数の省略可能な引数をサポートし `user_id` `INDEX_C
 |-|-|
 |Default|エラーでマーク|
 |Optimistic|エラーでマーク|
-|完全|エラーでマーク|
+|[完全]|エラーでマーク|
 
 **既定/オプティミスティック/フルモード:** エラーでマーク
 
@@ -456,7 +456,7 @@ ASE では、関数の省略可能な引数をサポートし `user_id` `INDEX_C
 |-|-|
 |Default|使用しない|
 |Optimistic|使用しない|
-|完全|使用|
+|[完全]|使用|
 
 ### <a name="replicate-function"></a>REPLICATE 関数
 
@@ -471,7 +471,7 @@ ASE では、関数の省略可能な引数をサポートし `user_id` `INDEX_C
 |-|-|
 |Default|Replace 関数|
 |Optimistic|Replace 関数|
-|完全|Replace 関数|
+|[完全]|Replace 関数|
 
 ### <a name="trim-ltrim-rtrim-function"></a>TRIM (LTRIM, RTRIM) 関数
 
@@ -486,14 +486,14 @@ ASE では、関数の省略可能な引数をサポートし `user_id` `INDEX_C
 |-|-|
 |Default|Replace 関数|
 |Optimistic|Replace 関数|
-|完全|Replace 関数|
+|[完全]|Replace 関数|
 
 ### <a name="substring-function"></a>SUBSTRING 関数
 
 ASE では、 `SUBSTRING(expression, start, length)` `NULL` 式の中の文字数よりも大きい値が指定されている場合、または長さが0の場合、関数はを返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/AZURE SQL では、同等の式は空の文字列を返します。
 
 - ASE の動作を使用するには、[ **置換関数**] を選択します。 関数へのすべての呼び出し `SUBSTRING` は、 `SUBSTRING_VARCHAR` `SUBSTRING_NVARCHAR` `SUBSTRING_VARBINARY` `s2ss` SAP ASE の動作をエミュレートするために渡されたパラメーターの型 (スキーマ名の下のユーザーデータベースで作成) に基づいて、またはユーザー定義関数の呼び出しに置き換えられます。
-- Azure SQL の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[ **現在の構文を保持**する] を選択します。
+- Azure SQL の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[ **現在の構文を保持** する] を選択します。
 
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。
 
@@ -501,7 +501,7 @@ ASE では、 `SUBSTRING(expression, start, length)` `NULL` 式の中の文字�
 |-|-|
 |Default|現在の構文を保持する|
 |Optimistic|現在の構文を保持する|
-|完全|Replace 関数|
+|[完全]|Replace 関数|
 
 ## <a name="tables-section"></a>Tables セクション
 
@@ -513,7 +513,7 @@ ASE では、 `SUBSTRING(expression, start, length)` `NULL` 式の中の文字�
 |-|-|
 |Default|いいえ|
 |Optimistic|いいえ|
-|完全|はい|
+|[完全]|はい|
 
 > [!NOTE]
 > Azure SQL に接続している場合、既定では **[はい]** になります。

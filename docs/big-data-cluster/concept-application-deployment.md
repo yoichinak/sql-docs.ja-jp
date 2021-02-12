@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ac26973c4d1ff8b2a9e689f3aa372d3888f939d6
-ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
+ms.openlocfilehash: 8c1f6b4895e872289095411cfd8ecdaf1e2eb087
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92914301"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100047652"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのアプリケーション展開とは
 
@@ -59,9 +59,9 @@ ReplicaSet が作成され、ポッドが開始されると、`spec.yaml` ファ
 
 SQL Server 2019 CU5 により、Red Hat OpenShift でのビッグ データ クラスターの展開、および BDC の更新されたセキュリティ モデルがサポートされるため、特権コンテナーは不要になります。 SQL Server 2019 CU5 を使用するすべての新しいデプロイでは、非特権だけでなく、コンテナーも既定では非ルート ユーザーとして実行されます。
 
-CU5 リリースの時点では、 [アプリ展開]()インターフェイスを使用して展開されたアプリケーションのセットアップ手順は、引き続き *ルート* ユーザーとして実行されます。 これは、セットアップ中に、アプリケーションで使用する追加のパッケージがインストールされるために必要です。 アプリケーションの一部として展開された他のユーザー コードは、特権の低いユーザーとして実行されます。 
+CU5 リリースの時点では、[アプリ展開]()インターフェイスを使用して展開されたアプリケーションのセットアップ手順は、引き続き *ルート* ユーザーとして実行されます。 これは、セットアップ中に、アプリケーションで使用する追加のパッケージがインストールされるために必要です。 アプリケーションの一部として展開された他のユーザー コードは、特権の低いユーザーとして実行されます。 
 
-また、 **CAP_AUDIT_WRITE** 機能は、cron ジョブを使用して SSIS アプリケーションをスケジュールするために必要なオプションの機能です。 アプリケーションの yaml 仕様ファイルでスケジュールが指定されている場合、アプリケーションは cron ジョブによってトリガーされるため、追加の機能が必要になります。  または、Web サービスの呼び出しを使用して *azdata app run* で必要に応じてアプリケーションをトリガーすることもできます。この場合、CAP_AUDIT_WRITE 機能は必要ありません。 
+また、**CAP_AUDIT_WRITE** 機能は、cron ジョブを使用して SSIS アプリケーションをスケジュールするために必要なオプションの機能です。 アプリケーションの yaml 仕様ファイルでスケジュールが指定されている場合、アプリケーションは cron ジョブによってトリガーされるため、追加の機能が必要になります。  または、Web サービスの呼び出しを使用して *azdata app run* で必要に応じてアプリケーションをトリガーすることもできます。この場合、CAP_AUDIT_WRITE 機能は必要ありません。 
 
 > [!NOTE]
 > この機能は、ビッグ データ クラスターの既定のデプロイでは必須ではないため、[OpenShift デプロイの記事](deploy-openshift.md) のカスタム SCC には含まれていません。 この機能を有効にするには、まず、カスタム SCC yaml ファイルを更新して、CAP_AUDIT_WRITE を含める必要があります。 

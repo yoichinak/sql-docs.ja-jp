@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 33b5663e7693de8c031f2b39c0436a771920be56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82f5d7eef228326f0dba9b194b87bffce4bb5eff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372368"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078233"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL Server での SSMA コンポーネントのインストール (SybaseToSQL)
 
@@ -23,11 +23,11 @@ SSMA のインストールに加えて、サーバー側のデータ移行を使
 
 ## <a name="ssma-for-sybase-extension-pack"></a>SSMA for Sybase extension pack
 
-SSMA 拡張パックは、指定されたインスタンスにデータベース、 **sysdb** 、および **ssmatesterdb_syb**を追加し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **Sysdb**データベースには、データの移行に必要なテーブルとストアドプロシージャが含まれています。 **Ssmatester_syb**データベースには、ssma tester コンポーネントによって使用されるオブジェクト (テーブル、トリガー、ビュー) が作成されるスキーマ**ssma_sybase_utilities**が含まれています。
+SSMA 拡張パックは、指定されたインスタンスにデータベース、 **sysdb** 、および **ssmatesterdb_syb** を追加し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **Sysdb** データベースには、データの移行に必要なテーブルとストアドプロシージャが含まれています。 **Ssmatester_syb** データベースには、ssma tester コンポーネントによって使用されるオブジェクト (テーブル、トリガー、ビュー) が作成されるスキーマ **ssma_sybase_utilities** が含まれています。
 
 また、データをに移行するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、サーバー側のデータ移行エンジンを使用してデータを移行するときに、ssma によっ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] てエージェントジョブが作成されます。
 
-### <a name="prerequisites"></a>[前提条件]
+### <a name="prerequisites"></a>前提条件
 
 SSMA for Sybase サーバーコンポーネントをにインストールする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムが次の要件を満たしていることを確認してください。
 
@@ -49,8 +49,8 @@ SSMA for Sybase サーバーコンポーネントをにインストールする�
 
 拡張機能パックをインストールするには:
 
-1. を実行しているコンピューターに、 ***n*の SSMAforSybaseExtensionPack_** をコピーします。 *n*はビルド番号です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
-2. **SSMAforSybaseExtensionPack_*n*.msi**をダブルクリックします。
+1. を実行しているコンピューターに、 ***n* の SSMAforSybaseExtensionPack_** をコピーします。 *n* はビルド番号です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
+2. **SSMAforSybaseExtensionPack_ *n*.msi** をダブルクリックします。
 3. **[ようこそ]** ページで **[次へ]** をクリックします。
 4. [使用許諾 **契約書** ] ページで、使用許諾契約書を読みます。 同意する場合は、[ **契約に同意** します] オプションを選択し、[ **次へ**] をクリックします。
 5. [ **セットアップの種類の選択** ] ページで、[ **標準**] をクリックします。
@@ -69,17 +69,17 @@ SSMA for Sybase サーバーコンポーネントをにインストールする�
 
 10. 次の手順では、サーバー側のデータの移行中に拡張パックデータベースに格納されている機微なデータを暗号化するために使用されるマスターキーのパスワードを設定する必要があります。 強力なパスワードを入力し、[ **次へ**] をクリックします。
 
-11. 次のページで、[ **Install Utilities Database *n* **] を選択し、Extension Pack library をインストールします。ここで、 *n* はバージョン番号です。 テスト担当者機能を使用する予定の場合は、[ **テスト担当者データベースをインストール** する] チェックボックスをオンにし、[ **次へ**] を選択します。
+11. 次のページで、[ **Install Utilities Database *n***] を選択し、Extension Pack library をインストールします。ここで、 *n* はバージョン番号です。 テスト担当者機能を使用する予定の場合は、[ **テスト担当者データベースをインストール** する] チェックボックスをオンにし、[ **次へ**] を選択します。
 
-    **Sysdb**データベースは、(サーバー側のデータ移行エンジンを使用して) データの移行に必要なテーブルとストアドプロシージャがこのデータベースに作成された状態で作成されます。
+    **Sysdb** データベースは、(サーバー側のデータ移行エンジンを使用して) データの移行に必要なテーブルとストアドプロシージャがこのデータベースに作成された状態で作成されます。
 
     [ **テスト担当者データベースをインストール** する] オプションがオンになっている場合、 **ssmatesterdb_syb** データベースが作成されます。
 
-12. インストールが完了すると、の別のインスタンスにユーティリティデータベースをインストールするかどうかを確認するメッセージが表示されます。 [はい] を選択し、[次へ] を選択します。または、[いいえ] を選択し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [**終了**] を選択します。 **Yes** **Next** **No**
+12. インストールが完了すると、の別のインスタンスにユーティリティデータベースをインストールするかどうかを確認するメッセージが表示されます。 [はい] を選択し、[次へ] を選択します。または、[いいえ] を選択し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [**終了**] を選択します。   
 
 ### <a name="sql-server-database-objects"></a>SQL Server データベースオブジェクト
 
-拡張機能パックをインストールすると、 **sysdb**データベースに**ssma_syb bcp_migration_packages**テーブルが表示されます。 次のストアドプロシージャも表示されます。
+拡張機能パックをインストールすると、 **sysdb** データベースに **ssma_syb _migration_packages** テーブルが表示されます。 次のストアドプロシージャも表示されます。
 
 - `bcp_clean_migration_data`
 - `bcp_ensure_message_table`

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 36d25008aa4a76bd1326c7c61ec537a6047b01e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 054211c36aa934c0cdf011cb873d27b9170e4117
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463407"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070207"
 ---
 # <a name="global-settings-editor-mysqltosql"></a>グローバル設定 (エディター) (MySQLToSQL)
 [ **グローバル設定** ] ダイアログボックスの [エディター] ページを使用すると、コードエディターウィンドウの設定を指定できます。  

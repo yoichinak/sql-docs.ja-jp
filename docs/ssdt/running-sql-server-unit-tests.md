@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 810010b70a50f51c29b34b917af90127233d622c
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 5983d00806f895d8112ac111312309cf93aa48ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987798"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063497"
 ---
 # <a name="running-sql-server-unit-tests"></a>SQL Server の単体テストの実行
 
@@ -30,7 +30,7 @@ ms.locfileid: "91987798"
   
 -   コマンド プロンプトで MSTest.exe コマンドを使用してテストを実行します。 詳しくは、「[方法: MSTest を使用してコマンド ラインから自動テストを実行する (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182487(v=vs.100))」または「[方法: MSTest を使用してコマンド ラインから自動テストを実行する (Visual Studio 2012)](/previous-versions/ms182487(v=vs.140))」をご覧ください。  
   
--   **ソリューション エクスプローラー**からテスト プロジェクトを実行することで、テストを実行します。 詳しくは、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100))」または「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](/previous-versions/ms182470(v=vs.140))」をご覧ください。  
+-   **ソリューション エクスプローラー** からテスト プロジェクトを実行することで、テストを実行します。 詳しくは、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100))」または「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](/previous-versions/ms182470(v=vs.140))」をご覧ください。  
   
 -   **[テスト結果]** ウィンドウからテストを再実行します。 詳細については、「[テストを再実行する (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182472(v=vs.100))」を参照してください。  
   

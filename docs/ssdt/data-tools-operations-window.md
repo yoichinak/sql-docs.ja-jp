@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f1eae246680e35f52d10a5c5338e866b58843ec3
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: f6f3e0512a0189bde68a2dde0b39c5df7f28acde
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518722"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077073"
 ---
 # <a name="data-tools-operations-window"></a>[データ ツール操作] ウィンドウ
 
@@ -30,11 +30,11 @@ ms.locfileid: "85518722"
   
 **[データ ツール操作]** ウィンドウには、次の操作を実行するときに進捗状況が表示されます。  
   
--   **SQL Server オブジェクト エクスプローラー**でのデータベースの展開。 この操作によってデータベース モデルのインポートが開始されます。  
+-   **SQL Server オブジェクト エクスプローラー** でのデータベースの展開。 この操作によってデータベース モデルのインポートが開始されます。  
   
 -   データベースへの変更のコミット、または Transact\-SQL エディターの **[データベースの更新]** を使用したスクリプトの生成。 詳細については、「[接続されているデータベースを Power Buffer で更新する方法](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)」を参照してください。  
   
--   **SQL Server オブジェクト エクスプローラー**からのオブジェクトの削除。 詳細については、「[オブジェクトを削除し、依存関係を解決する方法](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)」を参照してください。  
+-   **SQL Server オブジェクト エクスプローラー** からのオブジェクトの削除。 詳細については、「[オブジェクトを削除し、依存関係を解決する方法](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)」を参照してください。  
   
 -   結果の公開。 詳細については、「[ ターゲット プラットフォームを変更し、データベース プロジェクトを公開する](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   

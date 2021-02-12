@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 06/09/2020
-ms.openlocfilehash: 2b68f15f69d3efb0a773022e87615d298da07706
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6da9918b4ebb3ed571d82d23c123c8e477741c0b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725158"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048542"
 ---
 # <a name="make-predictions-with-machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio の Machine Learning 拡張機能を使用して予測を行う (プレビュー)
 
@@ -38,12 +38,12 @@ ONNX モデルを使用して予測を行うには、次の手順に従います
 1. **onnxruntime**、**mlflow**、**mlflow-dbstore** をインストールするように求められた場合は、 **[はい]** を選択します。
 
 1. モデルが配置されている場所を選択し、 **[次へ]** を選択します。 使用できるもの:
-    - **インポートされたモデル**。 データベースに既に格納されているモデルを使用する場合は、このオプションを選択します。 モデルが配置されている**モデル データベース**と**モデル テーブル**を選択し、使用するモデルを選択し、 **[次へ]** を選択します。
+    - **インポートされたモデル**。 データベースに既に格納されているモデルを使用する場合は、このオプションを選択します。 モデルが配置されている **モデル データベース** と **モデル テーブル** を選択し、使用するモデルを選択し、 **[次へ]** を選択します。
     - **ファイルのアップロード**。 ファイルからモデルを使用する場合は、これを選択します。 **[ソース ファイル]** でモデル ファイルを選択し、 **[次へ]** を選択します。
-    - **Azure Machine Learning**。 Azure Machine Learning のモデルを使用するには、これを選択します。 最初に、**Azure にサインイン**します。 次に、ご自分の **Azure アカウント**、**Azure サブスクリプション**、**Azure リソース グループ**、**Azure ML ワークスペース**を選択します。 使用するモデルを選択し、 **[次へ]** を選択します。
+    - **Azure Machine Learning**。 Azure Machine Learning のモデルを使用するには、これを選択します。 最初に、**Azure にサインイン** します。 次に、ご自分の **Azure アカウント**、**Azure サブスクリプション**、**Azure リソース グループ**、**Azure ML ワークスペース** を選択します。 使用するモデルを選択し、 **[次へ]** を選択します。
 
 1. ソース データをモデルにマップします。
-    - 予測を適用するデータ セットを含む**ソース データベース**と**ソース テーブル**を選択します。
+    - 予測を適用するデータ セットを含む **ソース データベース** と **ソース テーブル** を選択します。
     - **[Model Input mapping]\(モデルの入力のマッピング\)** と **[モデルの出力]** の下に列をマップします。 この拡張機能では、同じ名前とデータ型の列が自動的にマップされます。
 
 1. **[予測]** を選択します。

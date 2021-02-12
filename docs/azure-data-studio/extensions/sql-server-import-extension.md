@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: caf2b3ee70d2542dc529e83e1e243ff215c644a4
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a1a4c9a83aca18ef41960f3c497b75f6de210109
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123230"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048382"
 ---
 # <a name="sql-server-import-extension"></a>SQL Server インポートの拡張機能
 
@@ -29,7 +29,7 @@ SQL Server インポートの拡張機能を使用すると、.txt ファイル�
 
    ![拡張機能マネージャーをインポートする](media/sql-server-import-extension/import-wizard-install.png)
 
-3. 必要な拡張機能を選択して**インストール**します。
+3. 必要な拡張機能を選択して **インストール** します。
 4. **[再読み込み]** を選択して拡張機能を有効にします (拡張機能を初めてインストールするときにのみ必要です)。
 
 ## <a name="start-import-wizard"></a>インポート ウィザードを開始する

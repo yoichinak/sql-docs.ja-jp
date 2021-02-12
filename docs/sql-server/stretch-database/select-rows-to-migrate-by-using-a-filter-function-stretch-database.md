@@ -14,12 +14,12 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72162b4ed6339bcf7939e1903886170e3df36e63
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492615"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030900"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>フィルター関数を使用して移行する行を選択する (Stretch Database)
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -293,9 +293,9 @@ SET (
   
 1.  新しいスライディング ウィンドウを指定する新しい関数を作成します。 次の例では、2016 年 1 月 1 日ではなく、2016 年 1 月 2日より前の日付を選択します。  
   
-2.  次の例に示すように、 **ALTER TABLE**を呼び出して、以前のフィルター関数を新しい関数で置き換えます。  
+2.  次の例に示すように、 **ALTER TABLE** を呼び出して、以前のフィルター関数を新しい関数で置き換えます。  
   
-3.  必要に応じて、 **DROP FUNCTION**を呼び出して不要になった以前のフィルター関数を削除します。 (この手順は例には含まれていません)。  
+3.  必要に応じて、 **DROP FUNCTION** を呼び出して不要になった以前のフィルター関数を削除します。 (この手順は例には含まれていません)。  
   
 ```sql  
 BEGIN TRAN  

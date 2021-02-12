@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e666496383b738b11f20cd9b3d7e3a76e8613416
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f2f9f3986697f83e5b9bb5616f30f4f1086373f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198313"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063757"
 ---
 # <a name="creating-the-web-service-proxy"></a>Web サービス プロキシの作成
   クライアントと Web サービスは、SOAP メッセージを使用して通信できます。SOAP メッセージは、入力パラメーターと出力パラメーターを XML としてカプセル化します。 プロキシ クラスは、パラメーターを XML 要素にマップした後、ネットワークを介して SOAP メッセージを送信します。 この方法では、プロキシ クラスによって、SOAP レベルで Web サービスと通信する必要がなくなり、SOAP および Web サービスのプロキシをサポートするあらゆる開発環境で Web サービスを呼び出すことができます。  
@@ -69,7 +69,7 @@ ReportingService2010 service = new ReportingService2010();
   
  **Web 参照をプロジェクトに追加するには**  
   
-1.  **ソリューション エクスプローラー**で、Web サービスを使用するプロジェクトを選択します。  
+1.  **ソリューション エクスプローラー** で、Web サービスを使用するプロジェクトを選択します。  
   
 2.  **[プロジェクト]** メニューの **[Web 参照の追加]** をクリックします。  
   

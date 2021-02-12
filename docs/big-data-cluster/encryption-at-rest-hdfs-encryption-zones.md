@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 904b07913a63e226e5e45876f2fc520226411223
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: bfcc348595a645eca3b1150ae39e7c777f4e192a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92199590"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046772"
 ---
 # <a name="sql-server-big-data-clusters-hdfs-encryption-zones-usage-guide"></a>SQL Server ビッグ データ クラスター HDFS 暗号化ゾーンの使用ガイド
 
@@ -22,7 +22,7 @@ ms.locfileid: "92199590"
 
 このガイドでは、SQL Server ビッグ データ クラスターの保存時の暗号化機能を使用し、暗号化ゾーンを使用して HDFS フォルダーを暗号化する方法について説明します。
 
-使用できる状態になっている、マウントされた既定の暗号化ゾーンが __```/securelake```__ に既に存在することに注意してください。 これは、 __securelakekey__ という名前のシステム生成の 256 ビット キーを使用して作成されました。 このキーは、追加の暗号化ゾーンを作成するために使用できます。
+使用できる状態になっている、マウントされた既定の暗号化ゾーンが __```/securelake```__ に既に存在することに注意してください。 これは、__securelakekey__ という名前のシステム生成の 256 ビット キーを使用して作成されました。 このキーは、追加の暗号化ゾーンを作成するために使用できます。
 
 ## <a name="prerequisites"></a><a id="prereqs"></a> 前提条件
 
@@ -45,7 +45,7 @@ ms.locfileid: "92199590"
    hdfs dfs -mkdir -p /user/zone/folder
    ```
 
-1. encryption zone create コマンドを発行して、 __securelakekey__ キーを使用してフォルダーを暗号化します。
+1. encryption zone create コマンドを発行して、__securelakekey__ キーを使用してフォルダーを暗号化します。
 
    ```console
    hdfs crypto -createZone -keyName securelakekey -path /user/zone/folder

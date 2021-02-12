@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0df267807ff824cebac580fb3454d63de8dfe31b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7024f944030714e7aa2431815e326b1be5be701
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463385"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077213"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL と SQL Server データ型のマッピング (MySQLToSQL)
 MySQL データベースの型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、型または Azure SQL Database 型とは異なります。 MySQL データベースオブジェクトをまたは SQL Azure オブジェクトに変換する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、mysql からまたは SQL Azure にデータ型をマップする方法を指定する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の手順に示すように、既定のデータ型マッピングをそのまま使用することも、マッピングをカスタマイズすることもできます。  
@@ -57,7 +57,7 @@ SSMA の [ **型マッピング** ] タブを表示すると、背景は、継�
   
         1.  一部の型では、対象のデータ型の長さが必要です。 必要に応じて、[置換後の **文字列** ] ボックスに新しいデータ長を入力し、[ **OK**] をクリックします。  
   
-        2.  一部の型では、ターゲットデータ型の **有効桁数** と **小数点以下桁数**が必要です。 必要に応じて、[置換後の **文字列** ] ボックスに新しい有効桁数と小数点以下桁数を入力し、[ **OK**] をクリックします。  
+        2.  一部の型では、ターゲットデータ型の **有効桁数** と **小数点以下桁数** が必要です。 必要に応じて、[置換後の **文字列** ] ボックスに新しい有効桁数と小数点以下桁数を入力し、[ **OK**] をクリックします。  
   
 -   **型マッピングを編集するには、次の手順を実行します。**  
   
@@ -71,7 +71,7 @@ SSMA の [ **型マッピング** ] タブを表示すると、背景は、継�
   
     -  一部の型では、対象のデータ型の長さが必要です。 必要に応じて、[置換後の **文字列** ] ボックスに新しいデータ長を入力し、[ **OK**] をクリックします。  
   
-    -  一部の型では、ターゲットデータ型の **有効桁数** と **小数点以下桁数**が必要です。 必要に応じて、[置換後の **文字列** ] ボックスに新しい有効桁数と小数点以下桁数を入力し、[ **OK**] をクリックします。  
+    -  一部の型では、ターゲットデータ型の **有効桁数** と **小数点以下桁数** が必要です。 必要に応じて、[置換後の **文字列** ] ボックスに新しい有効桁数と小数点以下桁数を入力し、[ **OK**] をクリックします。  
   
 -   **データ型マッピングを削除するには、次の手順を実行します。**  
   

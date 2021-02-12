@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6e8bd25b8529f09896cbec2ec31578375a015f2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0926c350d02bf2cdbb5ae7fe4fdefbda3ef6863
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372629"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077223"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>変換のための SAP ASE データベースオブジェクトの評価 (SybaseToSQL)
 オブジェクトを読み込んで、または Azure SQL にデータを移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行の複雑さと所要時間を決定する必要があります。 SSMA では、に正常に変換されるオブジェクトとプロシージャの割合を示す評価レポートを作成でき [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 SSMA では、変換エラーの原因となる可能性のある特定の問題を確認することもできます。  
@@ -64,7 +64,7 @@ ms.locfileid: "88372629"
 2.  左側のウィンドウで、[スキーマ] または赤色のエラーアイコンが表示されているフォルダーを展開します。 変換に失敗した個々の項目を選択するまで、項目を展開し続けます。  
   
 3.  ソースペインの上部にある [次の **問題**] を選択します。  
-    **ターゲットナビゲーション**ウィンドウの関連コードと同様に、問題のあるコードが強調表示されます。  
+    **ターゲットナビゲーション** ウィンドウの関連コードと同様に、問題のあるコードが強調表示されます。  
   
 4.  エラーメッセージを確認し、変換の問題の原因となったオブジェクトで何を実行するかを決定します。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "88372629"
   
     -   オブジェクトを移行から除外することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または AZURE Sql Metadata explorer と Sybase メタデータエクスプローラーで、オブジェクトをまたは AZURE sql に読み込む前に項目の横のチェックボックスをオフにし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ASE からデータを移行します。
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 [SAP ASE データベースオブジェクトの &#40;SybaseToSQL&#41;への変換 ](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  

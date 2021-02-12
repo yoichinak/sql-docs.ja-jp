@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6bf9144249bc8707bce9c812da19a07bacc43c68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07adac4e991afd70b70a5f087a881f1933baaae1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418608"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076423"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>変換のためのアクセスデータベースオブジェクトの評価 (アクセス許可 Sql)
 オブジェクトを読み込み、データをまたは SQL Azure に移行する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移行が成功する量と、変換にかかる時間を決定する必要があります。 SSMA では、評価レポートを作成して、正常に変換されたオブジェクトの割合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または移行を実行するための構文と時間の推定 SQL Azure を示すことができます。 SSMA では、変換エラーの原因となった特定の問題を確認することもできます。  

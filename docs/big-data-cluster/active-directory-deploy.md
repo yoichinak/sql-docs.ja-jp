@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48dde8000274ea74df1c6095714b54669c5becdd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 2a79c82f2c3fd443d7237fc3b0a1f7c51102bceb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257292"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048017"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Active Directory モードで SQL Server ビッグ データ クラスターを展開する
 
@@ -50,9 +50,9 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 - `security.activeDirectory.domainControllerFullyQualifiedDns`:ドメイン コントローラーの FQDN の一覧。 FQDN には、ドメイン コントローラーのコンピューター名またはホスト名が含まれています。 複数のドメイン コントローラーがある場合、ここで一覧を指定できます。 例: `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
-  > 複数のドメイン コントローラーがドメインにサービスを提供している場合は、セキュリティ構成の `domainControllerFullyQualifiedDns` 一覧の最初のエントリとして、プライマリ ドメインコントローラー (PDC) を使用します。PDC 名を取得するには、コマンド プロンプトで「`netdom query fsmo`」と入力し、 **Enter** キーを押します。
+  > 複数のドメイン コントローラーがドメインにサービスを提供している場合は、セキュリティ構成の `domainControllerFullyQualifiedDns` 一覧の最初のエントリとして、プライマリ ドメインコントローラー (PDC) を使用します。PDC 名を取得するには、コマンド プロンプトで「`netdom query fsmo`」と入力し、**Enter** キーを押します。
 
-- `security.activeDirectory.realm` **省略可能なパラメーター** : ほとんどの場合、領域はドメイン名と同じです。 同じでない場合、このパラメーターを使用し、領域の名前を定義します (例: `CONTOSO.LOCAL`)。 このパラメーターに指定する値は、完全修飾されている必要があります。
+- `security.activeDirectory.realm` **省略可能なパラメーター**: ほとんどの場合、領域はドメイン名と同じです。 同じでない場合、このパラメーターを使用し、領域の名前を定義します (例: `CONTOSO.LOCAL`)。 このパラメーターに指定する値は、完全修飾されている必要があります。
 
   > [!IMPORTANT]
   > 現時点では、BDC では、Active Directory ドメイン名が Active Directory ドメインの **NETBIOS** 名と異なる構成はサポートされていません。
@@ -77,7 +77,7 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
   >展開を開始する前に、これらのグループを AD 内に作成します。 これらの AD グループのいずれかのスコープがドメイン ローカルの場合、展開は失敗します。
 
   >[!IMPORTANT]
-  >ドメイン ユーザーが多数のグループ メンバーシップを所有している場合は、カスタム *bdc.json* デプロイ構成ファイルを使用して、ゲートウェイ設定 `httpserver.requestHeaderBuffer` (既定値は `8192`) と HDFS 設定 `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (既定値は `10`) の値を調整する必要があります。 これは、ゲートウェイへの接続タイムアウトや 431 ( *Request Header Fields Too Large* ) 状態コードの HTTP 応答を回避するためのベスト プラクティスです。 以下は、これらの設定の値を定義する方法と、グループ メンバーシップの数が多い場合に推奨される値を示す構成ファイルのセクションです。
+  >ドメイン ユーザーが多数のグループ メンバーシップを所有している場合は、カスタム *bdc.json* デプロイ構成ファイルを使用して、ゲートウェイ設定 `httpserver.requestHeaderBuffer` (既定値は `8192`) と HDFS 設定 `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (既定値は `10`) の値を調整する必要があります。 これは、ゲートウェイへの接続タイムアウトや 431 (*Request Header Fields Too Large*) 状態コードの HTTP 応答を回避するためのベスト プラクティスです。 以下は、これらの設定の値を定義する方法と、グループ メンバーシップの数が多い場合に推奨される値を示す構成ファイルのセクションです。
 
 ```json
 {
@@ -89,7 +89,7 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
                 "spec": {
                     "replicas": 1,
                     "endpoints": [{...}],
-                    "settings": {
+                    "settings": {
                         "gateway-site.gateway.httpserver.requestHeaderBuffer": "65536"
                     }
                 }
@@ -113,9 +113,9 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
   >[!IMPORTANT]
   >デプロイを開始する前に、AD で下記の設定に提供されるグループを作成します。 これらの AD グループのいずれかのスコープがドメイン ローカルの場合、展開は失敗します。
 
-- `security.activeDirectory.appOwners` **省略可能なパラメーター** : あらゆるアプリケーションを作成、削除、実行する権限が与えられる AD グループの一覧。 この一覧には、ユニバーサル グループまたはグローバル グループのいずれかのスコープを持つ AD グループを含めることができます。 ドメイン ローカル グループを含めることはできません。
+- `security.activeDirectory.appOwners` **省略可能なパラメーター**: あらゆるアプリケーションを作成、削除、実行する権限が与えられる AD グループの一覧。 この一覧には、ユニバーサル グループまたはグローバル グループのいずれかのスコープを持つ AD グループを含めることができます。 ドメイン ローカル グループを含めることはできません。
 
-- `security.activeDirectory.appReaders` **省略可能なパラメーター** : あらゆるアプリケーションを実行する権限を持つ AD グループの一覧。 この一覧には、ユニバーサル グループまたはグローバル グループのいずれかのスコープを持つ AD グループを含めることができます。 ドメイン ローカル グループを含めることはできません。
+- `security.activeDirectory.appReaders` **省略可能なパラメーター**: あらゆるアプリケーションを実行する権限を持つ AD グループの一覧。 この一覧には、ユニバーサル グループまたはグローバル グループのいずれかのスコープを持つ AD グループを含めることができます。 ドメイン ローカル グループを含めることはできません。
 
 次の表に、アプリケーション管理用の承認モデルを示します。
 
@@ -128,7 +128,7 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 |   appOwner           | azdata app delete  |
 |   appOwner、appReader| azdata app run     |
 
-- `security.activeDirectory.subdomain`: **省略可能なパラメーター** このパラメーターは、同じドメインに対する複数のビッグ データ クラスターのデプロイをサポートするために SQL Server 2019 CU5 リリースで導入されました。 この設定を使用すると、デプロイされたビッグ データ クラスターごとに異なる DNS 名を指定できます。 このパラメーターの値が `control.json` ファイルの Active Directory セクションに指定されていない場合、既定で、ビッグ データ クラスター名 (Kubernetes 名前空間名と同じ) がサブドメイン設定の値を計算するために使用されます。 
+- `security.activeDirectory.subdomain`:**省略可能なパラメーター** このパラメーターは、同じドメインに対する複数のビッグ データ クラスターのデプロイをサポートするために SQL Server 2019 CU5 リリースで導入されました。 この設定を使用すると、デプロイされたビッグ データ クラスターごとに異なる DNS 名を指定できます。 このパラメーターの値が `control.json` ファイルの Active Directory セクションに指定されていない場合、既定で、ビッグ データ クラスター名 (Kubernetes 名前空間名と同じ) がサブドメイン設定の値を計算するために使用されます。 
 
   >[!NOTE]
   >サブドメイン設定を介して渡される値は、新しい AD ドメインではなく、BDC クラスターによって内部で使用される DNS ドメインだけです。
@@ -138,7 +138,7 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 
   同じ Active Directory ドメインに複数のビッグ データクラスターをデプロイすることに関する詳細については、[概念: Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] をデプロイする](active-directory-deployment-background.md)方法に関するページを参照してください。
 
-- `security.activeDirectory.accountPrefix`: **省略可能なパラメーター** このパラメーターは、同じドメインに対する複数のビッグ データ クラスターのデプロイをサポートするために SQL Server 2019 CU5 リリースで導入されました。 この設定により、さまざまなビッグ データ クラスター サービスに対してアカウント名の一意性が保証されます。それは 2 つのクラスター間で異なる必要があります。 アカウント プレフィックス名のカスタマイズは省略可能で、既定では、サブドメイン名がアカウント プレフィックスとして使用されます。 サブドメイン名が 12 文字より長い場合、サブドメイン名の最初の 12 文字がアカウント プレフィックスとして使用されます。  
+- `security.activeDirectory.accountPrefix`:**省略可能なパラメーター** このパラメーターは、同じドメインに対する複数のビッグ データ クラスターのデプロイをサポートするために SQL Server 2019 CU5 リリースで導入されました。 この設定により、さまざまなビッグ データ クラスター サービスに対してアカウント名の一意性が保証されます。それは 2 つのクラスター間で異なる必要があります。 アカウント プレフィックス名のカスタマイズは省略可能で、既定では、サブドメイン名がアカウント プレフィックスとして使用されます。 サブドメイン名が 12 文字より長い場合、サブドメイン名の最初の 12 文字がアカウント プレフィックスとして使用されます。  
 
   >[!NOTE]
   >Active Directory では、アカウント名を 20 文字までに制限する必要があります。 ポッドと StatefulSet を区別するために、BDC クラスターでは 8 文字を使用する必要があります。 これにより、アカウント プレフィックスの制限として 12 文字が残されます

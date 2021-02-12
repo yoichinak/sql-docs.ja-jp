@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e4905b618c20d945946831c5492ec0e75ea882d
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: aa96471a6702836b48e95e65fdb40bde30ecd14f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680707"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042452"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用してエラーおよび警告処理を構成する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックでは、エラーと警告を処理するために SQLSRV ドライバーを構成する方法について説明します。  
   
-既定で、SQLSRV ドライバーは警告をエラーとして扱います。エラーまたは警告を生成する **sqlsrv** 関数の呼び出しは **false**を返します。 この動作を無効にするには、[sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 関数を使用します。 スクリプトの先頭に次のコード行を含めると、警告のみを生成する (エラーは生成しない) **sqlsrv** 関数は **false** を返しません。  
+既定で、SQLSRV ドライバーは警告をエラーとして扱います。エラーまたは警告を生成する **sqlsrv** 関数の呼び出しは **false** を返します。 この動作を無効にするには、[sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 関数を使用します。 スクリプトの先頭に次のコード行を含めると、警告のみを生成する (エラーは生成しない) **sqlsrv** 関数は **false** を返しません。  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   
@@ -34,7 +34,7 @@ ms.locfileid: "88680707"
 `sqlsrv_configure("WarningsReturnAsErrors", 1);`  
   
 > [!NOTE]  
-> SQLSTATE 値 01000、01001、01003、および 01S02 に対応する警告はエラーとして扱われません。 構成に関係なく、これらのいずれかの状態に対応する警告のみを生成する **sqlsrv** 関数は **false**を返しません。  
+> SQLSTATE 値 01000、01001、01003、および 01S02 に対応する警告はエラーとして扱われません。 構成に関係なく、これらのいずれかの状態に対応する警告のみを生成する **sqlsrv** 関数は **false** を返しません。  
   
 **WarningsReturnAsErrors** の値は php.ini ファイル内にも設定できます。 たとえば、php.ini ファイルの `[sqlsrv]` セクション内のこのエントリは、既定の動作をオフにします。  
   

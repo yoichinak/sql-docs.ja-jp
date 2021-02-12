@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 9cbe1d734238728b87f6931fdee49654155e82e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0820f680382d7a126d2837c653ab7870defeb0ae
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893863"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017932"
 ---
 # <a name="import-into-a-database-project"></a>データベース プロジェクトへのインポート
 
@@ -49,7 +49,7 @@ ms.locfileid: "85893863"
 ![SSDT の [インポート時に無視] フォルダー](../ssdt/media/ssdt-ignoredonimport.gif "SSDT の [インポート時に無視] フォルダー")  
   
 ## <a name="import-source-script-sql"></a><a name="bkmk_import_source_script"></a>インポート元: スクリプト (*.sql)  
-インポート元のオブジェクトのうち、プロジェクト内に存在*しない*オブジェクトはすべて追加され、プロジェクト内*に存在する*オブジェクトはすべて、プロジェクト内のオブジェクト定義を上書きします。  
+インポート元のオブジェクトのうち、プロジェクト内に存在 *しない* オブジェクトはすべて追加され、プロジェクト内 *に存在する* オブジェクトはすべて、プロジェクト内のオブジェクト定義を上書きします。  
   
 > [!NOTE]  
 > この方法には、既知のバグが 2 つありますが、今後のリリースで修復される予定です。  

@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2eb1b02a7291d7d9eccd95a082fadb71f5e07010
-ms.sourcegitcommit: 4b7ecc080795c5f90322d60df5c0550884f48140
+ms.openlocfilehash: 1fcd4e099c245ba26d967fd775def2dc86a50d69
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94334436"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016851"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>SharePoint サイトのレポート ビューアー Web パーツ - Reporting Services
 
@@ -27,7 +27,7 @@ ms.locfileid: "94334436"
 
 レポート ビューアー Web パーツは、SharePoint 製品用の Reporting Services アドインの一部として利用できました。 Web パーツは、SharePoint 統合モードのレポート サーバーに固有のものでした。 SQL Server 2016 の後で、SharePoint 統合モードは非推奨となりました。
 
-SQL Server 2017 以降では、Reporting Services のインストール モードは **ネイティブ モード** だけです。 ページ ビューアー Web パーツを使うすべてのレポートの種類は、 *rs:Embed=true* URL パラメーターを使って埋め込むことができます。 SharePoint ページへのレポートの埋め込みはユーザーから要望のあった統合方法であり、更新されたレポート ビューアー Web パーツはページ分割されたレポートでこのシナリオを可能にします。
+SQL Server 2017 以降では、Reporting Services のインストール モードは **ネイティブ モード** だけです。 ページ ビューアー Web パーツを使うすべてのレポートの種類は、*rs:Embed=true* URL パラメーターを使って埋め込むことができます。 SharePoint ページへのレポートの埋め込みはユーザーから要望のあった統合方法であり、更新されたレポート ビューアー Web パーツはページ分割されたレポートでこのシナリオを可能にします。
 
 ページ分割されたレポートを SharePoint ページに埋め込むにはページ ビューアー Web パーツで十分ですが、更新されたレポート ビューアー Web パーツはそれ以外の機能も提供します。
 
@@ -45,8 +45,8 @@ SQL Server 2017 以降では、Reporting Services のインストール モー�
 
 以下の項目は、更新されたレポート ビューアー Web パーツに固有のものです。
 
-* Web パーツは、" *クラシック* " SharePoint ページでのみ使うことができます。
-* レポート ビューアー Web パーツでの埋め込みでサポートされているのは、ページ分割された (RDL) レポートだけです。 Power BI レポートまたはモバイル レポートを埋め込む場合は、 *rs:Embed=true* URL パラメーターを使うことができます。
+* Web パーツは、"*クラシック*" SharePoint ページでのみ使うことができます。
+* レポート ビューアー Web パーツでの埋め込みでサポートされているのは、ページ分割された (RDL) レポートだけです。 Power BI レポートまたはモバイル レポートを埋め込む場合は、*rs:Embed=true* URL パラメーターを使うことができます。
 
 ## <a name="next-steps"></a>次のステップ
 

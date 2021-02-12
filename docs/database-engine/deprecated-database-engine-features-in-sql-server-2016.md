@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a036ba8c2b822d5663252b52beeb0ca2e526b969
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2e46ade314bf0218344b682c7b75762de3f10396
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170554"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552642"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 データベース エンジンの非推奨の機能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -33,7 +33,7 @@ ms.locfileid: "98170554"
 -  Microsoft は、アップグレードを容易にする目的で、今後のリリースから非推奨機能を外さないように努めます。 ただし、非推奨機能が将来の技術革新を制限してしまう場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からそれを永久的に外すことをまれに選択することがあります。
 -  新しい開発作業に非推奨機能を使用することはお勧めしません。      
 
-[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] については、「[SQL Server 2017 データベース エンジンの非推奨機能](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)」を参照してください。
+[!INCLUDE[sssql17-md](../includes/sssql17-md.md)] については、「[SQL Server 2017 データベース エンジンの非推奨機能](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)」を参照してください。
 
 非推奨の機能の使用は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features オブジェクトのパフォーマンス カウンターおよびトレース イベントを使用して監視できます。 詳細については、「 [SQL Server オブジェクトの使用](../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
   
@@ -133,13 +133,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SMO クラス|**Microsoft.SQLServer.Management.Smo.Information** クラス<br /><br /> **Microsoft.SQLServer.Management.Smo.Settings** クラス<br /><br /> **Microsoft.SQLServer.Management.Smo.DatabaseOptions** クラス<br /><br /> **Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication** プロパティ|**Microsoft.SqlServer.Management.Smo.Server** クラス<br /><br /> **Microsoft.SqlServer.Management.Smo.Server** クラス<br /><br /> **Microsoft.SqlServer.Management.Smo.Database** クラス<br /><br /> なし|なし|なし|  
 |SQL Server エージェント|**net send** による通知<br /><br /> ポケットベルによる通知|メール通知<br /><br /> メール通知 |なし|なし|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でのソリューション エクスプローラーの統合||なし|なし|  
-|システム ストアド プロシージャ|sp_db_increased_partitions|[なし] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、増加したパーティションのサポートを既定で使用できます。|sp_db_increased_partitions|253|  
+|システム ストアド プロシージャ|sp_db_increased_partitions|[なし] : 増加したパーティションのサポートが既定で使用できるようになりました。|sp_db_increased_partitions|253|  
 |システム テーブル|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|互換性ビュー。 詳細については、「[互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)」を参照してください。<br /><br /> **重要:** 互換性ビューには、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] で導入された機能のメタデータは表示されません。 カタログ ビューを使用するようにアプリケーションをアップグレードすることをお勧めします。 詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> なし<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |システム テーブル|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|なし|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |システム関数|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |システム ビュー|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
-|テーブル圧縮|vardecimal ストレージ形式の使用|Vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|vardecimal ストレージ形式|200|  
-|テーブル圧縮|sp_db_vardecimal_storage_format プロシージャの使用|Vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|sp_db_vardecimal_storage_format|201|  
+|テーブル圧縮|vardecimal ストレージ形式の使用|Vardecimal ストレージ形式は非推奨とされます。 このバージョンのデータ圧縮では、10 進数値およびその他のデータ型が圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|vardecimal ストレージ形式|200|  
+|テーブル圧縮|sp_db_vardecimal_storage_format プロシージャの使用|Vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|sp_db_vardecimal_storage_format|201|  
 |テーブル圧縮|sp_estimated_rowsize_reduction_for_vardecimal プロシージャの使用|代わりにデータ圧縮と sp_estimate_data_compression_savings プロシージャを使用してください。|sp_estimated_rowsize_reduction_for_vardecimal|202|  
 |テーブル ヒント|UPDATE または DELETE ステートメントの FROM 句での NOLOCK または READUNCOMMITTED の指定|FROM 句から NOLOCK または READUNCOMMITTED のテーブル ヒントを削除します。|NOLOCK or READUNCOMMITTED in UPDATE or DELETE|1|  
 |テーブル ヒント|WITH キーワードを使用しないテーブル ヒントの指定|WITH を使用します。|Table hint without WITH|8|  
@@ -162,7 +162,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|集計インデックス付きビューの選択リストには、互換性モードが 90 の場合、COUNT_BIG (\*) の指定が必要|COUNT_BIG (\*) を使用してください。|COUNT_BIG(\*) がないインデックス付きビューの選択リスト|2|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ビュー経由で複数ステートメントのテーブル値関数 (TVF) を呼び出す、テーブル ヒントの間接アプリケーション|[なし] :|間接的な TVF ヒント|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 構文:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
-|その他|DB-Library<br /><br /> Embedded SQL for C|[!INCLUDE[ssDE](../includes/ssde-md.md)] では、DB-Library および Embedded SQL API を使用した既存アプリケーションからの接続が引き続きサポートされますが、これらの API を使用するアプリケーションでのプログラミング作業に必要なファイルやドキュメントは含まれません。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の今後のバージョンでは、DB-Library アプリケーションや Embedded SQL アプリケーションからの接続はサポートされなくなります。 新しいアプリケーションの開発には DB-Library や Embedded SQL を使用しないでください。 DB-Library や Embedded SQL への依存関係は、既存アプリケーションを変更するときに削除してください。 これらの API の代わりに、SQLClient 名前空間または ODBC などの API を使用します。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] には、これらのアプリケーションの実行に必要な DB-Library DLL が含まれていません。 DB-Library アプリケーションまたは Embedded SQL アプリケーションを実行するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Version 6.5、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0、または [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]から DB-Library DLL を入手する必要があります。|なし|なし|  
+|その他|DB-Library<br /><br /> Embedded SQL for C|[!INCLUDE[ssDE](../includes/ssde-md.md)] では、DB-Library および Embedded SQL API を使用した既存アプリケーションからの接続が引き続きサポートされますが、これらの API を使用するアプリケーションでのプログラミング作業に必要なファイルやドキュメントは含まれません。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の今後のバージョンでは、DB-Library アプリケーションや Embedded SQL アプリケーションからの接続はサポートされなくなります。 新しいアプリケーションの開発には DB-Library や Embedded SQL を使用しないでください。 DB-Library や Embedded SQL への依存関係は、既存アプリケーションを変更するときに削除してください。 これらの API の代わりに、SQLClient 名前空間または ODBC などの API を使用します。 現在のバージョンには、これらのアプリケーションの実行に必要な DB-Library DLL が含まれていません。 DB-Library アプリケーションまたは Embedded SQL アプリケーションを実行するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Version 6.5、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0、または [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]から DB-Library DLL を入手する必要があります。|なし|なし|  
 |ツール|SQL Server Profiler for Trace Capture|SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。|SQL Server プロファイラー|なし|  
 |ツール|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server プロファイラー|なし|  
 |トレース管理オブジェクト|Microsoft.SqlServer.Management.Trace namespace (SQL Server の Trace および Replay オブジェクト用の API が含まれています)|トレース構成: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> トレース読み取り: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> トレース再生:なし|||  

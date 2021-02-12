@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: c6f2a0989cb13253ef4a6a26e013a6b8c7a84ded
-ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
+ms.openlocfilehash: 2fb25ca30a3b55bfcedb470addad8680f4914e2f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93294377"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063294"
 ---
 # <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>Azure Arc 対応 SQL Server インスタンスで SQL Assessment を構成する
 
@@ -43,7 +43,7 @@ SQL Assessment には、SQL Server の構成を評価するためのメカニズ
 2. [アカウントの種類] を選択します。 管理されたサービス アカウントがある場合は、ポータルから直接 SQL Assessment を開始できます。 アカウント名を指定します。
 
 > [!NOTE]
-> " *管理されたサービス アカウント* " を指定すると **[Configure SQL Assessment]** \(SQL Assessment の構成\) ボタンがアクティブになり、 *CustomScriptExtension* を展開してポータルから評価を開始できるようになります。 *CustomScriptExtension* は一度に 1 つしか展開できないため、SQL Assessment のスクリプト拡張機能は実行後に自動的に削除されます。 既に別の *CustomScriptExtension* がホスト コンピューターに展開されている場合、 **[Configure SQL Assessment]** \(SQL Assessment の構成\) ボタンはアクティブになりません。
+> "*管理されたサービス アカウント*" を指定すると **[Configure SQL Assessment]** \(SQL Assessment の構成\) ボタンがアクティブになり、*CustomScriptExtension* を展開してポータルから評価を開始できるようになります。 *CustomScriptExtension* は一度に 1 つしか展開できないため、SQL Assessment のスクリプト拡張機能は実行後に自動的に削除されます。 既に別の *CustomScriptExtension* がホスト コンピューターに展開されている場合、 **[Configure SQL Assessment]** \(SQL Assessment の構成\) ボタンはアクティブになりません。
 
 3. 既定を変更したい場合は、データ コレクション コンピューターで作業ディレクトリを指定します。 既定では `C:\sql_assessment\work_dir` が使用されます。 収集および分析時、データは一時的にそのフォルダーに格納されます。 フォルダーが存在しない場合は、自動的に作成されます。
 
@@ -52,16 +52,16 @@ SQL Assessment には、SQL Server の構成を評価するためのメカニズ
 > [!div class="mx-imgBorder"]
    > [ ![CustomScriptExtension の展開を示すスクリーンショット。](media/assess/sql-assessment-custom-script-deployment.png) ](media/assess/sql-assessment-custom-script-deployment.png#lightbox)
 
-5. ターゲット コンピューターから SQL Assessment を開始する場合は、 **[構成スクリプトのダウンロード]** をクリックし、ダウンロードしたスクリプトをターゲット コンピューターにコピーして、 **powershell.exe** の管理者インスタンスで次の 1 つのコード ブロックを実行します。
+5. ターゲット コンピューターから SQL Assessment を開始する場合は、 **[構成スクリプトのダウンロード]** をクリックし、ダウンロードしたスクリプトをターゲット コンピューターにコピーして、**powershell.exe** の管理者インスタンスで次の 1 つのコード ブロックを実行します。
 
-   * " _ドメイン アカウント_ ": ユーザー アカウントとパスワードの入力を求められます。
+   * "_ドメイン アカウント_": ユーザー アカウントとパスワードの入力を求められます。
 
       ```powershell
       Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
       & '.\AddSqlAssessment.ps1'
       ```
 
-   * " _管理されたサービスアカウント (MSA)_ "
+   * "_管理されたサービスアカウント (MSA)_ "
 
       ```powershell
       Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
@@ -72,7 +72,7 @@ SQL Assessment には、SQL Server の構成を評価するためのメカニズ
 > このスクリプトは、データ収集をトリガーする *SQLAssessment* という名前のタスクをスケジュールします。 このタスクは、スクリプトを実行してから 1 時間以内に実行されます。 その後、7 日ごとに繰り返されます。
 
 > [!TIP]
-> タスクは、別の日時に実行されるように変更したり、すぐに実行するように強制したりすることもできます。 タスク スケジューラ ライブラリで、 **Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Assessments** > **SQLAssessment** を見つけます。
+> タスクは、別の日時に実行されるように変更したり、すぐに実行するように強制したりすることもできます。 タスク スケジューラ ライブラリで、**Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Assessments** > **SQLAssessment** を見つけます。
 
 ## <a name="view-sql-assessment-results"></a>SQL Assessment の結果を表示する
 
@@ -84,7 +84,7 @@ SQL Assessment には、SQL Server の構成を評価するためのメカニズ
    > [!div class="mx-imgBorder"]
    > [ ![SQL Assessment の結果が示されているスクリーンショット。](media/assess/sql-assessment-results.png) ](media/assess/sql-assessment-results.png#lightbox)
 
-* 作業フォルダー内のファイルを確認することで、収集マシンでのデータ処理の状態を確認できます。 スケジュールされたタスクが完了すると、 _new._ プレフィックスが付いたいくつかのファイルが作業ディレクトリに表示されます。
+* 作業フォルダー内のファイルを確認することで、収集マシンでのデータ処理の状態を確認できます。 スケジュールされたタスクが完了すると、_new._ プレフィックスが付いたいくつかのファイルが作業ディレクトリに表示されます。
 
    > [!div class="mx-imgBorder"]
    > [ ![作業フォルダーに新しいデータ ファイルが表示されている [ファイル マネージャー] ウィンドウが示されているスクリーンショット。](media/assess/sql-assessment-data-files-ready.png) ](media/assess/sql-assessment-data-files-ready.png#lightbox)

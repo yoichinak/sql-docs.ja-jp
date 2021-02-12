@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2caf2eb94916e7556f81648aa3e88dfb0791cb73
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: bf8db10c508ed2cdf5fd2f4bc96c0d1d2508d83d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519012"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018382"
 ---
 # <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>方法:Visual Studio 2010 のデータベース プロジェクトを SQL Server のデータベース プロジェクトに変換してターゲットを別のプラットフォームに変更する
 
@@ -42,11 +42,11 @@ SQL Server Data Tools (SSDT) では、Visual Studio 2010 で作成された SQL 
   
 3.  変換レポートが自動的に生成され、変換されたすべてのファイルが一覧表示されます。 変換プロセスの詳細情報を表示するには、プロジェクト ファイル名の横にある **+** 記号をクリックします。  
   
-4.  **ソリューション エクスプローラー**で、プロジェクト ファイル、プロパティ ファイル、およびスキーマ オブジェクトがすべて変換されていることを確認します。  
+4.  **ソリューション エクスプローラー** で、プロジェクト ファイル、プロパティ ファイル、およびスキーマ オブジェクトがすべて変換されていることを確認します。  
   
 ### <a name="to-change-a-projects-target-platform"></a>プロジェクトのターゲット プラットフォームを変更するには  
   
-1.  **ソリューション エクスプローラー**で、新しく変換されたプロジェクトを右クリックし、 **[プロパティ]** をクリックして、 **[プロジェクトの設定]** ダイアログ ボックスを開きます。  
+1.  **ソリューション エクスプローラー** で、新しく変換されたプロジェクトを右クリックし、 **[プロパティ]** をクリックして、 **[プロジェクトの設定]** ダイアログ ボックスを開きます。  
   
 2.  **[ターゲット プラットフォーム]** ボックスの一覧で、SSDT でサポートされている任意のプラットフォームをクリックします。  
   

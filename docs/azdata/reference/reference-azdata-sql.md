@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 794c7be56eaa0591d120b4fea40a725fdeecaac1
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: a7d142ca6afb77539b1425caaf097aca3959baeb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358110"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048702"
 ---
 # <a name="azdata-sql"></a>azdata sql
 
@@ -24,7 +24,7 @@ ms.locfileid: "92358110"
 
 ## <a name="commands"></a>コマンド
 
-|command|説明|
+|コマンド|説明|
 | --- | --- |
 [azdata sql shell](#azdata-sql-shell) | SQL CLI を使用すると、ユーザーは T-SQL を使用して SQL Server や Azure SQL とやりとりすることができます。
 [azdata sql query](#azdata-sql-query) | SQL CLI を使用すると、ユーザーは T-SQL を使用して SQL Server や Azure SQL とやりとりすることができます。

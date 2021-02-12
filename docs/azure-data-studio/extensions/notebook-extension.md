@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 36ed1466decd88686647302e65cf24746393d1f3
-ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
+ms.openlocfilehash: e8480ff67a5afc175d311ca3529c1e679f360106
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99495738"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048552"
 ---
 # <a name="create-a-jupyter-notebook-extension"></a>Jupyter Notebook 拡張機能を作成する
 

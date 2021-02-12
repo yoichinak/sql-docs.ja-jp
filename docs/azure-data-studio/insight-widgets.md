@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: c93cd3ea16b87a23dac96c1f21f3720d169e8c19
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 2b8f54b66852df0ce0300e950ba712a803a7a012
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364015"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040172"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>Azure Data Studio の分析情報ウィジェットを使用してサーバーとデータベースを管理する
 
@@ -38,8 +38,8 @@ ms.locfileid: "91364015"
 Azure Data Studio では、別の言語や高負荷のユーザー インターフェイスのさらなる導入を避けるようにしているため、可能な限り最小の JSON 構成で T-SQL を使用することが試みられます。 T-SQL を使用して分析情報ウィジェットを構成すると、洞察に富んだウィジェットに変換できる有用な T-SQL クエリの既存のソースが無数に活用されます。
 
 分析情報ウィジェットは、次に示す 1 つまたは 2 つの T-SQL クエリで構成されます。
-* *分析情報ウィジェット クエリ*はウィジェットに表示されるデータを返すクエリであり、これは必須となります。
-* *分析情報の詳細のクエリ*は、分析情報の詳細ページを作成する場合にのみ必要です。
+* *分析情報ウィジェット クエリ* はウィジェットに表示されるデータを返すクエリであり、これは必須となります。
+* *分析情報の詳細のクエリ* は、分析情報の詳細ページを作成する場合にのみ必要です。
 
 分析情報ウィジェット クエリでは、カウント、チャート、またはグラフをレンダリングするデータセットが定義されます。 分析情報の詳細のクエリは、関連する分析情報の詳細情報を分析情報の詳細パネルに表形式で一覧表示するために使用されます。 
 

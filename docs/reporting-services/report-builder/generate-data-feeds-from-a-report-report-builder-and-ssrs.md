@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6eedf7ae96f41a75a8690162de01473d7e2e5664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d61d02d7c5bf3e4de8199ebdc59f1c6f8ed157b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342792"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015652"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
 
@@ -50,7 +50,7 @@ ms.locfileid: "80342792"
     > [!NOTE]  
     >  既定では、ドキュメント名がレポート名になります。  
   
-7.  ドキュメントの種類が、 **ATOMSVC ファイル**であることを確認し、 **[保存]** をクリックします。  
+7.  ドキュメントの種類が、 **ATOMSVC ファイル** であることを確認し、 **[保存]** をクリックします。  
   
 8.  必要に応じて、ブラウザーで、またはテキスト エディターか XML エディターで、.atomsvc ファイルを開きます。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "80342792"
     > [!NOTE]  
     >  既定では、ドキュメント名がレポート名になります。 Atom サービス ドキュメントに複数のフィードがある場合、既定ではすべて同じ名前 (レポート名) が使用されます。 それらを区別するには、名前を変更してわかりやすい名前を使用してください。  
   
-7.  ドキュメントの種類が、 **ATOM ファイル**であることを確認し、 **[保存]** をクリックします。  
+7.  ドキュメントの種類が、 **ATOM ファイル** であることを確認し、 **[保存]** をクリックします。  
   
 8.  必要に応じて、ブラウザーで、またはテキスト エディターか XML エディターで、.atom ファイルを開きます。  
 

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d9b10f9ae7cca4a486c277f953e1881a6d645587
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: caca368f1556e7b9a875525e4c2d84a0c1cabc9d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518792"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018192"
 ---
 # <a name="how-to-fix-errors"></a>方法:エラーを修正する
 
@@ -26,11 +26,11 @@ ms.locfileid: "85518792"
   
 ### <a name="to-fix-errors"></a>エラーを修正するには  
   
-1.  **ソリューション エクスプローラー**で **Product** テーブル (Product.sql) を右クリックし、 **[デザイナーの表示]** をクリックします。  
+1.  **ソリューション エクスプローラー** で **Product** テーブル (Product.sql) を右クリックし、 **[デザイナーの表示]** をクリックします。  
   
 2.  デザイナーの列グリッドで **[ShelflLife]** 列を右クリックし、 **[削除]** をクリックして、この列をテーブルから削除します。  
   
-3.  画面の下部にある**エラー一覧**ペインには、次のような警告およびエラーが直ちに表示されます。  
+3.  画面の下部にある **エラー一覧** ペインには、次のような警告およびエラーが直ちに表示されます。  
   
 **警告 SQL71502:関数: [dbo].[GetProductsBySupplier] にはオブジェクトに対して未解決の参照があります。オブジェクトが存在しないか、または次のようなオブジェクトを参照しているために参照があいまいになっています: [dbo].[Product].[p]::[ShelfLife] or [dbo].[Product].[ShelfLife]。エラー SQL71501:制約のチェック: [dbo].[CK_Product_ShelfLife] にはオブジェクト [dbo].[Product].[ShelfLife] に対して未解決の参照があります。**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85518792"
   
 6.  2 つ目のエラーも同じように、CHECK 制約を削除することによって修正します。  
   
-7.  問題を修正すると、警告およびエラーが**エラー一覧**から直ちに消えます。  
+7.  問題を修正すると、警告およびエラーが **エラー一覧** から直ちに消えます。  
   
 ## <a name="see-also"></a>参照  
 [Transact-SQL エディターを使用したスクリプトの編集と実行](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  

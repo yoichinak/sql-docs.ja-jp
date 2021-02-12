@@ -11,12 +11,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 7e0baa3982fd6b123a4cce29aaada1d78478fd46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5e091085616078a93a65922bfaa2176ae4a6b16b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497806"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076343"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA コンソールのコマンドラインオプション (フル実行 Sql)
 Microsoft では、SSMA アクティビティを実行および制御するための、堅牢な一連のコマンドラインオプションを提供しています。 後続のセクションでは、追加の詳細情報を提供します。  
@@ -163,7 +163,7 @@ SSMA コンソールオプションの構文の概要が表示されます。
   
 SSMA コンソールのコマンドラインオプションの表形式の表示については、 [「付録-1 &#40;](../../ssma/access/appendix-1-accesstosql.md)参照」を参照してください&#41;  
   
-### <a name="next-steps"></a>次の手順  
+### <a name="next-steps"></a>次のステップ  
 次の手順は、プロジェクトの要件によって異なります。  
   
 1.  パスワードの指定、またはパスワードのエクスポート/インポートについては、「パスワードの管理」を参照してください [&#40;&#41;](../../ssma/access/managing-passwords-accesstosql.md)。  
