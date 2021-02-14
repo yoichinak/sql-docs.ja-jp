@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1171740ae04b4fc03609659fa27a711bf36fa6f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d877c75223c42a8dff3a9a4c4615975a136cd6b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775452"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352333"
 ---
 # <a name="xqueries-involving-order"></a>順序に関係する XQuery
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -82,9 +82,9 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 上記のクエリでは、テキストノードのみが取得されます。 代わりに <> 要素全体を返す場合は、 `step` クエリから**string ()** 関数を削除します。  
+ 上記のクエリでは、テキストノードのみが取得されます。 代わりに <> 要素全体を返す場合は、 `step` クエリから **string ()** 関数を削除します。  
   
-### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B: 製品の製造における2番目のワークセンターの場所で使用されているすべての素材とツールを検索する  
+### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 製品の製造における2番目のワークセンターの場所で使用されているすべての素材とツールを検索する  
  次のクエリでは、特定の製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で 2 番目のワーク センターの場所で使用されるツールと材料が取得されます。  
   
 ```sql
@@ -137,7 +137,7 @@ where ProductModelID=7
 </Location>  
 ```  
   
-### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C: 製品カタログから最初の2つの製品機能の説明を取得する  
+### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 製品カタログから最初の2つの製品機能の説明を取得する  
  特定の製品モデルの場合、クエリは、製品モデルカタログの <> 要素から最初の2つの機能の説明を取得し `Features` ます。  
   
 ```sql
@@ -181,8 +181,8 @@ where ProductModelID=19
 </ProductModel>   
 ```  
   
-### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D: 製品の製造プロセスの最初のワークセンターの場所で使用されている最初の2つのツールを検索します。  
- 製品モデルの場合、このクエリは、製造プロセスのワークセンターの場所の順序で最初のワークセンターの場所で使用される最初の2つのツールを返します。 このクエリは、 **Production モデル**テーブルの**命令**列に格納されている製造手順に対して指定されます。  
+### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. 製品の製造プロセスの最初のワークセンターの場所で使用されている最初の2つのツールを検索します。  
+ 製品モデルの場合、このクエリは、製造プロセスのワークセンターの場所の順序で最初のワークセンターの場所で使用される最初の2つのツールを返します。 このクエリは、 **Production モデル** テーブルの **命令** 列に格納されている製造手順に対して指定されます。  
   
 ```sql
 SELECT Instructions.query('  
@@ -246,7 +246,7 @@ where ProductModelID=7
 </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML 構築 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  

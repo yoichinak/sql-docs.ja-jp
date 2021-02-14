@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ec38d7eeed89d03bab4ebd92446517542e2e51a0
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: d706b9ef0ed5d95c411f00d426a8b9daf1415074
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596999"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340031"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks サンプルデータベース
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "98596999"
 
 サンプルの詳細については、 [GitHub リポジトリのサンプル](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases)を参照してください。 
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019) または [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) または [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
@@ -45,10 +45,10 @@ ms.locfileid: "98596999"
 |[AdventureWorks2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)|[AdventureWorksDW2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak)|[AdventureWorksLT2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak)|
 |[AdventureWorks2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)|[AdventureWorksDW2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)|[AdventureWorksLT2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)|
 |[AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak)|[AdventureWorksDW2016](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak)|[AdventureWorksLT2016](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2016.bak)|
-|[AdventureWorks2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| N/A |
+|[AdventureWorks2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| 該当なし |
 |[AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2014.bak)|[AdventureWorksDW2014](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2014.bak)|[AdventureWorksLT2014](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2014.bak)|
 |[AdventureWorks2012](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2012.bak)|[AdventureWorksDW2012](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2012.bak)|[AdventureWorksLT2012](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2012.bak)|
-|[AdventureWorks2008R2](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | N/A |
+|[AdventureWorks2008R2](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | 該当なし |
 
 その他のファイルは、GitHub で直接見つけることができます。 
 
@@ -202,7 +202,7 @@ SQL Server から Azure SQL Database にサンプルデータベースを配置�
 
 スクリプトの使用に関する追加情報については、 [GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)を参照してください。 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 サンプルデータベースを復元したら、次のチュートリアルを使用して SQL Server を開始します。 
 

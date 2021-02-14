@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1bb83bdbe463efb5ed93364cbe643f87be988cc6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 094c5a704355f0d8998851278b5ea7f533eb28f4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257659"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272403"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>行の削除 (Excel 用 MDS アドイン)
 
@@ -27,7 +27,7 @@ ms.locfileid: "92257659"
 > [!NOTE]  
 >  管理者は、削除したメンバーを再アクティブ化できます。 詳細については、「[メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../../master-data-services/reactivate-a-member-or-collection-master-data-services.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  

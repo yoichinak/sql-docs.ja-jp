@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd33b2c0496289e3a94e2a1b9ab9644dd178762e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b832484a1edd7177617cdd9ad6de05b15b603ba2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87106994"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341894"
 ---
 # <a name="functions-on-string-values---lower-case"></a>文字列値に使用する関数 - lower-case
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  小文字関数は、 *$arg*内の各文字をそれと等価な小文字に変換します。 Unicode コードポイントの Microsoft Windows バイナリケース変換では、文字を小文字に変換する方法を指定します。 この標準は、Unicode コードポイント標準のマッピングと同じではありません。  
+  小文字関数は、 *$arg* 内の各文字をそれと等価な小文字に変換します。 Unicode コードポイントの Microsoft Windows バイナリケース変換では、文字を小文字に変換する方法を指定します。 この標準は、Unicode コードポイント標準のマッピングと同じではありません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,8 +41,8 @@ fn:lower-case($arg as xs:string?) as xs:string
 |-|-|
 |*$arg*|小文字に変換する文字列値。|  
   
-## <a name="remarks"></a>注釈  
- *$Arg*の値が空の場合は、長さ0の文字列が返されます。  
+## <a name="remarks"></a>Remarks  
+ *$Arg* の値が空の場合は、長さ0の文字列が返されます。  
   
 ## <a name="examples"></a>例  
   

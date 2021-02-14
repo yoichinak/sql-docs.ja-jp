@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 74893d2d64a6de182206313a3d227c3a7db2f1de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e863605632b82b18f0dbe824fd45adbeaf22274
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456754"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353768"
 ---
 # <a name="require-attribute-values-master-data-services"></a>属性値を要求する (マスター データ サービス)
 
@@ -30,7 +30,7 @@ ms.locfileid: "88456754"
 > [!NOTE]  
 >  ドメイン ベースの属性値がないメンバーは、それらのリレーションシップに基づく派生階層に表示されません。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
@@ -57,7 +57,7 @@ ms.locfileid: "88456754"
   
 9. **Then** ブロックの下で **[追加]** をクリックします。 パネルが表示されます。  
   
-10. **[演算子]** ボックスの一覧から、 **必要なアクション**を選択します。  
+10. **[演算子]** ボックスの一覧から、 **必要なアクション** を選択します。  
   
 11. **[属性]** ボックスの一覧から、属性を選択します。  
   

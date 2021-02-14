@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9a6c606cf05189d7845db6615add2365efb90c5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f550a109d5271a216614d0566ed6f3a4d87be056
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88342428"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336295"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services) の多対多リレーションシップを表示する
 
@@ -29,7 +29,7 @@ ms.locfileid: "88342428"
   
  ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
   
- 上の例では、マッピング エンティティ **ClassRegistration** に指定された、 **Employee** エンティティと **TrainingClass**エンティティ間に M2M リレーションシップがあります。 1 人の従業員は、複数クラスの受講者として登録できます。また、各クラスには、複数の受講者を含めることができます。  
+ 上の例では、マッピング エンティティ **ClassRegistration** に指定された、 **Employee** エンティティと **TrainingClass** エンティティ間に M2M リレーションシップがあります。 1 人の従業員は、複数クラスの受講者として登録できます。また、各クラスには、複数の受講者を含めることができます。  
   
  以前は、派生階層は M2M リレーションシップをモデリングできませんでした。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]以降、派生階層を作成できるようになり、受講者をクラス別に表示する、リレーションシップを反転する、受講者別にグループ化されたクラスを表示するなどの操作を実行できるようになりました。  
   

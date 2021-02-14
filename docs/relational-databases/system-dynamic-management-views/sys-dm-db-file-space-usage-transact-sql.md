@@ -21,12 +21,12 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5b078e8c93918cc15d547e01d45ab0a3f97adae
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 495e70e426f4a015c1d789526e4ad7292e2503e4
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236849"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343127"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "99236849"
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
 |distribution_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分布に関連付けられている一意の数値 id です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ページ数は常にエクステント レベルのものです。 したがって、ページ数の値は常に 8 の倍数になります。 グローバルアロケーションマップ (GAM) と共有グローバルアロケーションマップ (SGAM) のアロケーションページを含むエクステントには、単一エクステントが割り当てられます。 これらは、前に説明したページ数には含まれていません。 ページとエクステントの詳細については、「 [ページとエクステントのアーキテクチャガイド](../../relational-databases/pages-and-extents-architecture-guide.md)」を参照してください。 
   
  現在のバージョンストアのコンテンツは [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)にあります。 バージョンストアページは、グローバルリソースであるため、セッションおよびタスクレベルではなく、ファイルレベルで追跡されます。 セッションでバージョンを生成することもできますが、セッションが終了するときバージョンを削除することはできません。 バージョンストアのクリーンアップでは、特定のバージョンへのアクセスを必要とする実行時間が最も長いトランザクションを考慮する必要があります。 バージョンストアのクリーンアップに関連する実行時間が最も長いトランザクションを検出するには、 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)の elapsed_time_seconds 列を表示します。  
@@ -85,16 +85,16 @@ ms.locfileid: "99236849"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|差出人|終了|リレーションシップ|  
+|ソース|終了|Relationship|  
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id、file_id|sys.dm_io_virtual_file_stats.database_id、file_id|一対一|  
   
 ## <a name="permissions"></a>アクセス許可
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、 [サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) アカウントまたは [Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>tempdb の使用可能な空き領域の確認  
  次のクエリは、 **tempdb** 内のすべてのデータファイルで使用可能な空きページと合計空き領域 (mb) の合計数を返します。  

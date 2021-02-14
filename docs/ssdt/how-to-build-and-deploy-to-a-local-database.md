@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d7503049f0ea68b38206764eb3163a5a80a0b2d7
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 598c75f5ef502d1679bd8ed7f17cb44c0f536abc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518922"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063537"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>方法:ローカル データベースでビルドおよび配置を行う
 
@@ -29,7 +29,7 @@ Microsoft SQL Server 2012 では、ローカルのオンデマンド サーバ�
   
 ### <a name="to-use-the-local-database"></a>ローカル データベースを使用するには  
   
-1.  **SQL Server オブジェクト エクスプローラー**の **SQL Server** ノードの下に、 **[ローカル]** という新しいノードが表示されます。 これは、ローカルのデータベース インスタンスです。  
+1.  **SQL Server オブジェクト エクスプローラー** の **SQL Server** ノードの下に、 **[ローカル]** という新しいノードが表示されます。 これは、ローカルのデータベース インスタンスです。  
   
 2.  **[ローカル]** ノードおよび **[データベース]** ノードを展開します。 TradeDev プロジェクトと同じ名前のデータベースが表示されます。 このデータベースの下のノードを展開します。 **[データ ツール操作]** ウィンドウには、 **[ローカル]** ノードのいずれかのデータベースで進行中の展開/インポート操作の状況が表示されます。 前の手順で作成したテーブルやエンティティが含まれていないことに注意してください。  
   
@@ -47,13 +47,13 @@ Microsoft SQL Server 2012 では、ローカルのオンデマンド サーバ�
     select * from dbo.GetProductsBySupplier(1)  
     ```  
   
-7.  **メッセージ** ペインに "(0 行処理されました)" というメッセージが表示され、**結果**ペインには行が返されません。 これは、実データが格納されている接続されたデータベースではなく、ローカル データベースに対してクエリを実行しているためです。  
+7.  **メッセージ** ペインに "(0 行処理されました)" というメッセージが表示され、**結果** ペインには行が返されません。 これは、実データが格納されている接続されたデータベースではなく、ローカル データベースに対してクエリを実行しているためです。  
   
     このことは、ローカルの **TradeDev** データベースの下にある **Products** テーブルを右クリックし、 **[データの表示]** をクリックすると確認できます。 テーブルが空であることがわかります。  
   
 ### <a name="to-replicate-real-data-to-the-local-database"></a>実データをローカル データベースにレプリケートするには  
   
-1.  **SQL Server オブジェクト エクスプローラー**で、接続されている SQL Server インスタンスを展開し、**TradeDev** データベースを探します。  
+1.  **SQL Server オブジェクト エクスプローラー** で、接続されている SQL Server インスタンスを展開し、**TradeDev** データベースを探します。  
   
     **Suppliers** テーブルを右クリックして、 **[データの表示]** をクリックします。  
   
@@ -75,5 +75,5 @@ Microsoft SQL Server 2012 では、ローカルのオンデマンド サーバ�
     select * from dbo.GetProductsBySupplier(1)  
     ```  
   
-9. Transact\-SQL エディター ペインの下にある**結果**ペインに、`Products` テーブルの Apples 行および Potato Chips 行が返されています。  
+9. Transact\-SQL エディター ペインの下にある **結果** ペインに、`Products` テーブルの Apples 行および Potato Chips 行が返されています。  
   

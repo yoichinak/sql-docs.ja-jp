@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: ef90d43021349b0327ff96ebdec85b6a8483e43c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f7c407416b8181864e7cc2fecdc4c95f97ab03cc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99187994"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355249"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` 外部スクリプトによって使用される入力パラメーターの値の一覧です。  
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
 > クエリツリーは SQL machine learning によって制御され、ユーザーはクエリに対して任意の操作を実行できません。
@@ -189,7 +189,7 @@ sp_execute_external_script
 > [!NOTE]  
 > ストリーミングと並列処理は、Enterprise Edition でのみサポートされています。 標準エディションのクエリには、エラーを発生させることなくパラメーターを含めることができますが、パラメーターが無効になり、R スクリプトが1つのプロセスで実行されます。  
   
-## <a name="restrictions"></a>制限  
+## <a name="restrictions"></a>制約  
 
 ### <a name="data-types"></a>データ型
 
@@ -225,7 +225,7 @@ Float 値 (たとえば、、 `+Inf` 、 `-Inf` `NaN` ) は、両方の言語で
 
 **すべての外部スクリプトデータベースの実行** 権限が必要です。  
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 このセクションでは、を使用して、このストアドプロシージャを使用して R または Python スクリプトを実行する方法の例について説明 [!INCLUDE[tsql](../../includes/tsql-md.md)] します。
 

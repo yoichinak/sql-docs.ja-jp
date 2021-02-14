@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 8036caae71fb58956bd8a4b50d6908fa644ef40c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6bc6887ad63b56330eab09d20f0b6fa86de4d3d5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207507"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341379"
 ---
 # <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "99207507"
 |**network_subnet_ip**|**nvarchar (48)**|IP アドレスが属するサブネットを指定するネットワークサブネットの IP アドレス。|  
 |**network_subnet_prefix_length**|**int**|IP アドレスが属するサブネットのネットワーク サブネット プレフィックス長。|  
 |**network_subnet_ipv4_mask**|**nvarchar (45)**|IP アドレスが属するサブネットのネットワークサブネットマスク。 [CREATE AVAILABILITY group](../../t-sql/statements/create-availability-group-transact-sql.md)または [ALTER availability GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)ステートメントの WITH dhcp 句で dhcp <network_subnet_option> オプションを指定するには、 **network_subnet_ipv4_mask** し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。<br /><br /> NULL = IPv6 サブネット|  
-|**state**|**tinyint**|WSFC のクラスターからの IP リソースのオンラインまたはオフライン状態。次のいずれかになります。<br /><br /> 1 = オンライン。 IP リソースはオンラインです。<br /><br /> 0 = オフライン。 IP リソースはオフラインです。<br /><br /> 2 = オンライン待ち。 IP リソースはオフラインですが、オンラインになっています。<br /><br /> 3 = 失敗しました。 IP リソースがオンラインになっていましたが、失敗しました。|  
+|**状態**|**tinyint**|WSFC のクラスターからの IP リソースのオンラインまたはオフライン状態。次のいずれかになります。<br /><br /> 1 = オンライン。 IP リソースはオンラインです。<br /><br /> 0 = オフライン。 IP リソースはオフラインです。<br /><br /> 2 = オンライン待ち。 IP リソースはオフラインですが、オンラインになっています。<br /><br /> 3 = 失敗しました。 IP リソースがオンラインになっていましたが、失敗しました。|  
 |**state_desc**|**nvarchar(60)**|**状態** の説明。次のいずれかになります。<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   
 ## <a name="security"></a>セキュリティ  

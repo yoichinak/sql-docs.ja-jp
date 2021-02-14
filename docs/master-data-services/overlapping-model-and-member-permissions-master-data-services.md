@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d3de498043b5be0e6ad71a9e32b5abbc6db7ab21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3227ef69915e606f514b5ecf36e5f1656db733e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88343228"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340286"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>モデル権限とメンバー権限の重複 (Master Data Services)
 
@@ -32,11 +32,11 @@ ms.locfileid: "88343228"
   
 -   **拒否** が他のどの権限をオーバーライドします。  
   
--   モデル レベルの**管理者** 権限はすべての権限をオーバーライドし、サブ レベルで ALL (CRUD) アクセス権限に変更されます。  
+-   モデル レベルの **管理者** 権限はすべての権限をオーバーライドし、サブ レベルで ALL (CRUD) アクセス権限に変更されます。  
   
 -   有効なアクセス権限は、メンバーと属性のアクセス権限と交差します。  
   
-     たとえば、メンバーの権限に **作成** と **更新**が含まれる場合、属性の権限は **更新**になります。 有効な権限は **更新**です。  
+     たとえば、メンバーの権限に **作成** と **更新** が含まれる場合、属性の権限は **更新** になります。 有効な権限は **更新** です。  
   
  次の図は、属性の権限がメンバーの権限とは異なる場合に、個々の属性値に対して有効な権限を示しています。  
   

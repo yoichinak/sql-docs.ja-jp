@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0b96fbd075ed2b2f79ca8b92d09e2d2782d77dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4824cd52001305a05c00e197e8c4140598267d4f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922325"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349340"
 ---
 # <a name="comparison-expressions-xquery"></a>比較式 (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -140,7 +140,7 @@ WHERE ContactID=1
   
  値の比較演算子は、次の表で定義されています。  
   
-|演算子|説明|  
+|演算子|[説明]|  
 |--------------|-----------------|  
 |eq|等しい|  
 |ne|等しくない|  
@@ -168,7 +168,7 @@ WHERE ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
--   `declare namespace`後でクエリで使用される名前空間プレフィックスを定義します。  
+-   `declare namespace` 後でクエリで使用される名前空間プレフィックスを定義します。  
   
 -   \<Size>要素の値は、指定された atomic 値 "small" と比較されます。  
   
@@ -188,7 +188,7 @@ WHERE ProductModelID=19
  値の比較でのデータ型の上位変換の規則は、一般的な比較でのデータ型の上位変換の規則と同じです。 また、は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一般的な比較時に使用される値の比較時に、型指定されていない値に対して同じキャスト規則を使用します。 それに対して、XQuery 仕様の規則では、値の比較時に型指定されていない値は xs:string に常にキャストされます。  
   
 ## <a name="node-comparison-operator"></a>ノードの比較演算子  
- ノード比較演算子**は**で、ノード型にのみ適用されます。 返される結果は、オペランドとして渡される2つのノードが、ソースドキュメント内の同じノードを表すかどうかを示します。 この演算子は、2つのオペランドが同じノードである場合に True を返します。 それ以外の場合は False を返します。  
+ ノード比較演算子 **は** で、ノード型にのみ適用されます。 返される結果は、オペランドとして渡される2つのノードが、ソースドキュメント内の同じノードを表すかどうかを示します。 この演算子は、2つのオペランドが同じノードである場合に True を返します。 それ以外の場合は False を返します。  
   
  次のクエリでは、ワークセンターの場所10が、特定の製品モデルの製造プロセスの最初の場所であるかどうかを確認します。  
   
@@ -221,9 +221,9 @@ ProductModelID       Result
   
  ドキュメントの順序に基づいて、次のような比較が行われます。  
   
--   `<<`: ドキュメント順で、オペランド**1**が**オペランド 2**の前に配置されます。  
+-   `<<` : ドキュメント順で、オペランド **1** が **オペランド 2** の前に配置されます。  
   
--   `>>`: ドキュメント順で、**オペランド 1**が**オペランド 2**に従います。  
+-   `>>` : ドキュメント順で、 **オペランド 1** が **オペランド 2** に従います。  
   
  次のクエリでは、製品カタログの説明に、 \<Warranty> \<Maintenance> 特定の製品のドキュメント順序で要素の前に要素が表示されている場合に True が返されます。  
   
@@ -241,9 +241,9 @@ where ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
--   Query では、 **xml**データ型の**value ()** メソッドが使用されます。  
+-   Query では、 **xml** データ型の **value ()** メソッドが使用されます。  
   
--   クエリのブール型の結果が**nvarchar (10)** に変換され、が返されます。  
+-   クエリのブール型の結果が **nvarchar (10)** に変換され、が返されます。  
   
 -   このクエリは True を返します。  
   

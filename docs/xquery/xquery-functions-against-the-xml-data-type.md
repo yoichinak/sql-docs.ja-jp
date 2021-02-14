@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e92148b5a85ced147599eafe09156cf41c47021
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 82f3eae7098b3ac5e86355aed1e13bdd5c137015
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037015"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352813"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml データ型に対する XQuery 関数
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "92037015"
   
  XQuery 関数は名前空間に属し http://www.w3.org/2004/07/xpath-functions ます。 W3C 仕様では、これらの関数を表すために "fn:" という名前空間プレフィックスを使用しています。 この関数を使用するときに、"fn:" 名前空間プレフィックスを明示的に指定する必要はありません。 このため、読みやすくするために、このドキュメントでは、名前空間プレフィックスが一般に使用されていません。  
   
- 次の表に、 **xml**データ型に対してサポートされている XQuery 関数を示します。  
+ 次の表に、 **xml** データ型に対してサポートされている XQuery 関数を示します。  
   
 |カテゴリ|関数名|  
 |--------------|-------------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "92037015"
 ||[contains](../xquery/functions-on-string-values-contains.md)|  
 ||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[XQuery&#41;&#40;小文字関数 ](../xquery/functions-on-string-values-lower-case.md)|  
-||[string-length](../xquery/functions-on-string-values-string-length.md)|  
+||[文字列-長さ](../xquery/functions-on-string-values-string-length.md)|  
 ||[&#40;XQuery&#41;の大文字関数 ](../xquery/functions-on-string-values-upper-case.md)|  
 |ブール値に対する関数|[not](../xquery/functions-on-boolean-values-not-function.md)|  
 |[ノードの関数]()|[number](../xquery/functions-on-nodes-number.md)|  

@@ -21,12 +21,12 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3d13344aef1c0a85b9893a9a36f0222253468b9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5fdbf16415df10f596ae9cf636d943fff3c3c4ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99144773"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347623"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "99144773"
 |processor_group|**smallint**|このスレッドに割り当てられているプロセッサ グループ ID が格納されます。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ワーカーの状態が RUNNING で、非プリエンプティブに実行されている場合、そのワーカーのアドレスは、sys.dm_os_schedulers 内の active_worker_address と一致します。  
   
  イベントで待機中のワーカーがシグナルを受け取ると、そのワーカーは実行可能キューの先頭に置かれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこれが 1,000 回続けて発生すると、ワーカーはキューの末尾に置かれます。 ワーカーがキューの末尾に移動すると、パフォーマンスに影響が生じる場合があります。  
@@ -86,7 +86,7 @@ ms.locfileid: "99144773"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルと Basic レベルでは、 `Server Admin` ロールのメンバーシップ、またはアカウントが必要です `Azure Active Directory admin` 。   
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のクエリを使用すると、SUSPENDED または RUNNABLE 状態でのワーカーの実行時間を調べることができます。  
   
 ```sql

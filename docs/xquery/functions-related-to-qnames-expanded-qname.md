@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1a59104b8becec2edd8b4b15c28e13e19011a4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 704cac94b48fe172eaa6a972cdd6c49bad1601fe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036825"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344930"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames に関係する関数 - expanded-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  *$ParamURI*で指定された名前空間 URI と *$paramLocal*で指定されたローカル名を使用して、xs: QName 型の値を返します。 *$ParamURI*が空の文字列または空のシーケンスの場合は、名前空間を表しません。  
+  *$ParamURI* で指定された名前空間 URI と *$paramLocal* で指定されたローカル名を使用して、xs: QName 型の値を返します。 *$ParamURI* が空の文字列または空のシーケンスの場合は、名前空間を表しません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  QName のローカル名部分です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の例は、 **拡張 QName ()** 関数に適用されます。  
   
 -   指定された *$paramLocal* 値が Xs: NCName 型の正しい構文形式でない場合、空のシーケンスが返され、動的なエラーを表します。  
@@ -50,7 +50,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   既存の QName 型の値を変更または比較することができます。 たとえば、は、 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` 要素の値 <`e`> を、展開された **qname ()** 関数によって返された qname と比較します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. QName 型ノードの値を置換する  
@@ -133,7 +133,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. 拡張 QName () 関数を使用する場合の制限事項に対処する  
- **拡張 QName**関数は、XML の構築では使用できません。 次の例を使って説明します。 この制限を回避するために、この例では最初にノードを挿入してから、そのノードを変更しています。  
+ **拡張 QName** 関数は、XML の構築では使用できません。 次の例を使って説明します。 この制限を回避するために、この例では最初にノードを挿入してから、そのノードを変更しています。  
   
 ```  
 -- if exists drop the table T  

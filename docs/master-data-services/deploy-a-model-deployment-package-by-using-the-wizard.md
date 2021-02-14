@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 86170829ee1ae3f5116497f8435bf207edb3d5a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cce8c342c17881a4d1c52af468b6e2c4d4f0b7d3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344458"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350205"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>ウィザードを使用したモデルの配置パッケージの展開
 
@@ -30,7 +30,7 @@ ms.locfileid: "88344458"
 > [!IMPORTANT]  
 >  パッケージは、そのパッケージが作成されたエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にのみ配置できます。 つまり、 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で作成されたパッケージを [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]に配置することはできません。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   ターゲット **環境の** [システム管理] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 機能領域にアクセスする権限が必要です。  
@@ -61,7 +61,7 @@ ms.locfileid: "88344458"
   
  **注:**  
   
--   パッケージ内のサブスクリプション ビューの名前が、既存のモデル内のサブスクリプション ビューの名前と同じである場合、" **配置機能サブスクリプション ビューが名前変更されました**" という警告が表示されます。 さらに、このビューは *modelname.subscriptionviewname*として作成されます。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
+-   パッケージ内のサブスクリプション ビューの名前が、既存のモデル内のサブスクリプション ビューの名前と同じである場合、" **配置機能サブスクリプション ビューが名前変更されました**" という警告が表示されます。 さらに、このビューは *modelname.subscriptionviewname* として作成されます。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
   
 -   配置プロセスには、次の 4 つの手順があります。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88344458"
      モデルを更新する場合、最初の 3 つの手順のいずれかでプロセスが失敗すると、その手順から先のプロセスは続行されません。ただし、既に行われた変更はロールバックされません。  
   
 ## <a name="next-steps"></a>次の手順  
- ファイル属性、ユーザーとグループの権限は、モデル配置パッケージに含まれていません。 モデルを配置した後、これらを手動で更新する必要があります。 詳細については次を参照してください:  
+ ファイル属性、ユーザーとグループの権限は、モデル配置パッケージに含まれていません。 モデルを配置した後、これらを手動で更新する必要があります。 詳細については、次を参照してください:  
   
 -   [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

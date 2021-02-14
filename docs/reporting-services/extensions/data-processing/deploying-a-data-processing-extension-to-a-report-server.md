@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a43b94a4ef45b210ea2f54b0401962e79ca9a489
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 1aadbda9a8842777b395612c59d753d3afb875ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529584"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060957"
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>データ処理拡張機能のレポート サーバーへの配置
   レポート サーバーは、表示レポートのデータを取得および処理するためにデータ処理拡張機能を使用します。 データ処理拡張機能のアセンブリは、プライベート アセンブリとしてレポート サーバーに配置してください。 また、レポート サーバーの構成ファイル RSReportServer.config にエントリを作成する必要もあります。  
@@ -49,7 +49,7 @@ ms.locfileid: "84529584"
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, MyExtensionAssembly" />  
     ```  
   
-     **Name** の値は、データ処理拡張機能の一意の名前です。 **Type** の値は、<xref:Microsoft.ReportingServices.Interfaces.IExtension> インターフェイスおよび <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間のエントリを含むコンマ区切りの一覧であり、その後にアセンブリの名前が続きます (.dll ファイル拡張子は含まない)。 既定では、データ処理拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには、 **Extension** 要素に **Visible** 属性を追加して、 **false**に設定します。  
+     **Name** の値は、データ処理拡張機能の一意の名前です。 **Type** の値は、<xref:Microsoft.ReportingServices.Interfaces.IExtension> インターフェイスおよび <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間のエントリを含むコンマ区切りの一覧であり、その後にアセンブリの名前が続きます (.dll ファイル拡張子は含まない)。 既定では、データ処理拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには、 **Extension** 要素に **Visible** 属性を追加して、 **false** に設定します。  
   
 5.  最後に、拡張機能の **FullTrust** アクセス許可を付与するカスタム アセンブリのコード グループを追加します。 これを行うには、コード グループを rssrvpolicy.config ファイルに追加します。既定では、このファイルは %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer にあります。 このコード グループは、次のようになります。  
   

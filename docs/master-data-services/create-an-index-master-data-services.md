@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 48d78cffb116996848035e3675e707994226f080
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cad316eb2c1bd4925e72839ede2e29bccb825118
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461830"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351888"
 ---
 # <a name="create-an-index-master-data-services"></a>インデックスを作成する (マスター データ サービス)
 
@@ -24,7 +24,7 @@ ms.locfileid: "88461830"
 
   頻繁にクエリを実行する属性の一覧にカスタム インデックスを作成して、クエリのパフォーマンスを高めます。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。 詳細については、「 [機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
@@ -54,7 +54,7 @@ ms.locfileid: "88461830"
 |列名|説明|  
 |-----------------|-----------------|  
 |Status|インデックスの状態。<br /><br /> [ **保存**] をクリックすると、 ![更新中の状態の](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン") 画像を示すアイコンが表示され、インデックスが更新中であることを示します。<br /><br /> インデックスの作成中または編集中にエラーが発生した場合は、 ![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] ステータスイメージのアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン") が表示されます。|  
-|名前|インデックス名。|  
+|name|インデックス名。|  
 |[Is Unique]|インデックスが一意かどうかを示します。|  
 |[On Attributes] (属性)|インデックスが定義されている属性の表示名を示します。|  
   

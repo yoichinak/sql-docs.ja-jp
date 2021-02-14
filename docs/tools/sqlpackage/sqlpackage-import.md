@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: 0e9acab737de04b002debf9d8c1b230a5cb01b14
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: cecc6de89a9e8f82a64942acb08af7ddee48c5be
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577914"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081463"
 ---
 # <a name="sqlpackage-import-parameters-and-properties"></a>SqlPackage Import のパラメーターとプロパティ
 SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.bacpac ファイル) のスキーマとテーブル データが、SQL Server または Azure SQL Database の新規または空のデータベースにインポートされます。 既存のデータベースへのインポート操作時に、ターゲット データベースにユーザー定義のスキーマ オブジェクトを含めることはできません。  

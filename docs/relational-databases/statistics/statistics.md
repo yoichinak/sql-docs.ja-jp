@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89ebfbb70c7c50729ebbfb5de6a8551e00927bc6
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 521904030d97213770d4a2310b51eaadc37d4e5d
+ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99233240"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478587"
 ---
 # <a name="statistics"></a>統計
 
@@ -108,22 +108,38 @@ ORDER BY s.name;
 ```  
   
 #### <a name="auto_update_statistics-option"></a>AUTO_UPDATE_STATISTICS オプション  
- 統計の自動更新オプション [AUTO_UPDATE_STATISTICS ](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) がオンの場合、古くなっている可能性がある統計がクエリ オプティマイザーによって判断され、それらがクエリで使用されると更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。  
+ 統計の自動更新オプション [AUTO_UPDATE_STATISTICS ](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) がオンの場合、古くなっている可能性がある統計がクエリ オプティマイザーによって判断され、それらがクエリで使用されると更新されます。 このアクションは、統計の再コンパイルとも呼ばれます。 挿入、更新、削除、またはマージ操作による変更によって、テーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生した行の変更の数をカウントし、その行の変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 しきい値はテーブルのカーディナリティに基づきます。これは、テーブルまたはインデックス付きビューに含まれる行数として定義できます。  
   
-* [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] まで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は変更された行の割合に基づくしきい値を使用します。 これには、テーブル内の行数は考慮されません。 しきい値は次のようになります。
-    * 統計情報が評価された時点でテーブルのカーディナリティが 500 以下の場合、500 回変更されるたびに更新されます。
-    * 統計情報が評価された時点でテーブルのカーディナリティが 500 よりも大きい場合、500 プラス 20% の数の変更があるたびに更新されます。
+- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] までは、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] によって、統計が評価された時点でのテーブルまたはインデックス付きビュー内の行数に基づく再コンパイルのしきい値が使用されます。 しきい値は、テーブルが一時的か永続的かによって異なります。
 
-* [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。 これは、1,000 と現在のテーブルのカーディナリティの積の平方根として計算されます。 たとえば、テーブルに 200 万行含まれている場合、計算は sqrt(1000 * 2000000) = 44721.359 となります。 この変更により、大規模なテーブルの統計がより頻繁に更新されます。 ただし、データベースの互換性レベルが 130 未満の場合、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のしきい値が適用されます。 
+  |テーブルの種類です。|テーブルのカーディナリティ (*n*)|再コンパイルのしきい値 (# 変更数)|
+  |-----------|-----------|-----------|
+  |一時|*n* < 6|6|
+  |一時|6 <= *n* <= 500|500|
+  |永続的|*n* <= 500|500|
+  |一時的または永続的|*n* > 500|500 + (0.20 * *n*)|
+  
+  たとえば、テーブルに 2 万行が含まれている場合、計算は `500 + (0.2 * 20,000) = 4,500` となり、統計は 4,500 回の変更ごとに更新されます。
+
+- [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降で、[データベース互換レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 の場合は、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] により、統計が評価された時点でのテーブルのカーディナリティに基づいて調整される、減少する動的な統計の再コンパイルのしきい値も使用されます。 この変更により、大規模なテーブルの統計がより頻繁に更新されます。 ただし、データベースの互換性レベルが 130 未満の場合、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のしきい値が適用されます。
+
+  |テーブルの種類です。|テーブルのカーディナリティ (*n*)|再コンパイルのしきい値 (# 変更数)|
+  |-----------|-----------|-----------|
+  |一時|*n* < 6|6|
+  |一時|6 <= *n* <= 500|500|
+  |永続的|*n* <= 500|500|
+  |一時的または永続的|500 <= *n* <= 25,000|500 + (0.20 * *n*)|
+  |一時的または永続的|*n* > 25,000|SQRT(1,000 * *n*)|
+
+  たとえば、テーブルに 200 万行が含まれている場合、計算は `SQRT(1,000 * 2,000,000) = 44,721` となり、統計は 44,721 回の変更ごとに更新されます。
 
 > [!IMPORTANT]
 > [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降の[データベース互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 以下では、[トレース フラグ 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で低下した動的統計更新しきい値が使用されるようにします。
 
-[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] より前の環境でトレース フラグ 2371 を有効にするには、次のガイダンスを使用できます。
+すべてのシナリオで推奨されますが、トレース フラグを有効にすることは省略可能です。 ただし、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] より前の環境でトレース フラグ 2371 を有効にするには、次のガイダンスを使用できます。
 
- - 古い統計が原因でパフォーマンスの問題が発生していない場合は、このトレース フラグを有効にする必要はありません。
- - SAP システムを使用している場合は、このトレース フラグを有効にします。  その他の情報については、こちらの[ブログ](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371)を参照してください。
- - 現在の自動更新が十分頻繁にトリガーされないため、夜間ジョブを使用して統計を更新する必要がある場合は、トレース フラグ 2371 を有効にしてしきい値を小さくすることを検討します。
+ - SAP システムを使用している場合は、このトレース フラグを有効にします。 その他の情報については、こちらの[ブログ](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371)を参照してください。
+ - 現在の自動更新が十分頻繁にトリガーされないため、夜間ジョブを使用して統計を更新する必要がある場合は、トレース フラグ 2371 を有効にして、しきい値をテーブルのカーディナリティに合わせることを検討してください。
   
 クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリをコンパイルする前は、クエリ オプティマイザーで、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。  
   
@@ -131,9 +147,6 @@ AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成
  
 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) を使用すると、テーブルで変更された行数を正確に追跡し、統計を手動で更新するかどうかを判断できます。
 
-
-
-  
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
 統計の非同期更新オプション [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 既定では、統計の非同期更新オプションはオフであり、クエリ オプティマイザーによる統計の更新は同期更新になります。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ステートメントを使用して作成された統計に適用されます。  
  
@@ -144,7 +157,7 @@ AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成
 
 * 統計の同期更新では、クエリには常に最新の統計が使用され、コンパイルおよび実行されます。 統計が古い場合、クエリ オプティマイザーでは、統計が更新されるのを待機してからクエリがコンパイルされ、実行されます。 
 
-* 統計の非同期更新では、既存の統計が古い場合でも、既存の統計を使用してクエリがコンパイルされます。 クエリ オプティマイザーは、クエリをコンパイルするときに統計が古い場合、最適ではないクエリ プランを選択する場合があります。 通常、統計はその後すぐに更新されます。 統計の更新の完了後にコンパイルされるクエリには、通常どおりに更新された統計が使用されることでメリットが得られます。   
+* 統計の非同期更新では、既存の統計が古い場合でも、既存の統計を使用してクエリがコンパイルされます。 クエリ オプティマイザーは、クエリをコンパイルするときに統計が古い場合、最適ではないクエリ プランを選択する場合があります。 通常、統計はその後すぐに更新されます。 統計の更新の完了後にコンパイルされるクエリには、更新された統計が使用されることでメリットが得られます。   
 
 テーブルの切り捨てや大部分の行の一括更新を行うなど、データの分布が変わる操作を実行する場合は、同期統計を使用することを検討してください。 操作の完了後に手動で統計を更新していない場合、同期統計を使用すれば、確実に、変更されたデータに対するクエリを実行する前に統計が最新になります。  
   
@@ -157,12 +170,12 @@ AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成
 > [!NOTE]
 > ローカル一時テーブルの統計は、AUTO_UPDATE_STATISTICS_ASYNC オプションに関係なく、常に同期的に更新されます。 グローバル一時テーブルの統計は、ユーザー データベースに対して設定された AUTO_UPDATE_STATISTICS_ASYNC オプションに従って、同期的または非同期的に更新されます。
 
-統計の非同期更新は、バックグラウンド要求によって実行されます。 要求は、更新された統計情報をデータベースに書き込む準備ができた時点で、統計メタデータ オブジェクトに対するスキーマ変更ロックの取得を試みます。 別のセッションが同じオブジェクトに対して既にロックを保持している場合、スキーマ変更ロックを取得できるようになるまで、非同期統計の更新がブロックされます。 同様に、クエリをコンパイルするために統計メタデータ オブジェクトに対するスキーマ安定性ロックを取得する必要があるセッションは、既にスキーマ変更ロックの取得を保持しているか待機している非同期統計更新のバックグラウンド セッションによってブロックされる可能性があります。 したがって、クエリのコンパイルや統計の更新が非常に頻繁に行われるワークロードでは、非同期統計を使用すると、ロックのブロックによる同時実行の問題が起きる可能性が高くなる場合があります。
+統計の非同期更新は、バックグラウンド要求によって実行されます。 要求は、更新された統計情報をデータベースに書き込む準備ができた時点で、統計メタデータ オブジェクトに対するスキーマ変更ロックの取得を試みます。 別のセッションが同じオブジェクトに対して既にロックを保持している場合、スキーマ変更ロックを取得できるようになるまで、非同期統計の更新がブロックされます。 同様に、クエリをコンパイルするために統計メタデータ オブジェクトに対するスキーマ安定性 (Sch-S) ロックを取得する必要があるセッションは、既にスキーマ変更ロックの取得を保持しているか待機している非同期統計更新のバックグラウンド セッションによってブロックされる可能性があります。 したがって、クエリのコンパイルや統計の更新が非常に頻繁に行われるワークロードでは、非同期統計を使用すると、ロックのブロックによる同時実行の問題が起きる可能性が高くなる場合があります。
 
-Azure SQL Database と Azure SQL Managed Instance で ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を有効にすると、統計の非同期更新の使用によって発生する潜在的な同時実行の問題を回避できます。 この構成を有効にすると、他の要求が既存の統計情報を使用してクエリをコンパイルしている間、バックグラウンド要求は優先度の低い別のキューでスキーマ修正 (Sch-M) ロックの取得を待機します。 他のセッションが統計メタデータ オブジェクトのロックを保持しなくなると、バックグラウンド要求はそのスキーマ変更ロックおよび更新統計を取得します。 まれに、バックグラウンド要求が数分のタイムアウト期間内にロックを取得できない場合、非同期統計の更新は中止されます。統計は、別の自動統計更新がトリガーされるか、[手動で更新](update-statistics.md)されるまで更新されません。
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] では、ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を有効にすると、非同期統計の更新を使用して潜在的な同時実行の問題を回避可能です。 この構成を有効にすると、他の要求が既存の統計情報を使用してクエリをコンパイルしている間、バックグラウンド要求では、優先度の低い別のキューでスキーマ修正 (Sch-M) ロックの取得が待機され、更新された統計が保持されます。 他のセッションが統計メタデータ オブジェクトのロックを保持しなくなると、バックグラウンド要求はそのスキーマ変更ロックおよび更新統計を取得します。 まれに、バックグラウンド要求が数分のタイムアウト期間内にロックを取得できない場合、非同期統計の更新は中止されます。統計は、別の自動統計更新がトリガーされるか、[手動で更新](update-statistics.md)されるまで更新されません。
 
 > [!Note]
-> ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY データベース スコープ構成オプションが、Azure SQL Database と Azure SQL Managed Instance で利用できるようになりました。また SQL Server vNext に含まれるようになる予定です。 
+> ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY データベース スコープ構成オプションは、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] で利用できます。また、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に追加される予定です。 
 
 #### <a name="incremental"></a>INCREMENTAL  
  CREATE STATISTICS の INCREMENTAL オプションが ON の場合、作成される統計情報はパーティションごとの統計になります。 OFF の場合、統計ツリーは削除され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって統計が再計算されます。 既定値は OFF です。 この設定は、データベース レベルの INCREMENTAL プロパティをオーバーライドします。 増分統計の作成の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。 パーティションごとの統計を自動的に作成する方法の詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic)」と「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。 

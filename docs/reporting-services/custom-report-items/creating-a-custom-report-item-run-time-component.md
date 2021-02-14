@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0946739b0b0aaefd1e0d6a682f0228dfa98529c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1c6d70bba220624cd43ca1ced80cbe89ba936460
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216986"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061957"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>カスタム レポート アイテムの実行時コンポーネントの作成
   カスタム レポート アイテムの実行時コンポーネントは、任意の CLS 準拠の言語を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コンポーネントとして実装され、実行時にレポート プロセッサによって呼び出されます。 実行時コンポーネントのプロパティをデザイン環境で定義するには、カスタム レポート アイテムの対応するデザイン時コンポーネントを変更します。  
@@ -24,7 +24,7 @@ ms.locfileid: "80216986"
  完全に実装されたカスタム レポート アイテムの例については、「[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
   
 ## <a name="definition-and-instance-objects"></a>定義オブジェクトおよびインスタンス オブジェクト  
- カスタム レポート アイテムを実装する前に、*定義オブジェクト*と*インスタンス オブジェクト*の違いを理解しておくことが重要です。 定義オブジェクトはカスタム レポート アイテムの RDL 表記を提供するのに対し、インスタンス オブジェクトは定義オブジェクトの評価されたバージョンです。 定義オブジェクトは、レポートの各アイテムに 1 つしか存在しません。 定義オブジェクトのプロパティのうち、式が含まれたプロパティにアクセスすると、評価されていない式の文字列を取得します。 インスタンス オブジェクトには定義オブジェクトの評価されたバージョンが含まれるので、インスタンス オブジェクトはアイテムの定義オブジェクトと一対多のリレーションシップを持つことができます。 たとえば、詳細行に <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> を含む <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> データ領域がレポートにある場合、定義オブジェクトは 1 つしか存在しませんが、インスタンス オブジェクトはデータ領域の各行に存在します。  
+ カスタム レポート アイテムを実装する前に、*定義オブジェクト* と *インスタンス オブジェクト* の違いを理解しておくことが重要です。 定義オブジェクトはカスタム レポート アイテムの RDL 表記を提供するのに対し、インスタンス オブジェクトは定義オブジェクトの評価されたバージョンです。 定義オブジェクトは、レポートの各アイテムに 1 つしか存在しません。 定義オブジェクトのプロパティのうち、式が含まれたプロパティにアクセスすると、評価されていない式の文字列を取得します。 インスタンス オブジェクトには定義オブジェクトの評価されたバージョンが含まれるので、インスタンス オブジェクトはアイテムの定義オブジェクトと一対多のリレーションシップを持つことができます。 たとえば、詳細行に <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> を含む <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> データ領域がレポートにある場合、定義オブジェクトは 1 つしか存在しませんが、インスタンス オブジェクトはデータ領域の各行に存在します。  
   
 ## <a name="implementing-the-icustomreportitem-interface"></a>ICustomReportItem インターフェイスの実装  
  **CustomReportItem** 実行時コンポーネントを作成するには、<xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> インターフェイスを実装する必要があります。このインターフェイスは Microsoft.ReportingServices.ProcessingCore.dll で次のように定義されています。  

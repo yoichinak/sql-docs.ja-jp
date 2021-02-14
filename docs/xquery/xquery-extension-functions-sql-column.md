@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55a38974ec5e85eeec58195c18edd1f6fb8b5cb4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 3d2f550e3516594a269257786e109df9c84a1082
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038068"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341871"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 拡張関数 - sql:column()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "92038068"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  XQuery 内の **sql: column ()** 関数で指定された列への参照は、処理される行の列を参照することに注意してください。  
   
- では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、xml インスタンスを参照する**xml**ことができるのは、xml DML insert ステートメントのソース式のコンテキストだけです。それ以外の場合は **、XML**型または CLR ユーザー定義型の列を参照することはできません。  
+ では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、xml インスタンスを参照することができるのは、xml DML insert ステートメントのソース式のコンテキストだけです。それ以外の場合は **、XML** 型または CLR ユーザー定義型の列を参照することはできません。  
   
  **Sql: column ()** 関数は、結合操作ではサポートされていません。 代わりに、適用操作を使用できます。  
   
@@ -60,11 +60,11 @@ sql:column("columnName")
   
  構築された XML では、次の点に注意してください。  
   
--   **ProductID**、 **ProductName**、および**Productprice**属性値は、 **Product**テーブルから取得されます。  
+-   **ProductID**、 **ProductName**、および **Productprice** 属性値は、 **Product** テーブルから取得されます。  
   
--   **Productmodelid**属性の値は、 **productmodel**テーブルから取得されます。  
+-   **Productmodelid** 属性の値は、 **productmodel** テーブルから取得されます。  
   
--   クエリをさらに興味深いものにするために、 **ProductModelName**属性の値は、 **Xml 型**の**catalogdescription**列から取得されます。 XML 製品モデルのカタログ情報はすべての製品モデルに対して格納されていないので、 `if` ステートメントは、存在する場合にのみ値を取得するために使用されます。  
+-   クエリをさらに興味深いものにするために、 **ProductModelName** 属性の値は、 **Xml 型** の **catalogdescription** 列から取得されます。 XML 製品モデルのカタログ情報はすべての製品モデルに対して格納されていないので、 `if` ステートメントは、存在する場合にのみ値を取得するために使用されます。  
   
     ```sql
     SELECT P.ProductID, CatalogDescription.query('  
@@ -91,7 +91,7 @@ sql:column("columnName")
   
 -   値を 2 つの異なるテーブルから取得するため、FROM 句で 2 つのテーブルを指定しています。 WHERE 句に定義された条件により結果をフィルター選択し、カタログの説明のある製品モデルの製品のみを取得しています。  
   
--   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)内の**namespace**キーワードは、クエリ本文で使用される XML 名前空間プレフィックス "pd" を定義します。 テーブルの別名 "P" と "PM" は、クエリ自体の FROM 句で定義されていることに注意してください。  
+-   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)内の **namespace** キーワードは、クエリ本文で使用される XML 名前空間プレフィックス "pd" を定義します。 テーブルの別名 "P" と "PM" は、クエリ自体の FROM 句で定義されていることに注意してください。  
   
 -   Xml 内の XML 以外の値を取り込むには、 **sql: column ()** 関数を使用します。  
   

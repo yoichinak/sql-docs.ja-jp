@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83f744f2b9361a81afada82245bf2d4265cea833
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dd2be5cf246bd625e63c31975effa59fb1b919d0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923655"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345029"
 ---
 # <a name="context-functions---position-xquery"></a>コンテキスト関数 - position (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "86923655"
 fn:position() as xs:integer  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、 **fn: position ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。この関数と比較しても、静的な型の推論時にカーディナリティが減少することはありません。  
   
-## <a name="examples"></a>例  
- このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
+## <a name="examples"></a>使用例  
+ このトピックでは、データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Position () XQuery 関数を使用した最初の2つの製品機能の取得  
  次のクエリでは、製品モデルカタログの説明から、最初の2つの機能、<> 要素の最初の2つの子要素を取得し `Features` ます。 その他の機能がある場合は、<`there-is-more/`> 要素を結果に追加します。  
@@ -68,9 +68,9 @@ WHERE CatalogDescription is not null
   
  上のクエリに関して、次の点に注意してください。  
   
--   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)内の**namespace**キーワードは、クエリ本文で使用される名前空間プレフィックスを定義します。  
+-   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)内の **namespace** キーワードは、クエリ本文で使用される名前空間プレフィックスを定義します。  
   
--   クエリ本文は、 \<Product> **Productmodelid**属性と**ProductModelName**属性を持つ要素を持ち、子要素として返される製品機能を持つ XML を構築します。  
+-   クエリ本文は、 \<Product> **Productmodelid** 属性と **ProductModelName** 属性を持つ要素を持ち、子要素として返される製品機能を持つ XML を構築します。  
   
 -   **Position ()** 関数は、コンテキスト内での子要素の位置を決定するために、述語で使用され \<Features> ます。 最初または2番目の機能の場合は、それが返されます。  
   

@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ca05529c9b4ce1d9ec603989af81f0d2aeebf76b
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 630ee8396c3f4f64e7eee5335484299f5bebfd42
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236394"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350705"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
 
@@ -90,7 +90,7 @@ ms.locfileid: "99236394"
    
 9. **[機能]** ページで、次の機能が選択されていることを確認し、**[次へ]** をクリックします。 これらの機能は、[!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] の [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] に必要です。
   
-    |特徴|特徴|  
+    |機能|機能|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -130,7 +130,7 @@ ms.locfileid: "99236394"
   
 3.  [ **データベースサーバー** ] ページで、SQL Server インスタンスを指定します。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] SQL Server Managed Instance のサポートを追加します。 **SQL Server インスタンス** の値をマネージインスタンスのホストに設定します。 たとえば、「 `xxxxxx.xxxxxx.database.windows.net` 」のように入力します。
+    >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] SQL Server Managed Instance のサポートを追加します。 **SQL Server インスタンス** の値をマネージインスタンスのホストに設定します。 たとえば、`xxxxxx.xxxxxx.database.windows.net` のようにします。
 
 4. 認証の **種類** を選択し、[ **接続のテスト** ] をクリックして、選択した認証の種類の資格情報を使用してデータベースに接続できることを確認します。 **[次へ]** をクリックします。
 
@@ -207,7 +207,7 @@ ms.locfileid: "99236394"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. **[適用]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、https://*server name* / *web application*/です。 
+15. **[Apply]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、https://*server name* / *web application*/です。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 

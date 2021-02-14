@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7328d550697e1c6e0edd076d748a594946372915
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce80f26d1df3a1059a94881889cfbc566c1a5412
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389858"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350079"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>カスタム ワークフローの作成 (Master Data Services)
 
@@ -66,7 +66,7 @@ ms.locfileid: "88389858"
   
 4.  クラス宣言で MasterDataServices を継承します。 [IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) を継承します。 クラス宣言は次のようになります: 'public class WorkflowTester : IWorkflowTypeExtender'  
   
-5.  MasterDataServices の [拡張](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) インターフェイスを実装しています。 MasterDataServices は、ワークフローを開始するために SQL Server MDS Workflow Integration Service によって呼び出されます。これは、 [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow*](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))メソッドです。  
+5.  MasterDataServices の [拡張](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) インターフェイスを実装しています。 MasterDataServices は、ワークフローを開始するために SQL Server MDS Workflow Integration Service によって呼び出されます。これは、 [](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))メソッドです。  
   
 6.  アセンブリを SQL Server MDS Workflow Integration Service 実行可能ファイルの場所にコピーします。これは、Microsoft.MasterDataServices.Workflow.exe という名前で、 \<Your installation folder> \ Master Data services\webapplication\bin にあります。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "88389858"
   
  カスタム ワークフローを開始するビジネス ルールを [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] で作成するには、次の手順を実行します。  
   
-1.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] のビジネス ルール エディターで、ビジネス ルールの条件を指定した後に、**ワークフローの開始**アクションを **[外部アクション]** ボックスの一覧から **[THEN]** ペインの **[アクション]** ラベルにドラッグします。  
+1.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] のビジネス ルール エディターで、ビジネス ルールの条件を指定した後に、**ワークフローの開始** アクションを **[外部アクション]** ボックスの一覧から **[THEN]** ペインの **[アクション]** ラベルにドラッグします。  
   
 2.  **[アクションの編集]** ペインの **[ワークフローの種類]** ボックスに、ワークフロー ハンドラー アセンブリを識別するタグを入力します。 これは、アセンブリの構成ファイルで指定したタグです (例: TEST)。  
   

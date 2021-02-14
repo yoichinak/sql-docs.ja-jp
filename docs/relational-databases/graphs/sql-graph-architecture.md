@@ -15,15 +15,15 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f167741a2064020cfbc7fdc43e881a74609e4ac6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ab08692b1e221e589cc6283e2800a695044f79b7
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480163"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351416"
 ---
 # <a name="sql-graph-architecture"></a>SQL グラフのアーキテクチャ  
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 SQL Graph の設計方法について説明します。 基本を理解することで、他の SQL グラフの記事を理解しやすくなります。
  
@@ -44,7 +44,7 @@ SQL Graph の設計方法について説明します。 基本を理解するこ
 ## <a name="edge-table"></a>エッジテーブル
 エッジテーブルは、グラフ内のリレーションシップを表します。 エッジは常に転送され、2つのノードに接続します。 エッジテーブルを使用すると、ユーザーはグラフ内の多対多リレーションシップをモデル化できます。 エッジテーブルには、ユーザー定義属性が含まれている場合と、存在しない場合があります。 エッジテーブルが作成されるたびに、ユーザー定義の属性と共に、エッジテーブルに3つの暗黙的な列が作成されます。
 
-|列名    |説明  |
+|列名    |[説明]  |
 |---   |---  |
 |`$edge_id`   |データベース内の特定のエッジを一意に識別します。 これは生成された列で、値はエッジテーブルの object_id と内部で生成された bigint 値の組み合わせです。 ただし、列が選択されている場合 `$edge_id` は、JSON 文字列形式の計算値が表示されます。 `$edge_id` は、16進数の文字列を含む内部名にマップされる擬似列です。 テーブルから選択すると、 `$edge_id` 列名がとして表示され `$edge_id_\<hex_string>` ます。 クエリで擬似列名を使用する場合は、内部列に対してクエリを実行 `$edge_id` し、16進文字列で内部名を使用することを避けることをお勧めします。 |
 |`$from_id`   |エッジの発生元のノードのを格納し `$node_id` ます。  |
@@ -83,7 +83,7 @@ SQL Graph の設計方法について説明します。 基本を理解するこ
  
 次の表に、列の有効な値の一覧を示します。 `graph_type`
 
-|列の値  |説明  |
+|列の値  |[説明]  |
 |---   |---   |
 |1  |GRAPH_ID  |
 |2  |GRAPH_ID_COMPUTED  |
@@ -120,7 +120,7 @@ SQL Graph の設計方法について説明します。 基本を理解するこ
 ### <a name="system-functions"></a>システム関数
 次の組み込み関数が追加されました。 これらは、ユーザーが生成された列から情報を抽出するのに役立ちます。 これらのメソッドでは、ユーザーからの入力が検証されないことに注意してください。 ユーザーが無効なを指定した場合 `sys.node_id` 、メソッドは適切な部分を抽出して返します。 たとえば、OBJECT_ID_FROM_NODE_ID はを `$node_id` 入力として受け取り、このノードが属しているテーブルの object_id を返します。 
  
-|組み込み   |説明  |
+|組み込み   |[説明]  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |から object_id を抽出します。 `node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |から graph_id を抽出します。 `node_id`  |

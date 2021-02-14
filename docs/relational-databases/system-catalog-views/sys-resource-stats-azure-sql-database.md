@@ -20,12 +20,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 14785888953906f42b2196dc2cb06ca35cfc3a8b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 54732718d3c31c8dc646c9f61b3afcfa23cb07d2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210025"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343144"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "99210025"
   
  次の表では、v12 サーバーで使用できる列について説明します。  
   
-|[列]|データ型|説明|  
+|列|データ型|説明|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|5分間のレポート間隔の開始を示す UTC 時刻。|  
 |end_time|**datetime**|5分間のレポート間隔の終了を示す UTC 時刻。|  
@@ -62,14 +62,14 @@ ms.locfileid: "99210025"
 ## <a name="permissions"></a>アクセス許可  
  このビューは、仮想 **master** データベースに接続するためのアクセス許可を持つすべてのユーザーロールで使用できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Sys.resource_stats** によって返されるデータは、実行しているサービス階層/パフォーマンスレベルに対して許容される最大制限の割合として表されます。  
   
  データベースがエラスティックプールのメンバーである場合、パーセント値として表示されるリソース統計は、エラスティックプール構成で設定されたデータベースの上限に対する比率として表されます。  
   
  このデータをより詳細に表示するには、ユーザーデータベースで **sys.dm_db_resource_stats** 動的管理ビューを使用します。 このビューでは、15秒ごとにデータをキャプチャし、1時間の履歴データを保持します。  詳細については、「 [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)」を参照してください。  
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、過去1週間のコンピューティング使用率の平均が80% 以上のすべてのデータベースを返します。  
   
 ```sql  

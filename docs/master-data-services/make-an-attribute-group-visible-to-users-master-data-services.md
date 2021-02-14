@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c966c12bb8245571dcbfac0984d0434282e82c57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0e7c6f05ce075571a78e6b16abd8c3f40ccfd75
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495026"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338192"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>属性グループのユーザーへの表示 (マスター データ サービス)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88495026"
   
  属性グループを作成すると、作成者以外のすべてのユーザーに対して自動的に非表示に設定されます。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  

@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b37eeff2ffcee5b8b2434e096783916af30b17a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fdebb93459b9519eb6495054908208de610e8222
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914625"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352797"
 ---
 # <a name="xqueries-involving-hierarchy"></a>階層に関係する XQuery
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-  **AdventureWorks**データベースのほとんどの**xml**型の列は、半構造化されたドキュメントです。 したがって、各行に格納されているドキュメントは、外観が異なる場合があります。 このトピックのクエリサンプルでは、これらのさまざまなドキュメントから情報を抽出する方法について説明します。  
+  **AdventureWorks** データベースのほとんどの **xml** 型の列は、半構造化されたドキュメントです。 したがって、各行に格納されているドキュメントは、外観が異なる場合があります。 このトピックのクエリサンプルでは、これらのさまざまなドキュメントから情報を抽出する方法について説明します。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 製造手順ドキュメントから、ワークセンターの場所とその場所の最初の製造手順を取得します。  
- 製品モデル7では、<`ManuInstr`> 要素、 **Productmodelid**属性、 **ProductModelName**属性、および1つ以上の <> 子要素を含む XML が構築され `Location` ます。  
+ 製品モデル7では、<`ManuInstr`> 要素、 **Productmodelid** 属性、 **ProductModelName** 属性、および1つ以上の <> 子要素を含む XML が構築され `Location` ます。  
   
  各 <`Location`> 要素には、独自の属性セットと1つの <`step`> 子要素があります。 この <`step`> 子要素は、ワークセンターの場所での最初の製造手順です。  
   
@@ -56,7 +56,7 @@ WHERE ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)の**namespace**キーワードは、名前空間プレフィックスを定義します。 このプレフィックスは、後でクエリ本文で使用されます。  
+-   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)の **namespace** キーワードは、名前空間プレフィックスを定義します。 このプレフィックスは、後でクエリ本文で使用されます。  
   
 -   コンテキスト切り替えトークン {) と (}) を使用して、クエリを XML 構築からクエリ評価に切り替えます。  
   

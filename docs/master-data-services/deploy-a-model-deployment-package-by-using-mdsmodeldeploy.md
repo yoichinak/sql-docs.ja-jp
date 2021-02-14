@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 16b5268f9ca4ac300bafe09b1188776985e5826d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ade6b388deb6414a6b2940d5fef74a9f26ef4637
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811785"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350211"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy を使用したモデルの配置パッケージの配置
 
@@ -33,16 +33,16 @@ ms.locfileid: "85811785"
 > [!IMPORTANT]  
 >  パッケージは、そのパッケージが作成されたエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にのみ配置できます。 つまり、 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で作成されたパッケージを [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降に配置することはできません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   ターゲット **環境の** [システム管理] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 機能領域にアクセスする権限が必要です。  
   
 -   モデルの配置パッケージが必要です。 詳細については、「  [MDSModelDeploy を使用したモデルの配置パッケージの作成](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)」を参照してください。  
   
--   モデルを配置する環境の管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデルを配置する環境の管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
--   データを使用してモデルを更新する場合、配置先のバージョンを**ロック**または**コミット**することはできません。  
+-   データを使用してモデルを更新する場合、配置先のバージョンを **ロック** または **コミット** することはできません。  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>モデルの配置パッケージを配置するには  
   
@@ -97,7 +97,7 @@ ms.locfileid: "85811785"
   
  **注:**  
   
--   パッケージ内のサブスクリプション ビューの名前が、既存のモデル内のサブスクリプション ビューの名前と同じである場合、この警告は " **配置機能サブスクリプション ビューが名前変更されました** " と表示され、このビューは *modelname.subscriptionviewname*という名前で作成されます。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
+-   パッケージ内のサブスクリプション ビューの名前が、既存のモデル内のサブスクリプション ビューの名前と同じである場合、この警告は " **配置機能サブスクリプション ビューが名前変更されました** " と表示され、このビューは *modelname.subscriptionviewname* という名前で作成されます。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
   
 -   配置プロセスには、次の 4 つの手順があります。  
   
@@ -114,11 +114,11 @@ ms.locfileid: "85811785"
      モデルを更新する場合、最初の 3 つの手順の実行中にプロセスが失敗すると、そのプロセスは続行されません。ただし、既に行われた変更はロールバックされません。 手順 4. でプロセスが失敗すると、更新可能なメンバーが更新されます。  
   
 ## <a name="next-steps"></a>次の手順  
- ファイル属性、ユーザーとグループの権限は、モデル配置パッケージに含まれていません。 モデルを配置した後、これらを手動で更新する必要があります。 詳細については、次を参照してください。  
+ ファイル属性、ユーザーとグループの権限は、モデル配置パッケージに含まれていません。 モデルを配置した後、これらを手動で更新する必要があります。 詳細については、次を参照してください:  
   
 -   [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)  
   
   

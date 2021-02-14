@@ -21,12 +21,12 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58e1f2042f10d1b4f06482fdfb13f07cf5edfa3e
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: d456a51ca01f38968bf04d3144331fc4b1b2f933
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237713"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340732"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "99237713"
 |**inline_type**|**bit**|**適用対象**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] 以降。<br /><br />現在モジュールに対してインライン展開が有効になっているかどうかを示します。 <br /><br />0 = インライン展開は無効になっています<br /><br /> 1 = インライン展開が有効になっています。<br /><br /> スカラー Udf では、インライン展開が有効になっている場合 (明示的または暗黙的)、値は1になります。 インライン Tvf の場合、値は常に1になり、その他のモジュールの種類では0になります。<br />|  
 
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  既定の制約の SQL 式である D 型のオブジェクトは、 [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) カタログビューにあります。 CHECK 制約の SQL 式 (C 型のオブジェクト) は、 [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) カタログビューにあります。  
   
  この情報については、「 [sys.dm_db_uncontained_entities &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)」も参照してください。  
@@ -59,7 +59,7 @@ ms.locfileid: "99237713"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、現在のデータベース内の各モジュールの名前、型、および定義を返します。  
   
 ```  

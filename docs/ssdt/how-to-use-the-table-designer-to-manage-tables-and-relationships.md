@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4262242a0ac9822bed793e1bd78a4ce51294d485
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a71009351c187bdda50c00b4f3b00bfee0fd2acf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895803"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018002"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>方法:テーブル デザイナーを使用してテーブルおよびリレーションシップを管理する
 
@@ -34,13 +34,13 @@ Transact\-SQL エディターと同様に、テーブル デザイナーを使�
   
 1.  これまでの手順で使用していた TradeDev プロジェクトを開きます。  
   
-2.  **ソリューション エクスプローラー**で **[dbo]** フォルダーを展開し、 **[テーブル]** フォルダーを右クリックして、 **[追加]** をポイントし、 **[テーブル]** をクリックします。  
+2.  **ソリューション エクスプローラー** で **[dbo]** フォルダーを展開し、 **[テーブル]** フォルダーを右クリックして、 **[追加]** をポイントし、 **[テーブル]** をクリックします。  
   
 3.  新しいテーブルに **Shipper** という名前を付け、 **[追加]** をクリックします。  
   
 4.  テーブル デザイナーが開きます。 列グリッドで、テーブルに新しい列を追加し、名前を **ShipperName** に、データ型を **int** に指定します。  
   
-5.  **[プロパティ]** ウィンドウで列のプロパティを編集することもできます。 **[ShipperName]** 列をクリックし、 **[プロパティ]** ウィンドウで、この列の**データ型**を **nvarchar** に、**長さ**を **128** に変更します。 フォーカスをフィールドから外すと、デザイナーのスクリプト ペインおよび列グリッドが自動的に更新され、変更が反映されます。  
+5.  **[プロパティ]** ウィンドウで列のプロパティを編集することもできます。 **[ShipperName]** 列をクリックし、 **[プロパティ]** ウィンドウで、この列の **データ型** を **nvarchar** に、**長さ** を **128** に変更します。 フォーカスをフィールドから外すと、デザイナーのスクリプト ペインおよび列グリッドが自動的に更新され、変更が反映されます。  
   
 ### <a name="to-create-a-new-foreign-key-constraint"></a>新しい外部キー制約を作成するには  
   
