@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ed4241fb1aeac7faaceadc250f0c2e61f10179fc
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2b87720ba7a4cbdb531cd19fe23be7d48d9a07ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987538"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018132"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>方法:Team Foundation ビルドから SQL Server の単体テストを実行する
 
@@ -74,7 +74,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 1.  設定を構成するテスト プロジェクトが含まれているソリューションを開きます。  
   
-2.  **ソリューション エクスプローラー**の **[ソリューション項目]** フォルダーにある **Local.testsettings** ファイルをダブルクリックします。  
+2.  **ソリューション エクスプローラー** の **[ソリューション項目]** フォルダーにある **Local.testsettings** ファイルをダブルクリックします。  
   
     **[テストの設定]** ダイアログ ボックスが表示されます。  
   
@@ -109,7 +109,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 #### <a name="to-specify-an-appconfig-file-for-team-foundation-build"></a>Team Foundation ビルドの app.config ファイルを指定するには  
   
-1.  **ソリューション エクスプローラー**で、app.config ファイルを右クリックし、 **[コピー]** をクリックします。  
+1.  **ソリューション エクスプローラー** で、app.config ファイルを右クリックし、 **[コピー]** をクリックします。  
   
 2.  テスト プロジェクトを右クリックし、 **[貼り付け]** をクリックします。  
   
@@ -230,7 +230,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
     > [!NOTE]  
     > 自動テストの作成方法および管理方法を制御する特定のチーム プロセスを用意することができます。 たとえば、ビルドをローカルで検証した後に、ビルドで実行されるテストと共にそのコードをチェックインすることを要求するプロセスもあります。  
   
-    **ソリューション エクスプローラー**で、チェックインされている各ファイルの横には南京錠が表示されます。 詳しくは、「[バージョン管理ファイルとフォルダーのプロパティの表示](/previous-versions/visualstudio/visual-studio-2010/ms245468(v=vs.100))」をご覧ください。  
+    **ソリューション エクスプローラー** で、チェックインされている各ファイルの横には南京錠が表示されます。 詳しくは、「[バージョン管理ファイルとフォルダーのプロパティの表示](/previous-versions/visualstudio/visual-studio-2010/ms245468(v=vs.100))」をご覧ください。  
   
     テストは、Team Foundation ビルドで使用できるようになります。 これで、実行するテストを含むビルド定義を作成できます。  
   
@@ -264,7 +264,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 10. **[基本]** グループの **[自動テスト]** で、実行するテストを指定します。 既定では、ソリューションの \*test\*.dll という名前のファイルに含まれているテストが実行されます。  
   
-11. **[ファイル]** メニューの **[*ProjectName*の保存]** をクリックします。  
+11. **[ファイル]** メニューの **[*ProjectName* の保存]** をクリックします。  
   
     ビルド定義が作成されました。 次に、テスト プロジェクトを変更します。  
   
@@ -280,7 +280,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 3.  **[ビルド定義]**、**[ビルド エージェント]**、**[このビルドの格納フォルダー]** の各フィールドの値がすべて適切であることを確認し、**[キューに登録]** をクリックします。  
   
-    **ビルド エクスプローラー**の **[キューに挿入済み]** タブが表示されます。 詳しくは、「[完了したビルドの管理と表示 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100))」または「[ビルド エクスプローラーでのビルドの管理 (Visual Studio 2012)](/previous-versions/ms181732(v=vs.140))」をご覧ください。  
+    **ビルド エクスプローラー** の **[キューに挿入済み]** タブが表示されます。 詳しくは、「[完了したビルドの管理と表示 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100))」または「[ビルド エクスプローラーでのビルドの管理 (Visual Studio 2012)](/previous-versions/ms181732(v=vs.140))」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの実行](../ssdt/running-sql-server-unit-tests.md)  

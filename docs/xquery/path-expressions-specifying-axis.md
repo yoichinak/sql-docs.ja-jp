@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 96240f605762be382065268fa39198baeeaaa53f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2207dcce2787fb6f51668e777b01ce345d1f33ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717178"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344659"
 ---
 # <a name="path-expressions---specifying-axis"></a>パス式 - 軸の指定
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -40,27 +40,27 @@ ms.locfileid: "85717178"
   
 -   [0個以上のステップ修飾子 (省略可能)](../xquery/path-expressions-specifying-predicates.md)  
   
- 詳細については、「[パス式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)」を参照してください。  
+ 詳細については、「 [パス式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery 実装では、次の軸ステップがサポートされています。  
   
-|軸|説明|  
+|軸|[説明]|  
 |----------|-----------------|  
-|**child**|コンテキストノードの子を返します。|  
+|**子供**|コンテキストノードの子を返します。|  
 |**descendant**|コンテキスト ノードのすべての子孫を返します。|  
-|**所属**|コンテキスト ノードの親を返します。|  
+|**parent**|コンテキスト ノードの親を返します。|  
 |**attribute**|コンテキストノードの属性を返します。|  
 |**自身**|コンテキスト ノード自身を返します。|  
 |**descendant-or-self**|コンテキスト ノード自身とその子孫をすべて返します。|  
   
- これらのすべての軸 (**親**軸を除く) は、前方軸です。 **親**軸は、ドキュメント階層内を後方に検索するので、逆軸です。 たとえば、相対パス式 `child::ProductDescription/child::Summary` には 2 つのステップがあり、各ステップが `child` 軸を指定します。 最初のステップでは、 \<ProductDescription> コンテキストノードの子要素を取得します。 2番目のステップでは、要素ノードごとに \<ProductDescription> \<Summary> 子要素ノードを取得します。  
+ これらのすべての軸 ( **親** 軸を除く) は、前方軸です。 **親** 軸は、ドキュメント階層内を後方に検索するので、逆軸です。 たとえば、相対パス式 `child::ProductDescription/child::Summary` には 2 つのステップがあり、各ステップが `child` 軸を指定します。 最初のステップでは、 \<ProductDescription> コンテキストノードの子要素を取得します。 2番目のステップでは、要素ノードごとに \<ProductDescription> \<Summary> 子要素ノードを取得します。  
   
- 相対パス式では、 `child::root/child::Location/attribute::LocationID` 3 つのステップがあります。 最初の2つの手順では、それぞれ軸を指定し、3番目の手順で軸を指定し `child` `attribute` ます。 製品版の**ProductModel**テーブル内の製造手順の XML ドキュメントに対して実行した場合、式は `LocationID` \<Location> 要素の子要素ノードの属性を返し \<root> ます。  
+ 相対パス式では、 `child::root/child::Location/attribute::LocationID` 3 つのステップがあります。 最初の2つの手順では、それぞれ軸を指定し、3番目の手順で軸を指定し `child` `attribute` ます。 製品版の **ProductModel** テーブル内の製造手順の XML ドキュメントに対して実行した場合、式は `LocationID` \<Location> 要素の子要素ノードの属性を返し \<root> ます。  
   
 ## <a name="examples"></a>使用例  
- このトピックのクエリ例は、 **AdventureWorks**データベースの**xml**型の列に対して指定されています。  
+ このトピックのクエリ例は、 **AdventureWorks** データベースの **xml** 型の列に対して指定されています。  
   
-### <a name="a-specifying-a-child-axis"></a>A: 子軸の指定  
+### <a name="a-specifying-a-child-axis"></a>A. 子軸の指定  
  次のクエリでは、特定の製品モデルについて、 \<Features> \<ProductDescription> テーブルに格納されている製品カタログの説明から要素ノードの子要素ノードを取得し `Production.ProductModel` ます。  
   
 ```  
@@ -73,12 +73,12 @@ WHERE ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
--   `query()` **Xml**データ型のメソッドでは、パス式を指定します。  
+-   `query()` **Xml** データ型のメソッドでは、パス式を指定します。  
   
--   パス式の両方のステップが、`child` 軸およびノード名 (`ProductDescription`、`Features`) をノード テストとして指定しています。 ノードテストの詳細については、「[パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)」を参照してください。  
+-   パス式の両方のステップが、`child` 軸およびノード名 (`ProductDescription`、`Features`) をノード テストとして指定しています。 ノードテストの詳細については、「 [パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)」を参照してください。  
   
-### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B: descendant 軸と descendant-or-self 軸の指定  
- 次の例では、子孫軸または子孫軸を使用します。 この例のクエリは、 **xml**型の変数に対して指定されています。 XML インスタンスは、生成された結果の違いを簡単に示すために簡略化されています。  
+### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B. descendant 軸と descendant-or-self 軸の指定  
+ 次の例では、子孫軸または子孫軸を使用します。 この例のクエリは、 **xml** 型の変数に対して指定されています。 XML インスタンスは、生成された結果の違いを簡単に示すために簡略化されています。  
   
 ```  
 declare @x xml  
@@ -111,7 +111,7 @@ select @y
   
  `/child::a/child::b/descendant::*`では、<> 要素ノードのすべての子孫を求めてい `b` ます。  
   
- ノードテストのアスタリスク (*) は、ノード名をノードテストとして表します。 したがって、子孫軸の主ノード型である element ノードは、返されるノードの種類を決定します。 つまり、式からすべての要素ノードが返されます。 テキストノードは返されません。 プライマリノードの種類とノードテストとの関係の詳細については、「[パス式のステップでノードテストを指定する](../xquery/path-expressions-specifying-node-test.md)」を参照してください。  
+ ノードテストのアスタリスク (*) は、ノード名をノードテストとして表します。 したがって、子孫軸の主ノード型である element ノードは、返されるノードの種類を決定します。 つまり、式からすべての要素ノードが返されます。 テキストノードは返されません。 プライマリノードの種類とノードテストとの関係の詳細については、「 [パス式のステップでノードテストを指定する](../xquery/path-expressions-specifying-node-test.md) 」を参照してください。  
   
  次の結果に示すように、要素ノード <`c`> と <`d`> が返されます。  
   
@@ -140,7 +140,7 @@ select @y
 <d>text3</d>   
 ```  
   
- **AdventureWorks**データベースに対する次のサンプルクエリでは、 `Features` <> 要素の <> 要素の子要素ノードがすべて取得され `ProductDescription` ます。  
+ **AdventureWorks** データベースに対する次のサンプルクエリでは、 `Features` <> 要素の <> 要素の子要素ノードがすべて取得され `ProductDescription` ます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -151,7 +151,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
-### <a name="c-specifying-a-parent-axis"></a>C: parent 軸の指定  
+### <a name="c-specifying-a-parent-axis"></a>C. parent 軸の指定  
  次のクエリでは、 `Summary` `ProductDescription` テーブルに格納されている製品カタログ XML ドキュメント内の <> 要素の <> 子要素が返され `Production.ProductModel` ます。  
   
  この例では、parent 軸を使用して <> 要素の親に戻り、 `Feature` `Summary` <> 要素の <> 要素の子を取得し `ProductDescription` ます。  
@@ -175,7 +175,7 @@ WHERE  ProductModelID=19
   
  次の例では、parent 軸の便利な例を示しています。  
   
- **Productmodel**テーブルの**catalogdescription**列に格納されている各製品モデルカタログの説明には、 `<ProductDescription>` 次の `ProductModelID` フラグメントに示すように、属性と子要素を持つ要素があり `<Features>` ます。  
+ **Productmodel** テーブルの **catalogdescription** 列に格納されている各製品モデルカタログの説明には、 `<ProductDescription>` 次の `ProductModelID` フラグメントに示すように、属性と子要素を持つ要素があり `<Features>` ます。  
   
 ```  
 <ProductDescription ProductModelID="..." >  

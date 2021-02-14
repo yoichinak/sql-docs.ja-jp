@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dc3582cb34c80f488005f5a2eaf1c6022c5e1be
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 779e3fa093d851e99e2869053f155fb70570f67c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035795"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340503"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>ブール値コンストラクター関数 - true (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ fn:true() as xs:boolean
  このトピックでは、AdventureWorks データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. XQuery 論理関数 true() の使用  
- 次の例では、型指定されていない **xml** 変数をクエリします。 **Value ()** メソッドの式は、"aaa" が属性値の場合にブール値**true ()** を返します。 **Xml**データ型の**value ()** メソッドは、ブール値をビットに変換して返します。  
+ 次の例では、型指定されていない **xml** 変数をクエリします。 **Value ()** メソッドの式は、"aaa" が属性値の場合にブール値 **true ()** を返します。 **Xml** データ型の **value ()** メソッドは、ブール値をビットに変換して返します。  
   
 ```  
 DECLARE @x XML  

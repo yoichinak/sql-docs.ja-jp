@@ -9,12 +9,12 @@ ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48d7fb0f41446fa54f1376a9a84f7dbff7017960
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 670ab5046c1904fee16f6c0271c49e2a4ecd72fe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196086"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045640"
 ---
 # <a name="tutorial-query-oracle-from-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターから Oracle にクエリを実行する
 
@@ -59,7 +59,7 @@ ms.locfileid: "92196086"
     CREATE INDEX INV_ITEM ON HR.INVENTORY(INV_ITEM);
     ```
 
-1. このテーブルに、 **inventory.csv** ファイルの内容をインポートします。 このファイルは、「[前提条件](#prereqs) 」セクションのサンプル作成スクリプトによって作成されたものです。
+1. このテーブルに、**inventory.csv** ファイルの内容をインポートします。 このファイルは、「[前提条件](#prereqs) 」セクションのサンプル作成スクリプトによって作成されたものです。
 
 ## <a name="create-an-external-data-source"></a>外部データ ソースを作成する
 
@@ -98,7 +98,7 @@ Oracle は、きめ細かいアクセス制御を備えるプロキシ認証を�
 
 プロキシ ユーザーは、権限が借用されているユーザーと比較してアクセスが制限されるように構成することができます。 たとえば、プロキシ ユーザーは、権限が借用されているユーザーの特定のデータベース ロールを使用して接続することができます。 複数のユーザーがプロキシ認証を使用して接続している場合でも、プロキシ ユーザーを介して Oracle データベースに接続しているユーザーの ID は接続に保持されます。 Oracle では、これを利用してアクセス制御を実施し、実際のユーザーに代わって実行されたアクションを監査することができます。
 
-oracle プロキシ ユーザーの使用が必要なシナリオの場合は、 __前の手順の 4 と 5 を次のものに置き換えてください__ 。
+oracle プロキシ ユーザーの使用が必要なシナリオの場合は、__前の手順の 4 と 5 を次のものに置き換えてください__。
 
 4. Oracle サーバーに接続するためのデータベース スコープ資格情報を作成します。 次のステートメントで、Oracle サーバーに適切な oracle プロキシ ユーザーの資格情報を指定します。
 

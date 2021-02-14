@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b2b211250acb2e2594601236a379023a8479243c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e0f9813db19e06729f7164f0ca419801364a365
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893362"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018052"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>方法:Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする
 
@@ -30,9 +30,9 @@ SQL Server Data Tools より前のバージョンで作成したテスト条件�
 ## <a name="update-references"></a><a name="UpdateReferences"></a>参照を更新する  
 プロジェクトの参照を更新するには、次の手順を実行します。  
   
-1.  Visual Basic のみで、**ソリューション エクスプローラー**で、 **[すべてのファイルを表示]** をクリックします。  
+1.  Visual Basic のみで、**ソリューション エクスプローラー** で、 **[すべてのファイルを表示]** をクリックします。  
   
-2.  **ソリューション エクスプローラー**で、 **[参照]** ノードを展開します。  
+2.  **ソリューション エクスプローラー** で、 **[参照]** ノードを展開します。  
   
 3.  次のアセンブリ参照を右クリックし、 **[削除]** をクリックします。  
   
@@ -40,7 +40,7 @@ SQL Server Data Tools より前のバージョンで作成したテスト条件�
   
     2.  Microsoft.Data.Schema  
   
-4.  **[プロジェクト]** メニューをクリックするか、または**ソリューション エクスプローラー**のプロジェクト フォルダーを右クリックして、 **[参照の追加]** をクリックします。  
+4.  **[プロジェクト]** メニューをクリックするか、または **ソリューション エクスプローラー** のプロジェクト フォルダーを右クリックして、 **[参照の追加]** をクリックします。  
   
 5.  **[.NET]** タブをクリックします。  
   
@@ -50,7 +50,7 @@ SQL Server Data Tools より前のバージョンで作成したテスト条件�
   
 8.  **[プロジェクト]** メニューの **[プロジェクトのアンロード]** をクリックします。  
   
-9. **ソリューション エクスプローラー**で**プロジェクト**を右クリックして、 **[** `project_name` **.csproj の編集]** をクリックします。  
+9. **ソリューション エクスプローラー** で **プロジェクト** を右クリックして、 **[** `project_name` **.csproj の編集]** をクリックします。  
   
 10. `Microsoft.CSharp.targets` をインポートした後、次の Import ステートメントを追加します。  
   
@@ -60,7 +60,7 @@ SQL Server Data Tools より前のバージョンで作成したテスト条件�
     <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />  
     ```  
   
-11. ファイルを保存して閉じます。 **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[プロジェクトの再読み込み]** をクリックします。  
+11. ファイルを保存して閉じます。 **ソリューション エクスプローラー** でプロジェクトを右クリックして、 **[プロジェクトの再読み込み]** をクリックします。  
   
 12. テスト条件クラスを開き、**Microsoft.Data.Schema** で始まるすべての using ステートメントを削除します。 この操作を最も簡単に行うには、ファイルを右クリックして、 **[using の整理]** を選択し、 **[削除および並べ替え]** を選択します。 次の using ステートメントを削除する必要があります。  
   

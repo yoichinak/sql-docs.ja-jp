@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2361f480d5f148140caa8e4fcbcb4d22374d9e04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0b9ba85eb94b5fdf7a39d40b6b33fee0541823b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418258"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069883"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>プロジェクトの設定 (GUI) (SybaseToSQL)
 GUI プロジェクトの設定を使用すると、[ **データ** ] タブでのデータの表示方法と、変換後に評価レポートを表示するかどうかを構成できます。  

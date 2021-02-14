@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: ef24acb23a346b59b747d876d60d9a58374188bd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0ae7d5ad7bdb7874e4f6a99a1a99ea08c228fced
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97469973"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339483"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>マネージインスタンスで MDS データベースをホストする
 
@@ -64,7 +64,7 @@ ms.locfileid: "97469973"
      - 要求監視
      - パフォーマンス
      - 静的コンテンツ圧縮
-     - Security
+     - セキュリティ
      - 要求のフィルタリング
      - Windows 認証
        > [!NOTE]
@@ -169,7 +169,7 @@ SQL Server セットアップインストールウィザードまたはコマン
 
    ![Web 構成セクションのスクリーンショット。](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "SQLServer2019-Config-MI_WebConfigSelectDB")
 
-1. **[適用]** を選択します。 **構成が完了** したことを確認するメッセージが表示されます。 メッセージボックスで [ **OK]** を選択して、web アプリケーションを起動します。 Web サイトのアドレスは `http://server name/web application/` です。
+1. **[適用]** を選択します。 **構成が完了** したことを確認するメッセージが表示されます。 メッセージボックスで [ **OK]** を選択して、web アプリケーションを起動します。 その Web サイトのアドレスは `http://server name/web application/` です。
 
 ## <a name="configure-authentication"></a>認証を構成する。
 

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 655dc1271fa928558974bf6ebc36b8d551207ea2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be1adf9c385273d5cac8afbe972fd3f2f594ca34
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880435"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018142"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>方法:スニペットをアウトライン表示し、Transact-SQL スクリプトに追加する
 
@@ -30,7 +30,7 @@ SQL Server Data Tools には、コード スニペットから成るコード �
   
 ### <a name="to-insert-snippets"></a>スニペットを挿入するには  
   
-1.  **ソリューション エクスプローラー**で **TradeDev** プロジェクトを右クリックし、 **[追加]** をポイントして、 **[スクリプト]** をクリックします。 **[新しい項目の追加]** ダイアログ ボックスで、 **[追加]** をクリックします。  
+1.  **ソリューション エクスプローラー** で **TradeDev** プロジェクトを右クリックし、 **[追加]** をポイントして、 **[スクリプト]** をクリックします。 **[新しい項目の追加]** ダイアログ ボックスで、 **[追加]** をクリックします。  
   
 2.  Transact\-SQL エディターを右クリックし、 **[スニペットの挿入]** をクリックします。 コード スニペット ピッカーが表示されます。  
   

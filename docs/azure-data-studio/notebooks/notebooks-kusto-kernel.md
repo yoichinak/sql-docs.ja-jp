@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1362e6a5ccd6152a1cb2597076d25c2da4149fd0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725126"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048232"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Kusto (KQL) ノートブックの作成と実行 (プレビュー)
 
@@ -44,7 +44,7 @@ Azure サブスクリプションをお持ちでない場合は、開始する�
 
 3. **[カーネル]** として、 *[Kusto]* を選択します。 **[アタッチ先]** メニューがクラスター名とデータベースに設定されていることを確認します。 この記事では、サンプル データベース データを備えた help.kusto.windows.net クラスターを使用します。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="ノートブックを開く":::
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="[カーネル] と [アタッチ先] を設定する":::
 
 ノートブックを保存するには、 **[ファイル]** メニューで **[保存]** または **[名前を付けて保存...]** コマンドを使用します。
 
@@ -56,14 +56,14 @@ Azure サブスクリプションをお持ちでない場合は、開始する�
 
 1. ノートブック ツール バーから **[アタッチ先]** メニューを選択し、 **[接続の変更]** を選択します。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="ノートブックを開く":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="接続の変更":::
 
    > [!Note]
    > データベースの値を確実に入力します。 Kusto ノートブックで、データベースを指定する必要があります。
 
 2. これで最近使用した接続サーバーを選択するか、新しい接続の詳細を入力して接続できます。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="ノートブックを開く":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="別のクラスターを選択する":::
 
    > [!Note]
    > クラスター名は、`https://` を含めずに指定してください。
@@ -76,7 +76,7 @@ Azure サブスクリプションをお持ちでない場合は、開始する�
 
 1. ツールバーの **[+Code]** コマンドを選択して、新しいコード セルを追加します。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="ノートブックを開く":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Kusto カーネル コード ブロック":::
 
 2. 次の例をコピーしてセルに貼り付け、 **[セルの実行]** を選択します。 この例では、特定のイベントの種類について StormEvents データに対してクエリを実行します。
 
@@ -85,7 +85,7 @@ Azure サブスクリプションをお持ちでない場合は、開始する�
     | where EventType == "Waterspout"
    ```
 
-   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="ノートブックを開く":::
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="セルの実行":::
 
 ## <a name="save-the-result-or-show-chart"></a>結果を保存する、またはグラフを表示する
 
@@ -102,7 +102,7 @@ Azure サブスクリプションをお持ちでない場合は、開始する�
     | limit 10
 ```
 
-:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="ノートブックを開く":::
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="結果を保存する":::
 
 ## <a name="known-issues"></a>既知の問題
 

@@ -11,12 +11,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 4707c68c0b744e092844d57bd6f235a69dbec9ce
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: f1d0f99987a58a8d942c9d7601124c3cfc39b09d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038045"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014623"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>テスト ケースの準備の終了 (OracleToSQL)
 ウィザードの最後のページには、テストケースの説明と、テストに関係するオブジェクトに関する情報が表示されます。 また、このページでは、テストの実行オプションを設定することもできます。  
@@ -49,11 +49,11 @@ ms.locfileid: "92038045"
   
 -   [ **常に保存**] を選択した場合、補助テーブルデータは、後で使用するために常に格納されます。  
   
--   [ **テーブル比較に失敗**した場合に保存] を選択すると、補助テーブルデータはエラーが発生した場合にのみ保存されます。  
+-   [ **テーブル比較に失敗** した場合に保存] を選択すると、補助テーブルデータはエラーが発生した場合にのみ保存されます。  
   
 -   [ **常に削除**] を選択した場合は、テストの実行後、補助テーブルは常に削除されます。  
   
--   [ **テーブル比較に失敗**した場合にユーザーに問い合わせる] を選択すると、エラーが発生した場合に、ユーザーは必要な操作を選択できます。  
+-   [ **テーブル比較に失敗** した場合にユーザーに問い合わせる] を選択すると、エラーが発生した場合に、ユーザーは必要な操作を選択できます。  
   
 [ **完了** ] ボタンをクリックして、準備されたテストケースを [テストリポジトリ (OracleToSQL) を使用して](./using-test-repositories-oracletosql.md)に保存します。  
   

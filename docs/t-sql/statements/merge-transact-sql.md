@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: cbc1286bbbced3a546c1057433dba5bbc4289281
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6b6610293bb78ef34ae5ca8b88f762c9ab4948e9
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199384"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978864"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -236,14 +236,14 @@ DEFAULT VALUES
 >[!NOTE]
 > Azure Synapse Analytics での MERGE コマンド (プレビュー) は、SQL サーバーや Azure SQL データベースと比べて次のような違いがあります。  
 > - MERGE 更新は、削除と挿入のペアとして実装されます。 MERGE 更新の影響を受ける行の数には、削除される行と挿入される行が含まれます。 
-> - プレビュー期間中は、MERGE コマンドは UNIQUE 制約のあるテーブルでは機能しません。  これは近日中に今後のリリースで修正される予定です。
+> - プレビュー期間中は、IDENTITY 列を含むテーブルに対する MERGE…WHEN NOT MATCHED INSERT はサポートされていません。  
 > - 各種の分散タイプでのテーブルのサポートについては、次の表で説明しています。
 
 >|Azure Synapse Analytics での MERGE CLAUSE|サポートされる TARGE 分散テーブル| サポートされる SOURCE 分散テーブル|コメント|  
 >|-----------------|---------------|-----------------|-----------|  
->|**WHEN MATCHED**| HASH、ROUND_ROBIN、REPLICATE |すべての分散タイプ||  
+>|**WHEN MATCHED**| すべての分散タイプ |すべての分散タイプ||  
 >|**NOT MATCHED BY TARGET**|HASH |すべての分散タイプ|UPDATE/DELETE FROM…JOIN を使用して、2 つのテーブルを同期します。 |
->|**NOT MATCHED BY SOURCE**|すべての分散タイプ|すべての分散タイプ|UPDATE/DELETE FROM…JOIN を使用して、2 つのテーブルを同期します。||  
+>|**NOT MATCHED BY SOURCE**|すべての分散タイプ|すべての分散タイプ|||  
 
 3 つの MATCHED 句のうち、少なくとも 1 つは指定する必要があります。これらの句は、任意の順序で指定できます。 1 つの MATCHED 句で 1 つの変数を複数回更新することはできません。  
   

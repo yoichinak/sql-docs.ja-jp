@@ -10,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9dc40928fddda2708a23a7fc927627cf0e9450d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 991f001ea8fd43298cefe1f9ba542472de6935ef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718579"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354092"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters データベースカタログ
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -40,10 +40,10 @@ WideWorldImporters は、データの格納、ユーザーがデータにアク�
 
 これらのスキーマは、データテーブルへの直接アクセスが許可されていない外部アプリケーションに使用されます。 外部アプリケーションで使用されるビューとストアドプロシージャが含まれています。
 
-|スキーマ|説明|
+|スキーマ|[説明]|
 |-----------------------------|---------------------|
 |Web サイト|会社の web サイトからデータベースへのすべてのアクセスは、このスキーマを通じて行われます。|
-|レポート|Reporting Services レポートからデータベースへのすべてのアクセスは、このスキーマを介して行われます。|
+|Reports|Reporting Services レポートからデータベースへのすべてのアクセスは、このスキーマを介して行われます。|
 |PowerBI|エンタープライズゲートウェイ経由の Power BI ダッシュボードからデータベースへのすべてのアクセスは、このスキーマを介して行われます。|
 
 レポートおよび PowerBI スキーマは、サンプルデータベースの初期リリースでは使用されないことに注意してください。 ただし、このデータベース上に構築されたすべての Reporting Services と Power BI のサンプルには、これらのスキーマを使用することをお勧めします。
@@ -52,7 +52,7 @@ WideWorldImporters は、データの格納、ユーザーがデータにアク�
 
 特別な用途のスキーマ
 
-|スキーマ|説明|
+|スキーマ|[説明]|
 |-----------------------------|---------------------|
 |統合|データウェアハウスの統合に必要なオブジェクトとプロシージャ (つまり、データを WideWorldImportersDW データベースに移行する)。|
 |シーケンス|アプリケーション内のすべてのテーブルによって使用されるシーケンスを保持します。|
@@ -161,7 +161,7 @@ WideWorldImporters は少数のスキーマを使用するため、データベ�
 
 これらは、Web フロントエンドなどのクライアントアプリケーションによって使用される手順です。
 
-|手順|目的|
+|プロシージャ|目的|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|ユーザーが `Application.People` web サイトにアクセスできるようにします。|
 |ChangePassword|ユーザーのパスワードを変更します (外部の認証メカニズムを使用していないユーザーの場合)。|
@@ -183,7 +183,7 @@ WideWorldImporters は少数のスキーマを使用するため、データベ�
 
 売上と購入を挿入するワークロードをシミュレートします。 メインのストアドプロシージャはです `PopulateDataToCurrentDate` 。これは、現在の日付までサンプルデータを挿入するために使用されます。
 
-|手順|目的|
+|プロシージャ|目的|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|データのロードシミュレーションに必要な手順を再作成します。 これは、現在の日付にデータを取り込むために必要です。|
 |Configuration_RemoveDataLoadSimulationProcedures|これにより、データシミュレーションが完了した後に、プロシージャが再度削除されます。|
@@ -196,7 +196,7 @@ WideWorldImporters は少数のスキーマを使用するため、データベ�
 
 これらの手順は、サンプルを構成するために使用されます。 これらは、enterprise edition の機能を standard edition バージョンのサンプルに適用し、監査とフルテキストインデックス作成を追加するために使用されます。
 
-|手順|目的|
+|プロシージャ|目的|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|メンバーがロールにまだ存在しない場合は、メンバーをロールに追加します。|
 |Configuration_ApplyAuditing|監査を追加します。 サーバー監査は standard edition データベースに適用されます。enterprise edition では、追加のデータベース監査が追加されています。|
@@ -215,7 +215,7 @@ WideWorldImporters は少数のスキーマを使用するため、データベ�
 
 データベース内のシーケンスを構成する手順。
 
-|手順|目的|
+|プロシージャ|目的|
 |-----------------------------|---------------------|
 |順序のリセット|すべてのシーケンスに対してプロシージャ ReseedSequenceBeyondTableValue を呼び出します。|
 |ReseedSequenceBeyondTableValue|同じシーケンスを使用するテーブルの値を超えて、次のシーケンス値を再配置するために使用されます。 (例として、シーケンスの場合は、複数のテーブル間では、id 列は DBCC CHECKIDENT に相当します)。|
