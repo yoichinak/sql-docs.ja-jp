@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ae0b544fb49a1161699a1a9e2d152abea2d847bb
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d74fe60ff94d2893dc5a2dd899643cabfd0a4f30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985940"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018282"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>方法:SQL Server 単体テスト デザイナーのテスト条件を作成する
 
@@ -36,7 +36,7 @@ ms.locfileid: "91985940"
   
 6.  **[プロジェクト]** メニューの **[プロジェクトのアンロード]** をクリックします。  
   
-7.  **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[<project name>.csproj の編集]** を選択します。  
+7.  **ソリューション エクスプローラー** でプロジェクトを右クリックして、 **[<project name>.csproj の編集]** を選択します。  
   
 8.  Microsoft.CSharp.targets をインポートした後、次の Import ステートメントを追加します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "91985940"
     <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />  
     ```  
   
-9. ファイルを保存して閉じます。 **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[プロジェクトの再読み込み]** をクリックします。  
+9. ファイルを保存して閉じます。 **ソリューション エクスプローラー** でプロジェクトを右クリックして、 **[プロジェクトの再読み込み]** をクリックします。  
   
 10. [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) クラスから、独自のクラスを派生します。  
   

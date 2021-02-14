@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e815f72ffeaa851c2002bbb92687726e70024db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e673895553b6a3207d0ef86337c47e2f6def2bfe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765595"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339908"
 ---
 # <a name="quantified-expressions-xquery"></a>量化式 (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85765595"
 ( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
- クエリでこれらの式を使用して、1つまたは複数のシーケンスに対する式に明示的に存在する全称または universal を適用することができます。 では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、句内の式は、 `satisfies` ノードシーケンス、空のシーケンス、またはブール値のいずれかになる必要があります。 この式の結果の有効なブール値が、量化に使用されます。 一部を使用する存在する全称は、量指定子によってバインドされた値の少なくと**も**1 つが、対応する式の真の結果を持っている場合に true を返します。 を使用するユニバーサル全称**は、** 量指定子によってバインドされたすべての値に対して True を持つ必要があります。  
+ クエリでこれらの式を使用して、1つまたは複数のシーケンスに対する式に明示的に存在する全称または universal を適用することができます。 では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、句内の式は、 `satisfies` ノードシーケンス、空のシーケンス、またはブール値のいずれかになる必要があります。 この式の結果の有効なブール値が、量化に使用されます。 一部を使用する存在する全称は、量指定子によってバインドされた値の少なくと **も** 1 つが、対応する式の真の結果を持っている場合に true を返します。 を使用するユニバーサル全称 **は、** 量指定子によってバインドされたすべての値に対して True を持つ必要があります。  
   
  たとえば、次のクエリでは、すべての \<Location> 要素が LocationID 属性を持っているかどうかを確認します。  
   
@@ -107,7 +107,7 @@ ProductModelID SmallPicturesStored
   
 -   量化式の変数をバインドする操作の一部として、型のアサーションはサポートされません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XQuery 式](../xquery/xquery-expressions.md)  
   
   

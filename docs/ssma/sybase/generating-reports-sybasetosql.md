@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 99516dc132f9c086c96bb3b886424927d68bab1b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 0dbc28cfac7a6d24bdb239964375ac19ab73ab20
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034961"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080693"
 ---
 # <a name="generating-reports-sybasetosql"></a>レポートの生成 (SybaseToSQL)
 コマンドを使用して実行される特定のアクティビティのレポートは、SSMA コンソールのオブジェクトツリーレベルで生成されます。  
   
 レポートを生成するには、次の手順に従います。  
   
-1.  [ **書き込みの概要-レポート先** ] パラメーターを指定します。 関連するレポートは、ファイル名 (指定されている場合) または指定したフォルダーに格納されます。 次の表で説明するように、ファイル名はシステムで定義されています。 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+1.  [ **書き込みの概要-レポート先** ] パラメーターを指定します。 関連するレポートは、ファイル名 (指定されている場合) または指定したフォルダーに格納されます。 次の表で説明するように、ファイル名はシステムで定義されています。 **&lt; n &gt;** は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
     Reports vis vis コマンドは次のとおりです。  
   
-    |法. いいえ。|command|レポート タイトル|  
+    |法. いいえ。|コマンド|レポート タイトル|  
     |-|-|-|  
     |1|生成-評価-レポート|AssessmentReport &lt; n &gt;XML|  
     |2|変換-スキーマ|SchemaConversionReport &lt; n &gt;XML|  
@@ -85,7 +85,7 @@ ms.locfileid: "92034961"
 ```  
   
 ### <a name="synchronize-target"></a>同期-ターゲット:  
-コマンド **synchronize-target** には、同期操作のエラーレポートの場所を指定する " **レポートエラー-エラー-** パラメーター" があります。 次に、名前を指定してファイルを**Target同期し &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+コマンド **synchronize-target** には、同期操作のエラーレポートの場所を指定する " **レポートエラー-エラー-** パラメーター" があります。 次に、名前を指定してファイルを **Target同期し &lt; &gt; ます。XML** は、指定した場所に作成されます。ここで、 **&lt; n &gt;** は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
 **注:** フォルダーパスが指定されている場合、' report-errors-to ' パラメーターは、コマンド ' synchronize-target ' の省略可能な属性になります。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "92034961"
 -   失敗-スクリプト  
   
 ### <a name="refresh-from-database"></a>データベースからの更新:  
-[ **データベースからの更新** ] コマンドには、[ **レポート-エラー-** ] パラメーターがあります。これにより、更新操作のエラーレポートの場所が指定されます。 次に、Sourcedbrefreshreport n という名前のファイルを作成し** &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+[ **データベースからの更新** ] コマンドには、[ **レポート-エラー-** ] パラメーターがあります。これにより、更新操作のエラーレポートの場所が指定されます。 次に、Sourcedbrefreshreport n という名前のファイルを作成し **&lt; &gt; ます。XML** は、指定した場所に作成されます。ここで、 **&lt; n &gt;** は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
 **注:** フォルダーパスが指定されている場合、' report-errors-to ' パラメーターは、コマンド ' synchronize-target ' の省略可能な属性になります。  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7c776d67ebf49e39ae3593d9ac570fe251abb728
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d0c122440543cc511d78b2c38b688fde672ec6ef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477080"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272633"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>ウィザードを使用したモデルの配置パッケージの作成
 
@@ -28,7 +28,7 @@ ms.locfileid: "88477080"
 
   モデル オブジェクトのみのパッケージを作成するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のモデル配置ウィザードを使用します。 パッケージにデータを含める必要がある場合は、「 [MDSModelDeploy を使用したモデルの配置パッケージの作成](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)」を参照してください。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで、 **[システム管理]** 機能領域にアクセスする権限が必要です。  

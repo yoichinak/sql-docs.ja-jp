@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 738ff14a43dd473abeab0c02ef206417675a7fb9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d434df88cae0a5fb28add27cc9785e659f059ced
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987696"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042492"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>チュートリアル:カスタム テスト条件を使用してストアド プロシージャの結果を検証する
 
@@ -68,7 +68,7 @@ ms.locfileid: "91987696"
   
 次に、必要な参照をプロジェクトに追加します。  
   
-1.  **ソリューション エクスプローラー**で、**ColumnCountCondition** プロジェクトを選択します。  
+1.  **ソリューション エクスプローラー** で、**ColumnCountCondition** プロジェクトを選択します。  
   
 2.  **[プロジェクト]** メニューの **[参照の追加]** をクリックし、 **[参照の追加]** ダイアログ ボックスを表示します。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "91987696"
   
 6.  **[プロジェクト]** メニューの **[プロジェクトのアンロード]** をクリックします。  
   
-7.  **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[<project name>.csproj の編集]** を選択します。  
+7.  **ソリューション エクスプローラー** でプロジェクトを右クリックして、 **[<project name>.csproj の編集]** を選択します。  
   
 8.  **Microsoft.CSharp.targets** をインポートした後、次の Import ステートメントを追加します。  
   
@@ -90,14 +90,14 @@ ms.locfileid: "91987696"
     <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />  
     ```  
   
-9. ファイルを保存して閉じます。 **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[プロジェクトの再読み込み]** をクリックします。  
+9. ファイルを保存して閉じます。 **ソリューション エクスプローラー** でプロジェクトを右クリックして、 **[プロジェクトの再読み込み]** をクリックします。  
   
-    **ソリューション エクスプローラー**で、プロジェクトの **[参照設定]** ノードの下に必要な参照が表示されます。  
+    **ソリューション エクスプローラー** で、プロジェクトの **[参照設定]** ノードの下に必要な参照が表示されます。  
   
 ## <a name="creating-the-resultsetcolumncountcondition-class"></a>ResultSetColumnCountCondition クラスを作成する  
 **Class1** の名前を **ResultSetColumnCountCondition** に変更し、[testcondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) から派生するようにします。 **ResultSetColumnCountCondition** クラスは、ResultSet に返される列数を検証する簡単なテスト条件です。 この条件は、ストアド プロシージャのコントラクトに誤りがないことを確認するために使用できます。  
   
-1.  **ソリューション エクスプローラー**で、Class1.cs を右クリックし、 **[名前の変更]** をクリックして「**ResultSetColumnCountCondition.cs**」と入力します。  
+1.  **ソリューション エクスプローラー** で、Class1.cs を右クリックし、 **[名前の変更]** をクリックして「**ResultSetColumnCountCondition.cs**」と入力します。  
   
 2.  **[はい]** をクリックして、Class1 へのすべての参照名の変更を確定します。  
   
@@ -369,7 +369,7 @@ namespace ColumnCountCondition
   
 1.  **[テスト]** メニューの **[新しいテスト]** をクリックし、 **[新しいテストの追加]** ダイアログ ボックスを表示します。  
   
-    また、**ソリューション エクスプローラー**でテスト プロジェクトを右クリックし、 **[追加]** をポイントして、 **[新しいテスト]** をクリックすることもできます。  
+    また、**ソリューション エクスプローラー** でテスト プロジェクトを右クリックし、 **[追加]** をポイントして、 **[新しいテスト]** をクリックすることもできます。  
   
 2.  テンプレートの一覧で、 **[SQL Server 単体テスト]** をクリックします。  
   
@@ -390,7 +390,7 @@ namespace ColumnCountCondition
   
 新しいテスト条件を表示するには、次の手順を実行します。  
   
-1.  **SQL Server 単体テスト デザイナー**で、 **[テスト条件]** の **[名前]** 列にある inconclusiveCondition1 テストをクリックします。  
+1.  **SQL Server 単体テスト デザイナー** で、 **[テスト条件]** の **[名前]** 列にある inconclusiveCondition1 テストをクリックします。  
   
 2.  **[テスト条件を削除します]** ツール バー ボタンをクリックして、inconclusiveCondition1 テストを削除します。  
   

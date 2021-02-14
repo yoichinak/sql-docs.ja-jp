@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ed7dd109906b4cace6ed185b1842f9e9e7dedde
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: d879088a98bfa7e826c53e4b90822bc65caff57a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037039"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350383"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery Extension Functions - sql:variable()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "92037039"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  「 [Xml 内部のリレーショナルデータのバインド](../t-sql/xml/binding-relational-data-inside-xml-data.md)」で説明したように、 [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md) を使用して XQuery 内にリレーショナル値を公開するときに、この関数を使用できます。  
   
  たとえば、 [query () メソッド](../t-sql/xml/query-method-xml-data-type.md) を使用して、 **xml** データ型の変数または列に格納されている xml インスタンスに対してクエリを指定します。 また、場合によっては、リレーショナル データと XML データを一緒にするために、[!INCLUDE[tsql](../includes/tsql-md.md)] 変数の値 (パラメーター) をクエリで使用することもできます。 これを行うには、 **sql: variable** 関数を使用します。  
   
  SQL 値は、対応する XQuery 値にマップされ、型は、対応する SQL 型に相当する XQuery 基本データ型になります。  
   
- **Xml インスタンスは**、xml DML insert ステートメントのソース式のコンテキストでのみ参照できます。それ以外の場合、 **xml**型または共通言語ランタイム (CLR) ユーザー定義型の値を参照することはできません。  
+ **Xml インスタンスは**、xml DML insert ステートメントのソース式のコンテキストでのみ参照できます。それ以外の場合、 **xml** 型または共通言語ランタイム (CLR) ユーザー定義型の値を参照することはできません。  
   
 ## <a name="examples"></a>例  
   
@@ -55,7 +55,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)] 変数の値 (`DiscountPrice`)。 `sql:variable()`この値を XML にバインドするには、メソッドを使用します。  
   
--   `ProductModelName` **Xml**型の列の値 () を使用して、クエリをさらに興味深いものにします。  
+-   `ProductModelName` **Xml** 型の列の値 () を使用して、クエリをさらに興味深いものにします。  
   
  クエリは次のとおりです。  
   

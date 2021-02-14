@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 33eeff1c3bd33ee193a283c26225418a7ca54a25
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 2df08cca57a68d38c72f19921243ae95ff394c23
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196807"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350097"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>マスター データ マネージャー Web サービス プロキシ クラスの作成
 
@@ -29,10 +29,10 @@ ms.locfileid: "92196807"
   
 1.  テキスト エディターで [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config ファイルを開きます。 このファイルは、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] インストール パスの WebApplication フォルダーにあります。  
   
-2.  の下の **mdsWsHttpBehavior** セクションを検索 **\<serviceBehaviors>** します。 要素については **\<serviceMetadata>** 、 **Httpgetenabled** を **true**に設定します。  
+2.  の下の **mdsWsHttpBehavior** セクションを検索 **\<serviceBehaviors>** します。 要素については **\<serviceMetadata>** 、 **Httpgetenabled** を **true** に設定します。  
   
     > [!NOTE]  
-    >  以前は Secure Sockets Layer (SSL) と呼ばれていたトランスポート層セキュリティ (TLS) を介して Web サービスを有効にする場合は、web.config ファイルの**mdsWsHttpBehavior**セクションで**httpsGetEnabled**を**true**に設定します。 また、TLS 用に構成されるように **mdsWsHTTPBinding** を変更し、非 tls セクションをコメントアウトする必要もあります。  
+    >  以前は Secure Sockets Layer (SSL) と呼ばれていたトランスポート層セキュリティ (TLS) を介して Web サービスを有効にする場合は、web.config ファイルの **mdsWsHttpBehavior** セクションで **httpsGetEnabled** を **true** に設定します。 また、TLS 用に構成されるように **mdsWsHTTPBinding** を変更し、非 tls セクションをコメントアウトする必要もあります。  
   
 3.  変更をファイルに保存します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "92196807"
     "サービスを作成しました。" で始まるページが表示されます。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Visual Studio を使用してプロキシ クラスを作成する  
- Visual Studio 2010 がインストールされている場合、プロキシ クラスを生成する最もシンプルな方法は、プロジェクトに**サービス参照**を追加することです。 サービス参照のアドレスは、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションの URL に、/service/service.svc を付加したものです。 (例: `https://yourserver/MDS/service/service.svc`)。 詳細については、「[方法: サービス参照を追加、更新、または削除する](/previous-versions/bb628652(v=vs.140))」を参照してください。  
+ Visual Studio 2010 がインストールされている場合、プロキシ クラスを生成する最もシンプルな方法は、プロジェクトに **サービス参照** を追加することです。 サービス参照のアドレスは、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションの URL に、/service/service.svc を付加したものです。 たとえば、`https://yourserver/MDS/service/service.svc` のように指定します。 詳細については、「[方法: サービス参照を追加、更新、または削除する](/previous-versions/bb628652(v=vs.140))」を参照してください。  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Svcutil.exe を使用してプロキシ クラスを作成する  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] コンピューターに Svcutil.exe を使用するには、または Windows SDK がインストールされている必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] コマンド プロンプトでコマンドを実行する必要があります。 詳細については、「[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)」および「[サービス メタデータからの WCF クライアントの生成](/dotnet/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata)」を参照してください。  

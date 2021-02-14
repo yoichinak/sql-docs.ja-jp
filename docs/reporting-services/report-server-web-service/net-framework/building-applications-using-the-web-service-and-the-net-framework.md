@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 37d6552c328daff4793ea65d9670752378e1ab3b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d40d77660fd722e668fc5d1d080b52b37bd30822
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509763"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075157"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Web サービスと .NET Framework を使用したアプリケーションの構築
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、Web サービスと連動する、メソッド、プリミティブ型、およびユーザー定義の複合型などのおなじみのプログラミング構成要素を使用できます。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] により、W3C (World Wide Web Consortium) の標準に準拠した任意の Web サービスを呼び出すことができる、Web サービス クライアントを作成するためのインフラストラクチャとツールが提供されます。  

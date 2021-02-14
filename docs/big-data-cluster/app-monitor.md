@@ -10,12 +10,12 @@ ms.date: 08/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1391b88f2762293aa4eebf255682605bf5b6b1e0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 380a6c8ab8812ee6a8aae132cbc12125777e2960
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257282"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100047792"
 ---
 # <a name="monitor-applications-with-azdata-and-grafana-dashboard"></a>azdata と Grafana ダッシュボードでアプリケーションを監視する
 
@@ -37,7 +37,7 @@ SQL Server 2019 では、アプリケーションの作成、削除、説明、�
 |`azdata bdc endpoint list` | ビッグ データ クラスターのエンドポイントを一覧表示します。 |
 
 
-次の例を利用し、**Grafana ダッシュボード**のエンドポイントをリストアップできます。
+次の例を利用し、**Grafana ダッシュボード** のエンドポイントをリストアップできます。
 
 ```bash
 azdata bdc endpoint list --endpoint-name metricsui 

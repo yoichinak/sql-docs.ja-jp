@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aaad5923695e6cb8e98e2c7f40fa2bb9a044a7ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 578d10bc078edf886eb7980c3b7a099c99ef59a5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915548"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338543"
 ---
 # <a name="path-expressions---specifying-node-test"></a>パス式 - ノード テストの指定
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "86915548"
   
 -   [0個以上のステップ修飾子 (省略可能)](../xquery/path-expressions-specifying-predicates.md)  
   
- 詳細については、「[パス式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)」を参照してください。  
+ 詳細については、「 [パス式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)」を参照してください。  
   
  ノードテストは条件であり、パス式の軸ステップの2番目のコンポーネントです。 ステップによって選択されたすべてのノードは、この条件を満たしている必要があります。 パス式 `/child::ProductDescription` の場合、ノード テストは `ProductDescription` です。 この手順では、名前が ProductDescription である要素ノードの子のみを取得します。  
   
@@ -70,9 +70,9 @@ child::ProductDescription
   
  パス式に `/child::PD:ProductDescription/child::PD:Features/descendant::*,` は3つのステップがあります。 これらのステップでは、child 軸と descendant 軸を指定しています。 各ステップでは、ノード名がノードテストとして指定されています。 3番目のステップのワイルドカード文字 () は、 `*` 子孫軸の主要ノード種別のすべてのノードを示します。 軸の主ノード種別によって選択されるノードの種類が決まり、ノード名によって選択されたノードのフィルターが決まります。  
   
- 結果として、この式を**Productmodel**テーブルの製品カタログ XML ドキュメントに対して実行すると、その要素の子である要素ノードの子要素ノードがすべて取得され \<Features> \<ProductDescription> ます。  
+ 結果として、この式を **Productmodel** テーブルの製品カタログ XML ドキュメントに対して実行すると、その要素の子である要素ノードの子要素ノードがすべて取得され \<Features> \<ProductDescription> ます。  
   
- パス式は、次 `/child::PD:ProductDescription/attribute::ProductModelID` の2つの手順で構成されます。 どちらのステップでも、ノード名をノード テストとして指定しています。 また、2番目の手順では、属性軸を使用します。 したがって、各ステップでは、ノードテストとして指定された名前を持つ、その軸の主ノード種別のノードが選択されます。 このため、式は要素ノードの**Productmodelid**属性ノードを返し \<ProductDescription> ます。  
+ パス式は、次 `/child::PD:ProductDescription/attribute::ProductModelID` の2つの手順で構成されます。 どちらのステップでも、ノード名をノード テストとして指定しています。 また、2番目の手順では、属性軸を使用します。 したがって、各ステップでは、ノードテストとして指定された名前を持つ、その軸の主ノード種別のノードが選択されます。 このため、式は要素ノードの **Productmodelid** 属性ノードを返し \<ProductDescription> ます。  
   
  ノードテストにノード名を指定する場合は、次の例に示すように、ワイルドカード文字 (*) を使用してノードのローカル名または名前空間プレフィックスを指定することもできます。  
   
@@ -93,12 +93,12 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>ノード テストとしてのノード型  
  要素ノード以外のノード型を照会するには、ノード型のテストを使用します。 次の表に示すように、4つのノードタイプのテストを使用できます。  
   
-|ノードの種類|戻り値|例|  
+|ノード型|戻り値|例|  
 |---------------|-------------|-------------|  
-|`comment()`|コメント ノードの場合 True です。|`following::comment()`コンテキストノードの後に表示されるすべてのコメントノードを選択します。|  
-|`node()`|任意の種類のノードの場合は True。|`preceding::node()`コンテキストノードの前に表示されるすべてのノードを選択します。|  
-|`processing-instruction()`|処理命令ノードの場合 True です。|`self::processing instruction()`コンテキストノード内のすべての処理命令ノードを選択します。|  
-|`text()`|テキスト ノードの場合は True を返します。|`child::text()`コンテキストノードの子であるテキストノードを選択します。|  
+|`comment()`|コメント ノードの場合 True です。|`following::comment()` コンテキストノードの後に表示されるすべてのコメントノードを選択します。|  
+|`node()`|任意の種類のノードの場合は True。|`preceding::node()` コンテキストノードの前に表示されるすべてのノードを選択します。|  
+|`processing-instruction()`|処理命令ノードの場合 True です。|`self::processing instruction()` コンテキストノード内のすべての処理命令ノードを選択します。|  
+|`text()`|テキスト ノードの場合は True を返します。|`child::text()` コンテキストノードの子であるテキストノードを選択します。|  
   
  text() や comment() などのノード型がノード テストに指定された場合は、軸の主ノード種別にかかわらず、ステップでは指定された種類のノードが返されます。 たとえば、次のパス式は、コンテキストノードの子のコメントノードのみを返します。  
   
@@ -108,11 +108,11 @@ child::comment()
   
  同様に、は、 `/child::ProductDescription/child::Features/child::comment()` \<Features> 要素ノードの子要素ノードの子のコメントノードを取得し \<ProductDescription> ます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ノード名とノードの種類を比較します。  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. ノード名とノード型をノードテストとしてパス式に指定した結果  
- 次の例では、単純な XML ドキュメントが**xml**型の変数に割り当てられています。 別のパス式を使用してドキュメントを照会します。 その後、結果が比較されます。  
+ 次の例では、単純な XML ドキュメントが **xml** 型の変数に割り当てられています。 別のパス式を使用してドキュメントを照会します。 その後、結果が比較されます。  
   
 ```  
 declare @x xml  
@@ -216,7 +216,7 @@ WHERE ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
--   XQuery プロローグ内の `namespace` キーワードにより、クエリ本文で使用するプレフィックスが定義されています。 XQuery プロローグの詳細については、「 [Xquery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)」を参照してください。  
+-   XQuery プロローグ内の `namespace` キーワードにより、クエリ本文で使用するプレフィックスが定義されています。 XQuery プロローグの詳細については、「 [Xquery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md) 」を参照してください。  
   
 -   パス式の3つの手順はすべて、子軸とノード名をノードテストとして指定します。  
   

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: bd86afbe288be3b92b15b6702ec46903f56a2ad5
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: e2ea3a950a548cae6ad23f40055acc09b2e9534f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637805"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048692"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Azure Data Studio でコード スニペットを作成して使用し、Transact-SQL (T-SQL) スクリプトをすばやく作成する
 
@@ -99,6 +99,6 @@ Azure Data Studio には、適切な構文を迅速に生成するのに役立�
 
 新しいスニペットの 1 つを選択し、テストを実行してみましょう。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 SQL エディターの詳細については、[コード エディターのチュートリアル](tutorial-sql-editor.md)に関するページを参照してください。

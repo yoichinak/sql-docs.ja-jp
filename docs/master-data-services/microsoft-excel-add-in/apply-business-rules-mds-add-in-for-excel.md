@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 582c3245d69d1a2bc92b3a4ab3442797116571d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ac9299f7d1b8b436a1ccbbe06eef16df9ea3e7c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257599"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341438"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>ビジネス ルールの適用 (Excel 用 MDS アドイン)
 
@@ -27,7 +27,7 @@ ms.locfileid: "92257599"
 > [!NOTE]  
 >  データの検証は、データをパブリッシュするときに自動的に行われます。 詳細については、「[検証 (マスター データ サービス)](../../master-data-services/validation-master-data-services.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域へのアクセス権が必要です。  

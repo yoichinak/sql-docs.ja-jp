@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a2028a0cc9911308bfe8462be4b826e53e328103
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82d501f5d7c5a4a5b79e55571a7351225833680b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461959"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341492"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>Code 属性の値の自動生成 (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "88461959"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、新しいメンバーが作成されるたびに、エンティティの Code 属性の値に整数を自動的に割り当てる場合は、Code 属性の値を自動的に生成します。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  

@@ -12,26 +12,28 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4a2624566444f5cc3b9531d5b6767937dabb2da6
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f99e5892f697b06bcafcfc35f9672d8ee474bc40
+ms.sourcegitcommit: 10ae200635b9e8554e6bc6f658125e1a80d4d5ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643996"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589300"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>検索で使用するワード ブレーカーを以前のバージョン (SQL Server Search) に戻す
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、フルテキスト検索でサポートされているすべての言語 (韓国語を除く) 用のワード ブレーカーおよびステマーのバージョンがインストールされ、有効になります。 この記事では、これらのコンポーネントのこのバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。  
+
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] では、フルテキスト検索でサポートされているすべての言語 (韓国語を除く) 用のワード ブレーカーおよびステマーのバージョンがインストールされ、有効になります。 この記事では、これらのコンポーネントのこのバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。  
   
  この記事では、次の言語については説明しません。  
   
--   **英語**。 英語のコンポーネントに戻す、または英語のコンポーネントを復元するには、「 [米国英語と英国英語に使用されるワード ブレーカーの変更](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
+- **英語**。 英語のコンポーネントに戻す、または英語のコンポーネントを復元するには、「 [米国英語と英国英語に使用されるワード ブレーカーの変更](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
   
--   **デンマーク語、ポーランド語、およびトルコ語**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のリリースに含まれていたデンマーク語、ポーランド語、およびトルコ語向けのサードパーティ製のワード ブレーカーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] コンポーネントに置き換えられました。  
+- **デンマーク語、ポーランド語、およびトルコ語**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のリリースに含まれていたデンマーク語、ポーランド語、およびトルコ語向けのサードパーティ製のワード ブレーカーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] コンポーネントに置き換えられました。  
   
--   **チェコ語とギリシャ語**。 チェコ語とギリシャ語向けの新しいワード ブレーカーがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト検索の以前のリリースでは、これらの 2 つの言語のサポートは含まれていません。  
+- **チェコ語とギリシャ語**。 チェコ語とギリシャ語向けの新しいワード ブレーカーがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト検索の以前のリリースでは、これらの 2 つの言語のサポートは含まれていません。  
   
--   **韓国語**。 韓国語向けのワード ブレーカーとステマーは、このリリースではアップグレードされていません。  
+- **韓国語**。 韓国語向けのワード ブレーカーとステマーは、このリリースではアップグレードされていません。  
   
  ワード ブレーカーとステマーの全般的な情報については、「 [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
@@ -42,7 +44,7 @@ ms.locfileid: "97643996"
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
 |NaturalLanguage6.dll|NaturalLanguage6.dll|34|以前のバージョンの NaturalLanguage6.dll を入手してインストールし、現在のバージョンのファイルを上書きします。|必要なアクションはありません。<br /><br /> レジストリのキーと値は、このリリースでは変更されていません。|  
 |(その他のファイル名)|NaturalLanguage6.dll|5|以前のバージョンの NaturalLanguage6.dll を入手してインストールし、現在のバージョンのファイルを上書きします。|以前のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更します。|  
-|(その他のファイル名)|(その他のファイル名)|6|必要なアクションはありません。<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップでは、現在と以前の両方のバージョンのコンポーネントを Binn フォルダーにコピーします。|以前のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更します。|  
+|(その他のファイル名)|(その他のファイル名)|6|必要なアクションはありません。<br /><br /> [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のセットアップでは、現在と以前の両方のバージョンのコンポーネントを Binn フォルダーにコピーします。|以前のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更します。|  
   
 > [!WARNING]  
 >  現在のバージョンのファイル (NaturalLanguage6.dll) を別のバージョンに置き換えると、そのファイルを使用するすべての言語の動作が影響を受けます。  
@@ -61,40 +63,40 @@ ms.locfileid: "97643996"
   
 |Language|省略形<br />(レジストリで<br />使用)|LCID|  
 |--------------|---------------------------------------|----------|  
-|ベンガル語|ben|1093|  
-|ブルガリア語|bgr|1026|  
-|カタロニア語|cat|1027|  
-|スペイン語|esn|3082|  
-|フランス語|fra|1036|  
-|グジャラート語|guj|1095|  
-|ヘブライ語|heb|1037|  
-|ヒンディー語|hin|1081|  
-|クロアチア語|hrv|1050|  
-|インドネシア語|ind|1057|  
-|アイスランド語|isl|1039|  
-|イタリア語|ita|1040|  
-|カンナダ語|kan|1099|  
-|リトアニア語|lth|1063|  
-|ラトビア語|lvi|1062|  
-|マラヤーラム語|mal|1100|  
-|マラーティー語|mar|1102|  
-|マレー語|msl|1086|  
-|中立|中立|0000|  
-|ノルウェー語 (ボークモール)|nor|1044|  
-|パンジャーブ語|pan|1094|  
-|ポルトガル語 (ブラジル)|ptb|1046|  
-|Portuguese|ptg|2070|  
-|ルーマニア語|rom|1048|  
-|スロバキア語|sky|1051|  
-|スロベニア語|slv|1060|  
-|セルビア語 - キリル|srb|3098|  
-|セルビア語 - ラテン|srl|2074|  
-|スウェーデン語|sve|1053|  
-|タミル語|tam|1097|  
-|テルグ語|tel|1098|  
-|ウクライナ語|ukr|1058|  
-|ウルドゥ語|urd|1056|  
-|ベトナム語|vit|1066|  
+|ベンガル語|`ben`|1093|  
+|ブルガリア語|`bgr`|1026|  
+|カタロニア語|`cat`|1027|  
+|スペイン語|`esn`|3082|  
+|フランス語|`fra`|1036|  
+|グジャラート語|`guj`|1095|  
+|ヘブライ語|`heb`|1037|  
+|ヒンディー語|`hin`|1081|  
+|クロアチア語|`hrv`|1050|  
+|インドネシア語|`ind`|1057|  
+|アイスランド語|`isl`|1039|  
+|イタリア語|`ita`|1040|  
+|カンナダ語|`kan`|1099|  
+|リトアニア語|`lth`|1063|  
+|ラトビア語|`lvi`|1062|  
+|マラヤーラム語|`mal`|1100|  
+|マラーティー語|`mar`|1102|  
+|マレー語|`msl`|1086|  
+|中立|`Neutral`|0000|  
+|ノルウェー語 (ボークモール)|`nor`|1044|  
+|パンジャーブ語|`pan`|1094|  
+|ポルトガル語 (ブラジル)|`ptb`|1046|  
+|Portuguese|`ptg`|2070|  
+|ルーマニア語|`rom`|1048|  
+|スロバキア語|`sky`|1051|  
+|スロベニア語|`slv`|1060|  
+|セルビア語 - キリル|`srb`|3098|  
+|セルビア語 - ラテン|`srl`|2074|  
+|スウェーデン語|`sve`|1053|  
+|タミル語|`tam`|1097|  
+|テルグ語|`tel`|1098|  
+|ウクライナ語|`ukr`|1058|  
+|ウルドゥ語|`urd`|1056|  
+|ベトナム語|`vit`|1066|  
   
  この表は、省略形の列を基準としてアルファベット順に並べられています。  
   
@@ -102,9 +104,9 @@ ms.locfileid: "97643996"
   
 1.  上で説明した Binn フォルダーに移動します。  
   
-2.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの NaturalLanguage6.dll を別の場所にバックアップします。  
+2.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] バージョンの NaturalLanguage6.dll を別の場所にバックアップします。  
   
-3.  以前のバージョンの NaturalLanguage6.dll を、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスの Binn フォルダーから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの Binn フォルダーにコピーします。  
+3.  以前のバージョンの NaturalLanguage6.dll を、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスの Binn フォルダーから [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インスタンスの Binn フォルダーにコピーします。  
   
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
@@ -113,9 +115,9 @@ ms.locfileid: "97643996"
 
 ###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> 現在のコンポーネントを復元するには  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの NaturalLanguage6.dll をバックアップした場所に移動します。  
+1.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] バージョンの NaturalLanguage6.dll をバックアップした場所に移動します。  
   
-2.  現在のバージョンの NaturalLanguage6.dll を、バックアップ場所から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの Binn フォルダーにコピーします。  
+2.  現在のバージョンの NaturalLanguage6.dll を、バックアップ場所から [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インスタンスの Binn フォルダーにコピーします。  
   
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
@@ -148,9 +150,9 @@ ms.locfileid: "97643996"
   
 2.  現在のバージョンのコンポーネントのファイルを Binn フォルダーから削除しないでください。  
   
-3.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの NaturalLanguage6.dll を別の場所にバックアップします。  
+3.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] バージョンの NaturalLanguage6.dll を別の場所にバックアップします。  
   
-4.  以前のバージョンの NaturalLanguage6.dll を、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスの Binn フォルダーから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの Binn フォルダーにコピーします。  
+4.  以前のバージョンの NaturalLanguage6.dll を、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスの Binn フォルダーから、新しい [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インスタンスの Binn フォルダーにコピーします。  
   
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
@@ -177,9 +179,9 @@ ms.locfileid: "97643996"
   
 ###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> 現在のコンポーネントを復元するには  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの NaturalLanguage6.dll をバックアップした場所に移動します。  
+1.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] バージョンの NaturalLanguage6.dll をバックアップした場所に移動します。  
   
-2.  現在のバージョンの NaturalLanguage6.dll を、バックアップ場所から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの Binn フォルダーにコピーします。  
+2.  現在のバージョンの NaturalLanguage6.dll を、バックアップ場所から [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インスタンスの Binn フォルダーにコピーします。  
   
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
@@ -255,7 +257,7 @@ ms.locfileid: "97643996"
 |現在のファイル名|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> 以前と現在のファイル名がどちらも NaturalLanguage6.dll でない言語  
- 次の表に示す言語では、以前のワード ブレーカーとステマーのファイル名が新しいバージョンのファイル名とは異なります。 以前と現在のファイル名はどちらも NaturalLanguage6.dll ではありません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップでは、現在と以前の両方のバージョンのコンポーネントを Binn フォルダーにコピーするため、ファイルを置き換える必要はありません。 ただし、以前または現在のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更する必要があります。  
+ 次の表に示す言語では、以前のワード ブレーカーとステマーのファイル名が新しいバージョンのファイル名とは異なります。 以前と現在のファイル名はどちらも NaturalLanguage6.dll ではありません。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のセットアップでは、現在と以前の両方のバージョンのコンポーネントを Binn フォルダーにコピーするため、ファイルを置き換える必要はありません。 ただし、以前または現在のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更する必要があります。  
   
  **影響を受ける言語の一覧**  
   

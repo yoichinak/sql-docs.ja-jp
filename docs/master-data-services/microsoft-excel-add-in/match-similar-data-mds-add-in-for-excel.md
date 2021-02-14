@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 650c85f68003bda41e19e6f765898a23290480b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33fd27e1c2a60d3e895ed7068224e30866d95779
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92255192"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344743"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>類似データの照合 (Excel 用 MDS アドイン)
 
@@ -30,11 +30,11 @@ ms.locfileid: "92255192"
   
 -   独自のカスタムな DQS ナレッジ ベースと照合ポリシーを作成します。 詳細については、「 [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md)」をご参照ください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
   
 -   MDS によって管理されるデータが含まれているワークシートが必要です。 詳細については、「 [マスター データ サービスからデータを Excel にエクスポート](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)」を参照してください。  
   
--   省略可能。 類似性をチェックする前に、MDS によって管理されるデータとその他のデータを結合することができます。 詳細については、「 [データの結合 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/combine-data-mds-add-in-for-excel.md)」を参照してください。  
+-   任意。 類似性をチェックする前に、MDS によって管理されるデータとその他のデータを結合することができます。 詳細については、「 [データの結合 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/combine-data-mds-add-in-for-excel.md)」を参照してください。  
   
 ### <a name="to-find-similarities-by-using-the-default-knowledge-base"></a>既定のナレッジ ベースを使用して類似性を見つけるには  
   

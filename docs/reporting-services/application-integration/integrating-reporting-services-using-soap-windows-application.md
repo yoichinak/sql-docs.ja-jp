@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 78bdfb5335f00df64e1ae3a98a6a34aa26f71881
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a91f7cd3a95b722db1c595767ed71900bc55af55
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198201"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100082563"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>SOAP を使用した Reporting Services の統合 - Windows アプリケーション
   Reporting Services SOAP API からは、レポート サーバーのすべての機能にアクセスできます。 SOAP API は Web サービスです。したがって、SOAP API に容易にアクセスし、エンタープライズ レポート機能をカスタム ビジネス アプリケーションに取り入れることができます。 Windows アプリケーションの Web サービスにアクセスするには、サービスへの呼び出しを作成するコードを記述します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用すると、プロキシ クラスを生成して、Web サービスのプロパティとメソッドを表示し、使い慣れたインフラストラクチャとツールを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の技術に基づいたビジネス アプリケーションを構築できます。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 549a1659bcbcf954a4039a152c5b372a758d0c74
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933555"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014832"
 ---
 # <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>自動実行アカウントの構成 (レポート サーバー構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。 アカウントは次の場合に使用します。  
@@ -48,7 +48,7 @@ ms.locfileid: "91933555"
 3.  アカウントとパスワードを入力し、パスワードを再入力して、 **[適用]** をクリックします。  
   
 ### <a name="using-rsconfig-utility"></a>RSCONFIG ユーティリティの使用  
- アカウントを設定するもう 1 つの方法は、 **rsconfig** ユーティリティを使用することです。 アカウントを指定するには、 **rsconfig** の **-e**引数を使用します。 **rsconfig** に **-e** 引数を指定すると、構成ファイルにアカウント情報を書き込むようユーティリティに指示できます。 RSreportserver.config へのパスを指定する必要はありません。アカウントを構成するには、次の手順に従います。  
+ アカウントを設定するもう 1 つの方法は、 **rsconfig** ユーティリティを使用することです。 アカウントを指定するには、 **rsconfig** の **-e** 引数を使用します。 **rsconfig** に **-e** 引数を指定すると、構成ファイルにアカウント情報を書き込むようユーティリティに指示できます。 RSreportserver.config へのパスを指定する必要はありません。アカウントを構成するには、次の手順に従います。  
   
 1.  レポート サーバーにデータまたはサービスを提供するコンピューターおよびサーバーに対してアクセス権を持つ、ドメイン アカウントを作成または選択します。 少ない権限を持つアカウントを使用することをお勧めします (たとえば、読み取り専用権限)。  
   

@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: ''
 ms.date: 11/10/2020
-ms.openlocfilehash: 30205befcdd9da78f4f9a3f002ddd398f49abc55
-ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
+ms.openlocfilehash: 31b0dedb8544cc6752eac8a9934aa92d74d424ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98005387"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081879"
 ---
 # <a name="sp_data_source_table_columns-transact-sql"></a>sp_data_source_table_columns (Transact-sql)
 
@@ -59,9 +59,9 @@ sp_data_source_table_columns
 |---|---|---|
 |NAME|nvarchar(max)|列の名前。
 |TYPE|nvarchar(200)|SQL Server 型名
-|LENGTH|int|列の長さ
-|PRECISION|int|列の有効桁数
-|SCALE|int|列の小数点以下桁数
+|LENGTH|INT|列の長さ
+|PRECISION|INT|列の有効桁数
+|SCALE|INT|列の小数点以下桁数
 |COLLATION|nvarchar(200)|列の SQL Server 照合順序
 |IS_NULLABLE|bit|この列は null 値を許容します。
 |SOURCE_TYPE_NAME|nvarchar(max)|バックエンド固有の型名。 ほとんどはデバッグに使用されます。 ODBC ソースの場合は、SQLColumns () の TYPE_NAME 結果列に対応します。

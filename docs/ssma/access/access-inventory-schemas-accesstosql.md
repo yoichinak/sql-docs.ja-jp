@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 593c36c193b95d1484f3d478018992ea130d5417
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bddb9d2329c20203aca602e7aec37f235c4b6850
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418638"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077673"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>インベントリスキーマへのアクセス (アクセスアクセス Sql)
 次のセクションでは、にアクセススキーマをエクスポートするときに SSMA によって作成されるテーブルについて説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -67,12 +67,12 @@ ms.locfileid: "88418638"
 |**レポート数**|**int**|Access データベース内のレポートの数。|  
 |**MacrosCount**|**int**|Access データベース内のマクロの数。|  
 |**AccessVersion**|**nvarchar (4000)**|データベースのアクセスバージョン。|  
-|**Collation**|**nvarchar (4000)**|Access データベースの照合順序です。 照合順序は、データベースが文字列の並べ替えと比較を行う方法を決定します。|  
+|**照合順序**|**nvarchar (4000)**|Access データベースの照合順序です。 照合順序は、データベースが文字列の並べ替えと比較を行う方法を決定します。|  
 |**JetVersion**|**nvarchar (4000)**|Jet データベースエンジンのバージョンです。 データベースにアクセスするには、基になる Jet データベースエンジンを使用します。|  
 |**Isupable**|**bit**|データベースを更新できるかどうかを示します。 値が1の場合、データベースは更新可能です。 値が0の場合、データベースは読み取り専用です。|  
 |**QueryTimeout**|**int**|データベースの構成済み ODBC クエリタイムアウト値 (秒単位)。 既定値は 60 秒です。|  
   
-## <a name="tables"></a>テーブル  
+## <a name="tables"></a>[テーブル]  
 テーブルのメタデータが **SSMA_Access_InventoryTables** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
@@ -85,7 +85,7 @@ ms.locfileid: "88418638"
 |**LinkedTable**|**nvarchar (4000)**|テーブルにリンクされている別のテーブル (存在する場合)。 テーブルをリンクすると、このテーブルを使用して、他のテーブルの追加、削除、および更新を行うことができます。|  
 |**ExternalSource**|**nvarchar (4000)**|テーブルに関連付けられているデータソース (存在する場合)。 テーブルがリンクされている場合、このフィールドには外部データソースが指定されています。|  
   
-## <a name="columns"></a>[列]  
+## <a name="columns"></a>列  
 列のメタデータが **SSMA_Access_InventoryColumns** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
@@ -95,13 +95,13 @@ ms.locfileid: "88418638"
 |**ColumnId**|**int**|列を識別するインクリメント整数。 **ColumnId** は、テーブルの主キーです。|  
 |**[ColumnName]**|**nvarchar (4000)**|列の名前。|  
 |**IsNullable**|**bit**|列に null 値を含めることができるかどうかを指定します。 値が1の場合、列に null 値を含めることができます。 値が0の場合、列に null 値を含めることはできません。 検証規則は、null 値を防ぐためにも使用できます。|  
-|**DataType**|**nvarchar (4000)**|**Text**や**Long**など、列のアクセスデータ型。|  
+|**DataType**|**nvarchar (4000)**|**Text** や **Long** など、列のアクセスデータ型。|  
 |**IsAutoIncrement**|**bit**|列が自動的に整数値をインクリメントするかどうかを指定します。 値が1の場合、整数は自動的にインクリメントされます。|  
 |**Ordinal**|**smallint**|テーブル内の列の順序。0から始まります。|  
-|**既定**|**nvarchar (4000)**|列の既定値。|  
+|**DefaultValue**|**nvarchar (4000)**|列の既定値です。|  
 |**ValidationRule**|**nvarchar (4000)**|列に追加または更新されたデータの検証に使用されるルール。|  
   
-## <a name="indexes"></a>インデックス  
+## <a name="indexes"></a>Indexes  
 インデックスメタデータは **SSMA_Access_InventoryIndexes** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
@@ -141,7 +141,7 @@ ms.locfileid: "88418638"
 |**QueryName**|**nvarchar (4000)**|クエリ名を返します。|  
 |**QueryText**|**nvarchar (4000)**|SQL クエリコード (SELECT ステートメントなど)。|  
 |**IsUpdateable シリアライズ)**|**bit**|クエリを更新可能にするか、読み取り専用にするかを指定します。|  
-|**QueryType**|**nvarchar (4000)**|**Select**や**SetOperation**など、クエリの種類を指定します。|  
+|**QueryType**|**nvarchar (4000)**|**Select** や **SetOperation** など、クエリの種類を指定します。|  
 |**ExternalSource**|**nvarchar (4000)**|クエリが外部データソースを参照している場合は、クエリによって使用される接続文字列です。|  
   
 ## <a name="forms"></a>フォーム  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 91abdbbec357c5d5b7b629c5619b221c14bc0d15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c1331d00c0c39cbe3a82f4372aaed38a315dc3c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500596"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338980"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>属性グループを削除する (マスター データ サービス)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88500596"
   
 -   **注** 属性グループが存在する場合、いずれの属性グループにも属さない属性は **[エクスプローラー]** に表示されません。 属性グループが存在しない場合、すべての属性が表示されます。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  

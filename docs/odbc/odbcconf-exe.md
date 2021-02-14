@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4f4af809044a46fd6df8c45c77cf1d3a7929226
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e62fec06a10316bb3b773cf599f11c23ba376cfd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471257"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075048"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF.EXE
 ODBCCONF.exe は、ODBC ドライバーとデータソース名を構成できるコマンドラインツールです。  
@@ -50,7 +50,7 @@ ODBCCONF [switches] action
 |/E|処理が完了したら、/F で指定された応答ファイルを消去します。|  
 |/F|などの応答ファイルを使用し `odbcconf /F my.rsp` ます。<br /><br /> .rsp は次のようになります。 `REGSVR c:\my.dll`<br /><br /> /A は、応答ファイルでは使用されません。|  
 |/H|使用状況 (ヘルプ) を表示します。 このスイッチは/? と同じです。|  
-|/L [*モード*] *ファイル名*|プログラム出力をファイルに送信するには、次の3つのモードのいずれかを実行します: normal (n)、verbose (v)、debug (d)。 デバッグモードでは、odbcconf.exe によって読み込まれる Dll が記録されます。<br /><br /> モードを指定せずに/L を指定すると、ログファイルは空になります。<br /><br /> たとえば、 **/lv は log.txt**です。|  
+|/L [*モード*] *ファイル名*|プログラム出力をファイルに送信するには、次の3つのモードのいずれかを実行します: normal (n)、verbose (v)、debug (d)。 デバッグモードでは、odbcconf.exe によって読み込まれる Dll が記録されます。<br /><br /> モードを指定せずに/L を指定すると、ログファイルは空になります。<br /><br /> たとえば、 **/lv は log.txt** です。|  
 |/R|操作は再起動後に実行されます。|  
 |/S|サイレント モード。 エラーメッセージを表示しません。|  
   
@@ -64,7 +64,7 @@ ODBCCONF [switches] action
 |INSTALLDRIVER|[Sqlinstalldriverex 関数](../odbc/reference/syntax/sqlinstalldriverex-function.md)と同じです。<br /><br /> INSTALLDRIVER に渡されるキーワードと値のペアの構文の詳細については、「 [Driver Specification サブキー](../odbc/reference/install/driver-specification-subkeys.md)」を参照してください。<br /><br /> 次に例を示します。<br /><br /> /A {INSTALLDRIVER "your Driver &#124; Driver =c:\your.dll &#124; Setup =c:\your.dll &#124; APILevel = 2 &#124; ConnectFunctions = YYY &#124; DriverODBCVer = 03.50 &#124; FileUsage = 0 &#124; SQLLevel = 1"}|  
 |INSTALLTRANSLATOR *translator の構成 * * ドライバーのパス*|変換プログラムに関する情報を **HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI \ ODBC** translator レジストリキーに追加します。<br /><br /> [SQLInstallTranslatorEx 関数](../odbc/reference/syntax/sqlinstalltranslatorex-function.md)と同じです。<br /><br /> INSTALLDRIVER に渡されるキーワードと値のペアの構文の詳細については、「 [Translator Specification サブキー](../odbc/reference/install/translator-specification-subkeys.md)」を参照してください。<br /><br /> 次に例を示します。<br /><br /> /A {INSTALLTRANSLATOR "My Translator &#124; Translator =c:\my.dll &#124; Setup =c:\my.dll"}|  
 |REGSVR *dll*|DLL を登録します。<br /><br /> regsvr32.exe と同じです。<br /><br /> 次に例を示します。<br /><br /> /A {REGSVR c:\my.dll}|  
-|SETFILEDSNDIR|HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI \ ODBC ファイル DSN\DefaultDSNDir が存在しない場合は、SETFILEDSNDIR アクションによって作成され、HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir に \ODBC\Data ソースと共に付加された値が割り当てられます。<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI \ odbc ファイル DSN\DefaultDSNDir の値は、ファイルベースのデータソースを作成するときに、ODBC データソースアドミニストレーターによって使用される既定の場所を指定します。<br /><br /> 次に例を示します。<br /><br /> /A {SETFILEDSNDIR}|  
+|SETFILEDSNDIR|HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI \ ODBC ファイル DSN\DefaultDSNDir が存在しない場合は、SETFILEDSNDIR アクションによって作成され、HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir に \ODBC\Data ソースと共に付加された値が割り当てられます。<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI \ odbc ファイル DSN\DefaultDSNDir の値は、ファイルベースのデータソースを作成するときに、ODBC データソースアドミニストレーターによって使用される既定の場所を指定します。<br /><br /> 次に例を示します。<br /><br /> /A {SETFILEDSNDIR}|  
   
 ## <a name="see-also"></a>参照  
  [Microsoft Open Database Connectivity (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)

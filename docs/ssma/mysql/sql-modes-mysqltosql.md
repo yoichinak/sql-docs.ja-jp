@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8d0631b35d2631e04cfad5c509d6084ba0a30aaf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e09a38ce70b4f144f6da324525a7fee925d586a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497719"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074473"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL モード (MySQLToSQL)
 SSMA for MySQL は、さまざまな SQL モードで動作し、クライアントごとに異なるモードを適用できます。  
@@ -24,9 +24,9 @@ SSMA for MySQL は、さまざまな SQL モードで動作し、クライアン
   
 ## <a name="sql-modes-grid"></a>SQL モードグリッド:  
   
--   ルートレベルの SQL モードグリッドには、次の列が含まれています: **Sql モード名**、読み込まれた **sql**モード、および **有効な sql モード**。  
+-   ルートレベルの SQL モードグリッドには、次の列が含まれています: **Sql モード名**、読み込まれた **sql** モード、および **有効な sql モード**。  
   
--   データベースカテゴリ、データベース、テーブルカテゴリ、ステートメントカテゴリ、ビューカテゴリ、テーブル、ビュー、関数、プロシージャ、UDF、およびイベントオブジェクトレベルの SQL モードグリッドには、 **Sql モード名**、継承された **sql**モード、および **有効な sql モード**という列が含まれています。  
+-   データベースカテゴリ、データベース、テーブルカテゴリ、ステートメントカテゴリ、ビューカテゴリ、テーブル、ビュー、関数、プロシージャ、UDF、およびイベントオブジェクトレベルの SQL モードグリッドには、 **Sql モード名**、継承された **sql** モード、および **有効な sql モード** という列が含まれています。  
   
 -   ストアドプロシージャ、ストアドプロシージャ、およびトリガーレベルの SQL モードグリッドには、次の列が含まれています: **Sql モード名**、  **元の sql モード**、および **有効な sql モード**。  
   

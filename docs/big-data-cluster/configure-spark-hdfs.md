@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1e5d0941256fbb1e167f65489e250eed9c9b895a
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 2fa2b5a3e9b7f996866ae1fca16c32ff1e1ba39e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257222"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039159"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>ビッグ データ クラスターで Apache Spark と Apache Hadoop を構成する
 
@@ -33,7 +33,7 @@ ms.locfileid: "92257222"
 
 [サポートされている構成](reference-config-spark-hadoop.md#supported-configurations)には、SQL Server ビッグ データ クラスターの展開時に構成できる Apache Spark と Hadoop のプロパティがリストアップされています。
 
-次のセクションでは、クラスターで変更**できない**プロパティをリストアップしています。
+次のセクションでは、クラスターで変更 **できない** プロパティをリストアップしています。
 
 - [サポートされていない `spark` 構成](reference-config-spark-hadoop.md#unsupported-spark-configurations)
 - [サポートされていない `hdfs` 構成](reference-config-spark-hadoop.md#unsupported-hdfs-configurations)

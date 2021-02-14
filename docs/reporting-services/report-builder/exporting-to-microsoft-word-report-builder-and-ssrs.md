@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: afcafeeb554e60c84c3d5e5051db354721371416
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e1a9fd855d1b0bc8defd0e4355f490a2824fead6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86972130"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015262"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
@@ -132,7 +132,7 @@ ms.locfileid: "86972130"
   
 -   レポートのエクスポート後、Word によって改ページ位置の自動修正が再度実行されます。 これにより、レンダリングされたレポートに余分な改ページが追加される場合があります。  
   
--   Tablix (テーブル、マトリックス、または一覧) の静的なヘッダー行の RepeatOnNewPage プロパティを **True**に設定しても、Word では、2 ページ目以降にヘッダー行が表示されません。 新しいページにヘッダー行を表示するには、レポートで明示的な改ページを定義することができます。 ただし、Word では、独自の改ページ位置の自動修正が、Word にエクスポートされた表示レポートに適用されるため、結果は異なる可能性があり、ヘッダー行が予測どおりに表示されない場合があります。 静的なヘッダー行とは、列見出しを含む行のことです。  
+-   Tablix (テーブル、マトリックス、または一覧) の静的なヘッダー行の RepeatOnNewPage プロパティを **True** に設定しても、Word では、2 ページ目以降にヘッダー行が表示されません。 新しいページにヘッダー行を表示するには、レポートで明示的な改ページを定義することができます。 ただし、Word では、独自の改ページ位置の自動修正が、Word にエクスポートされた表示レポートに適用されるため、結果は異なる可能性があり、ヘッダー行が予測どおりに表示されない場合があります。 静的なヘッダー行とは、列見出しを含む行のことです。  
   
 -   改行をしないスペースが含まれている場合、テキスト ボックスが大きくなります。  
   

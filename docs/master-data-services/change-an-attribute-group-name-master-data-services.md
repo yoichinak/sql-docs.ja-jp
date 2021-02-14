@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d7fab1a8f16c51d52e32c0147a85ab6ef08cd821
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ef8ddfdf5444683ebef8ffd82042cd6e83951cf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461941"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272863"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>属性グループ名を変更する (マスター データ サービス)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88461941"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループ名を変更できます。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  

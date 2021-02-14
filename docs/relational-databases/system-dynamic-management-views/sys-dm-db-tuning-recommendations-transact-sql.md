@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9037aaefe27cd50deb9b61af423a8074ab86f65
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 332e035a12de891bde8324a55f08a2baf59a9edc
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204808"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343042"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>sys.dm \_ db \_ チューニングに \_ 関する推奨事項 (transact-sql)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "99204808"
 | **reason** | **nvarchar (4000)** | この推奨事項が提供された理由。 |
 | **有効 \_ 期限** | **datetime2** | この推奨事項が初めて生成されたとき。 |
 | **最終 \_ 更新** | **datetime2** | この推奨事項が最後に生成された時刻。 |
-| **state** | **nvarchar (4000)** | 推奨事項の状態を説明する JSON ドキュメント。 次のフィールドを使用できます。<br />-   `currentValue` -推奨事項の現在の状態。<br />-   `reason` -推奨設定が現在の状態である理由を示す定数。|
+| **状態** | **nvarchar (4000)** | 推奨事項の状態を説明する JSON ドキュメント。 次のフィールドを使用できます。<br />-   `currentValue` -推奨事項の現在の状態。<br />-   `reason` -推奨設定が現在の状態である理由を示す定数。|
 | **\_実行可能な \_ アクション** | **bit** | 1 = 推奨事項は、スクリプトを使用してデータベースに対して実行でき [!INCLUDE[tsql_md](../../includes/tsql-md.md)] ます。<br />0 = データベースに対して推奨設定を実行することはできません (例: 情報のみ、または推奨事項を元に戻します)。 |
 | **is \_ revertable \_ action** | **bit** | 1 = 推奨事項は、データベースエンジンによって自動的に監視および元に戻すことができます。<br />0 = 推奨事項を自動的に監視して元に戻すことはできません。 ほとんど &quot; の実行可能な &quot; アクションは revertable になり &quot; &quot; ます。 |
 | **実行 \_ アクションの \_ 開始 \_ 時刻** | **datetime2** | 推奨事項が適用される日付。 |
@@ -57,12 +57,12 @@ ms.locfileid: "99204808"
 | **スコア** | **int** | 0-100 スケールでのこの推奨事項の推定値/影響 (より優れたもの) |
 | **住所** | **nvarchar(max)** | 推奨事項についての詳細が記載された JSON ドキュメント。 次のフィールドを使用できます。<br /><br />`planForceDetails`<br />-    `queryId` - \_ 低下したクエリのクエリ id。<br />-    `regressedPlanId` -低下したプランの plan_id。<br />-   `regressedPlanExecutionCount` -回帰が検出されるまでの低下した plan を使用したクエリの実行回数。<br />-    `regressedPlanAbortedCount` -低下したプランの実行中に検出されたエラーの数。<br />-    `regressedPlanCpuTimeAverage` -回帰が検出される前に低下したクエリによって消費される平均 CPU 時間 (マイクロ秒)。<br />-    `regressedPlanCpuTimeStddev` -回帰が検出される前に低下したクエリによって消費される CPU 時間の標準偏差。<br />-    `recommendedPlanId` -強制する計画の plan_id。<br />-   `recommendedPlanExecutionCount`-回帰が検出される前に強制される必要があるプランを持つクエリの実行回数。<br />-    `recommendedPlanAbortedCount` -プランの実行中に強制される必要がある検出されたエラーの数。<br />-    `recommendedPlanCpuTimeAverage` -強制的に実行する必要がある (回帰が検出される前に計算された) プランで実行されたクエリによって消費される平均 CPU 時間 (マイクロ秒)。<br />-    `recommendedPlanCpuTimeStddev` 回帰が検出される前に低下したクエリによって消費される CPU 時間の標準偏差。<br /><br />`implementationDetails`<br />-  `method` -回帰を修正するために使用する必要があるメソッド。 値は常に `TSql` です。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 推奨されるプランを強制するために実行するスクリプト。 |
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  によって返される情報 `sys.dm_db_tuning_recommendations` は、データベースエンジンによってクエリパフォーマンスの潜在的な回帰が識別され、保存されない場合に更新されます。 推奨事項は、が再起動されるまで保持され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 サーバーの再利用後に保持する場合は、データベース管理者がチューニングの推奨設定のバックアップコピーを定期的に作成する必要があります。 
 
  `currentValue` 列のフィールドには `state` 、次の値が含まれる場合があります。
  
- | 状態 | 説明 |
+ | Status | 説明 |
  |--------|-------------|
  | `Active` | 推奨事項はアクティブであり、まだ適用されていません。 ユーザーは推奨設定のスクリプトを取得し、手動で実行できます。 |
  | `Verifying` | 推奨事項はによって適用され [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 、内部検証プロセスは、強制されたプランのパフォーマンスを低下したプランと比較します。 |
@@ -85,6 +85,8 @@ ms.locfileid: "99204808"
 | `VerificationForcedQueryRecompile`| パフォーマンスが大幅に改善されないため、クエリが再コンパイルされます。 |
 | `PlanForcedByUser`| ユーザーは [sp_query_store_force_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) プロシージャを使用して手動でプランを強制しています。 ユーザーが明示的に何らかのプランを強制する場合、データベースエンジンは推奨設定を適用しません。 |
 | `PlanUnforcedByUser` | ユーザーは [sp_query_store_unforce_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) プロシージャを使用して、手動でプランを強制解除します。 ユーザーが明示的に推奨プランを元に戻したため、データベースエンジンは現在のプランをそのまま使用し、将来、何らかのプラン回帰が発生した場合に新しい推奨設定を生成します。 |
+| `UserForcedDifferentPlan` | ユーザーは [sp_query_store_force_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) プロシージャを使用して手動で別のプランを強制しています。 ユーザーが明示的に何らかのプランを強制する場合、データベースエンジンは推奨設定を適用しません。 |
+| `TempTableChanged` | プランで使用された一時テーブルが変更されます。 |
 
  [詳細] 列の統計情報には、ランタイムプランの統計情報 (現在の CPU 時間など) は表示されません。 推奨事項の詳細は、回帰の検出時に取得され、特定されたパフォーマンスの回帰の理由を説明し [!INCLUDE[ssde_md](../../includes/ssde_md.md)] ます。 およびを使用し `regressedPlanId` て `recommendedPlanId` [クエリストアカタログビュー](../../relational-databases/performance/how-query-store-collects-data.md) に対してクエリを実行し、正確なランタイムプランの統計情報を検索します。
 

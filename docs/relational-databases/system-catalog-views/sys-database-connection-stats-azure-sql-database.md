@@ -21,12 +21,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 948a45e2f9d2dca95bca1c3afbaed419030f47df
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9aaca2dee46593d637b11cde9b4e9e2a55664f6b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210359"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350895"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL データベース)
 
@@ -34,7 +34,7 @@ ms.locfileid: "99210359"
 
   データベース接続の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 成功と失敗の概要を提供する、データベース接続イベントの統計が含まれます。 接続イベントの詳細については、「 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)のイベントの種類」を参照してください。  
   
-|統計|Type|説明|  
+|統計|Type|[説明]|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|データベース名。|  
 |**start_time**|**datetime2**|集計間隔の開始時刻を示す UTC 日時。 この時刻は常に 5 分の倍数です。 次に例を示します。<br /><br /> ' 2011-09-28 16:00:00 '<br />' 2011-09-28 16:05:00 '<br />' 2011-09-28 16:10:00 '|  
@@ -45,7 +45,7 @@ ms.locfileid: "99210359"
 |**terminated_connection_count**|**int**|**_V11 にのみ適用さ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] れます。_**<br /><br /> 終了した接続の数。|  
 |**throttled_connection_count**|**int**|**_V11 にのみ適用さ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] れます。_**<br /><br /> スロットルされた接続の数。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="event-aggregation"></a>イベント集計
 

@@ -15,12 +15,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 7353d02985194024c24319df5c6eca1100607d29
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 35b7d58a37e5f343380af6ef26e1f8e9bdb11102
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195877"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835921"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services パッケージのアップグレード
 
@@ -48,7 +48,7 @@ ms.locfileid: "92195877"
 ## <a name="custom-applications-and-custom-components"></a>カスタム アプリケーションおよびカスタム コンポーネント  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 カスタム コンポーネントが動作しません。  
   
- 現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ツールを使用して、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] カスタム コンポーネントが含まれているパッケージを実行および管理することができます。 ランタイム アセンブリを Version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、Version 11.0.0.0 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])、または Version 12.0.0.0 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) から Version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトする際に役立つ 4 つのバインド リダイレクト ルールが次のファイルに追加されました。  
+ 現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ツールを使用して、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] カスタム コンポーネントが含まれているパッケージを実行および管理することができます。 ランタイム アセンブリを Version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、Version 11.0.0.0 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])、または Version 12.0.0.0 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) から Version 15.0.0.0 ([!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]) にリダイレクトする際に役立つ 4 つのバインド リダイレクト ルールが次のファイルに追加されました。  
   
 -   DTExec.exe.config  
   
@@ -62,10 +62,10 @@ ms.locfileid: "92195877"
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使って、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] カスタム コンポーネントを含むパッケージを設計するには、 *\<drive>* :\Program Files\Microsoft Visual Studio 10.0\Common7\IDE にある devenv.exe.config ファイルを変更する必要があります。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のランタイムで構築された顧客アプリケーションでこれらのパッケージを使用するには、実行可能ファイルに対応する *.exe.config ファイルの configuration セクションにリダイレクト ルールを含めます。 これらのルールにより、ランタイム アセンブリが Version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトされます。 アセンブリ バージョン リダイレクトの詳細については、[\<runtime> の \<assemblyBinding> 要素](/dotnet/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime)を参照してください。  
+ [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]のランタイムで構築された顧客アプリケーションでこれらのパッケージを使用するには、実行可能ファイルに対応する *.exe.config ファイルの configuration セクションにリダイレクト ルールを含めます。 これらのルールにより、ランタイム アセンブリが Version 15.0.0.0 ([!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]) にリダイレクトされます。 アセンブリ バージョン リダイレクトの詳細については、[\<runtime> の \<assemblyBinding> 要素](/dotnet/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime)を参照してください。  
   
 ### <a name="locating-the-assemblies"></a>アセンブリの場所  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリが .NET 4 にアップグレードされました。 *\<drive>* :\Windows\Microsoft.NET\assembly に、.NET 4 用の別のグローバル アセンブリ キャッシュが用意されています。 すべての [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリは、通常、このパスの GAC_MSIL フォルダーにあります。  
+ [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリが .NET 4 にアップグレードされました。 *\<drive>* :\Windows\Microsoft.NET\assembly に、.NET 4 用の別のグローバル アセンブリ キャッシュが用意されています。 すべての [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリは、通常、このパスの GAC_MSIL フォルダーにあります。  
   
  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同様に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のコア機能拡張 .dll ファイルは *\<drive>* :\Program Files\Microsoft SQL Server\130\SDK\Assemblies にあります。  
   

@@ -21,12 +21,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec5ad1373336d3cc3873e0a0b81c2ad6c27291fa
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 00783bffefd33038d079280c50983b9dfe03393f
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99250416"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100340063"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "99250416"
 |**request_session_id**|**int**|要求を現在所有するセッション ID。 所有セッション ID は、分散トランザクションとバインドされたトランザクションでは異なります。 値が -2 の場合、その要求が孤立した分散トランザクションに属することを示します。 値が -3 の場合、その要求が遅延復旧トランザクションに属することを示します。遅延復旧トランザクションとは、たとえば、ロールバックが正常に完了しなかったためにロールバックの復旧を遅延したトランザクションのことです。|  
 |**request_exec_context_id**|**int**|要求を現在所有するプロセスの、実行コンテキスト ID。|  
 |**request_request_id**|**int**|要求を現在所有するプロセスの要求 ID (バッチ ID)。 この値は、トランザクションに対する複数のアクティブな結果セット (MARS) 接続が変わるたびに変化します。|  
-|**request_owner_type**|**nvarchar(60)**|要求を所有するエンティティの種類。 ロック マネージャーの要求は、さまざまな種類のエンティティで所有されます。 指定できる値は次のとおりです。<br /><br /> TRANSACTION = 要求はトランザクションが所有しています。<br /><br /> CURSOR = 要求はカーソルが所有しています。<br /><br /> SESSION = 要求はユーザー セッションが所有しています。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 要求は、トランザクション ワークスペースの共有部分が所有しています。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 要求は、トランザクション ワークスペースの排他部分が所有しています。<br /><br /> NOTIFICATION_OBJECT = 要求は、内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントが所有しています。 このコンポーネントは、別のコンポーネントがロックの取得を待機しているときに、そのことを通知するようにロック マネージャーに要求しました。 FileTable 機能は、この値を使用するコンポーネントです。<br /><br /> **注:** ワークスペースは、参加しているセッションのロックを保持するために内部的に使用されます。|  
+|**request_owner_type**|**nvarchar(60)**|要求を所有するエンティティの種類。 ロック マネージャーの要求は、さまざまな種類のエンティティで所有されます。 次のいずれかの値になります。<br /><br /> TRANSACTION = 要求はトランザクションが所有しています。<br /><br /> CURSOR = 要求はカーソルが所有しています。<br /><br /> SESSION = 要求はユーザー セッションが所有しています。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 要求は、トランザクション ワークスペースの共有部分が所有しています。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 要求は、トランザクション ワークスペースの排他部分が所有しています。<br /><br /> NOTIFICATION_OBJECT = 要求は、内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントが所有しています。 このコンポーネントは、別のコンポーネントがロックの取得を待機しているときに、そのことを通知するようにロック マネージャーに要求しました。 FileTable 機能は、この値を使用するコンポーネントです。<br /><br /> **注:** ワークスペースは、参加しているセッションのロックを保持するために内部的に使用されます。|  
 |**request_owner_id**|**bigint**|この要求の特定の所有者の ID。<br /><br /> トランザクションが要求の所有者である場合、この値にはトランザクション ID が含まれます。<br /><br /> FileTable が要求の所有者である場合、**request_owner_id** には次のいずれかの値が含まれます。<br /> <ul><li>**-4** : FileTable はデータベースロックを取得しました。<li> **-3** : FileTable はテーブルロックを取得しました。<li> **その他の値** : 値はファイルハンドルを表します。 この値は、動的管理ビュー [sys.dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)に **fcb_id** としても表示されます。</li></ul>|  
 |**request_owner_guid**|**uniqueidentifier**|この要求の特定の所有者の GUID。 この値は、分散トランザクションの MS DTC GUID に対応する場合に、そのトランザクションによってのみ使用されます。|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]この値は、要求元のロック領域 ID を示します。 ロック領域 ID によって、2 つの要求元の間に互換性があり、互いに競合しないモードでロックを許可できるかどうかを判断できます。|  
@@ -63,9 +63,9 @@ ms.locfileid: "99250416"
   
 ## <a name="permissions"></a>アクセス許可
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、 [サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) アカウントまたは [Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
  
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  要求が許可された状態とは、要求元に対してリソースのロックが許可されたことを示します。 要求を待機している状態とは、その要求がまだ許可されていないことを示します。 次に示す要求待機の種類は、**request_status** 列で返されます。  
   
 -   要求変換の状態とは、要求元がリソース要求を既に許可されており、最初の要求からさらに上の段階の許可を現在待機中であることを示します。  
@@ -98,15 +98,15 @@ SQL Database Basic、S0、S1 のサービス目標、およびエラスティッ
   
 |リソースの種類|リソースの説明|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
-|DATABASE|データベースを示します。|適用なし|  
-|FILE|データベース ファイルを示します。 このファイルは、データまたはログ ファイルのいずれかになります。|適用なし|  
+|DATABASE|データベースを示します。|適用できません|  
+|FILE|データベース ファイルを示します。 このファイルは、データまたはログ ファイルのいずれかになります。|適用できません|  
 |OBJECT|データベース オブジェクトを示します。 このオブジェクトは、データ テーブル、ビュー、ストアド プロシージャ、拡張ストアド プロシージャ、またはオブジェクト ID 付きのオブジェクトのいずれかになります。|オブジェクト ID|  
 |PAGE|データ ファイル内の 1 ページを示します。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。 PAGE リソースに対し常に HoBt ID が使用できるとは限りません。HoBt ID は呼び出し元から提供される追加情報であり、呼び出し元によってはこの情報を提供できないことがあります。|  
 |KEY|インデックス内の行を示します。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。|  
-|EXTENT|データ ファイルのエクステントを示します。 エクステントは連続する 8 ページのグループです。|適用なし|  
+|EXTENT|データ ファイルのエクステントを示します。 エクステントは連続する 8 ページのグループです。|適用できません|  
 |RID|ヒープ内の物理的な行を示します。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。 RID リソースに対し常に HoBt ID が使用できるとは限りません。HoBt ID は呼び出し元から提供される追加情報であり、呼び出し元によってはこの情報を提供できないことがあります。|  
-|APPLICATION|アプリケーション固有のリソースを示します。|適用なし|  
-|METADATA|メタデータの情報を示します。|適用なし|  
+|APPLICATION|アプリケーション固有のリソースを示します。|適用できません|  
+|METADATA|メタデータの情報を示します。|適用できません|  
 |HOBT|ヒープまたは B-Tree を示します。 これは、基本的なアクセス パス構造です。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。|  
 |ALLOCATION_UNIT|インデックス パーティションなどの関連ページのセットを示します。 各アロケーション ユニットは、1 つの IAM (Index Allocation Map) チェーンを対象としています。|アロケーション ユニット ID。 この値は **sys.allocation_units.allocation_unit_id** に対応します。|  
   
@@ -200,7 +200,7 @@ SQL Database Basic、S0、S1 のサービス目標、およびエラスティッ
   
 |リソース|Format|説明|  
 |--------------|------------|-----------------|  
-|DATABASE|適用なし|データベース ID は **resource_database_id** 列で既に使用可能になっています。|  
+|DATABASE|適用できません|データベース ID は **resource_database_id** 列で既に使用可能になっています。|  
 |FILE|<file_id>|このリソースが示すファイルの ID。|  
 |OBJECT|<object_id>|このリソースが示すオブジェクトの ID。 テーブルだけでなく、**sys.objects** に一覧表示されるあらゆるオブジェクトが対象になります。|  
 |PAGE|<file_id>:<page_in_file>|このリソースが示すページの、ファイルおよびページ ID。|  
@@ -208,8 +208,8 @@ SQL Database Basic、S0、S1 のサービス目標、およびエラスティッ
 |EXTENT|<file_id>:<page_in_files>|このリソースが示すエクステントの、ファイルおよびページ ID。 エクステント ID は、そのエクステント内にある最初のページのページ ID と同じになります。|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|このリソースが示すページ ID と、行の行 ID。 関連するオブジェクト ID が 99 の場合、このリソースは、IAM チェーンの最初の IAM ページにある、8 つの混合ページ スロットのいずれかを表すことに注意してください。|  
 |APPLICATION|\<DbPrincipalId>: \<upto 32 characters> :(<hash_value>)|アプリケーションのロック リソースのスコープに使用する、データベース プリンシパルの ID。 アプリケーションのロック リソースに対応する、最大 32 文字のリソース文字列も含まれます。 場合によっては、完全な文字列が使用できず、2 文字のみが表示されることがあります。 この動作は、データベース復旧時、復旧処理の一部として再取得されるアプリケーション ロックに関してのみ発生します。 ハッシュ値は、このアプリケーション ロック リソースに対応する、完全リソース文字列のハッシュを示します。|  
-|HOBT|適用なし|**resource_associated_entity_id** として含まれる HoBt ID。|  
-|ALLOCATION_UNIT|適用なし|**resource_associated_entity_id** として含まれるアロケーション ユニット ID。|  
+|HOBT|適用できません|**resource_associated_entity_id** として含まれる HoBt ID。|  
+|ALLOCATION_UNIT|適用できません|**resource_associated_entity_id** として含まれるアロケーション ユニット ID。|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

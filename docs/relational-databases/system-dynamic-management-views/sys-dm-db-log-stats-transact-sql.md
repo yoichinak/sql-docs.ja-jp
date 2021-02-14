@@ -20,12 +20,12 @@ ms.assetid: ''
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88ac57a5ba41afacafe8565225ed9ce7bca55991
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d9220bbd52a63f571287a76ccbfc7c88a064abd8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99191189"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071696"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "99191189"
 
 *database_id* |NULL | **既定**
 
-データベースの ID を示します。 `database_id` が `int`です。 有効な入力値は、データベースの ID 番号、 `NULL` 、または `DEFAULT` です。 既定値は、`NULL` です。 `NULL` と `DEFAULT` は、現在のデータベースのコンテキストでは同等の値です。  
+データベースの ID を示します。 `database_id` は `int` です。 有効な入力値は、データベースの ID 番号、 `NULL` 、または `DEFAULT` です。 既定では、 `NULL`です。 `NULL` と `DEFAULT` は、現在のデータベースのコンテキストでは同等の値です。  
 組み込み関数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) を指定できます。 データベース名を指定せずにを使用する場合は、 `DB_ID` 現在のデータベースの互換性レベルが90以上である必要があります。
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "99191189"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |データベース ID |  
-|recovery_model |**nvarchar(60)**   |   データベースの復旧モデル。 次の値を指定できます。 <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
+|recovery_model |**nvarchar(60)**   |   データベースの復旧モデル。 指定できる値は、次のとおりです。 <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   トランザクションログの現在の開始 [ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|  
 |log_end_lsn    |**nvarchar(24)**   |   トランザクションログに記録されている最後のログレコードの[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|  
 |current_vlf_sequence_number    |**bigint** |   実行時の現在の [仮想ログファイル (列)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) のシーケンス番号。|  
@@ -62,7 +62,7 @@ ms.locfileid: "99191189"
 |total_log_size_mb  |**float**  |   トランザクションログの合計サイズ (MB)。 |  
 |active_vlf_count   |**bigint** |   トランザクションログ内のアクティブな [仮想ログファイル (vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) の合計数。|  
 |active_log_size_mb |**float**  |   アクティブなトランザクションログの合計サイズ (MB)。|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   ログの切り捨てホールドアップ理由。 値は、  `log_reuse_wait_desc` の列と同じ `sys.databases` です。  (これらの値の詳細については、「 [トランザクションログ](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください)。 <br />次の値を指定できます。 <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />レプリケーション<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />その他の一時的な |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   ログの切り捨てホールドアップ理由。 値は、  `log_reuse_wait_desc` の列と同じ `sys.databases` です。  (これらの値の詳細については、「 [トランザクションログ](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください)。 <br />指定できる値は、次のとおりです。 <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />レプリケーション<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />その他の一時的な |  
 |log_backup_time    |**datetime**   |   トランザクションログの最後のバックアップ時刻。|   
 |log_backup_lsn |**nvarchar(24)**   |   最後のトランザクションログバックアップ [ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|   
 |log_since_last_log_backup_mb   |**float**  |   最後のトランザクションログバックアップ [ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)以降のログサイズ (MB)。|  
@@ -73,7 +73,7 @@ ms.locfileid: "99191189"
 |recovery_vlf_count |**bigint** |   フェールオーバーまたはサーバーの再起動があった場合に、回復する [仮想ログファイル (vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) の合計数。 |  
 
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 `sys.dm_db_log_stats`セカンダリレプリカとして可用性グループに参加しているデータベースに対して実行する場合は、上記で説明したフィールドのサブセットのみが返されます。  現在、 `database_id` `recovery_model` `log_backup_time` セカンダリデータベースに対して実行すると、、、およびのみが返されます。   
 
 ## <a name="permissions"></a>アクセス許可  

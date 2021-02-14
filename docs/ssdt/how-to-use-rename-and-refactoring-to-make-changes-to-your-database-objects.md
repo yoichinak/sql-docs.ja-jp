@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 8ca1ef866a86f71eaa1b5f7dfa94821c94da5588
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8fd846301467dbbcbf08aa6bf4a02e52fb467c4b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895831"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018022"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>方法:名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する
 
@@ -32,7 +32,7 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 ### <a name="to-rename-a-type"></a>型名を変更するには  
   
-1.  **ソリューション エクスプローラー**で **Products** テーブル (Products.sql) を右クリックし、 **[コードの表示]** をクリックして、Transact\-SQL エディターでスクリプトを開きます。  
+1.  **ソリューション エクスプローラー** で **Products** テーブル (Products.sql) を右クリックし、 **[コードの表示]** をクリックして、Transact\-SQL エディターでスクリプトを開きます。  
   
 2.  スクリプト内の `[Products]` を右クリックし、 **[リファクター]** をポイントして **[名前の変更]** をクリックします。  
   
@@ -44,11 +44,11 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 6.  テーブル デザイナーまたは Transact\-SQL エディターで既に開いていたスクリプト ファイルについても、変化が生じた箇所は、Transact\-SQL エディターの左側の緑色のバーで強調表示されています。  
   
-7.  **ソリューション エクスプローラー**で、**TradeDev.refactorlog** が追加されていることに注意してください。 これをダブルクリックして開きます。 このセッションでのすべての変更が XML 表現で記述されています。  
+7.  **ソリューション エクスプローラー** で、**TradeDev.refactorlog** が追加されていることに注意してください。 これをダブルクリックして開きます。 このセッションでのすべての変更が XML 表現で記述されています。  
   
 8.  F5 キーを押してプロジェクトをビルドし、ローカル データベースに配置します。  
   
-9. **SQL Server オブジェクト エクスプローラー**の **[ローカル]** の下で、**TradeDev** データベースを右クリックして **[更新]** をクリックします。  
+9. **SQL Server オブジェクト エクスプローラー** の **[ローカル]** の下で、**TradeDev** データベースを右クリックして **[更新]** をクリックします。  
   
 10. **[テーブル]** を展開し、**Products** テーブルの名前が変更されていることを確認します。  
   
@@ -56,7 +56,7 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 ### <a name="to-expand-wildcards"></a>ワイルドカードを展開するには  
   
-1.  **ソリューション エクスプローラー**で **[関数]** ノードを展開し、**GetProductsBySupplier.sql** をダブルクリックします。  
+1.  **ソリューション エクスプローラー** で **[関数]** ノードを展開し、**GetProductsBySupplier.sql** をダブルクリックします。  
   
 2.  次に示す行のアスタリスクの部分にカーソルを置いて、右クリックします。 **[リファクター]** 、 **[ワイルドカードの展開]** の順にクリックします。  
   

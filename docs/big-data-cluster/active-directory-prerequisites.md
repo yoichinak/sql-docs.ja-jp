@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6c25038680d71257e609d99460841d63b8e87d33
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 3424863924338a0d3f02102609052d6c159e1043
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898713"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048022"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode-prerequisites"></a>Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する: 前提条件
 
@@ -70,7 +70,7 @@ AD で新しいユーザーを作成するには、ドメインまたは OU を�
 
 ![Active Directory のユーザー ダイアログ](./media/deploy-active-directory/image12.png)
 
-このユーザーは、この記事で *BDC ドメイン サービス アカウント*と呼びます。
+このユーザーは、この記事で *BDC ドメイン サービス アカウント* と呼びます。
 
 ### <a name="create-an-ou"></a>OU を作成する
 

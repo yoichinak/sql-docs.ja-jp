@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3735f53eac6101d2cc02568d1ea6fa789df50512
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: fc9beaae557b81ae65e4fd63a22f5696b4f78052
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935394"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015313"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole を作成する
 
@@ -33,7 +33,7 @@ ms.locfileid: "91935394"
   
 ## <a name="before-you-start"></a>開始する前に  
   
--   データベースを移動した後に復元できるように、暗号化キーをバックアップします。 この手順は **RSExecRole**の作成と準備には直接影響しませんが、作業を確認するためにはキーのバックアップが必要です。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。  
+-   データベースを移動した後に復元できるように、暗号化キーをバックアップします。 この手順は **RSExecRole** の作成と準備には直接影響しませんが、作業を確認するためにはキーのバックアップが必要です。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。  
   
 -   **インスタンスでの** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 権限を持つユーザー アカウントでログオンしていることを確認します。  
   

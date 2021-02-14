@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0579a5c477b9933b9937c1f003d3c7bbc056eae6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32cf19b192fe67802ae44eaf9ce6e4ca891d02ae
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497791"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072366"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>DB2 と SQL Server のデータ型のマッピング (DB2ToSQL)
 DB2 データベースの種類は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データベースの種類とは異なります。 DB2 データベースオブジェクトをオブジェクトに変換する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、db2 のデータ型をにマップする方法を指定する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定のデータ型マッピングをそのまま使用することも、次のセクションに示すようにマッピングをカスタマイズすることもできます。  
@@ -88,6 +88,6 @@ SSMA の [ **型マッピング** ] タブを表示すると、背景は、継�
 ## <a name="next-steps"></a>次の手順  
 移行プロセスの次の手順では、 [評価レポート &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md) 、または [DB2 スキーマ &#40;DB2ToSQL&#41;に変換 ](../../ssma/db2/converting-db2-schemas-db2tosql.md)します。 評価レポートを作成する場合、DB2 オブジェクトは評価中に自動的に変換されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [DB2 データベースを SQL Server &#40;DB2ToSQL&#41;に移行する ](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

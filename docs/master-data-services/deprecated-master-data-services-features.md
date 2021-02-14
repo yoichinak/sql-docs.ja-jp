@@ -12,12 +12,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: dbbe6d602472a62e6d94c747a8856c507d8b2e06
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: d8cded1c88278ca67426eaf40df7bdd87474312c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480563"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350181"
 ---
 # <a name="deprecated-master-data-services-features"></a>非推奨のマスター データ サービス機能
 
@@ -56,7 +56,7 @@ ms.locfileid: "89480563"
 ## <a name="external-resources"></a>外部リソース  
  msdn.com のブログ投稿「 [Deprecated: Explicit Hierarchies and Collections (非推奨: 明示的階層とコレクション)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/deprecated-explicit-hierarchies-and-collections/ba-p/388221)」  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)  
   
   

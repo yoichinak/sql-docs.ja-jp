@@ -20,12 +20,12 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 9af11212533337e575976261995161b222e73efa
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fcf2ac0f0336a7567987d056d0a568d6892b5d1e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198563"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338905"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -53,7 +53,7 @@ ms.locfileid: "99198563"
 
  このビューは、サーバーレベルプリンシパルログインの **master** データベースでのみ使用できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="external-and-internal-classes"></a>外部クラスと内部クラス
 

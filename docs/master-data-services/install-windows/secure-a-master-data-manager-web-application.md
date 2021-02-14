@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6740c3491ff9a10f611f3b1fe26cd5b3acc1788c
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 5e941ce4f06961f19e0d5f4a0dc96aff31039647
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279378"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344749"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーションのセキュリティ保護
 
@@ -26,14 +26,14 @@ ms.locfileid: "86279378"
 > [!NOTE]  
 >  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションは、HTTP または HTTPS のいずれかを使用できますが、両方を使用することはできません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がインストールされている Web サーバーの管理者である必要があります。  
   
 -   MDS が Web サーバーにインストールされていて、Web アプリケーションが存在する必要があります。 詳細については、「 [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md) 」および「 [マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)」を参照してください。  
 
-- [Windows 認証の IIS 拡張保護を](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)有効にしないでください。 
+- [Windows 認証の IIS 拡張保護を](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/) 有効にしないでください。 
 
 - 使用可能なすべての IP アドレスでリッスンするように web サーバーを構成します。 特定の IP アドレスでリッスンするように Web サーバーを構成しないでください。 
 
@@ -53,7 +53,7 @@ ms.locfileid: "86279378"
   
 7.  **[OK]** をクリックします。  
   
-8.  省略可能。 HTTP を削除してユーザーが HTTPS のみを使用してサイトにアクセスできるようにするには、一覧の **[http]** の行をクリックします。 **[削除]** をクリックし、確認のダイアログ ボックスで **[はい]** をクリックします。  
+8.  任意。 HTTP を削除してユーザーが HTTPS のみを使用してサイトにアクセスできるようにするには、一覧の **[http]** の行をクリックします。 **[削除]** をクリックし、確認のダイアログ ボックスで **[はい]** をクリックします。  
   
     > [!IMPORTANT]  
     >  HTTP を削除した後に basicHttp 構成および wsHttpBinding 構成を変更する必要があります。  
@@ -69,7 +69,7 @@ ms.locfileid: "86279378"
 13. ファイルを保存して閉じます。 エラーが発生した場合は、UAC が有効になっている可能性があります。 これで、ユーザーが HTTPS を使用してサイトにアクセスできるようになりました。  
 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 129cfe3eec5b99bc486e5a47cd7f90ac0733d13e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 621aa0093affb93167703655686b9ee1ec631d53
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500680"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272663"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>リンク属性を作成する (マスター データ サービス)
 
@@ -30,7 +30,7 @@ ms.locfileid: "88500680"
 > [!NOTE]  
 >  ユーザーがリンク属性の値を入力するとき、文字列は **https://** で始まる必要があり、そうでないとエラーが表示されます。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
@@ -42,12 +42,12 @@ ms.locfileid: "88500680"
 ## <a name="attribute-information"></a>属性情報  
  作成された属性ごとに、7 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
 |Status|属性の状態。<br /><br /> [保存] をクリックすると、属性が更新中であることを示す ![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン") が表示されます。<br /><br /> 属性の作成時または編集時にエラーが発生した場合は、 ![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン") が表示されます。|  
-|名前|属性名。|  
+|name|属性名。|  
 |表示名|属性の表示名。|  
-|説明|属性の説明。|  
+|[説明]|属性の説明。|  
 |ピクセル幅の表示|属性の幅。|  
 |種類とプロパティ|属性の種類とデータ型の情報。|  
 |変更の追跡を有効化|変更の追跡に対して属性が有効になっているかどうかを指定し、グループ番号を括弧で表示します。|  
@@ -99,7 +99,7 @@ ms.locfileid: "88500680"
 ## <a name="see-also"></a>参照  
  [属性 &#40;マスターデータサービス&#41;](../master-data-services/attributes-master-data-services.md)   
  [属性名とデータ型 &#40;マスターデータサービスに変更&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [ドメインベースの属性 &#40;マスターデータサービスを作成&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Domain-Based 属性 &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [ファイル属性を作成する (マスター データ サービス)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   
