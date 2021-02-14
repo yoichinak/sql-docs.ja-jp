@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17162c5cb862c496c70459818497e66d1342923a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 255a1007c7a1ebb270c19d92a3129ea444599d41
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80217076"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064627"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>方法:カスタム アセンブリをデバッグする
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] には、ご自分のカスタム アセンブリ コードを分析してエラーを探すのに役立ついくつかのデバッグ ツールが用意されています。 どのツールが最適であるかは、何を実行するかによって異なります。 この例では、[!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] を使用します。  

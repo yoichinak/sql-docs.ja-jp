@@ -14,19 +14,19 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e246374476c3dff300aaf6c53ee3c6e8a1896db5
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 73dcdd57b018f980291eceefa1be37d1b51df13a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987978"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018442"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>方法:2 つのデータベースのデータを比較および同期する
 
-2 つのデータベースに含まれるデータを比較できます。 比較するデータベースは、*ソース*と*ターゲット*と呼ばれます。  
+2 つのデータベースに含まれるデータを比較できます。 比較するデータベースは、*ソース* と *ターゲット* と呼ばれます。  
   
 > [!NOTE]  
-> *データベース プロジェクト*および .dacpac パッケージまたは .bacpac パッケージは、データ比較のソースまたはターゲットに指定できません。  
+> *データベース プロジェクト* および .dacpac パッケージまたは .bacpac パッケージは、データ比較のソースまたはターゲットに指定できません。  
   
 データを比較すると、*データ操作言語* (DML) スクリプトが生成されます。このスクリプトを使用すると、ターゲット データベースの一部またはすべてのデータを更新して、内容が異なるデータベースを同期することができます。 データの比較が終了すると、Visual Studio の [データ比較] ウィンドウにその結果が表示されます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "91987978"
 詳しくは、「[1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)」をご覧ください。  
   
 > [!NOTE]  
-> 2 つのデータベース、または同一データベースの 2 つのバージョンの*スキーマ*も比較できます。 詳細については、「[スキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)」を参照してください。  
+> 2 つのデータベース、または同一データベースの 2 つのバージョンの *スキーマ* も比較できます。 詳細については、「[スキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)」を参照してください。  
   
 ## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>データベース データの比較  
   
@@ -88,7 +88,7 @@ ms.locfileid: "91987978"
     指定したソース データベースとターゲット データベースのデータが比較されます。 結果が [データ比較] セッションに表示されます。 結果の表示方法またはデータの同期方法について詳しくは、「[データの差異の表示](#ViewDifferences)」および「[データベース データの同期](#Synchronize)」をご覧ください。  
   
 ## <a name="viewing-data-differences"></a><a name="ViewDifferences"></a>データの差異の表示  
-2 つのデータベースのデータを比較すると、[データ比較] ボックスには、比較した各*データベース オブジェクト*とその状態が一覧表示されます。 各オブジェクト内のレコードの結果を状態別にグループ化して表示することもできます。 状態の指定について詳しくは、「[1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)」をご覧ください。  
+2 つのデータベースのデータを比較すると、[データ比較] ボックスには、比較した各 *データベース オブジェクト* とその状態が一覧表示されます。 各オブジェクト内のレコードの結果を状態別にグループ化して表示することもできます。 状態の指定について詳しくは、「[1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)」をご覧ください。  
   
 差異を表示した後、異なる、欠落している、または新しいオブジェクトまたはレコードの一部またはすべてについて、ソースと一致するようにターゲットを更新できます。 詳しくは、「[データベース データの同期](#Synchronize)」をご覧ください。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "91987978"
   
 5.  (省略可能) **[スクリプトの生成]** をクリックします。  
   
-    Transact\-SQL エディター ウィンドウが開き、ターゲットの更新に使用する*データ操作言語* (DML) スクリプトが表示されます。  
+    Transact\-SQL エディター ウィンドウが開き、ターゲットの更新に使用する *データ操作言語* (DML) スクリプトが表示されます。  
   
 6.  異なるレコード、欠落しているレコード、または新しいレコードを同期するために、 **[ターゲットの更新]** をクリックします。  
   

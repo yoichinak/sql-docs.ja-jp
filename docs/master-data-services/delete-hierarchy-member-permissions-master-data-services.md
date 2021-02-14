@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 433208ab105244e319de091f07553e70dfe1645a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aff4e2f70faf333daf9c977d2a7fdfed2d15a169
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344678"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350247"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限を削除する (マスター データ サービス)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88344678"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデル オブジェクトの権限を削除して、作成されている割り当てを削除します。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  

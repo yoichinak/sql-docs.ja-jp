@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6bdded00e9f4cc9fb5048bf242c0333cb88f186f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 43a450b21ab7d025f61f77b1391f9484e1cb2991
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778521"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045922"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の Spark History Server の Spark アプリケーションのデバッグと診断
 
@@ -199,7 +199,7 @@ Spark History Server に加えて、Spark と Yarn のログはそれぞれ次�
 * Spark イベント ログ: hdfs:///system/spark-events
 * Yarn ログ: hdfs:///tmp/logs/root/logs-tfile
 
-注:これらのログは両方とも、既定の保持期間は 7 日間です。 保持期間を変更する場合は、[Apache Spark と Apache Hadoop の構成](configure-spark-hdfs.md)に関するページを参照してください。 場所は変更することが**できません**。
+注:これらのログは両方とも、既定の保持期間は 7 日間です。 保持期間を変更する場合は、[Apache Spark と Apache Hadoop の構成](configure-spark-hdfs.md)に関するページを参照してください。 場所は変更することが **できません**。
 
 ## <a name="known-issues"></a>既知の問題
 Spark History Server には、次の既知の問題があります。

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4dae01ed37e875c06234be7925a85d5c9a2608ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe03c4a0a95462d1dd793eaf82b0c017b3b781e8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88342368"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336226"
 ---
 # <a name="unlock-a-version-master-data-services"></a>バージョンをロック解除する (マスター データ サービス)
 
@@ -27,7 +27,7 @@ ms.locfileid: "88342368"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをロック解除して、モデルのメンバーおよびメンバーの属性に対する変更を有効にします。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  

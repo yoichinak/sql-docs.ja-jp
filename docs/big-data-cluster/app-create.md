@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8e91315b5ec79c136b4d84a7fbc36a707cc3d82f
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 9d475edb720d329d5fb52f7bd75c055fc3a8494a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257302"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100047962"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターにアプリを展開する方法
 
@@ -48,7 +48,7 @@ ms.locfileid: "92257302"
 
 ## <a name="capabilities"></a>機能
 
-SQL Server 2019 では、アプリケーションの作成、削除、説明、初期化、一覧の実行、更新を行うことができます。 次の表では、 **azdata** で使用できるアプリケーションの展開コマンドについて説明します。
+SQL Server 2019 では、アプリケーションの作成、削除、説明、初期化、一覧の実行、更新を行うことができます。 次の表では、**azdata** で使用できるアプリケーションの展開コマンドについて説明します。
 
 |コマンド |説明 |
 |:---|:---|

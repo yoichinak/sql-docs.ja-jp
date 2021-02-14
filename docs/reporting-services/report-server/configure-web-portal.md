@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: ebbce2708647e15b68ec497cfadd0af2c7c5b154
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548054"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074693"
 ---
 # <a name="configure-the-web-portal"></a>Web ポータルの構成
 
@@ -34,7 +34,7 @@ Web ポータルを使用するには、次の条件を満たす必要があり�
 
 ## <a name="configure-the-web-portal-to-use-the-default-url"></a>既定の URL を使用する Web ポータルの構成
 
-Web ポータルは、ユーザーが Web ブラウザーでアクセスする Web アプリケーションです。 少なくとも、ブラウザー ウィンドウでアプリケーションを開く際に使用する URL を定義する必要があります。 URL はホスト名、ポート、および仮想ディレクトリで構成されます。 この URL の既定値には、レポート サーバー Web サービスの URL 用に定義したホスト名とポートの値に加えて、 **レポート** の仮想ディレクトリ名が含まれます。 名前付きインスタンスを使用している場合、仮想ディレクトリは **reports_instance**になります ( **instance** の箇所には、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスの名前が入ります)。
+Web ポータルは、ユーザーが Web ブラウザーでアクセスする Web アプリケーションです。 少なくとも、ブラウザー ウィンドウでアプリケーションを開く際に使用する URL を定義する必要があります。 URL はホスト名、ポート、および仮想ディレクトリで構成されます。 この URL の既定値には、レポート サーバー Web サービスの URL 用に定義したホスト名とポートの値に加えて、 **レポート** の仮想ディレクトリ名が含まれます。 名前付きインスタンスを使用している場合、仮想ディレクトリは **reports_instance** になります ( **instance** の箇所には、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスの名前が入ります)。
 
 既定では、Web ポータルの URL は一意の仮想ディレクトリ名に加えて、同じインスタンスで実行されているレポート サーバー Web サービス用に定義されているポートとホスト名で構成されます。 ほとんどの場合、ホスト名はレポート サーバー コンピューターのネットワーク名ですが、そのコンピューターを解決する IP アドレスまたはホスト ヘッダーである場合もあります。 既定の URL を使用するように Web ポータルを構成するには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールの **[Web ポータル URL]** ページを使用します。
 
@@ -63,7 +63,7 @@ Web ポータルは、ユーザーが Web ブラウザーでアクセスする W
 
 1. テキスト エディターで **RSReportServer.config** ファイルを開きます。 既定では、次の場所にあります。\Program Files\Microsoft SQL Server\MSRS12.\<*instancename*>\Reporting Services\ReportServer。  
 
-2. **ReportServerURL**を探します。
+2. **ReportServerURL** を探します。
 
 3. レポート サーバー インスタンスの URL に置き換えます。
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86bc7c0352e7bf2447628a143a5c1732b132a412
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: c6b42238a081adbd40f9756fb3d2fb8871e1d7cc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891372"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100023337"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 機能の有効化と無効化
   運用レポート サーバーに対する外部からの攻撃の危険性を低減するためのロックダウン ストラテジには含まれないレポート サーバー機能を無効にできます。 ほとんどの場合は、複数の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能を同時に実行して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供される機能をすべて利用します。 ただし、配置モデルによっては、不要な機能を無効にすることができます。 たとえば、すべてのレポート処理をスケジュールに従って実行するように構成すると、バックグラウンド処理だけを有効にすることもできます。 同様に、対話型の要求時レポートだけが必要な場合は、レポート サーバー Web サービスだけを実行することもできます。  
@@ -62,9 +62,9 @@ ms.locfileid: "91891372"
   
 4.  **[ファセットのプロパティ]** で次の操作を行います。  
   
-    -   レポート サーバー Web サービスを有効にするには、 **WebServiceAndHTTPAccessEnabled** を **True**に設定します。  
+    -   レポート サーバー Web サービスを有効にするには、 **WebServiceAndHTTPAccessEnabled** を **True** に設定します。  
   
-    -   レポート サーバー Web サービスを無効にするには、 **WebServiceAndHTTPAccessEnabled** を **False**に設定します。  
+    -   レポート サーバー Web サービスを無効にするには、 **WebServiceAndHTTPAccessEnabled** を **False** に設定します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -74,7 +74,7 @@ ms.locfileid: "91891372"
   
 1.  テキスト エディターで RsReportServer.config ファイルを開きます。 詳細については、「[Reporting Services の構成ファイルの変更 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
-2.  スケジュールされたレポート処理および配信を有効にするには、 **IsSchedulingService**、 **IsNotificationService**、および **IsEventService** を **true**に設定します。  
+2.  スケジュールされたレポート処理および配信を有効にするには、 **IsSchedulingService**、 **IsNotificationService**、および **IsEventService** を **true** に設定します。  
   
     ```  
     <IsSchedulingService>true</IsSchedulingService>  
@@ -82,7 +82,7 @@ ms.locfileid: "91891372"
     <IsEventService>true</IsEventService>  
     ```  
   
-3.  スケジュールされたレポート処理および配信を無効にするには、 **IsSchedulingService**、 **IsNotificationService**、および **IsEventService** を **false**に設定します。  
+3.  スケジュールされたレポート処理および配信を無効にするには、 **IsSchedulingService**、 **IsNotificationService**、および **IsEventService** を **false** に設定します。  
   
     ```  
     <IsSchedulingService>false</IsSchedulingService>  

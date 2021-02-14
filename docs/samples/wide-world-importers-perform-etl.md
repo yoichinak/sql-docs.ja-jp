@@ -10,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce9cd8ee5a4153cb1d744d505a26b400497b460b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718523"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354050"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL ワークフロー
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "85718523"
 
 次に、一連のデータフロータスクによって各ディメンションが読み込まれます。 次に、各ファクトを読み込みます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - WideWorldImporters および WideWorldImportersDW データベースを含む 2016 (またはそれ以降) の SQL Server (同じまたは異なるインスタンスの SQL Server)
 - SQL Server Management Studio
 - SQL Server 2016 Integration Services
-  - Integration Services カタログを作成していることを確認します。 Integration Services カタログを作成するには、SQL Server Management Studio オブジェクトエクスプローラーで [ **Integration Services**] を右クリックし、[**カタログの追加**] を選択します。 既定のオプションをそのまま使用します。 SQLCLR を有効にし、パスワードを入力するように求められます。
+  - Integration Services カタログを作成していることを確認します。 Integration Services カタログを作成するには、SQL Server Management Studio オブジェクトエクスプローラーで [ **Integration Services**] を右クリックし、[ **カタログの追加**] を選択します。 既定のオプションをそのまま使用します。 SQLCLR を有効にし、パスワードを入力するように求められます。
 
 
 ## <a name="download"></a>ダウンロード
@@ -52,17 +52,17 @@ ms.locfileid: "85718523"
 ## <a name="install"></a>インストール
 
 1. Integration Services パッケージを展開します。
-   1. Windows エクスプローラーで、毎日の*ETL. ispac*パッケージを開きます。 これにより、SQL Server Integration Services 配置ウィザードが起動します。
-   2. [**ソースの選択**] で、プロジェクトの配置の既定値に従い、 *1 日の ETL. ispac*パッケージを指すパスを使用します。
-   3. [**ターゲットの選択**] で、Integration Services カタログをホストするサーバーの名前を入力します。
-   4. たとえば、 *WideWorldImporters*という名前の新しいフォルダーで、Integration Services カタログの下にあるパスを選択します。
-   5. [**配置**] を選択してウィザードを終了します。
+   1. Windows エクスプローラーで、毎日の *ETL. ispac* パッケージを開きます。 これにより、SQL Server Integration Services 配置ウィザードが起動します。
+   2. [ **ソースの選択**] で、プロジェクトの配置の既定値に従い、 *1 日の ETL. ispac* パッケージを指すパスを使用します。
+   3. [ **ターゲットの選択**] で、Integration Services カタログをホストするサーバーの名前を入力します。
+   4. たとえば、 *WideWorldImporters* という名前の新しいフォルダーで、Integration Services カタログの下にあるパスを選択します。
+   5. [ **配置** ] を選択してウィザードを終了します。
 
 2. ETL プロセス用の SQL Server エージェントジョブを作成します。
-   1. Management Studio で、[ **SQL Server エージェント**] を右クリックし、[**新しい**ジョブ] を選択し  >  **Job**ます。
-   2. *WIDEWORLDIMPORTERS ETL*などの名前を入力します。
-   3. 種類**SQL Server Integration Services パッケージ**の**ジョブステップ**を追加します。
-   4. Integration Services カタログがあるサーバーを選択し、*毎日の ETL*パッケージを選択します。
+   1. Management Studio で、[ **SQL Server エージェント**] を右クリックし、[**新しい** ジョブ] を選択し  >  ます。
+   2. *WIDEWORLDIMPORTERS ETL* などの名前を入力します。
+   3. 種類 **SQL Server Integration Services パッケージ** の **ジョブステップ** を追加します。
+   4. Integration Services カタログがあるサーバーを選択し、 *毎日の ETL* パッケージを選択します。
    5. [**構成**] [  >  **接続マネージャー**] で、ソースとターゲットへの接続が正しく構成されていることを確認します。 既定では、ローカルインスタンスに接続します。
    6. [ **OK** ] を選択してジョブを作成します。
 

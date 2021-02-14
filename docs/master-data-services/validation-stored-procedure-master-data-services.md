@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f7d97352e7501a2c1d6f73d0536afb4bce79700f
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f7afc645a25bcedcadc925ae5bf20f3fa1b894ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813184"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351881"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>検証ストアド プロシージャ (マスター データ サービス)
 
@@ -55,13 +55,13 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
 ## <a name="parameters"></a>パラメーター  
  このプロシージャのパラメーターを次に示します。  
   
-|パラメーター|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
 |UserID|ユーザー ID。|  
 |Model_ID|モデル ID。|  
 |Version_ID|バージョン ID。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要: テーブルからのデータのインポート &#40;マスターデータサービス&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   

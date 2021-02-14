@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a548312fd258040409a9cf74fc5cdc9a70536af8
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 44bef037fecc3fa81ac7f7bae447f6ebcaa48b83
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813019"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350172"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services)
 
@@ -67,7 +67,7 @@ ms.locfileid: "85813019"
   
  この種類の階層では、無効なレベルにメンバーを移動できません。 たとえば、自転車 Road-650 は、Road Bikes というサブカテゴリから Mountain Bikes という別のサブカテゴリに移動することはできますが、 1 {Bikes} などのカテゴリの直下に移動することはできません。 階層ツリー内でメンバーを移動するたびに、メンバーのドメイン ベースの属性値は、移動を反映して変更されます。  
   
-## <a name="notes"></a>メモ  
+## <a name="notes"></a>ノート  
  派生階層ツリー内のすべてのメンバーは、ID で並べ替えられます。 並べ替え順序は変更できません。  
   
  メンバーのドメイン ベースの属性が空で、その属性が派生階層で使用される場合、そのメンバーは階層内に表示されません。 属性への値の設定を要求するビジネス ルールを作成してください。 詳細については、「[属性値を要求する &#40;マスター データ サービス&#41;](../master-data-services/require-attribute-values-master-data-services.md)」を参照してください。  

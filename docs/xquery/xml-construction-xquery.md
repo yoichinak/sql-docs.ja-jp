@@ -22,20 +22,20 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16bffa4040e1a5068f83e9f68da981ed4aa0d7f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c171dab70a909edb197f5a498d2207bcb2e555b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730729"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352319"
 ---
 # <a name="xml-construction-xquery"></a>XML の構築 (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  XQuery では、**直接**コンストラクターと**計算**コンストラクターを使用して、クエリ内に XML 構造を構築できます。  
+  XQuery では、 **直接** コンストラクターと **計算** コンストラクターを使用して、クエリ内に XML 構造を構築できます。  
   
 > [!NOTE]  
->  **直接**コンストラクターと**計算**コンストラクターの間に違いはありません。  
+>  **直接** コンストラクターと **計算** コンストラクターの間に違いはありません。  
   
 ## <a name="using-direct-constructors"></a>直接コンストラクターの使用  
  直接コンストラクターを使用する場合は、xml を構築するときに XML に似た構文を指定します。 次の例では、直接コンストラクターを使用した XML 構築を示しています。  
@@ -237,13 +237,13 @@ This is product model catalog description.
   
  構築された要素 <`ProductModel`> には、ProductModelID 属性とこれらの子ノードがあります。  
   
--   テキストノード`This is product model catalog description.`  
+-   テキストノード `This is product model catalog description.`  
   
 -   要素ノード、<`Summary`>。 このノードには、`Some description` という子テキスト ノードが 1 つあります。  
   
  属性を構築するときは、中かっこで囲まれた式を使用して、その値を指定できます。 この場合、式の結果が属性値として返されます。  
   
- 次の例では、 **data ()** 関数は厳密には必要ありません。 式の値を属性に割り当てるため、指定された式の型指定された値を取得するために、**データ ()** が暗黙的に適用されます。  
+ 次の例では、 **data ()** 関数は厳密には必要ありません。 式の値を属性に割り当てるため、指定された式の型指定された値を取得するために、 **データ ()** が暗黙的に適用されます。  
   
 ```sql
 DECLARE @x xml;  
@@ -315,7 +315,7 @@ where ProductModelID=7;
         <a attr="Item 5" />  
         ```  
   
-    -   2つの文字列引数を結果の属性値に連結するには、 [concat 関数](../xquery/functions-on-string-values-concat.md)を使用します。  
+    -   2つの文字列引数を結果の属性値に連結するには、 [concat 関数](../xquery/functions-on-string-values-concat.md) を使用します。  
   
         ```sql
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
@@ -485,7 +485,7 @@ select @x.query( '
 ### <a name="xml-construction-and-white-space-handling"></a>XML の構築と空白文字の処理  
  XML 構築の要素コンテンツには、空白文字を含めることができます。 これらの文字は、次の方法で処理されます。  
   
--   名前空間 Uri 内の空白文字は、XSD 型**anyURI**として扱われます。 具体的には、空白文字は次のように処理されます。  
+-   名前空間 Uri 内の空白文字は、XSD 型 **anyURI** として扱われます。 具体的には、空白文字は次のように処理されます。  
   
     -   最初と最後にある空白文字は切り捨てられます。  
   
@@ -547,7 +547,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>その他の直接 XML コンストラクター  
  処理命令や XML コメントのコンストラクターでは、対応する XML の構築と同じ構文を使用します。 テキストノードの計算されるコンストラクターもサポートされていますが、主に XML DML でテキストノードを作成するために使用されます。  
   
- **メモ**明示的なテキストノードコンストラクターの使用例については、「 [insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)」の特定の例を参照してください。  
+ **メモ** 明示的なテキストノードコンストラクターの使用例については、「 [insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)」の特定の例を参照してください。  
   
  次のクエリでは、構築された XML に要素、2つの属性、コメント、および処理命令が含まれています。 `FirstLocation`シーケンスが構築されているため、<> の前にコンマが使用されていることに注意してください。  
   
@@ -635,7 +635,7 @@ text{"Some text "},
   
  XQuery 仕様で定義されているように、計算される要素と属性のコンストラクターによって、ノード名を計算できることに注意してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で直接コンストラクターを使用している場合は、element や attribute などのノード名を定数リテラルとして指定する必要があります。 したがって、直接コンストラクターと、要素と属性の計算されるコンストラクターに違いはありません。  
   
- 次の例では、構築されたノードのコンテンツは、ProductModel テーブルの**xml**データ型の命令列に格納されている xml 製造手順から取得されます。  
+ 次の例では、構築されたノードのコンテンツは、ProductModel テーブルの **xml** データ型の命令列に格納されている xml 製造手順から取得されます。  
   
 ```sql
 SELECT Instructions.query('  
@@ -671,7 +671,7 @@ where ProductModelID=7
   
 -   計算されるコメントコンストラクター  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XQuery 式](../xquery/xquery-expressions.md)  
   
   

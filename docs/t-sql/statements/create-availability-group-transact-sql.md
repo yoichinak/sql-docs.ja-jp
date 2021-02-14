@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1ba1a89e21c7eb57c2f3dd603e35472d56ab62d7
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: daff2ddf321fa785dc8a304ee0af590682efc63a
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236285"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552631"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -260,7 +260,8 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
 - Express Edition など、SQL Server のあらゆるエディションでホストできます。
 - CONFIGURATION_ONLY レプリカのデータ ミラーリング エンドポイントの型を `WITNESS` にする必要があります。
 - 変更できません。
-- `CLUSTER_TYPE = WSFC` の場合は無効です。 
+- `CLUSTER_TYPE = WSFC` の場合は無効です。
+- レプリカの `availability_mode` が `configuration_only` に設定されている場合、オプション `failover_mode` と `seeding_mode` はサポートされません。 その例は、[こちら](../../linux/sql-server-linux-availability-group-configure-ha.md)にあります。
 
    詳細については、[構成のみのレプリカ](../../linux/sql-server-linux-availability-group-ha.md)に関するページを参照してください。
   

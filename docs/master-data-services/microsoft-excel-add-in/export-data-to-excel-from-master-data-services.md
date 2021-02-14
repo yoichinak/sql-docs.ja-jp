@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af0b2a73189a52aa9725fef8672adb29993f1c2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8b7ab33b2d10ab09a8ab3fcf76532dd571936df
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257642"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100337103"
 ---
 # <a name="export-data-to-excel-from-master-data-services"></a>マスター データ サービスから Excel へのデータのエクスポート
 
@@ -26,7 +26,7 @@ ms.locfileid: "92257642"
   
  読み込み前にデータセットをフィルター処理する場合は、「[エクスポート前のデータのフィルター処理 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  

@@ -22,12 +22,12 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b9356ae3c4783df003233c4db7ab4bbaf9501a2d
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 74435746bc2ef72741cf25a610cb37d4ac1893b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523953"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080993"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>まずはデータベースのストレッチの有効化ウィザードを実行する
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "92523953"
   
 1.  SQL Server Management Studio のオブジェクト エクスプローラーで、ストレッチを有効にするデータベースを選択します。  
   
-2.  **[タスク]** を右クリックし、 **[Stretch]** (ストレッチ) を選択してから **[有効化]** を選択して、ウィザードを起動します。  
+2.  **[タスク]** を右クリックし、 **[Stretch]**(ストレッチ) を選択してから **[有効化]** を選択して、ウィザードを起動します。  
   
 ##  <a name="introduction"></a><a name="Intro"></a> 概要  
  ウィザードの目的と前提条件を確認します。  
@@ -69,7 +69,7 @@ ms.locfileid: "92523953"
 |**名前**|データベースのテーブル名を指します。|  
 |(タイトルなし)|この列には、選択したテーブルで Stretch を無効にはしない警告記号が表示される場合があります。 また、たとえば、テーブルでサポートされていないデータ型が使用されているなど、選択したテーブルで Stretch を有効化しないブロックの問題が表示される場合もあります。 ツールヒントの詳細な情報を表示するには、記号の上にマウス ポインターを移動します。 詳細については、「 [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)」を参照してください。|  
 |**ストレッチ済み**|テーブルが既に Stretch 用に有効であるかどうかを示します。|  
-|**移行**|テーブル全体を移行 ([ **テーブル全体** ]) することも、表の既存の列にフィルターを指定することもできます。 移行する行を選択するのに、別のフィルター関数を使用する場合、ウィザードを終了した後、ALTER TABLE ステートメントを実行してフィルター関数を指定します。 フィルター関数の詳細については、「[フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。 この関数の適用方法の詳細については、「[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」または「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。|  
+|**移行**|テーブル全体を移行 ([**テーブル全体**]) することも、表の既存の列にフィルターを指定することもできます。 移行する行を選択するのに、別のフィルター関数を使用する場合、ウィザードを終了した後、ALTER TABLE ステートメントを実行してフィルター関数を指定します。 フィルター関数の詳細については、「[フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。 この関数の適用方法の詳細については、「[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」または「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。|  
 |**行数**|テーブルの行数を指定します。|  
 |**[サイズ (KB)]**|テーブルのサイズを KB で指定します。|  
   
@@ -80,13 +80,13 @@ ms.locfileid: "92523953"
   
      ![日付ベースのフィルター述語を定義する](../../sql-server/stretch-database/media/stretch-wizard-2a.png "日付ベースのフィルター述語を定義する")  
   
-2.  [ **拡張する行の選択** ] ダイアログ ボックスで [ **行の選択** ] を選択します。  
+2.  [ **拡張する行の選択** ] ダイアログ ボックスで [ **行の選択**] を選択します。  
   
-3.  [ **名前** ] フィールドに、フィルター関数の名前を指定します。  
+3.  [ **名前**] フィールドに、フィルター関数の名前を指定します。  
   
 4.  **Where** 句には、テーブルから列、演算子を選択し、値を指定します。  
   
-5.  [ **確認** ] をクリックして、関数をテストします。 関数によって、テーブルから結果が返される場合、つまり、条件を満たす移行する行がある場合、テストによって [ **成功** ] がレポートされます。  
+5.  [ **確認** ] をクリックして、関数をテストします。 関数によって、テーブルから結果が返される場合、つまり、条件を満たす移行する行がある場合、テストによって [ **成功**] がレポートされます。  
 
 > [!NOTE] 
 > フィルター クエリを表示するテキストボックスは読み取り専用です。 テキストボックスのクエリは編集できません。
@@ -116,7 +116,7 @@ ms.locfileid: "92523953"
   
 3.  Stretch Database で使用する Azure リージョンを選択します。
     -   新しいサーバーを作成すると、このリージョンにサーバーが作成されます。  
-    -   選択したリージョンに既にサーバーがある場合、[ **既存のサーバー** ] を選択すると、それらがウィザードにリストされます。
+    -   選択したリージョンに既にサーバーがある場合、[ **既存のサーバー**] を選択すると、それらがウィザードにリストされます。
   
      待機時間を最小限に抑えるには、SQL Server が配置されている Azure リージョンを選択してください。 リージョンの詳細については、「 [Azure のリージョン](https://azure.microsoft.com/regions/)」を参照してください。  
   

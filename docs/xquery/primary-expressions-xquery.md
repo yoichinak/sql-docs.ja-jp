@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c1186623b334d3eea465c632bc23ec58ba231ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f474aae3e764224bec01830b42766216a27bc9d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765614"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339955"
 ---
 # <a name="primary-expressions-xquery"></a>原始式 (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85765614"
 ## <a name="literals"></a>リテラル  
  XQuery リテラルには、数値または文字列リテラルを指定できます。 文字列リテラルには、定義済みのエンティティ参照を含めることができます。エンティティ参照は文字のシーケンスです。 シーケンスは、構文上意味を持つことも考えられる 1 文字を表すアンパサンドで始まります。 次に、XQuery の定義済みエンティティ参照を示します。  
   
-|エンティティ参照|表現|  
+|エンティティ参照|表す内容|  
 |----------------------|----------------|  
 |`&lt;`|\<|  
 |`&gt;`|>|  
@@ -94,7 +94,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 次の例に示すように、組み込みのブール関数**true ()** と**false ()** は、ブール値を表すために使用できます。  
+ 次の例に示すように、組み込みのブール関数 **true ()** と **false ()** は、ブール値を表すために使用できます。  
   
 ```  
 DECLARE @var XML  
@@ -182,6 +182,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
 -   関数のインポートはサポートされていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML 構築 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)
  

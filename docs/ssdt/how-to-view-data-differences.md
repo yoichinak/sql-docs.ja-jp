@@ -12,18 +12,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 750909ea5344d5972ffdc8a2db418d8c482231f5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6516a9c39debe29befb106340c90920a70798044
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895764"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017972"
 ---
 # <a name="how-to-view-data-differences"></a>方法:データの差異を表示する
 
-2 つのデータベースのデータを比較すると、比較した各*データベース オブジェクト*とその状態が一覧表示されます。 各オブジェクト内のレコードの結果を状態別にグループ化して表示することもできます。  
+2 つのデータベースのデータを比較すると、比較した各 *データベース オブジェクト* とその状態が一覧表示されます。 各オブジェクト内のレコードの結果を状態別にグループ化して表示することもできます。  
   
-差異を表示した後、異なる、欠落している、または新しいオブジェクトまたはレコードの一部またはすべてについて、*ソース*と一致するように*ターゲット*を更新できます。  
+差異を表示した後、異なる、欠落している、または新しいオブジェクトまたはレコードの一部またはすべてについて、*ソース* と一致するように *ターゲット* を更新できます。  
   
 ### <a name="to-view-data-differences"></a>データの差異を表示するには  
   

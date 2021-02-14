@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99866d19ed4c61429919074b8f437822976a3831
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: a92e47d43e018c467ad53c06aa2943b9d51d1766
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99075304"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978594"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でレポート データをデータ ソースから取得する処理は、データ処理拡張機能を使用するモジュール式の拡張可能なデータ レイヤーを通して行われます。 レポート データをデータ ソースから取得するには、対象となるデータ ソースの種類 (データ ソースで動作しているバージョンのソフトウェア) およびデータ ソース プラットフォーム (32 ビットまたは 64 ビット [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) がサポートされているデータ処理拡張機能を選択する必要があります。  
@@ -203,7 +203,7 @@ ms.locfileid: "99075304"
   
  位置に依存する無名パラメーターはサポートされます。 この拡張機能では、名前付きパラメーターはサポートされません。 名前付きパラメーターを使用するには、 [Oracle](#OracleClient) データ処理拡張機能を使用します。  
   
- Oracle をデータ ソースとして構成する方法の詳細については、「 [Reporting Services を使用して Oracle データ ソースの構成およびアクセスを行う方法](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305)」を参照してください。 追加の権限の構成の詳細については、 [サポート技術情報の「](https://support.microsoft.com/kb/870668) NETWORK SERVICE セキュリティ プリンシパルに権限を追加する方法 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。  
+ Oracle をデータ ソースとして構成する方法の詳細については、「 [Reporting Services を使用して Oracle データ ソースの構成およびアクセスを行う方法](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305)」を参照してください。 追加の権限の構成の詳細については、 [サポート技術情報の「](https://mskb.pkisolutions.com/kb/870668) NETWORK SERVICE セキュリティ プリンシパルに権限を追加する方法 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。  
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
@@ -240,7 +240,7 @@ Oracle クライアント ツールをインストールするには、次のよ
 2.  Windows 用 ODAC 12c リリース 4 (12.1.0.2.4) をダウンロードします (サーバー用の 64 ビット、ツール用の 32 ビット)。
 3.  Data Provider for .NET 4 をインストールします
   
- この拡張機能では、名前付きパラメーターがサポートされます。 Oracle Version 11g 以降の場合、複数値パラメーターがサポートされます。 位置に依存する無名パラメーターを使用するには、OLE DB データ処理拡張機能と [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle データ プロバイダーを組み合わせて使用します。 Oracle をデータ ソースとして構成する方法の詳細については、「 [Reporting Services を使用して Oracle データ ソースの構成およびアクセスを行う方法](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305)」を参照してください。 追加の権限の構成の詳細については、 [サポート技術情報の「](https://support.microsoft.com/kb/870668) NETWORK SERVICE セキュリティ プリンシパルに権限を追加する方法 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。  
+ この拡張機能では、名前付きパラメーターがサポートされます。 Oracle Version 11g 以降の場合、複数値パラメーターがサポートされます。 位置に依存する無名パラメーターを使用するには、OLE DB データ処理拡張機能と [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle データ プロバイダーを組み合わせて使用します。 Oracle をデータ ソースとして構成する方法の詳細については、「 [Reporting Services を使用して Oracle データ ソースの構成およびアクセスを行う方法](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305)」を参照してください。 追加の権限の構成の詳細については、 [サポート技術情報の「](https://mskb.pkisolutions.com/kb/870668) NETWORK SERVICE セキュリティ プリンシパルに権限を追加する方法 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。  
   
  複数の入力パラメーターを使用してストアド プロシージャからデータを取得できますが、ストアド プロシージャから返せるのは 1 つの出力カーソルのみです。 詳細については、「DataReader を使用してデータを取得する」の「[Oracle REF CURSOR による結果の取得](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors)」を参照してください。
   

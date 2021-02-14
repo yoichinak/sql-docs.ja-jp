@@ -8,15 +8,15 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 06/10/2020
+ms.date: 02/05/2021
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 57ddcd78bd05cda262c9e4d041562dc5c2dfc4b7
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 3b24c9accfd205057086a477a586b33218e532b6
+ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236552"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99623800"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "99236552"
 > [!NOTE]
 > データの検出と分類は、**SQL Server 2012 以降でサポートされ、[SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 以降で使用できます**。 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](/azure/sql-database/sql-database-data-discovery-and-classification/)」を参照してください。
 
-## <a name="overview"></a><a id="subheading-1"></a>概要
+## <a name="overview"></a><a id="Overview"></a>概要
 データの検出と分類には一連のサービスが導入され、データベースだけでなく、データの保護を目的とした新しい SQL Information Protection パラダイムが形成されます。
 
 * **検出および推奨事項** - 分類エンジンはデータベースをスキャンし、機密データが含まれる可能性のある列を識別します。 適切な分類の推奨事項を確認して適用するだけでなく、手動で列を分類するための簡単な方法が提供されます。
 * **ラベル付け** - 列で永続的に機密分類ラベルにタグを付けることができます。
 * **表示** - データベース分類状態を詳細なレポートに表示することができます。このレポートを印刷したりエクスポートしたりして、コンプライアンスと監査の目的に、またその他のニーズに合わせて使用することができます。
 
-## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>機微な列の検出、分類およびラベル付け
+## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="Discovering-classifying-labeling-sensitive-columns"></a>機微な列の検出、分類およびラベル付け
 次のセクションでは、データベース内の機密データを含む列の検出、分類、およびラベル付けの手順に加え、データベースの現在の分類状態の表示とレポートのエクスポートの手順について説明します。
 
 分類には、次の 2 つのメタデータ属性が含まれます。
@@ -91,7 +91,7 @@ ms.locfileid: "99236552"
 
     ![SQL データ分類レポートを示すスクリーンショット。][10]
 
-## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>SSMS で情報保護ポリシーを管理する
+## <a name="manage-information-protection-policy-with-ssms"></a><a id="Manage-information-protection-policy-with-SSMS"></a>SSMS で情報保護ポリシーを管理する
 
 [SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) 以降を利用し、情報保護ポリシーを管理できます。
 
@@ -111,12 +111,9 @@ ms.locfileid: "99236552"
 > 情報保護ポリシー ファイルは SQL Server に保存されません。
 > SSMS では既定の情報保護ポリシーが使用されます。 カスタマイズされた情報保護ポリシーでエラーが発生した場合、SSMS では既定のポリシーを使用できません。 データ分類でエラーが発生します。 解決するには、**[情報保護ポリシーのリセット]** をクリックし、既定のポリシーを使用し、データ分類をもう一度有効にします。
 
-## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>分類メタデータへのアクセス
+## <a name="accessing-the-classification-metadata"></a><a id="sAccessing-the-classification-metadata"></a>分類メタデータへのアクセス
 
-SQL Server 2019 には [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) というシステム カタログ ビューが導入されています。 このビューでは、情報の種類と機密ラベルが返されます。 
-
-> [!NOTE]
-> このビューには **VIEW ANY SENSITIVITY CLASSIFICATION** 権限が必要です。 詳細については、「 [Metadata Visibility Configuration](./metadata-visibility-configuration.md)」を参照してください。
+SQL Server 2019 には [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) というシステム カタログ ビューが導入されています。 このビューでは、情報の種類と機密ラベルが返されます。
 
 SQL Server 2019 インスタンスで、`sys.sensitivity_classifications` を問い合わせ、分類されているすべての列とそれらに対応する分類を確認します。 次に例を示します。 
 
@@ -140,8 +137,6 @@ SQL Server 2019 より前の場合、情報の種類と機密ラベルの分類�
 
 * `sys_information_type_name`
 * `sys_sensitivity_label_name`
-
-メタデータには、拡張プロパティ カタログ ビュー [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md) を使用してアクセスすることができます。
 
 SQL Server 2017 以前のインスタンスの場合、次の例からは、分類されているすべての列とそれらに対応する分類が返されます。
 
@@ -185,6 +180,14 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
+## <a name="permissions"></a><a id="Permissions"></a>アクセス許可
+
+SQL Server 2019 のインスタンスでは、分類を表示するために **VIEW ANY SENSITIVITY CLASSIFICATION** 権限が必要です。 詳細については、「 [Metadata Visibility Configuration](./metadata-visibility-configuration.md)」を参照してください。
+
+SQL Server 2019 よりも前の場合、メタデータには、拡張プロパティ カタログ ビュー [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md) を使用してアクセスすることができます。
+
+分類を管理するには、ALTER ANY SENSITIVITY CLASSIFICATION 権限が必要です。 ALTER ANY SENSITIVITY CLASSIFICATION は、データベース権限 ALTER またはサーバー権限 CONTROL SERVER によって示されます。
+
 ## <a name="manage-classifications"></a><a id="subheading-5"></a>分類の管理
 
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
@@ -201,7 +204,7 @@ PowerShell コマンドレットを使用して列の分類を追加/削除し�
 - [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification)
 - [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification)
 
-## <a name="next-steps"></a><a id="subheading-6"></a>次のステップ
+## <a name="next-steps"></a><a id="Next-steps"></a>次のステップ
 
 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](/azure/azure-sql/database/data-discovery-and-classification-overview)」を参照してください。
 

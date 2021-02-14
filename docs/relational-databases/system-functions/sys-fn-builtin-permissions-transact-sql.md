@@ -27,12 +27,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9ef419401ddf5bd314e526198d8a943a5cc0020
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9b037f61c1cbbefbcbd441ef978e233b9ca91aac
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99194475"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100338136"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|サーバーの照合順序|セキュリティ保護可能なクラスの説明。|  
 |permission_name|**nvarchar(60)**|サーバーの照合順序|アクセス許可の名前。|  
-|type|**varchar (4)**|サーバーの照合順序|Compact アクセス許可の型コード。 次の表を参照してください。|  
+|型|**varchar (4)**|サーバーの照合順序|Compact アクセス許可の型コード。 次の表を参照してください。|  
 |covering_permission_name|**nvarchar(60)**|サーバーの照合順序|NULL でない場合は、このクラスのアクセス許可の名前を指定します。これは、このクラスの他のアクセス許可を意味します。|  
 |parent_class_desc|**nvarchar(60)**|サーバーの照合順序|NULL でない場合、現在のクラスを含む親クラスの名前。|  
 |parent_covering_permission_name|**nvarchar(60)**|サーバーの照合順序|NULL でない場合、親クラスの権限で、そのクラスの他の権限をすべて含む権限の名前。|  
@@ -98,7 +98,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER|CERTIFICATE|  
 |AL|ALTER|CONTRACT|  
 |AL|ALTER|DATABASE|  
-|AL|ALTER<br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
+|AL|ALTER<br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] および [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
 |AL|ALTER|ENDPOINT|  
 |AL|ALTER|FULLTEXT CATALOG|  
 |AL|ALTER|FULLTEXT STOPLIST|  
@@ -163,7 +163,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|CERTIFICATE|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
-|CL|CONTROL<br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
+|CL|CONTROL<br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] および [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
 |CL|CONTROL|ENDPOINT|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
@@ -242,7 +242,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |RF|REFERENCES|CERTIFICATE|  
 |RF|REFERENCES|CONTRACT|  
 |RF|REFERENCES|DATABASE|  
-|RF|REFERENCES<br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
+|RF|REFERENCES<br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] および [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
 |RF|REFERENCES|FULLTEXT CATALOG|  
 |RF|REFERENCES|FULLTEXT STOPLIST|  
 |RF|REFERENCES|SEARCH PROPERTY LIST|  
@@ -266,7 +266,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|CERTIFICATE|  
 |TO|TAKE OWNERSHIP|CONTRACT|  
 |TO|TAKE OWNERSHIP|DATABASE|  
-|TO|TAKE OWNERSHIP<br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
+|TO|TAKE OWNERSHIP<br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] および [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
 |TO|TAKE OWNERSHIP|ENDPOINT|  
 |TO|TAKE OWNERSHIP|FULLTEXT CATALOG|  
 |TO|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
@@ -293,7 +293,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|CERTIFICATE|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
-|VW|VIEW DEFINITION<br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
+|VW|VIEW DEFINITION<br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] および [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
 |VW|VIEW DEFINITION|ENDPOINT|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
@@ -322,7 +322,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `sys.fn_builtin_permissions` 定義済みの権限階層のコピーを生成するテーブル値関数です。 この階層には、包含アクセス許可が含まれます。 結果セットには、 `DEFAULT` アクセス許可階層の有向非循環グラフが記述されます。このグラフは、ルートは (クラス = サーバー、アクセス許可 = CONTROL server) です。  
   
  `sys.fn_builtin_permissions` では、相関パラメーターは受け入れられません。  

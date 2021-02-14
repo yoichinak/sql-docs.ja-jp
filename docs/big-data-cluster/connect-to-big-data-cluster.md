@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7b6f4b11848cd0108dec5f3a4e5de0c089a89b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b7f05551da025f513cd69ddf592002126c6f05c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784348"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039057"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio を使用して SQL Server ビッグ データ クラスターに接続する
 
@@ -49,7 +49,7 @@ Azure Data Studio を使用してビッグ データ クラスターに接続す
 
 1. SQL Server マスター インスタンスに対して見つかったエンドポイント名を **[サーバー名]** テキスト ボックスに入力します (例: **\<IP_Address\>,31433**)。 
 
-1. 認証の種類を選択します。 ビッグ データ クラスターで実行されている SQL Server マスター インスタンスの場合は、**Windows 認証**と **SQL ログイン**のみがサポートされます。 
+1. 認証の種類を選択します。 ビッグ データ クラスターで実行されている SQL Server マスター インスタンスの場合は、**Windows 認証** と **SQL ログイン** のみがサポートされます。 
 
 1. SQL ログインを使用している場合、SQL ログインの **[ユーザー名]** と **[パスワード]** を入力します。
 
@@ -60,13 +60,13 @@ Azure Data Studio を使用してビッグ データ クラスターに接続す
 
    ![マスター インスタンスに接続する](./media/connect-to-big-data-cluster/connect-to-cluster.png)
 
-1. **[接続]** をクリックすると、**サーバー ダッシュボード**が表示されます。
+1. **[接続]** をクリックすると、**サーバー ダッシュボード** が表示されます。
 
 Azure Data Studio の 2019 年 2 月リリースでは、SQL Server マスター インスタンスに接続することで、HDFS/Spark ゲートウェイを操作することもできます。 これは、次のセクションで説明する HDFS および Spark 用に別の接続を使用する必要がないことを意味します。
 
 - オブジェクト エクスプローラーに、新しいノートブックの作成や Spark ジョブの送信などのビッグ データ クラスター タスクの右クリック サポートを備えた、新しい **[Data Services]** ノードが追加されました。 
 - **[Data Services]** ノードには **HDFS** フォルダーも含まれていて、HDFS のコンテンツを調べ、HDFS に関連する共通タスク (外部テーブルの作成やノートブックを開いて HDFS のコンテンツを分析するなど) を実行できます。
-- 接続の**サーバー ダッシュボード**には、拡張機能がインストールされている場合、**SQL Server ビッグ データ クラスター**と **SQL Server 2019** のタブも含まれています。
+- 接続の **サーバー ダッシュボード** には、拡張機能がインストールされている場合、**SQL Server ビッグ データ クラスター** と **SQL Server 2019** のタブも含まれています。
 
    ![Azure Data Studio の [Data Services] ノード](./media/connect-to-big-data-cluster/connect-data-services-node.png)
 

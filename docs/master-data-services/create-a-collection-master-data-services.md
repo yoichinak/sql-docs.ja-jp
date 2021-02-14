@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7a5566592be79b54d4beda1c814500aa166c2404
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d33d856cae301c8c30efe6a6edda12f676b90bb7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495070"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272713"
 ---
 # <a name="create-a-collection-master-data-services"></a>コレクションを作成する (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "88495070"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーまたは統合メンバーの一覧表示を作成する必要があるときは、コレクションを作成します。 コレクションは、エンティティのすべてのメンバーを含む必要はありません。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  

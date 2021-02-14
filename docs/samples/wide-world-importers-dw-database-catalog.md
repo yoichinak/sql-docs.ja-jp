@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
-ms.openlocfilehash: e246d516d3c05b9a2c6725f7fd3e3f787066b8aa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4481a0c96a8f4a7f2f82e8babc5d8dce5ea97e92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461403"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077814"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW データベースカタログ
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ WideWorldImportersDW データベースは、データウェアハウスと分�
 |ファクト| ファクト テーブル。|  
 |統合|ETL に必要なステージングテーブルおよびその他のオブジェクト。|  
 
-## <a name="tables"></a>テーブル
+## <a name="tables"></a>[テーブル]
 
 ディメンションテーブルとファクトテーブルを以下に示します。 統合スキーマのテーブルは ETL プロセスでのみ使用され、一覧には表示されません。
 
@@ -47,7 +47,7 @@ WideWorldImportersDW には、次のディメンションテーブルがあり�
 |テーブル|ソーステーブル|
 |-----------------------------|---------------------|
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
-|顧客|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
+|Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |Date|財務年度を含む、日付に関する情報を含む新しいテーブル (会計年度の最初の開始日に基づく)。|
 |従業員|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
@@ -61,9 +61,9 @@ WideWorldImportersDW には、次のファクトテーブルがあります。 �
 
 |テーブル|ソーステーブル|サンプル分析|
 |-----------------------------|---------------------|---------------------|
-|注文|`Sales.Orders` および `Sales.OrderLines`|販売員、ピッカー/packer 生産性、および時間における注文の選択。 さらに、注文のバックにつながる在庫状況が低いという状況もあります。|
+|Order|`Sales.Orders` および `Sales.OrderLines`|販売員、ピッカー/packer 生産性、および時間における注文の選択。 さらに、注文のバックにつながる在庫状況が低いという状況もあります。|
 |Sale|`Sales.Invoices` および `Sales.InvoiceLines`|販売日、配送日、時間の経過に伴う収益性、営業担当者による収益性。|
-|Purchase|`Purchasing.PurchaseOrderLines`|予想される時間と実際のリードタイム|
+|購入|`Purchasing.PurchaseOrderLines`|予想される時間と実際のリードタイム|
 |トランザクション|`Sales.CustomerTransactions` および `Purchasing.SupplierTransactions`|発行日と終了日、および金額の測定。|
 |移動|`Warehouse.StockTransactions`|時間の経過と共に移動します。|
 |在庫保持|`Warehouse.StockItemHoldings`|手持在庫のレベルと価値。|
@@ -78,7 +78,7 @@ WideWorldImportersDW には、次のファクトテーブルがあります。 �
 
 これらの手順は、サンプルを構成するために使用されます。 これらは、enterprise edition の機能を standard edition バージョンのサンプルに適用し、PolyBase を追加し、ETL を再シードするために使用されます。
 
-|手順|目的|
+|プロシージャ|目的|
 |-----------------------------|---------------------|
 |Configuration_ApplyPartitionedColumnstoreIndexing|ファクトテーブルのパーティション分割と列ストアインデックスの両方を適用します。|
 |Configuration_ConfigureForEnterpriseEdition|パーティション分割、列ストアインデックス作成、およびメモリ内に適用されます。|
@@ -98,7 +98,7 @@ ETL プロセスで使用されるプロシージャは、次のカテゴリに�
 
 データベース内のシーケンスを構成する手順。
 
-|手順|目的|
+|プロシージャ|目的|
 |-----------------------------|---------------------|
 |順序のリセット|`ReseedSequenceBeyondTableValue`すべてのシーケンスに対してプロシージャを呼び出します。|
 |ReseedSequenceBeyondTableValue|同じシーケンスを使用するテーブルの値を超えて、次のシーケンス値を再配置するために使用されます。 ( `DBCC CHECKIDENT` シーケンスに相当する id 列の場合は、複数のテーブルにまたがる場合もあります)。|

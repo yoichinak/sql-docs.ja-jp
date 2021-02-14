@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4cf54be2376dede022b0f6905e21685184a6b122
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: dab7b82e27ba57974a4bdb8e679164f6316ecd4a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934751"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067127"
 ---
 # <a name="create-a-native-mode-report-server-database-report-server-configuration-manager"></a>ネイティブ モードのレポート サーバー データベースの作成 (レポート サーバー構成マネージャー)
 
@@ -53,7 +53,7 @@ ms.locfileid: "91934751"
  レポート サーバーに対して指定する言語を選択します。 ユーザーが他言語バージョンのブラウザーを使用してサーバーに接続する場合でも、定義済みロールの名前、説明、および個人用レポート フォルダーは他の言語では表示されません。  
   
  **データベースを作成および準備するための資格情報の確認**  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスでデータベースを作成する権限があるアカウントの資格情報を持っていることを確認します。 この資格情報は、レポート サーバー データベースおよび **RSExecRole**を作成するための一度だけの接続に使用されます。 ログインが存在しない場合は、レポート サーバーがデータベースに接続する際に使用するアカウント用にデータベース ユーザー ログインが作成されます。 ログインに使用している [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントで接続するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを入力することができます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスでデータベースを作成する権限があるアカウントの資格情報を持っていることを確認します。 この資格情報は、レポート サーバー データベースおよび **RSExecRole** を作成するための一度だけの接続に使用されます。 ログインが存在しない場合は、レポート サーバーがデータベースに接続する際に使用するアカウント用にデータベース ユーザー ログインが作成されます。 ログインに使用している [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントで接続するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを入力することができます。  
   
 ### <a name="to-enable-access-to-a-remote-report-server-database"></a>リモートのレポート サーバー データベースにアクセスできるようにするには  
   

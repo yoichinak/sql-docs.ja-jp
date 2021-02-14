@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f7fb9781583a56a2765f066462e62717c1d32d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290740"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070552"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル:オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
 
@@ -212,7 +212,7 @@ ms.locfileid: "80290740"
   
      **{P0}** を指定すると、小数点以下を含まないパーセンテージが表示されます。 「 **#PERCENT**」とだけ入力すると、小数点以下 2 桁を含む数値になります。 **#PERCENT** は計算または関数を実行するキーワードで、他にも多数あります。  
      
-4. **[はい]** をクリックして、 **[UseValueAsLabel]** を **False**に設定することを確認します。
+4. **[はい]** をクリックして、 **[UseValueAsLabel]** を **False** に設定することを確認します。
 
 5. **[フォント]** タブで、 **[太字]** を選択し、 **[色]** を **[白]** に変更します。
 
@@ -221,7 +221,7 @@ ms.locfileid: "80290740"
  グラフのラベルと凡例をカスタマイズする方法の詳細については、「[円グラフへのパーセンテージの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)」および「[凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)」を参照してください。  
   
 ##  <a name="whats-next"></a><a name="WhatsNext"></a> 次の課題  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を実行するには、データベースなどのデータ ソースにアクセスする権限と、実際にデータ ソースに接続するための*接続文字列* が必要です。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を実行するには、データベースなどのデータ ソースにアクセスする権限と、実際にデータ ソースに接続するための *接続文字列* が必要です。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
   
  他のチュートリアルを実行するには、SQL Server のインスタンスの名前と、任意のデータベースに読み取り専用でアクセスするのに十分な資格情報が必要です。 これもシステム管理者が設定できます。  
   

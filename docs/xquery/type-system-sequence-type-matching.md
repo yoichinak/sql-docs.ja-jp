@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d2163610d1ea537301ec61e1a34c8b6e727d6e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11c0eb693468b980db88995713dc6af99180c373
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759452"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352824"
 ---
 # <a name="type-system---sequence-type-matching"></a>型システム - シーケンス型の照合
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -161,7 +161,7 @@ GO
  どちらにも該当する場合、`instance of` 式から True が返されます。  
   
 ### <a name="example-querying-against-an-xml-type-column"></a>例: xml 型の列に対するクエリ  
- 次の例では、データベースの**xml**型の命令列に対してクエリを指定してい [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。 Instructions 列にはスキーマが関連付けられているので、この列は型指定された XML 列です。 XML スキーマで整数型の `LocationID` 属性が定義されます。 したがって、シーケンス式では、は `instance of xs:integer?` True を返します。  
+ 次の例では、データベースの **xml** 型の命令列に対してクエリを指定してい [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。 Instructions 列にはスキーマが関連付けられているので、この列は型指定された XML 列です。 XML スキーマで整数型の `LocationID` 属性が定義されます。 したがって、シーケンス式では、は `instance of xs:integer?` True を返します。  
   
 ```  
 SELECT Instructions.query('   
@@ -229,7 +229,7 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>実装の制限事項  
  具体的な制限は次のとおりです。  
   
--   コンテンツの種類が構文の**ドキュメント-node ()** はサポートされていません。  
+-   コンテンツの種類が構文の **ドキュメント-node ()** はサポートされていません。  
   
 -   **処理命令 (name)** 構文はサポートされていません。  
   
@@ -336,7 +336,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- この XML スキーマコレクションは、型指定された**xml**変数を作成するために使用されます。 この変数に割り当てられた XML インスタンスには、 `customer` 2 つの異なる型の2つの <> 要素があります。 最初の要素は `CustomerType` 型で、2 つ目の要素は `SpecialCustomerType` 型です。  
+ この XML スキーマコレクションは、型指定された **xml** 変数を作成するために使用されます。 この変数に割り当てられた XML インスタンスには、 `customer` 2 つの異なる型の2つの <> 要素があります。 最初の要素は `CustomerType` 型で、2 つ目の要素は `SpecialCustomerType` 型です。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -383,7 +383,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 次のクエリでは、クエリ対象の XML インスタンスに `Age` という名前の属性ノードが存在するので、True が返されます。 この式では、`attribute(Age)` 属性のテストを使用しています。 属性の順序が決まっていないので、クエリでは FLWOR 式を使用してすべての属性を取得し、`instance of` 式を使用して各属性をテストします。 この例では、まず XML スキーマコレクションを作成して、型指定された**xml**変数を作成します。  
+ 次のクエリでは、クエリ対象の XML インスタンスに `Age` という名前の属性ノードが存在するので、True が返されます。 この式では、`attribute(Age)` 属性のテストを使用しています。 属性の順序が決まっていないので、クエリでは FLWOR 式を使用してすべての属性を取得し、`instance of` 式を使用して各属性をテストします。 この例では、まず XML スキーマコレクションを作成して、型指定された **xml** 変数を作成します。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -431,9 +431,9 @@ RETURN
   
 -   **スキーマ属性 (AttributeName)** はサポートされていません。  
   
--   **Xsi: type**または**xsi: nil**の明示的なクエリはサポートされていません。  
+-   **Xsi: type** または **xsi: nil** の明示的なクエリはサポートされていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [型システム &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

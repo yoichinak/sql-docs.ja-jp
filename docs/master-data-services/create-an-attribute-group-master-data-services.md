@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ffe84797d519961ab26e6d43fb48a5c4c2dd3e13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d2e129bdd1a995fb5d0092bc15136ca9e1726f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461839"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348093"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>属性グループを作成する (マスター データ サービス)
 
@@ -27,7 +27,7 @@ ms.locfileid: "88461839"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **[エクスプローラー]** グリッドの個々のタブに属性を表示する場合、属性グループを作成します。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
@@ -56,7 +56,7 @@ ms.locfileid: "88461839"
   
 6.  **[リーフ グループ]**、 **[統合グループ]**、または **[コレクション グループ]** をクリックして、リーフ メンバー、統合メンバー、またはコレクションの属性グループを作成します。  
   
-7.  **[名前]** ボックスに属性グループの名前を入力します。 この名前が **エクスプローラー**のタブに表示されます。  
+7.  **[名前]** ボックスに属性グループの名前を入力します。 この名前が **エクスプローラー** のタブに表示されます。  
   
 8.  属性を追加するには、 **[使用できる属性]** ボックスの属性をクリックし、 **[追加]** 矢印をクリックします。 すべての属性を追加するには、 **[すべて追加]** 矢印をクリックします。  
   

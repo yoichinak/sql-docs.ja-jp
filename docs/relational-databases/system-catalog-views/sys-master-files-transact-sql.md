@@ -21,12 +21,12 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cfe105e765fbdafc1c4e61e0c340b3db44ed095
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 59258c52e24e5b9d85f9096d6eb2d24fa3d48df3
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99191358"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489456"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99191358"
 |database_id|**int**|このファイルが適用されるデータベースの ID。 Masterdatabase_id は常に1です。|  
 |file_id|**int**|データベース内のファイルの ID。 プライマリ ファイルの file_id は常に 1 です。|  
 |file_guid|**uniqueidentifier**|ファイルの一意識別子。<br /><br /> NULL = データベースは、以前のバージョンのからアップグレードされました [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2005 以前では有効)。|  
-|type|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行。<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
+|型|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行。<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
 |type_desc|**nvarchar(60)**|ファイルの種類の説明。<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。)|  
 |data_space_id|**int**|このファイルが属しているデータ領域の ID。 データ領域はファイルグループです。<br /><br /> 0 = ログ ファイル|  
 |name|**sysname**|データベース内のファイルの論理名。|  
@@ -69,6 +69,9 @@ ms.locfileid: "99191358"
   
 > [!NOTE]  
 >  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] トランザクションがコミットされるまで、実際のページの割り当て解除とそれに関連付けられているロックが延期されます。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 そのため、ラージ オブジェクトを削除または切り捨てた後すぐに sys.master_files から返される値は、実際の使用可能ディスク領域を表していない場合があります。  
+
+> [!NOTE]  
+>  Tempdb の場合、ビュー sys.master_files に初期 tempdb のサイズが表示されます。 値は、SQL Server の起動時に tempdb を作成するためのテンプレートとして使用されます。 そのため、tempdb のサイズが大きくなると、ビューに反映されません。 Tempdb ファイルの現在のサイズを取得するには、クエリを実行 `tempdb.sys.database_files` します。
   
 ## <a name="permissions"></a>アクセス許可  
  対応する行を表示するために必要な最小限の権限は、CREATE DATABASE、ALTER ANY DATABASE、または VIEW ANY DEFINITION です。  

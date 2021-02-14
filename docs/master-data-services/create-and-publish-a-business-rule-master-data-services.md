@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 39fdd6cebd0c27ec4a27a4543129a659bcdb22a3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: fbdb07d5a9bbff92b98fca913e2fcf142a1cbe6c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813046"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339093"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>ビジネス ルールを作成しパブリッシュする (マスター データ サービス)
 
@@ -27,12 +27,12 @@ ms.locfileid: "85813046"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、マスター データの精度を保証するためにビジネス ルールを作成します。 ルールを作成した後、データに適用する前に、そのルールをパブリッシュする必要があります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>ビジネス ルールを作成してパブリッシュするには  
   
@@ -106,8 +106,8 @@ ms.locfileid: "85813046"
 |名前|説明|  
 |----------|-----------------|  
 |Status|**[保存]** をクリックすると、ビジネス ルールが更新中であることを示す次のイメージが表示されます。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> ビジネス ルールの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|名前|ビジネス ルール名。|  
-|説明|ビジネス ルールの説明。|  
+|name|ビジネス ルール名。|  
+|[説明]|ビジネス ルールの説明。|  
 |[ビジネス ルールの状態]|次のビジネス ルールの状態のいずれか: ルール未定義、アクティブ、除外、保留中の変更、保留中の実行、保留中の削除。|  
 |除外|ビジネス ルールを除外するかどうかを指定します。|  
 |通知|電子メール通知を送信するユーザーまたはグループを指定します。|  
@@ -120,7 +120,7 @@ ms.locfileid: "85813046"
   
     -   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [通知を送信するようにビジネスルールを構成する &#40;マスターデータサービス&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [ビジネスルールの名前を変更する &#40;マスターデータサービス&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [ビジネス ルールに複数の条件を追加する &#40;マスター データ サービス&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

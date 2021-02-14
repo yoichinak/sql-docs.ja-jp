@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8512e53686d747fedb8ac5158a388e48b38469e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04cec56f41b83b011e4c9514d078dada7ddbd402
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461814"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351909"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>明示的階層を作成する (マスター データ サービス)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88461814"
   
  明示的階層を作成したら、 **[エクスプローラー]** 機能領域で明示的階層にメンバーを追加できます。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
@@ -62,9 +62,9 @@ ms.locfileid: "88461814"
 |名前|説明|  
 |----------|-----------------|  
 |Status|エンティティの状態。 **[保存]** をクリックすると、エンティティが更新中であることを示す次のイメージが表示されます。<br /><br /> ![状態を更新するためのアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")<br /><br /> エンティティの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![OK 状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")|  
-|名前|明示的階層の名前。|  
+|name|明示的階層の名前。|  
 |必須|明示的階層が必須かどうかを指定します。|  
-|作成者|明示的階層を作成したユーザーの名前。|  
+|Created By|明示的階層を作成したユーザーの名前。|  
 |作成日時|明示的階層が作成された日時。|  
 |更新者|明示的階層を更新したユーザーの名前。|  
 |更新日|明示的階層が最後に更新された日時。|  

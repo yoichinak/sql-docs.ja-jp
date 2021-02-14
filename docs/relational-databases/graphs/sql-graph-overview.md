@@ -16,15 +16,15 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 846f37923f8388e15663c56a4f724984a1a2588f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8c7dfeaa67e0ede78b0a891409be3211e1fa8d2e
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480173"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351419"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、多対多リレーションシップをモデル化するためのグラフデータベース機能が用意されています。 グラフのリレーションシップはに統合されて [!INCLUDE[tsql-md](../../includes/tsql-md.md)] おり、を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基盤とするデータベース管理システムとしてを使用する利点があります。
 
@@ -43,7 +43,7 @@ ms.locfileid: "97480173"
 -    アプリケーションに複雑な多対多リレーションシップがある。アプリケーションの進化に伴って、新しいリレーションシップが追加されます。
 -    相互接続されたデータとリレーションシップを分析する必要があります。
 
-## <a name="graph-features-introduced-in-sssqlv14"></a>で導入されたグラフ機能 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssql17"></a>で導入されたグラフ機能 [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 
 グラフのデータの格納とクエリを容易にするために、SQL Server にグラフ拡張機能を追加し始めます。 次の機能は、最初のリリースで導入されました。 
 
 
@@ -89,7 +89,7 @@ Merge DML で match を使用する方法の詳細については、 [Merge ス�
 ## <a name="shortest-path"></a>最短パス
 [SHORTEST_PATH](./sql-graph-shortest-path.md)関数は、グラフ内の2つのノード間、または特定のノードからグラフ内の他のすべてのノードまでの最短パスを検索します。 最短パスを使用して、グラフ内で推移的なクロージャまたは任意の長さのトラバーサルを見つけることもできます。 
 
- ## <a name="next-steps"></a>次のステップ  
+ ## <a name="next-steps"></a>次の手順  
 [SQL グラフデータベース-アーキテクチャ](./sql-graph-architecture.md)の読み取り
    
 

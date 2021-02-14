@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: af9f50c3314386fbac22ea35abc26d4ab9be6d75
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0e0666e622f23ce83aab57d48f5d5f63a1e4ac4e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203318"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342765"
 ---
 # <a name="sysdm_tcp_listener_states-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "99203318"
 |**port**|**int**|リスナーがリッスンしているポート番号。 NULL 値は許可されません。|  
 |**type**|**tinyint**|リスナーの種類。次のいずれかになります。<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = データベースミラーリング<br /><br /> NULL 値は許可されません。|  
 |**type_desc**|**nvarchar (20)**|**型** の説明。次のいずれかになります。<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> NULL 値は許可されません。|  
-|**state**|**tinyint**|可用性グループのリスナーの状態。次のいずれかになります。<br /><br /> 1 = オンライン。 リスナーが要求のリスニングおよび処理中です。<br /><br /> 2 = 再起動の保留中。 リスナーはオフラインであり、再起動が保留されています。<br /><br /> 可用性グループリスナーがサーバーインスタンスと同じポートをリッスンしている場合、これら2つのリスナーは常に同じ状態になります。<br /><br /> NULL 値は許可されません。<br /><br /> 注: この列の値は、TSD_listener オブジェクトから取得されます。 TDS_listener がオフラインの場合は状態をクエリできないため、この列ではオフライン状態はサポートされていません。|  
+|**状態**|**tinyint**|可用性グループのリスナーの状態。次のいずれかになります。<br /><br /> 1 = オンライン。 リスナーが要求のリスニングおよび処理中です。<br /><br /> 2 = 再起動の保留中。 リスナーはオフラインであり、再起動が保留されています。<br /><br /> 可用性グループリスナーがサーバーインスタンスと同じポートをリッスンしている場合、これら2つのリスナーは常に同じ状態になります。<br /><br /> NULL 値は許可されません。<br /><br /> 注: この列の値は、TSD_listener オブジェクトから取得されます。 TDS_listener がオフラインの場合は状態をクエリできないため、この列ではオフライン状態はサポートされていません。|  
 |**state_desc**|**nvarchar (16)**|**状態** の説明。次のいずれかになります。<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> NULL 値は許可されません。|  
 |**start_time**|**datetime**|リスナーが開始された日時を示すタイムスタンプ。 NULL 値は許可されません。|  
   

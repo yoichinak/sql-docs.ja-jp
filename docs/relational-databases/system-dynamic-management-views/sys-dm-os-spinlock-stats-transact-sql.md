@@ -1,8 +1,8 @@
 ---
 description: sys.dm_os_spinlock_stats (Transact-sql)
-title: sys.dm_os_spinlock_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_os_spinlock_stats (Transact-sql)
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 02/10/2021
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: 636a16d8656572e6fe2505f58bafc9eca9f6ce18
-ms.sourcegitcommit: 78b3096c2be89bcda92244f78663d8b38811bec5
+ms.openlocfilehash: 66b8a24e8b2b48aa43dd00cb37e8fc4c60fa0cd4
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100009290"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342837"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-sql)
 
@@ -49,9 +49,9 @@ ms.locfileid: "100009290"
 
 ## <a name="permissions"></a>アクセス許可  
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。    
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、 [サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) アカウントまたは [Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。    
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  
  sys.dm_os_spinlock_stats は、スピンロックの競合の原因を特定するために使用できます。 場合によっては、スピンロックの競合を解決または減少させることができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
@@ -69,10 +69,13 @@ GO
   
 ## <a name="spinlocks"></a>スピンロック  
  スピンロックは、通常は短時間保持されるデータ構造へのアクセスをシリアル化するために使用される軽量の同期オブジェクトです。 あるスレッドが、別のスレッドによって保持されているスピンロックによって保護されているリソースにアクセスしようとすると、そのスレッドは、ラッチやその他のリソース待機と同様にスケジューラを直ちに開始するのではなく、ループを実行し、"スピン" してリソースへのアクセスを再試行します。 スレッドは、リソースが使用可能になるかループが完了するまでスピンし続け、その時点でスレッドがスケジューラを生成して実行可能キューに戻ります。 これにより、スレッドコンテキストの過度の切り替えを減らすことができますが、スピンロックの競合が高くなると、CPU 使用率が著しく低下する可能性があります。
-   
+
+> [!NOTE]  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Intel Skylake プロセッサにがインストールされている場合は、[この記事](https://support.microsoft.com/topic/kb4538688-fix-severe-spinlock-contention-occurs-in-sql-server-2019-43faea65-fdcb-6835-f7fe-93abdb235837)を参照して必要な更新プログラムを適用し、トレースフラグ8101を有効にしてください。
+
  次の表に、最も一般的なスピンロックの種類の簡単な説明を示します。  
   
-|スピンロックの種類|説明|  
+|スピンロックの種類|[説明]|  
 |-----------------|-----------------|  
 |ABR|内部使用のみ。|
 |ADB_CACHE|内部使用のみ。|
@@ -230,6 +233,7 @@ GO
 |MEM_MGR|内部使用のみ。|
 |MGR_CACHE|内部使用のみ。|
 |MIGRATION_BUF_LIST|内部使用のみ。|
+|ロック|セキュリティトークンとアクセスチェックに関連するキャッシュエントリを保護します。 以下のバージョンで使用され [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ます。 TokenAndPermUserStore cache ストア内のエントリが継続的に増加している場合は、このスピンロックの大きなスピンに気付くことがあります。 [トレースフラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4610 と4618を使用して、エントリを制限するように評価します。 その他の参照: [ブログ](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)、 [記事](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) 、 [ドキュメント](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)。|
 |NETCONN_ADDRESS|内部使用のみ。|
 |ONDEMAND_TASK|内部使用のみ。|
 |ONE_PROC_SIM_NODE_CONTEXT|内部使用のみ。|
@@ -290,7 +294,7 @@ GO
 |SBS_TRANSPORT|内部使用のみ。|
 |SBS_UCS_DISPATCH|内部使用のみ。|
 |セキュリティ|内部使用のみ。|
-|SECURITY_CACHE|内部使用のみ。|
+|SECURITY_CACHE|セキュリティトークンとアクセスチェックに関連するキャッシュエントリを保護します。 以降で使用され [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ます。 TokenAndPermUserStore cache ストア内のエントリが継続的に増加している場合は、このスピンロックの大きなスピンに気付くことがあります。 [トレースフラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4610 と4618を使用して、エントリを制限するように評価します。 その他の参照: [ブログ](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)、 [記事](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) 、 [ドキュメント](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)。 [Sql 2017 および sql 2016 の更新プログラム](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5)を適用した後、スピンロック名が変更されていることに注意してください。|
 |SECURITY_FEDAUTH_AAD_BECWSCONNS|内部使用のみ。|
 |SEMANTIC_TICACHE|内部使用のみ。|
 |SEQUENCED_OBJECT|内部使用のみ。|
@@ -416,5 +420,4 @@ GO
  [SQL Server でのスピンロックの競合の診断と解決](../diagnose-resolve-spinlock-contention.md)
   
   
-
 

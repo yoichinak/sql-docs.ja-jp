@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7acc55d55afc3d994230a529243c26d5e1a626be
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 2a4e92577f9938b764a3754e19c27a8e7f22658b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364109"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048622"
 ---
 # <a name="connect-azure-data-studio-to-sql-server-using-windows-authentication---kerberos"></a>Windows 認証 (Kerberos) を使用して Azure Data Studio を SQL Server に接続する
 
