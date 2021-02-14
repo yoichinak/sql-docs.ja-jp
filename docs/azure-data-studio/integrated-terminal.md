@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 09876b320e4761e6d73756d9cf7db5fc6c66a0b6
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 054bfd71962a5775374e8faa567dc24242d846c1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91363999"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048342"
 ---
 # <a name="integrated-terminal"></a>統合ターミナル
 
@@ -117,7 +117,7 @@ Windows 上でシェルを正しく構成することは、適切な実行可能
 
 ### <a name="run-selected-text"></a>選択したテキストを実行する
 
-`runSelectedText` コマンドを使用するには、エディターでテキストを選択して、 **[ターミナル]:[Run Selected Text in Active Terminal]\(アクティブなターミナルで選択したテキストを実行\)** コマンドを**コマンド パレット** (**Ctrl + Shift +P**) を介して実行します。 ターミナルでは、選択したテキストの実行が試みられます。
+`runSelectedText` コマンドを使用するには、エディターでテキストを選択して、 **[ターミナル]:[Run Selected Text in Active Terminal]\(アクティブなターミナルで選択したテキストを実行\)** コマンドを **コマンド パレット** (**Ctrl + Shift +P**) を介して実行します。 ターミナルでは、選択したテキストの実行が試みられます。
 
 ![選択したテキストを実行する](media/integrated-terminal/terminal_run_selected.png)
 

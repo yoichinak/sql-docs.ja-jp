@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b2195bd66960640747381db5fd3a1390c7d3e342
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b2a8c7ae0bbd50598d6c476c0a065786e6efcddb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519022"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018422"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>方法:データベースに接続し、既存のオブジェクトを参照する
 
@@ -27,13 +27,13 @@ ms.locfileid: "85519022"
   
 ### <a name="to-connect-to-a-database-instance"></a>データベース インスタンスに接続するには  
   
-1.  Visual Studio で、**SQL Server オブジェクト エクスプローラー**が開いていることを確認します。 開いていない場合は、 **[表示]** メニューの **[SQL Server オブジェクト エクスプローラー]** をクリックします。  
+1.  Visual Studio で、**SQL Server オブジェクト エクスプローラー** が開いていることを確認します。 開いていない場合は、 **[表示]** メニューの **[SQL Server オブジェクト エクスプローラー]** をクリックします。  
   
-2.  **SQL Server オブジェクト エクスプローラー**で **SQL Server** ノードを右クリックし、 **[SQL Server の追加]** をクリックします。  
+2.  **SQL Server オブジェクト エクスプローラー** で **SQL Server** ノードを右クリックし、 **[SQL Server の追加]** をクリックします。  
   
 3.  **[サーバーに接続]** ダイアログ ボックスで、接続先のサーバー インスタンスの名前を **[サーバー名]** ボックスに入力し、資格情報を指定して、 **[接続]** をクリックします。  
   
-4.  **SQL Server オブジェクト エクスプローラー**で、サーバー インスタンスの下にある **[データベース]** ノードを展開します。 このサーバー インスタンスにあるすべてのデータベースが、この **[データベース]** ノードの下に追加されています。  
+4.  **SQL Server オブジェクト エクスプローラー** で、サーバー インスタンスの下にある **[データベース]** ノードを展開します。 このサーバー インスタンスにあるすべてのデータベースが、この **[データベース]** ノードの下に追加されています。  
   
 5.  **AdventureWorks** (または別のデータベース) のノードを展開します。 すべてのデータベース エンティティが、 SQL Server Management Studio に似た階層構造で整理されています。  
   

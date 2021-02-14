@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a3ecfda6bd7b2bbd885cc8cc4b12917289dd3142
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5529b10ef0a293a19c45eb8a0e904fcf1fc0f42
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495076"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339690"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>ビジネス ルールに複数の条件を追加する (マスター データ サービス)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88495076"
 > [!NOTE]  
 >  **OR** 演算子を使用するビジネス ルールを作成する場合は、個別に評価できる条件ステートメントごとに個別のルールを作成することを検討してください。 そうすることによって、必要に応じてルールを除外できるので、柔軟性が向上し、トラブルシューティングも容易になります。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
@@ -54,7 +54,7 @@ ms.locfileid: "88495076"
   
 7.  **[編集]** をクリックします。  
   
-8.  **If** ブロックの下で、左側にある論理演算子のドロップダウン リストから、 **AND/OR/ NOT**を選択します。  
+8.  **If** ブロックの下で、左側にある論理演算子のドロップダウン リストから、 **AND/OR/ NOT** を選択します。  
   
 9. **[追加]** をクリックします。 パネルが表示されます。  
   

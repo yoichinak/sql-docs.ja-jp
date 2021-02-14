@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 676a6fff88de31480737f1bb82cc0466605b4699
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a5ad62b83d7a12129da352ef7265996dd770297
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88388318"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272383"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>ビジネス ルールに対してバージョンを検証する (マスター データ サービス)
 
@@ -34,7 +34,7 @@ ms.locfileid: "88388318"
 > [!NOTE]  
 >  バージョンをコミットするには、すべてのメンバーが検証に合格する必要があります。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  

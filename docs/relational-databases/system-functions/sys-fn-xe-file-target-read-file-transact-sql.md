@@ -23,12 +23,12 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a592609cce6805105e61679e54857312e6296b6f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: daa5c2bb81ea9f89ebf415e242e881732ad08389
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99187378"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100338098"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,10 +76,10 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|イベントの内容 (XML 形式)。 NULL 値は許可されません。|  
 |file_name|**nvarchar(260)**|イベントが格納されているファイルの名前。 NULL 値は許可されません。|  
 |file_offset|**bigint**|イベントを格納しているファイル内のブロックのオフセット。 NULL 値は許可されません。|  
-|timestamp_utc|**datetime2**|**適用対象**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />イベントの日付と時刻 (UTC タイムゾーン)。 NULL 値は許可されません。|  
+|timestamp_utc|**datetime2**|**適用対象**: [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />イベントの日付と時刻 (UTC タイムゾーン)。 NULL 値は許可されません。|  
 
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  で **sys.fn_xe_file_target_read_file** を実行して大きな結果セットを読み取る [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と、エラーが発生する可能性があります。 結果を **ファイル** モード (**Ctrl + Shift + F キー**) に使用して、大きな結果セットをファイルにエクスポートし、代わりに別のツールでファイルを読み取ります。  
   
 ## <a name="permissions"></a>アクセス許可  

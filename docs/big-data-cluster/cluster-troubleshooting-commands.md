@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d384a1835d902e56030b62897d657c81c0ec3b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3f0d8ba02c56ca625094829770771c053e31802e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773677"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039642"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes のトラブルシューティング
 
@@ -23,7 +23,7 @@ ms.locfileid: "85773677"
 この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の監視とトラブルシューティングに使用できる、いくつかの便利な Kubernetes コマンドについて説明します。 ビッグ データ クラスター内に存在するポッドまたは他の Kubernetes アーティファクトの詳細を表示する方法を示します。 この記事では、SQL Server ビッグ データ クラスター サービスのいずれかが実行されているコンテナーとの間でのファイルのコピーなど、一般的なタスクについても説明します。
 
 > [!TIP]
-> ビッグ データ クラスターのコンポーネントの状態を監視するには、[**azdata bdc status**](deployment-guidance.md#status) のコマンドを使用するか、Azure Data Studio に組み込まれている[トラブルシューティングのノートブック](notebooks-manage-bdc.md)を使用します。
+> ビッグ データ クラスターのコンポーネントの状態を監視するには、[**azdata bdc status**](deployment-guidance.md#status) のコマンドを使用するか、Azure Data Studio に組み込まれている [トラブルシューティングのノートブック](notebooks-manage-bdc.md)を使用します。
 
 > [!TIP]
 > Windows (cmd または PS) または Linux (bash) のクライアント コンピューターで、次の **kubectl** コマンドを実行します。 それらには、クラスターでの以前の認証と、実行対象のクラスター コンテキストが必要です。 たとえば、以前に作成された AKS クラスターでは、`az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` を実行して Kubernetes クラスター構成ファイルをダウンロードし、クラスター コンテキストを設定できます。

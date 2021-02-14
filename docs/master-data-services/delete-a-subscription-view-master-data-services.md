@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4dea51dd78f69c7906ec149dcefd52aa3f9e5dfb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d9c50f9b6367b4ec16e727b77c7e8d85e2196dc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500632"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339033"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>サブスクリプション ビューを削除する (マスター データ サービス)
 
@@ -27,7 +27,7 @@ ms.locfileid: "88500632"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になったサブスクリプション ビューを削除します。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] でサブスクリプション ビューを削除すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースからビューが削除されます。 サブスクリプション ビューを編集することもできます。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[統合管理]** 機能領域にアクセスする権限が必要です。 詳細については、「 [機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  

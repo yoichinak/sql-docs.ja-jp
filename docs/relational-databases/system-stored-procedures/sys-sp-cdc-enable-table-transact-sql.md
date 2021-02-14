@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe8e347cb82fa1b89ad03ebb152a8d0257f0985b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f499a26e4884518e002b5d33d9f9cb25b7c1457e
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99205990"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100339391"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -99,7 +99,12 @@ sys.sp_cdc_enable_table
   
 > [!IMPORTANT]  
 >  SWITCH PARTITION はメタデータの操作ですが、データの変更が発生します。 この操作に関連付けられているデータの変更は、変更データキャプチャの変更テーブルにはキャプチャされません。 3つのパーティションがあり、このテーブルに変更が加えられたテーブルについて考えてみます。 キャプチャ プロセスでは、このテーブルに対して実行されるユーザーの挿入操作、更新操作、および削除操作を追跡します。 ただし、パーティションが別のテーブルに切り替えられた場合 (一括削除の実行など)、この操作の一部として移動された行は、変更テーブルには削除された行としてキャプチャされません。 同様に、既に行が作成されている新しいパーティションがテーブルに追加された場合、これらの行は変更テーブルには反映されません。 このため、変更がアプリケーションで使用され、変更先に適用されると、データの不整合が生じる可能性があります。  
-  
+ 
+> [!NOTE] 
+> CDC 対応テーブルで split または merge 操作を実行する前に、パーティションに保留中のレプリケートされたコマンドがないこと、および分割操作またはマージ操作中に DML 操作が実行されていないことを確認してください。 未処理のトランザクションや DML 操作は `Error 608: No catalog entry found for partitionID` 、ログリーダーエージェントまたは CDC キャプチャジョブでエラーが発生する可能性があります。 分割またはマージ操作を続行するには、テーブルで CDC を無効にすることが必要になる場合があります。 
+
+
+
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   

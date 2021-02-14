@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a13d9eb18fae38ef85c182576fe50ed3be6f4d38
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 56c22120fb08b538b845647f1a2300c22e17d017
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529468"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042213"
 ---
 # <a name="deploying-a-rendering-extension"></a>表示拡張機能の配置
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のレポート表示拡張機能は、作成して [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ライブラリにコンパイルした後、レポート サーバーおよびレポート デザイナーで検出できるようにする必要があります。 それには、拡張機能を適切なディレクトリにコピーし、適切な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成ファイルにエントリを追加します。  
@@ -31,8 +31,8 @@ ms.locfileid: "84529468"
 |---------------|-----------------|  
 |**名前**|拡張機能の一意の名前。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extensions** 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
 |**Type**|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
-|**[表示]**|値が **false** の場合、表示拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は **true**になります。|  
-|**LogAllExecutionRequests**|値が **false** の場合、エントリがログに記録されるのは、セッションでレポートが最初に実行されるときのみであることを示します。 この属性が指定されない場合、既定値は **true**になります。<br /><br /> この設定によって、レポートに最初に表示されるページについてのみエントリをログに記録するか ( **false**の場合)、レポートに表示されるページごとにエントリをログに記録するか ( **true**の場合) が決まります。|  
+|**[表示]**|値が **false** の場合、表示拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は **true** になります。|  
+|**LogAllExecutionRequests**|値が **false** の場合、エントリがログに記録されるのは、セッションでレポートが最初に実行されるときのみであることを示します。 この属性が指定されない場合、既定値は **true** になります。<br /><br /> この設定によって、レポートに最初に表示されるページについてのみエントリをログに記録するか ( **false** の場合)、レポートに表示されるページごとにエントリをログに記録するか ( **true** の場合) が決まります。|  
   
  詳細については、「 [RsReportServer.config 構成ファイル](../../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
   
@@ -57,13 +57,13 @@ ms.locfileid: "84529468"
     </Extensions>  
     ```  
   
-4.  表示拡張機能のエントリを追加します。 エントリには、 **Name** および **Type**の値で構成される要素を含める必要があります。このエントリは次のようになります。  
+4.  表示拡張機能のエントリを追加します。 エントリには、 **Name** および **Type** の値で構成される要素を含める必要があります。このエントリは次のようになります。  
   
     ```  
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     **Name** の値は、表示拡張機能の一意な名前です。 **Type** の値は、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 実装の完全修飾名前空間に続けて、アセンブリの名前 (.dll ファイル拡張子を含まない) をコンマで区切って指定したものです。 既定では、表示拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには、 **Extension** 要素に **Visible** 属性を追加して、 **false**に設定します。  
+     **Name** の値は、表示拡張機能の一意な名前です。 **Type** の値は、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 実装の完全修飾名前空間に続けて、アセンブリの名前 (.dll ファイル拡張子を含まない) をコンマで区切って指定したものです。 既定では、表示拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには、 **Extension** 要素に **Visible** 属性を追加して、 **false** に設定します。  
   
 ## <a name="verifying-the-deployment"></a>配置の確認  
  また、レポート マネージャーを開き、配信拡張機能がレポートに有効なエクスポートの種類の一覧に含まれていることを確認することもできます。  

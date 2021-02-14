@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1eccee8a5acfbb810ed7636f5d073c2644f0342
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d69a916d19c519e1b313a7244a6a07feba36a67
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759488"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339992"
 ---
 # <a name="path-expressions-xquery"></a>パス式 (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85759488"
   XQuery パス式は、ドキュメント内の要素、属性、テキストノードなどのノードを検索します。 パス式の結果は常に、結果シーケンス内でノードが重複することなく、ドキュメント順で生成されます。 パスを指定する場合は、省略形または省略構文を使用できます。 以下の説明では、主に省略しない構文を取り上げます。 省略された構文については、このトピックの後半で説明します。  
   
 > [!NOTE]  
->  このトピックのサンプルクエリは、 **xml**型の列に対して指定されているので、 **Catalogdescription**と**手順**、 **productmodel**テーブルでは、これらの列に格納されている xml ドキュメントの内容と構造を理解しておく必要があります。  
+>  このトピックのサンプルクエリは、 **xml** 型の列に対して指定されているので、 **Catalogdescription** と **手順**、 **productmodel** テーブルでは、これらの列に格納されている xml ドキュメントの内容と構造を理解しておく必要があります。  
   
  パス式には、相対パスまたは絶対パスを指定できます。 これらの両方の説明を次に示します。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "85759488"
  0個以上のオプションの述語  
  一部を選択し、他のノードを破棄してノードをフィルター処理します。  
   
- 次の例では、パス式で**軸手順**を使用します。  
+ 次の例では、パス式で **軸手順** を使用します。  
   
 -   絶対パス式では、 `/child::ProductDescription` 1 つのステップだけが含まれます。 これは、軸 (`child`) とノード テスト (`ProductDescription`) を指定しています。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "85759488"
   
 -   相対パス式には、 `child::root/child::Location[attribute::LocationID=10]` スラッシュ記号で区切られた2つのステップが含まれています。 最初のステップでは、軸 ( `child` ) とノードテスト () を指定し `root` ます。 2 番目のステップは、軸ステップの 3 種類のコンポーネントをすべて指定しています。つまり、軸 (child)、ノード テスト (`Location`)、および述語 (`[attribute::LocationID=10]`) です。  
   
- 軸ステップのコンポーネントの詳細については、「[パス式のステップでの軸の指定](../xquery/path-expressions-specifying-axis.md)」、「[パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)」、および「[パス式のステップで述語を指定する](../xquery/path-expressions-specifying-predicates.md)」を参照してください。  
+ 軸ステップのコンポーネントの詳細については、「 [パス式のステップでの軸の指定](../xquery/path-expressions-specifying-axis.md)」、「 [パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)」、および「 [パス式のステップで述語を指定する](../xquery/path-expressions-specifying-predicates.md)」を参照してください。  
   
 ## <a name="general-step"></a>一般的な手順  
  汎用ステップは、評価結果がノードのシーケンスになる必要のある式です。  

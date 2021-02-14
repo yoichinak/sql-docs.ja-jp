@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 140a1631cfd4b7068e4729004f7aa41d9535a904
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 44f05374320dc2d5c329ad234e62dd0c420bf22c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717182"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341851"
 ---
 # <a name="logical-expressions-xquery"></a>論理式 (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  XQuery**では、論理**演算子**と演算子が**サポートされています。  
+  XQuery **では、論理** 演算子 **と演算子が** サポートされています。  
   
 ```  
 expression1 and expression2  
@@ -46,7 +46,7 @@ expression1 or expression2
   
 -   それ以外の場合は、静的なエラーが発生します。  
   
- その後、論理**and**および**or**演算子は、標準の論理セマンティクスを使用して、式の結果のブール値に適用されます。  
+ その後、論理 **and** および **or** 演算子は、標準の論理セマンティクスを使用して、式の結果のブール値に適用されます。  
   
  次のクエリでは、製品カタログから、特定の製品モデルのフロント角度の小さい画像 (<`Picture`> 要素) を取得します。 製品の説明ドキュメントごとに、サイズや角度など、異なる属性を持つ 1 つ以上の製品写真をカタログに格納できることに注意してください。  
   
@@ -74,7 +74,7 @@ where ProductModelID=19
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XQuery 式](../xquery/xquery-expressions.md)  
   
   

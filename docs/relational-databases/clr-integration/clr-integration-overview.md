@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f7fbd6decf193fa695066a8133ec37e74d7e959
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 667ded44c653f71902893f160b6231ad8b751789
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810776"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100341449"
 ---
 # <a name="clr-integration---overview"></a>CLR 統合 - 概要
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "91810776"
  CLR 統合を使用すると、パフォーマンスが向上する可能性が高くなります。 詳細については、「 [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)」を参照してください。  
  
 > [!WARNING]
->  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](../../database-engine/configure-windows/clr-strict-security.md)」をご覧ください。 
+>  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](../../database-engine/configure-windows/clr-strict-security.md)」をご覧ください。 
   
 ## <a name="choosing-between-transact-sql-and-managed-code"></a>Transact-SQL とマネージド コードの選択  
  ストアド プロシージャ、トリガー、およびユーザー定義関数を記述する際には、従来の [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用するか、Visual Basic .NET や Visual C# などの .NET Framework 言語を使用するかを判断する必要があります。 データ アクセスに使用する手続き型のロジックが、コード中にない場合や非常に少ない場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。 複雑なロジックで CPU を集中的に使用する関数やプロシージャ、または .NET Framework の BCL を使用する場合は、マネージド コードを使用します。  

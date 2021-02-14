@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4804032b47059ccfbd376cbe10f2433736893ef0
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: feb7df193ea54f4c7184066bb38cc5cc700f9bf9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358850"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079663"
 ---
 # <a name="add-database-reference-dialog-box"></a>[データベース参照の追加] ダイアログ ボックス
 
@@ -115,7 +115,7 @@ DACPAC 内のデータベースを参照するには **[データ層アプリケ
   
 このプロジェクトを公開する場合、1 つのターゲットに同じソリューションの複合プロジェクトを配置できます。  
   
-1.  **ソリューション エクスプローラー**でプロジェクト名を右クリックし、 **[公開]** をクリックして **[データベースの公開]** ダイアログ ボックスを表示します。  
+1.  **ソリューション エクスプローラー** でプロジェクト名を右クリックし、 **[公開]** をクリックして **[データベースの公開]** ダイアログ ボックスを表示します。  
   
 2.  **[データベースの公開]** ダイアログ ボックスで、 **[詳細設定]** をクリックします。  
   

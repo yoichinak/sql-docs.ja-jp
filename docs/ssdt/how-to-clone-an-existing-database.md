@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 03dedf5c30c8370195243c11406552d12edd8394
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 9dd341612f075c3a92cd01b5cfca1133910f2c57
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518902"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018452"
 ---
 # <a name="how-to-clone-an-existing-database"></a>方法:既存のデータベースを複製する
 
@@ -28,13 +28,13 @@ ms.locfileid: "85518902"
   
 ### <a name="to-create-a-development-database"></a>開発用データベースを作成するには  
   
-1.  **SQL Server オブジェクト エクスプローラー**の **[SQL Server]** ノードの下で、接続されているサーバー インスタンスを展開します。  
+1.  **SQL Server オブジェクト エクスプローラー** の **[SQL Server]** ノードの下で、接続されているサーバー インスタンスを展開します。  
   
 2.  **[データベース]** ノードを右クリックし、 **[新しいデータベースの追加]** をクリックします。  
   
 3.  新しいデータベースの名前を **TradeDev** に変更します。  
   
-4.  **SQL Server オブジェクト エクスプローラー**で **Trade** データベースを右クリックし、 **[スキーマ比較]** をクリックします。 元の **Trade** データベースをソースとして、新しい **TradeDev** データベースをターゲットとして選択し、「[スキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)」の手順に従います。 これにより、**TradeDev** が **Trade** のスキーマで更新されます。  
+4.  **SQL Server オブジェクト エクスプローラー** で **Trade** データベースを右クリックし、 **[スキーマ比較]** をクリックします。 元の **Trade** データベースをソースとして、新しい **TradeDev** データベースをターゲットとして選択し、「[スキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)」の手順に従います。 これにより、**TradeDev** が **Trade** のスキーマで更新されます。  
   
 ### <a name="to-replicate-data"></a>データをレプリケートするには  
   

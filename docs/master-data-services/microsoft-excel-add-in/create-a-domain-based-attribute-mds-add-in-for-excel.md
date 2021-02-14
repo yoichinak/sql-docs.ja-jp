@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 963d07399e91b89e18ac355b9d205ef57d2c26e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c54f2a787fa14afe89d593faca7fc0072525ef7f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257702"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272423"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>ドメイン ベースの属性の作成 (Excel 用 MDS アドイン)
 
@@ -29,7 +29,7 @@ ms.locfileid: "92257702"
 > [!NOTE]  
 >  制約された列の値を、一覧から選択せずにユーザーが入力すると、パブリッシュ時に **[$InputStatus$]** 列にエラーが表示されます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[システム管理]** および **[エクスプローラー]** 機能領域に対する権限が必要です。  

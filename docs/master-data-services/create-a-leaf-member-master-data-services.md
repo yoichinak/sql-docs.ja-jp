@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f1f5436cf2d553209a80ae5f9bb9f32b3df1c7d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ffffd1fa28597a41ba1b8f7631e52f6264bb8203
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257819"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272673"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>リーフ メンバーを作成する (マスター データ サービス)
 
@@ -30,7 +30,7 @@ ms.locfileid: "92257819"
   
  データをインポートするには、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] も使用します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -57,7 +57,7 @@ ms.locfileid: "92257819"
   
      フィルターの親属性およびドメイン ベースの属性の詳細については、「[ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)」を参照してください。  
   
-7.  省略可能。 **[注釈]** ボックスに、メンバーを追加した理由についてのコメントを入力します。 そのメンバーにアクセスできるすべてのユーザーが、その注釈を表示できます。  
+7.  任意。 **[注釈]** ボックスに、メンバーを追加した理由についてのコメントを入力します。 そのメンバーにアクセスできるすべてのユーザーが、その注釈を表示できます。  
   
 8.  **[OK]** をクリックします。  
   

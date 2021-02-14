@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 15882852544113881b52f3641e0c85ec684add22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57fadc47d241658b96f2d9a7087bcb174d72dcce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418568"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076313"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>Azure SQL Database への接続 (アクセス先の SQL)
 [SQL Azure への接続] ダイアログボックスを使用して、移行する Azure SQL Database 内のデータベースに接続します。  
@@ -28,7 +28,7 @@ ms.locfileid: "88418568"
   
 SQL Azure に接続するためのサーバー名を選択または入力します。  
   
-**[データベース]**  
+**データベース**  
   
 データベース名を選択、入力、または **参照** します。  
   
@@ -56,7 +56,7 @@ SSMA では、SQL Azure への暗号化接続を推奨しています。
   
     1.  **(データベースが見つかりません)** が無効化され、常にグレー表示になっている  
   
-    2.  常に有効になっている**新しいデータベースを作成**し、ユーザーが新しいデータベースを作成できるようにします。 このメニュー項目をクリックすると、[データベースの作成] ダイアログボックスにデータベースの名前とサイズが表示されます。  
+    2.  常に有効になっている **新しいデータベースを作成** し、ユーザーが新しいデータベースを作成できるようにします。 このメニュー項目をクリックすると、[データベースの作成] ダイアログボックスにデータベースの名前とサイズが表示されます。  
   
 3.  データベースの作成時に、これらの2つのパラメーターは入力として指定されます。  
   

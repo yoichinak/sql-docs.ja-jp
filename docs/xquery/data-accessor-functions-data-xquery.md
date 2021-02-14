@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5d0940f6e182d477d2c0660f4c93aaa9fedeb6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e20c00d93082994cd5dc230bfe1b4356b3ed031
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643548"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338507"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>データ アクセサー関数 - data (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  *$Arg*によって指定された各項目の型指定された値を返します。  
+  *$Arg* によって指定された各項目の型指定された値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,9 +56,9 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   属性ノードが XML スキーマ型を使用して型指定されている場合、その型指定された値は、それに応じて型指定された値になります。  
   
--   属性ノードが型指定されていない場合、型指定された値は**xdt: untypedAtomic**のインスタンスとして返される文字列値と同じになります。  
+-   属性ノードが型指定されていない場合、型指定された値は **xdt: untypedAtomic** のインスタンスとして返される文字列値と同じになります。  
   
--   要素ノードが型指定されていない場合、型指定された値は**xdt: untypedAtomic**のインスタンスとして返される文字列値と同じになります。  
+-   要素ノードが型指定されていない場合、型指定された値は **xdt: untypedAtomic** のインスタンスとして返される文字列値と同じになります。  
   
  型指定された要素ノードには、次のものが適用されます。  
   
@@ -68,7 +68,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
  次の例に示すように、 **data ()** 関数を使用することは、多くの場合、省略可能ですが、 **data ()** 関数を明示的に指定すると、クエリの読みやすさが向上します。 詳細については、「 [XQuery の基本](../xquery/xquery-basics.md)」を参照してください。  
   
- 次に示すように、構築された XML で**データ ()** を指定することはできません。  
+ 次に示すように、構築された XML で **データ ()** を指定することはできません。  
   
 ```  
 declare @x xml  
@@ -77,9 +77,9 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ```  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+ このトピックでは、AdventureWorks データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A: data() XQuery 関数によるノードの型指定された値の抽出  
+### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. data() XQuery 関数によるノードの型指定された値の抽出  
  次のクエリは、 **data ()** 関数を使用して、属性、要素、およびテキストノードの値を取得する方法を示しています。  
   
 ```  
@@ -126,7 +126,7 @@ WHERE ProductModelID = 19
   
  次の例は、 **data ()** 関数が必要なインスタンスを示しています。  
   
- 次のクエリでは、 **$pd/p1: 仕様/マテリアル**が <`Material`> 要素を返します。 また、**データ ($pd/p1: 仕様/マテリアル)** は、xdt: untypedAtomic として型指定された文字データを返し `Material` ます。これは、<> が型指定されていないためです。 入力が型指定されていない場合、 **data ()** の結果は**Xdt: untypedAtomic**として型指定されます。  
+ 次のクエリでは、 **$pd/p1: 仕様/マテリアル** が <`Material`> 要素を返します。 また、 **データ ($pd/p1: 仕様/マテリアル)** は、xdt: untypedAtomic として型指定された文字データを返し `Material` ます。これは、<> が型指定されていないためです。 入力が型指定されていない場合、 **data ()** の結果は **Xdt: untypedAtomic** として型指定されます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -150,7 +150,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- 次のクエリでは、**データ ($pd/p1: Features/wm: 保証)** は静的なエラーを返し `Warranty` ます。これは <> が複合型の要素であるためです。  
+ 次のクエリでは、 **データ ($pd/p1: Features/wm: 保証)** は静的なエラーを返し `Warranty` ます。これは <> が複合型の要素であるためです。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -167,7 +167,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID = 23  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

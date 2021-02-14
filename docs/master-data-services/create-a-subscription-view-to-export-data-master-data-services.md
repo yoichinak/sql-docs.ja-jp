@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 381d089aa124f44161b3fd5f1102f7377719f142
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4181704586d8a0316567ba4548ccd263d4117d79
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812769"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272603"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)
 
@@ -27,12 +27,12 @@ ms.locfileid: "85812769"
 
   サブスクリプション ビューを作成して、マスター データ サービスのデータをサブスクライブ システムにエクスポートします。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース内のデータのビューを作成します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
--   **[統合管理]** 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+-   **[統合管理]** 機能領域にアクセスする権限が必要です。 詳細については、「 [機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>サブスクリプション ビューを作成および編集するには  
   
@@ -68,14 +68,14 @@ ms.locfileid: "85812769"
   
 |Column|説明|  
 |------------|-----------------|  
-|Status|ビューの状態。<br /><br /> [**保存**] をクリックすると、ビューが更新中であることを示す![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")が表示されます。<br /><br /> ビューの作成時または編集時にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")が表示されます。|  
+|Status|ビューの状態。<br /><br /> [ **保存**] をクリックすると、ビューが更新中であることを示す ![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン") が表示されます。<br /><br /> ビューの作成時または編集時にエラーが発生した場合は、 ![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン") が表示されます。|  
 |名前|サブスクリプション ビュー名。|  
 |モデル|モデル名。|  
 |Version|バージョン名。|  
 |[バージョン]|バージョン フラグ名。|  
 |[エンティティ]|派生階層名。|  
 |Entity|エンティティ名。|  
-|Format|ビュー内のデータの型を指定します。|  
+|フォーマット|ビュー内のデータの型を指定します。|  
 |Level|ビュー内のレベルの数を指定します。明示的レベルまたは派生レベルのビュー形式にのみ使用されます。|  
 |Include delete members (削除済みメンバーを含める)|論理削除済みメンバーをビューに含めるかどうかを示します。|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "85812769"
   
 -   **更新日時**: ビューが最後に更新された日時。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要: データのエクスポート &#40;マスターデータサービス&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [サブスクリプションビュー &#40;マスターデータサービスの削除&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [バージョン フラグを作成する (マスター データ サービス)](../master-data-services/create-a-version-flag-master-data-services.md)  

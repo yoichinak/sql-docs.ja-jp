@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0a8972f267c21fdd43b01a7316ddd199400733de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0362be657cfa46cacf81bb989caeefeb3948cd11
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463464"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071886"
 ---
 # <a name="save-metadata-db2tosql"></a>メタデータの保存 (DB2ToSQL)
 [ **メタデータの保存** ] ダイアログボックスでは、メタデータを保存する前に ssma プロジェクトに読み込むように求めるメッセージが表示されます。 これにより、オフラインで使用したり、技術サポート担当者などの他のユーザーに送信したりできる、完全なプロジェクトファイルを作成できます。  
@@ -34,7 +34,7 @@ SSMA は、必要に応じてメタデータをプロジェクトに読み込み
 **[すべて選択]**  
 一覧表示されているすべてのデータベースを選択します。  
   
-**Clear**  
+**[クリア]**  
 メタデータが欠落しているすべてのデータベースのチェックボックスをオフにします。 メタデータが読み込まれている場合は、このチェックボックスをオフにすることはできません。  
   
 **および**  

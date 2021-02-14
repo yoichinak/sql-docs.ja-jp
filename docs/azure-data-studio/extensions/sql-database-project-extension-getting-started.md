@@ -9,18 +9,18 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 07/30/2020
-ms.openlocfilehash: cd818010b068ccd206f411ce8c578386d0b8772f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 397bdebe2bdea292009e0216c6b3004ac9475b18
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123366"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040316"
 ---
 # <a name="getting-started-with-the-sql-database-projects-extension-preview"></a>SQL Database プロジェクトの拡張機能をお使いになる前に (プレビュー)
 
 この記事では、SQL Database プロジェクト拡張機能の使用を開始する 3 つの方法について説明します。
 
-1. 新しいデータベース プロジェクトを作成するには、エクスプローラーの下の **プロジェクト** viewlet に移動するか、コマンド パレットで**新しいデータベース プロジェクト**を検索します。
+1. 新しいデータベース プロジェクトを作成するには、エクスプローラーの下の **プロジェクト** viewlet に移動するか、コマンド パレットで **新しいデータベース プロジェクト** を検索します。
 2. 既存のデータベース プロジェクトは、コマンド パレットで **[Open Database Project]\(データベース プロジェクトを開く\)** を使用して開くことができます。
 3. コマンド パレットから **[Import New Database Project]\(新しいデータベース プロジェクトをインポート\)** を使用して、既存のデータベースから開始します。
 
@@ -28,7 +28,7 @@ ms.locfileid: "91123366"
 
 ## <a name="create-an-empty-database-project"></a>空のデータベース プロジェクトを作成する
 
-**エクスプローラー**の下の**プロジェクト** viewlet で、 **[新しいプロジェクト]** ボタンを選択し、表示されるテキスト入力にプロジェクト名を入力します。  表示される [フォルダーの選択] ダイアログ ボックスで、プロジェクトのフォルダー、.sqlproj ファイル、およびそこに含まれるその他の内容を選択します。
+**エクスプローラー** の下の **プロジェクト** viewlet で、 **[新しいプロジェクト]** ボタンを選択し、表示されるテキスト入力にプロジェクト名を入力します。  表示される [フォルダーの選択] ダイアログ ボックスで、プロジェクトのフォルダー、.sqlproj ファイル、およびそこに含まれるその他の内容を選択します。
 空のプロジェクトが開き、編集のために **プロジェクト** viewlet に表示されます。
 
 ## <a name="open-an-existing-project"></a>既存のプロジェクトを開く

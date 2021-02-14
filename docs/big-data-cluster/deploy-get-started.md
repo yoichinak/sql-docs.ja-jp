@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 396e76852225177b7badcca533faea3ac7cbbe0a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1a6a064ad4a6077bffcd1642569d63ee0e086a7f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725903"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100038846"
 ---
 # <a name="get-started-with-big-data-clusters-2019-deployment"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]展開の概要
 
@@ -59,7 +59,7 @@ ms.locfileid: "91725903"
 
 Kubernetes を構成した後、`azdata bdc create` コマンドを使用してビッグ データ クラスターを展開します。 展開時には、いくつかの異なる方法を使用できます。
 
-- 開発/テスト環境に展開する場合は、**azdata** によって提供される[既定の構成](deployment-guidance.md#deploy)の 1 つを使用することを選択できます。
+- 開発/テスト環境に展開する場合は、**azdata** によって提供される [既定の構成](deployment-guidance.md#deploy)の 1 つを使用することを選択できます。
 
 - 展開をカスタマイズするには、独自の[展開構成ファイル](deployment-guidance.md#configfile)を作成して使用します。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d8025cc433a8ef6b773b51d86452a6a2f6b07534
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a7d5efb323d52e2427164261f4a691678807eac2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215637"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070084"
 ---
 # <a name="soapexception-errors-table"></a>SoapException エラー テーブル
   レポート サーバーでは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で発生するエラーに基づいて、SOAP 例外のエラーとエラー メッセージが生成されます。 次の表は、レポート サーバー Web サービスの **SoapException** を使用してメソッドからアクセスできるエラーを示します。 例外をスローする 1 つまたは複数のメソッド別に分類されています。  
@@ -30,8 +30,8 @@ ms.locfileid: "80215637"
 |**ALL**|**rsServerBusy**|  
 |**ALL**|**rsReportServerServiceUnavailable**|  
 |**ALL**|**rsReportServerDisabled**|  
-|**GetPermissions**、**GetRenderResource**、**GetSystemPermissions**、**ListEvents**、および **ListSecureMethods** を除く**すべてのメソッド**|**rsAccessDenied**|  
-|**CreateBatch**、**ExecuteBatch**、**GetSystemPolicies**、**GetSystemPermissions**、**GetSystemProperties**、**ListEvents**、**ListJobs**、**ListRoles**、**ListSchedules**、**ListSecureMethods**、**ListSubscriptions**、**ListSystemRoles**、**ListSystemTasks**、**ListTasks** を除く**すべてのメソッド**|**rsMissingParameter**|  
+|**GetPermissions**、**GetRenderResource**、**GetSystemPermissions**、**ListEvents**、および **ListSecureMethods** を除く **すべてのメソッド**|**rsAccessDenied**|  
+|**CreateBatch**、**ExecuteBatch**、**GetSystemPolicies**、**GetSystemPermissions**、**GetSystemProperties**、**ListEvents**、**ListJobs**、**ListRoles**、**ListSchedules**、**ListSecureMethods**、**ListSubscriptions**、**ListSystemRoles**、**ListSystemTasks**、**ListTasks** を除く **すべてのメソッド**|**rsMissingParameter**|  
 |**CreateDataDrivenSubscription**、**CreateDataSource**、**CreateFolder**、**CreateLinkedReport**、**CreateReport**、**CreateReportHistorySnapshot**、**CreateResource**、**CreateSubscription**、**DeleteItem**、**DeleteReportHistorySnapshot**、**DisableDataSource**、**EnableDataSource**、**FindItems**、**FlushCache**、**GetCacheOptions**、**GetDataSourceContents**、**GetExecutionOptions**、**GetPermissions**、**GetPolicies**、**GetProperties**、**GetReportDataSourcePrompts**、**GetReportDataSources**、**GetReportDefinition**、**GetReportHistoryLimit**、**GetReportHistoryOptions**、**GetReportLink**、**GetReportParameters**、**GetResourceContents**、**GetRoleProperties**、**GetServerDateTime**、**IheritParentSecurity**、**ListChildren**、**ListLinkedReports**、**ListReportHistory**、**ListReportsUsingDataSource**、**ListSchedules**、**ListSubscriptions**、**ListSubscriptionsUsingDataSource**、**MoveItem**、**Render**、**RenderStream**、**SetCacheOptions**、**SetDataSourceContents**、**SetExecutionOptions**、**SetPolicies**、**SetProperties**、**SetReportDataSources**、**SetReportDefinition**、**SetReportHistoryLimit**、**SetReportHistoryOptions**、**SetReportLink**、**SetReportParameters**、**SetResourceContents**、**UpdateReportExecutionSnapshot**、**ValidateExtensionSettings**|**rsItemNotFound**|  
 |**CancelBatch**、**CreateDataDrivenSubscription**、**CreateDataSource**、**CreateFolder**、**CreateLinkedReport**、**CreateReport**、**CreateReportHistorySnapshot**、**CreateResource**、**CreateRole**、**CreateSchedule**、**CreateSubscription**、**DeleteItem**、**DeleteReportHistorySnapshot**、**DeleteRole**、**DeleteSchedule**、**DeleteSubscription**、**DisableDataSource**、**EnableDataSource**、**ExecuteBatch**、**FindItems**、**FlushCache**、**GetResourceContents**、**GetServerDateTime**、**MoveItem**、**PauseSchedule**、**ResumeSchedule**、**SetCacheOptions**、**SetDataDrivenSubscriptionProperties**、**SetDataSourceContents**、**SetExecutionOptions**、**SetPolicies**、**SetProperties**、**SetReportDataSources**、**SetReportDefinition**、**SetReportHistoryLimit**、**SetReportHistoryOptions**、**SetReportLink**、**SetReportParameters**、**SetResourceContents**、**SetRoleProperties**、**SetScheduleProperties**、**SetSubscriptionProperties**、**SetSystemPolicies**、**SetSystemProperties**、**UpdateReportExecutionSnapshot**、**ValidateExtensionSettings**|**rsBatchNotFound**|  
 |**CreateDataDrivenSubscription**、**CreateDataSource**、**CreateFolder**、**CreateLinkedReport**、**CreateReport**、**CreateReportHistorySnapshot**、**CreateResource**、**CreateSubscription**、**DeleteItem**、**DeleteReportHistorySnapshot**、**DisableDataSource**、**EnableDataSource**、**FindItems**、**FlushCache**、**GetCacheOptions**、**GetDataSourceContents**、**GetExecutionOptions**、**GetItemType**、**GetPermissions**、**GetPolicies**、**GetProperties**、**GetReportDataSourcePrompts**、**GetReportDataSources**、**GetReportDefinition**、**GetReportHistoryLimit**、**GetReportHistoryOptions**、**GetReportLink**、**GetResourceContents**、**GetServerDateTime**、**IheritParentSecurity**、**ListChildren**、**ListLinkedReports**、**ListReportHistory**、**ListSchedules**、**ListSubscriptionsUsingDataSource**、**MoveItem**、**Render**、**RenderStream**、**SetCacheOptions**、**SetDataSourceContents**、**SetExecutionOptions**、**SetPolicies**、**SetProperties**、**SetReportDataSources**、**SetReportDefinition**、**SetReportHistoryLimit**、**SetReportHistoryOptions**、**SetReportLink**、**SetReportParameters**、**SetResourceContents**、**SetSubscriptionProperties**、**UpdateReportExecutionSnapshot**、**ValidateExtensionSettings**|**rsInvalidItemPath**|  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: df3f24472f7a08f137bf9445a1ce99c5407a4ff1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7231910c32ffee146855234b2ed19d1b94a587e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88390788"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272873"
 ---
 # <a name="change-a-version-name-master-data-services"></a>バージョン名を変更する (マスター データ サービス)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88390788"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で組織に合わせてバージョン名を変更してカスタマイズします。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  

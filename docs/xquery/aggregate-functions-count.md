@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6691ca005de2ceec1de0408e358544292c58704d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb3fa2943ead0cb4b4000dbaa534f9b4b232dd3d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467185"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341970"
 ---
 # <a name="aggregate-functions---count"></a>集計関数 - count
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  *$Arg*によって指定されたシーケンスに含まれる項目の数を返します。  
+  *$Arg* によって指定されたシーケンスに含まれる項目の数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,10 +39,10 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  カウントするアイテム。  
   
-## <a name="remarks"></a>解説  
- *$Arg*が空のシーケンスの場合は0を返します。  
+## <a name="remarks"></a>Remarks  
+ *$Arg* が空のシーケンスの場合は0を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Count () XQuery 関数を使用して、製品モデルの製造におけるワークセンターの場所の数をカウントする  
@@ -63,7 +63,7 @@ WHERE Production.ProductModel.ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)の**namespace**キーワードは、名前空間プレフィックスを定義します。 次に、このプレフィックスが XQuery 本体で使用されます。  
+-   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)の **namespace** キーワードは、名前空間プレフィックスを定義します。 次に、このプレフィックスが XQuery 本体で使用されます。  
   
 -   このクエリでは、<> 要素を含む XML が構築され `NoOfWorkStations` ます。  
   

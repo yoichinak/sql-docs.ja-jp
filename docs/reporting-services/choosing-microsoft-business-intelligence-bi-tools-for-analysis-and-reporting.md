@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: fa6dab95ec14a40c553f3f47dcde1dee480eb1cc
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: bd23d6a1e586a317503374f15e7ecc90381b1563
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642337"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978434"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Microsoft ビジネス インテリジェンス (BI) ツールでの分析とレポート
 
@@ -36,7 +36,7 @@ ms.locfileid: "97642337"
 |セルフサービスの予測分析の実行||||||[Excel 用データ マイニング アドイン](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&preserve-view=true) |  
 |データの視覚化と探索||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D マップ](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
 |自然言語クエリを使用した問い合わせの実施|||||[Q & A](/power-bi/consumer/end-user-q-and-a)|
-|モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (< 10 MB ファイルの表示をサポート)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (< 250 MB ファイルの表示をサポート)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS デバイス上の Power BI モバイル アプリ](/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android デバイス上の Power BI モバイル アプリ](/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Windows 10 用 Power BI モバイル アプリ](/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
+|モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (< 10 MB ファイルの表示をサポート)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (< 250 MB ファイルの表示をサポート)](https://www.microsoft.com/en-us/microsoft-365/blog/2013/07/08/what-powers-power-bi-in-office-365/)<br /><br /> [iOS デバイス上の Power BI モバイル アプリ](/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android デバイス上の Power BI モバイル アプリ](/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Windows 10 用 Power BI モバイル アプリ](/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
 |コラボレーションと共有|||[SharePoint サイト](/sharepoint/getting-started)|[SharePoint チーム サイト](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI サイト](/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**企業 BI**|IT プロフェッショナル||||||  
 |多次元/表形式ビジネス モデルの作成||||||[Analysis Services](/analysis-services/analysis-services-overview)|  

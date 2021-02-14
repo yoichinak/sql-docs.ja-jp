@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f329d4e4684997138d3c54e6b2831d70b961a93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9d68fba9560ef4b0fe99f1263e8d65c57a7c6a2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765652"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341928"
 ---
 # <a name="aggregate-functions---sum"></a>集計関数 - sum
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -49,9 +49,9 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  オーバーフローまたは範囲外の例外が発生したとき、関数は実行時エラーを返します。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
+ このトピックでは、データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
-### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A: sum() XQuery 関数を使用した、製造プロセス内のすべてのワーク センターの場所での合計労働時間の計算  
+### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. sum() XQuery 関数を使用した、製造プロセス内のすべてのワーク センターの場所での合計労働時間の計算  
  次のクエリでは、製造手順が格納されているすべての製品モデルの製造プロセスにおける、すべてのワーク センターの場所での合計労働時間を計算します。  
   
 ```  
@@ -106,19 +106,19 @@ ProductModelID Name                 TotalLaborHours
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項は次のとおりです。  
   
--   1つの引数バージョンの**sum ()** のみがサポートされています。  
+-   1つの引数バージョンの **sum ()** のみがサポートされています。  
   
 -   入力が動的に計算された空のシーケンスである場合は、xs: integer 型ではなく、使用された基本データ型の値0が返されます。  
   
 -   **Sum ()** 関数では、すべての整数が xs: decimal にマップされます。  
   
--   Xs: duration 型の値の**sum ()** 関数はサポートされていません。  
+-   Xs: duration 型の値の **sum ()** 関数はサポートされていません。  
   
 -   基本データ型の境界を超えて複数の型が混在するシーケンスはサポートされません。  
   
 -   Sum ((xs: double ("INF"), xs: double ("-INF"))) では、ドメインエラーが発生します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

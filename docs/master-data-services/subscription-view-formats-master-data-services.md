@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac58c9c1edfce6b02f48c31e220d37d842b18527
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b94496efb521fce2099a59d7e0e99b90438de361
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456746"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336248"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>サブスクリプション ビュー形式 (マスター データ サービス)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88456746"
   
 ## <a name="subscription-view-formats"></a>サブスクリプション ビュー形式  
   
-|名前|説明|  
+|名前|[説明]|  
 |----------|-----------------|  
 |**リーフ メンバー**|リーフ メンバーとそのメンバーに関連付けられた属性値を含みます。|  
 |**リーフ メンバー履歴**|リーフ メンバーの履歴データと関連付けられた属性値を含みます。 表示形式は、緩やかに変化を変更するディメンション タイプ 4 スタイルです。|  

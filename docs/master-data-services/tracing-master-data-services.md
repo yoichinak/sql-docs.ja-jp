@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 8deacb8250d640e33140203d4d6d2c8eeb5d6acb
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 79a9e663214538252a6421d22baa068cf773b51e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236860"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341404"
 ---
 # <a name="tracing-master-data-services"></a>トレース (マスター データ サービス)
 
@@ -66,8 +66,8 @@ ms.locfileid: "99236860"
     |Time|トレースのエントリが発生した時刻。|  
     |CorrelationID|要求ごとに 1 つの関連付け ID が割り当てられます。 この要求によってトリガーされるすべてのトレースは、同じ関連付け ID を共有します。<br /><br /> UI でエラーが発生すると、エラー メッセージに関連付け ID が表示されます。|  
     |操作|要求操作の名前。 要求が Web UI 要求の場合、URL が操作名になります。 要求が API 要求の場合、サービス名が操作名になります。|  
-    |レベル|このトレース エントリのレベル。|  
-    |Message|トレースのメッセージ本文。|  
+    |Level|このトレース エントリのレベル。|  
+    |メッセージ|トレースのメッセージ本文。|  
   
 ## <a name="external-resources"></a>外部リソース  
  msdn.com のブログ記事「 [Troubleshooting Logging Improvement (トラブルシューティングのためのログ記録の改善)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)」  

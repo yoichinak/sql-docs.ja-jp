@@ -2,7 +2,7 @@
 description: sys.dm_exec_function_stats (Transact-sql)
 title: sys.dm_exec_function_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2019
+ms.date: 02/10/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -19,17 +19,17 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 788596936cf6ce9c8d2ca0a618b441fcbd0f7624
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: be2d102b81bf5535354b99cc3405d50a0bf94915
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099792"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342987"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys.dm_exec_function_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  キャッシュされた関数の集計パフォーマンス統計を返します。 ビューは、キャッシュされた関数プランごとに1行の値を返します。行の有効期間は、関数がキャッシュされたままである限り保持されます。 関数がキャッシュから削除されると、対応する行がこのビューから削除されます。 その時点で、**sys.dm_exec_query_stats** と同様にパフォーマンス統計 SQL トレース イベントが発生します。 メモリ内の関数や CLR スカラー関数など、スカラー関数に関する情報を返します。 テーブル値関数に関する情報は返しません。  
+  キャッシュされた関数の集計パフォーマンス統計を返します。 ビューは、キャッシュされた関数プランごとに1行の値を返します。行の有効期間は、関数がキャッシュされたままである限り保持されます。 関数がキャッシュから削除されると、対応する行がこのビューから削除されます。 その時点で、**sys.dm_exec_query_stats** と同様にパフォーマンス統計 SQL トレース イベントが発生します。 メモリ内の関数や CLR スカラー関数など、スカラー関数に関する情報を返します。 は、テーブル値関数、および [スカラー UDF インライン展開](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)でインライン化されたスカラー関数に関する情報を返しません。
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
   
@@ -76,12 +76,12 @@ ms.locfileid: "98099792"
 ## <a name="permissions"></a>アクセス許可  
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、 [サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) アカウントまたは [Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、平均経過時間で識別される上位10個の関数に関する情報を返します。  
   
-```  
+```sql  
 SELECT TOP 10 d.object_id, d.database_id, OBJECT_NAME(object_id, database_id) 'function name',   
     d.cached_time, d.last_execution_time, d.total_elapsed_time,  
     d.total_elapsed_time/d.execution_count AS [avg_elapsed_time],  

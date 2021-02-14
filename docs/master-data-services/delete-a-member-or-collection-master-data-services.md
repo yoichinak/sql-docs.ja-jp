@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c7245b06b114c62b7fd0dde543f8a7a2859bd842
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8810bb155896b4935163bb1143d535faddb1dad
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500639"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339000"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを削除する (マスター データ サービス)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88500639"
 > [!NOTE]  
 >  別のメンバーのドメイン ベースの属性値として使用されているメンバーは削除できません。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  

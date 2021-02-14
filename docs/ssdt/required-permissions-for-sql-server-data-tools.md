@@ -10,12 +10,12 @@ ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
-ms.openlocfilehash: 5637af0406176ba8099038eaa8a2500d2f03629e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6e519a3786b45d87344f8f5f5355353fd5865d62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243723"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072456"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools に必要な権限
 
@@ -51,7 +51,7 @@ Visual Studio でデータベースに対してアクションを実行する前
 詳しくは、SQL Server オンライン ブックをご覧ください。  
   
 ## <a name="permissions-to-refactor-a-database"></a><a name="DatabaseRefactoringPermissions"></a>データベースをリファクタリングする権限  
-*データベース リファクタリング*は、データベース プロジェクト内でのみ行われます。 データベース プロジェクトを使用する権限が必要です。 変更をターゲット データベースに配置するまで、ターゲット データベースに対する権限は不要です。  
+*データベース リファクタリング* は、データベース プロジェクト内でのみ行われます。 データベース プロジェクトを使用する権限が必要です。 変更をターゲット データベースに配置するまで、ターゲット データベースに対する権限は不要です。  
   
 ## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>SQL Server データベースで単体テストを実行する権限  
 データベースで単体テストを実行するには、次の権限が必要です。  

@@ -9,12 +9,12 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8cef37be62e91b608852a4b5867d5917e72e8742
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 18c4d602edea0f414863e3fc54bfa58d1e6ca2cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492609"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079793"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースの復元 (Stretch Database)
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -43,7 +43,7 @@ Azure ポータルを使用して、Azure ライブ データベースを過去�
 2. 画面左側の **[参照]** を選択し、 **[SQL デーベース]** を選択します。
 3. 使用中のデータベースに移動して選択します。
 4. データベース ブレードの上部にある **[復元]** をクリックします。
-5. 新しい **データベース名**を指定し、 **[復元ポイント]** を選択してから **[作成]** をクリックします。
+5. 新しい **データベース名** を指定し、 **[復元ポイント]** を選択してから **[作成]** をクリックします。
 6. データベースの復元処理が開始され、 **[通知]** を使用して監視できます。
 
 ### <a name="recover-a-deleted-azure-database"></a>削除された Azure データベースの復旧
@@ -65,7 +65,7 @@ Azure ポータルを使用して、削除された Azure データベースを�
   
 2.  ストアド プロシージャ [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) を実行してローカルの Stretch 対応データベースを Azure データベースに再接続します。  
   
-    -   既存のデータベース スコープ資格情報を sysname または varchar(128) 値として指定します。 (varchar(max) は使用しないでください)。資格情報の名前はビュー **sys.database_scoped_credentials**で参照できます。  
+    -   既存のデータベース スコープ資格情報を sysname または varchar(128) 値として指定します。 (varchar(max) は使用しないでください)。資格情報の名前はビュー **sys.database_scoped_credentials** で参照できます。  
   
     -   リモート データのコピーを作成するかどうかを指定し、コピーに接続します (推奨)。  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1313699a3d82e0dbced8469f251a0a105f296246
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 3e34f70a41816dcf9a6009f8b38feb016f409a3a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985248"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078963"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>アクセスのための SQL Server Migration Assistant のインストール (アクセス可能な SQL)
 
@@ -54,7 +54,7 @@ SSMA は Web からダウンロードできます。 最新バージョンをダ
 
 SSMA をインストールするには:
   
-1. **SSMAforAccess_*n*.msi**をダブルクリックします。ここで、 *n*はビルド番号です。
+1. **SSMAforAccess_ *n*.msi** をダブルクリックします。ここで、 *n* はビルド番号です。
 2. [ようこそ] ページで **[次へ]** をクリックします。
 
    前提条件がインストールされていない場合は、最初に必要なコンポーネントをインストールする必要があることを示すメッセージが表示されます。 すべての前提条件がインストールされていることを確認してから、インストールプログラムを再実行してください。
@@ -72,7 +72,7 @@ SSMA をインストールするには:
 SSMA をアンインストールするには:
 
 1. [**スタート**]、[**コントロール パネル**]、[**プログラムの追加と削除**] の順にクリックします。
-2. [ **アクセス] に Microsoft SQL Server Migration Assistant**を選択し、[ **削除**] をクリックします。
+2. [ **アクセス] に Microsoft SQL Server Migration Assistant** を選択し、[ **削除**] をクリックします。
 
 ## <a name="upgrading-to-a-later-version"></a>新しいバージョンへのアップグレード
 

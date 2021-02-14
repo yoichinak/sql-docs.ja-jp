@@ -21,12 +21,12 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0699c04a826bd0cb84d32b476c35cb9c9d0872ac
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8ea2a209d9cef4c985571c11fb64cbe274410abe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439753"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340091"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>データベースおよびトランザクション ログのバックアップと復元
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97439753"
   
  オブジェクトと同様に、オブジェクトは、 <xref:Microsoft.SqlServer.Management.Smo.Backup> <xref:Microsoft.SqlServer.Management.Smo.Restore> のインスタンス上のオブジェクトを表すものではないため、 **Create** メソッドを使用して作成する必要はありません [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 <xref:Microsoft.SqlServer.Management.Smo.Restore> オブジェクトは、データベースの復元に使用されるプロパティとメソッドのセットです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Visual Basic でのデータベースおよびトランザクション ログのバックアップ  

@@ -14,12 +14,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53cdeb0a1a444b49e3560d198e2f38b99928a85d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ad90fe2deb97b947161f12c54f07a15436008f6b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97431645"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340081"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>インデックスの作成、変更、および削除
 
@@ -29,7 +29,7 @@ ms.locfileid: "97431645"
   
  <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Index> プロパティを指定すると、XML 列のインデックスを作成できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Visual Basic での非クラスター化複合インデックスの作成  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1f1523cde32af2c4a01b7b2838cb0293797afcdb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c7a91729430078f5913d5f4d83ca75015c50ac15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724638"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339901"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
 
@@ -23,7 +23,7 @@ ms.locfileid: "91724638"
 
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) には、との2つのコンポーネントが含まれてい **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** ます。  
   
-|DQS コンポーネント|説明|  
+|DQS コンポーネント|[説明]|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] は、 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] データベース エンジンの上にインストールされ、DQS_MAIN、DQS_PROJECTS、および DQS_STAGING_DATA の 3 つのデータベースを含んでいます。 DQS_MAIN には、DQS ストアド プロシージャ、DQS エンジン、パブリッシュ済みナレッジ ベースが含まれています。 DQS_PROJECTS には、データ品質プロジェクトの情報が含まれています。 DQS_STAGING_DATA は、ソース データをコピーし、DQS 操作を実行して処理後のデータをエクスポートするためのステージング領域です。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] は、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]に接続するスタンドアロン アプリケーションであり、高度に直感的なグラフィカル ユーザー インターフェイスを使用して、データ品質に関する操作、および DQS に関連するその他の管理タスクを実行できます。|  

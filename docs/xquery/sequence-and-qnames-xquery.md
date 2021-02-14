@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbf165b1121b35ccc1b68578841108866832bb80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10caff2486f8dae470a4778c6da649b7bba5ddba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765598"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339922"
 ---
 # <a name="sequence-and-qnames-xquery"></a>シーケンスと QName (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、XQuery の次の基本的な概念について説明します。  
   
--   シーケンス  
+-   Sequence  
   
 -   QName と事前に定義された名前空間  
   
-## <a name="sequence"></a>シーケンス  
+## <a name="sequence"></a>Sequence  
  XQuery では、式の結果は、XML ノードのリストと XSD アトミック型のインスタンスで構成されるシーケンスになります。 シーケンス内の個々のエントリは、項目と呼ばれます。 シーケンス内のアイテムは、次のいずれかになります。  
   
 -   要素、属性、テキスト、処理命令、コメント、ドキュメントなどのノード  
@@ -102,7 +102,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  XQuery の識別子は QName です。 QName は、名前空間プレフィックスとローカル名で構成されます。 この実装では、XQuery の変数名は Qname であり、プレフィックスを持つことはできません。  
   
- 型指定されていない**xml**変数に対してクエリを指定する次の例を考えてみます。  
+ 型指定されていない **xml** 変数に対してクエリを指定する次の例を考えてみます。  
   
 ```  
 DECLARE @x xml;  
@@ -112,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  式 (`/Root/a`) では、`Root` と `a` が QName です。  
   
- 次の例では、型指定された**xml**列に対してクエリが指定されています。 クエリは、 \<step> 最初のワークセンターの場所にあるすべての要素を反復処理します。  
+ 次の例では、型指定された **xml** 列に対してクエリが指定されています。 クエリは、 \<step> 最初のワークセンターの場所にあるすべての要素を反復処理します。  
   
 ```  
 SELECT Instructions.query('  
@@ -127,7 +127,7 @@ WHERE ProductModelID=7;
   
  クエリ式では、次の点に注意してください。  
   
--   `AWMI root`、`AWMI:Location`、`AWMI:step`、`$Step` は、すべて QName です。 `AWMI`はプレフィックスであり、 `root` 、 `Location` 、および `Step` はすべてローカル名です。  
+-   `AWMI root`、`AWMI:Location`、`AWMI:step`、`$Step` は、すべて QName です。 `AWMI` はプレフィックスであり、 `root` 、 `Location` 、および `Step` はすべてローカル名です。  
   
 -   `$step`変数は QName であり、プレフィックスを持っていません。  
   
@@ -149,7 +149,7 @@ WHERE ProductModelID=7;
 > [!NOTE]  
 >  この実装では、 `local` の XQuery 仕様で説明されているように、プレフィックスはサポートされません http://www.w3.org/2004/07/xquery-local-functions 。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XQuery の基礎](../xquery/xquery-basics.md)  
   
   

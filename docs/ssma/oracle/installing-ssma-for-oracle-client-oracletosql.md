@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 939504092ef7ae9dc13bdcf829f6ea5e88ce59f9
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 5bed1589c0852acc2d782028f6b9cc253301babe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411272"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100073494"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>SSMA for Oracle クライアントのインストール (OracleToSQL)
 
@@ -36,10 +36,10 @@ SSMA は、Oracle 9 以降のバージョンおよびのすべてのエディシ
 SSMA をインストールする前に、コンピューターが次の要件を満たしていることを確認してください。
 
 - Windows 7 以降のバージョン、または Windows Server 2008 以降のバージョン。
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows インストーラー3.1 以降のバージョン。
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] バージョン4.7.2 以降のバージョン。 これは[.NET Framework デベロッパーセンター](https://go.microsoft.com/fwlink/?LinkId=48882)から入手できます。
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows インストーラー3.1 以降のバージョン。
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] バージョン4.7.2 以降のバージョン。 これは [.NET Framework デベロッパーセンター](https://go.microsoft.com/fwlink/?LinkId=48882)から入手できます。
 - 移行する Oracle データベースへの接続。
-- へのアクセス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] データベースオブジェクトとデータの移行先となる、またはのターゲットインスタンスをホストするコンピューターに対する十分なアクセス許可。 詳細については、「 [SQL Server &#40;OracleToSQL&#41;への接続](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)」を参照してください。
+- へのアクセス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] データベースオブジェクトとデータの移行先となる、またはのターゲットインスタンスをホストするコンピューターに対する十分なアクセス許可。 詳細については、「 [SQL Server &#40;OracleToSQL&#41;への接続 ](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)」を参照してください。
 - 4 GB の RAM を推奨します。  
   
 ## <a name="installing-the-ssma-for-oracle-client"></a>SSMA for Oracle クライアントのインストール
@@ -48,14 +48,14 @@ SSMA は Web からダウンロードできます。 最新バージョンをダ
 
 SSMA クライアントをインストールするには:
 
-1. **SSMAforOracle_*n*.msi**をダブルクリックします。ここで、 *n*はビルド番号です。
+1. **SSMAforOracle_ *n*.msi** をダブルクリックします。ここで、 *n* はビルド番号です。
 2. [ようこそ] ページで **[次へ]** をクリックします。
 
    前提条件がインストールされていない場合は、最初に必要なコンポーネントをインストールする必要があることを示すメッセージが表示されます。 すべての前提条件がインストールされていることを確認してから、インストールプログラムを再実行してください。  
 
-3. 使用許諾契約書を確認します。 同意する場合は、 **[同意する] を選択し**、[**次へ**] をクリックします。
-4. [**セットアップの種類の選択**] ページで、[**標準**] をクリックします。
-5. [**インストールの準備完了**] ページで、ツールが開始されるたびにテレメトリと自動更新のチェックを有効または無効にすることができます。 **[インストール]** をクリックしてインストールを開始します。
+3. End-User 使用許諾契約書をお読みください。 同意する場合は、 **[同意する] を選択し**、[ **次へ**] をクリックします。
+4. [ **セットアップの種類の選択** ] ページで、[ **標準**] をクリックします。
+5. [ **インストールの準備完了** ] ページで、ツールが開始されるたびにテレメトリと自動更新のチェックを有効または無効にすることができます。 **[インストール]** をクリックしてインストールを開始します。
 
 > [!IMPORTANT]
 > 新しいバージョンをインストールする前に、SSMA for Oracle の以前のバージョンをすべてアンインストールしてください。
@@ -64,7 +64,7 @@ SSMA クライアントをインストールするには:
 
 SSMA プログラムファイルに加えて、SSMA for Oracle Extension Pack もインストールする必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「 [SQL Server での SSMA コンポーネントのインストール](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [SQL Server での SSMA コンポーネントのインストール](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)
 - [SQL Server への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

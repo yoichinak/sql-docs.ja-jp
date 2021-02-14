@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 81c8c6445041321adca7cfbc0761f0c396edb891
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1ad7283c99b87b56d2fe509dbbcc8fe3e4e9497
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389568"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341783"
 ---
 # <a name="edit-a-model-deployment-package"></a>モデルの配置パッケージの編集
 
@@ -28,7 +28,7 @@ ms.locfileid: "88389568"
   
  モデル パッケージ エディターを使用して、MDSModelDeploy ツール (オブジェクトとデータを含むパッケージ ファイルを作成します) またはモデル配置ウィザード (モデル構造のみを含むファイルを作成します) で作成したパッケージ ファイル内のモデルの部分を選択します。 パッケージ内のモデルを編集したら、MDSModelDeploy ツールを使用してオブジェクトとデータを配置するか、モデル配置ウィザードを使用してモデル構造のみを配置します。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
@@ -49,7 +49,7 @@ ms.locfileid: "88389568"
   
 6.  **[参照]** をクリックし、部分的なパッケージを保存するフォルダーに移動して、部分的なパッケージのファイル名を入力します (.pkg 拡張子を付けます)。 **[保存]** をクリックします。  
   
-7.  **[完了]** をクリックします。  
+7.  **[Finish]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
   

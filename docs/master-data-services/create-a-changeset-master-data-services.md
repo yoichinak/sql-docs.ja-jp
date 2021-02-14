@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ea6b6f0da9dc2660b91cd6432331256854a1d80c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7aa771612709a47f5dce24038af6307dc41d95e7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495075"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272733"
 ---
 # <a name="create-a-changeset-master-data-services"></a>変更セットを作成する (マスター データ サービス)
 
@@ -24,7 +24,7 @@ ms.locfileid: "88495075"
 
   変更セットは、マスター データに対する保留中の変更のコレクションです。 エンティティに変更の承認が必要な場合、保留中の変更は、変更セットに保存してから、管理者の承認を得るために送信する必要があります。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
   
 -   [エクスプローラー] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 035b92b719431b5a9b74f951f20d51911a41d59c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 91fc5595dadad3a3cf4c8d95c4db1da5406a968f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035780"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335863"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>QNames に関係する関数 - namespace-uri-from-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  *$Arg*によって指定された QName の名前空間 uri を表す文字列を返します。 *$Arg*が空のシーケンスの場合、結果は空のシーケンスになります。  
+  *$Arg* によって指定された QName の名前空間 uri を表す文字列を返します。 *$Arg* が空のシーケンスの場合、結果は空のシーケンスになります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +38,7 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  *$arg*  
  は、名前空間 URI が返される QName です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. QName から名前空間 URI を取得する  

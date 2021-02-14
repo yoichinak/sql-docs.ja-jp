@@ -21,12 +21,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26ba20e38595d60ff5eae396b8081ea775eda572
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fd0f5daa6ba1b167aa1f56dce70dabe5e92e4247
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190174"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100338897"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,9 +62,9 @@ ms.locfileid: "99190174"
 ## <a name="permissions"></a>アクセス許可
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、 [サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) アカウントまたは [Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  メモリ オブジェクトはヒープであり、 割り当ての粒度はメモリ クラークよりも細かくなります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントでは、メモリ クラークの代わりにメモリ オブジェクトが使用されます。 メモリオブジェクトは、メモリクラークのページアロケーターインターフェイスを使用してページを割り当てます。 メモリオブジェクトは、仮想または共有メモリインターフェイスを使用しません。 割り当てパターンに応じて、コンポーネントでは各種メモリ オブジェクトを作成し、任意のサイズの領域を割り当てることができます。  
   
  メモリオブジェクトの一般的なページサイズは 8 KB です。 ただし、増分メモリオブジェクトのページサイズは、512バイトから 8 KB の範囲で指定できます。  
@@ -72,7 +72,7 @@ SQL Database Basic、S0、S1 のサービス目標、およびエラスティッ
 > [!NOTE]  
 >  ページサイズが最大割り当てではありません。 メモリ クラークによって実装されたページ アロケーターでサポートされている割り当ての粒度です。 メモリ オブジェクトから、8 KB を超える割り当てを要求することができます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、それぞれのメモリ オブジェクトの種類によって割り当てられたメモリのサイズを返します。  
   
 ```  

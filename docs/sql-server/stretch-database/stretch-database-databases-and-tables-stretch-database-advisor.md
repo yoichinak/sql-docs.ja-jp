@@ -14,12 +14,12 @@ ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ba45280f9a66c8d2b71841b8cae4272e850628f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0535dd0dbc410444f0dd9423da6e1bf40a4026bd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492600"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079884"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Data Migration Assistant で Stretch Database 向きのデータベースとテーブルを識別する
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -60,9 +60,9 @@ Stretch Database Advisor は、以前は SQL Server 2016 アップグレード �
 ## <a name="next-step"></a>次の手順  
  Stretch Database を有効にします。  
   
--   **データベース**の Stretch Database を有効にするには、「 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)」を参照してください。  
+-   **データベース** の Stretch Database を有効にするには、「 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)」を参照してください。  
   
--   Stretch が データベースで既に有効な場合に、別の **テーブル**の Stretch Database を有効にするには、「 [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」を参照してください。 
+-   Stretch が データベースで既に有効な場合に、別の **テーブル** の Stretch Database を有効にするには、「 [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」を参照してください。 
   
 ## <a name="see-also"></a>参照  
  [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
