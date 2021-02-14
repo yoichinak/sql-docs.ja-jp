@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 64850d1a701491f0dc5817576a568fdc3ebc2483
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 81d3f542e64030dbf6a0bf70067307222bef5a8b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870105"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344216"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>SQL Server での SSMA コンポーネントのインストール (OracleToSQL)
 
@@ -30,7 +30,7 @@ SSMA 拡張パックは、拡張ストアドプロシージャを配置し、指
 
 また、データをに移行するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、サーバー側のデータ移行エンジンを使用してデータを移行するときに、ssma によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントジョブが作成されます。
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>必須コンポーネント
 
 SSMA for Oracle サーバーコンポーネントをにインストールする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムが次の要件を満たしていることを確認してください。
 
@@ -83,7 +83,7 @@ SSMA for Oracle サーバーコンポーネントをにインストールする�
 
     [ **テスト担当者データベースをインストール** する] オプションがオンになっている場合は、 **ssmatesterdb** データベースが作成されます。
 
-12. インストールが完了すると、の別のインスタンスにユーティリティデータベースをインストールするかどうかを確認するメッセージが表示されます。 [はい] を選択し、[次へ] を選択します。または、[いいえ] を選択し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [**終了**] を選択します。 **Yes** **Next** **No**
+12. インストールが完了すると、の別のインスタンスにユーティリティデータベースをインストールするかどうかを確認するメッセージが表示されます。 [はい] を選択し、[次へ] を選択します。または、[いいえ] を選択し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [**終了**] を選択します。   
 
 13. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]またはユーティリティを使用して `sqlcmd` 、次のスクリプトを実行して CLR を有効にします。
 

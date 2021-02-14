@@ -23,25 +23,27 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aad29b6722f748051f085f10a25a38b59e6ae424
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c5481a80e57a60180112145e87c64c9f383ed473
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99201290"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342753"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースの現在の vardecimal ストレージ形式の状態を返します。または、データベースで vardecimal ストレージ形式を有効にします。  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、ユーザー データベースは常に有効になります。 では、vardecimal ストレージ形式のデータベースを有効にする必要が [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] あります。  
   
+> [!NOTE]  
+> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] は vardecimal ストレージ形式をサポートしていますが、行レベルの圧縮で同じ目的が果たされるので、vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
+  
 > [!IMPORTANT]  
->  データベースの vardecimal ストレージ形式の状態を変更すると、バックアップとリカバリ、データベース ミラーリング、sp_attach_db、ログ配布、レプリケーションに影響が生じることがあります。  
+> データベースの vardecimal ストレージ形式の状態を変更すると、バックアップとリカバリ、データベース ミラーリング、sp_attach_db、ログ配布、レプリケーションに影響が生じることがあります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql  
 sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']   
     [ , [ @vardecimal_storage_format = ] { 'ON' | 'OFF' } ]   
 [;]  
@@ -52,7 +54,10 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  ストレージ形式を変更するデータベースの名前を指定します。 *database_name* は **sysname** であり、既定値はありません。 データベース名を省略すると、のインスタンス内のすべてのデータベースの vardecimal ストレージ形式の状態 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が返されます。  
   
  [ @vardecimal_storage_format =] {' (' | ' 上)オフ '}  
- vardecimal ストレージ形式を有効にするかどうかを指定します。 @vardecimal_storage_format を ON または OFF にできます。 パラメーターは **varchar (3)**,、既定値はありません。 データベース名が指定されているが省略されている場合は、 @vardecimal_storage_format 指定されたデータベースの現在の設定が返されます。 この引数は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンには影響しません。  
+ vardecimal ストレージ形式を有効にするかどうかを指定します。 @vardecimal_storage_format を ON または OFF にできます。 パラメーターは **varchar (3)**,、既定値はありません。 データベース名が指定されているが省略されている場合は、 @vardecimal_storage_format 指定されたデータベースの現在の設定が返されます。 
+ 
+ > [!IMPORTANT]
+ > この引数は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンには影響しません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -62,7 +67,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  @vardecimal_storage_format引数が指定されていない場合は、データベース名と Vardecimal 状態の列が返されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  sp_db_vardecimal_storage_format は vardecimal 状態を返しますが、vardecimal 状態を変更することはできません。  
   
  次の場合、sp_db_vardecimal_storage_format は失敗します。  
@@ -77,7 +82,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  vardecimal データベース圧縮を使用しているテーブルがある場合、状態を OFF に変更しようとすると失敗します。 テーブルのストレージ形式を変更するには、 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)を使用します。 データベースのテーブルが vardecimal ストレージ形式を使用しているかどうかを調べるには、次の例のように `OBJECTPROPERTY` 関数を使用して `TableHasVarDecimalStorageFormat` プロパティを探します。  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT name, object_id, type_desc  
@@ -87,10 +92,10 @@ FROM sys.objects
 GO  
 ```  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のコードでは、`AdventureWorks2012` データベースで圧縮を有効にして状態を確認した後、`Sales.SalesOrderDetail` テーブルの decimal 列と numeric 列を圧縮します。  
   
-```  
+```sql  
 USE master ;  
 GO  
   

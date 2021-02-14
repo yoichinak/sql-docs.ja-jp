@@ -19,15 +19,16 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current
-ms.openlocfilehash: c916466f6a105a2b10508e23f1739bba0d192970
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9e5a6f6506e4ce40b3b89f32dd58329eb4667760
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480183"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351394"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
-[!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
+
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
   再帰的または繰り返し検索されるグラフの検索条件を指定します。 SHORTEST_PATH は、SELECT ステートメント内のグラフノードとエッジテーブルとの一致内部で使用できます。 
   
@@ -86,7 +87,7 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 ### <a name="last_value"></a>LAST_VALUE
 走査されたパスの最後のノードから属性を射影するために、LAST_VALUE 集計関数を使用できます。 この関数への入力としてエッジテーブルの別名を指定するとエラーになります。使用できるのは、ノードのテーブル名または別名だけです。
 
-**最後のノード**: 最後のノードは、一致述語の矢印の方向に関係なく、走査されたパスの最後に表示されるノードを参照します。 (例: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`)。 ここで、パスの最後のノードが最後にアクセスした P ノードになります。 
+**最後のノード**: 最後のノードは、一致述語の矢印の方向に関係なく、走査されたパスの最後に表示されるノードを参照します。 たとえば、`MATCH(SHORTEST_PATH(n(-(e)->p)+) )` のように指定します。 ここで、パスの最後のノードが最後にアクセスした P ノードになります。 
 
 一方、最後のノードは、このパターンの出力グラフパスの最後の n 番目のノードです。 `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -109,14 +110,14 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 ### <a name="max"></a>[MAX]
 指定されたノード/エッジ属性値、またはスキャンされたパスに出現する式から最大値を返します。
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 shortest_path 関数は、MATCH 内でのみ使用できます。     
 LAST_NODE は shortest_path 内でのみサポートされます。     
 重み付けされた最短パス、すべてのパス、またはすべての最短パスを検索することはできません。         
 場合によっては、ホップ数が多いクエリに対して不適切なプランが生成され、クエリの実行時間が長くなります。 ハッシュ結合ヒントを使用すると役立つ場合があります。    
 
 
-## <a name="examples"></a>例 
+## <a name="examples"></a>使用例 
 ここに示したクエリの例では、 [SQL Graph サンプル](./sql-graph-sample.md)で作成したノードテーブルとエッジテーブルを使用します。
 
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  2つのメンバーの間の最短パスを検索する

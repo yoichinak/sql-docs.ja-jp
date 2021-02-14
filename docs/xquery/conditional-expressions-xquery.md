@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81fe55de0119fc2b9327d623155ed610de4ef06b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5fdc8703482f570d0ecb749b471af170b62770ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916280"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349371"
 ---
 # <a name="conditional-expressions-xquery"></a>条件式 (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-  XQuery では、次の条件付きの**if-then-else**ステートメントがサポートされています。  
+  XQuery では、次の条件付きの **if-then-else** ステートメントがサポートされています。  
   
 ```  
 if (<expression1>)  
@@ -54,9 +54,9 @@ else
   
 -   テスト式は、かっこで囲む必要があります。  
   
--   **Else**式は必須です。 このトピックの例に示すように、不要な場合は、"()" を返すことができます。  
+-   **Else** 式は必須です。 このトピックの例に示すように、不要な場合は、"()" を返すことができます。  
   
- たとえば、次のクエリは**xml**型の変数に対して指定されています。 **If**条件は、 @v [sql: variable () 関数](../xquery/xquery-extension-functions-sql-variable.md)拡張関数を使用して、XQuery 式内の sql 変数 () の値をテストします。 変数値が "FirstName" の場合は、<`FirstName`> 要素を返します。 それ以外の場合は、<`LastName`> 要素を返します。  
+ たとえば、次のクエリは **xml** 型の変数に対して指定されています。 **If** 条件は、 @v [sql: variable () 関数](../xquery/xquery-extension-functions-sql-variable.md)拡張関数を使用して、XQuery 式内の sql 変数 () の値をテストします。 変数値が "FirstName" の場合は、<`FirstName`> 要素を返します。 それ以外の場合は、<`LastName`> 要素を返します。  
   
 ```  
 declare @x xml  
@@ -105,7 +105,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 前のクエリで**は、if**式の条件によって <> に3つ以上の子要素があるかどうかがチェックされ `Features` ます。 3 つ以上ある場合は、結果に `\<there-is-more/>` 要素が返されます。  
+ 前のクエリで **は、if** 式の条件によって <> に3つ以上の子要素があるかどうかがチェックされ `Features` ます。 3 つ以上ある場合は、結果に `\<there-is-more/>` 要素が返されます。  
   
  結果を次に示します。  
   
@@ -150,7 +150,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- このクエリは、次の例に示すように、 **if**句を指定せずに記述できます。  
+ このクエリは、次の例に示すように、 **if** 句を指定せずに記述できます。  
   
 ```  
 SELECT Instructions.query('  

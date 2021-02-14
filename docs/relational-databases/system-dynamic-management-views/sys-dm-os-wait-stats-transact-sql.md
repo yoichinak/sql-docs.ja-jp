@@ -2,7 +2,7 @@
 description: sys.dm_os_wait_stats (Transact-SQL)
 title: sys.dm_os_wait_stats (Transact-SQL)
 ms.custom: contperf-fy21q3
-ms.date: 01/27/2021
+ms.date: 02/10/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2620a3e5df464e964f0bc911897481093aca245
-ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
+ms.openlocfilehash: cc082ece27db2fdfd43216b8bea4e8ab4001754b
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99835334"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100347637"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "99835334"
 ## <a name="permissions"></a>アクセス許可
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、 [サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) アカウントまたは [Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
 
 ##  <a name="types-of-waits"></a><a name="WaitTypes"></a> 待機の種類  
  リソース **待機** は、ワーカーが、リソースが他のワーカーによって使用されているか、まだ使用できないために利用できないリソースへのアクセスを要求したときに発生します。 リソース待機の例としては、ロック、ラッチ、ネットワーク、ディスク i/o 待機などがあります。 ロックおよびラッチ待機は同期オブジェクトで待機します  
@@ -86,7 +86,7 @@ GO
   
  次の表は、タスクで発生する待機の種類の一覧です。  
 
-|type |Description| 
+|型 |[説明]| 
 |-------------------------- |--------------------------| 
 |ABR |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| | 
 |AM_INDBUILD_ALLOCATION |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
@@ -94,8 +94,8 @@ GO
 |ASSEMBLY_FILTER_HASHTABLE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |ASSEMBLY_LOAD |アセンブリ読み込みへの排他アクセス時に発生します。| 
 |ASYNC_DISKPOOL_LOCK |ファイルの作成や初期化などのタスクを実行している並列スレッドを同期しようとすると発生します。| 
-|ASYNC_IO_COMPLETION |タスクが I/O の終了を待機しているときに発生します。| 
-|ASYNC_NETWORK_IO |ネットワークの書き込みでタスクがブロックされているときに発生します。 クライアントがサーバーからのデータを処理しているかどうかを確認してください。| 
+|ASYNC_IO_COMPLETION |タスクが非同期の非データ i/o の完了を待機しているときに発生します。 たとえば、ウォームスタンバイログ配布に関係する i/o、データベースミラーリング、一括インポート関連の操作などがあります。| 
+|ASYNC_NETWORK_IO |タスクがブロックされたときに、クライアントアプリケーションが送信したすべてのデータを処理していることを待機しているときに、ネットワーク書き込み時に発生します。 クライアントがサーバーからのデータを処理していること、またはネットワークが予期したとおりに実行されていることを確認します。 クライアントがデータを十分に利用できない理由: 結果の到着中にファイルに結果を書き込む、ユーザー入力を待機する、人為的な待機が発生するなど、アプリケーションの設計上の問題。 また、クライアントシステムでは、仮想/物理メモリが不足している、100% の CPU 使用率などの問題が原因で応答が遅くなっている可能性があります。ネットワークの遅延も、この待機につながる可能性があります。|
 |ASYNC_OP_COMPLETION |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |ASYNC_OP_CONTEXT_READ |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |ASYNC_OP_CONTEXT_WRITE |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
@@ -387,18 +387,18 @@ GO
 |LATCH_SH  |SH (共有) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、sys.dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
 |LATCH_UP  |UP (更新) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、sys.dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
 |LAZYWRITER_SLEEP  |レイジーライタータスクが中断されたときに発生します。 待機中のバックグラウンド タスクで費やされた時間を測定することができます。 ユーザーの機能停止を検索しているときには、この待機状態は考慮しないでください。| 
-|LCK_M_BU  |タスクが一括更新 (BU) ロックの取得を待機しているときに発生します。| 
-|LCK_M_BU_ABORT_BLOCKERS |タスクがアボート ブロッカーによる一括更新 (BU) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_BU_LOW_PRIORITY |タスクが優先度の低い一括更新 (BU) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_IS |タスクがインテント共有 (IS) ロックの取得を待機しているときに発生します。| 
-|LCK_M_IS_ABORT_BLOCKERS |タスクがアボート ブロッカーによるインテント共有 (IS) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_IS_LOW_PRIORITY |タスクが優先度の低いインテント共有 (IS) ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_IU |タスクがインテント更新 (IU) ロックの取得を待機しているときに発生します。| 
-|LCK_M_IU_ABORT_BLOCKERS |タスクがアボート ブロッカーによるインテント更新 (IU) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_IU_LOW_PRIORITY |タスクが優先度の低いインテント更新 (IU) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_IX  |タスクがインテント排他 (IX) ロックの取得を待機しているときに発生します。| 
-|LCK_M_IX_ABORT_BLOCKERS |タスクがアボート ブロッカーによるインテント排他 (IX) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_IX_LOW_PRIORITY |タスクが優先度の低いインテント排他 (IX) ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_BU  |タスクが一括更新 (BU) ロックの取得を待機しているときに発生します。 詳細については、「 [一括更新ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) 」を参照してください。| 
+|LCK_M_BU_ABORT_BLOCKERS |タスクがアボート ブロッカーによる一括更新 (BU) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、「 [一括更新ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_BU_LOW_PRIORITY |タスクが優先度の低い一括更新 (BU) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、「 [一括更新ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_IS |タスクがインテント共有 (IS) ロックの取得を待機しているときに発生します。 詳細については [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) を参照してください| 
+|LCK_M_IS_ABORT_BLOCKERS |タスクがアボート ブロッカーによるインテント共有 (IS) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_IS_LOW_PRIORITY |タスクが優先度の低いインテント共有 (IS) ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_IU |タスクがインテント更新 (IU) ロックの取得を待機しているときに発生します。 詳細については [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) を参照してください| 
+|LCK_M_IU_ABORT_BLOCKERS |タスクがアボート ブロッカーによるインテント更新 (IU) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_IU_LOW_PRIORITY |タスクが優先度の低いインテント更新 (IU) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_IX  |タスクがインテント排他 (IX) ロックの取得を待機しているときに発生します。 詳細については [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) を参照してください| 
+|LCK_M_IX_ABORT_BLOCKERS |タスクがアボート ブロッカーによるインテント排他 (IX) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_IX_LOW_PRIORITY |タスクが優先度の低いインテント排他 (IX) ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |LCK_M_RIn_NL  |タスクが、現在のキー値に対する NULL ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 キーの NULL ロックは、すぐに解放されるロックです。| 
 |LCK_M_RIn_NL_ABORT_BLOCKERS |タスクが、現在のキー値に対するアボート ブロッカーによる NULL ロックの取得、および現在のキーから以前のキーまでを対象としたアボート ブロッカーによる挿入範囲ロックの取得を待機しているときに発生します。 キーの NULL ロックは、すぐに解放されるロックです。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |LCK_M_RIn_NL_LOW_PRIORITY |タスクが、現在のキー値に対する優先度の低い NULL ロックの取得、および現在のキーから以前のキーまでを対象とした優先度の低い挿入範囲ロックの取得を待機しているときに発生します。 キーの NULL ロックは、すぐに解放されるロックです。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
@@ -426,30 +426,30 @@ GO
 |LCK_M_RX_X  |タスクが、現在のキー値に対する排他ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。| 
 |LCK_M_RX_X_ABORT_BLOCKERS |タスクが、現在のキー値に対するアボートブロッカーによる排他ロックの取得、および現在のキーから以前のキーまでを対象としたアボートブロッカーによる排他範囲ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |LCK_M_RX_X_LOW_PRIORITY |タスクが、現在のキー値に対する優先度の低い排他ロックの取得、および現在のキーから以前のキーまでを対象とした優先度の低い排他範囲ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_S  |タスクが共有ロックの取得を待機しているときに発生します。| 
-|LCK_M_S_ABORT_BLOCKERS |タスクがアボートブロッカーによる共有ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_S_LOW_PRIORITY |タスクが優先度の低い共有ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_SCH_M  |タスクがスキーマ変更ロックの取得を待機しているときに発生します。| 
-|LCK_M_SCH_M_ABORT_BLOCKERS |タスクがアボート ブロッカーによるスキーマ変更ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_SCH_M_LOW_PRIORITY |タスクが優先度の低いスキーマ変更ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_SCH_S  |タスクがスキーマ共有ロックの取得を待機しているときに発生します。| 
-|LCK_M_SCH_S_ABORT_BLOCKERS |タスクがアボート ブロッカーによるスキーマ共有ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_SCH_S_LOW_PRIORITY |タスクが優先度の低いスキーマ共有ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_SIU  |タスクがインテント更新付き共有ロックの取得を待機しているときに発生します。| 
-|LCK_M_SIU_ABORT_BLOCKERS |タスクが、中止ブロッカーによるインテント更新ロック付き共有の取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_SIU_LOW_PRIORITY |タスクが、優先度の低いインテント更新ロックで共有を取得するのを待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_SIX  |タスクがインテント排他付き共有ロックの取得を待機しているときに発生します。| 
-|LCK_M_SIX_ABORT_BLOCKERS |タスクがアボートブロッカーによるインテント排他付き共有ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_SIX_LOW_PRIORITY |タスクが、優先順位の低いインテント排他付き共有ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_U  |タスクが更新ロックの取得を待機しているときに発生します。| 
-|LCK_M_U_ABORT_BLOCKERS |タスクが中止ブロッカーによる更新ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_U_LOW_PRIORITY |タスクが優先度の低い更新ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_UIX  |タスクがインテント排他付き更新ロックの取得を待機しているときに発生します。| 
-|LCK_M_UIX_ABORT_BLOCKERS |タスクがアボート ブロッカーによるインテント排他付き更新ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_UIX_LOW_PRIORITY |タスクが、優先度の低いインテント排他ロックで更新の取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_X  |タスクが排他ロックの取得を待機しているときに発生します。| 
-|LCK_M_X_ABORT_BLOCKERS |タスクがアボートブロッカーによる排他ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
-|LCK_M_X_LOW_PRIORITY |タスクが、優先度の低い排他ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_S  |タスクが共有ロックの取得を待機しているときに発生します。 詳細については、「 [共有ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#shared) 」を参照してください。| 
+|LCK_M_S_ABORT_BLOCKERS |タスクがアボートブロッカーによる共有ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、「 [共有ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#shared) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_S_LOW_PRIORITY |タスクが優先度の低い共有ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、「 [共有ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#shared) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_SCH_M  |タスクがスキーマ変更ロックの取得を待機しているときに発生します。 詳細については、「 [スキーマロック](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) 」を参照してください。| 
+|LCK_M_SCH_M_ABORT_BLOCKERS |タスクがアボート ブロッカーによるスキーマ変更ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、「 [スキーマロック](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_SCH_M_LOW_PRIORITY |タスクが優先度の低いスキーマ変更ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、「 [スキーマロック](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_SCH_S  |タスクがスキーマ共有ロックの取得を待機しているときに発生します。 詳細については、「 [スキーマロック](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) 」を参照してください。| 
+|LCK_M_SCH_S_ABORT_BLOCKERS |タスクがアボート ブロッカーによるスキーマ共有ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、「 [スキーマロック](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_SCH_S_LOW_PRIORITY |タスクが優先度の低いスキーマ共有ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)詳細については、「 [スキーマロック](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_SIU  |タスクがインテント更新付き共有ロックの取得を待機しているときに発生します。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。| 
+|LCK_M_SIU_ABORT_BLOCKERS |タスクが、中止ブロッカーによるインテント更新ロック付き共有の取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_SIU_LOW_PRIORITY |タスクが、優先度の低いインテント更新ロックで共有を取得するのを待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_SIX  |タスクがインテント排他付き共有ロックの取得を待機しているときに発生します。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。| 
+|LCK_M_SIX_ABORT_BLOCKERS |タスクがアボートブロッカーによるインテント排他付き共有ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_SIX_LOW_PRIORITY |タスクが、優先順位の低いインテント排他付き共有ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_U  |タスクが更新ロックの取得を待機しているときに発生します。 詳細については、「 [更新ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#update) 」を参照してください。| 
+|LCK_M_U_ABORT_BLOCKERS |タスクが中止ブロッカーによる更新ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、「 [更新ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#update) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_U_LOW_PRIORITY |タスクが優先度の低い更新ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、「 [更新ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#update) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_UIX  |タスクがインテント排他付き更新ロックの取得を待機しているときに発生します。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。| 
+|LCK_M_UIX_ABORT_BLOCKERS |タスクがアボート ブロッカーによるインテント排他付き更新ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_UIX_LOW_PRIORITY |タスクが、優先度の低いインテント排他ロックで更新の取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、 [インテントロック](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) に関する説明を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_X  |タスクが排他ロックの取得を待機しているときに発生します。 詳細については、「 [排他ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#exclusive) 」を参照してください。| 
+|LCK_M_X_ABORT_BLOCKERS |タスクがアボートブロッカーによる排他ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、「 [排他ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#exclusive) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
+|LCK_M_X_LOW_PRIORITY |タスクが、優先度の低い排他ロックの取得を待機しているときに発生します。 (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 詳細については、「 [排他ロック](../sql-server-transaction-locking-and-row-versioning-guide.md#exclusive) 」を参照してください。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
 |LOG_POOL_SCAN |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |LOG_RATE_GOVERNOR |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |LOGBUFFER  |タスクが、ログ レコードを格納するログ バッファーの領域を待機しているときに発生します。 常に高い値が示される場合は、ログ デバイスで解放される領域よりも、サーバーにより生成されるログ サイズが大きいことを表しています。| 
@@ -487,11 +487,11 @@ GO
 |OLEDB |が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SNAC OLE DB Provider (SQLNCLI) または Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL) を呼び出したときに発生します。 この種類の待機は、同期では使用されません。 代わりに、OLE DB プロバイダー呼び出しの持続時間を示します。| 
 |ONDEMAND_TASK_QUEUE |バックグラウンド タスクが、優先度の高いシステム タスクの要求を待機しているときに発生します。 待機時間が長い場合は処理優先度が高い要求がないことを示します。問題があるわけではありません。| 
 |PAGEIOLATCH_DT  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は破棄モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
-|PAGEIOLATCH_EX  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードであり、バッファーがディスクに書き込まれるときに使用されるモードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
+|PAGEIOLATCH_EX  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードであり、バッファーがディスクに書き込まれるときに使用されるモードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。 <br /><br /> 詳細については、この [SQL Server 低速の i/o トラブルシューティング](https://techcommunity.microsoft.com/t5/sql-server-support/slow-i-o-sql-server-and-disk-i-o-performance/ba-p/333983) に関するブログを参照してください。| 
 |PAGEIOLATCH_KP  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は保持モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
 |PAGEIOLATCH_NL  |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
-|PAGEIOLATCH_SH  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードで、バッファーがディスクから読み取られるときに使用されるモードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
-|PAGEIOLATCH_UP  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
+|PAGEIOLATCH_SH  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードで、バッファーがディスクから読み取られるときに使用されるモードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。<br /><br /> 詳細については、この [SQL Server 低速の i/o トラブルシューティング](https://techcommunity.microsoft.com/t5/sql-server-support/slow-i-o-sql-server-and-disk-i-o-performance/ba-p/333983) に関するブログを参照してください。| 
+|PAGEIOLATCH_UP  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。<br /><br /> 詳細については、この [SQL Server 低速の i/o トラブルシューティング](https://techcommunity.microsoft.com/t5/sql-server-support/slow-i-o-sql-server-and-disk-i-o-performance/ba-p/333983) に関するブログを参照してください。| 
 |PAGELATCH_DT  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は破棄モードです。 ページの内容を削除する前に、破棄モードを取得する必要があります。 詳細については、「 [ラッチモード](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) 」を参照してください。| 
 |PAGELATCH_EX  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードであるため、他のスレッドがページ (buffer) への書き込みまたは読み取りを行うことをブロックします。 </br></br> このラッチにつながる一般的なシナリオは、"最後のページ挿入" バッファーラッチの競合です。 これを理解して解決するには、[ [最終ページ挿入 PAGELATCH_EX の競合の解決](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) ] を使用し、 [SQL Server で最後のページ挿入ラッチの競合を診断して解決し](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention)ます。 もう1つのシナリオは [、非クラスター化インデックスとランダム挿入 (キューテーブル) を持つ小さなテーブルでのラッチ競合](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table)です。| 
 |PAGELATCH_KP  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は保持モードのため、ページが別のスレッドによって破棄されるのを防ぎます。 詳細については、「 [ラッチモード](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) 」を参照してください。| 
@@ -869,7 +869,7 @@ GO
 |SOS_PHYS_PAGE_CACHE |スレッドは、物理ページを割り当てる前に、またはこれらのページをオペレーティングシステムに返す前に取得する必要があるミューテックスの取得を待機する時間のアカウントです。 この型の待機は、のインスタンスが AWE メモリを使用している場合にのみ表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |SOS_PROCESS_AFFINITY_MUTEX |関係設定を処理するためのアクセスの同期中に発生します。| 
 |SOS_RESERVEDMEMBLOCKLIST |メモリマネージャーでの内部同期中に発生し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 <br /><br /> **適用対象**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] のみ。 |  
-|SOS_SCHEDULER_YIELD |タスクが、他のタスクの実行にスケジューラを自主的に解放したときに発生します。 この待機中、タスクはクォンタムの更新を待機しています。| 
+|SOS_SCHEDULER_YIELD |タスクが、他のタスクの実行にスケジューラを自主的に解放したときに発生します。 この待機中、タスクは実行可能キューでクォンタムが更新されるのを待機しています。つまり、CPU での実行が再度スケジュールされるのを待機しています。 この待機の種類で長時間待機すると、インデックスまたはテーブルスキャンを実行するクエリを最適化する機会が最も頻繁に示されます。 プランの回帰、不足しているインデックス、統計の更新、クエリの再書き込みに注目します。 ランタイムを最適化すると、タスクが複数回発生する必要性が減ります。 このような CPU を消費するタスクのクエリ時間が許容される場合は、この待機の種類が想定されているので、無視してかまいません。 | 
 |SOS_SMALL_PAGE_ALLOC |メモリの割り当てと開放中に発生します。このメモリはいくつかのメモリ オブジェクトによって管理されます。| 
 |SOS_STACKSTORE_INIT_MUTEX |内部ストアの初期化の同期中に発生します。| 
 |SOS_SYNC_TASK_ENQUEUE_EVENT |タスクが同期して開始したときに発生します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のほとんどのタスクは非同期で開始し、タスクの要求が作業キューに挿入されるとすぐ制御が最初に戻ります。| 
@@ -1030,4 +1030,3 @@ GO
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
-  

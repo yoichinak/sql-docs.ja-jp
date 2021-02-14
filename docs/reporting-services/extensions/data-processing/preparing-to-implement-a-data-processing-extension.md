@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf7bbaddbe4379c7d56ce7209b6b93eb1b4f6254
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: f057daa09caf7ba3d690fb0dc0586a5e28afc81e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529165"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065417"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>データ処理拡張機能を実装する準備
   ご自分の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能を実装する前に、実装するインターフェイスを定義しておく必要があります。 インターフェイスのセット全体にわたって拡張機能固有の実装を行うことができます。<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> インターフェイスや <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> インターフェイスなど、サブセットだけを実装することもできます。このようなインターフェイスでは、クライアントが **DataReader** オブジェクトとして主に結果セットと対話し、[!INCLUDE[ssRS](../../../includes/ssrs.md)] データ処理拡張機能を結果セットとデータ ソース間のブリッジとして使用します。  

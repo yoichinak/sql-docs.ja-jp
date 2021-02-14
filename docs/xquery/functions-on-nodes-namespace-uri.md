@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed19a835b6df605a6ec735a8063a192ea32148fd
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 4a9734dd4efd2f4dcedd539218a0a7d989211749
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034835"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353280"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>ノードの関数 - namespace-uri
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-  *$Arg*で指定された QName の名前空間 URI を xs: string として返します。  
+  *$Arg* で指定された QName の名前空間 URI を xs: string として返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,17 +39,17 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  名前空間 URI 部分が取得されるノードの名前。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 -   引数が省略された場合、既定値はコンテキスト ノードです。  
   
 -   SQL Server では、引数のない **fn: namespace-uri ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。  
   
--   *$Arg*が空のシーケンスの場合は、長さ0の文字列が返されます。  
+-   *$Arg* が空のシーケンスの場合は、長さ0の文字列が返されます。  
   
--   *$Arg*が、名前空間に含まれていない展開 QName を持つ要素ノードまたは属性ノードの場合、関数は長さ0の文字列を返します。  
+-   *$Arg* が、名前空間に含まれていない展開 QName を持つ要素ノードまたは属性ノードの場合、関数は長さ0の文字列を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. 特定のノードの名前空間 URI を取得する  
@@ -79,7 +79,7 @@ https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManu
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. 述語で引数を指定せずに namespace-uri() を使用する  
- 次のクエリは、CatalogDescription 型指定された xml 列に対して指定されています。 この式は、名前空間 URI がであるすべての要素ノードを返し `https://www.adventure-works.com/schemas/OtherFeatures` ます。 名前空間**uri ()** 関数は、引数なしで指定され、コンテキストノードを使用します。  
+ 次のクエリは、CatalogDescription 型指定された xml 列に対して指定されています。 この式は、名前空間 URI がであるすべての要素ノードを返し `https://www.adventure-works.com/schemas/OtherFeatures` ます。 名前空間 **uri ()** 関数は、引数なしで指定され、コンテキストノードを使用します。  
   
 ```  
 SELECT CatalogDescription.query('  

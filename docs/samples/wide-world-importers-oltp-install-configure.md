@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9868b414d627c7ea98504120432c0c3a662d463b
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 588597398c11b9b374bdecd272162fe82053cd8f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956553"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354079"
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 大規模な環境では、OLTP データベースのインストールと構成の手順について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 このサンプルの完全なバージョンについては、SQL Server Evaluation/Developer/Enterprise Edition を使用してください。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 最良の結果を得るには、2016年6月リリース以降を使用します。
@@ -52,7 +52,7 @@ SQL Server または Azure SQL Database のエディションに対応するサ�
 5. 必要に応じて、[ **ファイル** ] ウィンドウでデータファイルとログファイルのターゲットの場所を変更します。 データファイルとログファイルは別のドライブに配置することをお勧めします。
 6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了すると、SQL Server インスタンスにデータベース WideWorldImporters がインストールされます。
 
-### <a name="azure-sql-database"></a>Azure SQL データベース
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Bacpac を新しい SQL Database にインポートするには、Management Studio を使用できます。
 

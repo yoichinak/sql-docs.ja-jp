@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4756d86070e933f4c281922d54d80974832e9f5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62fa5c7bba9133c9a8b0098142d97fdd422c47ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775503"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341913"
 ---
 # <a name="general-xquery-use-cases"></a>XQuery の一般的な使用例
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ WHERE CatalogDescription is not null
   
  上のクエリに関して、次の点に注意してください。  
   
--   XQuery プロローグ内の**namespace**キーワードは、クエリ本文で使用される名前空間プレフィックスを定義します。  
+-   XQuery プロローグ内の **namespace** キーワードは、クエリ本文で使用される名前空間プレフィックスを定義します。  
   
 -   クエリ本文で、必要な XML が構築されます。  
   
@@ -72,7 +72,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- 次のクエリでは、同じ情報を取得しますが、カタログの説明に重み、<`Weight`> 要素、仕様、<> 要素を含む製品モデルに対してのみ取得し `Specifications` ます。 この例では、WITH XMLNAMESPACES を使用して、pd プレフィックスとその名前空間バインドを宣言しています。 この方法では、binding は**query ()** メソッドと**exist ()** メソッドの両方で記述されていません。  
+ 次のクエリでは、同じ情報を取得しますが、カタログの説明に重み、<`Weight`> 要素、仕様、<> 要素を含む製品モデルに対してのみ取得し `Specifications` ます。 この例では、WITH XMLNAMESPACES を使用して、pd プレフィックスとその名前空間バインドを宣言しています。 この方法では、binding は **query ()** メソッドと **exist ()** メソッドの両方で記述されていません。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -87,9 +87,9 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- 上記のクエリでは、WHERE 句で**xml**データ型の**exist ()** メソッドが、 `Weight` <> 要素に <> 要素があるかどうかを確認し `Specifications` ます。  
+ 上記のクエリでは、WHERE 句で **xml** データ型の **exist ()** メソッドが、 `Weight` <> 要素に <> 要素があるかどうかを確認し `Specifications` ます。  
   
-### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B: カタログの説明に正面からの小さな製品写真が含まれる製品モデルの製品モデル ID の検索  
+### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. カタログの説明に正面からの小さな製品写真が含まれる製品モデルの製品モデル ID の検索  
  XML 製品カタログの説明には、製品の画像、<> 要素が含まれてい `Picture` ます。 各写真には、いくつかのプロパティがあります。 これには、画像の角度、<`Angle`> 要素、サイズ、<> 要素が含まれ `Size` ます。  
   
  カタログの説明に正面と小さいサイズの画像が含まれる製品モデルの場合、クエリでは次の形式の XML が構築されます。  
@@ -120,7 +120,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
 -   WHERE 句では、 **exist ()** メソッドを使用して、<> 要素を持つ製品カタログの説明を含む行のみを取得し `Picture` ます。  
   
--   WHERE 句では**value ()** メソッドを2回使用して、<`Size`> と <> 要素の値を比較し `Angle` ます。  
+-   WHERE 句では **value ()** メソッドを2回使用して、<`Size`> と <> 要素の値を比較し `Angle` ます。  
   
  結果の一部を次に示します。  
   
@@ -136,8 +136,8 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C: 製品モデルの名前と特徴のペアの単純なリストを作成します。各ペアは要素で囲まれています。 \<Features>  
- 製品モデルカタログの説明では、XML にいくつかの製品機能が含まれています。 これらの機能はすべて <> 要素に含まれてい `Features` ます。 このクエリでは、 [Xml 構築 (XQuery)](../xquery/xml-construction-xquery.md)を使用して、必要な xml を構築します。 中かっこ内の式は、結果に置き換えられます。  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 製品モデルの名前と特徴のペアの単純なリストを作成します。各ペアは要素で囲まれています。 \<Features>  
+ 製品モデルカタログの説明では、XML にいくつかの製品機能が含まれています。 これらの機能はすべて <> 要素に含まれてい `Features` ます。 このクエリでは、 [Xml 構築 (XQuery)](../xquery/xml-construction-xquery.md) を使用して、必要な xml を構築します。 中かっこ内の式は、結果に置き換えられます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -160,7 +160,7 @@ WHERE ProductModelID=19
   
 -   2つの FOR ループによって、製品名と個々の特徴が返されるデカルト積が生成されます。  
   
--   **ProductName**は属性です。 このクエリで構築された XML では、この属性を要素として返します。  
+-   **ProductName** は属性です。 このクエリで構築された XML では、この属性を要素として返します。  
   
  結果の一部を次に示します。  
   
@@ -187,7 +187,7 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D: 製品モデルのカタログの説明から製品モデルの名前、モデル ID、および要素内にグループ化された機能を一覧表示します。 \<Product>  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. 製品モデルのカタログの説明から製品モデルの名前、モデル ID、および要素内にグループ化された機能を一覧表示します。 \<Product>  
  次のクエリでは、製品モデルのカタログの説明に格納されている情報を使用して、製品モデルの名前、モデル ID、および要素内にグループ化された機能を一覧表示し \<Product> ます。  
   
 ```  
@@ -224,7 +224,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. 製品モデルの特徴の説明の取得  
- 次のクエリでは、<の> 要素を含む XML を構築し `Product` ます。この要素に**は**、 **ProductModelName**属性と、最初の2つの製品機能が含まれています。 具体的には、最初の2つの製品機能は、<> 要素の最初の2つの子要素 `Features` です。 その他の機能がある場合は、空の <`There-is-more/`> 要素を返します。  
+ 次のクエリでは、<の> 要素を含む XML を構築し `Product` ます。この要素に **は**、 **ProductModelName** 属性と、最初の2つの製品機能が含まれています。 具体的には、最初の2つの製品機能は、<> 要素の最初の2つの子要素 `Features` です。 その他の機能がある場合は、空の <`There-is-more/`> 要素を返します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -296,7 +296,7 @@ WHERE CatalogDescription.value('
      contains( string( (/pd:ProductDescription/pd:Summary)[1] ),"Aerodynamic")','bit') = 1  
 ```  
   
- SELECT クエリでは、 **xml**データ型の**query ()** メソッドと**value ()** メソッドが指定されていることに注意してください。 このため、2 つの異なるクエリ プロローグ内でそれぞれ名前空間の宣言を繰り返す手間を省き、クエリ内で使用されるプレフィックス pd を WITH XMLNAMESPACES を使用して一度だけ定義しています。  
+ SELECT クエリでは、 **xml** データ型の **query ()** メソッドと **value ()** メソッドが指定されていることに注意してください。 このため、2 つの異なるクエリ プロローグ内でそれぞれ名前空間の宣言を繰り返す手間を省き、クエリ内で使用されるプレフィックス pd を WITH XMLNAMESPACES を使用して一度だけ定義しています。  
   
  上のクエリに関して、次の点に注意してください。  
   
@@ -304,7 +304,7 @@ WHERE CatalogDescription.value('
   
 -   **Contains ()** 関数は、単語がテキストに含まれているかどうかを確認するために使用されます。  
   
--   **Xml**データ型の**value ()** メソッドは、 **contains ()** によって返された値を1に比較します。  
+-   **Xml** データ型の **value ()** メソッドは、 **contains ()** によって返された値を1に比較します。  
   
  結果を次に示します。  
   
@@ -335,11 +335,11 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
   
  上のクエリに関して、次の点に注意してください。  
   
--   WHERE 句の**exist ()** メソッドが False (0) を返す場合、製品モデル ID が返されます。 それ以外の場合は返されません。  
+-   WHERE 句の **exist ()** メソッドが False (0) を返す場合、製品モデル ID が返されます。 それ以外の場合は返されません。  
   
 -   すべての製品の説明には <の> 要素が含まれているため `Picture` 、この場合、結果セットは空になります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [階層に関連する XQueries](../xquery/xqueries-involving-hierarchy.md)   
  [注文に関連する XQueries](../xquery/xqueries-involving-order.md)   
  [XQueries リレーショナルデータを処理する](../xquery/xqueries-handling-relational-data.md)   

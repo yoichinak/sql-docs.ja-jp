@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f47068324f13fe3cd03f0fc798090378a5f5ad6e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: daca777a2994813a6df131d1fa756edf4f753f6e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753623"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353314"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR ステートメントと繰り返し (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -142,9 +142,9 @@ SELECT @x.query('
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では異種シーケンスが許可されていません。 具体的には、アトミック値とノードが混在しているシーケンスは許可されません。  
   
- 反復は、次のクエリで示すように XML 形式の変換で[Xml 構築](../xquery/xml-construction-xquery.md)構文と一緒に使用されることがよくあります。  
+ 反復は、次のクエリで示すように XML 形式の変換で [Xml 構築](../xquery/xml-construction-xquery.md) 構文と一緒に使用されることがよくあります。  
   
- AdventureWorks サンプルデータベースでは、 **Production モデル**テーブルの**命令**列に格納されている製造手順の形式は次のとおりです。  
+ AdventureWorks サンプルデータベースでは、 **Production モデル** テーブルの **命令** 列に格納されている製造手順の形式は次のとおりです。  
   
 ```xml
 <Location LocationID="10" LaborHours="1.2"   
@@ -247,7 +247,7 @@ where ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   `where`キーワードは**count ()** 関数を使用して、 `step` 各ワークセンターの場所の <> 子要素の数をカウントします。  
+-   `where`キーワードは **count ()** 関数を使用して、 `step` 各ワークセンターの場所の <> 子要素の数をカウントします。  
   
 -   式は、 `return` イテレーションの結果から必要な XML を構築します。  
   
@@ -300,7 +300,7 @@ SELECT @x.query('
   
 -   に関連付けられた式は、 `$Loc` 一連の <> 要素を生成し `Location` ます。 各 <> 要素について `Location` 、は `$FirstStep` 1 つの <`Step`> 要素 (シングルトン) のシーケンスを生成します。  
   
--   `$Loc`は、変数に関連付けられた式で指定され `$FirstStep` ます。  
+-   `$Loc` は、変数に関連付けられた式で指定され `$FirstStep` ます。  
   
  結果を次に示します。  
   
@@ -309,7 +309,7 @@ Manu step 1 at Loc 1
 Manu step 1 at Loc 2  
 ```  
   
- 次のクエリは似ていますが、 **Productmodel**テーブルの、型指定された**xml**列である命令列に対して指定されている点が異なります。 [Xml の構築 (XQuery)](../xquery/xml-construction-xquery.md)は、必要な xml を生成するために使用されます。  
+ 次のクエリは似ていますが、 **Productmodel** テーブルの、型指定された **xml** 列である命令列に対して指定されている点が異なります。 [Xml の構築 (XQuery)](../xquery/xml-construction-xquery.md) は、必要な xml を生成するために使用されます。  
   
 ```sql
 SELECT Instructions.query('  
@@ -329,9 +329,9 @@ WHERE ProductModelID=7
   
 -   `for` 句で 2 つの変数 `$WC` および `$S` を定義します。 `$WC` に関連付けられた式により、ある製造モデルの自転車の製造で使用されるワーク センター拠点のシーケンスが生成されます。 `$S` 変数に代入されたパス式は、`$WC` で示すワーク センター拠点のシーケンスごとに製造手順のシーケンスを生成します。  
   
--   Return ステートメントは、 `Step` 製造手順と**locationid**を属性として含む <> 要素を持つ XML を構築します。  
+-   Return ステートメントは、 `Step` 製造手順と **locationid** を属性として含む <> 要素を持つ XML を構築します。  
   
--   **既定の declare 要素の名前空間**は、結果の XML 内のすべての名前空間宣言が最上位の要素に表示されるように、XQuery プロローグで使用されます。 これにより、結果が読みやすくなります。 既定の名前空間の詳細については、「 [XQuery での名前空間の処理](../xquery/handling-namespaces-in-xquery.md)」を参照してください。  
+-   **既定の declare 要素の名前空間** は、結果の XML 内のすべての名前空間宣言が最上位の要素に表示されるように、XQuery プロローグで使用されます。 これにより、結果が読みやすくなります。 既定の名前空間の詳細については、「 [XQuery での名前空間の処理](../xquery/handling-namespaces-in-xquery.md)」を参照してください。  
   
  結果の一部を次に示します。  
   
@@ -353,7 +353,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>Order by 句の使用  
- XQuery での並べ替えは、FLWOR 式の句を使用して実行され `order by` ます。 句に渡される並べ替え式は、 `order by` **gt**演算子に対して有効な型を持つ値を返す必要があります。 各並べ替え式は、1つの項目を持つ単一のシーケンスになる必要があります。 既定では、並べ替えは昇順で実行されます。 必要に応じて、並べ替え式ごとに昇順または降順を指定することもできます。  
+ XQuery での並べ替えは、FLWOR 式の句を使用して実行され `order by` ます。 句に渡される並べ替え式は、 `order by` **gt** 演算子に対して有効な型を持つ値を返す必要があります。 各並べ替え式は、1つの項目を持つ単一のシーケンスになる必要があります。 既定では、並べ替えは昇順で実行されます。 必要に応じて、並べ替え式ごとに昇順または降順を指定することもできます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に実装された XQuery で行う、文字列値を並べ替えるための比較には、常にバイナリの Unicode コード ポイントの照合順序が使用されます。  
@@ -374,7 +374,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- [アトミック化 (XQuery)](../xquery/atomization-xquery.md)プロセスは、 `number` に渡す前に <> 要素のアトミック値を取得することに注意して `order by` ください。 式は**data ()** 関数を使用して記述できますが、必須ではありません。  
+ [アトミック化 (XQuery)](../xquery/atomization-xquery.md)プロセスは、 `number` に渡す前に <> 要素のアトミック値を取得することに注意して `order by` ください。 式は **data ()** 関数を使用して記述できますが、必須ではありません。  
   
 ```  
 order by data($a/act:number[1]) descending  
@@ -533,7 +533,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
 -   `order by` ではキーワード empty least、empty greatest、および collation を使用できません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XQuery 式](../xquery/xquery-expressions.md)  
   
   

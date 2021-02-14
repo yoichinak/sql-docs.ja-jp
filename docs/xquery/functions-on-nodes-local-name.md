@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc7c25d1b953b98c81691843a4de6dc924bca651
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 9d336db0ac3a6f9c490e3b25a9bee98e1228594f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038075"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353288"
 ---
 # <a name="functions-on-nodes---local-name"></a>ノードの関数 - local-name
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  *$Arg*の名前のローカル部分を xs: string として返します。この文字列は、長さが0の文字列であるか、または Xs: NCName という構文形式になります。 引数が指定されていない場合、既定値はコンテキストノードです。  
+  *$Arg* の名前のローカル部分を xs: string として返します。この文字列は、長さが0の文字列であるか、または Xs: NCName という構文形式になります。 引数が指定されていない場合、既定値はコンテキストノードです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  ローカル名の部分を取得するノードの名前。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 -   SQL Server では、引数が指定されていない **fn: ローカル名 ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ () 内でのみ使用でき `[ ]` ます。  
   
@@ -47,7 +47,7 @@ fn:local-name($arg as node()?) as xs:string
   
 -   ターゲットノードがドキュメントノード、コメント、またはテキストノードであるために名前がない場合、関数は長さ0の文字列を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. 特定のノードのローカル名を取得する  

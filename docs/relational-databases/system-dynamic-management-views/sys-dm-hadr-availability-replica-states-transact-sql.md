@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ab171b0adfe6497520ba55d94ec6a1435cc6678a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2c725e1758b1ff0197d6b4498cef6f5f54809d89
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99179321"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354141"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "99179321"
   
  **解決中:** 可用性レプリカが解決中のロールに含まれる場合、次の表に示す操作状態が考えられます。  
   
-|動作状態|説明|  
+|動作状態|[説明]|  
 |-----------------------|-----------------|  
 |PENDING_FAILOVER|可用性グループに対するフェールオーバー コマンドを処理しています。|  
 |OFFLINE|WSFC クラスターおよびローカル メタデータ内の可用性レプリカのすべての構成データが更新されたが、可用性グループには現在プライマリ レプリカがありません。|  
@@ -68,7 +68,7 @@ ms.locfileid: "99179321"
   
  **プライマリ:** 可用性レプリカがプライマリロールを実行している場合は、現在プライマリレプリカです。 次の表に、可能な操作状態を示します。  
   
-|動作状態|説明|  
+|動作状態|[説明]|  
 |-----------------------|-----------------|  
 |PENDING|これは一時的な状態ですが、ワーカーを使用して要求を処理できない場合、プライマリ レプリカがこの状態になることがあります。|  
 |ONLINE|可用性グループリソースがオンラインで、すべてのデータベースワーカースレッドが取得されました。|  
@@ -76,7 +76,7 @@ ms.locfileid: "99179321"
   
  **セカンダリ:** セカンダリロールを実行している可用性レプリカは、現在セカンダリレプリカです。 次の表に、可能な操作状態を示します。  
   
-|動作状態|説明|  
+|動作状態|[説明]|  
 |-----------------------|-----------------|  
 |ONLINE|ローカル セカンダリ レプリカがプライマリ レプリカに接続されています。|  
 |FAILED|ローカル セカンダリ レプリカが WSFC クラスターに対して読み取りまたは書き込みを行うことができません。|  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 47ca39e2b4f89cbe834881463784270c195a9ae4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: beadacf67a921ca2c29287aae258b0940eedd5f3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88345198"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350306"
 ---
 # <a name="delete-an-entity-master-data-services"></a>エンティティを削除する (マスター データ サービス)
 
@@ -30,7 +30,7 @@ ms.locfileid: "88345198"
 > [!NOTE]  
 >  すべてのバージョンからのエンティティのメンバーが恒久的に削除されます。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  

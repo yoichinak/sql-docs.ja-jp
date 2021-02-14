@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2c7e24a7d519d787882ec587fc33f624f1eb6472
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 59d430ea44a83d3795d7d3e3473917ed1c14345f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811487"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338207"
 ---
 # <a name="master-data-services-database"></a>マスター データ サービス データベース
 
@@ -47,7 +47,7 @@ ms.locfileid: "85811487"
   
 -   [ステージング処理のエラー (マスター データ サービス)](../master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスターデータサービスデータベースを作成する](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [データベースオブジェクトセキュリティ &#40;マスターデータサービス&#41;](../master-data-services/database-object-security-master-data-services.md)   
  [データベース ログイン、ユーザー、およびロール &#40;マスター データ サービス&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 985714657ef87050b6273599013f0dbc5db83196
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 54c250aa3b6a6e803f90522218b1eef854af7903
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811715"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348838"
 ---
 # <a name="versions-master-data-services"></a>バージョン (マスター データ サービス)
 
@@ -51,7 +51,7 @@ ms.locfileid: "85811715"
   
 1.  最初のバージョンは、モデルを作成して [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに会社のマスター データを入力すると、自動的に作成されます。 ユーザーは権限に基づいて、必要に応じてこのバージョンを変更できます。  
   
-2.  モデルのバージョンをコミットする場合は、モデル管理者のみがデータを更新できるように、バージョンをロックします。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。 通知が構成されている場合、バージョンのステータスが変更されるたびに電子メール通知がモデル管理者に送信されます。 詳細については、「[電子メール通知を構成する (マスター データ サービス)](../master-data-services/configure-email-notifications-master-data-services.md)」を参照してください。  
+2.  モデルのバージョンをコミットする場合は、モデル管理者のみがデータを更新できるように、バージョンをロックします。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。 通知が構成されている場合、バージョンのステータスが変更されるたびに電子メール通知がモデル管理者に送信されます。 詳細については、「[電子メール通知を構成する (マスター データ サービス)](../master-data-services/configure-email-notifications-master-data-services.md)」を参照してください。  
   
 3.  ロックしたバージョンのデータにビジネス ルールを適用し、検証の問題がないか確認します。 必要に応じて、不足している情報を入力したり、問題の原因となったトランザクションを破棄したりできます。 ユーザーが変更できるように、バージョンのロックを解除することもできます。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "85811715"
 ## <a name="sequential-or-simultaneous-versions"></a>順次バージョンまたは同時バージョン  
  モデルの順次バージョンまたは同時バージョンを作成できます。  
   
--   **順次バージョン。** バージョンをコミットするたびに、新しいコピーを作成して、バージョンに次の連続番号を付けます。 たとえば、 **バージョン 7** のモデルをコピーし、そのコピーに **バージョン 8**という名前を付けることができます。  
+-   **順次バージョン。** バージョンをコミットするたびに、新しいコピーを作成して、バージョンに次の連続番号を付けます。 たとえば、 **バージョン 7** のモデルをコピーし、そのコピーに **バージョン 8** という名前を付けることができます。  
   
 -   **同時バージョン。** 一度に 2 つ以上のバージョンのデータで作業を行う場合は、モデルの同時バージョンを作成します。 同時バージョンは、通常の業務と並行して会社の再編や合併を行う場合に、新しいマスター データを既存の構造に適合させる方法を決める際に役立ちます。  
   

@@ -21,12 +21,12 @@ ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd67ec5a14684435e506f97bdae59bb5a3a46ff2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e693db496ff6d5d1657fbc929da10833946cbdfe
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99107647"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343030"
 ---
 # <a name="sysdm_exec_background_job_queue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "99107647"
 ## <a name="permissions"></a>アクセス許可
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、 [サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) アカウントまたは [Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、「 [統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
   
  **Object_id4** を通じて **object_id1** の値は、ジョブ要求の種類によって異なります。 次の表は、それぞれのジョブの種類の列に関する説明です。  
@@ -65,7 +65,7 @@ SQL Database Basic、S0、S1 のサービス目標、およびエラスティッ
 |------------------|-----------------|-----------------|-----------------|-----------------|  
 |統計の非同期更新|テーブルまたはビュー ID|統計 ID|使用されていない|使用されていない|  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、のインスタンス内の各データベースについて、バックグラウンドキューにあるアクティブな非同期ジョブの数を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  

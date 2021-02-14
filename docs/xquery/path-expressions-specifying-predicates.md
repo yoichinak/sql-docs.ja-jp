@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0945ffa8845c901662acb29c3ed04826870d0ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef2625be70c2af44f4a45ba00302b3d26afc101d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722596"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339943"
 ---
 # <a name="path-expressions---specifying-predicates"></a>パス式 - 述語の指定
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85722596"
   
 -   [軸](../xquery/path-expressions-specifying-axis.md)。  
   
--   ノードテスト。 詳細については、「[パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)」を参照してください。  
+-   ノードテスト。 詳細については、「 [パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)」を参照してください。  
   
 -   0個以上の述語。 これは省略可能です。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85722596"
 ## <a name="predicates"></a>述語  
  述語は、指定されたテストを適用することによってノードシーケンスをフィルター処理するために使用されます。 述語式は、角かっこで囲み、パス式の最後のノードにバインドされます。  
   
- たとえば、次に示すように、 **xml**データ型の SQL パラメーター値 (x) が宣言されているとします。  
+ たとえば、次に示すように、 **xml** データ型の SQL パラメーター値 (x) が宣言されているとします。  
   
 ```  
 declare @x xml  
@@ -137,7 +137,7 @@ WHERE ProductModelID=7
   
      このクエリのパス式では、 `Location` LotSize 属性が指定されている <> 要素ノードだけが返されます。 述語が特定の <> に対して空のシーケンスを返す場合 `Location` 、そのワークセンターの場所は結果に返されません。  
   
-2.  述語の値には、xs: integer、xs: Boolean、または node のみを指定でき \* ます。 ノードの \* 場合、述語はノードがある場合は True に、空のシーケンスの場合は False に評価されます。 その他の数値型 (double、float 型など) では、静的な型指定エラーが生成されます。 式の述語の真偽値は、結果として得られる整数がコンテキスト位置の値と等しい場合にのみ True になります。 また、整数リテラル値と**last ()** 関数のみが、フィルター処理されたステップ式のカーディナリティを1に減らします。  
+2.  述語の値には、xs: integer、xs: Boolean、または node のみを指定でき \* ます。 ノードの \* 場合、述語はノードがある場合は True に、空のシーケンスの場合は False に評価されます。 その他の数値型 (double、float 型など) では、静的な型指定エラーが生成されます。 式の述語の真偽値は、結果として得られる整数がコンテキスト位置の値と等しい場合にのみ True になります。 また、整数リテラル値と **last ()** 関数のみが、フィルター処理されたステップ式のカーディナリティを1に減らします。  
   
      たとえば、次のクエリでは、<> 要素の3番目の子要素ノードが取得され `Features` ます。  
   
@@ -161,7 +161,7 @@ WHERE ProductModelID=7
   
 3.  述語式の値が Boolean 型の単純なデータ型値である場合、述語の真偽値は、述語式の値と同じになります。  
   
-     たとえば、次のクエリは、顧客調査 XML インスタンスである xml インスタンスを保持する**xml 型の変数に対し**て指定されます。 このクエリは、子供がいる顧客を取得します。 このクエリでは、1に \<HasChildren> なり \</HasChildren> ます。  
+     たとえば、次のクエリは、顧客調査 XML インスタンスである xml インスタンスを保持する **xml 型の変数に対し** て指定されます。 このクエリは、子供がいる顧客を取得します。 このクエリでは、1に \<HasChildren> なり \</HasChildren> ます。  
   
     ```  
     declare @x xml  
@@ -192,7 +192,7 @@ WHERE ProductModelID=7
   
      上のクエリに関して、次の点に注意してください。  
   
-    -   **For**ループの式には2つのステップがあり、2番目のステップは述語を指定します。 この述語の値はブール型の値です。 この値が True の場合、述語の真偽値も True になります。  
+    -   **For** ループの式には2つのステップがあり、2番目のステップは述語を指定します。 この述語の値はブール型の値です。 この値が True の場合、述語の真偽値も True になります。  
   
     -   このクエリは、 `Customer` \<Survey> ドキュメントルートの子要素の述語値が True である <> 子要素を返します。 結果を次に示します。  
   
@@ -202,7 +202,7 @@ WHERE ProductModelID=7
   
 4.  述語式の値が、少なくとも1つのノードを含むシーケンスの場合、述語の真偽値は True になります。  
   
- たとえば、次のクエリでは、XML カタログの説明に、 `Features` **wm**プレフィックスに関連付けられている名前空間から、少なくとも1つの機能 (<> 要素の子要素) が含まれている製品モデルの productmodelid を取得します。  
+ たとえば、次のクエリでは、XML カタログの説明に、 `Features` **wm** プレフィックスに関連付けられている名前空間から、少なくとも1つの機能 (<> 要素の子要素) が含まれている製品モデルの productmodelid を取得します。  
   
 ```  
 SELECT ProductModelID  
@@ -221,6 +221,6 @@ WHERE CatalogDescription.exist('
 -   **Exist ()** メソッド内のパス式は、2番目のステップで述語を指定します。 述語式が少なくとも 1 つの機能のシーケンスを返す場合、この述語式の真偽値は True になります。 この場合、 **exist ()** メソッドは True を返すため、ProductModelID が返されます。  
   
 ## <a name="static-typing-and-predicate-filters"></a>静的な型指定フィルターおよび述語フィルター  
- 述語は、静的に推定される式の型にも影響する場合があります。 整数リテラル値と**last ()** 関数は、フィルター処理されたステップ式のカーディナリティを最大で1に減らします。  
+ 述語は、静的に推定される式の型にも影響する場合があります。 整数リテラル値と **last ()** 関数は、フィルター処理されたステップ式のカーディナリティを最大で1に減らします。  
   
   

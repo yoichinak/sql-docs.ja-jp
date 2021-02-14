@@ -21,12 +21,12 @@ ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fc6a4198867ffbeeff6bf454bcf5c1f1fa780e4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c73e9fbf863f1d35182866dd92e21fa602dc420e
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99182098"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100352687"
 ---
 # <a name="sysdm_clr_tasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99182098"
 |**task_address**|**varbinary (8)**|CLR タスクのアドレス。|  
 |**sos_task_address**|**varbinary (8)**|基になる [!INCLUDE[tsql](../../includes/tsql-md.md)] batch タスクのアドレス。|  
 |**appdomain_address**|**varbinary (8)**|このタスクが実行されているアプリケーションドメインのアドレス。|  
-|**state**|**nvarchar(128)**|タスクの現在の状態。|  
+|**状態**|**nvarchar(128)**|タスクの現在の状態。|  
 |**abort_state**|**nvarchar(128)**|中止の現在の状態 (タスクが取り消された場合)。タスクの中止中に複数の状態が関係しています。|  
 |**type**|**nvarchar(128)**|タスクの種類。|  
 |**affinity_count**|**int**|タスクの関係。|  
@@ -47,7 +47,7 @@ ms.locfileid: "99182098"
 ## <a name="permissions"></a>アクセス許可  
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、 [サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) アカウントまたは [Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
