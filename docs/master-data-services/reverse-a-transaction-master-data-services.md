@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: eb92a6d663fa37efa718b88ed04a842e46389e2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72598e6b0dd5c86cb5f231c4ac01ffd1d499b98b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456706"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340244"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>トランザクションを破棄する (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88456706"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、管理者は、アクションを元に戻す必要があるときにトランザクションを破棄できます。 トランザクションの例としては、属性値の変更、階層の移動、メンバーの削除などがあります。 このページには、トランザクション ログの種類が "属性" であるエンティティのトランザクションのみを表示します。 エクスプローラー ページに移動して、トランザクション ログの種類が "メンバー" であるエンティティの履歴を表示します。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   

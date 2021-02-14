@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1f7504244f658af94cccb42bead95de60b2c409e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: df266fd09cfdd586d5f2fc438791104bf7097938
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882106"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344825"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>マスターデータマネージャー web アプリケーションを作成する (マスターデータサービス)
 
@@ -48,7 +48,7 @@ ms.locfileid: "85882106"
   
 #### <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>新しい Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
   
-1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
 2.  左ペインで **[Web の構成]** をクリックします。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "85882106"
   
 #### <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>既存の Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
   
-1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
 2.  左ペインで **[Web の構成]** をクリックします。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "85882106"
   
 -   または、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] トランスポート層セキュリティ (TLS) を使用してコンテンツを暗号化する場合は、web アプリケーションをホストする web サイトを構成します (これは Secure Sockets Layer (SSL) と呼ばれます)。 Web サーバーのサーバー証明書を構成し、サイトの HTTPS バインドと TLS 設定を構成するには、IIS マネージャーなどのインターネットインフォメーションサービス (IIS) ツールを使用する必要があります。 詳細については、「 [マスター データ マネージャー Web アプリケーションのセキュリティ保護](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

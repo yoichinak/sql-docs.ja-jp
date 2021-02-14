@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: ac8bc675c5a059c211e6ecfbed063d54daf6ee92
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 75235f489b396c2269ae0d1dcf22ed24297ec4e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203312"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342747"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -80,14 +80,14 @@ ms.locfileid: "99203312"
 
 このビューには VIEW SERVER STATE 権限が必要です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 ユーザーは、この動的管理ビューにアクセスして、ユーザーワークロードプールと Azure SQL Database インスタンスのシステム内部プールについて、ほぼリアルタイムのリソース消費を監視できます。
 
 > [!IMPORTANT]
 > この DMV によって提示されるデータのほとんどは、内部使用を目的としており、変更される可能性があります。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 次の例では、ユーザープールによって各スナップショットの最大ログレートデータと消費量を返します。
 

@@ -21,12 +21,12 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91c0b28d2b30cc7e7d5f11eed8fe25f4c4907198
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 99577571a63cd3a97e8d91b457bfad18eed5bd3d
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193783"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100344362"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "99193783"
 ## <a name="permissions"></a>アクセス許可
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、 [サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) アカウントまたは [Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
 
 ## <a name="notes-on-linux-version"></a>Linux のバージョンに関する注意事項
 
 Linux での SQL エンジンの動作によって、この情報の一部が Linux 診断データと一致しません。 たとえば、は、、 `os_thread_id` `ps` `top` procfs (/proc/) などのツールの結果と一致しません `pid` 。  これは、プラットフォームアブストラクションレイヤー (SQLPAL)、SQL Server コンポーネントとオペレーティングシステムの間のレイヤーです。
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  スタートアップ時に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スレッドを開始し、ワーカーをそれらのスレッドに関連付けます。 ただし、拡張ストアドプロシージャなどの外部コンポーネントは、プロセスでスレッドを開始でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのスレッドを制御できません。 sys.dm_os_threads は、プロセス内のリソースを消費する悪意のあるスレッドに関する情報を提供でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  次のクエリは、によって開始されていないスレッドを実行しているワーカーと、実行に使用された時間を検索するために使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  

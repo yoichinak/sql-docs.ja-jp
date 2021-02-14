@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 5b5b16a27d17b2dd75d9b398f613e098b10345b4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dcd6c612f406e3c4ae10c7ab0aacfeb3a71fd9c9
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184916"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100338870"
 ---
 # <a name="sysdm_os_dispatcher_pools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99184916"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |dispatcher_pool_address|**varbinary (8)**|ディスパッチャープールのアドレス。 dispatcher_pool_address は一意です。 NULL 値は許可されません。|  
-|type|**nvarchar (256)**|ディスパッチャープールの種類。 NULL 値は許可されません。 ディスパッチャープールには、次の2種類があります。<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> DMV で完全な一覧を照会する|  
+|型|**nvarchar (256)**|ディスパッチャープールの種類。 NULL 値は許可されません。 ディスパッチャープールには、次の2種類があります。<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> DMV で完全な一覧を照会する|  
 |name|**nvarchar (256)**|ディスパッチャー プールの名前。 NULL 値は許可されません。|  
 |dispatcher_count|**int**|アクティブなディスパッチャースレッドの数。 NULL 値は許可されません。|  
 |dispatcher_ideal_count|**int**|ディスパッチャープールが使用できるようになるディスパッチャースレッドの数。 NULL 値は許可されません。|  
@@ -50,7 +50,7 @@ ms.locfileid: "99184916"
 ## <a name="permissions"></a>アクセス許可
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、 [サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) アカウントまたは [Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
 
 ## <a name="see-also"></a>関連項目  
   

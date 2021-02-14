@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fe973a6b5c67a9550a9c7cf687c4be0060be9da4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ab3cdb64b62a6aaaa176b59f24466dfdda95599
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456807"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339533"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>機能領域の権限を割り当てる (マスター データ サービス)
 
@@ -27,7 +27,7 @@ ms.locfileid: "88456807"
 
   機能領域の権限を割り当てて、ユーザーまたはグループに [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の機能領域へのアクセス権を付与します。  
   
-## <a name="prerequisites"></a>[前提条件]  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  

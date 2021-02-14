@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5eff7f5f2db1d1b155b94818083ddad11f23890e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f87125b2c72ac5c8242965dcb3d0407a4a15614c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456716"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340223"
 ---
 # <a name="reserved-words-master-data-services"></a>予約語 (マスター データ サービス)
 
@@ -38,16 +38,16 @@ ms.locfileid: "88456716"
   
 -   [属性](../master-data-services/reserved-words-master-data-services.md#attributes)  
   
--   [[メンバー]](../master-data-services/reserved-words-master-data-services.md#members)  
+-   [メンバー](../master-data-services/reserved-words-master-data-services.md#members)  
   
 ##  <a name="models"></a><a name="models"></a> モジュール  
- 名前を **Name** または **Code**に設定したモデルを作成する場合は、 **[モデルと同じ名前のエンティティを作成する]** を選択しないでください。エンティティの名前に **Name** または **Code** は使用できません。  
+ 名前を **Name** または **Code** に設定したモデルを作成する場合は、 **[モデルと同じ名前のエンティティを作成する]** を選択しないでください。エンティティの名前に **Name** または **Code** は使用できません。  
   
 ##  <a name="entities"></a><a name="entities"></a> 事業  
- エンティティ名には **Name** または **Code**を使用できません。  
+ エンティティ名には **Name** または **Code** を使用できません。  
   
 ##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a> 明示的階層  
- 明示的階層名には **Name** または **Code**を使用できません。  
+ 明示的階層名には **Name** または **Code** を使用できません。  
   
 ##  <a name="attributes"></a><a name="attributes"></a> アトリビュート  
   

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 80291c619bedea8718854600a6480eb214a986a6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b78d5e65fe9f6c60e94ddbf241c9eabfed332f0c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198611"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338919"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ WSFC フェールオーバー クラスター内の AlwaysOn 可用性グルー�
 |**セッションの \_ タイムアウト**|**int**|タイムアウト時間 (秒単位)。 タイムアウト時間は、レプリカが別のレプリカからのメッセージの受信を待機する最大時間です。この時間を過ぎると、プライマリ レプリカとセカンダリ レプリカの間の接続は障害があるものと見なされます。 セッション タイムアウトは、セカンダリ レプリカがプライマリ レプリカに接続されているかどうかを検出します。<br /><br /> セカンダリレプリカとの接続が失敗したことを検出すると、プライマリレプリカはセカンダリレプリカが同期されていないと見なし \_ ます。 プライマリ レプリカとの接続が確立されていないことを検出すると、セカンダリ レプリカは単に再接続を試みます。<br /><br /> **注:** セッションのタイムアウトでは、自動フェールオーバーは行われません。<br /><br /> この値を変更するには、 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)ステートメントの SESSION_TIMEOUT オプションを使用し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。|  
 |**プライマリ \_ ロールでの \_ 接続の許可 \_**|**tinyint**|可用性ですべての接続を許可するか、読み取り/書き込み接続のみを許可するかは、次のいずれかになります。<br /><br /> 2 = すべて (既定値)<br /><br /> 3 = 読み取り/書き込み|  
 |**プライマリ \_ ロールが \_ 接続を許可する \_ \_ desc**|**nvarchar(60)**|**プライマリロールの \_ \_ \_ 接続許可** の説明。次のいずれかになります。<br /><br /> ALL<br /><br /> 読み取り/ \_ 書き込み|  
-|**セカンダリ \_ ロールでの \_ 接続の許可 \_**|**tinyint**|セカンダリ ロールを実行している (つまりセカンダリ レプリカとして機能している) 可用性レプリカがクライアントからの接続を受け入れることができるかどうか。以下のいずれかです。<br /><br /> 0 = いいえ。 セカンダリ レプリカのデータベースに対する接続は許可されず、データベースに対して読み取りアクセスを実行できません。 これが既定の設定です。<br /><br /> 1 = 読み取り専用。 セカンダリ レプリカのデータベースに対しては読み取り専用接続だけが許可されます。 レプリカ内のすべてのデータベースは読み取りアクセスで利用できます。<br /><br /> 2 = すべて。 読み取り専用アクセスに限り、セカンダリ レプリカのデータベースに対するすべての接続が許可されます。<br /><br /> 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。|  
+|**セカンダリ \_ ロールでの \_ 接続の許可 \_**|**tinyint**|セカンダリ ロールを実行している (つまりセカンダリ レプリカとして機能している) 可用性レプリカがクライアントからの接続を受け入れることができるかどうか。以下のいずれかです。<br /><br /> 0 = いいえ。 セカンダリ レプリカのデータベースに対する接続は許可されず、データベースに対して読み取りアクセスを実行できません。 これは、既定の設定です。<br /><br /> 1 = 読み取り専用。 セカンダリ レプリカのデータベースに対しては読み取り専用接続だけが許可されます。 レプリカ内のすべてのデータベースは読み取りアクセスで利用できます。<br /><br /> 2 = すべて。 読み取り専用アクセスに限り、セカンダリ レプリカのデータベースに対するすべての接続が許可されます。<br /><br /> 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。|  
 |**secondary_role_allow_connections_desc**|**nvarchar(60)**|**Secondary_role_allow_connections** の説明。次のいずれかになります。<br /><br /> NO<br /><br /> READ_ONLY<br /><br /> ALL|  
 |**create_date**|**datetime**|レプリカが作成された日付。<br /><br /> NULL = このサーバーインスタンスにレプリカがありません。|  
 |**modify_date**|**datetime**|レプリカが最後に変更された日付。<br /><br /> NULL = このサーバーインスタンスにレプリカがありません。|  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 43158757be3b64cbd761e8fec8bc878dae4f68c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15dd9656a263640b598389de650b779704b8dc41
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423026"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078893"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>グローバル設定 (ダイアログ) (Sql server による)
 [ **グローバル設定** ] ダイアログボックスの [ダイアログ] ページを使用して、ssma の既定のユーザー操作と警告設定を指定します。  
@@ -24,9 +24,9 @@ ms.locfileid: "88423026"
   
 ## <a name="options"></a>オプション  
 **起動時に移行ウィザードを表示する**  
-SSMA for Access には、SSMA アプリケーションの起動時に **移行ウィザード** を有効または無効にするオプションがあります。 既定では、このオプションは **True**に設定されています。  
+SSMA for Access には、SSMA アプリケーションの起動時に **移行ウィザード** を有効または無効にするオプションがあります。 既定では、このオプションは **True** に設定されています。  
   
--   このオプションが **True**に設定されている場合、ssma for Access アプリケーションを開いたときに、移行ウィザードダイアログが最初に表示されます。  
+-   このオプションが **True** に設定されている場合、ssma for Access アプリケーションを開いたときに、移行ウィザードダイアログが最初に表示されます。  
   
 -   このオプションを [ **False**] に設定した場合、移行ウィザードは表示されず、必要に応じて [ **ファイル** ] メニューから手動でアクセスする必要があります。  
   
@@ -40,11 +40,11 @@ SSMA がオブジェクトを SQL Server に変換するときに、プロジェ
 -   [ **False**] を選択すると、既定のアクションを指定したときに、[ **既定のアクションを上書き** する] オプションが表示されます。  
   
 **オブジェクト上書きの既定の操作**  
-このオプションは、[**オブジェクトを上書きする前に警告**する] オプションで [ **False** ] を選択した場合に表示されます。  
+このオプションは、[**オブジェクトを上書きする前に警告** する] オプションで [ **False** ] を選択した場合に表示されます。  
   
 このオプションを使用して、既定のオブジェクトの上書き動作を指定します。  
   
 -   [ **True**] を選択すると、ssma は、同じ名前を持ち、変換するオブジェクトと同じターゲットスキーマ内にある、SQL Server プロジェクトメタデータ内のオブジェクトを自動的に上書きします。  
   
--   **False**を選択した場合、ssma は変換中にオブジェクトメタデータを上書きしません。  
+-   **False** を選択した場合、ssma は変換中にオブジェクトメタデータを上書きしません。  
   

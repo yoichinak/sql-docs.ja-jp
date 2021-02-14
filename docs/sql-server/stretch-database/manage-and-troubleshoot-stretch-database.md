@@ -14,12 +14,12 @@ ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: efe0b68c605c96423dae5206693ff733430aff63
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 346bc660bc1fa1fd9a6e75a91caa182ff25e6c53
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454334"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081090"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database の管理とトラブルシューティング
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -102,7 +102,7 @@ GO
  Stretch 対応テーブルに対するクエリは、既定ではローカルとリモートの両方のデータを返します。 すべてのユーザーによるすべてのクエリに対するクエリ スコープ、もしくは管理者による 1 つのクエリに対するクエリ スコープのみを変更することができます。  
    
  ### <a name="change-the-scope-of-queries-for-all-queries-by-all-users"></a>すべてのユーザーによるすべてのクエリのクエリ スコープの変更  
- すべてのユーザーによるすべてのクエリ スコープを変更するには、ストアド プロシージャ **sys.sp_rda_set_query_mode**を実行します。 スコープを縮小して、ローカル データだけをクエリするか、すべてのクエリを無効にするか、または既定の設定を復元することができます。 詳細については、「 [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)」を参照してください。  
+ すべてのユーザーによるすべてのクエリ スコープを変更するには、ストアド プロシージャ **sys.sp_rda_set_query_mode** を実行します。 スコープを縮小して、ローカル データだけをクエリするか、すべてのクエリを無効にするか、または既定の設定を復元することができます。 詳細については、「 [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)」を参照してください。  
    
  ### <a name="change-the-scope-of-queries-for-a-single-query-by-an-administrator"></a><a name="queryHints"></a>管理者による 1 つのクエリに対するクエリ スコープの変更  
  db_owner ロールのメンバーが 1 つのクエリ スコープを変更するためには、**WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = *value*)** クエリ ヒントを SELECT ステートメントに追加します。 REMOTE_DATA_ARCHIVE_OVERRIDE クエリ ヒントには次の値を指定できます。  

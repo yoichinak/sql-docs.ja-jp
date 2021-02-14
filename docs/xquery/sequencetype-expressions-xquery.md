@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 909d3cb49879a94c466e58f83997e32c468d9df8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0627d892733f84cb4a8d1b5cf80ad65d9c09f824
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643355"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335848"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 式 (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  XQuery では、値は常にシーケンスです。 値の型は、シーケンス型と呼ばれます。 このシーケンス型は、XQuery 式**のインスタンス**で使用できます。 XQuery 式で型を参照する必要があるときは、XQuery 仕様に記載されている SequenceType 構文を使用します。  
+  XQuery では、値は常にシーケンスです。 値の型は、シーケンス型と呼ばれます。 このシーケンス型は、XQuery 式 **のインスタンス** で使用できます。 XQuery 式で型を参照する必要があるときは、XQuery 仕様に記載されている SequenceType 構文を使用します。  
   
- アトミック型の名前は、 **cast としてキャスト式として**使用することもできます。 では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **のインスタンス**と、sequencetypes の XQuery 式**としてのキャスト**は部分的にサポートされています。  
+ アトミック型の名前は、 **cast としてキャスト式として** 使用することもできます。 では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **のインスタンス** と、sequencetypes の XQuery 式 **としてのキャスト** は部分的にサポートされています。  
   
 ## <a name="instance-of-operator"></a>演算子のインスタンス  
- **のインスタンス**演算子を使用すると、指定された式の値の動的な型または実行時の型を判断できます。 次に例を示します。  
+ **のインスタンス** 演算子を使用すると、指定された式の値の動的な型または実行時の型を判断できます。 次に例を示します。  
   
 ```  
   
@@ -44,14 +44,14 @@ Expression instance of SequenceType[Occurrence indicator]
   
  **?** オカレンスインジケーターが指定されていません `sequence of` 。型が指定されたと一致する場合にのみ True を返し、 `Expression` `Type` `Expression` シングルトンを返します。  
   
- **メモ**プラス記号 ( **+** ) とアスタリスク (**&#42;**) の出現インジケーターは、ではサポートされていません [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
+ **メモ** プラス記号 ( **+** ) とアスタリスク (**&#42;**) の出現インジケーターは、ではサポートされていません [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
- 次の例は、XQuery 演算子**のインスタンス**の使用方法を示しています。  
+ 次の例は、XQuery 演算子 **のインスタンス** の使用方法を示しています。  
   
 ### <a name="example-a"></a>例 A  
- 次の例では、 **xml**型の変数を作成し、その変数に対してクエリを指定します。 クエリ式では、 `instance of` 最初のオペランドによって返される値の動的な型が2番目のオペランドで指定された型と一致するかどうかを判断する演算子を指定します。  
+ 次の例では、 **xml** 型の変数を作成し、その変数に対してクエリを指定します。 クエリ式では、 `instance of` 最初のオペランドによって返される値の動的な型が2番目のオペランドで指定された型と一致するかどうかを判断する演算子を指定します。  
   
- 次のクエリは True を返します。125値は指定された型のインスタンス**xs: integer**です。  
+ 次のクエリは True を返します。125値は指定された型のインスタンス **xs: integer** です。  
   
 ```  
 declare @x xml  
@@ -145,7 +145,7 @@ where ProductModelID=19
   
 -   整数型や文字列型など、共用体型を使用して XML スキーマコレクションを作成します。  
   
--   XML スキーマコレクションを使用して、型指定された**xml**変数を宣言します。  
+-   XML スキーマコレクションを使用して、型指定された **xml** 変数を宣言します。  
   
 -   サンプル XML インスタンスを変数に割り当てます。  
   
@@ -189,7 +189,7 @@ go
 ```  
   
 ### <a name="example-d"></a>例 D  
- この例では、まず XML スキーマコレクションを作成し、それを使用して**xml**変数を入力します。 次に、型指定された**xml**変数を照会して、機能を説明し `instance of` ます。  
+ この例では、まず XML スキーマコレクションを作成し、それを使用して **xml** 変数を入力します。 次に、型指定された **xml** 変数を照会して、機能を説明し `instance of` ます。  
   
  次の XML スキーマコレクションは、単純型、myType、および `root` myType 型の要素 <> を定義します。  
   
@@ -210,7 +210,7 @@ xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">
 Go  
 ```  
   
- 次に、型指定された**xml**変数を作成してクエリを実行します。  
+ 次に、型指定された **xml** 変数を作成してクエリを実行します。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -235,9 +235,9 @@ go
 ### <a name="example-e"></a>例 E  
  次の例では、式で IDREFS 属性のいずれかの値を取得し、`instance of` を使用して値が IDREF 型かどうかを判断しています。 この例では、次の処理を実行します。  
   
--   <`Customer`> 要素に**orderlist** IDREFS 型属性があり、<`Order`> 要素に**OrderID** ID 型属性がある XML スキーマコレクションを作成します。  
+-   <`Customer`> 要素に **orderlist** IDREFS 型属性があり、<`Order`> 要素に **OrderID** ID 型属性がある XML スキーマコレクションを作成します。  
   
--   型指定された**xml**変数を作成し、その変数にサンプル xml インスタンスを割り当てます。  
+-   型指定された **xml** 変数を作成し、その変数にサンプル xml インスタンスを割り当てます。  
   
 -   変数に対してクエリを指定します。 クエリ式は、最初の <> の OrderList IDRERS 型属性から最初の注文 ID 値を取得し `Customer` ます。 取得される値は IDREF 型です。 したがって、は `instance of` True を返します。  
   
@@ -309,11 +309,11 @@ select @x.query(' declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項は次のとおりです。  
   
--   **スキーマ要素 ()** および**スキーマ属性 ()** のシーケンス型は、演算子との比較ではサポートされていません `instance of` 。  
+-   **スキーマ要素 ()** および **スキーマ属性 ()** のシーケンス型は、演算子との比較ではサポートされていません `instance of` 。  
   
 -   たとえば、完全なシーケンス `(1,2) instance of xs:integer*` はサポートされていません。  
   
--   などの型名を指定する**要素 ()** シーケンス型の形式を使用する場合、 `element(ElementName, TypeName)` 型は疑問符 (?) で修飾する必要があります。 たとえば、`element(Title, xs:string?)` は要素が NULL であることを示します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、を使用した**xsi: nil**プロパティの実行時検出はサポートされていません `instance of` 。  
+-   などの型名を指定する **要素 ()** シーケンス型の形式を使用する場合、 `element(ElementName, TypeName)` 型は疑問符 (?) で修飾する必要があります。 たとえば、`element(Title, xs:string?)` は要素が NULL であることを示します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、を使用した **xsi: nil** プロパティの実行時検出はサポートされていません `instance of` 。  
   
 -   `Expression` の値が共用体型として型指定された要素または属性の値である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、派生された型ではなく、値の型の派生元のプリミティブ型しか識別できません。 たとえば、 `e1` 静的な型 (xs: integer | xs: string) を持つように <> が定義されている場合、次のコードは False を返します。  
   
@@ -323,10 +323,10 @@ select @x.query(' declare namespace CustOrders="Customers";
   
      ただし、 `data(<e1>123</e1>) instance of xs:decimal` は True を返します。  
   
--   **処理命令 ()** と**ドキュメントノード ()** のシーケンス型では、引数のないフォームのみが許可されます。 たとえば、`processing-instruction()` は使用できますが、`processing-instruction('abc')` は使用できません。  
+-   **処理命令 ()** と **ドキュメントノード ()** のシーケンス型では、引数のないフォームのみが許可されます。 たとえば、`processing-instruction()` は使用できますが、`processing-instruction('abc')` は使用できません。  
   
 ## <a name="cast-as-operator"></a>cast as 演算子  
- **Cast as**式は、値を特定のデータ型に変換するために使用できます。 次に例を示します。  
+ **Cast as** 式は、値を特定のデータ型に変換するために使用できます。 次に例を示します。  
   
 ```  
   
@@ -352,7 +352,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- このクエリでは、**データ ()** を明示的に使用する必要はありません。 `cast as`式は、入力式に対して暗黙的なアトミック化を実行します。  
+ このクエリでは、 **データ ()** を明示的に使用する必要はありません。 `cast as`式は、入力式に対して暗黙的なアトミック化を実行します。  
   
 ### <a name="constructor-functions"></a>コンストラクター関数  
  Atomic 型コンストラクター関数を使用できます。 たとえば、演算子を使用する代わりに、 `cast as` `"2" cast as xs:integer?` 次の例に示すように、 **xs: integer ()** コンストラクター関数を使用できます。  
@@ -375,13 +375,13 @@ select @x.query('xs:date("2000-01-01Z")')
   
 #### <a name="implementation-limitations"></a>実装の制限事項  
   
--   XQuery 式の**タイプ**には、"スイッチ"、"**キャスト**" **、および "** 処理" はサポートされていません。  
+-   XQuery 式の **タイプ** には、"スイッチ"、" **キャスト**" **、および "** 処理" はサポートされていません。  
   
--   **キャスト**には疑問符 (?) が必要ですアトミック型の後。  
+-   **キャスト** には疑問符 (?) が必要ですアトミック型の後。  
   
--   **xs: QName**はキャストの型としてサポートされていません。 代わりに **、拡張 QName**を使用してください。  
+-   **xs: QName** はキャストの型としてサポートされていません。 代わりに **、拡張 QName** を使用してください。  
   
--   **xs: date**、 **xs: time**、および**xs: datetime**には、Z で示されるタイムゾーンが必要です。  
+-   **xs: date**、 **xs: time**、および **xs: datetime** には、Z で示されるタイムゾーンが必要です。  
   
      タイムゾーンが指定されていないため、次のクエリは失敗します。  
   
@@ -407,7 +407,7 @@ select @x.query('xs:date("2000-01-01Z")')
     <a>2002-05-25Z</a>  
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XQuery 式](../xquery/xquery-expressions.md)   
  [型システム &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   

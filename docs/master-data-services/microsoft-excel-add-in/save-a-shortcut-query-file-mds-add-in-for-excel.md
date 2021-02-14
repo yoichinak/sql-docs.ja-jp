@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b0ba147e5c784376f9bca1585bab99444c2d9378
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4014e6ad6306756c42022d5ac3db5fc4856e789e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257851"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340380"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>ショートカット クエリ ファイルの保存 (Excel 用 MDS アドイン)
 
@@ -24,7 +24,7 @@ ms.locfileid: "92257851"
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、同じデータ セットに頻繁にアクセスする必要がある場合に、ショートカット クエリ ファイルを保存します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   アクティブなワークシートに、必要な形式の MDS によって管理されるデータが含まれている必要があります。 たとえば、列が必要な順序で、任意のフィルターが適用された状態で表示されている必要があります。 詳細については、「[エクスポート前のデータのフィルター処理 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)」および「[列の出力順を変更する (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)」を参照してください。  
@@ -33,7 +33,7 @@ ms.locfileid: "92257851"
   
 1.  **[保存と送信]** グループで、 **[クエリの保存]** の下の矢印をクリックし、 **[クエリとして保存]** をクリックします。  
   
-2.  省略可能。 クエリの名前を変更するには、 **[クエリの保存]** の下の矢印をクリックし、 **[クエリの管理]** をクリックします。 クエリを選択し、 **[名前の変更]** をクリックします。  
+2.  任意。 クエリの名前を変更するには、 **[クエリの保存]** の下の矢印をクリックし、 **[クエリの管理]** をクリックします。 クエリを選択し、 **[名前の変更]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
   

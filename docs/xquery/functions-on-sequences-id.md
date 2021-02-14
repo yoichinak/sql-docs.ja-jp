@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c27ed4fad982831288f1e115f6da94bc70114c61
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: c6ae0aedd4971d6345811e6ee0bfff5afa395c15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037435"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344986"
 ---
 # <a name="functions-on-sequences---id"></a>シーケンスの関数 - id
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  *$Arg*で指定された1つ以上の XS: IDREF 値の値と一致する XS: ID 値を持つ要素ノードのシーケンスを返します。  
+  *$Arg* で指定された1つ以上の XS: IDREF 値の値と一致する XS: ID 値を持つ要素ノードのシーケンスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,12 +39,12 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  1つ以上の xs: IDREF 値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  関数の結果は、ドキュメント順に XML インスタンス内の要素のシーケンスであり、xs: ID 値が、候補 xs: IDREFs のリスト内の1つ以上の xs: IDREFs と同じになります。  
   
  xs:IDREF 値がどの要素とも一致しない場合は、空のシーケンスを返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. IDREF 属性値に基づいて要素を取得する  

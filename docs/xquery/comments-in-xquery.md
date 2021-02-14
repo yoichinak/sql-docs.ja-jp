@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67f2ad02eb9486508840f0b731b1d6e705d94f7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c6e7e6154ad3f91f0c45fb5a2bdfb090a810137
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726755"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345728"
 ---
 # <a name="comments-in-xquery"></a>XQuery のコメント
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ SELECT @x.query('
 ')  
 ```  
   
- **Xml**型の命令列に対してクエリを指定するもう1つの例を次に示します。  
+ **Xml** 型の命令列に対してクエリを指定するもう1つの例を次に示します。  
   
 ```  
 SELECT Instructions.query('  

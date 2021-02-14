@@ -21,12 +21,12 @@ ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d6278f03b3bb49c4083c90c0967b5ed6ac8907c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 87d26cf7e64e509f811b80b954984217430ef831
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190188"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100338867"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,9 +58,9 @@ ms.locfileid: "99190188"
 ## <a name="permissions"></a>アクセス許可 
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、 [サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) アカウントまたは [Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリマネージャーは、3層階層で構成されます。 階層の最下部には、メモリノードがあります。 中間レベルは、メモリクラーク、メモリキャッシュ、およびメモリプールで構成されます。 最上位の階層はメモリ オブジェクトから成ります。 これらのオブジェクトは、一般的に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでメモリを割り当てる場合に使用されます。  
   
  メモリノードは、低レベルのアロケーターのインターフェイスと実装を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部では、メモリ クラークのみがメモリ ノードにアクセスできます。 メモリクラークはメモリノードインターフェイスにアクセスしてメモリを割り当てます。 また、メモリノードは、診断の clerk を使用して割り当てられたメモリを追跡します。 大量のメモリを割り当てるすべてのコンポーネントは、独自のメモリクラークを作成し、clerk インターフェイスを使用してすべてのメモリを割り当てる必要があります。 通常、コンポーネントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に、それぞれに対応したクラークを作成します。  

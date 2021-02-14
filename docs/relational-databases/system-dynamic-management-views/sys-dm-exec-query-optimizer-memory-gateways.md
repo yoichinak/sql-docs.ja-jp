@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ff3adb52a968957faead5453e266ec733df38f4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 66e5d3e4509b8593a41a53348e466054ee01b4f4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198527"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342914"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-sql)
 
@@ -33,7 +33,7 @@ ms.locfileid: "99198527"
 
 同時クエリの最適化を調整するために使用されるリソースセマフォの現在の状態を返します。
 
-|Column|種類|説明|  
+|Column|種類|[説明]|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Resource Governor の下のリソースプール ID|  
 |**name**|**sysname**|コンパイルゲート名 (小規模ゲートウェイ、中規模ゲートウェイ、ビッグゲートウェイ)|
@@ -51,7 +51,7 @@ SQL Server には、サーバーに対する VIEW SERVER STATE 権限が必要�
 Azure SQL Database には、データベースに対する VIEW DATABASE STATE 権限が必要です。
 
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 SQL Server では、階層化されたゲートウェイアプローチを使用して、許可される同時コンパイルの数を調整します。  小規模、中、大など、3つのゲートウェイが使用されます。 ゲートウェイを使用すると、より大きなコンパイルメモリを必要とするコンシューマーによって、全体的なメモリリソースが枯渇するのを防ぐことができます。
 
 ゲートウェイの結果を遅延コンパイルで待機します。 調整された要求には、コンパイル時の遅延に加えて、RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類の累積が関連付けられます。 RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類は、クエリがコンパイルに大量のメモリを使用していて、メモリが不足していること、または、特定のゲートウェイで使用可能なユニットがいっぱいになっていることを示している場合があります。 **Sys.dm_exec_query_optimizer_memory_gateways** の出力を使用して、クエリ実行プランをコンパイルするためのメモリが不足しているシナリオのトラブルシューティングを行うことができます。  

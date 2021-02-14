@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 43dbf8c960e45ab0b9099951b7b03b331170ad53
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 18021d85c9b490664411b7bb98f1b55972a13022
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987758"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100082413"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server の単体テストでのテスト条件の使用
 
@@ -76,7 +76,7 @@ SQL Server の単体テスト メソッドに予期される例外を指定す�
 予期される例外と SQL Server のネガティブ単体テストの使用方法の例については、「[チュートリアル: SQL Server の単体テストの作成と実行](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)」をご覧ください。  
   
 ## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>データ チェックサムの指定  
-SQL Server 単体テスト デザイナーを表示するには、**ソリューション エクスプローラー**で単体テストのソース コード ファイルをダブルクリックします。  
+SQL Server 単体テスト デザイナーを表示するには、**ソリューション エクスプローラー** で単体テストのソース コード ファイルをダブルクリックします。  
   
 データベース単体テストにデータ チェックサム テスト条件を追加した後、次の手順に従って予期されるチェックサムを構成する必要があります。  
   

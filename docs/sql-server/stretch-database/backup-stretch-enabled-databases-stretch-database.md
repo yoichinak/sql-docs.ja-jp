@@ -12,12 +12,12 @@ ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 38ee204a715e691654e550f849ccf0216c715edc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b407e37ec4a6c3337bd5c5bc98018c73792396dd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423126"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081105"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースのバックアップ (Stretch Database)
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -50,7 +50,7 @@ Azure のデータベース バックアップは、地理冗長の Azure Storag
 ### <a name="stretch-database-reduces-the-risk-of-data-loss-for-your-azure-data-by-retaining-migrated-rows-temporarily"></a><a name="stretchRPO"></a>Stretch Database は、移行済みの行を一時的に保持することで、Azure データのデータ損失リスクを軽減
 Stretch Database は SQL Server から Azure に対象となる行を移行した後、これらの行をステージング テーブルに 8 時間以上保持します。 Azure データベースのバックアップを復元する場合、Stretch Database はステージング テーブルに保存されている行を使用して、SQL Server と Azure データベースを調整します。
 
-Azure データのバックアップを復元した後に、ストアド プロシージャ [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) を実行して、Stretch 対応の SQL Server データベースをリモートの Azure データベースに再接続する必要があります。 **sys.sp_rda_reauthorize_db**を実行すると、Stretch Database は SQL Server と Azure データベースを自動的に調整します。
+Azure データのバックアップを復元した後に、ストアド プロシージャ [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) を実行して、Stretch 対応の SQL Server データベースをリモートの Azure データベースに再接続する必要があります。 **sys.sp_rda_reauthorize_db** を実行すると、Stretch Database は SQL Server と Azure データベースを自動的に調整します。
 
 Stretch Database がステージング テーブルに移行したデータを一時的に保持する時間を増やすには、ストアド プロシージャ [sys.sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md) を実行し、8 より大きい値を時間に指定します。 保持するデータの量を決定するには、次の要因を検討します。
 -   Azure の自動バックアップの頻度 (少なくとも 8 時間ごと)。

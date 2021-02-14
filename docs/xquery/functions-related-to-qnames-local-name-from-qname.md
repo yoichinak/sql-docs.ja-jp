@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d19153bbfd3cf2483cf8dfa30358f752dd45290e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 97852b8479df926a933e34f5a8dddff7eb240e65
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036815"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345003"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>QNames に関係する関数 - local-name-from-QName
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-  *$Arg*によって指定された QName のローカル部分を表す XS: NCNAME を返します。 *$Arg*が空のシーケンスの場合、結果は空のシーケンスになります。  
+  *$Arg* によって指定された QName のローカル部分を表す XS: NCNAME を返します。 *$Arg* が空のシーケンスの場合、結果は空のシーケンスになります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +38,7 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  *$arg*  
  ローカル名部分を抽出する QName です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
  次の例では、 **ローカル名-qname ()** 関数を使用して、qname 型の値からローカル名と名前空間 URI の部分を取得します。 この例では、次の処理を実行します。  

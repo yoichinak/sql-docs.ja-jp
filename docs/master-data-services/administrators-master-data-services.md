@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e65024ac3673e6579e614ad64931ab772b599f3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: bfe03a31b5d8f35770f8ded41e4d8fdb86fb9d30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193665"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339667"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "92193665"
   この記事では、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の管理者の種類 (モデル管理者、エンティティ管理者、およびスーパー ユーザー) について説明します。  
   
 ## <a name="model-administrators"></a>モデル管理者  
- で [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は、モデル管理者は、[**モデルオブジェクト**] タブの最上位のモデルオブジェクトに割り当てられた**管理**者権限を持つユーザーです。ユーザーが特定のモデルに対する管理者権限を持っている場合、モデルの子オブジェクト (モデルオブジェクトとメンバーの両方の権限) に対する他の権限は、モデルの**管理者**権限によってより前者され、実質的に無視されます。  
+ で [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は、モデル管理者は、[**モデルオブジェクト**] タブの最上位のモデルオブジェクトに割り当てられた **管理** 者権限を持つユーザーです。ユーザーが特定のモデルに対する管理者権限を持っている場合、モデルの子オブジェクト (モデルオブジェクトとメンバーの両方の権限) に対する他の権限は、モデルの **管理者** 権限によってより前者され、実質的に無視されます。  
   
 -   ユーザーに **[エクスプローラー]** 機能領域へのアクセス権がある場合、ユーザーはこのデータ領域のすべてのマスター データを追加、削除、および更新できます。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "92193665"
   
 ## <a name="comparing-administrator-types"></a>管理者の種類の比較  
   
-|管理者の種類|説明|  
+|管理者の種類|[説明]|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] スーパー ユーザー|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] で割り当てられている権限は、管理者のアクセス権に影響を与えません。<br /><br /> 明示的に割り当てられている機能領域権限、またはグループから継承した権限に基づいてスーパー ユーザーになる場合があります。<br /><br /> すべてのモデルに対するあらゆる権限が自動的に付与されます。<br /><br /> すべての機能領域に対するアクセス権が自動的に付与されます。|  
 |モデル管理者|明示的に割り当てられている管理者権限、またはグループから継承した権限に基づいてモデル管理者になる場合があります。<br /><br /> アクセス権が付与された機能領域だけにアクセスできます。<br /><br /> 特定のモデルのすべてのオブジェクトおよびメンバーに対するあらゆる権限が自動的に付与されます。|  

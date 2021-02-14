@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c03a52c837d2f07e5a6027b181a2047a5f53add6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f4584f8b4cb4cd7c8117a33e2894ad3f6382335
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492178"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078733"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>グローバル設定 (テスター) (SybaseToSQL)
 [ **グローバル設定** ] ダイアログボックスの [テスト担当者] ページを使用して、Ssma tester の設定を指定します。  
@@ -63,6 +63,6 @@ ms.locfileid: "88492178"
   
 2.  いいえ  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テストケースの準備 &#40;SybaseToSQL&#41;を終了しています ](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   

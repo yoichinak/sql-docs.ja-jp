@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: e1a70d9b69306e4394bc726fd58a48923bb2a937
-ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
+ms.openlocfilehash: 942d0c84e697654e67d48ce708792eb8bcf770aa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98983675"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081483"
 ---
 # <a name="sqlpackage-export-parameters-and-properties"></a>SqlPackage Export のパラメーターとプロパティ
 SqlPackage.exe Export 操作によって、接続されているデータベースが BACPAC ファイル (.bacpac) にエクスポートされます。 既定では、すべてのテーブルのデータが .bacpac ファイルに含まれます。 必要に応じて、データをエクスポートする対象のテーブルの一部のみを指定できます。 Export 操作の検証によって、エクスポート対象にテーブルの一部を指定した場合でも、完全な対象データベースに対する Azure SQL Database の互換性が維持されます。 

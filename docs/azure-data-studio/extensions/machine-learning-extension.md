@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: 163f5efca97e99609cbdbaae8f713c4576cc4e0b
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 8eb7dd5f5a11c508af0d85e7559349c14e558adb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035978"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051953"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio の Machine Learning 拡張機能 (プレビュー)
 
@@ -68,7 +68,7 @@ Machine Learning 拡張機能の設定を変更するには、次の手順に従
 
 1. Azure Data Studio で拡張機能マネージャーを開きます。 拡張機能アイコンを選択するか、[表示] メニューの [拡張機能] を選択できます。
 
-1. **有効化された** 拡張機能の下で、 **Machine Learning** 拡張機能を見つけます。
+1. **有効化された** 拡張機能の下で、**Machine Learning** 拡張機能を見つけます。
 
 1. **[管理]** アイコンを選択します。
 
@@ -107,7 +107,7 @@ Azure Data Studio で Machine Learning 拡張機能を使用するには、次�
 
 1. 左側のメニューの **[全般]** の下で **[Machine Learning]** を選択します。
 
-Machine Learning 拡張機能を使用して、パッケージを管理し、予測を行い、データベースにモデルをインポートする方法については、 **次のステップ** の下のリンクを参照してください。
+Machine Learning 拡張機能を使用して、パッケージを管理し、予測を行い、データベースにモデルをインポートする方法については、**次のステップ** の下のリンクを参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

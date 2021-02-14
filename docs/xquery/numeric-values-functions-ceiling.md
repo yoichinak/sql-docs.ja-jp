@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ea2dbaab164c57acf9e9bc166ee431e80783648
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775492"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341578"
 ---
 # <a name="numeric-values-functions---ceiling"></a>数値関数 - ceiling 
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +40,19 @@ fn:ceiling ( $arg as numeric?) as numeric?
  関数が適用される番号。  
   
 ## <a name="remarks"></a>Remarks  
- *$Arg*の型が、 **xs: float**、 **xs: double**、または**xs: decimal**の3つの数値基本データ型のいずれかである場合、戻り値の型は *$arg*の型と同じになります。  
+ *$Arg* の型が、 **xs: float**、 **xs: double**、または **xs: decimal** の3つの数値基本データ型のいずれかである場合、戻り値の型は *$arg* の型と同じになります。  
   
- *$Arg*の型が数値型の1つから派生した型である場合、戻り値の型は基本数値型です。  
+ *$Arg* の型が数値型の1つから派生した型である場合、戻り値の型は基本数値型です。  
   
- Fn: floor、fn: シーリング、または fn: round 関数への入力が**xdt: untypedAtomic**の場合、これは暗黙的に**xs: double**にキャストされます。  
+ Fn: floor、fn: シーリング、または fn: round 関数への入力が **xdt: untypedAtomic** の場合、これは暗黙的に **xs: double** にキャストされます。  
   
  その他の型のデータが入力されると、静的エラーが生成されます。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+ このトピックでは、AdventureWorks データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>A: ceiling() XQuery 関数の使用  
- 製品モデル7の場合、このクエリは、製品モデルの製造プロセスにおけるワークセンターの場所の一覧を返します。 ドキュメントに記載されている場合、ワークセンターの場所ごとに、場所 ID、労働時間、および膨大なサイズが返されます。 このクエリでは、**天井**関数を使用して、 **decimal**型の値として労働時間を返します。  
+### <a name="a-using-the-ceiling-xquery-function"></a>A. ceiling() XQuery 関数の使用  
+ 製品モデル7の場合、このクエリは、製品モデルの製造プロセスにおけるワークセンターの場所の一覧を返します。 ドキュメントに記載されている場合、ワークセンターの場所ごとに、場所 ID、労働時間、および膨大なサイズが返されます。 このクエリでは、 **天井** 関数を使用して、 **decimal** 型の値として労働時間を返します。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -74,9 +74,9 @@ WHERE ProductModelID=7
   
 -   AWMI 名前空間プレフィックスは、Adventure Works の製造手順を表しています。 このプレフィックスは、クエリ対象のドキュメントで使用されているものと同じ名前空間を参照します。  
   
--   **命令**は**xml**型の列です。 したがって、 [query () メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md)を使用して XQuery を指定します。 XQuery ステートメントは、クエリメソッドの引数として指定されます。  
+-   **命令** は **xml** 型の列です。 したがって、 [query () メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md) を使用して XQuery を指定します。 XQuery ステートメントは、クエリメソッドの引数として指定されます。  
   
--   **...return**はループ構造です。 クエリでは、 **for**ループは要素のリストを識別し \<Location> ます。 各ワークセンターの場所では、 **for**ループの**return**ステートメントによって、生成される XML が記述されます。  
+-   **...return** はループ構造です。 クエリでは、 **for** ループは要素のリストを識別し \<Location> ます。 各ワークセンターの場所では、 **for** ループの **return** ステートメントによって、生成される XML が記述されます。  
   
     -   \<Location>LocationID 属性と LaborHrs 属性を持つ要素。 中かっこ ({}) 内の対応する式は、ドキュメントから必要な値を取得します。  
   
@@ -100,7 +100,7 @@ ProductModelID Result
   
 -   **切り上げ ()** 関数は、すべての整数値を xs: decimal にマップします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [floor 関数 &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
  [round 関数 &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   

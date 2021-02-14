@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e48fb5448284cc90a87aff88a9cf7a0304c661d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 62a59ec49dfccfba7c710baf9a80eae2c301a94b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87107221"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344960"
 ---
 # <a name="functions-on-string-values---upper-case"></a>文字列値に使用する関数 - upper-case
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  この関数は、 *$arg*内の各文字を、それと等価な大文字に変換します。 Unicode コードポイントの Microsoft Windows バイナリケース変換では、文字を大文字に変換する方法を指定します。 この標準は、Unicode 標準コードポイント標準のマッピングとは異なります。  
+  この関数は、 *$arg* 内の各文字を、それと等価な大文字に変換します。 Unicode コードポイントの Microsoft Windows バイナリケース変換では、文字を大文字に変換する方法を指定します。 この標準は、Unicode 標準コードポイント標準のマッピングとは異なります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,8 +41,8 @@ fn:upper-case($arg as xs:string?) as xs:string
 |-|-|
 |*$arg*|大文字に変換する文字列値。|  
   
-## <a name="remarks"></a>注釈  
- *$Arg*の値が空の場合は、長さ0の文字列が返されます。  
+## <a name="remarks"></a>Remarks  
+ *$Arg* の値が空の場合は、長さ0の文字列が返されます。  
   
 ## <a name="examples"></a>例  
   

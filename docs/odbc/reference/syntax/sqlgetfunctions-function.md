@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5ae807638c25b0e01129d1dfbdc6238fd3001f8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: edc7b7875e3ee3f7512ee19a62d68a50a1617436
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99201006"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081363"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 関数
 **互換性**  
  導入されたバージョン: ODBC 1.0 標準準拠: ISO 92  
   
- **要約**  
+ **まとめ**  
  **Sqlgetfunctions** は、ドライバーが特定の ODBC 関数をサポートしているかどうかに関する情報を返します。 この関数は、ドライバーマネージャーで実装されています。また、ドライバーで実装することもできます。 ドライバーが **Sqlgetfunctions** を実装している場合、ドライバーマネージャーはドライバーで関数を呼び出します。 それ以外の場合は、関数自体を実行します。  
   
 ## <a name="syntax"></a>構文  
@@ -81,7 +81,7 @@ SQLRETURN SQLGetFunctions(
 |HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
 |HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
   
-## <a name="comments"></a>説明  
+## <a name="comments"></a>コメント  
  **Sqlgetfunctions** は、 **sqlgetfunctions**、 **Sqlデータソース**、および **sqldrivers** がサポートされていることを常に返します。 これらの関数はドライバーマネージャーに実装されるため、これが行われます。 Unicode 関数が存在する場合、ドライバーマネージャーは対応する Unicode 関数に ANSI 関数をマップし、ANSI 関数が存在する場合は、対応する ANSI 関数に Unicode 関数をマップします。 アプリケーションで **Sqlgetfunctions** を使用する方法については、「 [インターフェイスの準拠レベル](../../../odbc/reference/develop-app/interface-conformance-levels.md)」を参照してください。  
   
  次に示すのは、ISO 92 標準準拠レベルに準拠している関数の *FunctionId* の有効な値の一覧です。  

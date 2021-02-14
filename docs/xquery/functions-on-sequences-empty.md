@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c522e0756ca846558acbf6ac1b96c7d4abeef57e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f9a09225562cbabe7ced75d80f26e37ee53d3e3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753567"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335838"
 ---
 # <a name="functions-on-sequences---empty"></a>シーケンスの関数 - empty
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  *$Arg*の値が空のシーケンスの場合に True を返します。 それ以外の場合、関数は False を返します。  
+  *$Arg* の値が空のシーケンスの場合に True を返します。 それ以外の場合、関数は False を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,10 +43,10 @@ fn:empty($arg as item()*) as xs:boolean
  **Fn: exists ()** 関数はサポートされていません。 代わりに、 **not ()** 関数を使用することもできます。  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+ このトピックでは、AdventureWorks データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A: Empty () XQuery 関数を使用して、属性が存在するかどうかを判断する  
- 製品モデル7の製造プロセスでは、このクエリは**Machinehours**属性を持たないすべてのワークセンターの場所を返します。  
+### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Empty () XQuery 関数を使用して、属性が存在するかどうかを判断する  
+ 製品モデル7の製造プロセスでは、このクエリは **Machinehours** 属性を持たないすべてのワークセンターの場所を返します。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -75,7 +75,7 @@ ProductModelID      Result
                <Location LocationID="60" LaborHrs="4"/>  
 ```  
   
- 次のように若干変更されたクエリでは、 **Machinehour**属性が存在しない場合に "NotFound" が返されます。  
+ 次のように若干変更されたクエリでは、 **Machinehour** 属性が存在しない場合に "NotFound" が返されます。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -111,7 +111,7 @@ ProductModelID Result
   <Location LocationID="60" LaborHrs="4" MachineHours="NotFound"/>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [exist&#40;&#41; メソッド &#40;xml データ型&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   

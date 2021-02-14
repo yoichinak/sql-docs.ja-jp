@@ -11,12 +11,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 52fb350d3dcf06cb215a723cb9c98402d44f0d21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4e080aeb3bb52a5b0562e63f4bda1a19fb9fe94
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320898"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078883"
 ---
 # <a name="creating-script-files-accesstosql"></a>スクリプトファイルの作成 (Sql server)
 SSMA コンソールアプリケーションを起動する前の最初の手順は、スクリプトファイルを作成し、必要に応じて変数値ファイルとサーバー接続ファイルを作成することです。  
@@ -122,7 +122,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     -   **続行-** コンソールが実行を続行します。  
   
-    既定のモードは **error**です。  
+    既定のモードは **error** です。  
   
     **例:**  
   
@@ -153,7 +153,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     -   生成-エラー: 接続がアクティブでない場合は、エラーが生成されます。  
   
-    既定のモードでは、 **エラー**が発生します。  
+    既定のモードでは、 **エラー** が発生します。  
   
     **例:**  
   
@@ -321,9 +321,9 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     次の2つのケースが発生します。  
   
-    1.  Override オプションが **false**の場合、検索の順序は "保護されたストレージ- &gt; スクリプトファイル- &gt; サーバー接続ファイル-プロンプトユーザー" になり &gt; ます。  
+    1.  Override オプションが **false** の場合、検索の順序は "保護されたストレージ- &gt; スクリプトファイル- &gt; サーバー接続ファイル-プロンプトユーザー" になり &gt; ます。  
   
-    2.  Override オプションが **true**の場合、検索の順序は、スクリプトファイル &gt; サーバー接続ファイルの &gt; プロンプトユーザーになります。  
+    2.  Override オプションが **true** の場合、検索の順序は、スクリプトファイル &gt; サーバー接続ファイルの &gt; プロンプトユーザーになります。  
   
     **例:**  
   
