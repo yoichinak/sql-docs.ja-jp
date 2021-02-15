@@ -9,12 +9,12 @@ ms.date: 01/13/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e10beb2ef41881312e4871021bb2595e52731262
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 75b3b483a9e7744bb35b50ff30649b3257e14285
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596601"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046189"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -200,6 +200,30 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>既知の問題
+
+### <a name="partial-loss-of-logs-collected-in-elasticsearch-upon-rollback"></a>Elasticsearch で収集されたログのロールバック時における部分的な損失
+
+- **影響を受けるリリース**: CU9 へのアップグレードが失敗した結果としてロールバックが行われるとき、またはユーザーが古いリリースへのダウングレードを実行したときの、既存のクラスター。
+
+- **問題およびユーザーへの影響**:Elastic Search に使用されるソフトウェアのバージョンは CU9 でアップグレードされましたが、新しいバージョンには以前のログ形式やメタデータとの下位互換性がありません。 Elasticsearch コンポーネントが正常にアップグレードされても、後でロールバックがトリガーされると、ElasticSearch のアップグレードからロールバックまでの間に収集されたログは完全に失われます。 古いバージョンの BDC へのダウングレードを実行した場合 (推奨されません)、Elasticsearch に格納されていたログは失われます。 ユーザーが CU9 にアップグレードして戻すと、データが復元されることにご注意ください。
+
+- **回避策**:必要な場合は、`azdata bdc debug copy-logs` コマンドを使用して収集されたログを使用して、トラブルシューティングを行うことができます。
+
+### <a name="missing-pods-and-container-metrics"></a>ポッドとコンテナーのメトリックが見つからない
+
+- **影響を受けるリリース**: CU9 にアップグレードしたときの、既存および新規のクラスター
+
+- **問題およびユーザーへの影響**:BDC 監視コンポーネントに使用されている Telegraf のバージョンが CU9 でアップグレードされた結果、クラスターを CU9 リリースにアップグレードすると、ポッドとコンテナーのメトリックが収集されなくなります。 これは、ソフトウェアのアップグレードの結果として、Telegraf に使用されるクラスター ロールの定義に追加のリソースが必要になるためです。 クラスターをデプロイする、またはアップグレードを実行するユーザーに、十分なアクセス許可がない場合、デプロイまたはアップグレードは警告を伴って続行されて成功しますが、ポッドとノードのメトリックは収集されなくなります。
+
+- **回避策**:(デプロイやアップグレードの前または後に) ロールとそれに対応するサービス アカウントの作成または更新を管理者に依頼します。そうすると、BDC でそれらが使用されるようになります。 [この記事](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)では、必要な成果物の作成方法について説明しています。
+
+### <a name="issuing-azdata-bdc-copy-logs-does-not-result-in-logs-being-copied"></a>`azdata bdc copy-logs` を実行しても、ログがコピーされない
+
+- **影響を受けるリリース**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] バージョン *20.0.0*
+
+- **問題およびユーザーへの影響**:*copy-logs* コマンドの実装では、コマンドが実行されるクライアント コンピューターに `kubectl` クライアント ツールのバージョン 1.15 以降がインストールされていることが想定されています。 `kubectl` バージョン 1.14 が使用されている場合、*azdata bdc debug copy-logs* コマンドは失敗せずに完了しますが、ログはコピーされません。 *--debug* フラグを指定して実行すると、"*ソース '.' が無効である*" というエラーが出力に表示されます。
+
+- **回避策**:同じクライアント コンピューターに `kubectl` ツールのバージョン 1.15 以降をインストールし、`azdata bdc copy-logs` コマンドを再実行します。 `kubectl` のインストール方法については、[こちら](deploy-big-data-tools.md)の手順を参照してください。
 
 ### <a name="msdtc-capabilities-can-not-be-enabled-for-sql-server-master-instance-running-within-bdc"></a>BDC 内で実行されている SQL Server マスター インスタンスに対して MSDTC 機能を有効にすることはできません
 

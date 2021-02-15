@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/4/2020
-ms.openlocfilehash: cffeb28f69fe93bb69cfdafd0afa98ef663e6ef8
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: ffd92afe2a5e57b4c039ead2dd5fee6e2a23be0a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577906"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060927"
 ---
 # <a name="sqlpackage-script-parameters-and-properties"></a>SqlPackage スクリプト パラメーターとプロパティ
 SqlPackage.exe のスクリプト操作では、ソース データベースのスキーマに合わせてターゲット データベースのスキーマを更新する、Transact-SQL の増分更新スクリプトを作成します。 
@@ -77,7 +77,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|互換性がない SQL Server プラットフォームであっても操作を試行するかどうかを指定します。
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|このプロパティが true に設定されている場合は、行レベル セキュリティを使用するテーブルに対するデータ モーションをブロックしません。 既定値は false です。
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|変更を配置する前にデータベースをバックアップします。
-|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')|公開操作によるデータ損失の可能性がある場合に、公開を終了するかどうかを指定します。
+|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| データの精度の低下やキャスト操作を必要とするデータ型の変更などによるスキーマの変更によって、データが失われるおそれがある場合は、スキーマ検証ステップ中に操作を終了することを指定します。 既定値 (`True`) を指定すると、ターゲット データベースにデータが含まれているかどうかに関係なく、操作が終了します。  ターゲットに新しい列の型に変換できないデータが存在する場合、BlockOnPossibleDataLoss に `False` 値を指定して実行すると、配置計画の実行中に失敗するおそれがあります。 |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|スキーマがその登録と一致しないか、スキーマが登録されていないデータベースの更新をブロックするかどうかを指定します。
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|生成する公開スクリプトで SETVAR 変数の宣言をコメント アウトするかどうかを指定します。 このようなコメント アウトが必要になるのは、SQLCMD.EXE などのツールを使用して、公開時にコマンド ラインで値を指定する予定がある場合などです。

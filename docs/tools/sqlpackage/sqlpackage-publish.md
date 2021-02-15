@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: e2c163114485bb9449779d076aad6de68c295bfa
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 84fdd99b00de38b88b1a21963c4565e5c3b27ea7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577913"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081453"
 ---
 # <a name="sqlpackage-publish-parameters-properties-and-sqlcmd-variables"></a>SqlPackage Publish のパラメーター、プロパティ、SQLCMD 変数
 SqlPackage.exe の公開操作では、ソース データベースの構造に合わせて、ターゲット データベースのスキーマの増分更新を行います。 すべてまたは一部のテーブルのユーザー データを含む配置パッケージを公開すると、スキーマに加え、テーブル データが更新されます。 データの配置により、ターゲット データベースの既存のテーブル内のスキーマとデータが上書きされます。 データの配置では、配置パッケージに含まれていないテーブルについて、ターゲット データベース内の既存のスキーマまたはデータは変更されません。  
@@ -82,7 +82,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|互換性がない SQL Server プラットフォームであっても操作を試行するかどうかを指定します。|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|このプロパティが true に設定されている場合は、行レベル セキュリティを使用するテーブルに対するデータ モーションをブロックしません。 既定値は false です。|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|変更を配置する前にデータベースをバックアップします。|
-|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')|公開操作によるデータ損失の可能性がある場合に、公開を終了するかどうかを指定します。|
+|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| データの精度の低下やキャスト操作を必要とするデータ型の変更などによるスキーマの変更によって、データが失われるおそれがある場合は、スキーマ検証ステップ中に操作を終了することを指定します。 既定値 (`True`) を指定すると、ターゲット データベースにデータが含まれているかどうかに関係なく、操作が終了します。  ターゲットに新しい列の型に変換できないデータが存在する場合、BlockOnPossibleDataLoss に `False` 値を指定して実行すると、配置計画の実行中に失敗するおそれがあります。 |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|スキーマがその登録と一致しないか、スキーマが登録されていないデータベースの更新をブロックするかどうかを指定します。|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|生成する公開スクリプトで SETVAR 変数の宣言をコメント アウトするかどうかを指定します。 このようなコメント アウトが必要になるのは、SQLCMD.EXE などのツールを使用して、公開時にコマンド ラインで値を指定する予定がある場合などです。|

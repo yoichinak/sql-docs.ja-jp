@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: 2e2e76c436c02f2cbc5878228f1be2d57248816c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3cc965ffd169d53e59706ca4ba68f2bcdddb5aa9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123456"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052122"
 ---
 # <a name="extend-the-functionality-of-azure-data-studio"></a>Azure Data Studio の機能の拡張
 
@@ -34,7 +34,7 @@ Azure Data Studio の拡張機能により、Azure Data Studio の基本イン�
 
     ![拡張機能の詳細](media/add-extensions/extension-details.png)
 
-3. 必要な拡張機能を選択して**インストール**します。
+3. 必要な拡張機能を選択して **インストール** します。
 
 4. インストール後、 **[再度読み込む]** をクリックすると、Azure Data Studio で拡張機能が有効になります (初めて拡張機能をインストールするときにのみ必須)。
 
@@ -58,7 +58,7 @@ Azure Data Studio での拡張機能マネージャーへのアクセスに問�
 
 ### <a name="enable-an-extension"></a>拡張機能を有効にする
 
-拡張機能が無効になっている場合は、拡張機能リストの **[無効]** セクションに表示され、***[無効]*** としてマークされます。 それを再度有効にするには、ドロップダウン メニューの **[有効にする]** または **[有効にする (ワークスペース)]** コマンドを使用します。 **コマンド パレット** では、すべての拡張機能を有効にすることもできます。そのためには、 **[拡張機能: すべての拡張機能を有効にする]** および **[拡張機能: すべての拡張機能を有効にする (ワークスペース)]** を使用します。
+拡張機能が無効になっている場合は、拡張機能リストの **[無効]** セクションに表示され、**_[無効]_ *としてマークされます。それを再度有効にするには、ドロップダウン メニューの _* [有効にする]** または **[有効にする (ワークスペース)]** コマンドを使用します。 **コマンド パレット** では、すべての拡張機能を有効にすることもできます。そのためには、 **[拡張機能: すべての拡張機能を有効にする]** および **[拡張機能: すべての拡張機能を有効にする (ワークスペース)]** を使用します。
 
 ![拡張機能の有効化](media/add-extensions/extensions-enable.png)
 

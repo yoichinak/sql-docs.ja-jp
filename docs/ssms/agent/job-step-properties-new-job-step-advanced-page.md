@@ -1,25 +1,24 @@
 ---
-description: '[ジョブ ステップのプロパティ]/[新しいジョブ ステップ] ([詳細設定] ページ)'
 title: 新しいジョブ ステップのプロパティ ([詳細設定] ページ)
+description: '[ジョブ ステップのプロパティ]/[新しいジョブ ステップ] ([詳細設定] ページ)'
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.stepadvanced.f1
-ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016
-ms.openlocfilehash: d4987186486dc6164f9827f03aec8e30e10d40eb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2120c2f5d86c4d8ad4c549f95ba8090574506015
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97408869"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978847"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>[ジョブ ステップのプロパティ]/[新しいジョブ ステップ] ([詳細設定] ページ)
 
@@ -28,20 +27,20 @@ ms.locfileid: "97408869"
 > [!IMPORTANT]  
 > 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
-このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップのプロパティを表示したり、変更したりできます。  
+このページを使用すると、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップのプロパティを表示したり、変更したりできます。  
   
 ## <a name="options"></a>オプション  
 **[成功した場合のアクション]**  
-ジョブ ステップが成功した場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。  
+ジョブ ステップが成功した場合に [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。  
   
 **再試行**  
-失敗したジョブ ステップを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで再試行する回数を設定します。  
+失敗したジョブ ステップを [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] エージェントで再試行する回数を設定します。  
   
 **[再試行間隔 (分)]**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが再試行する間隔を設定します。  
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] エージェントが再試行する間隔を設定します。  
   
 **[失敗した場合のアクション]**  
-ジョブ ステップが失敗した場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。  
+ジョブ ステップが失敗した場合に [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL ジョブ ステップのオプション  
 **[出力ファイル]**  
@@ -51,7 +50,7 @@ ms.locfileid: "97408869"
 ジョブ ステップからの出力に使用するファイルを参照します。  
   
 **表示**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
 **[既存のファイルに出力を追加する]**  
 ファイルの既存の内容に出力を追加します。 このオプションを指定しなければ、ジョブ ステップが実行されるたびに前のファイルの内容が上書きされます。  
@@ -60,7 +59,7 @@ ms.locfileid: "97408869"
 **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
 **表示**  
-ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
+ジョブ ステップを 1 回以上実行した後で **[表示]** を選択すると、出力がテーブルに表示されます。  
   
 **[テーブル内の既存のエントリに出力を追加する]**  
 テーブルの既存の内容に出力を追加します。 このオプションを指定しなければ、ジョブ ステップが実行されるたびに前のテーブルの内容が上書きされます。  
@@ -69,7 +68,7 @@ ms.locfileid: "97408869"
 このオプションを選択すると、ジョブ ステップの出力がジョブ履歴に含められます。  
   
 **[実行時のユーザー]**  
-**sysadmin** 固定サーバー ロールのメンバーであれば、別の SQL ログインを選択してこのジョブ ステップを実行できます。  
+**sysadmin** 固定サーバー ロールのメンバーの場合は、別の SQL ログインを選択してこのジョブ ステップを実行できます。  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>オペレーティング システム (CmdExec) ジョブ ステップのオプション  
 **[出力ファイル]**  
@@ -79,7 +78,7 @@ ms.locfileid: "97408869"
 ジョブ ステップからの出力に使用するファイルを参照します。  
   
 **表示**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
 **[既存のファイルに出力を追加する]**  
 ジョブ ステップを実行するたびに、その出力を前のファイルの内容に追加します。  
@@ -88,7 +87,7 @@ ms.locfileid: "97408869"
 **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
 **表示**  
-ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
+ジョブ ステップを 1 回以上実行した後で **[表示]** を選択すると、出力がテーブルに表示されます。  
   
 **[テーブル内の既存のエントリに出力を追加する]**  
 テーブルの既存の内容に出力を追加します。 このオプションを指定しなければ、ジョブ ステップが実行されるたびに前のテーブルの内容が上書きされます。  
@@ -104,7 +103,7 @@ ms.locfileid: "97408869"
 ジョブ ステップからの出力に使用するファイルを参照します。  
   
 **表示**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
 **[既存のファイルに出力を追加する]**  
 ジョブ ステップを実行するたびに、その出力を前のファイルの内容に追加します。  
@@ -113,7 +112,7 @@ ms.locfileid: "97408869"
 **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
 **表示**  
-ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
+ジョブ ステップを 1 回以上実行した後で **[表示]** を選択すると、出力がテーブルに表示されます。  
   
 **[テーブル内の既存のエントリに出力を追加する]**  
 テーブルの既存の内容に出力を追加します。 このオプションを指定しなければ、ジョブ ステップが実行されるたびに前のテーブルの内容が上書きされます。  
@@ -136,7 +135,7 @@ ms.locfileid: "97408869"
 ジョブ ステップからの出力に使用するファイルを参照します。  
   
 **表示**  
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
 **[既存のファイルに出力を追加する]**  
 ファイルの既存の内容に出力を追加します。 このオプションを指定しなければ、ジョブ ステップが実行されるたびに前のファイルの内容が上書きされます。  
@@ -145,7 +144,7 @@ ms.locfileid: "97408869"
 **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
 **表示**  
-ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
+ジョブ ステップを 1 回以上実行した後で **[表示]** を選択すると、出力がテーブルに表示されます。  
   
 **[テーブル内の既存のエントリに出力を追加する]**  
 テーブルの既存の内容に出力を追加します。 このオプションを指定しなければ、ジョブ ステップが実行されるたびに前のテーブルの内容が上書きされます。  
@@ -153,5 +152,6 @@ ms.locfileid: "97408869"
 **[履歴にステップ出力を含める]**  
 このオプションを選択すると、ジョブ ステップの出力がジョブ履歴に含められます。  
   
-## <a name="see-also"></a>参照  
-[ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)  
+## <a name="see-also"></a>参照
+
+- [ジョブ ステップの管理](manage-job-steps.md)

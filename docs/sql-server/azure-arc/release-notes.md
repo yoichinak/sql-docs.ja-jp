@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 12/08/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 372f4bec9acc4d4e170ddbc1a1fa6d66be1541e7
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: f53731685f5ba1723ebdd8d20064342808205566
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596556"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070307"
 ---
 # <a name="release-notes---azure-arc-enabled-sql-server-preview"></a>リリース ノート ‐ Azure Arc 対応 SQL Server (プレビュー)
 
@@ -42,7 +42,7 @@ ms.locfileid: "98596556"
 
 > [!NOTE]
 > - シェルにコマンドを貼り付けるには、Windows の場合は `Ctrl-Shift-V` を、MacOS の場合は `Cmd-v` を使用します。
-> - このスクリプトは、Cloud Shell セッションに関連付けられているホーム フォルダーに直接アップロードされます。
+> - `curl` コマンドを使用すると、スクリプトが Cloud Shell セッションに関連付けられているホーム フォルダーに直接コピーされます。
 > - 移行が完了すると、スクリプトによってリソース グループ名の入力が求められ、メッセージが出力されます。
 
 ### <a name="other-changes"></a>その他の変更点
