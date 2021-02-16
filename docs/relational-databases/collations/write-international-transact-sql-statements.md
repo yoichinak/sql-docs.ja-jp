@@ -19,18 +19,18 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 942e69f127b37fa6caf4ba83605fabdf4a31da38
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8872cf6e593279a282c34868a2f019ac82e5bf01
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97408227"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100339497"
 ---
 # <a name="write-international-transact-sql-statements"></a>国際化に対応した Transact-SQL ステートメントの記述
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   以下のガイドラインに従うと、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するデータベースやデータベース アプリケーションをある言語から別の言語に移行することが容易になり、複数の言語をサポートできます。  
 
--   [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、次のいずれかを使用します。
+-   [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、次のいずれかを使用します。
     -   **char**、**varchar**、**varchar(max)** の各データ型では [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 対応の照合順序が使用され、データは UTF-8 を使用してエンコードされます。
     -   **nchar**、**nvarchar**、**nvarchar(max)** の各データ型では [補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 対応の照合順序が使用され、データは UTF-16 を使用してエンコードされます。 SC 以外の照合順序を使用すると、データは UCS-2 を使用してエンコードされます。      
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fb78185693d455428de22021d133a63eb13c543
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8a30c9fe99378aa06ebf9bfc69dca24ab09028a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431014"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352101"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>[データ プロファイル タスク エディター] ([全般] ページ)
 
@@ -68,10 +68,10 @@ ms.locfileid: "88431014"
 -   **[DestinationType]** オプションが **[Variable]** に設定されている場合、 **[Destination]** オプションでは使用可能なパッケージ変数が **[Destination]** の一覧に表示されます。 これらの変数のいずれかを選択するか、[\<New Variable>] を選択して新しい変数を作成します。  
   
  **[OverwriteDestination]**  
- 出力ファイルが既に存在する場合に、その出力ファイルを上書きするかどうかを指定します。 既定値は **False**です。 このプロパティの値は、[DestinationType] オプションが [FileConnection] に設定されている場合にのみ使用されます。 [DestinationType] オプションが [Variable] に設定されている場合は、変数の以前の値が常に上書きされます。  
+ 出力ファイルが既に存在する場合に、その出力ファイルを上書きするかどうかを指定します。 既定値は **False** です。 このプロパティの値は、[DestinationType] オプションが [FileConnection] に設定されている場合にのみ使用されます。 [DestinationType] オプションが [Variable] に設定されている場合は、変数の以前の値が常に上書きされます。  
   
 > [!IMPORTANT]  
->  出力ファイル名を変更せずに、または **OverwriteDestination** プロパティの値を **True**に変更せずに、データ プロファイル タスクを 2 回以上実行すると、出力ファイルが既に存在するというメッセージが表示され、タスクは失敗します。  
+>  出力ファイル名を変更せずに、または **OverwriteDestination** プロパティの値を **True** に変更せずに、データ プロファイル タスクを 2 回以上実行すると、出力ファイルが既に存在するというメッセージが表示され、タスクは失敗します。  
   
 ## <a name="other-options"></a>その他のオプション  
  **[クイック プロファイル]**  

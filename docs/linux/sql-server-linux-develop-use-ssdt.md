@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: dd4de5567d2bafd21b321dc388068b6ee6c24ed5
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: a7add65dbc62679a6a1183c7a3f6998de7a18cb6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523927"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100273093"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して SQL Server on Linux 用のデータベースを作成する
 
@@ -55,7 +55,7 @@ SQL Server on Linux は、SSDT バージョン 17.0 RC 以降でサポートさ�
 
    <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="Screenshot of the Solutions section with the New option and SQL Server option called out." style="width: 480px;"/>
 
-6. [名前] に「 **TutorialDB** 」と入力し、 **[OK]** をクリックして新しいデータベース プロジェクトを作成します。
+6. [名前] に「**TutorialDB**」と入力し、 **[OK]** をクリックして新しいデータベース プロジェクトを作成します。
 
 ## <a name="create-a-new-table-in-the-database-project"></a>データベース プロジェクト内に新しいテーブルを作成する
 

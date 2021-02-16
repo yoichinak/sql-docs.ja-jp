@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 639e88a96ac639d20a6190bffeed75d46495aa51
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 272bc33012e37c58f6a3f8ea0ed51f1c216d716f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785068"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346273"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>SQL Server の RHEL フェールオーバー クラスター インスタンス (FCI) を運用する
 
@@ -41,10 +41,10 @@ ms.locfileid: "91785068"
 
 ## <a name="failover-cluster-manually"></a><a name = "failManual"></a>クラスターを手動でフェールオーバーする
 
-`resource move` コマンドでは、ターゲット ノードでリソースを強制的に開始する制約が作成されます。  `move` コマンドを実行した後、リソースの `clear` を実行すると制約が削除されるため、リソースを再び移動したり、リソースを自動的にフェールオーバーしたりできるようになります。 
+`resource move` コマンドでは、ターゲット ノードでリソースを強制的に開始する制約が作成されます。    `move` コマンドを実行した後、リソースの `clear` を実行すると制約が削除されるため、リソースを再び移動したり、リソースを自動的にフェールオーバーしたりできるようになります。 
 
 ```bash
-sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
@@ -60,7 +60,7 @@ sudo pcs resource clear mssqlha
 クラスターの現在の状態を表示します。
 
 ```bash
-sudo pcs status  
+sudo pcs status  
 ```
 
 クラスターとリソースのライブ状態を表示します。
@@ -183,7 +183,7 @@ sudo crm_mon
     次の例では、**vm3** という名前のノードがクラスターに追加されます。
 
     ```bash
-    sudo pcs    cluster auth  
+    sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
@@ -192,7 +192,7 @@ sudo crm_mon
 クラスターからノードを削除するには、次のコマンドを実行します。
 
 ```bash
-sudo pcs    cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>sqlservr リソースの監視間隔の頻度を変更する
@@ -226,7 +226,7 @@ Pacemaker での正常なクォーラムの出力の例を次に示します。
 
 ```
 Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
 Stack: corosync 
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
 3 nodes and 1 resource configured 

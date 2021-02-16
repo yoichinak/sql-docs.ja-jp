@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5587622f0f61b7b7063b246d0599d46cc8c16f0c
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c05da95541e728d981745d43f4da864c2e8b07a8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170784"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343549"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 可用性グループ用に分散トランザクションを構成する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] は、可用性グループのデータベースを含むすべての分散トランザクションをサポートします。 この記事では、分散トランザクションの可用性グループを構成する方法について説明します。  
+[!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] は、可用性グループのデータベースを含むすべての分散トランザクションをサポートします。 この記事では、分散トランザクションの可用性グループを構成する方法について説明します。  
 
 分散トランザクションを保証するには、分散トランザクション リソース マネージャーとしてデータベースを登録するように、可用性グループを構成する必要があります。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 より前のバージョンでは、可用性グループ内のデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] にはこのような制限はありません。 
+>[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 より前のバージョンでは、可用性グループ内のデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] にはこのような制限はありません。 
 >
->[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] での構成手順は [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] の場合と同じです。
+>[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] での構成手順は [!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] の場合と同じです。
 
 分散トランザクションでは、クライアント アプリケーションは Microsoft 分散トランザクション コーディネーター (MS DTC または DTC) と連携して、複数のデータ ソース間でトランザクションの整合性を保証します。 DTC は、サポートされている Windows Server ベースのオペレーティング システムで使用可能なサービスです。 分散トランザクションの場合は、DTC が "*トランザクション コーディネーター*" です。 通常は、SQL Server インスタンスが "*リソース マネージャー*" です。 データベースが可用性グループ内にある場合、各データベースがそれ自体のリソース マネージャーである必要があります。 
 
@@ -81,7 +81,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ## <a name="alter-an-availability-group-for-distributed-transactions"></a>分散トランザクション対応に可用性グループを変更する
 
-[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 以降では、分散トランザクション対応に可用性グループを変更できます。 分散トランザクション対応に可用性グループを変更するには、`ALTER AVAILABILITY GROUP` スクリプトに `DTC_SUPPORT = PER_DB` を追加します。 分散トランザクションをサポートするように可用性グループを変更するスクリプトの例を次に示します。 
+[!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] 以降では、分散トランザクション対応に可用性グループを変更できます。 分散トランザクション対応に可用性グループを変更するには、`ALTER AVAILABILITY GROUP` スクリプトに `DTC_SUPPORT = PER_DB` を追加します。 分散トランザクションをサポートするように可用性グループを変更するスクリプトの例を次に示します。 
 
 ```sql
 ALTER AVAILABILITY GROUP MyaAG
@@ -106,7 +106,7 @@ ALTER AVAILABILITY GROUP MyaAG
 
 分散トランザクションとは、2 つ以上のデータベースにまたがるトランザクションです。 トランザクション マネージャーとしての DTC は、SQL Server インスタンス間、および他のデータ ソース間でトランザクションを調整します。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] データベース エンジンの各インスタンスは、リソース マネージャーとして動作できます。 可用性グループが `DTC_SUPPORT = PER_DB` で構成されていると、データベースはリソース マネージャーとして動作できます。 詳細については、MS DTC のドキュメントを参照してください。
 
-データベース エンジンの 1 つのインスタンスに複数のデータベースが含まれるトランザクションは、実際には分散トランザクションです。 ただし、SQL Server インスタンスは分散トランザクションを内部で処理するため、ユーザーにはローカル トランザクションとして動作しているように見えます。 データベースが `DTC_SUPPORT = PER_DB` で構成された可用性グループ内にある場合は、たとえ SQL Server の 1 つのインスタンス内に存在する場合であっても、[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] はすべてのクロスデータベース トランザクションを DTC に送ります。 
+データベース エンジンの 1 つのインスタンスに複数のデータベースが含まれるトランザクションは、実際には分散トランザクションです。 ただし、SQL Server インスタンスは分散トランザクションを内部で処理するため、ユーザーにはローカル トランザクションとして動作しているように見えます。 データベースが `DTC_SUPPORT = PER_DB` で構成された可用性グループ内にある場合は、たとえ SQL Server の 1 つのインスタンス内に存在する場合であっても、[!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] はすべてのクロスデータベース トランザクションを DTC に送ります。 
 
 アプリケーションでは、分散トランザクションはローカル トランザクションとほぼ同様に管理されます。 トランザクションの終了時に、アプリケーションがトランザクションのコミットまたはロールバックを要求します。 ただし、トランザクション マネージャーが分散コミットを別の方法で管理することによって、ネットワーク障害により一部のリソース マネージャーがトランザクションを正常にコミットし、その一方で他のリソース マネージャーがトランザクションをロールバックするという危険性を最小限に抑える必要があります。 これは、コミット処理を準備フェーズとコミット フェーズの 2 フェーズで管理することによって実現されます。これを 2 フェーズ コミットと呼びます。
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cee8ccf62e9ec8a6497d3515e85b7aeff8f0b479
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ac0f913188b23b85548f87a4f458d1c2b754d15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457150"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347454"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
 
@@ -148,7 +148,7 @@ ms.locfileid: "88457150"
  このようなあいまいさを回避するには、新しいパッケージの名前と GUID を更新する必要があります。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [プロパティ] ウィンドウで、 **ID** プロパティの GUID を再生成し、 **Name** プロパティの値を更新できます。 プログラムから、または **dtutil** コマンド プロンプトを使用して、GUID と名前を変更することもできます。 詳細については、「 [パッケージのプロパティを設定する](../../integration-services/set-package-properties.md) 」と「 [dtutil ユーティリティ](../../integration-services/dtutil-utility.md)」を参照してください。  
   
 ### <a name="parent-logging-options"></a>親のログ オプション  
- 一般的に、タスク、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナーのログ オプションは、それらが含まれているパッケージや親コンテナーのログ オプションと同じです。 この場合、親コンテナーからログ オプションを継承するように設定できます。 たとえば、SQL 実行タスクが含まれている For ループ コンテナーがある場合、SQL 実行タスクでは For ループ コンテナーに設定されたログ オプションを使用できます。 親のログ オプションを使用するには、コンテナーの LoggingMode プロパティを **UseParentSetting**に設定します。 このプロパティは、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ウィンドウ、または **デザイナーの** [SSIS ログの構成] [!INCLUDE[ssIS](../../includes/ssis-md.md)] ダイアログ ボックスで設定できます。  
+ 一般的に、タスク、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナーのログ オプションは、それらが含まれているパッケージや親コンテナーのログ オプションと同じです。 この場合、親コンテナーからログ オプションを継承するように設定できます。 たとえば、SQL 実行タスクが含まれている For ループ コンテナーがある場合、SQL 実行タスクでは For ループ コンテナーに設定されたログ オプションを使用できます。 親のログ オプションを使用するには、コンテナーの LoggingMode プロパティを **UseParentSetting** に設定します。 このプロパティは、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ウィンドウ、または **デザイナーの** [SSIS ログの構成] [!INCLUDE[ssIS](../../includes/ssis-md.md)] ダイアログ ボックスで設定できます。  
   
 ### <a name="logging-templates"></a>ログのテンプレート  
  **[SSIS ログの構成]** ダイアログ ボックスでは、頻繁に使用するログ構成をテンプレートとして作成および保存して、複数のパッケージでそのテンプレート使用できます。 これにより、複数のパッケージで一貫したログ記録の方法を簡単に使用でき、テンプレートを更新して適用することによって簡単にパッケージのログ設定を修正できます。 テンプレートは XML ファイルとして格納されます。  
@@ -423,7 +423,7 @@ ms.locfileid: "88457150"
  必要な統計情報とイベントのみを収集するカスタマイズされたログ記録レベルを作成できます。 また、必要に応じて、変数値、接続文字列、コンポーネントのプロパティなど、イベントのコンテキストもキャプチャできます。 パッケージを実行するときに、組み込みのログ記録レベルを選択できる場所であればどこでも、カスタマイズされたログ記録レベルを選択できます。  
   
 > [!TIP]  
->  パッケージ変数の値をキャプチャするには、変数の **IncludeInDebugDump** プロパティを **True**に設定する必要があります。  
+>  パッケージ変数の値をキャプチャするには、変数の **IncludeInDebugDump** プロパティを **True** に設定する必要があります。  
   
 1.  カスタマイズされたログ記録レベルを作成および管理するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、SSISDB データベースを右クリックし、 **[カスタマイズされたログ記録レベル]** を選択し、 **[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスを開きます。 **[カスタマイズされたログ記録レベル]** リストには、既存のカスタマイズされたログ記録レベルがすべて含まれています。  
   

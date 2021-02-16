@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 03c9c90f1c9382c85141853ff19cc5d76b40f093
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 7313fbc789b37cf326d55566c1f087f80b4929df
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115940"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351938"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Linux で高可用性を実現するために SQL Server の Always On 可用性グループを構成する
 
@@ -89,7 +89,7 @@ Linux で高可用性のための AG を作成します。 `CLUSTER_TYPE = EXTER
 
 以下の Transact-SQL スクリプトでは、`ag1` という名前の高可用性の AG が作成されます。 このスクリプトでは、`SEEDING_MODE = AUTOMATIC` で AG レプリカが構成されます。 この設定により、各セカンダリ サーバー上に SQL Server によってデータベースが自動作成されます。 ご利用の環境に合わせて次のスクリプトを変更してください。 `<node1>`、`<node2>`、または `<node3>` の値を、レプリカをホストする SQL Server インスタンスの名前に置き換えます。 `<5022>` を、データ ミラーリング エンドポイント用に設定したポートに置き換えます。 AG を作成するには、プライマリ レプリカをホストしている SQL Server インスタンス上で次の Transact-SQL を実行します。
 
-次のスクリプトの**いずれか 1 つのみ**を実行します。 
+次のスクリプトの **いずれか 1 つのみ** を実行します。 
 
 - [3 つの同期レプリカを使って可用性グループを作成する](#threeSynch)。
 - [2 つの同期レプリカと 1 つの構成レプリカを使って可用性グループを作成する](#configOnly)
@@ -178,8 +178,8 @@ Linux で高可用性のための AG を作成します。 `CLUSTER_TYPE = EXTER
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
       ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
@@ -211,7 +211,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->AG を作成したら、高可用性のために Pacemaker のようなクラスター テクノロジとの統合を構成する必要があります。 AG を使った読み取りスケール構成の場合 ([!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)] 以降)、クラスターの設定は必要ありません。
+>AG を作成したら、高可用性のために Pacemaker のようなクラスター テクノロジとの統合を構成する必要があります。 AG を使った読み取りスケール構成の場合 ([!INCLUDE [SQL Server version](../includes/sssql17-md.md)] 以降)、クラスターの設定は必要ありません。
 
 このドキュメントに記載されている手順に従った場合は、まだクラスター化されていない AG ができます。 次の手順は、クラスターを追加することです。 この構成は、読み取りスケール/負荷分散のシナリオに対しては有効ですが、高可用性の場合は完全ではありません。 高可用性を実現するには、AG をクラスター リソースとして追加する必要があります。 手順については、「[次の手順](#next-steps)」をご覧ください。 
 

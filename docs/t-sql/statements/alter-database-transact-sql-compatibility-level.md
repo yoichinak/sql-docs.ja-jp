@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
 - COMPATIBILITY_LEVEL
@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d16763f2bd009b411952c20cfb1115cf1c977d85
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 4a025086b2b45804a82801fceef9032c388cf2c2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98689191"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100348525"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 
@@ -59,11 +59,11 @@ COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 } デ�
 
 |Product|データベース エンジンのバージョン|既定の互換性レベルの指定|サポートされている互換性レベル値|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
-|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンス|12|150|150, 140, 130, 120, 110, 100|
-|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|13|130|130, 120, 110, 100|
+|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]|13|130|130, 120, 110, 100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|10.5|100|100, 90, 80|
@@ -93,7 +93,7 @@ COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 } デ�
 データベースの現在の互換性レベルを確認するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `compatibility_level` 列をクエリします。
 
 > [!NOTE]
-> 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成され、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] RTM または Service Pack 1 にアップグレードされる[ディストリビューション データベース](../../relational-databases/replication/distribution-database.md)は、互換性レベルが 90 であり、その他のデータベースではサポートされません。 これはレプリケーションの機能には影響がありません。 新しいバージョンのサービス パックと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードすると、分散データベースの互換性レベルが増加し、**マスター** データベースの互換性レベルと一致します。
+> 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成され、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] RTM または Service Pack 1 にアップグレードされる[ディストリビューション データベース](../../relational-databases/replication/distribution-database.md)は、互換性レベルが 90 であり、その他のデータベースではサポートされません。 これはレプリケーションの機能には影響がありません。 新しいバージョンのサービス パックと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードすると、分散データベースの互換性レベルが増加し、**マスター** データベースの互換性レベルと一致します。
 
 > [!NOTE]
 > **2019 年 11 月** の時点で、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で新しく作成されたデータベースの既定の互換性レベルは 150 です。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、既存のデータベースに対してデータベース互換レベルを更新することはありません。 それは、お客様の独自の裁量にまかされます。        
@@ -119,7 +119,7 @@ SELECT name, compatibility_level FROM sys.databases;
 ```
 
 ## <a name="compatibility-levels-and-database-engine-upgrades"></a>互換性レベルとデータベース エンジンのアップグレード
-データベース互換レベルは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のアップグレードを可能にし、それと同時に、アップグレード前と同じデータベース互換レベルを維持することで接続するアプリケーションの機能的な状態を維持するという点で、データベースの最新化支援に不可欠なツールです。 これは、(データベース接続を除き) アプリケーションを変更することなく、古いバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] など) から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Managed Instance を含む) にアップグレードできることを意味します。 詳細については、「[Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md)」 (互換性証明書) を参照してください。
+データベース互換レベルは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のアップグレードを可能にし、それと同時に、アップグレード前と同じデータベース互換レベルを維持することで接続するアプリケーションの機能的な状態を維持するという点で、データベースの最新化支援に不可欠なツールです。 これは、(データベース接続を除き) アプリケーションを変更することなく、古いバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] など) から [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Managed Instance を含む) にアップグレードできることを意味します。 詳細については、「[Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md)」 (互換性証明書) を参照してください。
 
 上位のデータベース互換レベルでのみ利用できる拡張をアプリケーションが活用する必要がない限り、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] をアップグレードし、前のデータベース互換レベルを維持することは有効なアプローチです。 下位互換性のために互換性レベルを使用する方法については、「[互換性証明書](../../database-engine/install-windows/compatibility-certification.md)」を参照してください。
 
@@ -167,9 +167,9 @@ SELECT name, compatibility_level FROM sys.databases;
 
 新しいバージョンの [!INCLUDE[ssDE](../../includes/ssde-md.md)] の既定の互換性レベルにのみ追加される、プランに影響する基本的な変更は次のとおりです。
 
-1.  **トレース フラグ 4199 の以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンでリリースされたクエリ オプティマイザーの修正プログラムは、より新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンの既定の互換性レベルで自動的に有効になります**。 **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+1.  **トレース フラグ 4199 の以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンでリリースされたクエリ オプティマイザーの修正プログラムは、より新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンの既定の互換性レベルで自動的に有効になります**。 **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
-    たとえば、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] がリリースされた場合、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン (およびそれぞれの互換性レベル 100 から 120) に対してリリースされたクエリ オプティマイザーの修正プログラムがすべて、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] の既定の互換性レベル (130) を使用するデータベースに対して自動的に有効になります。 RTM 後のクエリ オプティマイザーの修正プログラムのみを明示的に有効にする必要があります。
+    たとえば、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] がリリースされた場合、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン (およびそれぞれの互換性レベル 100 から 120) に対してリリースされたクエリ オプティマイザーの修正プログラムがすべて、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] の既定の互換性レベル (130) を使用するデータベースに対して自動的に有効になります。 RTM 後のクエリ オプティマイザーの修正プログラムのみを明示的に有効にする必要があります。
     
     > [!NOTE]
     > クエリ オプティマイザーの修正プログラムを有効にするには、次の方法を使用できます。    
@@ -178,32 +178,32 @@ SELECT name, compatibility_level FROM sys.databases;
     > - データベース レベルで [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) の `QUERY_OPTIMIZER_HOTFIXES` オプションを使用。
     > - クエリ レベルで `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)を使用。
     
-    その後、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] がリリースされた場合、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の既定の互換性レベル (140) を使用して、データベースに対して [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] の RTM を自動的に有効にした後に、すべてのクエリ オプティマイザーがリリースされます。 これは、以前のバージョンの修正プログラムもすべて含まれる累積的な動作です。 ここでも、RTM 後のクエリ オプティマイザーの修正プログラムのみを明示的に有効にする必要があります。  
+    その後、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] がリリースされた場合、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の既定の互換性レベル (140) を使用して、データベースに対して [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] の RTM を自動的に有効にした後に、すべてのクエリ オプティマイザーがリリースされます。 これは、以前のバージョンの修正プログラムもすべて含まれる累積的な動作です。 ここでも、RTM 後のクエリ オプティマイザーの修正プログラムのみを明示的に有効にする必要があります。  
     
     次の表は、この動作をまとめたものです。
     
     |データベース エンジン (DE) のバージョン|データベース互換レベル|TF 4199|すべての以前のデータベース互換レベルからの QO の変更|DE バージョンの RTM 後の QO の変更|
     |----------|----------|---|------------|--------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])|100 から 120<br /><br /><br />130|Off<br />On<br /><br />Off<br />On|**Disabled**<br />Enabled<br /><br />**有効**<br />Enabled|無効<br />Enabled<br /><br />無効<br />Enabled|
+    |13 ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])|100 から 120<br /><br /><br />130|Off<br />On<br /><br />Off<br />On|**Disabled**<br />Enabled<br /><br />**有効**<br />Enabled|無効<br />Enabled<br /><br />無効<br />Enabled|
     |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 から 120<br /><br /><br />130<br /><br /><br />140|Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On|**Disabled**<br />Enabled<br /><br />**有効**<br />Enabled<br /><br />**有効**<br />Enabled|無効<br />Enabled<br /><br />無効<br />Enabled<br /><br />無効<br />Enabled|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) と 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 から 120<br /><br /><br />130 から 140<br /><br /><br />150|Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On|**Disabled**<br />Enabled<br /><br />**有効**<br />Enabled<br /><br />**有効**<br />Enabled|無効<br />Enabled<br /><br />無効<br />Enabled<br /><br />無効<br />Enabled|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) と 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 から 120<br /><br /><br />130 から 140<br /><br /><br />150|Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On|**Disabled**<br />Enabled<br /><br />**有効**<br />Enabled<br /><br />**有効**<br />Enabled|無効<br />Enabled<br /><br />無効<br />Enabled<br /><br />無効<br />Enabled|
     
     > [!IMPORTANT]
     > 間違った結果やアクセス違反エラーに対処するクエリ オプティマイザーの修正プログラムは、トレース フラグ 4199 では保護されません。 これらの修正プログラムは、オプションとは見なされません。
  
 2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でリリースされた [カーディナリティ推定機能](../../relational-databases/performance/cardinality-estimation-sql-server.md)の変更は、新しい [!INCLUDE[ssDE](../../includes/ssde-md.md)] バージョンの既定の互換性レベルでのみ有効になります** が、以前の互換性レベルでは有効になりません。 
 
-    たとえば、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] がリリースされたとき、カーディナリティの推定プロセスに対する変更は、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] の既定の互換性レベル (130) を使用しているデータベースに対してのみ使用できます。 以前の互換性レベルでは、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以前に使用できたカーディナリティ推定動作を保持していました。 
+    たとえば、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] がリリースされたとき、カーディナリティの推定プロセスに対する変更は、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] の既定の互換性レベル (130) を使用しているデータベースに対してのみ使用できます。 以前の互換性レベルでは、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以前に使用できたカーディナリティ推定動作を保持していました。 
     
-    その後、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] がリリースされたとき、カーディナリティの推定プロセスに対するより新しい変更は、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の既定の互換性レベル (140) を使用しているデータベースに対してのみ使用できます。 データベース互換レベル 130 では、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] カーディナリティ推定動作が保持されます。
+    その後、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] がリリースされたとき、カーディナリティの推定プロセスに対するより新しい変更は、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の既定の互換性レベル (140) を使用しているデータベースに対してのみ使用できます。 データベース互換レベル 130 では、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] カーディナリティ推定動作が保持されます。
     
     次の表は、この動作をまとめたものです。
     
     |データベース エンジンのバージョン|データベース互換レベル|新しいバージョン CE の変更|
     |----------|--------|-------------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])|130 未満<br />130|無効<br />Enabled|
+    |13 ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])|130 未満<br />130|無効<br />Enabled|
     |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|140 未満<br />140|無効<br />Enabled|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|150 未満<br />150|無効<br />Enabled|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])<sup>1</sup>|150 未満<br />150|無効<br />Enabled|
     
     <sup>1</sup>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] にも適用されます。
     
@@ -250,14 +250,14 @@ SQL Server 2017 より前の SQL Server の初期のバージョンのトレー�
 |SQL 2014 のカーディナリティ推定機能 **CardinalityEstimationModelVersion="120"** が導入されました。|クエリ プランから表示できる、カーディナリティ推定モデル 130 を使ったカーディナリティの推定 (CE) のさらなる改善。 **CardinalityEstimationModelVersion="130"**|
 |列ストア インデックスで行モードがバッチ モードに変更:<br /><ul><li>列ストア インデックスを持つテーブルでの並べ替えは行モードで行われます <li>ウィンドウ関数の集計が `LAG` や `LEAD` などの行のモードで動作します。 <li>行モードで運用されている複数の個別の句を持つ列ストア テーブルに対するクエリ <li>MAXDOP 1 または行モードで実行される直列プランで実行されているクエリ</li></ul>| 列ストア インデックスで行モードがバッチ モードに変更:<br /><ul><li>列ストア インデックスを持つテーブルでの並べ替えがバッチ モードになりました。 <li>ウィンドウ集計が `LAG` や `LEAD` などのバッチモードで動作します。 <li>複数の distinct 句で列ストア テーブルに対するクエリがバッチ モードで動作します。 <li>MAXDOP 1 または直列プランで実行されているクエリをバッチ モードで実行します。</li></ul>|
 |統計情報を自動的に更新できます。 | 統計情報を自動的に更新するロジックは、大規模なテーブルでより積極的に活用されます。 実際には、これにより、クエリに関するパフォーマンス上の問題 (新たに挿入された行に対してクエリが頻繁に実行されるが、それらの値を取り込むための統計情報の更新が行われていない) に顧客が遭遇するケースが減少します。 |
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、トレース 2371 は既定ではオフになっています。 | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] では、[トレース 2371](/archive/blogs/psssql/default-auto-statistics-update-threshold-change-for-sql-server-2016) は既定では ON です。 トレース フラグ 2371 は、多くの行を含むテーブル内で、小さくても有用な行のサブセットをサンプリングするように自動統計更新ツールに指示します。 <br/> <br/> 1 つの改良点は、最近挿入された行をより多くサンプルに含めるというものです。 <br/> <br/> もう 1 つの改良点は、統計の更新プロセスが実行されている間に、クエリをブロックするのでなく、クエリが実行されるようにするというものです。 |
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、トレース 2371 は既定ではオフになっています。 | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] では、[トレース 2371](/archive/blogs/psssql/default-auto-statistics-update-threshold-change-for-sql-server-2016) は既定では ON です。 トレース フラグ 2371 は、多くの行を含むテーブル内で、小さくても有用な行のサブセットをサンプリングするように自動統計更新ツールに指示します。 <br/> <br/> 1 つの改良点は、最近挿入された行をより多くサンプルに含めるというものです。 <br/> <br/> もう 1 つの改良点は、統計の更新プロセスが実行されている間に、クエリをブロックするのでなく、クエリが実行されるようにするというものです。 |
 |レベル 120 の場合、統計情報はシングルスレッド プロセスによってサンプリングされます。|レベル 130 の場合、統計情報はマルチスレッド プロセスによってサンプリングされます (並行処理)。 |
 |253 の入力方向の外部キーは制限です。| 指定されたテーブルは、最大 10,000 個の入力方向の外部キーまたは類似の参照方法によって参照することができます。 制限については、「 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。 |
 |非推奨の MD2、MD4、MD5、SHA、SHA1 のハッシュ アルゴリズムは許可されます。|SHA2_256 と SHA2_512 のハッシュ アルゴリズムのみが許可されます。|
-||[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] では、一部のデータ型変換と一部の (大抵は一般的ではない) 操作に改良が加えられました。 詳細については、「[いくつかのデータ型と一般的でない操作を処理するときの SQL Server と Azure の SQL データベースの機能強化](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)」をご覧ください。|
+||[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] では、一部のデータ型変換と一部の (大抵は一般的ではない) 操作に改良が加えられました。 詳細については、「[いくつかのデータ型と一般的でない操作を処理するときの SQL Server と Azure の SQL データベースの機能強化](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)」をご覧ください。|
 |`STRING_SPLIT` 関数は使用できません。|`STRING_SPLIT` 関数は、互換性レベル 130 以上で利用できます。 データベース互換レベルが 130 未満の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で `STRING_SPLIT` 関数を見つけて実行することができません。|
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] より前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の初期のバージョンのトレース フラグ 4199 での修正プログラムは、既定で有効になりました。 互換モードは 130 です。 トレース フラグ 4199 は、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] の後にリリースされる、クエリ オプティマイザーの新しい修正プログラムに対しても引き続き適用することができます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] で古いクエリ オプティマイザーを使用するには、互換性レベル 110 を選択する必要があります。 トレース フラグ 4199 については、「[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)」を参照してください。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] より前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の初期のバージョンのトレース フラグ 4199 での修正プログラムは、既定で有効になりました。 互換モードは 130 です。 トレース フラグ 4199 は、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] の後にリリースされる、クエリ オプティマイザーの新しい修正プログラムに対しても引き続き適用することができます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] で古いクエリ オプティマイザーを使用するには、互換性レベル 110 を選択する必要があります。 トレース フラグ 4199 については、「[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)」を参照してください。
 
 ## <a name="differences-between-lower-compatibility-levels-and-level-120"></a>より低い互換性レベルとレベル 120 の相違点
 

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2193c93ff55ed38ff5c629072109036306bb72c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ef719fc0fe41120fe42d324beb563b06bb81060
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430774"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343210"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Microsoft Connector for Oracle でのデータ型のサポート
 
@@ -27,7 +27,7 @@ Oracle 用の SSIS コンポーネントでは、Oracle のすべてのデータ
 
 次の表は、Oracle データベースのデータ型と、SSIS データ型に対する既定のマッピングを示しています。 サポートされていない Oracle データ型についても示されています。
 
-|Oracle データベース データ型|SSIS データ型|コメント|
+|Oracle データベース データ型|SSIS データ型|説明|
 |:-|:-|:-|
 |VARCHAR2|DT_STR||
 |NVARCHAR2|DT_WSTR||

@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 815ad066f97a80d250dcd1c3b1a961e4a86b05a6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 47545adc6e3e620cd74585d477bdd028f1e8625f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97416854"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352489"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>トランザクションのロックおよび行のバージョン管理ガイド
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -912,7 +912,7 @@ GO
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> デッドロック拡張イベント
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降、SQL トレースまたは SQL Profiler ではデッドロック グラフ イベント クラスではなく `xml_deadlock_report` 拡張イベント (xEvent) を使用する必要があります。
 
-また、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、デッドロックが発生したときに、デッドロック グラフを含むすべての `xml_deadlock_report` xEvents は **_system\_health_* _ セッションによって既にキャプチャされています。 _system\_health* セッションは既定で有効になっているため、デッドロック情報をキャプチャするように別の xEvent セッションを構成する必要はありません。 
+また、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、デッドロックが発生したときに、デッドロック グラフを含むすべての `xml_deadlock_report` xEvents は ***system\_health** _ セッションによって既にキャプチャされています。 _system\_health* セッションは既定で有効になっているため、デッドロック情報をキャプチャするように別の xEvent セッションを構成する必要はありません。 
 
 通常キャプチャされる Deadlock Graph には、3 つの個別のノードがあります。
 -   **victim-list**。 デッドロック犠牲者プロセス識別子。

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74a6b4985ab31d69813e305c92ee80ae8bca75d2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 807994f4a6e1f3c7b426c3a7c47ecdf7c152ea3b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171644"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100070686"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ PolyBase クエリ用の外部データ ソースを作成します。 外部デ
 - [PolyBase][intro_pb] を使用したデータ仮想化とデータ読み込み
 - `BULK INSERT` または `OPENROWSET` を使用した一括読み込み操作
 
-**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降
+**適用対象**:[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降
 
 ## <a name="syntax"></a>構文
 
@@ -91,13 +91,13 @@ WITH
 
 | 外部データ ソース    | 場所プレフィックス | ロケーション パス                                         | 製品/サービスでサポートされている場所 |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
-| Cloudera または Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降                       |
-| Azure Storage アカウント (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降         階層型名前空間はサポート **されていません** |
-| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降                       |
-| Oracle                  | `oracle`        | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降                       |
-| Teradata                | `teradata`      | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降                       |
-| MongoDB または CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降                       |
-| ODBC                    | `odbc`          | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降 - Windows のみ        |
+| Cloudera または Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降                       |
+| Azure Storage アカウント (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降         階層型名前空間はサポート **されていません** |
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降                       |
+| Oracle                  | `oracle`        | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降                       |
+| Teradata                | `teradata`      | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降                       |
+| MongoDB または CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降                       |
+| ODBC                    | `odbc`          | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降 - Windows のみ        |
 | 一括操作         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降                        |
 | Edge ハブ         | `edgehub`         | 適用外 | EdgeHub は [Azure SQL Edge](/azure/azure-sql-edge/overview/) のインスタンスに対して常にローカルです。 そのため、パスまたはポート値を指定する必要はありません。 Azure SQL Edge でのみ使用できます。                      |
 | Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Azure SQL Edge でのみ使用できます。                      |
@@ -115,7 +115,7 @@ WITH
 
 - [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 検証するには、外部データ ソースを使用して外部テーブルを作成します。
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
-- `sqlserver` 場所プレフィックスを使用して、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] を別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、または Azure Synapse Analytics に接続することができます。
+- `sqlserver` 場所プレフィックスを使用して、[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] を別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、または Azure Synapse Analytics に接続することができます。
 - `Driver={<Name of Driver>}` 経由で接続する際に `ODBC` を指定します。
 - `wasbs` は省略可能ですが、セキュリティで保護された TLS/SSL 接続を使用してデータが送信されるため、Azure Storage アカウントにアクセスする場合には推奨されています。
 - Azure Storage アカウントにアクセスする場合、`abfs` または `abfss` API はサポートされていません。
@@ -160,7 +160,7 @@ WITH
 構成されている外部データ ソースの種類を指定します。 このパラメーターは常に必要ではありません。
 
 - 外部データ ソースが Cloudera、Hortonworks、Azure Storage アカウントの場合は、HADOOP を使用します。
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] で [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用して、Azure Storage アカウントから一括操作を実行する場合は、BLOB_STORAGE を使用します。
+- [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] で [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用して、Azure Storage アカウントから一括操作を実行する場合は、BLOB_STORAGE を使用します。
 
 > [!IMPORTANT]
 > 他の外部データ ソースを使用する場合は、`TYPE` を設定しないでください。
@@ -212,7 +212,7 @@ SQL Server ビッグ データ クラスターでストレージまたはデー�
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples-starting-with-sssql15"></a>例 ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)
+## <a name="examples-starting-with-sssql16-md"></a>例 ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降)
 
 > [!IMPORTANT]
 > PolyBase をインストールして有効にする方法については、「[Windows への PolyBase のインストール](../../relational-databases/polybase/polybase-installation.md)」を参照してください
@@ -314,7 +314,7 @@ WITH
   ) ;
 ```
 
-### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. PolyBase 接続を使用して SQL Server 名前付きインスタンスを参照する外部データソースを作成する ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. PolyBase 接続を使用して SQL Server 名前付きインスタンスを参照する外部データソースを作成する ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスを参照する外部データソースを作成する場合は、CONNECTION_OPTIONS を使用してインスタンス名を指定できます。 以下の例では、`WINSQL2019` がホスト名で、`SQL2019` がインスタンス名になります。
 
@@ -368,7 +368,7 @@ go
 
 ### <a name="i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>I. Azure Storage からデータを取得する一括操作用の外部データ ソースを作成する
 
-**適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
+**適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]。
 [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用する一括操作に対し、次のデータ ソースを使用します。 資格情報は、`SHARED ACCESS SIGNATURE` を ID として設定する必要があり、SAS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付は UTC 時間です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用][sas_token]」を参照してください。
 
 ```sql

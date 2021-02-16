@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74e4df5fc33b90ae9e455d566b41e6eae71408ac
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 45540a538982f75033f35ad759782317983dc958
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99187786"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071816"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>リテラル日付文字列を DATE 値に非決定論的に変換する
 
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-**_/
+***/
 ```
 
 
@@ -69,7 +69,7 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-上記の _ *dmy** 形式では、'01-03-2018' という日付文字列の例は "_2018 年 3 月の最初の日_" として解釈されます。
+上記の **dmy** 形式によると、'01-03-2018' というサンプル日付文字列は _2018 年 3 月の最初の日_ として解釈されます。
 
 代わりに **mdy** が指定された場合、同じ文字列 '01-03-2018' は _2018 年 1 月の 3 番目の日_ として解釈されます。
 
@@ -115,10 +115,10 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-**_/
+***/
 ```
 
-上のコード例の最後の例では、_ *ymd** 形式と入力文字列が一致していません。 入力文字列の 3 番目のノードは数値ですが、日としては大きすぎます。 Microsoft は、このような不一致から値が出力されることは保証しません。
+上のコード例の最後の例では、**ymd** 形式と入力文字列が一致していません。 入力文字列の 3 番目のノードは数値ですが、日としては大きすぎます。 Microsoft は、このような不一致から値が出力されることは保証しません。
 
 #### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT からは、日付書式を _決定的に_ 制御するための明示的コードが与えられます。
 

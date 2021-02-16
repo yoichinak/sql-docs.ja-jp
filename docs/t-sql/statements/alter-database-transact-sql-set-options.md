@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: d02a4199775c519602e88573c7fbca72c1e8f9a9
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 37ea2f4896d68f4ae5a47b14025d54a344febdc0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170484"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016319"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -327,9 +327,9 @@ CURRENT
 現在のデータベースでアクションが実行されます。 `CURRENT` は、すべてのコンテキスト内のすべてのオプションでサポートされるわけではありません。 `CURRENT` でエラーが発生した場合は、データベース名を指定してください。
 
 **\<accelerated_database_recovery> ::=**      
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降)
 
-データベースごとに[高速データベース復旧](../../relational-databases/accelerated-database-recovery-management.md) (ADR) を有効にする。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、ADR は既定で OFF に設定されています。 この構文を使用すると、永続的なバージョン ストア (PVS) データの特定のファイル グループを指定できます。 ファイル グループが指定されていない場合、PVS はプライマリ ファイル グループに格納されます。 例と詳細については、[高速データベース復旧](../../relational-databases/accelerated-database-recovery-management.md)に関するページを参照してください。
+データベースごとに[高速データベース復旧](../../relational-databases/accelerated-database-recovery-management.md) (ADR) を有効にする。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では、ADR は既定で OFF に設定されています。 この構文を使用すると、永続的なバージョン ストア (PVS) データの特定のファイル グループを指定できます。 ファイル グループが指定されていない場合、PVS はプライマリ ファイル グループに格納されます。 例と詳細については、[高速データベース復旧](../../relational-databases/accelerated-database-recovery-management.md)に関するページを参照してください。
 
 **\<auto_option> ::=**      
 自動オプションを制御します。
@@ -432,7 +432,7 @@ AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にする
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md#statistics-options)」の「統計オプション」セクションを参照してください。
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 以降)
 
 `FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)オプションを有効または無効にします。
 
@@ -557,12 +557,12 @@ OFF
 暗号化しないデータベースを設定します。
 
 SUSPEND     
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)     
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降)     
 
 Transparent Data Encryption が有効化または無効化された後や暗号化キーが変更された後に、暗号化スキャンを一時停止するのに使用できます。
 
 RESUME     
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降)
 
 以前に一時停止した暗号化スキャンを再開するために使用できます。
 
@@ -738,7 +738,7 @@ Windows と互換性のあるディレクトリ名です。 この名前は、[!
 「[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)」をご覧ください。
 
 **\<mixed_page_allocation_option> ::=**      
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降)
 
 データベースが、テーブルまたはインデックスの最初の 8 ページに対して混合エクステントを使用して、最初のページを作成できるかどうかを制御します。
 
@@ -764,7 +764,7 @@ FORCED
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_parameterization_forced column` 列を調べることで、このオプションの現在の設定を判断できます。
 
 <a name="query-store"></a> **\<query_store_options> ::=**      
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降)
 
 ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。 詳細については、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md)」を参照してください。
@@ -773,7 +773,7 @@ ON
 クエリのストアを有効にします。
 
 OFF [ ( FORCED ) ]      
-クエリのストアを無効にします。 既定値は OFF です。 FORCED は省略可能です。 FORCED は、実行中のすべてのクエリ ストア バックグラウンド タスクを中止し、クエリ ストアがオフになっている場合は同期フラッシュをスキップします。 クエリ ストアが可能な限り早くシャットダウンされます。 FORCED は、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU14、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 以降のビルドに適用されます。
+クエリのストアを無効にします。 既定値は OFF です。 FORCED は省略可能です。 FORCED は、実行中のすべてのクエリ ストア バックグラウンド タスクを中止し、クエリ ストアがオフになっている場合は同期フラッシュをスキップします。 クエリ ストアが可能な限り早くシャットダウンされます。 FORCED は、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU14、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21、[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6 以降のビルドに適用されます。
 
 > [!NOTE]  
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベースとエラスティック プールでは、クエリ ストアを無効にすることはできません。 `ALTER DATABASE [database] SET QUERY_STORE = OFF` を実行すると、警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.` が返されます。 
@@ -797,7 +797,7 @@ DATA_FLUSH_INTERVAL_SECONDS
 クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。 既定値は **900** (15 分) です。
 
 MAX_STORAGE_SIZE_MB     
-クエリ ストアに発行される領域を示します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] まで) の場合は **100 MB** です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、既定値は **1 GB** です。
+クエリ ストアに発行される領域を示します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] まで) の場合は **100 MB** です。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降では、既定値は **1 GB** です。
 
 > [!NOTE]
 > `MAX_STORAGE_SIZE_MB` の制限は、厳密には適用されません。 ストレージ サイズは、クエリ ストアでディスクにデータが書き込まれる場合にのみ確認されます。 この間隔は `DATA_FLUSH_INTERVAL_SECONDS` オプションか、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] クエリ ストアのダイアログ ボックス オプションである **[データのフラッシュ間隔]** によって設定されます。 間隔の既定値は 900 秒 (15 分) です。
@@ -806,7 +806,7 @@ MAX_STORAGE_SIZE_MB
 
 > [!IMPORTANT]
 > ワークロードのキャプチャに 10 GB を超えるディスク領域が必要と思われる場合、クエリ プランを再利用するには、ワークロードを再検討して最適化することをお勧めします (たとえば、[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)を使用したり、クエリ ストア構成を調整したりします)。    
-> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
+> [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
 
 INTERVAL_LENGTH_MINUTES     
 クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60** です。
@@ -829,16 +829,16 @@ QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }
 > クエリ キャプチャ モードが ALL、AUTO、または CUSTOM に設定されている場合、カーソル、ストアド プロシージャ内のクエリ、およびネイティブ コンパイル済みのクエリは常にキャプチャされます。
 
 ALL     
-すべてのクエリをキャプチャします。 **ALL** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] まで) の既定の構成値です。
+すべてのクエリをキャプチャします。 **ALL** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] まで) の既定の構成値です。
 
 AUTO     
-実行の数とリソースの消費量に基づいて関連するクエリがキャプチャされます。 これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の既定の構成値です。
+実行の数とリソースの消費量に基づいて関連するクエリがキャプチャされます。 これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の既定の構成値です。
 
 NONE     
 新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリがキャプチャされない可能性があるため、この構成は慎重に使用してください。
 
 CUSTOM     
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降)
 
 QUERY_CAPTURE_POLICY オプションを制御できます。
 
@@ -859,7 +859,7 @@ OFF
 クエリごとの待機統計情報はキャプチャされません。
 
 **\<query_capture_policy_option_list> :: =**      
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降)
 
 クエリ ストアのキャプチャ ポリシー オプションを制御します。 STALE_CAPTURE_POLICY_THRESHOLD を除き、これらのオプションでは、定義された古いキャプチャ ポリシーのしきい値でクエリがキャプチャされるために必要な OR 条件が定義されます。
 
@@ -945,7 +945,7 @@ PAGE_VERIFY オプションを使用する場合は、次に示す重要な点�
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `page_verify_option` 列または [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsTornPageDetectionEnabled` プロパティを調べることでこのオプションの現在の状態を判断できます。
 
 **\<remote_data_archive_option> ::=**      
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降)
 
 そのデータベースについて Stretch Database を有効または無効にします。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。
 
@@ -1206,7 +1206,7 @@ OFF
 **\<target_recovery_time_option> ::=**      
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
-間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、新しいデータベースに対する既定値は **1 分** であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
+間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降、新しいデータベースに対する既定値は **1 分** であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
 TARGET_RECOVERY_TIME **=** *target_recovery_time* { SECONDS | MINUTES }     
 *target_recovery_time*     
@@ -1400,7 +1400,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. クエリのストアを有効にする
 
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降)
 
 次の例では、クエリ ストアを有効にし、そのパラメーターを構成します。
 
@@ -1440,7 +1440,7 @@ SET QUERY_STORE = ON
 
 ### <a name="g-enabling-the-query-store-with-custom-capture-policy-options"></a>G. カスタム キャプチャ ポリシー オプションを使用してクエリ ストアを有効にする
 
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降)
 
 次の例では、クエリ ストアを有効にし、そのパラメーターを構成します。
 
@@ -1738,7 +1738,7 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md#statistics-options)」の「統計オプション」セクションを参照してください。
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+**適用対象**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 [自動チューニング](../../relational-databases/automatic-tuning/automatic-tuning.md)に関する自動オプションを制御します。
 
@@ -1926,7 +1926,7 @@ MAX_STORAGE_SIZE_MB
 
 > [!IMPORTANT]
 > ワークロードのキャプチャに 10 GB を超えるディスク領域が必要と思われる場合、クエリ プランを再利用するには、ワークロードを再検討して最適化することをお勧めします (たとえば、[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)を使用したり、クエリ ストア構成を調整したりします)。    
-> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
+> [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
 
 INTERVAL_LENGTH_MINUTES     
 クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60** です。
@@ -2178,7 +2178,7 @@ OFF
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_recursive_triggers_on` 列または [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsRecursiveTriggersEnabled` プロパティを調べることでこのオプションの状態を判断できます。
 
 **\<target_recovery_time_option> ::=**      
-間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、新しいデータベースに対する既定値は 1 分であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
+間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降、新しいデータベースに対する既定値は 1 分であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
 TARGET_RECOVERY_TIME **=** target_recovery_time { SECONDS | MINUTES }     
 *target_recovery_time*     
@@ -2609,7 +2609,7 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+**適用対象**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 `FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)オプションを有効または無効にします。
 
@@ -2748,7 +2748,7 @@ MAX_STORAGE_SIZE_MB
 
 > [!IMPORTANT]
 > ワークロードのキャプチャに 10 GB を超えるディスク領域が必要と思われる場合、クエリ プランを再利用するには、ワークロードを再検討して最適化することをお勧めします (たとえば、[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)を使用したり、クエリ ストア構成を調整したりします)。    
-> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
+> [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
 
 INTERVAL_LENGTH_MINUTES     
 クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60** です。
@@ -2999,7 +2999,7 @@ OFF
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_recursive_triggers_on` 列または [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsRecursiveTriggersEnabled` プロパティを調べることでこのオプションの状態を判断できます。
 
 **\<target_recovery_time_option> ::=**      
-間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、新しいデータベースに対する既定値は **1 分** であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
+間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降、新しいデータベースに対する既定値は **1 分** であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
 TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }     
 *target_recovery_time*     

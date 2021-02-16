@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 09738de0caf9b7da5fcf3bec7c413d53d5d46981
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869415"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351197"
 ---
 # <a name="linked-servers-database-engine"></a>リンク サーバー (データベース エンジン)
 
@@ -57,7 +57,7 @@ ms.locfileid: "91869415"
   
 *OLE DB プロバイダー* は、特定のデータ ソースを管理し、相互運用する DLL です。 *OLE DB データ ソース* は、OLE DB を使用してアクセスできる特定のデータベースを識別します。 リンク サーバーの定義を使用してクエリが行われるデータ ソースは通常はデータベースですが、さまざまなファイルやファイル形式用の OLE DB プロバイダーが存在します。 これには、テキスト ファイル、ワークシートのデータ、およびフルテキスト検索の結果が含まれます。  
   
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、[Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID:MSOLEDBSQL) が既定の OLE DB プロバイダーです。 以前のバージョンでは、[SQL Server Native Client OLE DB provider (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID:SQLNCLI11) が既定の OLE DB プロバイダーでした。
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降では、[Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID:MSOLEDBSQL) が既定の OLE DB プロバイダーです。 以前のバージョンでは、[SQL Server Native Client OLE DB provider (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID:SQLNCLI11) が既定の OLE DB プロバイダーでした。
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散クエリは、必要な OLE DB インターフェイスを実装しているすべての OLE DB プロバイダーで処理できるように設計されています。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は既定の OLE DB プロバイダーに対してテストされています。  
@@ -86,11 +86,11 @@ ms.locfileid: "91869415"
   
 ストアド プロシージャとカタログ ビューを使用して、リンク サーバーの定義を管理できます。  
   
--   **sp_addlinkedserver**を実行して、リンク サーバーの定義を作成します。  
+-   **sp_addlinkedserver** を実行して、リンク サーバーの定義を作成します。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sys.servers **システム カタログ ビューに対してクエリを実行して、** の特定のインスタンスに定義されたリンク サーバーに関する情報を表示します。  
   
--   **sp_dropserver**を実行して、リンク サーバーの定義を削除します。 このストアド プロシージャを使用して、リモート サーバーを削除することもできます。  
+-   **sp_dropserver** を実行して、リンク サーバーの定義を削除します。 このストアド プロシージャを使用して、リモート サーバーを削除することもできます。  
   
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、リンク サーバーを定義することもできます。 オブジェクト エクスプローラーで **[サーバー オブジェクト]** を右クリックし、 **[新規作成]** をポイントして、 **[リンク サーバー]** をクリックします。 リンク サーバー名を右クリックして **[削除]** をクリックすると、リンク サーバーの定義を削除できます。  
   

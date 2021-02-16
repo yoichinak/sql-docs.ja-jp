@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 9bffa8f183e511cdc4885635c4d23c940a82e4f9
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 36508869b30688e7a87035b50a7a06ca1e2a083a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088756"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346350"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux に SQL Server コマンドライン ツール sqlcmd および bcp をインストールする
 
@@ -34,7 +34,7 @@ ms.locfileid: "88088756"
 - [macOS](#macos)
 - [Docker](#docker)
 
-この記事では、コマンドライン ツールをインストールする方法について説明します。 **sqlcmd** または **bcp** の使用方法の例を参照するには、トピックの最後にある[リンク](#next-steps)をご覧ください。
+この記事では、コマンドライン ツールをインストールする方法について説明します。 **sqlcmd** または **bcp** の使用方法の例を参照するには、トピックの最後にある [リンク](#next-steps)をご覧ください。
 
 ## <a name="a-idrhelinstall-tools-on-rhel-8"></a><a id="RHEL"><a/>RHEL 8 にツールをインストールする
 

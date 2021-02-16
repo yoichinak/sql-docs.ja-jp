@@ -12,12 +12,12 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be7a5c94f5de63f343a8c529f8a824e13177923c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 234f6233e2f6b024e6ad74a82f403e3df7db9a05
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467303"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340178"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted のキー管理の概要
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "97467303"
 
 Always Encrypted キーとキーの管理について説明するときは、実際の暗号化キーと、キーを *記述* するメタデータ オブジェクトとの違いを理解することが重要です。 実際の暗号化キーを指す **列暗号化キー** と **列マスター キー** という用語と、データベース内の Always Encrypted キーの **説明** を指す **列暗号化キーのメタデータ** と *列マスター キーのメタデータ* という用語を使用します。
 
-- "***列暗号化キー**" は、データを暗号化するために使用される内容暗号化キーです。 名前が示すように、列暗号化キーはデータベースの列内のデータを暗号化するために使用します。 同じ列暗号化キーで 1 つ以上の列を暗号化することも、ご使用のアプリケーションの要件に応じて複数の列暗号化キーを使用することもできます。 列暗号化キーは自体が暗号化され、列暗号化キーの暗号化された値だけが (列暗号化キーのメタデータの一部として) データベースに格納されます。 列暗号化キーのメタデータは、 [sys.column_encryption_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) と [sys.column_encryption_key_values (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) カタログ ビューに格納されます。 AES-256 アルゴリズムで使用される列暗号化キーは 256 ビット長です。
+- ***列暗号化キー*** は、データを暗号化するために使用される内容暗号化キーです。 名前が示すように、列暗号化キーはデータベースの列内のデータを暗号化するために使用します。 同じ列暗号化キーで 1 つ以上の列を暗号化することも、ご使用のアプリケーションの要件に応じて複数の列暗号化キーを使用することもできます。 列暗号化キーは自体が暗号化され、列暗号化キーの暗号化された値だけが (列暗号化キーのメタデータの一部として) データベースに格納されます。 列暗号化キーのメタデータは、 [sys.column_encryption_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) と [sys.column_encryption_key_values (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) カタログ ビューに格納されます。 AES-256 アルゴリズムで使用される列暗号化キーは 256 ビット長です。
 
 
-- "_*_列マスター キー_*_" は、列暗号化キーの暗号化に使用される保護キーです。 列マスター キーは、Windows 証明書ストア、Azure Key Vault、またはハードウェア セキュリティ モジュールなどの信頼できるキー ストアに格納する必要があります。 データベースには、列マスター キーに関するメタデータ (キー ストアの種類と場所) のみが含まれます。 列マスター キーのメタデータは、 [sys.column_master_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) カタログ ビューに格納されています。  
+- ***列マスター キー*** は、列暗号化キーの暗号化に使用される保護キーです。 列マスター キーは、Windows 証明書ストア、Azure Key Vault、またはハードウェア セキュリティ モジュールなどの信頼できるキー ストアに格納する必要があります。 データベースには、列マスター キーに関するメタデータ (キー ストアの種類と場所) のみが含まれます。 列マスター キーのメタデータは、 [sys.column_master_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) カタログ ビューに格納されています。  
 
 データベース システム内のキー メタデータには、プレーンテキストの列マスター キーまたはプレーンテキストの列暗号化キーは含まれていないことに注意してください。 データベースには、列マスター キーの種類と場所に関する情報と、列暗号化キーの暗号化された値のみが含まれます。 これは、プレーンテキストのキーはデータベース システムに決して公開されないので、データベース システムが侵害された場合でも、Always Encrypted を使用して保護されているデータの安全性が保証されることを意味します。 データベース システムがプレーンテキストのキーにアクセスできないようにするため、キー管理ツールは、データベースをホストしているコンピューターとは異なるコンピューターで必ず実行します。詳細については、後述の「 [キー管理のセキュリティに関する考慮事項](#security-considerations-for-key-management) 」でご確認ください。
 
@@ -42,7 +42,7 @@ Always Encrypted キーとキーの管理について説明するときは、実
 
 キー管理のプロセスは、次の高度なタスクに分類できます。
 
-- "*キーのプロビジョニング*" - 信頼できるキー ストア (たとえば、Windows 証明書ストア、Azure Key Vault、またはハードウェア セキュリティ モジュール) に物理キーを作成し、列マスター キーで列暗号化キーを暗号化し、両方の種類のメタデータをデータベースに作成します。
+- **キーのプロビジョニング** - 信頼できるキー ストア (たとえば、Windows 証明書ストア、Azure Key Vault、またはハードウェア セキュリティ モジュール) に物理キーを作成し、列マスター キーで列暗号化キーを暗号化し、両方の種類のメタデータをデータベースに作成します。
 
 - **キーの交換** -既存のキーを定期的に新しいキーに交換します。 キーが侵害された場合や、暗号化キーを定期的に交換することを定めた組織のポリシーまたはコンプライアンス規定に準拠するために、キーを交換する必要があります。 
 
