@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 57372929f190ff2fe32e7688d16acc75fafc9700
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 39e32e8715c92a14faf68fd22464a50fed349997
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171554"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347689"
 ---
 # <a name="query-profiling-infrastructure"></a>クエリ プロファイリング インフラストラクチャ
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,25 +46,25 @@ ms.locfileid: "98171554"
 
 次の **すべてのセッション** のグローバルな実行プラン情報収集メソッドでは、標準プロファイリング インフラストラクチャが活用されます。
 
--  **_query_post_execution_showplan_* _ 拡張イベント。 拡張イベントを有効にする方法については、「 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)」を参照してください。  
-- [SQL トレース](../../relational-databases/sql-trace/sql-trace.md)と [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md) の _ *Showplan XML** トレース イベント。 このトレース イベントの詳細については、「[Showplan XML イベント クラス](../../relational-databases/event-classes/showplan-xml-event-class.md)」を参照してください。
+-  ***query_post_execution_showplan*** 拡張イベント。 拡張イベントを有効にする方法については、「 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)」を参照してください。  
+- [SQL トレース](../../relational-databases/sql-trace/sql-trace.md)と [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md) の **Showplan XML** トレース イベント。 このトレース イベントの詳細については、「[Showplan XML イベント クラス](../../relational-databases/event-classes/showplan-xml-event-class.md)」を参照してください。
 
 *query_post_execution_showplan* イベントを使用する拡張イベント セッションの実行時に、[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV も入力されます。これによって、すべてのセッションのライブ クエリ統計が有効になり、[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)を使用することや、DMV に直接クエリを実行することができます。 詳細については、「 [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)」を参照してください。
 
 ## <a name="the-lightweight-query-execution-statistics-profiling-infrastructure"></a><a name="lwp"></a>軽量クエリ実行統計プロファイリング インフラストラクチャ
 
-[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降で、新しい *軽量クエリ実行統計プロファイリング インフラストラクチャ*、すなわち **軽量プロファイリング** が導入されました。 
+[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降で、新しい *軽量クエリ実行統計プロファイリング インフラストラクチャ*、すなわち **軽量プロファイリング** が導入されました。 
 
 > [!NOTE]
 > 軽量プロファイリングでは、ネイティブ コンパイル ストアド プロシージャはサポートされていません。  
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>軽量クエリ実行統計プロファイリング インフラストラクチャ v1
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])。 
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])。 
   
-[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降で、軽量プロファイリングの導入により、実行プランに関する情報を収集するパフォーマンスのオーバーヘッドが軽減されました。 標準プロファイリングと異なり、軽量プロファイリングでは CPU のランタイム情報が収集されません。 ただし、軽量プロファイリングでも行数と I/O の使用状況の情報は収集されます。
+[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降で、軽量プロファイリングの導入により、実行プランに関する情報を収集するパフォーマンスのオーバーヘッドが軽減されました。 標準プロファイリングと異なり、軽量プロファイリングでは CPU のランタイム情報が収集されません。 ただし、軽量プロファイリングでも行数と I/O の使用状況の情報は収集されます。
 
-軽量プロファイリングを活用する新しい **_query_thread_profile_* _ 拡張イベントも導入されました。 この拡張イベントでは、演算子ごとの実行統計が示されるため、各ノードおよびスレッドのパフォーマンスについて、より多くの分析情報を提供できます。 この拡張イベントを使用するサンプル セッションは、次の例のように構成できます。
+軽量プロファイリングを活用する新しい ***query_thread_profile*** 拡張イベントも導入されました。 この拡張イベントでは、演算子ごとの実行統計が示されるため、各ノードおよびスレッドのパフォーマンスについて、より多くの分析情報を提供できます。 この拡張イベントを使用するサンプル セッションは、次の例のように構成できます。
 
 ```sql
 CREATE EVENT SESSION [NodePerfStats] ON SERVER
@@ -86,15 +86,15 @@ WITH (MAX_MEMORY=4096 KB,
 > [!NOTE]
 > クエリ プロファイリングのパフォーマンス オーバーヘッドの詳細については、ブログの投稿「[Developers Choice:Query progress - anytime, anywhere (開発者の選択: クエリの進行状況 - いつでも、どこでも)](/archive/blogs/sql_server_team/query-progress-anytime-anywhere)」をご覧ください。 
 
-_query_thread_profile* イベントを使用する拡張イベント セッションの実行時に、[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV も軽量プロファイリングを使用して入力されます。これによって、すべてのセッションのライブ クエリ統計が有効になり、[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)を使用するか DMV に直接クエリを実行することができます。
+*query_thread_profile* イベントを使用する拡張イベント セッションの実行時に、[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV も軽量プロファイリングを使用して入力されます。これによって、[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)を使用することや、DMV に直接クエリを実行することができます。
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>軽量クエリ実行統計プロファイリング インフラストラクチャ v2
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])。 
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])。 
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 には、オーバーヘッドが最小限の軽量プロファイリングの改訂版が含まれます。 軽量プロファイリングも、*適用対象* の前述のバージョンで、[トレース フラグ 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用してグローバルに有効にできます。 送信中の要求にクエリ実行プランを返すために、新しい DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) が導入されました。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 には、オーバーヘッドが最小限の軽量プロファイリングの改訂版が含まれます。 軽量プロファイリングも、*適用対象* の前述のバージョンで、[トレース フラグ 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用してグローバルに有効にできます。 送信中の要求にクエリ実行プランを返すために、新しい DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) が導入されました。
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU3 と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降で、軽量プロファイリングがグローバルで有効でない場合、新しい [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)引数 **QUERY_PLAN_PROFILE** を使用して、任意のセッションで、クエリ レベルで軽量プロファイリングを有効にできます。 この新しいヒントを含むクエリが終了すると、新しい **_query_plan_profile_* _ 拡張イベントも出力され、_query_post_execution_showplan* 拡張イベントに類似した実際の実行プラン XML が提供されます。 
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU3 と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降で、軽量プロファイリングがグローバルで有効でない場合、新しい [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)引数 **QUERY_PLAN_PROFILE** を使用して、任意のセッションで、クエリ レベルで軽量プロファイリングを有効にできます。 この新しいヒントを含むクエリが終了すると、新しい **_query_plan_profile_* _ 拡張イベントも出力され、_query_post_execution_showplan* 拡張イベントに類似した実際の実行プラン XML が提供されます。 
 
 > [!NOTE]
 > *query_plan_profile* 拡張イベントではまた、クエリ ヒントが使用されない場合でも、軽量プロファイリングが活用されます。 
@@ -120,9 +120,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>軽量クエリ実行統計プロファイリング インフラストラクチャ v3
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] には、すべての実行の行数情報を収集する軽量プロファイリングの新しい改訂版が含まれます。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、軽量プロファイリングが既定で有効にされています。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、トレース フラグ 7412 を使用しても効果がありません。 軽量プロファイリングは、LIGHTWEIGHT_QUERY_PROFILING [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;` を使用して、データベース レベルで無効にできます。
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] には、すべての実行の行数情報を収集する軽量プロファイリングの新しい改訂版が含まれます。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、軽量プロファイリングが既定で有効にされています。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降では、トレース フラグ 7412 を使用しても効果がありません。 軽量プロファイリングは、LIGHTWEIGHT_QUERY_PROFILING [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;` を使用して、データベース レベルで無効にできます。
 
 ほとんどのクエリで最後の既知の実際の実行プランと同等のものが返されるように、*最後のクエリ プランの統計* と呼ばれる新しい DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) が導入されました。 最後のクエリ プランの統計は、LAST_QUERY_PLAN_STATS [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;` を使用して、データベース レベルで有効にすることができます。
 
@@ -178,17 +178,17 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 
 |Scope|標準プロファイリング|軽量プロファイリング|
 |---------------|---------------|---------------|
-|グローバル|`query_post_execution_showplan` XE を使用する xEvent セッション。[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降|トレース フラグ 7412。[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降|
+|グローバル|`query_post_execution_showplan` XE を使用する xEvent セッション。[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降|トレース フラグ 7412。[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 以降|
 |グローバル|`Showplan XML` トレース イベントを使用する SQL トレースおよび SQL Server Profiler。SQL Server 2000 以降|`query_thread_profile` XE を使用する xEvent セッション。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降|
-|グローバル|-|`query_post_execution_plan_profile` XE を使用する xEvent セッション。[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 および [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]以降|
-|Session|`SET STATISTICS XML ON` を使用。SQL Server 2000 以降|`query_plan_profile` XE を使用する xEvent イベント セッションと共に `QUERY_PLAN_PROFILE` クエリ ヒントを使用。[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降|
+|グローバル|-|`query_post_execution_plan_profile` XE を使用する xEvent セッション。[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 および [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]以降|
+|Session|`SET STATISTICS XML ON` を使用。SQL Server 2000 以降|`query_plan_profile` XE を使用する xEvent イベント セッションと共に `QUERY_PLAN_PROFILE` クエリ ヒントを使用。[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降|
 |Session|`SET STATISTICS PROFILE ON` を使用。SQL Server 2000 以降|-|
 |Session|SSMS 内で[[ライブ クエリ統計]](../../relational-databases/performance/live-query-statistics.md) ボタンをクリック。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降|-|
 
 ## <a name="remarks"></a>解説
 
 > [!IMPORTANT]
-> [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) を参照するストアド プロシージャの監視の実行中にランダムにアクセス違反が発生する可能性があるため、[KB 4078596](https://support.microsoft.com/help/4078596) が [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] にインストールされていることを確認してください。
+> [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) を参照するストアド プロシージャの監視の実行中にランダムにアクセス違反が発生する可能性があるため、[KB 4078596](https://support.microsoft.com/help/4078596) が [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] にインストールされていることを確認してください。
 
 軽量プロファイリング v2 以降では、低オーバーヘッドでもあることから、CPU バインドされていない任意のサーバーで軽量プロファイリングを **継続的に** 実行できます。データベースの専門家は、利用状況モニターを使用するか、`sys.dm_exec_query_profiles` に直接クエリを実行するなどして、いつでも処理中の実行から、ランタイム統計を含むクエリ プランを取得できます。
 

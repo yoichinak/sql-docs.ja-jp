@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e89cac604654a1793a65bdd43dcd38cf77484b06
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2fa047e5ef018109352972f3ae139c6eff2c1b93
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099388"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100349954"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 照合順序名 (Transact-SQL)
 
@@ -75,12 +75,12 @@ Windows 照合順序で使用される基本照合順序規則を指定します
 このオプションを省略すると、文字幅が区別されません。**WS** を指定すると、文字幅が区別されます。
 
 *VariationSelectorSensitivity*  
-- **適用対象**:[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 以降 
+- **適用対象**:[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 以降 
 
 - このオプションを省略すると、異体字セレクターが区別されません。**VSS** を指定すると、異体字セレクターが区別されます。
 
 **UTF8**  
-- **適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降   
+- **適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降   
 
 - 対象となるデータ型で UTF-8 のエンコードが使用されるように指定します。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
 
@@ -134,7 +134,7 @@ Windows 照合順序と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
-次の表に、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされるすべての Windows 照合順序を示します。
+次の表に、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でサポートされるすべての Windows 照合順序を示します。
 
 |Windows ロケール|照合順序バージョン 100|照合順序バージョン 90|
 |--------------------|---------------------------|--------------------------|

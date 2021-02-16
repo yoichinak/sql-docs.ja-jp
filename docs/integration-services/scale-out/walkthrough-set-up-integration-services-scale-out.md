@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: 8d71c814adf1843a6fb6237f7767e1d9f540e7e0
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: d25471ef16b88ee0280ecb7dd349762b72e35312
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196356"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100337533"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>チュートリアル:Integration Services (SSIS) Scale Out を設定する
 
@@ -109,16 +109,16 @@ Scale Out Worker 機能をインストールするには、[!INCLUDE[ssNoVersion
 
 3.  **[Integration Services Scale Out Worker Configuration]** (Integration Services Scale Out Worker の構成) ページで、Scale Out Master に接続するエンドポイントを指定します。 
 
-    - **1 台のコンピューター**環境では、Scale Out Master と Scale Out Worker を同時にインストールすると、エンドポイントが自動的に生成されます。 
+    - **1 台のコンピューター** 環境では、Scale Out Master と Scale Out Worker を同時にインストールすると、エンドポイントが自動的に生成されます。 
 
-    - **複数コンピューター**環境では、エンドポイントは、Scale Out Master がインストールされているコンピューターの名前または IP と、Scale Out Master のインストール時に指定したポート番号で構成されます。
+    - **複数コンピューター** 環境では、エンドポイントは、Scale Out Master がインストールされているコンピューターの名前または IP と、Scale Out Master のインストール時に指定したポート番号で構成されます。
    
     ![ワーカーの構成 1](media/worker-config.PNG "ワーカーの構成 1")    
 
     > [!NOTE]
     > ここで Worker 構成を省略し、インストール後に [Scale Out Manager](integration-services-ssis-scale-out-manager.md) を使用して Scale Out Worker を Scale Out Master に関連付けることができます。
 
-4. **複数コンピューター**環境の場合は、Scale Out Master の検証に使用されるクライアント TLS/SSL 証明書を指定します。 **1 台のコンピューター**環境では、クライアント TLS/SSL 証明書を指定する必要がありません。 
+4. **複数コンピューター** 環境の場合は、Scale Out Master の検証に使用されるクライアント TLS/SSL 証明書を指定します。 **1 台のコンピューター** 環境では、クライアント TLS/SSL 証明書を指定する必要がありません。 
   
     **[Browse]** (参照) をクリックして、証明書ファイル (*.cer) を指定します。 既定の TLS/SSL 証明書を使用するには、Scale Out Master がインストールされているコンピューター上の `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` に置かれている `SSISScaleOutMaster.cer` ファイルを選択します。   
 
@@ -146,7 +146,7 @@ Scale Out Worker 機能をインストールするには、[!INCLUDE[ssNoVersion
 
 Scale Out Worker のインストール時に、ワーカー証明書が自動的に作成され、コンピューターにインストールされます。 また、対応するクライアント証明書 SSISScaleOutWorker.cer が `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` にインストールされます。 Scale Out Master で Scale Out Worker を認証するには、このクライアント証明書を Scale Out Master のローカル コンピューターのルート ストアに追加する必要があります。
   
-ルート ストアにクライアント証明書を追加するには、.cer ファイルをダブルクリックし、[証明書] ダイアログ ボックスで **[証明書のインストール]** をクリックします。 **証明書のインポート ウィザード**が開きます。  
+ルート ストアにクライアント証明書を追加するには、.cer ファイルをダブルクリックし、[証明書] ダイアログ ボックスで **[証明書のインストール]** をクリックします。 **証明書のインポート ウィザード** が開きます。  
 
 ## <a name="open-firewall-port"></a><a name="Firewall"></a> ファイアウォールのポートを開く
 

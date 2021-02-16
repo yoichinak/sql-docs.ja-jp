@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 8c48facb150d527cc1c03c0d5cd9ca0849a889f0
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: edeb7ab3de19b50f78f2b4b5bab9c0f8afe80780
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679277"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347781"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループ構成の高可用性とデータ保護
 
@@ -138,7 +138,7 @@ SQL Server 2017 では、クラスター リソース設定 `REQUIRED_SYNCHRONIZ
 
 SQL Server 2017 CTP 1.4 では、`sys.availability_groups` に `sequence_number` が追加されました。これにより、プライマリ レプリカに対するセカンダリ レプリカの最新度を Pacemaker で確認できるようになりました。 `sequence_number` は、ローカルの可用性グループ レプリカの最新度を表す、単調増加 BIGINT です。 Pacemaker により、可用性グループの構成が変更されるたびに `sequence_number` が更新されます。 構成変更の例としては、フェールオーバー、レプリカの追加、削除などがあります。 この数はプライマリ上で更新され、セカンダリ レプリカにレプリケートされます。 そのため、最新の構成を保持しているセカンダリ レプリカでは、シーケンス番号がプライマリと同じになります。 
 
-レプリカをプライマリに昇格することが Pacemaker により決定されると、まずすべてのレプリカに " *昇格前* " の通知を送られます。 レプリカによりシーケンス番号が返されます。 次に、Pacemaker が実際にレプリカをプライマリに昇格しようとする際、レプリカは、そのシーケンス番号がすべてのシーケンス番号の最大値である場合にのみ自身を昇格させます。 自身のシーケンス番号が最大のシーケンス番号と一致しない場合、レプリカは昇格操作を拒否します。 この方法により、最大のシーケンス番号を持つレプリカだけがプライマリに昇格できるようになるため、データの損失が回避されます。 
+レプリカをプライマリに昇格することが Pacemaker により決定されると、まずすべてのレプリカに "*昇格前*" の通知を送られます。 レプリカによりシーケンス番号が返されます。 次に、Pacemaker が実際にレプリカをプライマリに昇格しようとする際、レプリカは、そのシーケンス番号がすべてのシーケンス番号の最大値である場合にのみ自身を昇格させます。 自身のシーケンス番号が最大のシーケンス番号と一致しない場合、レプリカは昇格操作を拒否します。 この方法により、最大のシーケンス番号を持つレプリカだけがプライマリに昇格できるようになるため、データの損失が回避されます。 
 
 このプロセスでは、昇格の対象となるレプリカのうち少なくとも 1 つが、以前のプライマリと同じシーケンス番号を持っていることが要件となります。 Pacemaker リソース エージェントの既定では、少なくとも 1 つの同期セカンダリ レプリカが最新の状態であり、自動フェールオーバーのターゲットとして使用できるように、`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` が設定されます。 各監視アクションでは、`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` の値が計算 (および、必要に応じて更新) されます。 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` の値は、"同期レプリカの数" を 2 で除算した値です。 フェールオーバーの際、リソース エージェントにより、(`total number of replicas` - `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` のレプリカ数が) 昇格前通知に応答することが要求されます。 `sequence_number` が最大であるレプリカがプライマリに昇格されます。 
 

@@ -12,12 +12,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42d638afd9fc98fb68eb024c0a712bea5f278a26
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 011a7d3fa710699f75afd4ca835ba1f082a956b5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170224"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353616"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールでサポートされる機能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "98170224"
 次のクエリ構造がサポートされます。  
 
 CASE 式: CASE は、有効な式を使用できる任意のステートメントや句で使用できます。
-   - **適用対象:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
-    [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降、CASE ステートメントはネイティブ コンパイル T-SQL モジュールに対してサポートされています。
+   - **適用対象:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]。  
+    [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 以降、CASE ステートメントはネイティブ コンパイル T-SQL モジュールに対してサポートされています。
 
 SELECT 句:  
 
@@ -176,8 +176,8 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   ビット演算子 ~、&、|、および ^  
 
 -   APPLY 演算子
-    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
-      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、ネイティブ コンパイル モジュールで APPLY 演算子がサポートされます。
+    - **適用対象:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]。  
+      [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降では、ネイティブ コンパイル モジュールで APPLY 演算子がサポートされます。
 
 ##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> ネイティブ コンパイル モジュールの組み込み関数  
  メモリ最適化テーブルの構造とネイティブ コンパイル T-SQL モジュールでは、次の関数がサポートされます。  
@@ -187,8 +187,8 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   日付関数: CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME、YEAR。  
 
 -   文字列関数: LEN、LTRIM、RTRIM、SUBSTRING。  
-    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
-      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、次の組み込み関数もサポートされます: TRIM、TRANSLATE、CONCAT_WS。  
+    - **適用対象:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]。  
+      [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降では、次の組み込み関数もサポートされます: TRIM、TRANSLATE、CONCAT_WS。  
 
 -   ID 関数: SCOPE_IDENTITY  
 
@@ -197,8 +197,8 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   一意識別子関数: NEWID および NEWSEQUENTIALID  
 
 -   JSON 関数  
-    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
-      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、ネイティブ コンパイル モジュールで JSON 関数がサポートされます。
+    - **適用対象:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]。  
+      [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 以降では、ネイティブ コンパイル モジュールで JSON 関数がサポートされます。
 
 -   エラー関数: ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE  
 

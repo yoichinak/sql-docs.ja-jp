@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ea62ec35accc4f808fdbd1b2ff4319c0b44cdcc5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 5091c3437d0e74f3c108e13efb3789997cadb2d3
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195693"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489466"
 ---
 # <a name="extract-a-dac-from-a-database"></a>データベースからの DAC の抽出
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "92195693"
  DAC を抽出できるのは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降のデータベースに限られます。 DAC でサポートされていないオブジェクトまたは包含ユーザーがデータベースに存在する場合は、DAC を抽出できません。 DAC でサポートされるオブジェクトの種類の詳細については、「 [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))」を参照してください。  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
- DAC を抽出するには、少なくとも ALTER ANY LOGIN 権限とデータベース スコープの VIEW DEFINITION 権限、および **sys.sql_expression_dependencies**に対する SELECT 権限が必要です。 DAC を抽出できるのは、DAC を抽出するデータベースの database_owner 固定データベース ロールのメンバーでもある、securityadmin 固定サーバー ロールのメンバーです。 sysadmin 固定サーバー ロールのメンバーまたは **sa** という組み込みの SQL Server システム管理者アカウントも DAC を抽出できます。  
+ DAC を抽出するには、少なくとも ALTER ANY LOGIN 権限とデータベース スコープの VIEW DEFINITION 権限、および **sys.sql_expression_dependencies** に対する SELECT 権限が必要です。 DAC を抽出できるのは、DAC を抽出するデータベースの database_owner 固定データベース ロールのメンバーでもある、securityadmin 固定サーバー ロールのメンバーです。 sysadmin 固定サーバー ロールのメンバーまたは **sa** という組み込みの SQL Server システム管理者アカウントも DAC を抽出できます。  
   
 ##  <a name="using-the-extract-data-tier-application-wizard"></a><a name="UsingDACExtractWizard"></a> データ層アプリケーションの抽出ウィザードの使用  
  **ウィザードを使用して DAC を抽出するには**  
   
-1.  **オブジェクト エクスプローラー**で、DAC の抽出元となるデータベースを含んだインスタンスのノードを展開します。  
+1.  **オブジェクト エクスプローラー** で、DAC の抽出元となるデータベースを含んだインスタンスのノードを展開します。  
   
 2.  **[データベース]** ノードを展開します。  
   
@@ -162,5 +162,5 @@ $extractionunit.Extract($dacpacPath)
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
+ - [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md) 
+ - [開発パイプラインでの SqlPackage](../../tools/sqlpackage/sqlpackage-pipelines.md)

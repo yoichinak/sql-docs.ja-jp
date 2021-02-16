@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc7e46cf13da66476b53d68d5f2ea02fb29a69a5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 67f29ef6d47de5cc14cb248d20a243053857c9e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172104"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353641"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "98172104"
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  
   
 -   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、SQL Server に使用できるメモリが 16 GB 以上必要です。 インメモリ OLTP でのハードウェアに関する一般的なガイドラインは、ブログの投稿「[SQL Server 2014 におけるインメモリ OLTP のハードウェアに関する考慮事項](blog-hardware-in-memory-oltp.md)」を参照してください。
 
@@ -142,25 +142,25 @@ ms.locfileid: "98172104"
   
 -   *既定の制約* はメモリ最適化テーブルでサポートされ、そのほとんどがそのまま移行されています。 ただし、元の Sales.SalesOrderHeader テーブルには、現在の日付を取得する既定の制約が 2 つあります。OrderDate 列の制約と ModifiedDate 列の制約です。 コンカレンシーが多く、スループットが高い注文処理ワークロードでは、グローバル リソースが競合ポイントになる可能性があります。 たとえば、このようなグローバル リソースにはシステム時刻があります。販売注文を挿入するインメモリ OLTP ワークロードを実行しているとき、特に、販売注文ヘッダーおよび販売注文の詳細に含まれる複数の列に対して、システム時刻を取得する必要がある場合は、このシステム時刻がボトルネックになることがわかっています。 このサンプルでは、挿入された販売注文ごとに 1 度だけシステム時刻を取得することで問題に対処します。そして、ストアド プロシージャ Sales.usp_InsertSalesOrder_inmem で、SalesOrderHeader_inmem と SalesOrderDetail_inmem にある datetime 列に対して、その値を使用します。  
   
--   *エイリアス ユーザー定義データ型 (UDT)* - 元のテーブルでは、2 つのエイリアス UDT が使用されます。1 つは dbo.OrderNumber で、これは PurchaseOrderNumber 列に対して使用されます。もう 1 つは dbo.AccountNumber で、AccountNumber 列に対して使用されます。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] では、メモリ最適化テーブルに対してエイリアス UDT がサポートされていません。したがって、新しいテーブルでは、システム データ型 nvarchar(25) と nvarchar(15) が個別に使用されます。  
+-   *エイリアス ユーザー定義データ型 (UDT)* - 元のテーブルでは、2 つのエイリアス UDT が使用されます。1 つは dbo.OrderNumber で、これは PurchaseOrderNumber 列に対して使用されます。もう 1 つは dbo.AccountNumber で、AccountNumber 列に対して使用されます。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] では、メモリ最適化テーブルに対してエイリアス UDT がサポートされていません。したがって、新しいテーブルでは、システム データ型 nvarchar(25) と nvarchar(15) が個別に使用されます。  
   
 -   *インデックス キーの NULL 値を許容する列* - 元のテーブルでは、SalesPersonID 列は NULL 値を許容しますが、新しいテーブルのこの列では NULL 値が許容されず、既定の制約として値 -1 が設定されています。 この状況は、メモリ最適化テーブルのインデックスでは、インデックス キーに NULL 値を許容する列を使用できないためです。この場合は、-1 が NULL のサロゲートです。  
   
--   *計算列* - [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である SalesOrderNumber および TotalDue は省略されます。 新しい Sales.vSalesOrderHeader_extended_inmem ビューには、SalesOrderNumber 列と TotalDue 列が反映されています。 したがって、これらの列が必要な場合は、このビューを使用します。  
+-   *計算列* - [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である SalesOrderNumber および TotalDue は省略されます。 新しい Sales.vSalesOrderHeader_extended_inmem ビューには、SalesOrderNumber 列と TotalDue 列が反映されています。 したがって、これらの列が必要な場合は、このビューを使用します。  
 
-    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降、メモリ最適化テーブルとインデックスで計算列がサポートされています。
+    - **適用対象:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.  
+[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1 以降、メモリ最適化テーブルとインデックスで計算列がサポートされています。
 
   
--   *外部キー制約* は、 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]のメモリ最適化テーブルでサポートされます。しかし参照テーブルもメモリ最適化テーブルである場合に限ります。 メモリ最適化テーブルにも移行されるテーブルを参照する外部キーは、移行したテーブルに保持されますが、他の外部キーは省略されます。  また、SalesOrderHeader_inmem はサンプル ワークロードのホット テーブルであり、外部キー制約には、すべての DML 操作に対して追加の処理が必要です。これは、このテーブルには、この制約で参照される他のすべてのテーブル内の参照が必要だからです。 したがって、アプリによって Sales.SalesOrderHeader_inmem table に対する参照整合性が確保されているものと見なされ、行の挿入時には参照整合性は検証されません。  
+-   *外部キー制約* は、 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]のメモリ最適化テーブルでサポートされます。しかし参照テーブルもメモリ最適化テーブルである場合に限ります。 メモリ最適化テーブルにも移行されるテーブルを参照する外部キーは、移行したテーブルに保持されますが、他の外部キーは省略されます。  また、SalesOrderHeader_inmem はサンプル ワークロードのホット テーブルであり、外部キー制約には、すべての DML 操作に対して追加の処理が必要です。これは、このテーブルには、この制約で参照される他のすべてのテーブル内の参照が必要だからです。 したがって、アプリによって Sales.SalesOrderHeader_inmem table に対する参照整合性が確保されているものと見なされ、行の挿入時には参照整合性は検証されません。  
   
--   *Rowguid* - rowguid 列は省略されます。 uniqueidentifier はメモリ最適化テーブルでサポートされますが、ROWGUIDCOL オプションは [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]ではサポートされません。 この種類の列は、通常、マージ レプリケーション、または filestream 列を持つテーブルで使用されます。 このサンプルには、どちらも含まれていません。  
+-   *Rowguid* - rowguid 列は省略されます。 uniqueidentifier はメモリ最適化テーブルでサポートされますが、ROWGUIDCOL オプションは [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]ではサポートされません。 この種類の列は、通常、マージ レプリケーション、または filestream 列を持つテーブルで使用されます。 このサンプルには、どちらも含まれていません。  
   
  Sales.SalesOrderDetail  
   
 -   "*既定の制約*" - SalesOrderHeader と同様、システムの日付/時刻を必要とする既定の制約は移行されません。現在のシステムの日付/時刻の挿入は、販売注文を挿入するストアド プロシージャによる初回挿入時に行われます。  
   
--   "*計算列*" - [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である LineTotal は計算列としては移行されませんでした。 この列にアクセスするには、Sales.vSalesOrderDetail_extended_inmem ビューを使用します。  
+-   "*計算列*" - [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である LineTotal は計算列としては移行されませんでした。 この列にアクセスするには、Sales.vSalesOrderDetail_extended_inmem ビューを使用します。  
   
 -   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   

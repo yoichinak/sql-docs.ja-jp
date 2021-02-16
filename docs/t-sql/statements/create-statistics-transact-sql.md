@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - STATISTICS
 - STATISTICS_TSQL
@@ -27,12 +27,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0e799f28d327204707298dc63a4fb1a8470fa2f
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 7a86a2cfbe236aad6e37e0f8895f2be29ec1c5ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170524"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100344022"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -171,7 +171,7 @@ CREATE STATISTICS statistics_name
  > [!NOTE]
  > テーブルが切り捨てられた場合、切り捨てられた HoBT に基づいて作成されたすべての統計は、既定のサンプリング率を使用するように戻されます。
 
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4 以降) 以降 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。    
+ **適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4 以降) 以降 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。    
   
  STATS_STREAM **=** _stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -202,7 +202,7 @@ CREATE STATISTICS statistics_name
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。  
   
 MAXDOP = *max_degree_of_parallelism*  
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
   
  統計操作の間、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   

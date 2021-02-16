@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 054de1a7f4213a7a8c23ff44bab021d2b64c9f35
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 406c1a5eb384db2d03514193e0e252ca89c94bd4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088784"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346372"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux に SQL Server フルテキスト検索をインストールする
 
@@ -256,7 +256,7 @@ sudo zypper update mssql-server-fts
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>セマンティック検索
-フルテキスト検索の機能に基づく[セマンティック検索](../relational-databases/search/semantic-search-sql-server.md)では、統計的に関連性がある*キー フレーズ*を抽出してインデックスを作成します。 これにより、データベースのドキュメント内の意味に対してクエリを実行できるようになります。 また、これは類似したドキュメントを識別するのにも役立ちます。
+フルテキスト検索の機能に基づく [セマンティック検索](../relational-databases/search/semantic-search-sql-server.md)では、統計的に関連性がある *キー フレーズ* を抽出してインデックスを作成します。 これにより、データベースのドキュメント内の意味に対してクエリを実行できるようになります。 また、これは類似したドキュメントを識別するのにも役立ちます。
 
 セマンティック検索を使用するためには、まず使用するコンピューターにセマンティック言語統計データベースを復元する必要があります。
 

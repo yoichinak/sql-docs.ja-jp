@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca55276a6108cd53ffae82fd4c40089023da20fb
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: f350aa9ee715212dcfc5e6163f758110cde58023
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243616"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342179"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
@@ -41,7 +41,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 
 - パッケージに同じ名前の複数のデータ フロー タスクが含まれる場合、データ タップは指定された名前で最初に見つかったデータ フロー タスクに追加されます。  
   
-- データ タップを削除するには、実行のインスタンスが作成済みの状態 ( [catalog.operations &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **status** 列の値が 1) である必要があります。  
+- データ タップを削除するには、実行のインスタンスが作成済みの状態 ([catalog.operations &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **status** 列の値が 1) である必要があります。  
   
 ## <a name="return-codes"></a>リターン コード  
  成功した場合は 0 を返します。  

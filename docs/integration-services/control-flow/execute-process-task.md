@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b19a591448da6e14c6275462ba6cb5ae595092a0
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 98409c2a75cc76589a705579ff02f1be34c9c7b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197216"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352115"
 ---
 # <a name="execute-process-task"></a>プロセス実行タスク
 
@@ -131,13 +131,13 @@ ms.locfileid: "92197216"
  プロセス終了コードが **[SuccessValue]** で指定されている値と異なった場合、タスクを終了するかどうかを指定します。  
   
  **[SuccessValue]**  
- 実行可能ファイルが正常に終了した場合に返される値を指定します。 既定では、この値は **0**に設定されます。  
+ 実行可能ファイルが正常に終了した場合に返される値を指定します。 既定では、この値は **0** に設定されます。  
   
  **[TimeOut]**  
  プロセスを実行できる秒数を指定します。 値を **0** に指定すると、タイムアウト値が使用されず、プロセスは完了するかエラーが発生するまで実行されます。  
   
  **[TerminateProcessAfterTimeOut]**  
- **[TimeOut]** オプションで指定されたタイムアウト時間の後に、プロセスを強制終了するかどうかを指定します。 このオプションは、 **[TimeOut]** が **0**以外の場合にのみ使用できます。  
+ **[TimeOut]** オプションで指定されたタイムアウト時間の後に、プロセスを強制終了するかどうかを指定します。 このオプションは、 **[TimeOut]** が **0** 以外の場合にのみ使用できます。  
   
  **[WindowStyle]**  
  プロセスを実行する際のウィンドウのスタイルを指定します。  

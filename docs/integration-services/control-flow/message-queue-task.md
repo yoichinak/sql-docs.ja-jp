@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e39187e32afbcf72bf1eb950f18d5f21cef38211
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194284"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348300"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -118,7 +118,7 @@ ms.locfileid: "92194284"
  メッセージ キュー タスクの説明を入力します。  
   
  **[Use2000Format]**  
- Message Queuing (MSMQ) の 2000 形式を使用するかどうかを指定します。 既定値は **False**です。  
+ Message Queuing (MSMQ) の 2000 形式を使用するかどうかを指定します。 既定値は **False** です。  
   
  **[MSMQConnection]**  
  既存の MSMQ 接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
@@ -133,7 +133,7 @@ ms.locfileid: "92194284"
   
 ### <a name="options"></a>Options  
  **[UseEncryption]**  
- メッセージを暗号化するかどうかを示します。 既定値は **False**です。  
+ メッセージを暗号化するかどうかを示します。 既定値は **False** です。  
   
  **[EncryptionAlgorithm]**  
  暗号化を使用する場合は、使用する暗号化アルゴリズムを指定します。 メッセージ キュー タスクでは、RC2 と RC4 のアルゴリズムを使用できます。 既定値は **[RC2]** です。  
@@ -174,10 +174,10 @@ ms.locfileid: "92194284"
   
 ### <a name="options"></a>Options  
  **[RemoveFromMessageQueue]**  
- メッセージが受信された後にキューからメッセージを削除するかどうかを示します。 既定では、この値は **False**に設定されます。  
+ メッセージが受信された後にキューからメッセージを削除するかどうかを示します。 既定では、この値は **False** に設定されます。  
   
  **[ErrorIfMessageTimeOut]**  
- メッセージがタイムアウトになったときに、エラー メッセージを表示してタスクを中止するかどうかを示します。 既定値は **False**です。  
+ メッセージがタイムアウトになったときに、エラー メッセージを表示してタスクを中止するかどうかを示します。 既定値は **False** です。  
   
  **[TimeoutAfter]**  
  タスクが失敗したときにエラー メッセージを表示するように指定した場合、タイムアウト メッセージが表示されるまでの待機時間を秒数で指定します。  
@@ -199,7 +199,7 @@ ms.locfileid: "92194284"
  使用するファイルのパスを入力します。または、省略記号ボタン ( **[...]** ) をクリックし、ファイルを指定します。  
   
  **Overwrite**  
- データ ファイル メッセージの内容を保存するとき、既存のファイルのデータを上書きするかどうかを示します。 既定値は **False**です。  
+ データ ファイル メッセージの内容を保存するとき、既存のファイルのデータを上書きするかどうかを示します。 既定値は **False** です。  
   
  **Assert**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d95d8f774d2b9daba6bd2a0e7a179dd901ef0ac
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c5291b502ec70be8b86c6806e14404664d0b0831
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171044"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100347004"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "98171044"
   
 -   次の表では、CPU、コンピューターのアーキテクチャ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのさまざまな組み合わせに対して、自動的に構成されるワーカー スレッドの最大数 (値を 0 に設定した場合) を示します。"**_既定の最大ワーカー数_ + ((* 論理 CPU 数* - 4) **CPU あたりのワーカー数*)**" という式が使用されています。  
   
-    |CPU の数|32 ビット コンピューター ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前)|64 ビット コンピューター ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以前)|64 ビット コンピューター ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降)|   
+    |CPU の数|32 ビット コンピューター ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前)|64 ビット コンピューター ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 以前)|64 ビット コンピューター ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降)|   
     |------------|------------|------------|------------|  
     |\<= 4|256|512|512|   
     |8|288|576|576|   
@@ -79,14 +79,14 @@ ms.locfileid: "98171044"
     |128|1248|2496|4480|   
     |256|2272|4544|8576|   
     
-    [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以前の "*CPU あたりのワーカー数*" は、アーキテクチャ (32 ビットまたは 64 ビット) にのみ依存します。
+    [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 以前の "*CPU あたりのワーカー数*" は、アーキテクチャ (32 ビットまたは 64 ビット) にのみ依存します。
     
     |CPU の数|32 ビット コンピューター <sup>1</sup>|64 ビット コンピューター|   
     |------------|------------|------------|   
     |\<= 4|256|512|   
     |\> 4|256 + ((論理 CPU - 4) * 8)|512 <sup>2</sup> + ((論理 CPU 数 - 4) * 16)|   
     
-    [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降の "*CPU あたりのワーカー数*" は、アーキテクチャとプロセッサの数 (4 から 64 の間か、64 を超えるか) に依存します。
+    [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降の "*CPU あたりのワーカー数*" は、アーキテクチャとプロセッサの数 (4 から 64 の間か、64 を超えるか) に依存します。
     
     |CPU の数|32 ビット コンピューター <sup>1</sup>|64 ビット コンピューター|   
     |------------|------------|------------|   
@@ -94,7 +94,7 @@ ms.locfileid: "98171044"
     |\> 4 かつ \<= 64|256 + ((論理 CPU - 4) * 8)|512 <sup>2</sup> + ((論理 CPU 数 - 4) * 16)|   
     |\> 64|256 + ((論理 CPU - 4) * 32)|512 <sup>2</sup> + ((論理 CPU 数 - 4) * 32)|   
   
-    <sup>1</sup> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、32 ビットのオペレーティング システムにインストールすることはできません。 32 ビット コンピューターの値は、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前のバージョンを実行しているお客様への参考として一覧表示されています。 32 ビット コンピューター上で動作する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの場合、ワーカー スレッドの最大数として 1,024 をお勧めします。
+    <sup>1</sup> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、32 ビットのオペレーティング システムにインストールすることはできません。 32 ビット コンピューターの値は、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前のバージョンを実行しているお客様への参考として一覧表示されています。 32 ビット コンピューター上で動作する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの場合、ワーカー スレッドの最大数として 1,024 をお勧めします。
     
     <sup>2</sup> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]以降の "*既定の最大ワーカー数*" の値は、メモリが 2 GB 未満のコンピューターの場合は 2 で除算されます。
   

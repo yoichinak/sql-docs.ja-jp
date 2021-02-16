@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c0ec15f671e6319f82ed069f69d590d865f6682
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d32af051552c211592bcc4deb2bcd2c1c1c20079
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422186"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342261"
 ---
 # <a name="catalogdeny_permission-ssisdb-database"></a>catalog.deny_permission (SSISDB データベース)
 
@@ -38,7 +38,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>引数  
  [ @object_type = ] *object_type*  
- セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint**_ です。_  
+ セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint**_です。_  
   
  [ @object_id = ] *object_id*  
  セキュリティ保護可能なオブジェクトの一意の識別子 (ID) または主キーを指定します。 *object_id* は **bigint** です。  

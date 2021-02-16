@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 4a9137ad71947d222d246df046c6ab573fb4500d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f4201aa6c07d4ae96d44d8aa443b23e275e1f9f2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115815"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346416"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux のセキュリティ機能のチュートリアル
 
@@ -82,12 +82,12 @@ ALTER ROLE db_datareader ADD MEMBER Jerry;
 
 たとえば、次のステートメントでは、`Sales` という名前のデータベース ロールが作成され、`Sales` グループに対して `Orders` テーブルの行を表示、更新、削除する権限が与えられてから、ユーザー `Jerry` が `Sales` ロールに追加されます。   
    
-```   
-CREATE ROLE Sales;   
-GRANT SELECT ON Object::Sales TO Orders;   
-GRANT UPDATE ON Object::Sales TO Orders;   
-GRANT DELETE ON Object::Sales TO Orders;   
-ALTER ROLE Sales ADD MEMBER Jerry;   
+```   
+CREATE ROLE Sales;   
+GRANT SELECT ON Object::Sales TO Orders;   
+GRANT UPDATE ON Object::Sales TO Orders;   
+GRANT DELETE ON Object::Sales TO Orders;   
+ALTER ROLE Sales ADD MEMBER Jerry;   
 ```
 
 権限システムの詳細については、「[データベース エンジンの権限の概要](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。
@@ -99,27 +99,27 @@ ALTER ROLE Sales ADD MEMBER Jerry;  
 
 次の手順では、`Sales.SalesOrderHeader` テーブルに対して異なる行レベルのアクセス権を持つ 2 人のユーザーを設定する方法について説明します。 
 
-行レベルのセキュリティをテストするには、次の 2 つのユーザー アカウントを作成します。    
+行レベルのセキュリティをテストするには、次の 2 つのユーザー アカウントを作成します。    
    
-```   
-USE AdventureWorks2014;   
-GO   
+```   
+USE AdventureWorks2014;   
+GO   
    
-CREATE USER Manager WITHOUT LOGIN;     
+CREATE USER Manager WITHOUT LOGIN;     
    
-CREATE USER SalesPerson280 WITHOUT LOGIN;    
+CREATE USER SalesPerson280 WITHOUT LOGIN;    
 ```
 
-両方のユーザーに、`Sales.SalesOrderHeader` テーブルに対する読み取りアクセス権を付与します。    
+両方のユーザーに、`Sales.SalesOrderHeader` テーブルに対する読み取りアクセス権を付与します。    
    
-```   
-GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
+```   
+GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
 GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;
 ```
    
 新しいスキーマと、インライン テーブル値関数を作成します。 `SalesPersonID` 列内の行が `SalesPerson` ログインの ID と一致する場合、またはクエリを実行しているユーザーがマネージャー ユーザーである場合、関数は 1 を返します。   
    
-```     
+```     
 CREATE SCHEMA Security;   
 GO   
    
@@ -129,7 +129,7 @@ WITH SCHEMABINDING
 AS     
    RETURN SELECT 1 AS fn_securitypredicate_result    
 WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())     
-    OR (USER_NAME() = 'Manager');    
+    OR (USER_NAME() = 'Manager');    
 ```
 
 テーブルで、フィルター述語およびブロック述語としてこの関数を追加するセキュリティ ポリシーを作成します。  
@@ -172,7 +172,7 @@ WITH (STATE = OFF);
 ```
 USE AdventureWorks2014;
 GO
-ALTER TABLE Person.EmailAddress    
+ALTER TABLE Person.EmailAddress    
 ALTER COLUMN EmailAddress    
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
@@ -231,7 +231,7 @@ GO
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-USE AdventureWorks2014;  
+USE AdventureWorks2014;  
 GO
   
 CREATE DATABASE ENCRYPTION KEY  
@@ -254,7 +254,7 @@ TDE の詳細については、「[Transparent Data Encryption (TDE)](../relatio
 
 
 ## <a name="configure-backup-encryption"></a>バックアップの暗号化の構成
-SQL Server には、バックアップの作成中にデータを暗号化する機能があります。 バックアップの作成時に暗号化アルゴリズムと暗号化機能 (証明書または非対称キー) を指定することにより、暗号化されたバックアップ ファイルを作成することができます。    
+SQL Server には、バックアップの作成中にデータを暗号化する機能があります。 バックアップの作成時に暗号化アルゴリズムと暗号化機能 (証明書または非対称キー) を指定することにより、暗号化されたバックアップ ファイルを作成することができます。    
   
 > [!WARNING]
 > 証明書または非対称キーをバックアップすることが非常に重要であり、これらを使用して暗号化したバックアップ ファイルとは別の場所に保存することをお勧めします。 証明書または非対称キーがないと、バックアップ ファイルが使用不可能になり、バックアップを復元することができません。 
@@ -263,12 +263,12 @@ SQL Server には、バックアップの作成中にデータを暗号化する
 次の例では、証明書を作成し、証明書によって保護されているバックアップを作成します。
 
 ```
-USE master;  
-GO  
-CREATE CERTIFICATE BackupEncryptCert   
-   WITH SUBJECT = 'Database backups';  
+USE master;  
+GO  
+CREATE CERTIFICATE BackupEncryptCert   
+   WITH SUBJECT = 'Database backups';  
 GO 
-BACKUP DATABASE [AdventureWorks2014]  
+BACKUP DATABASE [AdventureWorks2014]  
 TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 WITH  
   COMPRESSION,  
