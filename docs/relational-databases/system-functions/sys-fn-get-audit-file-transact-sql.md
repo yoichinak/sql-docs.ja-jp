@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: e0e6692a24371b91b57ad2269ec48c43db1e1a8c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 013586570ce43b8270ae2613c05ced8bc9bdc48b
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99206080"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525216"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -52,11 +52,11 @@ fn_get_audit_file ( file_pattern,
     
     この引数には、パス (ドライブ文字またはネットワーク共有) とファイル名の両方を含める必要があります。ファイル名にはワイルドカードを使用できます。 1つのアスタリスク (*) を使用して、監査ファイルセットから複数のファイルを収集できます。 次に例を示します。  
   
-    -   **\<path>\\\** _-指定した場所にあるすべての監査ファイルを収集します。  
+    -   **\<path>\\\*** -指定された場所にあるすべての監査ファイルを収集します。  
   
-    -   _* \<path> \LoginsAudit_{guid} * * _-指定した名前と GUID のペアを持つすべての監査ファイルを収集します。  
+    -   **\<path> \ LOGINSAUDIT_ {GUID}***-指定した名前と GUID のペアを持つすべての監査ファイルを収集します。  
   
-    -   _* \<path> \LoginsAudit_{GUID} (_m) * *-特定の監査ファイルを収集します。  
+    -   **\<path> \ LOGINSAUDIT_ {GUID} (_m)** 、特定の監査ファイルを収集します。  
   
  - **Azure SQL Database**:
  
@@ -115,7 +115,7 @@ fn_get_audit_file ( file_pattern,
 | server_principal_name | **sysname** | 現在のログイン。 NULL 値が許可されます。 |  
 | server_principal_sid | **varbinary** | 現在のログイン SID。 NULL 値が許可されます。 |  
 | session_id | **smallint** | イベントが発生したセッションの ID。 NULL 値は許可されません。 |  
-| session_server_principal_name | **sysname** | セッションのサーバープリンシパル。 NULL 値が許可されます。 |  
+| session_server_principal_name | **sysname** | セッションのサーバープリンシパル。 NULL 値が許可されます。 明示的または暗黙的なコンテキストスイッチが存在した場合に SQL Server のインスタンスに接続されていた元のログインの id を返します。|  
 | statement | **nvarchar (4000)** | TSQL ステートメント (存在する場合)。 NULL 値が許可されます。 該当しない場合は NULL を返します。 |  
 | 成功 | **bit** | イベントをトリガーしたアクションが成功したかどうかを示します。 NULL 値は許可されません。 ログイン イベント以外のすべてのイベントで、操作ではなく、権限チェックが成功したか失敗したかのみを報告します。<br /> 1 = 成功 (success)<br /> 0 = 失敗 |
 | target_database_principal_id | **int** | 許可、拒否、取り消し操作が実行されるデータベース プリンシパル。 NULL 値は許可されません。 該当しない場合は0を返します。 |  
@@ -128,7 +128,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar (4000)** | **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、Azure SQL Database および SQL Managed Instance<br /><br /> **Sp_audit_write** ストアドプロシージャを使用して、監査ログに記録する必要のある追加情報を記録するために使用します。 |  
 
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 - **Fn_get_audit_file** に渡された *file_pattern* 引数が、存在しないパスまたはファイルを参照している場合、またはファイルが監査ファイルでない場合は、 **MSG_INVALID_AUDIT_FILE** エラーメッセージが返されます。  
 - **APPLICATION_LOG**、 **SECURITY_LOG**、または **EXTERNAL_MONITOR** オプションを使用して監査を作成する場合、 **fn_get_audit_file** は使用できません。
 
@@ -140,7 +140,7 @@ fn_get_audit_file ( file_pattern,
   - 非サーバー管理者は、現在のデータベースからの監査ログにのみアクセスできます。
   - 上記の条件を満たしていない blob はスキップされます (スキップされた blob の一覧がクエリ出力メッセージに表示されます)。関数は、アクセスが許可されている blob からのログのみを返します。  
   
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 - **SQL Server**
 

@@ -17,20 +17,20 @@ helpviewer_keywords:
 - sp_db_selective_xml_index procedure
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5df370a674026b4c6ebc7eb59985505821e3b028
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: ed30d2b8df6141b308d32dee8f2fdcec0c2eceb1
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489446"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525177"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに対して選択的 XML インデックス機能を有効または無効にします。 パラメーターを指定しないでストアド プロシージャを呼び出すと、選択的 XML インデックスが特定のデータベースで有効になっている場合は 1 が返されます。  
-  
+
 > [!NOTE]  
->  このストアドプロシージャを使用して選択的 XML インデックスを無効にするには、 [transact-sql&#41;コマンド &#40;ALTER DATABASE SET オプション ](../../t-sql/statements/alter-database-transact-sql-set-options.md) を使用して、データベースを単純復旧モードにする必要があります。  
+> 以降では [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] 、選択的 XML インデックス機能を無効にすることはできません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] で [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] は、このストアドプロシージャを使用して選択的 XML インデックス機能を無効にするには、 [ALTER Database SET オプション &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) コマンドを使用して、データベースを単純復旧モデルに配置する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
