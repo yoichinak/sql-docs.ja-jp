@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,12 +21,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18a18c170ffddafca6656f7f3092a22e1f3b6524
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 185e4f53346d61ec3d53462fec3797b50f20d4c5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171714"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338763"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT (データベースの権限の許可) (Transact-SQL)
 
@@ -125,11 +125,11 @@ Windows グループにマップされているデータベース ユーザー�
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br />**適用対象**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用対象**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |すべての外部データ ソースを変更します。|ALTER|CONTROL SERVER|
 |任意の外部のファイル形式を変更します。|ALTER|CONTROL SERVER|
-|ALTER ANY EXTERNAL LIBRARY <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|CONTROL|CONTROL SERVER |
+|ALTER ANY EXTERNAL LIBRARY <br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]|CONTROL|CONTROL SERVER |
 |ALTER ANY FULLTEXT CATALOG|ALTER|CONTROL SERVER|
 |任意のマスクを変更します。|CONTROL|CONTROL SERVER|
 |ALTER ANY MESSAGE TYPE|ALTER|CONTROL SERVER|
@@ -149,7 +149,7 @@ Windows グループにマップされているデータベース ユーザー�
 |CONNECT REPLICATION|CONTROL|CONTROL SERVER|
 |CONTROL|CONTROL|CONTROL SERVER|
 |CREATE AGGREGATE|ALTER|CONTROL SERVER|
-|CREATE ANY EXTERNAL LIBRARY <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|CONTROL|CONTROL SERVER |
+|CREATE ANY EXTERNAL LIBRARY <br /> **適用対象**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]|CONTROL|CONTROL SERVER |
 |CREATE ASSEMBLY|ALTER ANY ASSEMBLY|CONTROL SERVER|
 |CREATE ASYMMETRIC KEY|ALTER ANY ASYMMETRIC KEY|CONTROL SERVER|
 |CREATE CERTIFICATE|ALTER ANY CERTIFICATE|CONTROL SERVER|
@@ -177,7 +177,7 @@ Windows グループにマップされているデータベース ユーザー�
 |DELETE|CONTROL|CONTROL SERVER|
 |EXECUTE|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]|CONTROL|CONTROL SERVER|
-|EXECUTE EXTERNAL SCRIPT <br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)]|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
+|EXECUTE EXTERNAL SCRIPT <br /> **適用対象**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
 |KILL DATABASE CONNECTION<br />**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|

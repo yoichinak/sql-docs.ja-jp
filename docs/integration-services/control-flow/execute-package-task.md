@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8251f2ff30fafff584b4f56fe93a9b7423ea412b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725935"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352079"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
 
@@ -64,7 +64,7 @@ ms.locfileid: "91725935"
   
  また、親パッケージと子パッケージが 1 つの単位として共に失敗する方が良い場合や、別のプロセスで追加のオーバーヘッドが発生しない方が良い場合もあります。 たとえば、子プロセスが失敗し、パッケージの親プロセス内の次の処理が、子プロセスが成功した場合に行われる場合、子パッケージは親パッケージのプロセス内で実行される必要があります。  
   
- 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティは **False**に設定されるので、子パッケージは親パッケージと同じプロセス内で実行されます。 このプロパティを **True**に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、このプロパティを **True**に設定した場合、ツールのみのインストールではパッケージをデバッグできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../../integration-services/install-windows/install-integration-services.md)」を参照してください。  
+ 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティは **False** に設定されるので、子パッケージは親パッケージと同じプロセス内で実行されます。 このプロパティを **True** に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、このプロパティを **True** に設定した場合、ツールのみのインストールではパッケージをデバッグできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../../integration-services/install-windows/install-integration-services.md)」を参照してください。  
   
 ## <a name="extending-transactions"></a>トランザクションの拡張  
  親パッケージで使用するトランザクションを子パッケージに拡張できます。このため、両方のパッケージで実行される作業をコミットまたはロールバックできます。 たとえば、親パッケージで実行されるデータベースの挿入は、子パッケージで実行されるデータベースの挿入に基づいてコミットまたはロールバックできます。その逆も同様です。 詳細については、「 [トランザクションの継承](../integration-services-transactions.md)」を参照してください。  
@@ -107,7 +107,7 @@ ms.locfileid: "91725935"
  詳細については、「 [子パッケージでの変数およびパラメーターの値の使用](../../integration-services/packages/legacy-package-deployment-ssis.md#child)」を参照してください。  
   
 ### <a name="accessing-parent-package-variables"></a>親パッケージの変数へのアクセス  
- 子パッケージではスクリプト タスクを使用して、親パッケージの変数にアクセスできます。 **スクリプト タスク エディター**で **[スクリプト]** ページに親パッケージ変数の名前を入力するときは、変数名に **User:** を含めないでください。 そうしないと、親パッケージを実行したときに子パッケージで変数が見つかりません。  
+ 子パッケージではスクリプト タスクを使用して、親パッケージの変数にアクセスできます。 **スクリプト タスク エディター** で **[スクリプト]** ページに親パッケージ変数の名前を入力するときは、変数名に **User:** を含めないでください。 そうしないと、親パッケージを実行したときに子パッケージで変数が見つかりません。  
   
 ## <a name="configuring-the-execute-package-task"></a>パッケージ実行タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
@@ -165,7 +165,7 @@ ms.locfileid: "91725935"
  子パッケージがパスワードで保護されている場合は、子パッケージのパスワードを入力するか、参照ボタン [...] をクリックして子パッケージの新しいパスワードを作成します。  
   
  **ExecuteOutOfProcess**  
- 子パッケージが親パッケージのプロセス内で実行するか、または別のプロセスで実行するかを指定します。 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティは **False**に設定されるので、子パッケージは親パッケージと同じプロセス内で実行されます。 このプロパティを **true**に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、プロパティを **true**に設定した場合、ツールのみのインストールではパッケージをデバッグできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 製品をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../../integration-services/install-windows/install-integration-services.md)」を参照してください。  
+ 子パッケージが親パッケージのプロセス内で実行するか、または別のプロセスで実行するかを指定します。 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティは **False** に設定されるので、子パッケージは親パッケージと同じプロセス内で実行されます。 このプロパティを **true** に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、プロパティを **true** に設定した場合、ツールのみのインストールではパッケージをデバッグできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 製品をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../../integration-services/install-windows/install-integration-services.md)」を参照してください。  
   
 #### <a name="referencetype-dynamic-options"></a>[ReferenceType] の動的オプション  
   

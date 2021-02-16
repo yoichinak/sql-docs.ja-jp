@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 0fb9bcf6414b9c3fcc717cd219829f6f8fa14f7c
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: d40b3e89b9250b148f59ed78765fff9e2eaf47df
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98765970"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349317"
 ---
 # <a name="enable-the-always-on-availability-group-feature-for-a-sql-server-instance"></a>SQL Server インスタンスの Always On 可用性グループ機能を有効にする
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

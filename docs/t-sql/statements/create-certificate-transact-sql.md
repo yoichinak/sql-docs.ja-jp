@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CERTIFICATE
 - CREATE_CERTIFICATE_TSQL
@@ -28,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 238fcde63bf0af459ab741f54a411fefb317bfe9
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 4774ca76959e70514d93c31b9a8ccb81650dc97d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170354"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344049"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-pdw](../../includes/applies-to-version/sql-asdb-pdw.md)]
@@ -168,7 +168,7 @@ CREATE CERTIFICATE certificate_name
 ## <a name="remarks"></a>注釈  
  証明書は、X.509 標準に準拠したデータベース レベルのセキュリティ保護可能なリソースであり、X.509 V1 フィールドをサポートします。 `CREATE CERTIFICATE` では、ファイル、バイナリ定数、またはアセンブリから証明書を読み込むことができます。 このステートメントでは、キー ペアを生成して自己署名証明書を作成することもできます。  
   
- 秘密キーは、暗号化された形式で 2500 バイト以下でなければなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される秘密キーの長さは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] までは 1024 ビット、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降は 2048 ビットです。 外部ソースからインポートされる秘密キーの最小の長さは 384 ビットで、最大の長さは 4,096 ビットです。 インポートされる秘密キーの長さは、64 ビットの整数倍であることが必要です。 TDE に使用される証明書では、秘密キーのサイズが 3456 ビットに制限されています。  
+ 秘密キーは、暗号化された形式で 2500 バイト以下でなければなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される秘密キーの長さは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] までは 1024 ビット、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降は 2048 ビットです。 外部ソースからインポートされる秘密キーの最小の長さは 384 ビットで、最大の長さは 4,096 ビットです。 インポートされる秘密キーの長さは、64 ビットの整数倍であることが必要です。 TDE に使用される証明書では、秘密キーのサイズが 3456 ビットに制限されています。  
   
  証明書の全体のシリアル番号が格納されているが、sys.certificates カタログ ビューで最初の 16 バイトのみが表示されます。  
   
@@ -187,7 +187,7 @@ CREATE CERTIFICATE certificate_name
   
  証明書のバイナリ記述は、[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) および [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 関数を使って作成できます。 **CERTPRIVATEKEY** と **CERTENCODED** を使用して証明書を別のデータベースにコピーする例については、「[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)」の例 B を参照してください。  
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] では、MD2、MD4、MD5、SHA、SHA1 のアルゴリズムは非推奨です。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] までは、SHA1 を使用して自己署名証明書が作成されます。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降では、SHA2_256 を使用して自己署名証明書が作成されます。
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] では、MD2、MD4、MD5、SHA、SHA1 のアルゴリズムは非推奨です。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] までは、SHA1 を使用して自己署名証明書が作成されます。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降では、SHA2_256 を使用して自己署名証明書が作成されます。
 
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する `CREATE CERTIFICATE` 権限が必要です。 証明書を所有できるのは、Windows ログイン、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、およびアプリケーション ロールだけです。 グループとロールは証明書を所有できません。  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 61790d066d6cdf0d3e2a520cca740823b78fc6dc
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: bc52f0a2052d0b9abd1700e92af3a30c0e02bad2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524047"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346438"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Microsoft SQL Server エージェント ジョブを作成して Linux 上で実行する
 
@@ -60,7 +60,7 @@ Linux 上で SQL Server エージェントを使用するには、まず SQL Ser
 
 ## <a name="create-a-sample-database"></a>サンプル データベースの作成
 
-次の手順に従って、 **SampleDB** という名前のサンプル データベースを作成します。 このデータベースは、毎日のバックアップ ジョブを実行するために使用されます。
+次の手順に従って、**SampleDB** という名前のサンプル データベースを作成します。 このデータベースは、毎日のバックアップ ジョブを実行するために使用されます。
 
 1. Linux コンピューター上で、bash ターミナル セッションを開きます。
 
@@ -78,7 +78,7 @@ Linux 上で SQL Server エージェントを使用するには、まず SQL Ser
 
 ## <a name="create-a-job-with-transact-sql"></a>Transact-SQL を使用してジョブを作成する
 
-次の手順では、Transact-SQL コマンドを使用して、Linux 上に SQL Server エージェント ジョブを作成します。 このジョブによって、サンプル データベース ( **SampleDB** ) のバックアップが毎日実行されます。
+次の手順では、Transact-SQL コマンドを使用して、Linux 上に SQL Server エージェント ジョブを作成します。 このジョブによって、サンプル データベース (**SampleDB**) のバックアップが毎日実行されます。
 
 > [!TIP]
 > 任意の T-SQL クライアントを使用して、これらのコマンドを実行できます。 たとえば、Linux 上で、[sqlcmd](sql-server-linux-setup-tools.md) または [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) を使用できます。 リモート Windows Server から SQL Server Management Studio (SSMS) でクエリを実行したり、次のセクションで説明されているジョブ管理用の UI インターフェイスを使用したりすることもできます。

@@ -9,12 +9,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1809ea2c3f99528eb15518808e13387c519878da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30d51162b36d787e8976b2c6aa48e533fd476f8e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760764"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015062"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server または SQL Database に JSON ドキュメントを保存する
 SQL Server と Azure SQL Database には、ネイティブ JSON 機能があります。標準 SQL 言語を利用し、JSON ドキュメントを解析できます。 SQL Server または SQL Database に JSON ドキュメントを保存したり、NoSQL データベースの場合のように JSON データを問い合わせたりできます。 この記事では、SQL Server または SQL Database に JSON ドキュメントを保存するためのオプションについて説明します。

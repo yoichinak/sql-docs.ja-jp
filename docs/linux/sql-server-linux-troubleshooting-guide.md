@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 56961a0dd9f57085ebe2d937668fe32c7e28dc73
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115802"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346224"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux のトラブルシューティング
 
@@ -160,7 +160,7 @@ SQLCMD を使用してシングル ユーザー モードで SQL Server を起�
 最後の手段として、master および model データベースを既定のバージョンに再構築することもできます。
 
 > [!WARNING]
-> 次の手順を実行すると、構成した**すべての SQL Server システム データが削除**されます。 これには、ユーザー データベースに関する情報が含まれます (ただし、ユーザー データベース自体は含まれません)。 また、システム データベースに格納されている他の情報も削除されます。これには、マスター キー情報、master に読み込まれたすべての証明書、SA ログイン パスワード、msdb からのジョブ関連情報、msdb からの DB メール情報、および sp_configure オプションが含まれます。 影響を理解している場合にのみ使用してください。
+> 次の手順を実行すると、構成した **すべての SQL Server システム データが削除** されます。 これには、ユーザー データベースに関する情報が含まれます (ただし、ユーザー データベース自体は含まれません)。 また、システム データベースに格納されている他の情報も削除されます。これには、マスター キー情報、master に読み込まれたすべての証明書、SA ログイン パスワード、msdb からのジョブ関連情報、msdb からの DB メール情報、および sp_configure オプションが含まれます。 影響を理解している場合にのみ使用してください。
 
 1. SQL Server を停止します。
 

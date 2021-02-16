@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfd234025664e7508d7d9cf942ff81a216b447a2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 89a79b07977d8fec2e2dd6f2a8b9acd9cea0ba5e
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171754"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100343165"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>リモート BLOB ストア (RBS) [SQL Server]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "98171754"
 
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン | RBS のダウンロード場所 |
 |:---|:---|
-| [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833) |
+| [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833) |
 | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) |
-| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] RBS ダウンロード ページ](https://go.microsoft.com/fwlink/?linkid=2109005) |
+| [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] RBS ダウンロード ページ](https://go.microsoft.com/fwlink/?linkid=2109005) |
 | &nbsp; | &nbsp; |
   
  
@@ -72,7 +72,7 @@ ms.locfileid: "98171754"
 ### <a name="credential-store-symmetric-key"></a>資格情報ストアの対称キー  
  プロバイダーが資格情報ストア内に格納されているシークレットをセットアップして使用する必要がある場合、RBS では対称キーを使用して、プロバイダーのシークレットを暗号化します。このシークレットは、クライアントがプロバイダーの BLOB ストアに対する許可を得るために使用する場合があります。  
   
--   RBS 2016 では **AES_128** 対称キーを使用します。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] では、後方互換性を確保する場合を除き、新しい **TRIPLE_DES** キーを作成することはできません。 詳細については、「[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)」を参照してください。  
+-   RBS 2016 では **AES_128** 対称キーを使用します。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] では、後方互換性を確保する場合を除き、新しい **TRIPLE_DES** キーを作成することはできません。 詳細については、「[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)」を参照してください。  
   
 -   RBS 2014 以前のバージョンでは、古い **TRIPLE_DES** 対称キー アルゴリズムを使用して暗号化されたシークレットを保持する資格情報ストアを使用します。 現在、**TRIPLE_DES** を使用している場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] では、より強力な暗号化方式を適用するためにこのトピックの手順に従ってキーをローテーションし、セキュリティを強化することをお勧めします。  
   

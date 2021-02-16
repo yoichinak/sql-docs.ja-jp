@@ -13,12 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c93cecf5b261a888375ead03aac1eec07b76c63d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 89cb7e2de8cc4fa78afa93ca35f4eb36dab7136a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196496"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345723"
 ---
 # <a name="flexible-file-task"></a>柔軟なファイル タスク
 
@@ -37,10 +37,10 @@ ms.locfileid: "92196496"
 
 **[操作]** プロパティでは、実行するファイル操作を指定します。
 現在サポートされている操作は、次のとおりです。
-- **コピー**操作
-- **削除**操作
+- **コピー** 操作
+- **削除** 操作
 
-**コピー**操作に対して使用できるプロパティは次のとおりです。
+**コピー** 操作に対して使用できるプロパティは次のとおりです。
 
 - **SourceConnectionType:** ソース接続マネージャーの種類を指定します。
 - **SourceConnection:** ソース接続マネージャーを指定します。
@@ -52,7 +52,7 @@ ms.locfileid: "92196496"
 - **DestinationFolderPath:** 送信先フォルダーのパスを指定します。
 - **DestinationFileName:** 送信先ファイル名を指定します。 空白のままにすると、ソース ファイル名が使用されます。
 
-**削除**操作に対して使用できるプロパティは次のとおりです。
+**削除** 操作に対して使用できるプロパティは次のとおりです。
 - **ConnectionType:** 接続マネージャーの種類を指定します。
 - **Connection:** 接続マネージャーを指定します。
 - **FolderPath:** フォルダーのパスを指定します。
@@ -61,10 +61,10 @@ ms.locfileid: "92196496"
 
 ***サービス プリンシパルのアクセス許可の構成に関する注意事項***
 
-**テスト接続**が機能するためには (BLOB ストレージまたは Data Lake Storage Gen2)、サービス プリンシパルには少なくともストレージ アカウントに対する**ストレージ BLOB データ閲覧者**の役割を割り当てる必要があります。
+**テスト接続** が機能するためには (BLOB ストレージまたは Data Lake Storage Gen2)、サービス プリンシパルには少なくともストレージ アカウントに対する **ストレージ BLOB データ閲覧者** の役割を割り当てる必要があります。
 これは、[RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) を使用して行います。
 
-BLOB ストレージの場合、少なくとも**ストレージ BLOB データ閲覧者**と**ストレージ BLOB データ共同作成者**の役割をそれぞれ割り当てることにより、読み取りと書き込みのアクセス許可が付与されます。
+BLOB ストレージの場合、少なくとも **ストレージ BLOB データ閲覧者** と **ストレージ BLOB データ共同作成者** の役割をそれぞれ割り当てることにより、読み取りと書き込みのアクセス許可が付与されます。
 
 Data Lake Storage Gen2 の場合、アクセス許可は RBAC と [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) の両方によって決定されます。
 [こちら](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)に説明されているように、アプリ登録に対応するサービス プリンシパルのオブジェクト ID (OID) を使用して ACL を構成することに注意してください。
@@ -73,7 +73,7 @@ Data Lake Storage Gen2 の場合、アクセス許可は RBAC と [ACL](/azure/s
 要求された操作がセキュリティ プリンシパルの RBAC 割り当てによって認可された場合、認可はすぐに解決され、追加の ACL チェックは実行されません。
 また、セキュリティ プリンシパルに RBAC 割り当てがない場合、または要求の操作が割り当てられたアクセス許可と一致しない場合、ACL チェックが実行され、要求された操作を実行する権限がセキュリティ プリンシパルに付与されているかどうかが判断されます。
 
-- 読み取りアクセス許可の場合、少なくともソース ファイル システムから開始する**実行**アクセス許可を、コピーするファイルに対する**読み取り**アクセス許可と共に付与します。 または、少なくとも**ストレージ BLOB データ閲覧者**の役割を RBAC を使用して付与します。
-- 書き込みアクセス許可の場合、少なくともシンク ファイル システムから開始する**実行**アクセス許可を、シンク フォルダーに対する**書き込み**アクセス許可と共に付与します。 または、少なくとも**ストレージ BLOB データ共同作成者**の役割を RBAC を使用して付与します。
+- 読み取りアクセス許可の場合、少なくともソース ファイル システムから開始する **実行** アクセス許可を、コピーするファイルに対する **読み取り** アクセス許可と共に付与します。 または、少なくとも **ストレージ BLOB データ閲覧者** の役割を RBAC を使用して付与します。
+- 書き込みアクセス許可の場合、少なくともシンク ファイル システムから開始する **実行** アクセス許可を、シンク フォルダーに対する **書き込み** アクセス許可と共に付与します。 または、少なくとも **ストレージ BLOB データ共同作成者** の役割を RBAC を使用して付与します。
 
 詳細については、[この記事](/azure/storage/blobs/data-lake-storage-access-control)を参照してください。

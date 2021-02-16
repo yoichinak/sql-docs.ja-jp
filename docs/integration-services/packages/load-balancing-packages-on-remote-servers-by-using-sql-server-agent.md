@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d80feda3402c1aedcc0c1016c3de903524f68f17
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19c64b4d9d20bbaa6552f11fa5f5228a62e7dd6f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425214"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346902"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>リモート サーバー上での SQL Server エージェントを使用したパッケージの負荷分散
 
@@ -122,7 +122,7 @@ ms.locfileid: "88425214"
 >  **sp_start_job N'package_name'** の Transact-SQL ステートメントを含む SQL 実行タスクを使用できます。 詳細については、「[sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)」をご覧ください。  
   
 ### <a name="debugging-environment"></a>デバッグ環境  
- 親パッケージをテストする場合は、[デバッグ] メニューの [デバッグの開始] をクリックして (または F5 キーを押して) そのパッケージを実行し、デザイナーのデバッグ環境を使用します。 または、コマンド プロンプト ユーティリティ **dtexec**を使用できます。 詳細については、「[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
+ 親パッケージをテストする場合は、[デバッグ] メニューの [デバッグの開始] をクリックして (または F5 キーを押して) そのパッケージを実行し、デザイナーのデバッグ環境を使用します。 または、コマンド プロンプト ユーティリティ **dtexec** を使用できます。 詳細については、「[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
 
 ## <a name="logging-for-load-balanced-packages-on-remote-servers"></a>リモート サーバー上の負荷分散パッケージのログ記録
   すべての子パッケージで同じログ プロバイダーを使用し、これらの出力先を同じにすれば、さまざまなサーバーで実行されているすべての子パッケージに関するログの管理が容易になります。 すべての子パッケージに共通するログ ファイルを作成する方法の 1 つとして、イベントのログが SQL Server ログ プロバイダーに記録されるように子パッケージを構成することができます。 すべてのパッケージが、同じデータベース、同じサーバー、同じサーバー インスタンスを使用するように構成できます。  

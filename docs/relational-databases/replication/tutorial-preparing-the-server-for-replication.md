@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f9cbaaca472c6b63d0196cb2f751e28b184e206
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 7506b3b57d81187269c26fae3cafc2d3cdbc6628
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868390"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348623"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>チュートリアル:レプリケーション用の SQL Server の準備 (パブリッシャー、ディストリビューター、サブスクライバー)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "91868390"
   
 1. エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ フォルダーを参照します。 既定の場所は、C:\Program Files\Microsoft SQL Server\MSSQL.X\MSSQL\Data です。  
   
-2. **repldata**という名前の新しいフォルダーを作成します。  
+2. **repldata** という名前の新しいフォルダーを作成します。  
   
 3. フォルダーを右クリックし、 **[プロパティ]** を選択します。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "91868390"
    ![ショートカット メニューの [ディストリビューションの構成] コマンド](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > - 実際のサーバー名ではなく **localhost** を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が **localhost または IP アドレス**に接続できないことを示す警告が表示されます。 警告ダイアログで **[OK]** を選択します。 **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** を **localhost または IP アドレス**から使用しているサーバーの名前に変更します。 次に、 **[接続]\(Connect\)** を選択します。  
+   > - 実際のサーバー名ではなく **localhost** を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が **localhost または IP アドレス** に接続できないことを示す警告が表示されます。 警告ダイアログで **[OK]** を選択します。 **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** を **localhost または IP アドレス** から使用しているサーバーの名前に変更します。 次に、 **[接続]\(Connect\)** を選択します。  
    > - 現時点で SQL Server Management Studio (SSMS) 18.0 (およびそれ以降) には既知の問題があります。IP アドレスを使用してディストリビューターに接続するときに警告メッセージは表示 "_されません_" が、これはまだ無効です。 ディストリビューターに接続するときは、実際のサーバー名を使用する必要があります。 
    
    ディストリビューション構成ウィザードが起動します。  

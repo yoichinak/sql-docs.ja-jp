@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 7a962b29d6af2caf48f32eec5bc7e77bef3b126f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 12b4e6c71698845314844e4cf0bcd5b371209641
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194054"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351999"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする
 
@@ -26,9 +26,9 @@ SQL Server Integration Services (SSIS) プロジェクト、パッケージ、�
 
 ## <a name="benefits"></a>メリット
 オンプレミスの SSIS ワークロードを Azure に移動すると、次の潜在的な利点があります。
--   **運用コストを削減**し、SSIS をオンプレミスまたは Azure の仮想マシンで実行するのに必要なインフラストラクチャを管理するための作業負荷を軽減します。
--   クラスターごとの複数のノードを指定する機能と、Azure および Azure SQL Database の高可用性機能により、**高可用性が向上**します。
--   ノード (スケール アップ) ごとに複数のコアとクラスター (スケール アウト) ごとに複数のノードを指定する機能により、**スケーラビリティが向上**します。
+-   **運用コストを削減** し、SSIS をオンプレミスまたは Azure の仮想マシンで実行するのに必要なインフラストラクチャを管理するための作業負荷を軽減します。
+-   クラスターごとの複数のノードを指定する機能と、Azure および Azure SQL Database の高可用性機能により、**高可用性が向上** します。
+-   ノード (スケール アップ) ごとに複数のコアとクラスター (スケール アウト) ごとに複数のノードを指定する機能により、**スケーラビリティが向上** します。
 
 ## <a name="architecture-of-ssis-on-azure"></a>Azure での SSIS のアーキテクチャ
 次の表に、オンプレミスの SSIS と Azure の SSIS の違いを示します。
@@ -65,17 +65,17 @@ Azure SSIS IR は 1 回だけプロビジョニングを行う必要がありま
 
 ## <a name="design-packages"></a>パッケージの設計
 
-SSDT のオンプレミス、または SSDT がインストールされた Visual Studio で、**パッケージの設計とビルド**を続行します。
+SSDT のオンプレミス、または SSDT がインストールされた Visual Studio で、**パッケージの設計とビルド** を続行します。
 
 ### <a name="connect-to-data-sources"></a>データ ソースに接続する
 
-**Windows 認証**を使用してクラウドからオンプレミスのデータ ソースに接続するには、「[Azure の SSIS パッケージで Windows 認証を使用し、データ ソースとファイル共有に接続する](/azure/data-factory/ssis-azure-connect-with-windows-auth)」をご覧ください。
+**Windows 認証** を使用してクラウドからオンプレミスのデータ ソースに接続するには、「[Azure の SSIS パッケージで Windows 認証を使用し、データ ソースとファイル共有に接続する](/azure/data-factory/ssis-azure-connect-with-windows-auth)」をご覧ください。
 
 ファイルとファイル共有に接続するには、「[Azure でデプロイされた SSIS パッケージを使用して、オンプレミスおよび Azure のファイルを開いて保存する](/azure/data-factory/ssis-azure-files-file-shares)」をご覧ください。
 
 ### <a name="available-ssis-components"></a>使用可能な SSIS コンポーネント
 
-SSISDB をホストする SQL Database のインスタンスをプロビジョニングすると、ほかにも Azure Feature Pack for SSIS と Access の再頒布可能パッケージがインストールされます。 これらのコンポーネントは、組み込みのコンポーネントでサポートされるデータ ソースの他に、さまざまな **Azure** データ ソース、および **Excel ファイルと Access ファイル**への接続を提供します。
+SSISDB をホストする SQL Database のインスタンスをプロビジョニングすると、ほかにも Azure Feature Pack for SSIS と Access の再頒布可能パッケージがインストールされます。 これらのコンポーネントは、組み込みのコンポーネントでサポートされるデータ ソースの他に、さまざまな **Azure** データ ソース、および **Excel ファイルと Access ファイル** への接続を提供します。
 
 追加のコンポーネントもインストールできます。たとえば、既定ではインストールされないドライバーをインストールできます。 詳しくは、「[Customize setup for the Azure-SSIS integration runtime](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)」(Azure-SSIS 統合ランタイムの設定をカスタマイズする) をご覧ください。
 
@@ -101,11 +101,11 @@ SSIS パッケージを Azure にデプロイするには、次のいずれか�
 
 ### <a name="connect-to-ssisdb"></a>SSISDB に接続する
 
-SSISDB をホストする **SQL Database の名前**が、SSDT および SSMS からパッケージを配置して実行する際に使用する 4 つの部分から成る名前の最初の部分になります。次のような形式です: `<sql_database_name>.database.windows.net`。 Azure で SSIS カタログ データベースに接続する方法について詳しくは、「[Azure の SSIS カタログ (SSISDB) に接続する](ssis-azure-connect-to-catalog-database.md)」をご覧ください。
+SSISDB をホストする **SQL Database の名前** が、SSDT および SSMS からパッケージを配置して実行する際に使用する 4 つの部分から成る名前の最初の部分になります。次のような形式です: `<sql_database_name>.database.windows.net`。 Azure で SSIS カタログ データベースに接続する方法について詳しくは、「[Azure の SSIS カタログ (SSISDB) に接続する](ssis-azure-connect-to-catalog-database.md)」をご覧ください。
 
 ### <a name="deploy-projects-and-packages"></a>プロジェクトとパッケージをデプロイする
 
-Azure の SSISDB にプロジェクトをデプロイする場合には、パッケージ配置モデルではなく、**プロジェクト配置モデル**を使用する必要があります。
+Azure の SSISDB にプロジェクトをデプロイする場合には、パッケージ配置モデルではなく、**プロジェクト配置モデル** を使用する必要があります。
 
 Azure でプロジェクトをデプロイするには、次の使い慣れたツールやスクリプト作成オプションのいずれかを使用できます。
 -   SQL Server Management Studio (SSMS)

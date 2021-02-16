@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a5bb5631a398e398b45b84a0ee70b51f49c90988
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70acf129fa608c1058e808d2193cf4c901198d6e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430754"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343225"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -50,7 +50,7 @@ Oracle データベースのコネクタをインストールするには、[Mic
 
 コネクタをインストールしたら、SQL Server 統合サービスを再起動して、Oracle のソースと変換先が正常に機能することを確認する必要があります。
 
-SQL Server 2017 以前をターゲットとする SSIS パッケージを実行するには、**Microsoft Connector for Oracle** に加え、以下のリンクから **Oracle クライアント**と対応するバージョンの **Microsoft Connector for Oracle by Attunity** をインストールする必要があります。
+SQL Server 2017 以前をターゲットとする SSIS パッケージを実行するには、**Microsoft Connector for Oracle** に加え、以下のリンクから **Oracle クライアント** と対応するバージョンの **Microsoft Connector for Oracle by Attunity** をインストールする必要があります。
 
 - [SQL Server 2017:Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016:Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)

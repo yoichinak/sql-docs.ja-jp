@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 89f048ea2caf80412d3b8d607582016d8a88f8b7
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: d10b498569bac6a166ded3eaf9bd03f23ea6b718
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115636"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345630"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の PowerShell を使用して SQL Server on Linux を管理する
 
@@ -137,7 +137,7 @@ AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 次のコマンドをコピーして PowerShell プロンプトに貼り付けます。 実行に数分かかる場合があります。 これらのコマンドでは次のことが行われます。
 - インスタンスのホスト名または IP アドレスの入力を求めるダイアログが表示されます
 - *[Windows PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力を求められます。 "*SQL ユーザー名*" と "*SQL パスワード*" を使って、Linux 上の SQL Server インスタンスに接続できます
-- **Get-SqlErrorLog** コマンドレットを使用して Linux 上の SQL Server インスタンスに接続し、**昨日**以降のエラー ログを取得します
+- **Get-SqlErrorLog** コマンドレットを使用して Linux 上の SQL Server インスタンスに接続し、**昨日** 以降のエラー ログを取得します
 - 出力が **Out-GridView** コマンドレットにパイプされます
 
 必要に応じて、`$serverInstance` 変数をお使いの SQL Server インスタンスの IP アドレスまたはホスト名に置き換えることができます。

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 369c52eeb66a3d8ca5042f54d71ea9001d30b194
-ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
+ms.openlocfilehash: fe088ed697e4150b2272f3a390b4002714ab4dc4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98193039"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338277"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -22,7 +22,7 @@ ms.locfileid: "98193039"
 次のリリース ノートは、Linux で実行されている [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] に適用されます。 この記事は、リリースごとのセクションに分けられています。 GA リリースには、詳細なサポートと既知の問題が記載されています。 更新累積プログラム (CU) または一般配布リリース (GDR) のそれぞれには、Linux パッケージのダウンロードへのリンクに加えて、CU の変更について説明するサポート記事へのリンクが含まれています。
 
 > [!TIP]
-> これらのリリース ノートは、特に [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] リリースを対象としています。 新しい [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の詳細については、[Linux 上の SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true)を参照してください。
+> これらのリリース ノートは、特に [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] リリースを対象としています。 新しい [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] の詳細については、[Linux 上の SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true)を参照してください。
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
@@ -604,7 +604,7 @@ sudo systemctl start mssql-server
          sudo systemctl restart mssql-server
          ```
 
-- インメモリ OLTP を使用する Windows 上の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースは、Linux 上の [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] では復元できません。 インメモリ OLTP を使用する [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースを復元するには、最初に Windows 上でデータベースを [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] または [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] にアップグレードしてから、バックアップ/復元またはデタッチ/アタッチを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux に移動します。
+- インメモリ OLTP を使用する Windows 上の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースは、Linux 上の [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] では復元できません。 インメモリ OLTP を使用する [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースを復元するには、最初に Windows 上でデータベースを [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] または [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] にアップグレードしてから、バックアップ/復元またはデタッチ/アタッチを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux に移動します。
 
 - ユーザー権限 **ADMINISTER BULK OPERATIONS** は、現時点で Linux ではサポートされていません。
 

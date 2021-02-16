@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bea31577692752b028bdbddbf0ed440dfee7e493
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53fc539f46751cf6073aee0d5cd3aefae1971283
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421966"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338402"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
 

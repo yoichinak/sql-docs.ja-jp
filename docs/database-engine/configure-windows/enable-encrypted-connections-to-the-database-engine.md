@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1b5726aad103012b0ed7619749c1f6f669baa234
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 87ac1c0759264b00567d5edc2cd9f22727fdd0fa
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241840"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353864"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 
@@ -40,7 +40,7 @@ ms.locfileid: "98241840"
  サーバー コンピューターには、証明書がプロビジョニングされている必要があります。 サーバー コンピューターで証明書をプロビジョニングするには、Windows に[証明書をインポート](#single-server)します。 クライアント コンピューターは、[証明書のルート証明機関を信頼](#about)するように設定する必要があります。  
   
 > [!IMPORTANT]
-> SSL (Secure Sockets Layer) は、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では廃止されています。 代わりに、トランスポート層セキュリティ (TLS) を使用してください。
+> SSL (Secure Sockets Layer) は、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では廃止されています。 代わりに、トランスポート層セキュリティ (TLS) を使用してください。
 
 ## <a name="transport-layer-security-tls"></a>トランスポート層セキュリティ (TLS)
 
@@ -100,9 +100,9 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 
 ## <a name="install-on-single-server"></a><a name="single-server"></a>単一サーバーへのインストール
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で、SQL Server 構成マネージャーに証明書の管理が統合されました。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の SQL Server 構成マネージャーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンで使用できます。 単一の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに証明書を追加する方法については、「[証明書の管理 (SQL Server 構成マネージャー)](../../database-engine/configure-windows/manage-certificates.md)」を参照してください。
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] で、SQL Server 構成マネージャーに証明書の管理が統合されました。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] の SQL Server 構成マネージャーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンで使用できます。 単一の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに証明書を追加する方法については、「[証明書の管理 (SQL Server 構成マネージャー)](../../database-engine/configure-windows/manage-certificates.md)」を参照してください。
 
-[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] を介して [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] を使用する場合に、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の SQL Server 構成マネージャーが使用できない場合は、次の手順に従ってください。
+[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] を介して [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] を使用する場合に、[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] の SQL Server 構成マネージャーが使用できない場合は、次の手順に従ってください。
 
 1. **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックし、 **[名前]** ボックスに「 **MMC** 」と入力して **[OK]** をクリックします。  
   
@@ -130,9 +130,9 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
   
 ## <a name="install-across-multiple-servers"></a>複数のサーバーにまたがるインストール
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で、SQL Server 構成マネージャーに証明書の管理が統合されました。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の SQL Server 構成マネージャーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンで使用できます。 フェールオーバー クラスター構成または可用性グループ構成に証明書を追加するには、「[証明書の管理 (SQL Server 構成マネージャー)](../../database-engine/configure-windows/manage-certificates.md)」を参照してください。
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] で、SQL Server 構成マネージャーに証明書の管理が統合されました。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] の SQL Server 構成マネージャーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンで使用できます。 フェールオーバー クラスター構成または可用性グループ構成に証明書を追加するには、「[証明書の管理 (SQL Server 構成マネージャー)](../../database-engine/configure-windows/manage-certificates.md)」を参照してください。
 
-[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] を介して [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] を使用する場合に、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の SQL Server 構成マネージャーが使用できない場合は、各サーバーに対して、「[1 台のサーバーに証明書をプロビジョニング (インストール) するには](#single-server)」の手順を実行します。
+[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] を介して [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] を使用する場合に、[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] の SQL Server 構成マネージャーが使用できない場合は、各サーバーに対して、「[1 台のサーバーに証明書をプロビジョニング (インストール) するには](#single-server)」の手順を実行します。
 
 ## <a name="export-server-certificate"></a>サーバー証明書のエクスポート  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
 - COLUMNSTORE INDEX
@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57665811cd12b4c31effb82a91a722780a774874
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 47759238673fa5e88c02421e27d0e12177072605
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170454"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347043"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98170454"
 行ストア テーブルをクラスター化された列ストア インデックスに変換するか、クラスター化されていない列ストア インデックスを作成します。 OLTP ワークロードに対して効率的に運用分析をリアルタイムで実行するには、またはデータ ウェアハウスに対するワークロードのデータ圧縮とクエリのパフォーマンスを向上させるには、列ストア インデックスを使用します。  
   
 > [!NOTE]
-> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、テーブルをクラスター化列ストア インデックスとして作成できます。   最初に行ストア テーブルを作成し、それをクラスター化列ストア インデックスに変換する作業は不要になりました。  
+> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降、テーブルをクラスター化列ストア インデックスとして作成できます。   最初に行ストア テーブルを作成し、それをクラスター化列ストア インデックスに変換する作業は不要になりました。  
 
 > [!TIP]
 > インデックスの設計のガイドラインについては、「[SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)」をご覧ください。
@@ -120,10 +120,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 |オプション| CLUSTERED | NONCLUSTERED |
 |---|---|---|
-| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
-| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | 
-| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
-| WHERE 句 | 該当なし | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
+| COMPRESSION_DELAY | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] |
+| DATA_COMPRESSION | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | 
+| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] |
+| WHERE 句 | 該当なし | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] |
 
 すべてのオプションは、Azure SQL Database で使用できます。
 
@@ -355,13 +355,13 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   tinyint  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max)  (クラスタ化列ストア インデックスのみの [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および Premium 層、Standard 層 (S3 以上)、すべての VCore サービス層に適用されます)   
+-   nvarchar(max)  (クラスタ化列ストア インデックスのみの [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] および Premium 層、Standard 層 (S3 以上)、すべての VCore サービス層に適用されます)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar(max)  (クラスタ化列ストア インデックスのみの [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および Premium 層、Standard 層 (S3 以上)、すべての VCore サービス層に適用されます)
+-   varchar(max)  (クラスタ化列ストア インデックスのみの [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] および Premium 層、Standard 層 (S3 以上)、すべての VCore サービス層に適用されます)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary (max)  (クラスタ化列ストア インデックスのみの [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および Premium 層、Standard 層 (S3 以上)、すべての VCore サービス層の Azure SQL Database に適用されます)
+-   varbinary (max)  (クラスタ化列ストア インデックスのみの [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] および Premium 層、Standard 層 (S3 以上)、すべての VCore サービス層の Azure SQL Database に適用されます)
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降に適用)
   
@@ -369,7 +369,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 **以下のいずれかのデータ型を使用する列は、列ストア インデックスに含めることができません。**
 -   ntext、text、image  
--   nvarchar(max)、varchar(max)、varbinary(max) ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以前のバージョンに適用、非クラスター化列ストア インデックス) 
+-   nvarchar(max)、varchar(max)、varbinary(max) ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以前のバージョンに適用、非クラスター化列ストア インデックス) 
 -   rowversion (timestamp)  
 -   sql_variant  
 -   CLR 型 (hierarchyid 型および空間型)  
@@ -383,11 +383,11 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   **ALTER INDEX** ステートメントを使用して変更することはできません。 非クラスター化インデックスを変更するには、代わりに列ストア インデックスを削除してから再作成する必要があります。 **ALTER INDEX** を使用し、列ストア インデックスを無効にし、再構築できます。  
 -   **INCLUDE** キーワードを使用して作成することはできません。  
 -   インデックスを並べ替えるための **ASC** または **DESC** キーワードを含めることはできません。 列ストア インデックスは、圧縮アルゴリズムに従って順序付けされます。 並べ替えを行うと、パフォーマンス上の利点の多くが無効になります。  
--   非クラスター化列ストア インデックスに型が nvarchar(max)、varchar(max)、varbinary(max) のラージ オブジェクト (LOB) 列を含めることはできません。 Premium 層、Standard 層 (S3 以上)、およびすべての VCore サービス層で構成されている [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] バージョンと Azure SQL Database 以降で、クラスター化列ストア インデックスのみ LOB 型をサポートしています。 以前のバージョンでは、クラスター化列ストア インデックスと非クラスター化列ストア インデックスで LOB 型をサポートしていません。
+-   非クラスター化列ストア インデックスに型が nvarchar(max)、varchar(max)、varbinary(max) のラージ オブジェクト (LOB) 列を含めることはできません。 Premium 層、Standard 層 (S3 以上)、およびすべての VCore サービス層で構成されている [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] バージョンと Azure SQL Database 以降で、クラスター化列ストア インデックスのみ LOB 型をサポートしています。 以前のバージョンでは、クラスター化列ストア インデックスと非クラスター化列ストア インデックスで LOB 型をサポートしていません。
 
 
 > [!NOTE]  
-> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、インデックス付きビューに対して非クラスター化列ストア インデックスを作成できます。  
+> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、インデックス付きビューに対して非クラスター化列ストア インデックスを作成できます。  
 
 
  **列ストア インデックスと同時に使用できない機能:**  
@@ -453,7 +453,7 @@ GO
 ```  
   
 ### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. 行ストア テーブルを列ストア インデックスに変換するときに、非クラスター化インデックスを処理する。  
- この例では、行ストア テーブルを列ストア インデックスに変換するときに、非クラスター化インデックスを処理する方法を示します。 実際には、以降では、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 特別な操作は不要です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は新しいクラスター化列ストア インデックスで非クラスター化インデックスを自動的に定義し、再構築します。  
+ この例では、行ストア テーブルを列ストア インデックスに変換するときに、非クラスター化インデックスを処理する方法を示します。 実際には、以降では、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 特別な操作は不要です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は新しいクラスター化列ストア インデックスで非クラスター化インデックスを自動的に定義し、再構築します。  
   
  非クラスター化インデックスを削除する場合は、列ストア インデックスを作成する前に、DROP INDEX ステートメントを使用します。 DROP EXISTING オプションは、変換されるクラスター化インデックスのみを削除します。 非クラスター化インデックスは削除されません。  
   
@@ -582,7 +582,7 @@ ON MyFactTable;
  クラスター化列ストア インデックス全体を再構築するには、2 つの方法があります。 CREATE CLUSTERED COLUMNSTORE INDEX か [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) と REBUILD オプションを使用できます。 いずれの方法でも、同じ結果が得られます。  
   
 > [!NOTE]  
-> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、この例で説明した方法を使って再構築する代わりに、`ALTER INDEX...REORGANIZE` を使用します。  
+> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、この例で説明した方法を使って再構築する代わりに、`ALTER INDEX...REORGANIZE` を使用します。  
   
 ```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  

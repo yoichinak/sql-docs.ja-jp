@@ -12,12 +12,12 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4721f3ae9add5e62aa95820b0b40f0ddd20a6d81
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 15cabb6877e249a6f0be9d38449c85c13bbda78b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172554"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351241"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
 
@@ -62,7 +62,7 @@ ms.locfileid: "98172554"
     ```
 
 > [!NOTE]  
-> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] には、メモリ最適化テーブルまたはテーブル型あたりインデックスは 8 個までという制限があります。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、メモリ最適化テーブルおよびテーブル型に固有のインデックス数に制限がなくなりました。
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] および [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] には、メモリ最適化テーブルまたはテーブル型あたりインデックスは 8 個までという制限があります。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、メモリ最適化テーブルおよびテーブル型に固有のインデックス数に制限がなくなりました。
   
 ### <a name="code-sample-for-syntax"></a>構文のコード例  
   

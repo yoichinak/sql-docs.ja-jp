@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6641ff60f49534a303d3f60110dbdd63aab2ed29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cff0cdf01fbfbb0af768a18ab54614c2a46f5bb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477145"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346512"
 ---
 # <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment (SSISDB データベース)
 
@@ -67,7 +67,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   新しい名前が既存の環境で既に使用されている  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  環境の名前を変更しても、プロジェクトの環境参照は自動的に更新されません。 したがって、環境参照を更新する必要があります。 このストアド プロシージャ は、環境名を変更することで環境参照が壊れた場合でも成功します。 環境参照は、このストアド プロシージャが完了した後で更新する必要があります。  
   
 > [!NOTE]  

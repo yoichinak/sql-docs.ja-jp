@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016'
-ms.openlocfilehash: 24a228fb504f53c1afe88b0955500e811f1073b6
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 0734f0a8163486ab46ef8143966a24adee35194d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171494"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079423"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -33,7 +33,7 @@ Kerberos でセキュリティが強化された Hadoop クラスターに対し
 
 ## <a name="prerequisites"></a>前提条件
 
-1. [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] RTM CU6/[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU3/[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以上 (PolyBase がインストールされていること)
+1. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] RTM CU6/[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU3/[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以上 (PolyBase がインストールされていること)
 1. Kerberos (Active Directory または MIT) によるセキュリティで保護された Hadoop クラスター (Cloudera または Hortonworks)
 
 ## <a name="introduction"></a>はじめに
@@ -71,7 +71,7 @@ PolyBase には、Hadoop クラスターのプロパティを含む次の構成 
 
 `\[System Drive\]:{install path}\{MSSQL##.INSTANCENAME}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
-たとえば、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] の既定値は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf` です。
+たとえば、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] の既定値は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf` です。
 
 **core-site.xml** を更新し、次の 3 つのプロパティを追加します。 環境に応じて値を設定します。
 

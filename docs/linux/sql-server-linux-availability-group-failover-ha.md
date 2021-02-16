@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 52fbeee33dd992f4916f33a1545b59265a8b47f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892300"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345650"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux での Always On 可用性グループのフェールオーバー
 
@@ -82,7 +82,7 @@ ms.locfileid: "85892300"
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
    > [!NOTE]
-   > Red Hat Enterprise Linux 8. x および Ubuntu 18.04 上の Pacemaker クラスターの AG リソース名は、リソースに関する用語体系が*昇格可能な複製*を使用するように進化しているため、*ag_cluster-clone* に似ています。 
+   > Red Hat Enterprise Linux 8. x および Ubuntu 18.04 上の Pacemaker クラスターの AG リソース名は、リソースに関する用語体系が *昇格可能な複製* を使用するように進化しているため、*ag_cluster-clone* に似ています。 
 
 - **RHEL/Ubuntu の例**
 
@@ -97,7 +97,7 @@ ms.locfileid: "85892300"
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
   
-   また、次のように、自動生成された制約の移動と消去の両方を 1 行で実行することもできます。 次の例では、Red Hat Enterprise Linux 8.x に準拠した*複製*の用語を使用します。 
+   また、次のように、自動生成された制約の移動と消去の両方を 1 行で実行することもできます。 次の例では、Red Hat Enterprise Linux 8.x に準拠した *複製* の用語を使用します。 
   
    ```bash
    sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone

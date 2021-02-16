@@ -11,7 +11,7 @@ DROP WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>引数
 
-*group_name* : 既存のユーザー定義のワークロード グループの名前を指定します。
+*group_name*: 既存のユーザー定義のワークロード グループの名前を指定します。
 
 ## <a name="remarks"></a>解説
 
