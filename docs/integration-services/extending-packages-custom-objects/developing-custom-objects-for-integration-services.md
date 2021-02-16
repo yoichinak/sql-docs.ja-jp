@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8064836dcfe27a19339363301b876ab723b78294
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 15f7d17f7ea8f5a8736052bd43f9b09352597ae2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193152"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350324"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services 用のカスタム オブジェクトの開発
 
@@ -57,7 +57,7 @@ ms.locfileid: "92193152"
   
 5.  必要に応じて、コンポーネント用のカスタム ユーザー インターフェイスを構築します。 配置を容易にするため、同一ソリューション内の別個のプロジェクトとしてユーザー インターフェイスを開発し、別個のアセンブリとしてビルドすることもできます。  
   
-6.  必要に応じて、カスタム オブジェクトのサンプルおよびヘルプ コンテンツへのリンクを **SSIS ツールボックス**内に表示します。  
+6.  必要に応じて、カスタム オブジェクトのサンプルおよびヘルプ コンテンツへのリンクを **SSIS ツールボックス** 内に表示します。  
   
 7.  「[カスタム オブジェクトのビルド、配置、およびデバッグ](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)」の説明に従って、新しいカスタム オブジェクトのビルド、配置、およびデバッグを行います。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "92193152"
 |カスタム データ フロー コンポーネント|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>|<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>|  
   
 ## <a name="providing-links-to-samples-and-help-content"></a>サンプルとヘルプ コンテンツへのリンクの提供  
- マネージド コードで記述されたカスタム オブジェクトのサンプルおよびヘルプ コンテンツへのリンクを **SSIS ツールボックス**に表示するには、次のプロパティを使用します。  
+ マネージド コードで記述されたカスタム オブジェクトのサンプルおよびヘルプ コンテンツへのリンクを **SSIS ツールボックス** に表示するには、次のプロパティを使用します。  
   
 -   [Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.SamplesTag*](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.samplestag)  
   

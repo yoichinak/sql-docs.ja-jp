@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ea62f1f934527ce40e2b5fe2f03b8b6c1b8e49bc
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: bc823c6cd70688a3ad0738a6cf44a92bb86b6434
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641992"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352259"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>ログイン アカウントの設定 - データベース ミラーリングの AlwaysOn 可用性
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

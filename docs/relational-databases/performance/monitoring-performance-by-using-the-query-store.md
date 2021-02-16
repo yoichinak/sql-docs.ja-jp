@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: e61f723ddbc3010cc705c076675b731482fdee6b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c8a836f1a8daf2b4b6a9d5b76156191799013484
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171844"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341712"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 
@@ -31,7 +31,7 @@ ms.locfileid: "98171844"
 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] におけるクエリ ストアの運用について詳しくは、「[Azure SQL Database でクエリ ストアを運用する](best-practice-with-the-query-store.md#Insight)」をご覧ください。
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] の Just In Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[KB 4340759](https://support.microsoft.com/help/4340759) におけるパフォーマンスのスケーラビリティの修正を、できるだけ早くインストールするよう計画します。
+> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] の Just In Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[KB 4340759](https://support.microsoft.com/help/4340759) におけるパフォーマンスのスケーラビリティの修正を、できるだけ早くインストールするよう計画します。
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> クエリのストアを有効にする
 
@@ -645,7 +645,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 #### <a name="a-namectp23-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> 高速順方向カーソルと静的カーソルのサポートを強制するプラン
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および Azure SQL Database (すべてのデプロイ モデル) では、クエリ ストアにおいて、高速順方向カーソルおよび [!INCLUDE[tsql](../../includes/tsql-md.md)] と API の静的カーソルに対してクエリ実行プランを強制する機能がサポートされます。 強制は、`sp_query_store_force_plan` か [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ ストア レポートの利用によりサポートされます。
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降および Azure SQL Database (すべてのデプロイ モデル) では、クエリ ストアにおいて、高速順方向カーソルおよび [!INCLUDE[tsql](../../includes/tsql-md.md)] と API の静的カーソルに対してクエリ実行プランを強制する機能がサポートされます。 強制は、`sp_query_store_force_plan` か [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ ストア レポートの利用によりサポートされます。
 
 ### <a name="remove-plan-forcing-for-a-query"></a>クエリに対するプランの強制を解除する
 

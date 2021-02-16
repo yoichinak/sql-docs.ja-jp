@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: 661fbd184750fbb912ef44d28c7d6cdf2d68c917
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 7a134cda88301451272644e53cb45c1fb7d3aee0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115828"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339111"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant-ssma"></a>SQL Server Migration Assistant (SSMA) を使用して Linux へのデータベースの移行を自動化する
 
@@ -33,7 +33,7 @@ SSMA は、Oracle、MySQL、Sybase、DB2、Microsoft Access などのさまざ�
 まず、次の一覧からソース データベースに適した SQL Server Migration Assistant (SSMA) をダウンロードします。
 - [SSMA for Access](https://aka.ms/ssmaforaccess)
 - [SSMA for DB2](https://aka.ms/ssmafordb2)
-- [SSMA for MySql](https://aka.ms/ssmaformysql) 
+- [SSMA for MySql](https://aka.ms/ssmaformysql) 
 - [SSMA for Oracle](https://aka.ms/ssmafororacle)
 - [SSMA for Sybase ASE](https://aka.ms/ssmaforsybase) 
 

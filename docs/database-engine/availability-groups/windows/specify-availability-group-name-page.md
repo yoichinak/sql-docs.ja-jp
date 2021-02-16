@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f5171195bb3d275eb170330565cd9f90531dc0c6
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: 82671e390d67faf6a7059a0d4c267dd744b5a936
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783405"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100352570"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 可用性グループの [可用性グループ オプションの指定] ページ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "98783405"
 
    * **EXTERNAL**
       
-      可用性グループが、高可用性とディザスター リカバリーのために、Linux 上の Pacemaker などの外部クラスター テクノロジで管理されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスでホストされているときに使用します。 [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] 以降に適用されます。
+      可用性グループが、高可用性とディザスター リカバリーのために、Linux 上の Pacemaker などの外部クラスター テクノロジで管理されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスでホストされているときに使用します。 [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] 以降に適用されます。
 
    * **NONE**
       
-      可用性グループが、読み取りのスケールと負荷分散のために、クラスター テクノロジで管理されていない [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスでホストされているときに使用します。 [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] 以降に適用されます。 
+      可用性グループが、読み取りのスケールと負荷分散のために、クラスター テクノロジで管理されていない [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスでホストされているときに使用します。 [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] 以降に適用されます。 
  
    **データベース レベルの正常性検出**: このボックスをオンにすると、可用性グループのデータベース レベルの正常性検出 (DB_FAILOVER) オプションが有効になります。 何らかの問題が発生し、データベースがオンライン状態でなくなると、このデータベース正常性検出によって検知され、可用性グループの自動フェールオーバーがトリガーされます。 [SQL Server の AlwaysOn データベースの正常性検出フェールオーバー オプション](sql-server-always-on-database-health-detection-failover-option.md)に関するページをご覧ください。
 

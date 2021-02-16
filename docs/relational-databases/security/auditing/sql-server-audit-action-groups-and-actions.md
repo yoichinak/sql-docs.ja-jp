@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: e435d8c94dfdfc8f989875d48440554e04405376
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 0ab7abaaa4473bdc1d4a309ce3ccf0103a33a54a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172494"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100344420"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 監査のアクション グループとアクション
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "98172494"
  サーバー レベルのアクションでは、データベース レベルのアクションに対する詳細なフィルタリングは使用できません。 Employee グループのログインの Customers テーブルに対する SELECT アクションの監査などのデータベース レベルの監査では、アクションの詳細なフィルタリングを実装する必要があります。 ユーザーのデータベース監査の仕様に、システム ビューなどのサーバー スコープ オブジェクトは含めないでください。  
 
  > [!NOTE]
- > トランザクション レベルの監査を有効にするとオーバーヘッドが発生するため、[!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 以降では、[情報セキュリティ国際評価基準 (Common Criteria) への準拠] を有効にしていない場合、トランザクション レベルの監査は既定で無効になります。  [情報セキュリティ国際評価基準 (Common Criteria) への準拠] が無効になっている場合でも、TRANSACTION_GROUP から監査の仕様にアクションを追加することはできますが、トランザクション アクションが実際に収集されることはありません。  [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 以降で、TRANSACTION_GROUP からの監査アクションを構成する場合は、[情報セキュリティ国際評価基準 (Common Criteria) への準拠] を有効にすることによって、トランザクション レベルの監査インフラストラクチャを有効にしてください。  なお、[!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] SP1 CU2 以降では、トレース フラグ 3427 でトランザクション レベルの監査を無効にすることもできます。
+ > トランザクション レベルの監査を有効にするとオーバーヘッドが発生するため、[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 以降では、[情報セキュリティ国際評価基準 (Common Criteria) への準拠] を有効にしていない場合、トランザクション レベルの監査は既定で無効になります。  [情報セキュリティ国際評価基準 (Common Criteria) への準拠] が無効になっている場合でも、TRANSACTION_GROUP から監査の仕様にアクションを追加することはできますが、トランザクション アクションが実際に収集されることはありません。  [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 以降で、TRANSACTION_GROUP からの監査アクションを構成する場合は、[情報セキュリティ国際評価基準 (Common Criteria) への準拠] を有効にすることによって、トランザクション レベルの監査インフラストラクチャを有効にしてください。  なお、[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] SP1 CU2 以降では、トレース フラグ 3427 でトランザクション レベルの監査を無効にすることもできます。
   
 ## <a name="database-level-audit-action-groups"></a>データベース レベルの監査アクション グループ  
  データベース レベルの監査アクション グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ監査イベント クラスに似ています。 イベント クラスの詳細については、「 [SQL Server イベント クラスの参照](../../../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  

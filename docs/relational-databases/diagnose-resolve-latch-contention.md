@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af2caf850d3f7facb61a7484c5af44e4ba785fa3
-ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
+ms.openlocfilehash: 67f6fe5f8c1577142ac2356a070a954f94b856f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98860915"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075016"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>SQL Server でラッチの競合を診断および解決する
 
@@ -89,16 +89,16 @@ SuperLatch の数、1 秒あたりの SuperLatch のレベル上げ数、1 秒�
 
 累積的な待機の情報は SQL Server によって追跡され、動的管理ビュー (DMW) *sys.dm_os_wait_stats* を使用してアクセスできます。 SQL Server で使用されている 3 つのラッチ待機種類は、*sys.dm_os_wait_stats* DMV の対応する "wait_type" によって定義されています。
 
-* **バッファー (BUF) ラッチ:** ユーザー オブジェクトのインデックスとデータ ページの整合性を保証するために使用されます。 また、SQL Server によってシステム オブジェクト用に使用されるデータ ページへのアクセスを保護するためにも使用されます。 たとえば、割り当てを管理するページは、バッファー ラッチによって保護されます。 これらには、Page Free Space (PFS)、Global Allocation Map (GAM)、Shared Global Allocation Map (SGAM)、Index Allocation Map (IAM) などのページが含まれます。 バッファー ラッチは、*wait_type* が **PAGELATCH\_\** の *sys.dm_os_wait_stats* でレポートされます。
+* **バッファー (BUF) ラッチ:** ユーザー オブジェクトのインデックスとデータ ページの整合性を保証するために使用されます。 また、SQL Server によってシステム オブジェクト用に使用されるデータ ページへのアクセスを保護するためにも使用されます。 たとえば、割り当てを管理するページは、バッファー ラッチによって保護されます。 これらには、Page Free Space (PFS)、Global Allocation Map (GAM)、Shared Global Allocation Map (SGAM)、Index Allocation Map (IAM) などのページが含まれます。 バッファー ラッチは、*wait_type* が **PAGELATCH\_\*** の *sys.dm_os_wait_stats* でレポートされます。
 
-**非バッファー (非 BUF) ラッチ:** バッファー プール ページ以外のメモリ内構造体の整合性を保証するために使用されます。 非バッファー ラッチに対するすべての待機は、**LATCH\_\** _ の *wait_type* としてレポートされます。
+* **非バッファー (非 BUF) ラッチ:** バッファー プールページ以外のメモリ内構造の整合性を保証するために使用されます。 非バッファー ラッチに対するすべての待機は、**LATCH\_\*** の *wait_type* としてレポートされます。
 
-**IO ラッチ:** バッファー ラッチのサブセットであり、バッファー ラッチによって保護される同じ構造が I/O 操作でバッファー プールに読み込まれる必要があるときに、これらの構造の整合性を保証します。 IO ラッチを使用すると、別のスレッドによって、互換性のないラッチによって同じページがバッファー プールに読み込まれることが防がれます。 **PAGEIOLATCH\_\** _ の *wait_type* に関連付けられています。
+* **IO ラッチ:** バッファー ラッチのサブセットであり、バッファー ラッチによって保護される同じ構造が I/O 操作でバッファー プールに読み込まれる必要があるときに、これらの構造の整合性を保証します。 IO ラッチを使用すると、別のスレッドによって、互換性のないラッチによって同じページがバッファー プールに読み込まれることが防がれます。 **PAGEIOLATCH\_\*** の *wait_type* に関連付けられています。
 
    > [!NOTE]
    > PAGEIOLATCH 待機が大量に発生する場合は、SQL Server が I/O サブシステムで待機していることを意味します。 ある程度の量の PAGEIOLATCH 待機が発生することは想定され、通常の動作ですが、PAGEIOLATCH 待機の平均時間が常に 10 ミリ秒 (ms) を超えている場合は、I/O サブシステムに負荷がかかっている原因を調査する必要があります。
 
-_sys.dm_os_wait_stats* DMV を調べていて、非バッファー ラッチが検出される場合は、*sys.dm_os_latch_waits* を調べて、非バッファー ラッチの累積待機情報の詳細な内訳を取得する必要があります。 すべてのバッファー ラッチ待機は BUFFER ラッチ クラスに分類され、残りは非バッファー ラッチを分類するために使用されます。
+*sys.dm_os_wait_stats* DMV を調べていて、非バッファー ラッチが検出される場合は、*sys.dm_os_latch_waits* を調べて、非バッファー ラッチの累積待機情報の詳細な内訳を取得する必要があります。 すべてのバッファー ラッチ待機は BUFFER ラッチ クラスに分類され、残りは非バッファー ラッチを分類するために使用されます。
 
 ## <a name="symptoms-and-causes-of-sql-server-latch-contention"></a>SQL Server のラッチの競合の現象と原因
 

@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15
-ms.openlocfilehash: 8d116fbf036540337bef9d0b21bb66f79017bfd2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5e2dd566b0c5842636619c8331bfc88378dc4f84
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464503"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350864"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-この記事では、[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)機能スイートに含まれる機能であるスカラー UDF のインライン化について説明します。 この機能により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 以降) でスカラー UDF を呼び出すクエリのパフォーマンスが向上します。
+この記事では、[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)機能スイートに含まれる機能であるスカラー UDF のインライン化について説明します。 この機能により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql19](../../includes/sssql19-md.md)] 以降) でスカラー UDF を呼び出すクエリのパフォーマンスが向上します。
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL スカラー ユーザー定義関数
 [!INCLUDE[tsql](../../includes/tsql-md.md)] で実装されていて単一のデータ値を返すユーザー定義関数は、T-SQL スカラー ユーザー定義関数と呼ばれます。 T-SQL の UDF は、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ間でコードの再利用とモジュール性を実現するための洗練された方法です。 一部の計算 (複雑なビジネス ルールなど) は、命令型の UDF 形式で表した方が簡単です。 UDF は、複雑な SQL クエリの作成に関する専門知識を必要とせずに、複雑なロジックを構築するのに役立ちます。 UDF の詳細については、「[ユーザー定義関数の作成 (データベース エンジン)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)」を参照してください。
@@ -174,13 +174,13 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 
 <sup>3</sup> 結果が現在のシステム時刻によって異なる組み込み関数は、時間に依存します。 内部のグローバル状態を更新する場合がある組み込み関数は、副作用のある関数の例です。 このような関数は、内部の状態に基づいて、呼び出されるたびに異なる結果を返します。
 
-<sup>4</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 に制限を追加
+<sup>4</sup> [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2 に制限を追加
 
-<sup>5</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4 に制限を追加
+<sup>5</sup> [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU4 に制限を追加
 
-<sup>6</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 に制限を追加
+<sup>6</sup> [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5 に制限を追加
 
-<sup>7</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 に制限を追加
+<sup>7</sup> [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6 に制限を追加
 
 > [!NOTE]
 > 最新の T-SQL スカラー UDF のインライン化の修正とインライン化の資格シナリオの変更については、サポート技術情報の記事を参照してください。[修正: SQL Server 2019 のスカラー UDF のインライン化の問題](https://support.microsoft.com/help/4538581)。
@@ -283,7 +283,7 @@ END
 1. インライン化によって新しい結合が導入される場合があるため、クエリ レベルの結合ヒントが有効ではなくなる可能性があります。 代わりに、ローカル結合ヒントを使用する必要があります。
 1. インライン スカラー UDF を参照するビューに、インデックスを付けることはできません。 そのようなビューにインデックスを付ける必要がある場合は、参照されている UDF のインライン化を無効にします。
 1. UDF をインライン化すると、[動的データ マスク](../security/dynamic-data-masking.md)の動作が変化する可能性があります。 特定の状況では (UDF のロジックに応じて)、出力列のマスキングに関してインライン化がより控え目になる場合があります。 UDF で参照されている列が出力列ではない場合、それらはマスクされません。 
-1. UDF で `SCOPE_IDENTITY()`、`@@ROWCOUNT`、`@@ERROR` などの組み込み関数が参照されている場合、組み込み関数によって返される値はインライン化によって変化します。 このような動作の変化は、UDF 内のステートメントのスコープがインライン化によって変化するためです。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 以降では、UDF で特定の組み込み関数 (`@@ROWCOUNT` など) が参照される場合、インライン化はブロックされます。
+1. UDF で `SCOPE_IDENTITY()`、`@@ROWCOUNT`、`@@ERROR` などの組み込み関数が参照されている場合、組み込み関数によって返される値はインライン化によって変化します。 このような動作の変化は、UDF 内のステートメントのスコープがインライン化によって変化するためです。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2 以降では、UDF で特定の組み込み関数 (`@@ROWCOUNT` など) が参照される場合、インライン化はブロックされます。
 
 ## <a name="see-also"></a>参照
 [ユーザー定義関数の作成 (データベース エンジン)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

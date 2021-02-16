@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DATABASE_TSQL
 - DATABASE
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: 5321af1026b82d2ed49f077d7cf5604bce3a8e69
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 509e4fc7445371c57d0fed7208d556e53aa18fe8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98689031"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063037"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -371,7 +371,7 @@ SIZE *size*: ファイルのサイズを指定します。
 
 *size*: ファイルの初期サイズです。
 
-プライマリ ファイルに *size* が指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、model データベースのプライマリ ファイルのサイズを使用します。 モデルの既定のサイズは 8 MB ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) または 1 MB (それより前のバージョン) です。 セカンダリ データ ファイルまたはログ ファイルが指定されているにもかかわらず、そのファイルに対して *size* サイズが指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、そのファイルのサイズが 8 MB ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) または 1 MB (それより前のバージョン) になります。 なお、プライマリ ファイルに対して指定するサイズは、model データベースのプライマリ ファイルのサイズ以上である必要があります。
+プライマリ ファイルに *size* が指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、model データベースのプライマリ ファイルのサイズを使用します。 モデルの既定のサイズは 8 MB ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降) または 1 MB (それより前のバージョン) です。 セカンダリ データ ファイルまたはログ ファイルが指定されているにもかかわらず、そのファイルに対して *size* サイズが指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、そのファイルのサイズが 8 MB ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降) または 1 MB (それより前のバージョン) になります。 なお、プライマリ ファイルに対して指定するサイズは、model データベースのプライマリ ファイルのサイズ以上である必要があります。
 
 サフィックスとして、キロバイト (KB)、メガバイト (MB)、ギガバイト (GB)、またはテラバイト (TB) を使用できます。 既定値は MB です。 整数を指定します。小数を含めないでください。 *size* は整数値です。 2,147,483,647 を超える値に対しては、より大きな単位を使用してください。
 
@@ -396,7 +396,7 @@ FILEGROWTH が指定されていない場合、既定値は次のとおりです
 
 |Version|既定値|
 |-------------|--------------------|
-|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|
+|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB。 ログ ファイル 10%。|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の前|データ 10%。 ログ ファイル 10%。|
 

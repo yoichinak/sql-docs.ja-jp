@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: fc7f3e5ef6561338f6177f1810f6af2b92c7064a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 43e02595cc57413eb18ff3e390606ea94493912a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192687"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336349"
 ---
 # <a name="power-query-source-preview"></a>Power Query ソース (プレビュー)
 
@@ -34,7 +34,7 @@ ms.locfileid: "92192687"
 
 ## <a name="configure-the-power-query-source"></a>Power Query ソースを構成する
 
-SSDT で **Power Query ソース エディター**を開くには、SSIS Toolbox から **Power Query ソース**をデータ フロー デザイナーにドラッグ アンド ドロップした後、それをダブルクリックします。  
+SSDT で **Power Query ソース エディター** を開くには、SSIS Toolbox から **Power Query ソース** をデータ フロー デザイナーにドラッグ アンド ドロップした後、それをダブルクリックします。  
 
 ![PQ ソース](media/power-query-source/pq-source.png)
 
@@ -66,7 +66,7 @@ SSDT で Power Query ソースを含むデータ フローを設計するとき�
 
 ![PQ ソースの [接続マネージャー] パネル ([追加] ダイアログ)](media/power-query-source/pq-source-connection-managers-panel-add-dialog.png)
 
-**Power Query 接続マネージャー エディター**で、 **[データソースの種類]** 、 **[データ ソースのパス]** 、および **[認証の種類]** を指定し、適切なアクセス資格情報を割り当てます。 **[データ ソースの種類]** では、現時点では 22 種類のドロップダウン メニューから選択できます。
+**Power Query 接続マネージャー エディター** で、 **[データソースの種類]** 、 **[データ ソースのパス]** 、および **[認証の種類]** を指定し、適切なアクセス資格情報を割り当てます。 **[データ ソースの種類]** では、現時点では 22 種類のドロップダウン メニューから選択できます。
 
 ![PQ ソース接続マネージャー エディター (種類)](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
@@ -82,7 +82,7 @@ SSDT で Power Query ソースを含むデータ フローを設計するとき�
 
 ### <a name="current-limitations"></a>現在の制限
 
--   **Oracle** データ ソースは現時点では Azure-SSIS IR で使用できません。Azure-SSIS IR に Oracle ADO.NET ドライバーをインストールできないためです。代わりに Oracle ODBC ドライバーをインストールし、当面は **ODBC** データ ソースを使用して Oracle に接続してください。**Azure-SSIS IR のカスタマイズ**に関する記事の [ORACLE STANDARD ODBC](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) の例を参照してください。
+-   **Oracle** データ ソースは現時点では Azure-SSIS IR で使用できません。Azure-SSIS IR に Oracle ADO.NET ドライバーをインストールできないためです。代わりに Oracle ODBC ドライバーをインストールし、当面は **ODBC** データ ソースを使用して Oracle に接続してください。**Azure-SSIS IR のカスタマイズ** に関する記事の [ORACLE STANDARD ODBC](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) の例を参照してください。
 
 -   **Web** データ ソースは、現時点ではカスタム セットアップのある Azure-SSIS IR 上では使用できないため、現在のところはカスタム設定のない Azure-SSIS IR 上で使用してください。
 

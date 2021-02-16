@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - OPENJSON
 - OPENJSON_TSQL
@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: chadam
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
-ms.openlocfilehash: 1c7b948b1f883d1de6c6bb6556aee25c0e859695
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b29315567520dff0d4700aeb476279bf6cfe24b7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98085917"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100340638"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -109,7 +109,7 @@ SELECT * FROM OpenJson(@json);
 
 *jsonExpression* 内のオブジェクトまたは配列を参照する省略可能な JSON パス式です。 **OPENJSON** は、指定された位置で JSON テキストをシークし、参照先のフラグメントのみを解析します。 詳細については、「[JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。
 
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] では、*path* の値として変数を指定できます。
+[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] と [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] では、*path* の値として変数を指定できます。
   
 次の例では、*path* を指定することで、入れ子になったオブジェクトを返します。  
 

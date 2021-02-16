@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bd9e1cacb36ce4906e30c2b8030b5e6b0b09787
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 99f91a0a5f3f018b10a4ac0ff18c4ecf75b9c790
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170914"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100349213"
 ---
 # <a name="sql-writer-service"></a>SQL ライター サービス
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "98170914"
  VSS は、実行中のシステム (特にサーバー) で提供されているサービスのパフォーマンスや安定性を必要以上に低下させることなく、これらのシステム上で安定したバックアップ イメージをキャプチャしてコピーします。 VSS の詳細については、Windows ドキュメントを参照してください。  
 
 > [!NOTE]
-> VSS を使用して、基本的な可用性グループをホストしている仮想マシンをバックアップする際に、その仮想マシンがセカンダリ状態にあるデータベースを現在ホストしている場合、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 以降では、これらのデータベースは仮想マシンと共にバックアップ *されません*。  この理由は、基本的な可用性グループではセカンダリ レプリカ上にあるデータベースのバックアップがサポートされていないためです。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこれらのバージョン以前では、バックアップはエラーとなって失敗します。
+> VSS を使用して、基本的な可用性グループをホストしている仮想マシンをバックアップする際に、その仮想マシンがセカンダリ状態にあるデータベースを現在ホストしている場合、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 以降では、これらのデータベースは仮想マシンと共にバックアップ *されません*。  この理由は、基本的な可用性グループではセカンダリ レプリカ上にあるデータベースのバックアップがサポートされていないためです。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこれらのバージョン以前では、バックアップはエラーとなって失敗します。
   
 ## <a name="virtual-backup-device-interface-vdi"></a>Virtual Backup Device Interface (VDI)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、Virtual Backup Device Interface (VDI) と呼ばれる API が用意されています。これにより、独立系ソフトウェア ベンダーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を独自の製品に統合して、バックアップおよび復元操作のサポートを提供できます。 これらの API は、最高の信頼性とパフォーマンスを提供するほか、ホット バックアップ機能やスナップショット バックアップ機能など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあらゆるバックアップおよび復元機能をサポートするように設計されています。 サードパーティ ベンダーのアプリケーションからスナップショット (VSS) バックアップが要求された場合、SQL ライター サービスでは、実際のバックアップを実行するために VDI API 関数が呼び出されます。 VDI API は VSS から独立しているため、VSS API を採用していないソフトウェア ソリューションで頻繁に使用されることに注意してください。
@@ -78,5 +78,5 @@ ms.locfileid: "98170914"
 -   ページ復元  
   
 ## <a name="remarks"></a>解説
-SQL ライター サービスは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンとは異なるサービスです。これは、同じサーバー上にあるさまざまなバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス全体で共有されます。  SQL ライター サービス ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール パッケージに含まれ、付属する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンと同じバージョン番号が付けられます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをサーバーにインストールするか、既存のインスタンスをアップグレードするときに、インストールまたはアップグレードするインスタンスのバージョン番号が現在サーバー上にある SQL ライター サービスのバージョン番号よりも大きい場合、そのファイルはインストール パッケージに含まれるファイルに置き換えられます。  サービス パックまたは累積更新プログラムによって SQL ライター サービスが更新されており、RTM バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしようとしている場合、インストールがより大きいメジャー バージョン番号を持っていれば、新しいバージョンの SQL ライター サービスを古いバージョンで置き換えることができます。  たとえば、SQL ライター サービスが [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU2 で更新されているとします。  そのインスタンスを [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM にアップグレードする場合、更新された SQL ライター サービスは古いバージョンに置き換えられます。  この場合、新しいバージョンの SQL ライター サービスを取得するために、新しいインスタンスに最新の CU を適用する必要があります。
+SQL ライター サービスは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンとは異なるサービスです。これは、同じサーバー上にあるさまざまなバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス全体で共有されます。  SQL ライター サービス ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール パッケージに含まれ、付属する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンと同じバージョン番号が付けられます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをサーバーにインストールするか、既存のインスタンスをアップグレードするときに、インストールまたはアップグレードするインスタンスのバージョン番号が現在サーバー上にある SQL ライター サービスのバージョン番号よりも大きい場合、そのファイルはインストール パッケージに含まれるファイルに置き換えられます。  サービス パックまたは累積更新プログラムによって SQL ライター サービスが更新されており、RTM バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしようとしている場合、インストールがより大きいメジャー バージョン番号を持っていれば、新しいバージョンの SQL ライター サービスを古いバージョンで置き換えることができます。  たとえば、SQL ライター サービスが [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU2 で更新されているとします。  そのインスタンスを [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM にアップグレードする場合、更新された SQL ライター サービスは古いバージョンに置き換えられます。  この場合、新しいバージョンの SQL ライター サービスを取得するために、新しいインスタンスに最新の CU を適用する必要があります。
 

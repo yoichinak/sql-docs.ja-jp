@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 663f3fa3642a538e7be00a525a33fbc857aeff03
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: f3b2b309d07e14347aa2d89038c897b3db804c9b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194924"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354399"
 ---
 # <a name="xml-task"></a>XML タスク
 
@@ -76,10 +76,10 @@ ms.locfileid: "92194924"
 |オプション|説明|  
 |------------|-----------------|  
 |**[IgnoreComments]**|この値で、コメント ノードを比較するかどうかを指定します。|  
-|**[IgnoreNamespaces]**|この値で、要素名および属性名の名前空間の Uniform Resource Identifier (URI) を比較するかどうかを指定します。 このオプションを **true**に設定した場合、ローカル名が同じで、異なる名前空間を持つ 2 つの要素は、同一と見なされます。|  
+|**[IgnoreNamespaces]**|この値で、要素名および属性名の名前空間の Uniform Resource Identifier (URI) を比較するかどうかを指定します。 このオプションを **true** に設定した場合、ローカル名が同じで、異なる名前空間を持つ 2 つの要素は、同一と見なされます。|  
 |**[IgnorePrefixes]**|この値で、要素名および属性名のプレフィックスを比較するかどうかを指定します。 このオプションを **true,** に設定した場合、ローカル名が同じで、異なる名前空間 URI とプレフィックスを持つ 2 つの要素は、同一と見なされます。|  
 |**[IgnoreXMLDeclaration]**|この値で、XML 宣言を比較するかどうかを指定します。|  
-|**IgnoreOrderOfChildElements**|この値で、子要素の順序を比較するかどうかを指定します。 このオプションを **true**に設定した場合、兄弟の一覧での位置だけが異なる子要素は同一と見なされます。|  
+|**IgnoreOrderOfChildElements**|この値で、子要素の順序を比較するかどうかを指定します。 このオプションを **true** に設定した場合、兄弟の一覧での位置だけが異なる子要素は同一と見なされます。|  
 |**IgnoreWhiteSpaces**|この値で、空白を比較するかどうかを指定します。|  
 |**[IgnoreProcessingInstructions]**|この値で、処理命令を比較するかどうかを指定します。|  
 |**[IgnoreDTD]**|この値で、DTD を無視するかどうかを指定します。|  

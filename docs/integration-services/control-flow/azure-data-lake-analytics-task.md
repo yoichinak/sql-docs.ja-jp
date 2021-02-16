@@ -12,12 +12,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: d3fd592913164d92851ca738090de9dd200df66f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2bc717a0dc59c0d880e7095e18a0c97432519e56
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719307"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346569"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics タスク
 
@@ -54,7 +54,7 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 |**変数**|U-SQL スクリプトを含む SSIS 変数を指定します。 この値を選択すると、動的オプション **[SourceVariable]** が表示されます。|
 | &nbsp; | &nbsp; |
 
-**SourceType 動的オプション**では、U-SQL クエリのスクリプトの内容を指定します。 
+**SourceType 動的オプション** では、U-SQL クエリのスクリプトの内容を指定します。 
 
 |SourceType|動的オプション|  
 |-----------|-----------------|  
@@ -73,7 +73,7 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 - **AnalyticsUnits:** U-SQL ジョブの分析ユニット数を指定します。
 - **Priority:** U-SQL ジョブの優先順位を指定します。 これは 0 から 1000 までの値に設定できます。 数値が小さいほど、優先順位は高くなります。
 - **RuntimeVersion:** U-SQL ジョブの Data Lake Analytics ランタイム バージョンを指定します。 既定では、"default" に設定されます。 通常、このプロパティを変更する必要はありません。
-- **Synchronous:** このブール値では、タスクがジョブの実行の完了を待つかどうかを指定します。 値を true に設定する場合、タスクはジョブの完了後に**成功**とマークされます。 値を false に設定する場合、タスクはジョブが準備フェーズを通過した後に**成功**とマークされます。
+- **Synchronous:** このブール値では、タスクがジョブの実行の完了を待つかどうかを指定します。 値を true に設定する場合、タスクはジョブの完了後に **成功** とマークされます。 値を false に設定する場合、タスクはジョブが準備フェーズを通過した後に **成功** とマークされます。
 
   |値|説明|
   |-----------|-----------------|

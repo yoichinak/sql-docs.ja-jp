@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - JSON_QUERY
 - JSON_QUERY_TSQL
@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: chadam
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
-ms.openlocfilehash: ec281dac44455369bc1d7e8f53b2b5b2a7ff5bb0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f5f81325f27a37f1e6d30ea7c8fb6bdb5dad096b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102563"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100337986"
 ---
 # <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
@@ -51,7 +51,7 @@ JSON_QUERY ( expression [ , path ] )
  *path*  
  抽出するオブジェクトまたは配列を指定する JSON のパス。
 
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] では、*path* の値として変数を指定できます。
+[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] と [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] では、*path* の値として変数を指定できます。
 
 JSON のパスを解析するための厳密でないまたは strict モードを指定できます。 解析モードの指定がない場合は、厳密でないモードが既定で指定されます。 詳細については、「[JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
 
