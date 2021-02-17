@@ -122,6 +122,8 @@
           href: notebooks/notebooks-kusto-kernel.md
         - name: Kqlmagic を使用する
           href: notebooks/notebooks-kqlmagic.md
+        - name: パラメーター化を使用する
+          href: notebooks/notebooks-parameterization.md
     - name: デプロイ
       items:
         - name: Azure SQL Database のデプロイ
