@@ -43,7 +43,7 @@ ms.locfileid: "100344301"
 |**frame_index**|**int**|各行は、特定の **stack_address** に対してフレームインデックスによって昇順に並べ替えられた場合に、完全な呼び出し履歴を返す関数呼び出しを表します。 NULL 値は許可されません。|  
 |**frame_address**|**varbinary (8)**|関数呼び出しのアドレス。 NULL 値は許可されません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sys.dm_os_stacks** には、サーバーとその他のコンポーネントのシンボルが、情報を正しく表示するためにサーバー上に存在している必要があります。  
   
 ## <a name="permissions"></a>アクセス許可

@@ -44,7 +44,7 @@ ms.locfileid: "100343098"
 ## <a name="general-remarks"></a>全般的な解説  
  詳細については、「 [セマンティック検索の管理と監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)」を参照してください。  
   
-## <a name="metadata"></a>Metadata  
+## <a name="metadata"></a>メタデータ  
  セマンティックインデックス作成の状態の詳細については、次の動的管理ビューに対してクエリを実行します。  
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  

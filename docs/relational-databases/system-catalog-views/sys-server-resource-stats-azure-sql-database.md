@@ -36,7 +36,7 @@ Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデ�
   
  次の表では、v12 サーバーで使用できる列について説明します。  
   
-|列|データ型|説明|  
+|[列]|データ型|説明|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|15秒のレポート間隔の開始を示す UTC 時刻|  
 |end_time|**datetime**|15秒のレポート間隔の終了を示す UTC 時刻|
@@ -59,7 +59,7 @@ Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデ�
 ## <a name="permissions"></a>アクセス許可  
  このビューは、 **master** データベースに接続する権限を持つすべてのユーザーロールで使用できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Sys.server_resource_stats** によって返されるデータは、実行しているサービス階層/パフォーマンスレベルで許容される最大限度に対する割合として表される、avg_cpu 以外のバイトまたはメガバイト (列名で示される) で使用される合計として表されます。  
  
 ## <a name="examples"></a>使用例  

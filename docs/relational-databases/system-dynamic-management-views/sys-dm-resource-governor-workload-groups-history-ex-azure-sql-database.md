@@ -80,7 +80,7 @@ ms.locfileid: "100342747"
 
 このビューには VIEW SERVER STATE 権限が必要です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ユーザーは、この動的管理ビューにアクセスして、ユーザーワークロードプールと Azure SQL Database インスタンスのシステム内部プールについて、ほぼリアルタイムのリソース消費を監視できます。
 

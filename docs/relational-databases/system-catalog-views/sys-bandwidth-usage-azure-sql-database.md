@@ -53,7 +53,7 @@ ms.locfileid: "100338905"
 
  このビューは、サーバーレベルプリンシパルログインの **master** データベースでのみ使用できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ### <a name="external-and-internal-classes"></a>外部クラスと内部クラス
 

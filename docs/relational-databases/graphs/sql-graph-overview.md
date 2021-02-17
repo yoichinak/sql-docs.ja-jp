@@ -89,7 +89,7 @@ Merge DML で match を使用する方法の詳細については、 [Merge ス�
 ## <a name="shortest-path"></a>最短パス
 [SHORTEST_PATH](./sql-graph-shortest-path.md)関数は、グラフ内の2つのノード間、または特定のノードからグラフ内の他のすべてのノードまでの最短パスを検索します。 最短パスを使用して、グラフ内で推移的なクロージャまたは任意の長さのトラバーサルを見つけることもできます。 
 
- ## <a name="next-steps"></a>次の手順  
+ ## <a name="next-steps"></a>次のステップ  
 [SQL グラフデータベース-アーキテクチャ](./sql-graph-architecture.md)の読み取り
    
 

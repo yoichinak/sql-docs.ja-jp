@@ -99,7 +99,7 @@ ms.locfileid: "100342935"
 |page_server_reads|**bigint**|**適用対象**: Azure SQL Database ハイパースケール<br /><br /> この要求によって実行されたページサーバーの読み取り回数。 NULL 値は許可されません。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Remarks 
+## <a name="remarks"></a>解説 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。 この動的管理ビューによって返される時刻値には、プリエンプティブモードで費やされた時間は含まれません。
 
 [行モード](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)で並列要求を実行する場合、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 割り当てられたタスクを完了するワーカースレッドを調整するワーカースレッドを割り当てます。 この DMV では、コーディネーターのスレッドのみが要求に対して表示されます。 列の **読み取り**、 **書き込み**、 **logical_reads**、 **row_count** は、コーディネータースレッドに対して更新され **ません** 。 列 **wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**、および **granted_query_memory** は、コーディネータースレッドに対して **のみ更新** されます。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。

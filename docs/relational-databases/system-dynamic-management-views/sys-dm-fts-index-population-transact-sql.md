@@ -55,7 +55,7 @@ ms.locfileid: "100345303"
 |**start_time**|**datetime**|作成が開始された時刻。|  
 |**incremental_timestamp**|**timestamp**|完全作成の開始タイムスタンプを表します。 その他のすべての母集団の種類では、この値は作成の進行状況を表す最後にコミットされたチェックポイントです。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  フルテキストインデックス作成に加えて統計的セマンティックインデックス作成が有効になっている場合、キーフレーズのセマンティック抽出と作成、およびドキュメントの類似性データの抽出は、フルテキストインデックス作成と同時に行われます。 ドキュメントの類似性のインデックスの作成は、後で2番目のフェーズで行われます。 詳細については、「 [セマンティック検索の管理と監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  

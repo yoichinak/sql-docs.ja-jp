@@ -35,7 +35,7 @@ ms.locfileid: "100354050"
 
 次に、一連のデータフロータスクによって各ディメンションが読み込まれます。 次に、各ファクトを読み込みます。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - WideWorldImporters および WideWorldImportersDW データベースを含む 2016 (またはそれ以降) の SQL Server (同じまたは異なるインスタンスの SQL Server)
 - SQL Server Management Studio

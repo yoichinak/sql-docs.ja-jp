@@ -163,7 +163,7 @@ go
 ## <a name="script-explanation"></a>スクリプトの説明  
 このスクリプトでは、新しい T-sql 構文を使用して、ノードテーブルとエッジテーブルを作成します。 ステートメントを使用してノードテーブルとエッジテーブルにデータを挿入する方法について説明 `INSERT` し `MATCH` ます。また、パターンマッチングとナビゲーションに句を使用する方法についても説明します。
 
-|コマンド    |メモ
+|コマンド    |Notes
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |グラフノードまたはエッジテーブルの作成  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |ノードまたはエッジテーブルに挿入する  |

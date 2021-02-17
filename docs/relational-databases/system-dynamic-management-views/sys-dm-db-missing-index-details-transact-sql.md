@@ -46,7 +46,7 @@ ms.locfileid: "100530849"
 |**included_columns**|**nvarchar (4000)**|クエリの包括列として必要な列のコンマ区切り一覧。 カバリング列または付加列の詳細については、「 [付加列を使用したインデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。<br /><br /> メモリ最適化インデックス (ハッシュとメモリ最適化された非クラスター化) の場合は、 **included_columns** を無視します。 すべてのメモリ最適化インデックスには、テーブルのすべての列が含まれています。|  
 |**statement**|**nvarchar (4000)**|インデックスが欠落しているテーブルの名前。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sys.dm_db_missing_index_details** によって返される情報は、クエリ オプティマイザーでクエリが最適化されるときに更新されますが、保存されません。 欠落インデックスの情報が保持されるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動までです。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  
   
  特定の欠落インデックスが属する欠落インデックス グループを特定するには、**sys.dm_db_missing_index_groups** 動的管理ビューをクエリできます。これには、**index_handle** 列を基準に、このビューを **sys.dm_db_missing_index_details** と等結合します。  

@@ -56,7 +56,7 @@ ms.locfileid: "100345319"
 |**row_count_in_thousands**|**int**|フルテキストカタログ内のすべてのフルテキストインデックスの推定行数 (1000 単位)。|  
 |**is_importing**|**bit**|フルテキストカタログがインポートされているかどうかを示します。<br /><br /> 1 = カタログがインポートされています。<br /><br /> 2 = カタログがインポートされていません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  Is_importing 列はで新しく追加されました [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。  
   
 ## <a name="permissions"></a>アクセス許可  

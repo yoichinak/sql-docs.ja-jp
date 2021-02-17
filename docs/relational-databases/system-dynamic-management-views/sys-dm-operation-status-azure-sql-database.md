@@ -54,7 +54,7 @@ ms.locfileid: "100342877"
 ## <a name="permissions"></a>アクセス許可  
  このビューは、サーバーレベルプリンシパルログインの **master** データベースでのみ使用できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューを使用するには、 **master** データベースに接続している必要があります。 `sys.dm_operation_status`サーバーの **master** データベースのビューを使用して [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 、に対して実行される次の操作の状態を追跡し [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ます。  
   
 -   データベースの作成  
