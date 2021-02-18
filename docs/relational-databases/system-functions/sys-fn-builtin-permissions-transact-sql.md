@@ -76,7 +76,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|サーバーの照合順序|セキュリティ保護可能なクラスの説明。|  
 |permission_name|**nvarchar(60)**|サーバーの照合順序|アクセス許可の名前。|  
-|型|**varchar (4)**|サーバーの照合順序|Compact アクセス許可の型コード。 次の表を参照してください。|  
+|type|**varchar (4)**|サーバーの照合順序|Compact アクセス許可の型コード。 次の表を参照してください。|  
 |covering_permission_name|**nvarchar(60)**|サーバーの照合順序|NULL でない場合は、このクラスのアクセス許可の名前を指定します。これは、このクラスの他のアクセス許可を意味します。|  
 |parent_class_desc|**nvarchar(60)**|サーバーの照合順序|NULL でない場合、現在のクラスを含む親クラスの名前。|  
 |parent_covering_permission_name|**nvarchar(60)**|サーバーの照合順序|NULL でない場合、親クラスの権限で、そのクラスの他の権限をすべて含む権限の名前。|  
@@ -322,7 +322,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `sys.fn_builtin_permissions` 定義済みの権限階層のコピーを生成するテーブル値関数です。 この階層には、包含アクセス許可が含まれます。 結果セットには、 `DEFAULT` アクセス許可階層の有向非循環グラフが記述されます。このグラフは、ルートは (クラス = サーバー、アクセス許可 = CONTROL server) です。  
   
  `sys.fn_builtin_permissions` では、相関パラメーターは受け入れられません。  
