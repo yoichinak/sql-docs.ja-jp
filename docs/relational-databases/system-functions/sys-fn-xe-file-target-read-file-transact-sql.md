@@ -79,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|**適用対象**: [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />イベントの日付と時刻 (UTC タイムゾーン)。 NULL 値は許可されません。|  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  で **sys.fn_xe_file_target_read_file** を実行して大きな結果セットを読み取る [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と、エラーが発生する可能性があります。 結果を **ファイル** モード (**Ctrl + Shift + F キー**) に使用して、大きな結果セットをファイルにエクスポートし、代わりに別のツールでファイルを読み取ります。  
   
 ## <a name="permissions"></a>アクセス許可  
