@@ -16,12 +16,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: cawrites
 ms.author: chadam
 robots: noindex,nofollow
-ms.openlocfilehash: 08b7d5d8c1680be42902fe287c14418b2732f7f9
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 7b678ac25174b75db198739e0e9bc191d29f18d9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595441"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336165"
 ---
 # <a name="installation-wizard-help"></a>インストール ウィザードのヘルプ
 
@@ -365,11 +365,11 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
   
 * **ファイル数** は **tempdb** のデータ ファイルの合計数です。 既定値は 8 とセットアップ時に検出された論理コア数の小さいほうになります。 一般的なルールとしては、論理プロセッサの数が 8 以下の場合、論理プロセッサと同じ数のデータ ファイルを使用します。 論理プロセッサの数が 8 より大きい場合、8 つのデータ ファイルを使用します。 競合が発生する場合は、競合が許容できるレベルに低下するまでデータ ファイルの数を 4 の倍数分ずつ増やすか(最大で、論理プロセッサの数まで)、ワークロードまたはコードを変更します。
   
-* **初回サイズ (MB)** は各 **tempdb** データ ファイルの初回サイズです (メガバイト単位)。 既定値は 8 MB です (または、[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] の場合は 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] では、最大初期ファイル サイズ 262,144 MB (256 GB) が導入されます。 [!INCLUDE[sssql15](../../includes/sssql16-md.md)] の最大初期ファイル サイズは 1024 MB です。 すべての **tempdb** データ ファイルの初回サイズは同じです。 **tempdb** は SQL Server が起動するか、フェールオーバーするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定します。 起動時にさらに効率的に **tempdb** を作成するには、[データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を有効にします。  
+* **初回サイズ (MB)** は各 **tempdb** データ ファイルの初回サイズです (メガバイト単位)。 既定値は 8 MB です (または、[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] の場合は 4 MB)。 [!INCLUDE[sssql17](../../includes/sssql17-md.md)] では、最大初期ファイル サイズ 262,144 MB (256 GB) が導入されます。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] の最大初期ファイル サイズは 1024 MB です。 すべての **tempdb** データ ファイルの初回サイズは同じです。 **tempdb** は SQL Server が起動するか、フェールオーバーするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定します。 起動時にさらに効率的に **tempdb** を作成するには、[データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を有効にします。  
   
 * **合計初回サイズ (MB)** は、すべての **tempdb** データ ファイルを合計したものです。  
   
-* **自動拡張 (MB)** はメガバイト単位で表した領域です。各 **tempdb** データ ファイルの領域が枯渇すると、このサイズ分だけ自動的に拡張されます。 [!INCLUDE[sssql15](../../includes/sssql16-md.md)] 以降では、すべてのデータ ファイルがこの設定で指定された量だけ同時に拡張されます。  
+* **自動拡張 (MB)** はメガバイト単位で表した領域です。各 **tempdb** データ ファイルの領域が枯渇すると、このサイズ分だけ自動的に拡張されます。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降では、すべてのデータ ファイルがこの設定で指定された量だけ同時に拡張されます。  
   
 * **自動拡張の合計 (MB)** は各自動拡張イベントを合計したものです。  
 * **データ ディレクトリ** には、**tempdb** データ ファイルを維持しているすべてのディレクトリが表示されます。 ディレクトリが複数存在するとき、データ ファイルはラウンド ロビン方式でディレクトリに置かれます。 たとえば、3 つのディレクトリを作成し、8 つのデータ ファイルを指定する場合、データ ファイル 1、4、7 が最初のディレクトリに作成されます。 データ ファイル 2、5、8 が 2 番目のディレクトリに作成されます。 データ ファイル 3 と 6 が 3 番目のディレクトリに入ります。  
@@ -380,7 +380,7 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
   
 **[Tempdb ログ ファイル]** はログ ファイルの名前です。 このファイルは自動的に作成されます。 次の設定は、 **tempdb** ログ ファイルにのみ適用されます。  
   
-* **初回サイズ (MB)** は **tempdb** ログ ファイルの初回サイズです。 既定値は 8 MB です (または、[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] の場合は 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] では、最大初期ファイル サイズ 262,144 MB (256 GB) が導入されます。 [!INCLUDE[sssql15](../../includes/sssql16-md.md)] の最大初期ファイル サイズは 1024 MB です。 **tempdb** は SQL Server が起動するか、フェールオーバーするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定します。 起動時にさらに効率的に **tempdb** を作成するには、[データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を有効にします。  
+* **初回サイズ (MB)** は **tempdb** ログ ファイルの初回サイズです。 既定値は 8 MB です (または、[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] の場合は 4 MB)。 [!INCLUDE[sssql17](../../includes/sssql17-md.md)] では、最大初期ファイル サイズ 262,144 MB (256 GB) が導入されます。 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] の最大初期ファイル サイズは 1024 MB です。 **tempdb** は SQL Server が起動するか、フェールオーバーするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定します。 起動時にさらに効率的に **tempdb** を作成するには、[データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を有効にします。  
   
   > [!NOTE]
   > **Tempdb** では、最小ログ記録が利用されます。 **tempdb** ログ ファイルはバックアップできません。 SQL Server が起動するたびに、あるいはクラスター インスタンスのフェールオーバー時に再作成されます。
@@ -420,7 +420,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ## <a name="a-namemaxdop-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> [データベース エンジンの構成] - [MAXDOP] ページ
 
-**並列処理の最大限度 (MaxDOP)** により、1 つのステートメントで使用できるプロセッサの最大数が決まります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、インストール時にこのオプションを構成する機能が導入されています。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、また、サーバー用の推奨される MaxDOP 設定が、コア数に基づいて自動的に検出されます。  
+**並列処理の最大限度 (MaxDOP)** により、1 つのステートメントで使用できるプロセッサの最大数が決まります。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では、インストール時にこのオプションを構成する機能が導入されています。 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] では、また、サーバー用の推奨される MaxDOP 設定が、コア数に基づいて自動的に検出されます。  
 
 セットアップ中にこのページをスキップした場合、MaxDOP の既定値は、以前のバージョン (0) に対する [!INCLUDE[ssde_md](../../includes/ssde_md.md)] の既定値ではなく、このページに表示される推奨値になります。 また、このページでこの設定を手動で構成し、インストール後にこの設定を変更することができます。 
 

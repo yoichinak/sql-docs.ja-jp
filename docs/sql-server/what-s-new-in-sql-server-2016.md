@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 24cf362c711abd450533b218c699fc7f2bc1dd18
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: c9313877cac9c4e22fdaa4234fc40f0701649934
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987258"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100271739"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
@@ -33,15 +33,15 @@ ms.locfileid: "91987258"
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **SQL Server 2016 をお試しください。** 
-- **無料**の [**SQL Server 最新版**](https://www.microsoft.com/sql-server/sql-server-downloads)をダウンロードしてください。
+- **無料** の [**SQL Server 最新版**](https://www.microsoft.com/sql-server/sql-server-downloads)をダウンロードしてください。
 - 最新バージョンの [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) をダウンロードします。 
 - Azure アカウントをすでにお持ちですか? [SQL Server 2016 がインストール済みの仮想マシン](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)をすぐにご利用いただけます。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 データベース エンジン
 - SQL Server のインストールおよびセットアップ時に、**複数の tempDB** データベース ファイルを構成できます。
-- 新しい**クエリ ストア**は、データベース内に、クエリ テキスト、実行プラン、およびパフォーマンス指標を格納するため、パフォーマンス問題の監視およびトラブルシューティングが容易になります。 ダッシュボードには、どのクエリが最も多くの時間、メモリまたは CPU リソースを消費しているのかが表示されます。
-- **テンポラル テーブル**は、すべてのデータ変更とその発生日時を記録する履歴テーブルです。
-- SQL Server に新しく組み込まれた **JSON サポート**は、JSON のインポート、エクスポート、解析および格納をサポートします。
+- 新しい **クエリ ストア** は、データベース内に、クエリ テキスト、実行プラン、およびパフォーマンス指標を格納するため、パフォーマンス問題の監視およびトラブルシューティングが容易になります。 ダッシュボードには、どのクエリが最も多くの時間、メモリまたは CPU リソースを消費しているのかが表示されます。
+- **テンポラル テーブル** は、すべてのデータ変更とその発生日時を記録する履歴テーブルです。
+- SQL Server に新しく組み込まれた **JSON サポート** は、JSON のインポート、エクスポート、解析および格納をサポートします。
 - 新しい **PolyBase** クエリ エンジンは、Hadoop または Azure Blob Storage 内の外部データと SQL Server を統合します。 クエリの実行だけでなく、データをインポートおよびエクスポートすることができます。
 - 新しい **Stretch Database** 機能を使用すれば、ローカル SQL Server データベースからクラウドの Azure SQL Database へ、動的かつ安全に、データをアーカイブすることができます。 SQL Server は、リンクされたデータベースのローカルとリモートの両方のデータに自動的にクエリを実行します。 
 - **インメモリ OLTP:** 
@@ -54,36 +54,36 @@ ms.locfileid: "91987258"
     - **行レベル セキュリティ:** データ アクセスをデータベース エンジン レベルで制限できるため、ユーザーは自分に関係するもののみを参照します。 
 
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
-SQL Server 2016 Analysis Services では、**1200 互換性レベル**に基づいて、表形式モデルのデータベースに対するパフォーマンス、オーサリング、データベース管理、フィルター、処理などが向上しています。
+SQL Server 2016 Analysis Services では、**1200 互換性レベル** に基づいて、表形式モデルのデータベースに対するパフォーマンス、オーサリング、データベース管理、フィルター、処理などが向上しています。
 - **[SQL Server R サービス](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)** は、統計的分析に使用する R プログラミング言語を、SQL Server に統合します。 
 - 新しい **Database Consistency Checker (DBCC)** は、潜在的なデータの破損の問題を検出するために、内部的に実行されます。
-- **直接クエリ**は、最初に外部データをインポートするのではなく、ライブの外部データにクエリを実行します。直接クエリでは、Azure SQL、Oracle、Teradata を含む、より多くのデータ ソースがサポートされるようになりました。 
-- 多数の新しい **DAX (Data Access Expressions) 関数**が追加されています。
+- **直接クエリ** は、最初に外部データをインポートするのではなく、ライブの外部データにクエリを実行します。直接クエリでは、Azure SQL、Oracle、Teradata を含む、より多くのデータ ソースがサポートされるようになりました。 
+- 多数の新しい **DAX (Data Access Expressions) 関数** が追加されています。
 - 新しい **[Microsoft.AnalysisServices.Tabular](/dotnet/api/microsoft.analysisservices.tabular)** 名前空間は、表形式モードのインスタンスとモデルを管理します。 
 - [Analysis Services Management Objects (AMO)](/dotnet/api/) は、2 つ目のアセンブリ (**Microsoft.AnalysisServices.Core.dll**) を含めるためにリファクタリングされます。
 
 [Analysis Services エンジン (SSAS)](/analysis-services/what-s-new-in-analysis-services) に関する記事を参照してください。 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
-- **Always On 可用性グループ**のサポート
+- **Always On 可用性グループ** のサポート
 - **パッケージの増分配置**
 - **Always Encrypted** サポート
 - 新しい **ssis_logreader** データベース レベルのロール
-- 新しい**カスタム ログ記録レベル**
-- データ フロー内の**エラー列の名前** 
-- 新しい**コネクタ**
+- 新しい **カスタム ログ記録レベル**
+- データ フロー内の **エラー列の名前** 
+- 新しい **コネクタ**
 - **Hadoop ファイル システム (HDFS)** のサポート
 
 [Integration Services (SSIS)](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md) を参照してください。
 
 ## <a name="sql-server-2016-master-data-services-mds"></a>SQL Server 2016 マスター データ サービス (MDS)
-- 再帰的階層と多対多階層のサポートを含む**派生階層の機能強化**
-- **ドメイン ベースの属性**フィルター
-- モデルの間でエンティティ データを共有するための**エンティティ同期**
-- **変更セット**を使用したワークフローの承認
-- クエリ パフォーマンスを向上させる**カスタム インデックス**
-- セキュリティの強化のための新しい**アクセス許可レベル**
-- 再設計された**ビジネス ルール管理**エクスペリエンス
+- 再帰的階層と多対多階層のサポートを含む **派生階層の機能強化**
+- **ドメイン ベースの属性** フィルター
+- モデルの間でエンティティ データを共有するための **エンティティ同期**
+- **変更セット** を使用したワークフローの承認
+- クエリ パフォーマンスを向上させる **カスタム インデックス**
+- セキュリティの強化のための新しい **アクセス許可レベル**
+- 再設計された **ビジネス ルール管理** エクスペリエンス
 
 [マスター データ サービス (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md) を参照してください。
 
@@ -91,8 +91,8 @@ SQL Server 2016 Analysis Services では、**1200 互換性レベル**に基づ�
 Microsoft は、このリリースで Reporting Services を全面的に改良しました。 
 - KPI 機能を持つ新しい **Web レポート ポータル**
 - 新しい **Mobile Report Publisher**
-- HTML5 をサポートする**再設計されたレポート表示エンジン** 
-- 新しいツリー マップおよびサンバーストの**グラフの種類** 
+- HTML5 をサポートする **再設計されたレポート表示エンジン** 
+- 新しいツリー マップおよびサンバーストの **グラフの種類** 
 
 [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) に関する記事を参照してください。
 

@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: f927e003673cb4397250fe532d57452ddb4e6445
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6333f571ea271420b4044f7e3cf562d2f1edcc15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474563"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353545"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server の使用状況と診断データの収集のローカル監査 (CEIP)
 
@@ -63,7 +63,7 @@ SQL Server 2016 CU2 および CU3 の場合、ローカル監査は SQL Server D
 
 次の手順で、SQL Server CEIP サービス ログオン アカウントを取得します
  
-1. **サービス** コンソールを起動します。 これを行うには、キーボードで **Windows キーを押しながら R キー** を押し、 **[実行]** ダイアログ ボックスを開きます。 次に、テキスト フィールドに「*services.msc*」と入力し、 **[OK]** を選択して **サービス** コンソールを起動します。  
+1. **サービス** コンソールを起動します。 これを行うには、キーボードで **Windows キーを押しながら R キー** を押し、**[実行]** ダイアログ ボックスを開きます。 次に、テキスト フィールドに「*services.msc*」と入力し、**[OK]** を選択して **サービス** コンソールを起動します。  
 
 2. 目的のサービスに移動します。 たとえば、データベース エンジンの場合、**SQL Server CEIP サービス** **(*Your-Instance-Name*)** を探します。 Analysis Services の場合、**SQL Server Analysis Services CEIP** **(*Your-Instance-Name*)** を検索します。 Integration Services の場合は、**SQL Server Integration Services CEIP サービス** を探します。
 
@@ -108,23 +108,23 @@ SQL Server 2016 CU2 および CU3 の場合、ローカル監査は SQL Server D
 
 1. 目的の CPE パスに移動します。
 
-   | Version | **_データベース エンジン_* _ - レジストリ キー |
+   | Version | ***データベース エンジン*** - レジストリ キー |
    | :------ | :----------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL_ *13**.* Your-Instance-Name*\\CPE |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL **13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL **14**.*Your-Instance-Name*\\CPE |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL **15**.*Your-Instance-Name*\\CPE |
    | &nbsp; | &nbsp; |
 
-   | Version | ***Analysis Services** _ - レジストリ キー |
+   | Version | ***Analysis Services*** - レジストリ キー |
    | :------ | :------------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS_ *13**.* Your-Instance-Name*\\CPE |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS **13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS **14**.*Your-Instance-Name*\\CPE |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS **15**.*Your-Instance-Name*\\CPE |  
    | &nbsp; | &nbsp; |
 
-   | Version | ***Integration Services** _ - レジストリ キー |
+   | Version | ***Integration Services*** - レジストリ キー |
    | :------ | :---------------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\_ *130** |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
    | &nbsp; | &nbsp; |

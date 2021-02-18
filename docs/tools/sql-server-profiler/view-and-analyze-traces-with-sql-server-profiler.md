@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: c806d55867c63c273bd528ecafc4419d31fde7e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b95380a4a99e525cc97588b2051d1812c6e2d34a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722630"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338645"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler を使用したトレースの表示と分析
 
@@ -59,21 +59,21 @@ AND     CPU < (Duration * 1000)
   
     -   トレースを定義する場合、キャプチャするその他のデータ列に加え、 **Event Class**、 **ClientProcessID**、 **Start Time** の各データ列もキャプチャします。 詳細については、「[トレースの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)」を参照してください。  
   
-    -   **Event Class**データ列でキャプチャされたデータをグループ化し、トレースをファイルまたはテーブルにキャプチャします。 キャプチャされたデータをグループ化するには、[トレースのプロパティ] ダイアログ ボックスの **[イベントの選択]** タブで **[列の構成]** をクリックします。 詳細については、「[トレースに表示される列の構成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)」を参照してください。  
+    -   **Event Class** データ列でキャプチャされたデータをグループ化し、トレースをファイルまたはテーブルにキャプチャします。 キャプチャされたデータをグループ化するには、[トレースのプロパティ] ダイアログ ボックスの **[イベントの選択]** タブで **[列の構成]** をクリックします。 詳細については、「[トレースに表示される列の構成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)」を参照してください。  
   
     -   トレースを開始して、適切な時間が経過するか、適切な数のイベントがキャプチャされたら、トレースを停止します。  
   
 2.  対象のイベントを検索します。  
   
-    -   トレース ファイルまたはテーブルを開き、必要なイベント クラスのノード、たとえば **Deadlock Chain**を展開します。 詳細については、「 [トレース ファイルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) や [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)に付属の定義済みチューニング テンプレートを使用します。  
+    -   トレース ファイルまたはテーブルを開き、必要なイベント クラスのノード、たとえば **Deadlock Chain** を展開します。 詳細については、「 [トレース ファイルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) や [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)に付属の定義済みチューニング テンプレートを使用します。  
   
     -   目的のイベントが見つかるまで、トレース データ全体を検索します。 **の** [編集] **メニューの** [検索] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用すると、トレース内の値を検索するときに便利です。 トレースするイベントの **ClientProcessID** データ列に加えて **Start Time** データ列の値を書き留めておきます。  
   
 3.  コンテキスト内でイベントを表示します。  
   
-    -   トレースのプロパティを表示し、 **ClientProcessID**ClientProcessID **Event Class** の各データ列もキャプチャする必要があります。  
+    -   トレースのプロパティを表示し、 **ClientProcessID** ClientProcessID **Event Class** の各データ列もキャプチャする必要があります。  
   
-    -   表示する各クライアント プロセス ID のノードを展開します。 トレース全体を手動で検索するか、または前の対象イベントの **Start Time** 値が見つかるまで **[検索]** オプションを使用します。 選択した各クライアント プロセス ID に属するその他のイベントと共に、イベントは発生順に表示されます。 たとえば、トレース内にキャプチャされた **Deadlock** データ列に加えて **Deadlock Chain**イベントは、展開されたクライアント プロセス ID 内の **SQL:BatchStarting**events within the expデータ列に加えてed client process ID.  
+    -   表示する各クライアント プロセス ID のノードを展開します。 トレース全体を手動で検索するか、または前の対象イベントの **Start Time** 値が見つかるまで **[検索]** オプションを使用します。 選択した各クライアント プロセス ID に属するその他のイベントと共に、イベントは発生順に表示されます。 たとえば、トレース内にキャプチャされた **Deadlock** データ列に加えて **Deadlock Chain** イベントは、展開されたクライアント プロセス ID 内の **SQL:BatchStarting** events within the expデータ列に加えてed client process ID.  
   
  これと同じ方法で、グループ化されたイベントを見つけることができます。 目的のイベントが見つかったら、 **ClientProcessID**、 **ApplicationName**、その他のイベント クラスでイベントをグループ化すると、関連する動作を発生順に表示できます。  
   

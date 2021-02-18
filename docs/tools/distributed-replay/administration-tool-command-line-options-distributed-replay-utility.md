@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 08/12/2016
-ms.openlocfilehash: aef4e3bcf25a073fa4e09db1c90611132e0f5b06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 031668199ce4d54a29a2e781e4f6d200f58ed509
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681891"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345951"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理ツール コマンド ライン オプション (Distributed Replay Utility)
 
@@ -48,7 +48,7 @@ Usage:
 ```  
   
 ## <a name="remarks"></a>解説  
- **DReplay.exe**では、次のコマンド ライン オプションを発行することができます。  
+ **DReplay.exe** では、次のコマンド ライン オプションを発行することができます。  
   
  **preprocess**  
  前処理段階を開始します。 コントローラーは、ターゲット サーバーに対する再生のために、運用環境からキャプチャした入力トレース データの準備を行います。  

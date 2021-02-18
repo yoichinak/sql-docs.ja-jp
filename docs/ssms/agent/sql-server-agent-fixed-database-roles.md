@@ -21,12 +21,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016
-ms.openlocfilehash: dd46f133a98263a721e0dfb56a7bd5cc25c591cf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 57de6b3b9d4282155af520ba53d8ec7aff96f194
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474363"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346112"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server エージェントの固定データベース ロール
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,10 +59,10 @@ ms.locfileid: "97474363"
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
 |作成/変更/削除|いいえ|はい<br /><br />ジョブの所有権は変更できません。|はい|いいえ|  
 |リストの表示 (列挙)|はい<br /><br />**sp_notify_operator** および Management Studio の **[ジョブのプロパティ]** ダイアログ ボックスで使用できるオペレーターのリストを取得できます。|はい|はい|はい<br /><br />プロキシのリストは、Management Studio の **[ジョブ ステップのプロパティ]** ダイアログ ボックスにのみ表示できます。|  
-|有効化/無効化|いいえ|はい|はい|利用不可|  
+|有効化/無効化|いいえ|はい|はい|適用なし|  
 |プロパティの表示|いいえ|はい|はい|いいえ|  
-|実行/停止/開始|利用不可|はい|適用なし|適用なし|  
-|ジョブ履歴の表示|利用不可|はい|適用なし|適用なし|  
+|実行/停止/開始|適用なし|はい|適用なし|適用なし|  
+|ジョブ履歴の表示|適用なし|はい|適用なし|適用なし|  
 |ジョブ履歴の削除|利用不可|いいえ<br /><br />所有しているジョブのジョブ履歴を削除するには、 **SQLAgentUserRole** のメンバーは、 **sp_purge_jobhistory** に対する EXECUTE 権限が明示的に許可されている必要があります。 他のジョブのジョブ履歴は削除できません。|適用なし|適用なし|  
 |アタッチ/デタッチ|適用なし|適用なし|はい|利用不可|  
   
@@ -82,7 +82,7 @@ ms.locfileid: "97474363"
 |プロパティの表示|いいえ|はい|はい|はい|いいえ|  
 |プロパティの編集|いいえ|可 (所有しているジョブのみ)|いいえ|可 (所有しているスケジュールのみ)|いいえ|  
 |実行/停止/開始|適用なし|可 (所有しているジョブのみ)|いいえ|適用なし|適用なし|  
-|ジョブ履歴の表示|利用不可|はい|はい|適用なし|適用なし|  
+|ジョブ履歴の表示|適用なし|はい|はい|適用なし|適用なし|  
 |ジョブ履歴の削除|利用不可|いいえ<br /><br />所有しているジョブのジョブ履歴を削除するには、 **SQLAgentReaderRole** のメンバーは、 **sp_purge_jobhistory** に対する EXECUTE 権限が明示的に許可されている必要があります。 他のジョブのジョブ履歴は削除できません。|いいえ|適用なし|適用なし|  
 |アタッチ/デタッチ|適用なし|適用なし|適用なし|可 (所有しているスケジュールのみ)|適用なし|  
   

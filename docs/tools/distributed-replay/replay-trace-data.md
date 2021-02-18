@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1f642b375e4e3331bbac0e49fb878ceecd02cf5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4035d5faf74365939e2696dd83a13b1b512e84b0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786028"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349533"
 ---
 # <a name="replay-trace-data"></a>トレース データの再生
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,19 +48,19 @@ ms.locfileid: "85786028"
   
     1.  Windows のコマンド プロンプト ユーティリティ (**CMD.exe**) を開き、Distributed Replay 管理ツール (**DReplay.exe**) のインストール場所に移動します。  
   
-    2.  (省略可能) 管理ツールを実行するコンピューターとは別のコンピューター上でコントローラー サービスが実行されている場合、 *controller* パラメーター **-m**を使用して、コントローラーを指定します。  
+    2.  (省略可能) 管理ツールを実行するコンピューターとは別のコンピューター上でコントローラー サービスが実行されている場合、 *controller* パラメーター **-m** を使用して、コントローラーを指定します。  
   
-    3.  *controller_working_directory* パラメーター **-d**を使用して、前処理段階でコントローラーに保存した中間ファイルの場所を指定します。  
+    3.  *controller_working_directory* パラメーター **-d** を使用して、前処理段階でコントローラーに保存した中間ファイルの場所を指定します。  
   
     4.  (省略可能) **-o** パラメーターを使用して、各クライアントで再生アクティビティを結果のトレース ファイルにキャプチャします。  
   
-    5.  (省略可能) *target_server* パラメーター **-s**を使用して、分散再生クライアントでトレース ワークロードを再生する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。 `<Server>` 要素を使用して、再生構成ファイルの `<ReplayOptions>` 要素でターゲット サーバーを指定している場合、このパラメーターは必要ありません。  
+    5.  (省略可能) *target_server* パラメーター **-s** を使用して、分散再生クライアントでトレース ワークロードを再生する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。 `<Server>` 要素を使用して、再生構成ファイルの `<ReplayOptions>` 要素でターゲット サーバーを指定している場合、このパラメーターは必要ありません。  
   
-    6.  *clients* パラメーター **-w**を使用して、再生に参加する分散再生クライアントを指定します。 クライアント コンピューター名はコンマで区切って指定します。 注:IP アドレスは指定できません。  
+    6.  *clients* パラメーター **-w** を使用して、再生に参加する分散再生クライアントを指定します。 クライアント コンピューター名はコンマで区切って指定します。 注:IP アドレスは指定できません。  
   
-    7.  (省略可能) *config_file* パラメーター **-c**を使用して、再生構成ファイルの場所を指定します。 既定の再生構成ファイルのコピーを変更した場合は、このパラメーターを使用して、新しい構成ファイルを指定します。  
+    7.  (省略可能) *config_file* パラメーター **-c** を使用して、再生構成ファイルの場所を指定します。 既定の再生構成ファイルのコピーを変更した場合は、このパラメーターを使用して、新しい構成ファイルを指定します。  
   
-    8.  (省略可能) *status_interval* パラメーター **-f**を使用して、30 秒以外の周期で状態メッセージを表示するかどうかを指定します。  
+    8.  (省略可能) *status_interval* パラメーター **-f** を使用して、30 秒以外の周期で状態メッセージを表示するかどうかを指定します。  
   
      たとえば、次の構文では、コントローラー サービスと同じコンピューターで再生段階を開始し、 `c:\WorkingDir`にあるコントローラー作業ディレクトリを使用し、参加している各クライアントで再生アクティビティをキャプチャして、クライアント `client1` と `client2` を使用して再生を実行し、残りの再生の構成設定を `c:\modifiedreplay.config`にある変更済みの再生構成ファイルから取得します。  
   

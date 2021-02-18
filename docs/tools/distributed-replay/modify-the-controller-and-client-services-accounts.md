@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4c8a0f29addf80905ef6edaf5920e479fbaa48e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22d126dae4356bd6830c801369375b8705e37b37
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681162"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349523"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>コントローラー サービスとクライアント サービスのアカウントを変更する
 
@@ -34,7 +34,7 @@ ms.locfileid: "85681162"
   
 1.  コントローラー コンピューターで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー サービスを停止します。  
   
-2.  **[サービス]** で、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー**を右クリックし、 **[プロパティ]** をクリックします。  
+2.  **[サービス]** で、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー** を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラーのプロパティ** ウィンドウの **[ログオン]** タブで、 **[このアカウント]** を選択して、新しいログオン アカウントを入力するか、 **[参照]** をクリックして新しいログオン アカウントを指定し、 **[OK]** をクリックします。  
   

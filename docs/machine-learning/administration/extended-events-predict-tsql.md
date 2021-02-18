@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 6376795beeeddc9ec9c6140c10a0c2831e5368c0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 099e01e8e626b7a812ebcf2135b7d5e126a49e4e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471373"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100337134"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の拡張イベントで PREDICT T-SQL ステートメントを監視する
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "97471373"
 
 | name                       | object_type | description |
 |----------------------------|-------------|-------------|
-| predict_function_completed | イベント       | 組み込み実行時間のブレークダウン|
-| predict_model_cache_hit    | イベント       | モデルが PREDICT 関数モデル キャッシュから取得されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
-| predict_model_cache_insert | イベント       | モデルが PREDICT 関数モデル キャッシュに挿入されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。   |
-| predict_model_cache_miss   | イベント       | モデルが PREDICT 関数モデル キャッシュで見つからないときに発生します。 このイベントが頻繁に発生する場合、SQL Server がより多くのメモリを必要としていることを示している可能性があります。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
-| predict_model_cache_remove | イベント       | モデルが PREDICT 関数のモデル キャッシュから削除されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
+| predict_function_completed | event       | 組み込み実行時間のブレークダウン|
+| predict_model_cache_hit    | event       | モデルが PREDICT 関数モデル キャッシュから取得されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
+| predict_model_cache_insert | event       | モデルが PREDICT 関数モデル キャッシュに挿入されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。   |
+| predict_model_cache_miss   | event       | モデルが PREDICT 関数モデル キャッシュで見つからないときに発生します。 このイベントが頻繁に発生する場合、SQL Server がより多くのメモリを必要としていることを示している可能性があります。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
+| predict_model_cache_remove | event       | モデルが PREDICT 関数のモデル キャッシュから削除されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
 
 ## <a name="query-for-related-events"></a>関連イベントをクエリします。
 
@@ -77,7 +77,7 @@ FROM sys.dm_os_memory_objects
 WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 拡張イベント (XEvent と呼ばれることもあります) の詳細と、セッションのイベントを追跡する方法の詳細については、次の記事を参照してください。
 

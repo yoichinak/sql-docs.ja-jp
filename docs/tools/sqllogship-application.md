@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af98af52bfe6416c489be821fa2d8b27092fac27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 349b8f5bd757e623b79b043d14ce9de91c34e942
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918368"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341979"
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -35,22 +35,22 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
 ## <a name="arguments"></a>引数  
  **-server** _instance_name_  
- 操作を実行する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスを指定します。 指定するサーバー インスタンスは、指定するログ配布操作によって異なります。 **-backup**を指定する場合、 *instance_name* は、ログ配布構成のプライマリ サーバーの名前にする必要があります。 **-copy** または **-restore**を指定する場合、 *instance_name* は、ログ配布構成のセカンダリ サーバーの名前にする必要があります。  
+ 操作を実行する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスを指定します。 指定するサーバー インスタンスは、指定するログ配布操作によって異なります。 **-backup** を指定する場合、 *instance_name* は、ログ配布構成のプライマリ サーバーの名前にする必要があります。 **-copy** または **-restore** を指定する場合、 *instance_name* は、ログ配布構成のセカンダリ サーバーの名前にする必要があります。  
   
  **-backup** _primary_id_  
- *primary_id*でプライマリ ID を指定したプライマリ データベースのバックアップ操作を行います。 この ID を取得するには、 [log_shipping_primary_databases](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md) システム テーブルから選択するか、 [sp_help_log_shipping_primary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md) ストアド プロシージャを使用します。  
+ *primary_id* でプライマリ ID を指定したプライマリ データベースのバックアップ操作を行います。 この ID を取得するには、 [log_shipping_primary_databases](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md) システム テーブルから選択するか、 [sp_help_log_shipping_primary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md) ストアド プロシージャを使用します。  
   
  バックアップ操作を行うと、バックアップ ディレクトリにログ バックアップが作成されます。 その後、ファイル保有期間に基づき、 **sqllogship** アプリケーションによって古いバックアップ ファイルが削除されます。 次に、プライマリ サーバーと監視サーバーにバックアップ操作の履歴ログが記録されます。 最後に、保有期間に基づき古い履歴情報を削除するため、 [sp_cleanup_log_shipping_history](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)が実行されます。  
   
  **-copy** _secondary_id_  
- *secondary_id*でセカンダリ ID を指定したセカンダリ データベースのバックアップを、指定したセカンダリ サーバーからコピーするコピー操作を行います。 この ID を取得するには、 [log_shipping_secondary](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md) システム テーブルから選択するか、 [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) ストアド プロシージャを使用します。  
+ *secondary_id* でセカンダリ ID を指定したセカンダリ データベースのバックアップを、指定したセカンダリ サーバーからコピーするコピー操作を行います。 この ID を取得するには、 [log_shipping_secondary](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md) システム テーブルから選択するか、 [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) ストアド プロシージャを使用します。  
   
  この操作を行うと、バックアップ ディレクトリからコピー先ディレクトリにバックアップ ファイルがコピーされます。 その後、 **sqllogship** アプリケーションによって、セカンダリ サーバーと監視サーバーにコピー操作の履歴ログが記録されます。  
   
  **-restore** _secondary_id_  
- *secondary_id*でセカンダリ ID を指定したセカンダリ データベースを取得するため、指定したセカンダリ サーバーで復元操作を行います。 この ID を取得するには、 **sp_help_log_shipping_secondary_database** ストアド プロシージャを使用します。  
+ *secondary_id* でセカンダリ ID を指定したセカンダリ データベースを取得するため、指定したセカンダリ サーバーで復元操作を行います。 この ID を取得するには、 **sp_help_log_shipping_secondary_database** ストアド プロシージャを使用します。  
   
- 復元先ディレクトリにある、最新の復元ポイント以降に作成されたバックアップ ファイルは、セカンダリ データベースに復元されます。 その後、ファイル保有期間に基づき、 **sqllogship** アプリケーションによって古いバックアップ ファイルが削除されます。 次に、セカンダリ サーバーと監視サーバーに復元操作の履歴ログが記録されます。 最後に、保有期間に基づき古い履歴情報を削除するため、 **sp_cleanup_log_shipping_history**が実行されます。  
+ 復元先ディレクトリにある、最新の復元ポイント以降に作成されたバックアップ ファイルは、セカンダリ データベースに復元されます。 その後、ファイル保有期間に基づき、 **sqllogship** アプリケーションによって古いバックアップ ファイルが削除されます。 次に、セカンダリ サーバーと監視サーバーに復元操作の履歴ログが記録されます。 最後に、保有期間に基づき古い履歴情報を削除するため、 **sp_cleanup_log_shipping_history** が実行されます。  
   
  **-verboselevel** _level_  
  ログ配布の履歴に追加するメッセージのレベルを指定します。 *level* は、次のいずれかの整数です。  
@@ -86,7 +86,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**-restore**|コピー ディレクトリの読み取り/書き込みアクセス許可が必要です。|RESTORE ステートメントと同一の権限が必要です。 詳細については、「 [RESTORE &#40;Transact-SQL&#41;](../t-sql/statements/restore-statements-transact-sql.md)で復元することはできません。|  
   
 > [!NOTE]  
->  バックアップ ディレクトリおよびコピー ディレクトリのパスを検索するには、 **sp_help_log_shipping_secondary_database** ストアド プロシージャを実行するか、 **msdb** の **log_shipping_secondary**テーブルを参照します。 バックアップ ディレクトリおよびコピー先ディレクトリのパスはそれぞれ、 **backup_source_directory** 列および **backup_destination_directory** 列にあります。  
+>  バックアップ ディレクトリおよびコピー ディレクトリのパスを検索するには、 **sp_help_log_shipping_secondary_database** ストアド プロシージャを実行するか、 **msdb** の **log_shipping_secondary** テーブルを参照します。 バックアップ ディレクトリおよびコピー先ディレクトリのパスはそれぞれ、 **backup_source_directory** 列および **backup_destination_directory** 列にあります。  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   

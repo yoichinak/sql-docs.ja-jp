@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 084471f17aac4d9f731facaad71c2e265a2c275d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c75f865ed31e43f2fbdec96cfc65fcbd9619c1d1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726915"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345773"
 ---
 # <a name="save-traces-and-trace-templates"></a>トレースとトレース テンプレートの保存
 
@@ -37,7 +37,7 @@ ms.locfileid: "85726915"
 > [!NOTE]  
 >  トレース データをテーブルにキャプチャすると、ファイルにキャプチャする場合と比べて操作に時間がかかります。 テーブルにキャプチャする代わりに、トレース データをファイルにキャプチャしておき、このトレース ファイルを開き、トレースをトレース テーブルとして保存する方法があります。  
   
- トレース ファイルを使用する場合、キャプチャしたイベント データ (トレース定義ではない) は [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] により [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレース (\*.trc) ファイルに保存されます。 この拡張子は、トレース ファイルを保存するときに、他の拡張子が指定されているかどうかに関係なくファイル名の終わりに自動的に付加されます。 たとえば、 **Trace.dat**という名前のトレース ファイルを指定すると、作成されるファイルの名前は **Trace.dat.trc**になります。  
+ トレース ファイルを使用する場合、キャプチャしたイベント データ (トレース定義ではない) は [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] により [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレース (\*.trc) ファイルに保存されます。 この拡張子は、トレース ファイルを保存するときに、他の拡張子が指定されているかどうかに関係なくファイル名の終わりに自動的に付加されます。 たとえば、 **Trace.dat** という名前のトレース ファイルを指定すると、作成されるファイルの名前は **Trace.dat.trc** になります。  
   
 > [!IMPORTANT]  
 >  SHOWPLAN 権限、ALTER TRACE 権限、または VIEW SERVER STATE 権限を持つユーザーは、プラン表示出力にキャプチャされたクエリを表示できます。 これらのクエリには、パスワードなどの機密情報が含まれている場合があります。 したがって、これらの権限は、機密情報を表示することが認められているユーザー (たとえば **db_owner** 固定データベース ロールのメンバーや **sysadmin** 固定サーバー ロールのメンバー) のみに付与することをお勧めします。 また、プラン表示ファイルまたはプラン表示関連のイベントを含むトレース ファイルのみを保存すること、保存先は NTFS ファイル システムが使用されている場所とすること、および機密情報を表示する権限を持つユーザーのみにアクセスを制限することをお勧めします。  
