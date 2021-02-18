@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d6e9aff189018cf140ac3a39593e11e69241e4e
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: c822bd2acbd92bcfd9b3008c78c3ccef244f3c88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332259"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338548"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint ユーティリティ
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,7 @@ number[minutes | hours | days | weeks | months]
 ```  
   
 ## <a name="arguments"></a>引数  
- パラメーターとその値は、空白で区切る必要があります。 たとえば、 **-S** と *server_name*の間には空白が必要です。  
+ パラメーターとその値は、空白で区切る必要があります。 たとえば、 **-S** と *server_name* の間には空白が必要です。  
   
  **-?**  
  **sqlmaint** の構文ダイアグラムが返されます。 このパラメーターは単独で使用する必要があります。  
@@ -106,7 +106,7 @@ number[minutes | hours | days | weeks | months]
  データベース メンテナンス プラン ウィザードを使用して定義される、データベース メンテナンス プランのグローバル一意識別子 (GUID) を指定します。 **sqlmaint** が使用するプランの情報は、プラン内のデータベースのリストのみです。 他の **sqlmaint** パラメーターに指定するすべてのメンテナンス操作は、このデータベースのリストに適用されます。 このパラメーターの値は、msdb.dbo.sysdbmaintplans の plan_id 値に一致する必要があります。  
   
  **-Rpt** _text_file_  
- レポートの生成先となるファイルの完全なパスとファイル名を指定します。 レポートは画面上にも表示されます。 レポートによってファイル名に日時が追加され、バージョン情報が維持されます。 日時は、_*yyyyMMddhhmm*の形式で、ファイル名の最後 (ピリオドの前) に追加されます。 *yyyy* = 年、 *MM* = 月、 *dd* = 日、 *hh* = 時間、 *mm* = 分。  
+ レポートの生成先となるファイルの完全なパスとファイル名を指定します。 レポートは画面上にも表示されます。 レポートによってファイル名に日時が追加され、バージョン情報が維持されます。 日時は、_ *yyyyMMddhhmm* の形式で、ファイル名の最後 (ピリオドの前) に追加されます。 *yyyy* = 年、 *MM* = 月、 *dd* = 日、 *hh* = 時間、 *mm* = 分。  
   
  1996 年 12 月 1 日午前 10:23 に ユーティリティを実行し、 *text_file* 値が次のようになるとします。  
   
@@ -134,15 +134,15 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  レポート ファイル作成後の期間が \<*time_period*> を超える場合、レポート ディレクトリ内にあるすべての HTML レポートを削除します。 **-DelHtmlRpt** は、*html_file* パラメーターを基に生成されたパターンに適合する名前を持つファイルを検索します。 *html_file* が C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm の場合、 **-DelHtmlRpt** を指定した **sqlmaint** によって、名前が C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm というパターンに一致し、指定した \<*time_period*> よりも古いすべてのファイルを削除できます。  
   
  **-RmUnusedSpace** _threshold_percent free_percent_  
- **-D**に指定されたデータベースから使用されていない領域を削除します。 このオプションは、自動拡張が定義されているデータベースに対してのみ使用できます。 *Threshold_percent* は、 **sqlmaint** が使用されていないデータ領域を削除する基準となるデータベースのサイズを MB 単位で指定します。 データベースが *threshold_percent*より小さい場合、何も行われません。 *Free_percent* は、データベースに残す必要がある使用されていない領域の量を、データベースの最終的なサイズに対する割合として指定します。 たとえば、200 MB のデータベースに 100 MB のデータを取り込む場合、 *free_percent* に 10 を指定すると、最終的なデータベース サイズは 110 MB になります。 データベースが *free_percent* とデータベースのデータ量の合計より小さい場合、データベースは拡張されないことにご注意ください。 たとえば、108 MB のデータベースが 100 MB のデータを持つ場合、 *free_percent* に 10 を指定してもデータベースは 110 MB に拡張されず、108 MB のままです。  
+ **-D** に指定されたデータベースから使用されていない領域を削除します。 このオプションは、自動拡張が定義されているデータベースに対してのみ使用できます。 *Threshold_percent* は、 **sqlmaint** が使用されていないデータ領域を削除する基準となるデータベースのサイズを MB 単位で指定します。 データベースが *threshold_percent* より小さい場合、何も行われません。 *Free_percent* は、データベースに残す必要がある使用されていない領域の量を、データベースの最終的なサイズに対する割合として指定します。 たとえば、200 MB のデータベースに 100 MB のデータを取り込む場合、 *free_percent* に 10 を指定すると、最終的なデータベース サイズは 110 MB になります。 データベースが *free_percent* とデータベースのデータ量の合計より小さい場合、データベースは拡張されないことにご注意ください。 たとえば、108 MB のデータベースが 100 MB のデータを持つ場合、 *free_percent* に 10 を指定してもデータベースは 110 MB に拡張されず、108 MB のままです。  
   
  **-CkDB** |  **-CkDBNoIdx**  
- **-D**に指定されたデータベースで、DBCC CHECKDB ステートメント、または NOINDEX オプションを含んだ DBCC CHECKDB ステートメントを実行します。 詳細については、「DBCC CHECKDB」を参照してください。  
+ **-D** に指定されたデータベースで、DBCC CHECKDB ステートメント、または NOINDEX オプションを含んだ DBCC CHECKDB ステートメントを実行します。 詳細については、「DBCC CHECKDB」を参照してください。  
   
  *sqlmaint* を実行するときにデータベースが使用中の場合、 **text_file** に警告が書き込まれます。  
   
  **-CkAl** |  **-CkAlNoIdx**  
- **-D**に指定されたデータベースで、NOINDEX オプションを含んだ DBCC CHECKALLOC ステートメントを実行します。 詳細については、「[DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)」を参照してください。  
+ **-D** に指定されたデータベースで、NOINDEX オプションを含んだ DBCC CHECKALLOC ステートメントを実行します。 詳細については、「[DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)」を参照してください。  
   
  **-CkCat**  
  **-D** に指定されたデータベースで、DBCC CHECKCATALOG (Transact-SQL) ステートメントを実行します。 詳細については、「[DBCC CHECKCATALOG &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)」を参照してください。  
@@ -154,20 +154,20 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
 UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;  
 ```  
   
- テーブルが計算列を含む場合、 **-UpdOptiStats** を使用するときに **-SupportedComputedColumn**引数も指定する必要があります。  
+ テーブルが計算列を含む場合、 **-UpdOptiStats** を使用するときに **-SupportedComputedColumn** 引数も指定する必要があります。  
   
  詳細については、「 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)で作成されたデータベース メンテナンス プランを実行します。  
   
  **-RebldIdx** _free_space_  
  FILL FACTOR とは逆の関係になる値として *free_space* の割合の値を使用し、対象データベースのテーブルのインデックスを再構築します。 たとえば、 *free_space* の割合が 30 の場合、使用される FILL FACTOR は 70 になります。 *free_space* の割合の値に 100 が指定された場合は、最初の FILL FACTOR 値を使用してインデックスが再構築されます。  
   
- インデックスが計算列にある場合、 **-RebldIdx** を使用するときに **-SupportComputedColumn**引数も指定する必要があります。  
+ インデックスが計算列にある場合、 **-RebldIdx** を使用するときに **-SupportComputedColumn** 引数も指定する必要があります。  
   
  **-RebldIdx**  
  計算列に対して **sqlmaint** の DBCC メンテナンス コマンドを実行する場合は、必ず指定します。  
   
  **-WriteHistory**  
- **sqlmaint**によって実行される各メンテナンス操作に対して、msdb.dbo.sysdbmaintplan_history にエントリを作成します。 **-PlanName** または **-PlanID** が指定された場合、sysdbmaintplan_history のエントリには指定されたプランの ID が使用されます。 **-D** が指定された場合、sysdbmaintplan_history のエントリはプラン ID にゼロ値を使用して作成されます。  
+ **sqlmaint** によって実行される各メンテナンス操作に対して、msdb.dbo.sysdbmaintplan_history にエントリを作成します。 **-PlanName** または **-PlanID** が指定された場合、sysdbmaintplan_history のエントリには指定されたプランの ID が使用されます。 **-D** が指定された場合、sysdbmaintplan_history のエントリはプラン ID にゼロ値を使用して作成されます。  
   
  **-BkUpDB** [ *backup_path*] |  **-BkUpLog** [ *backup_path* ]  
  バックアップ操作を指定します。 **-BkUpDb** はデータベース全体をバックアップします。 **-BkUpLog** はトランザクション ログのみをバックアップします。  
@@ -204,7 +204,7 @@ dbname_log_yyyymmddhhmm.BAK
  ディスク バックアップの場合で、バックアップ作成後の期間が \<*time_period*> を超える場合、バックアップ ディレクトリ内にあるすべてのバックアップ ファイルを削除します。  
   
  **-CrBkSubDir**  
- ディスク バックアップの場合で、[*backup_path*] ディレクトリ内、または **-UseDefDir** が指定されている場合は、既定のバックアップ ディレクトリ内にサブディレクトリを作成します。 サブディレクトリの名前は、 **-D**に指定されるデータベース名を基に生成されます。 **-CrBkSubDir** を使用すると、 *backup_path* パラメーターを変更せずに、異なるデータベースのすべてのバックアップを、個別のサブディレクトリに簡単に格納することができます。  
+ ディスク バックアップの場合で、[*backup_path*] ディレクトリ内、または **-UseDefDir** が指定されている場合は、既定のバックアップ ディレクトリ内にサブディレクトリを作成します。 サブディレクトリの名前は、 **-D** に指定されるデータベース名を基に生成されます。 **-CrBkSubDir** を使用すると、 *backup_path* パラメーターを変更せずに、異なるデータベースのすべてのバックアップを、個別のサブディレクトリに簡単に格納することができます。  
   
  **-UseDefDir**  
  ディスク バックアップの場合、既定のバックアップ ディレクトリにバックアップ ファイルを作成します。 **UseDefDir** は、*backup_path* をオーバーライドします (両方が指定されている場合)。 既定の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップでは、既定のバックアップ ディレクトリは C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup です。  
@@ -213,7 +213,7 @@ dbname_log_yyyymmddhhmm.BAK
  バックアップ メディアがテープであることを指定します。  
   
  **-BkUpOnlyIfClean**  
- 指定されたすべての **-Ck** チェックでデータに問題が検出されなかった場合のみ、バックアップを行います。 メンテナンス操作は、コマンド プロンプトでの指定と同じ順序で実行されます。 **-BkUpOnlyIfClean**を指定する場合、またはチェックで問題がレポートされるかどうかに関係なくバックアップが発生する場合は、 **-BkUpDB**-BkUpLog **パラメーターの前に**-CkDB **、** -CkDBNoIdx **、** -CkAl **、** -CkAlNoIdx **、** / **-CkTxtAl** 、または **-CkCat**のパラメーターを指定します。  
+ 指定されたすべての **-Ck** チェックでデータに問題が検出されなかった場合のみ、バックアップを行います。 メンテナンス操作は、コマンド プロンプトでの指定と同じ順序で実行されます。 **-BkUpOnlyIfClean** を指定する場合、またはチェックで問題がレポートされるかどうかに関係なくバックアップが発生する場合は、 **-BkUpDB**-BkUpLog **パラメーターの前に**-CkDB **、** -CkDBNoIdx **、** -CkAl **、** -CkAlNoIdx **、** / **-CkTxtAl** 、または **-CkCat** のパラメーターを指定します。  
   
  **-VrfyBackup**  
  バックアップの完了時、バックアップに対して RESTORE VERIFYONLY を実行します。  
@@ -227,7 +227,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   **15days**  
   
- *number* だけを指定する場合、既定では、 **weeks**と見なされます。  
+ *number* だけを指定する場合、既定では、 **weeks** と見なされます。  
   
 ## <a name="remarks"></a>解説  
  **sqlmaint** ユーティリティは、1 つまたは複数のデータベースでメンテナンス操作を実行します。 **-D** を指定する場合、残りのスイッチで指定する操作は指定したデータベースでのみ実行されます。 **-PlanName** または **-PlanID** が指定された場合、指定されたメンテナンス プランから **sqlmaint** が取得する情報は、プラン内のデータベースのリストのみです。 その他の **sqlmaint** パラメーターに指定されるすべての操作は、プランから取得されたリスト内の各データベースに対して適用されます。 **sqlmaint** ユーティリティでは、プラン自体に定義されているメンテナンス操作は適用されません。  

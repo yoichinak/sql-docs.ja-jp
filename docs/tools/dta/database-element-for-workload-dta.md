@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9e7fb311c95568bbbaf1b752791441754b61056a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c772a91b39917acd3e009009c44123fc31510eca
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732121"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342009"
 ---
 # <a name="database-element-for-workload-dta"></a>Workload の Database 要素 (DTA)
 
@@ -44,7 +44,7 @@ ms.locfileid: "85732121"
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
-|**個数**|他の種類のワークロードが指定されていない場合は、1 回の出現が必要です。 **EventString**親要素に対しては、 **File**、 **Database** 、または **Workload** 子要素を指定する必要がありますが、使用できるのは 1 種類だけです。 たとえば、ワークロードを **Database** 要素で指定した場合、同じ XML 入力ファイル内でワークロードを **File** 要素で指定することはできません。|  
+|**個数**|他の種類のワークロードが指定されていない場合は、1 回の出現が必要です。 **EventString** 親要素に対しては、 **File**、 **Database** 、または **Workload** 子要素を指定する必要がありますが、使用できるのは 1 種類だけです。 たとえば、ワークロードを **Database** 要素で指定した場合、同じ XML 入力ファイル内でワークロードを **File** 要素で指定することはできません。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

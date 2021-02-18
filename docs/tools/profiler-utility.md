@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a6a51b6949d3b387c1284bdd5cbaa9a64b3cfa37
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ab40ea190dab072d7415ded1f399cfa4a4b78568
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917072"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335948"
 ---
 # <a name="profiler-utility"></a>profiler ユーティリティ
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ profiler
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証に使用するユーザー ログイン ID を指定します。 ログイン ID では大文字と小文字は区別されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
  **/P** *password*  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で必要なユーザーのパスワードを指定します。  
@@ -83,17 +83,17 @@ profiler
  Profiler を起動するときに読み込むトレース テーブルを指定します。 データベース、ユーザーやスキーマ、およびテーブルを指定する必要があります。  
   
  **/T"** *template_name* **"**  
- トレースを構成するために読み込まれるテンプレートを指定します。 テンプレート名は引用符で囲む必要があります。 テンプレートは、システム テンプレート ディレクトリまたはユーザー テンプレート ディレクトリに格納されている必要があります。 同じ名前のテンプレートが両方のディレクトリにある場合は、システム ディレクトリのテンプレートが読み込まれます。 指定した名前のテンプレートが存在しない場合は、標準テンプレートが読み込まれます。 テンプレートのファイル拡張子 (.tdf) は、 *template_name*の一部として指定しないでください。 次に例を示します。  
+ トレースを構成するために読み込まれるテンプレートを指定します。 テンプレート名は引用符で囲む必要があります。 テンプレートは、システム テンプレート ディレクトリまたはユーザー テンプレート ディレクトリに格納されている必要があります。 同じ名前のテンプレートが両方のディレクトリにある場合は、システム ディレクトリのテンプレートが読み込まれます。 指定した名前のテンプレートが存在しない場合は、標準テンプレートが読み込まれます。 テンプレートのファイル拡張子 (.tdf) は、 *template_name* の一部として指定しないでください。 次に例を示します。  
   
 ```  
 /T "standard"  
 ```  
   
  **/F"** *filename* **"**  
- Profiler を起動するときに読み込むトレース ファイルのパスとファイル名を指定します。 パスとファイル名はすべて引用符で囲む必要があります。 このオプションを **/O**と同時に使用することはできません。  
+ Profiler を起動するときに読み込むトレース ファイルのパスとファイル名を指定します。 パスとファイル名はすべて引用符で囲む必要があります。 このオプションを **/O** と同時に使用することはできません。  
   
  **/O "** *filename*  **"**  
- トレース結果を書き込むファイルのパスとファイル名を指定します。 パスとファイル名はすべて引用符で囲む必要があります。 このオプションを **/F**と同時に使用することはできません。  
+ トレース結果を書き込むファイルのパスとファイル名を指定します。 パスとファイル名はすべて引用符で囲む必要があります。 このオプションを **/F** と同時に使用することはできません。  
   
  **/L** *locale_ID*  
  使用できません。  

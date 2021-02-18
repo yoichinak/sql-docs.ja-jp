@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: e7cf111f19344ae1364252d34801677c58326120
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64dc5efd785497298f838d5655702185517d1794
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643863"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336008"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 要素 (DTA)
 
@@ -45,7 +45,7 @@ ms.locfileid: "85643863"
 |**データ型と長さ**|**string**、長さは無制限です。|  
 |**指定できる値**|**IDX_IV**<br /> インデックスおよびインデックス付きビュー。<br /><br /> **IDX**<br /> インデックスのみ。<br /><br /> **IV**<br /> インデックス付きビューのみ。<br /><br /> **NCL_IDX**<br /> 非クラスター化インデックスのみ。<br /><br /> この要素では、上記の値のいずれか 1 つを使用してください。|  
 |**既定値**|**IDX**|  
-|**個数**|**TuningOptions** 要素につき 1 回の出現が必要です。ただし、 **DropOnlyMode** 要素を使用している場合は別です。 **DropOnlyMode** を使用している場合は、 **FeatureSet**を使用できません。 これらの要素を同時に指定することはできません。|  
+|**個数**|**TuningOptions** 要素につき 1 回の出現が必要です。ただし、 **DropOnlyMode** 要素を使用している場合は別です。 **DropOnlyMode** を使用している場合は、 **FeatureSet** を使用できません。 これらの要素を同時に指定することはできません。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

@@ -54,7 +54,7 @@ ms.locfileid: "100342877"
 ## <a name="permissions"></a>アクセス許可  
  このビューは、サーバーレベルプリンシパルログインの **master** データベースでのみ使用できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このビューを使用するには、 **master** データベースに接続している必要があります。 `sys.dm_operation_status`サーバーの **master** データベースのビューを使用して [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 、に対して実行される次の操作の状態を追跡し [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ます。  
   
 -   データベースの作成  
@@ -86,7 +86,7 @@ SELECT * FROM sys.dm_operation_status
    ORDER BY start_time DESC;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Geo レプリケーションの動的管理ビューおよび関数 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   

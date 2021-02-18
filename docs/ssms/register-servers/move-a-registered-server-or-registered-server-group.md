@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: ba1ed37292b3b92ead4af84cb3f00d4b51e3372d
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 2891d4dcfcae8689dda1aaf78cad9c4c43bae220
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99250921"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350473"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>登録済みサーバーまたは登録済みサーバー グループの移動
 
@@ -38,7 +38,7 @@ ms.locfileid: "99250921"
   
 2. **[サーバー登録の移動]** ダイアログ ボックスでサーバー グループの一覧を展開し、サーバーまたはサーバー グループを表示するノードをクリックし、 **[OK]** をクリックします。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [サーバーの登録](./register-servers.md)
 

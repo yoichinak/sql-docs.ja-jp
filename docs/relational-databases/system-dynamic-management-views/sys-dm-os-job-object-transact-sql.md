@@ -55,6 +55,6 @@ SQL Server プロセスを管理するジョブオブジェクトの構成と、
 ## <a name="permissions"></a>アクセス許可  
 SQL Managed Instance では、 `VIEW SERVER STATE` 権限が必要です。 SQL Database では、データベースにおける `VIEW DATABASE STATE` アクセス許可が必要です。  
  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 マネージインスタンスの詳細については、「 [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)」を参照してください。

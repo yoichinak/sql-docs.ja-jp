@@ -5,16 +5,16 @@ description: この記事では、SQL Server ビッグ データ クラスター
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a379b2bd1bb0e1992d70e1c86ae93163f6c02201
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: f8759714fe2846a86f53a4974960b511f4b4c3dd
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100046442"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343889"
 ---
 # <a name="kubernetes-rbac-model--impact-on-users-and-service-accounts-managing-bdc"></a>Kubernetes RBAC モデルと BDC を管理するユーザーおよびサービス アカウントへの影響
 
@@ -62,6 +62,7 @@ SQL Server 2019 CU5 以降、ポッドとノードのメトリックを収集す
      resources:
      - pods
      - nodes/stats
+     - nodes/proxy
      verbs:
      - get
    ---

@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 188d23afaabd31fa09d47ebed54ae7dbf952d376
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 96684c5962d6417f87999411131c924045933dd0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729578"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345870"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 要素 (DTA)
 
@@ -57,7 +57,7 @@ ms.locfileid: "85729578"
 |**子要素**|[Create 要素 &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 要素。 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。|  
   
 ## <a name="remarks"></a>解説  
- この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **RecommendationTypecomplexType** の名前です。 仮想的な構成でのインデックスを指定するために使用します。 この **Recommendation** 要素を、パーティション分割を指定するための**RecommendationPType**や、ビューを指定するための**RecommendationViewType**という他の種類の要素と混同しないでください。 このような他の種類の **Recommendation** 要素の詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。  
+ この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **RecommendationTypecomplexType** の名前です。 仮想的な構成でのインデックスを指定するために使用します。 この **Recommendation** 要素を、パーティション分割を指定するための **RecommendationPType** や、ビューを指定するための **RecommendationViewType** という他の種類の要素と混同しないでください。 このような他の種類の **Recommendation** 要素の詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。  
   
 ## <a name="example"></a>例  
  この要素の使用例については、「[ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)」を参照してください。  

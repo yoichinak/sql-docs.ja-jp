@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 36b26f67dd54b2fc28b70e05114011070de9ba7e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7dc261ca057aeebe07cf8dbd8cb4a735f05ffbce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774996"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335961"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning 要素 (DTA)
 
@@ -45,7 +45,7 @@ ms.locfileid: "85774996"
 |**データ型と長さ**|**string**、長さは無制限です。|  
 |**指定できる値**|**NONE**<br /> パーティション分割なし。<br /><br /> **FULL**<br /> 完全パーティション分割 (パフォーマンスが向上します)。<br /><br /> **ALIGNED**<br /> 固定パーティション分割 (管理が容易になります)。<br /><br /> この要素では、上記の値のいずれか 1 つを使用してください。<br /><br /> **ALIGNED** の場合、データベース エンジン チューニング アドバイザーによって生成される推奨設定では、すべての推奨インデックスが、インデックス定義の基になるテーブルとまったく同じ方法で分割されます。 インデックス付きビューの非クラスター化インデックスは、インデックス付きビューに準じます。|  
 |**既定値**|**NONE**|  
-|**個数**|**TuningOptions** 要素につき 1 回の出現が必要です。ただし、 **DropOnlyMode** 要素を使用している場合は別です。 **DropOnlyMode** を使用している場合は、 **Partitioning**を使用できません。 これらの要素を同時に指定することはできません。|  
+|**個数**|**TuningOptions** 要素につき 1 回の出現が必要です。ただし、 **DropOnlyMode** 要素を使用している場合は別です。 **DropOnlyMode** を使用している場合は、 **Partitioning** を使用できません。 これらの要素を同時に指定することはできません。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

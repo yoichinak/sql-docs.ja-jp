@@ -12,12 +12,12 @@ ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: f97460fb4bf163ae0935bc290dd651ff4ad475aa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7a184bda7d89059586f17ea5935924fb0805257c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481683"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349822"
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>クライアント プロトコル (SQL Server 構成マネージャー)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
