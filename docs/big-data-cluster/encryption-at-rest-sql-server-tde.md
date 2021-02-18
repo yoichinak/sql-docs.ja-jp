@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0ec2ab7fa84dc3f4b4155a093794d5a4e49b56ec
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 7d249f9b70479603ad66e6b68cec784b1476324a
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100046852"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489316"
 ---
 # <a name="sql-server-big-data-clusters-transparent-data-encryption-tde-at-rest-usage-guide"></a>SQL Server ビッグ データ クラスターの保存時の Transparent Data Encryption (TDE) の使用ガイド
 
@@ -26,8 +26,6 @@ ms.locfileid: "100046852"
 
 __サポートされていない機能:__
 * データ プールの暗号化
-* [HA デプロイ](deployment-high-availability.md)内の可用性グループに含まれるデータベースの暗号化キーのローテーション。
-
 
 ## <a name="prerequisites"></a><a id="prereqs"></a> 前提条件
 

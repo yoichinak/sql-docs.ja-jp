@@ -20,12 +20,12 @@ ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ae92bc88f3b18dcd195d857c1ccc975d116880f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe9c75b0b173bf2f72437233d2c06305b5041132
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491719"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355206"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>抽出条件ペインで検索条件を組み合わせる場合の規則 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -167,6 +167,6 @@ WHERE (hire_date < '01/01/95' ) AND
   
 抽出条件ペインで値の 1 つを変更するなど、クエリに変更を加えると、クエリおよびビュー デザイナーによって SQL ペインの SQL ステートメントが再作成されます。 再作成された SQL ステートメントは、元のステートメントよりも抽出条件ペインの表示内容の方に近くなります。 たとえば、抽出条件ペインに分配された AND 句が含まれる場合、SQL ペインで再作成されるステートメントには明示的に分配された AND 句が含まれます。 詳細については、このトピックの前の方にある「複数の OR 句に対する AND の解釈」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [検索基準の指定 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

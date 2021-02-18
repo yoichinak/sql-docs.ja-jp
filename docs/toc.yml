@@ -443,6 +443,8 @@ items:
                 href: big-data-cluster/spark-hive-tools-vscode.md
               - name: 拡張された Spark History Server を使用する
                 href: big-data-cluster/spark-history-server.md
+              - name: ライブラリを管理する
+                href: big-data-cluster/spark-install-packages.md
           - name: トラブルシューティング
             items:
               - name: Kubernetes のトラブルシューティング
@@ -465,7 +467,7 @@ items:
                 href: big-data-cluster/cluster-troubleshooter-notebooks.md
       - name: リファレンス
         items:
-          - name: 展開
+          - name: デプロイ
             items:
               - name: オープンソース ソフトウェア
                 href: big-data-cluster/reference-open-source-software.md
@@ -521,6 +523,8 @@ items:
                     href: azdata/reference/reference-azdata-bdc-endpoint.md
                   - name: bdc gateway
                     href: azdata/reference/reference-azdata-bdc-gateway.md
+                  - name: bdc ゲートウェイの設定
+                    href: azdata/reference/reference-azdata-bdc-gateway-settings.md
                   - name: bdc gateway status
                     href: azdata/reference/reference-azdata-bdc-gateway-status.md
                   - name: bdc hdfs
@@ -531,6 +535,8 @@ items:
                     href: azdata/reference/reference-azdata-bdc-hdfs-key.md
                   - name: bdc hdfs のマウント
                     href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
+                  - name: bdc hdfs の設定
+                    href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
                   - name: bdc hdfs status
                     href: azdata/reference/reference-azdata-bdc-hdfs-status.md
                   - name: bdc settings
@@ -541,12 +547,16 @@ items:
                     href: azdata/reference/reference-azdata-bdc-spark-batch.md
                   - name: bdc spark セッション
                     href: azdata/reference/reference-azdata-bdc-spark-session.md
+                  - name: bdc spark の設定
+                    href: azdata/reference/reference-azdata-bdc-spark-settings.md
                   - name: bdc spark ステートメント
                     href: azdata/reference/reference-azdata-bdc-spark-statement.md
                   - name: bdc spark status
                     href: azdata/reference/reference-azdata-bdc-spark-status.md
                   - name: bdc sql
                     href: azdata/reference/reference-azdata-bdc-sql.md
+                  - name: bdc sql の設定
+                    href: azdata/reference/reference-azdata-bdc-sql-settings.md
                   - name: bdc の状態
                     href: azdata/reference/reference-azdata-bdc-status.md
   - name: ビジネス継続性

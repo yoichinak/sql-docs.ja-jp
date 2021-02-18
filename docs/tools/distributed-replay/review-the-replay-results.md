@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 6452f60083c166ab86633655b0cfb3b92da88da6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c2909a8f4c6f592781d94dbef6ab0288ff5980d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732201"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354502"
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
 
@@ -76,7 +76,7 @@ ms.locfileid: "85732201"
 |ConnectionID|**int**|イベントのキャプチャ接続の ID。|11|  
 |ReplaySPID|**int**|イベントの再生セッションの ID。|12|  
 |DatabaseName|**nvarchar**|ユーザーのステートメントが実行されているデータベースの名前。|13|  
-|LoginName|**nvarchar**|ユーザーのログイン名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログイン、または *domain_name*\\*user_name*の形式で表された Microsoft Windows ログイン資格情報です。|14|  
+|LoginName|**nvarchar**|ユーザーのログイン名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログイン、または *domain_name*\\*user_name* の形式で表された Microsoft Windows ログイン資格情報です。|14|  
 |CaptureHostName|**nvarchar**|キャプチャ中にクライアント サービスが実行されているコンピューターの名前。|15|  
 |ReplayHostName|**nvarchar**|再生中にクライアントが実行されているコンピューターの名前。|16|  
 |ApplicationName|**nvarchar**|キャプチャ中に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続を作成したクライアント アプリケーションの名前。|17|  
