@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7f9b06bd6805e75c053037b18fc6870ef1469500
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: c38eb3d70f724dc90e14aa77641dddd781233a62
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642212"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343875"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On 可用性グループ: 高可用性とディザスター リカバリーのソリューション
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "97642212"
   
     -   *非同期コミット モード*。 この可用性モードは、距離を隔てて可用性レプリカが分散されている場合に効果的な災害復旧ソリューションです。  
   
-    -   *同期コミット モード*。 この可用性モードは、パフォーマンスよりも高可用性とデータ保護が重視され、トランザクションの遅延が増加するのが欠点です。 1 つの可用性グループで、現在のプライマリ レプリカを含む、最大 3 つの同期コミット可用性レプリカをサポートできます。  
+    -   *同期コミット モード*。 この可用性モードは、パフォーマンスよりも高可用性とデータ保護が重視され、トランザクションの遅延が増加するのが欠点です。 1 つの可用性グループで、現在のプライマリ レプリカを含む、最大 5 つの同期コミット可用性レプリカをサポートできます。  
   
      詳細については、「[可用性モード &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」を参照してください。 
 
-     [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] では 3 つであった同期レプリカの最大数が、[!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] では 5 つに増加します。 この 5 つのレプリカのグループを、グループ内で自動フェールオーバーするように構成できます。 1 つのプライマリ レプリカと、4 つの同期セカンダリ レプリカがあります。
+     [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] では 3 つであった同期レプリカの最大数が、[!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] では 5 つに増加します。 この 5 つのレプリカのグループを、グループ内で自動フェールオーバーするように構成できます。 1 つのプライマリ レプリカと、4 つの同期セカンダリ レプリカがあります。
   
 -   自動フェールオーバー、計画的な手動フェールオーバー (通常は単に "手動フェールオーバー" と呼ばれます)、および強制手動フェールオーバー (通常は単に "強制フェールオーバー" と呼ばれます) の複数の形式の可用性グループ フェールオーバーをサポートします。 詳細については、「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
   

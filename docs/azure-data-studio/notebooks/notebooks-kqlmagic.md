@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: 7f21215f0f241373db532feeac00143e03753bf7
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: e78a8b6bd70724b8dda3d542e9c088e706cbe5ee
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100042652"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343524"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio の Kqlmagic
 
@@ -35,20 +35,22 @@ ms.locfileid: "100042652"
 
    ![新しい Notebook](media/notebooks-kqlmagic/install-new-notebook.png)
 
-2. メッセージが表示されたら、 **[はい]** を選択して、Python パッケージをアップグレードします。
+2. パッケージを更新する必要がある場合は、Python パッケージをアップグレードするように求められることがあります。
 
    ![はい](media/notebooks-kqlmagic/install-python-yes.png)
 
 3. Kqlmagic をインストールします。
 
    ```python
-   !pip install Kqlmagic --no-cache-dir --upgrade
+   import sys
+   !{sys.executable} -m pip install Kqlmagic --no-cache-dir --upgrade
    ```
 
    インストールされていることを確認します。
 
    ```python
-   !pip list
+   import sys
+   !{sys.executable} -m pip list
    ```
 
    ![List](media/notebooks-kqlmagic/install-list.png)

@@ -11,12 +11,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af720d627c0af05060b4d6f4915762cd80782714
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 34f8655a24a84d50c5f677d819330537fa030cc6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97469503"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075060"
 ---
 # <a name="import-json-documents-into-sql-server"></a>JSON ドキュメントの SQL Server へのインポート
 
@@ -91,6 +91,9 @@ Azure File Storage の詳細については、「[File Storage](https://azure.mi
 ## <a name="import-json-documents-from-azure-blob-storage"></a>Azure Blob Storage から JSON ドキュメントをインポートする
 
 T-SQL BULK INSERT コマンドまたは OPENROWSET 関数を使用して、Azure Blob Storage のファイルを Azure SQL Database に直接読み込むことができます。
+
+> [!NOTE]
+> この機能は [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] と Azure SQL に追加されています。
 
 まず外部データ ソースを作成します。次に例を示します。
 

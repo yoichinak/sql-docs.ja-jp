@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4038ba678af8635f3ac2bd12f68c818a61e2c87f
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 86f23acdc6dd82210c5747915d78aafc2344fc6b
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99075635"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100348098"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -156,7 +156,7 @@ ms.locfileid: "99075635"
   
 3.  差分バックアップが存在する場合、データベースを復旧せずに最新のデータベースの差分バックアップを復元します (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  各トランザクション ログ バックアップを作成順に適用して、ログの復元を停止する時点を指定します (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=**_time_**,** RECOVERY)。  
+4.  各トランザクション ログ バックアップを作成順に適用して、ログの復元を停止する時点を指定します (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY)。  
   
     > [!NOTE]  
     >  RECOVERY オプションと STOPAT オプション。 トランザクション ログ バックアップに、要求した時点の情報が格納されていない場合、たとえば、指定した日時がトランザクション ログに記録されている時点より後の場合などに、警告が生成されます。この場合、データベースは復旧されません。  

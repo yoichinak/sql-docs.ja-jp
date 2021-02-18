@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 6b68cb2b2ff3712502ef4e0862fe71ad78705d7c
-ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
+ms.openlocfilehash: e1e14db6e55ca4af4f76220c0e3f377c38e41165
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99623762"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351873"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux-using-adutil"></a>チュートリアル:adutil を使用して SQL Server on Linux で Active Directory 認証を構成する
 
@@ -70,9 +70,10 @@ Linux ホスト マシンで、次のコマンドを使用して adutil-preview 
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. Microsoft Ubuntu リポジトリを登録します。
+1. パブリック リポジトリの GPG キーをインポートしてから、Microsoft Ubuntu リポジトリを登録します。
 
     ```bash
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
     ```
 

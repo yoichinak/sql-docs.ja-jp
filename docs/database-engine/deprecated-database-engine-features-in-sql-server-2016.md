@@ -1,9 +1,9 @@
 ---
-title: データベース エンジンの非推奨の機能 | Microsoft Docs
+title: データベース エンジンの非推奨機能
 titleSuffix: SQL Server 2016
 description: SQL Server 2016 (13.x) で引き続き使用できるデータベース エンジンの非推奨の機能について説明します。ただし、新しいアプリケーションではこれらを使用しないでください。
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 02/11/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,20 +13,19 @@ helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
-ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e46ade314bf0218344b682c7b75762de3f10396
-ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
+ms.openlocfilehash: 518b29507e7992b267922e09c97bf98b1657205d
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99552642"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525164"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 データベース エンジンの非推奨の機能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
-このトピックでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]の機能について説明します。 非推奨の機能を新しいアプリケーションで使用しないでください。  
+このトピックでは、[!INCLUDE[sssql15-md](../includes/sssql16-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の機能について説明します。 非推奨の機能を新しいアプリケーションで使用しないでください。  
   
 機能に非推奨の印が付いている場合、それは次のことを意味します。
 -  その機能は保守管理状態にあり、それ以外では利用されていません。 新しい変更は行われません。新しい機能との相互運用性に関する変更もありません。
@@ -67,6 +66,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |互換性レベル|sp_dbcmptlevel|ALTER DATABASE ...SET COMPATIBILITY_LEVEL です。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|sp_dbcmptlevel|80|  
 |互換性レベル|データベース互換性レベル 110 および 120。|今後のリリースでデータベースおよびアプリケーションのアップグレードを計画してください。 しかしながら、Microsoft は、アップグレードを簡単にする目的で、サポートされているあらゆるデータベース互換性レベルで認められているアプリケーションのサポートを可能な限り継続します。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|データベース互換性レベル 110<br /><br /> データベース互換性レベル 120||  
 |XML|インライン XDR スキーマの生成|FOR XML オプションに対する XMLDATA ディレクティブは非推奨とされます。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。|XMLDATA|181|  
+|XML|sys.sp_db_selective_xml_index|ALTER INDEX … DISABLE<BR><BR>詳細については、[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) に関する記事をご覧ください。|[sys.sp_db_selective_xml_index](../relational-databases/system-stored-procedures/sp-db-selective-xml-index-transact-sql.md)|
 |バックアップと復元|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE または LOG TO TAPE|235|  
 |バックアップと復元|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
 |バックアップと復元|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
@@ -175,4 +175,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 で廃止されたデータベース エンジンの機能](./discontinued-database-engine-functionality-in-sql-server.md)     
- [SQL Server 2017 データベース エンジンの非推奨の機能](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)
+ [SQL Server 2017 データベース エンジンの非推奨の機能](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)  

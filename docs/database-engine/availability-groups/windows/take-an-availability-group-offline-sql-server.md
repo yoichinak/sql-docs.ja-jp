@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 361fdb639201fe69c9f31e233dca51a910ed10a7
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 7b5b892518856f38260218a23bb4342ab178aa30
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641548"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342373"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>可用性グループをオフラインにする (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] の [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 以降のバージョンを使用して、AlwaysOn 可用性グループを ONLINE 状態から OFFLINE 状態にする方法について説明します。 同期コミット レプリカが同期されていない場合は OFFLINE 操作でエラーが発生し、可用性グループは ONLINE を維持するため、同期コミット データベースのデータ損失はありません。 可用性グループをオンラインにしておくと、非同期コミット データベースで発生する可能性があるデータ損失が防止されます。 可用性グループがオフラインになると、クライアントはそのデータベースを使用できなくなりますが、可用性グループをオンラインに戻すことはできません。 したがって、可用性グループは、可用性グループのリソースを WSFC クラスター間で移行する場合のみオフラインにしてください。  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のクラスター間での移行時は、任意のアプリケーションが可用性グループのプライマリ レプリカに直接接続している場合は、可用性グループをオフラインにする必要があります。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のクラスター間の移行は、可用性グループの最小限のダウンタイムで OS のアップグレードをサポートします。 一般的なシナリオは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のクラスター間の移行を、 [!INCLUDE[win8](../../../includes/win8-md.md)] または [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]への OS のアップグレードで使用することです。 詳細については、「 [OS アップグレードのための AlwaysOn 可用性グループのクラスター間での移行](/previous-versions/sql/sql-server-2012/jj873730(v=msdn.10))」を参照してください。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のクラスター間での移行時は、任意のアプリケーションが可用性グループのプライマリ レプリカに直接接続している場合は、可用性グループをオフラインにする必要があります。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のクラスター間の移行は、可用性グループの最小限のダウンタイムで OS のアップグレードをサポートします。 一般的なシナリオでは、SQL Server 2012 SP1 (11.0.3 x) 以降のバージョンで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のクラスター間での移行を使用します。 詳細については、「 [OS アップグレードのための AlwaysOn 可用性グループのクラスター間での移行](/previous-versions/sql/sql-server-2012/jj873730(v=msdn.10))」を参照してください。  
   
   
 > [!CAUTION]  

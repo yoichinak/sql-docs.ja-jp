@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: dc7532aaead7b2257755f2db689c2cbbbd05d3c3
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6620e688dcd8094bbc5b27bfbb540a2e7d3b1585
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639196"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100348829"
 ---
 # <a name="sql-server-back-up-to-url-best-practices-and-troubleshooting"></a>SQL Server の URL へのバックアップに関するベスト プラクティスとトラブルシューティング
 
@@ -44,6 +44,8 @@ ms.locfileid: "97639196"
 -   バックアップ中に `WITH COMPRESSION` オプションを使用すると、ストレージ コストとストレージのトランザクション コストを最小限に抑えることができます。 また、バックアップ プロセスが完了するまでにかかる時間を短縮することもできます。  
 
 - 「[SQL Server Backup to URL](./sql-server-backup-to-url.md)」で推奨されているように、`MAXTRANSFERSIZE` 引数と `BLOCKSIZE` 引数を設定します。
+
+- SQL Server は、使用されるストレージの冗長性の種類に依存しません。 ページ BLOB とブロック BLOB へのバックアップは、すべてのストレージ冗長性 (LRS\ZRS\GRS\RA-GRS\RA-GZRS\etc.) でサポートされています。
   
 ## <a name="handling-large-files"></a>大きなファイルの処理  
   
@@ -155,15 +157,27 @@ CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'
 , SECRET = '<storage access key>' ;  
 ```  
   
-資格情報は存在しますが、BACKUP コマンドの実行に使用されるログイン アカウントに資格情報へのアクセス権限がありません。 **_Alter any credential_* _ 権限がある **db_backupoperator** ロールのログイン アカウントを使用してください。  
+資格情報は存在しますが、BACKUP コマンドの実行に使用されるログイン アカウントに資格情報へのアクセス権限がありません。 **_Alter any credential_** 権限がある **db_backupoperator** ロールのログイン アカウントを使用してください。  
   
 ストレージ アカウントの名前とキーの値を確認してください。 資格情報に格納されている情報は、バックアップ操作と復元操作で使用する Azure ストレージ アカウントのプロパティの値と一致する必要があります。  
   
-  
+
+**400 (無効な要求) エラー**
+
+SQL Server 2012 を使用すると、次のようなバックアップの実行中にエラーが発生する場合があります。
+
+```
+Backup to URL received an exception from the remote endpoint. Exception Message: 
+The remote server returned an error: (400) Bad Request..
+```
+
+これは、Azure Storage アカウントでサポートされている TLS バージョンが原因で発生します。 サポートされている TLS バージョンを変更するか、[KB4017023](https://support.microsoft.com/en-us/topic/kb4017023-sql-server-2012-2014-or-2016-backup-to-microsoft-azure-blob-storage-service-url-isn-t-compatible-for-tls-1-2-e9ef6124-fc05-8128-86bc-f4f4f5ff2b78) に記載されている回避策を使用してください。
+
+
 ## <a name="proxy-errors"></a>プロキシ エラー  
  インターネットへのアクセスにプロキシ サーバーを使用している場合、以下の問題が発生することがあります。  
   
- _ *プロキシ サーバーによる接続調整**  
+ **プロキシ サーバーによる接続調整**  
   
  プロキシ サーバーで、1 分あたりの接続数を制限する設定が使用されている場合があります。 Backup to URL プロセスはマルチスレッド プロセスであるため、この制限を超える可能性があります。 制限を超えた場合、プロキシ サーバーは接続を切断します。 この問題を解決するには、プロキシ設定を変更し、SQL Server がプロキシを使用しないようにします。 エラー ログに表示される可能性のある種類またはエラー メッセージの例を次に示します。  
   

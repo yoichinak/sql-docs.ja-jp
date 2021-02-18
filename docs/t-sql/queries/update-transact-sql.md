@@ -39,12 +39,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4dde2d907d13a0f720f925fc33f9e7cb0ba708b5
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 82a4adb98429184e316d63df5e94ae077b137f86
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237813"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100353604"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -170,7 +170,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  プロバイダーの機能によって、 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 関数または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 関数のいずれかになります。  
   
  WITH **(** \<Table_Hint_Limited> **)**  
- 対象のテーブルに設定可能なテーブル ヒントを 1 つ以上指定します。 キーワード WITH とかっこが必要です。 NOLOCK および READUNCOMMITTED は指定できません。 テーブル ヒントの詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
+ 対象のテーブルに設定可能なテーブル ヒントを 1 つ以上指定します。 キーワード WITH とかっこが必要です。 NOLOCK、READUNCOMMITTED、および NOEXPAND は指定できません。 テーブル ヒントの詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
  @*table_variable*  
  [table](../../t-sql/data-types/table-transact-sql.md) 変数をテーブル ソースとして指定します。  

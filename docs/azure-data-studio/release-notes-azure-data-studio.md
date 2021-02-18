@@ -8,25 +8,26 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2021
-ms.openlocfilehash: d249e36c9b15cabe9556701c8aafc3cb5ab66fac
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 2/10/2021
+ms.openlocfilehash: 17cc8ef3252ad39c344de7a7c51a9af80c1f6030
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100040012"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343402"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](./download-azure-data-studio.md)**
 
-## <a name="january-2021-hotfix"></a>2021 年 1 月 (修正プログラム)
+## <a name="december-2020-hotfix"></a>2020 年 12 月 (修正プログラム)
 
-2021 年 1 月 22 日 &nbsp; / &nbsp; バージョン:1.25.2
+2021 年 2 月 10 日 &nbsp; / &nbsp; バージョン: 1.25.3
 
 | Change | 詳細 |
 | ------ | ------- |
-| バグの修正 [#13899](https://github.com/microsoft/azuredatastudio/issues/13899)| Notebook 内の適切な相互参照リンクまでスクロールする |
+| バグの修正 [#13899](https://github.com/microsoft/azuredatastudio/issues/13899) | Notebook 内の適切な相互参照リンクまでスクロールする |
+| 重要なバグの修正プログラムを組み込むために Electron をアップグレードする| 該当なし |
 
 ## <a name="december-2020"></a>2020 年 12 月
 

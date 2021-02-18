@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87ea13391e0495c695ccc057e842e2f6ef0c6e19
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 0fa90cc172c07b7642ca937271fe8c6709b65ede
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237948"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489376"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 
@@ -68,6 +68,9 @@ ms.locfileid: "99237948"
 
 > [!NOTE]
 > データ ファイルの数の既定値は、 [KB 2154845](https://support.microsoft.com/kb/2154845/)の一般的なガイドラインに基づいています。  
+
+> [!NOTE]
+> `tempdb` の現在のサイズと拡張パラメーターを確認するには、ビュー `tempdb.sys.database_files` でクエリを実行します。
   
 ### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>SQL Server の tempdb のデータ ファイルとログ ファイルの移動
 

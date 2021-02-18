@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521904030d97213770d4a2310b51eaadc37d4e5d
-ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
+ms.openlocfilehash: 996ae78401e57e538ef2835ec107a2cc5400741a
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478587"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100352470"
 ---
 # <a name="statistics"></a>統計
 
@@ -128,10 +128,9 @@ ORDER BY s.name;
   |一時|*n* < 6|6|
   |一時|6 <= *n* <= 500|500|
   |永続的|*n* <= 500|500|
-  |一時的または永続的|500 <= *n* <= 25,000|500 + (0.20 * *n*)|
-  |一時的または永続的|*n* > 25,000|SQRT(1,000 * *n*)|
+  |一時的または永続的|*n* >= 500|MIN ( 500 + (0.20 * *n*), SQRT(1,000 * *n*) ) |
 
-  たとえば、テーブルに 200 万行が含まれている場合、計算は `SQRT(1,000 * 2,000,000) = 44,721` となり、統計は 44,721 回の変更ごとに更新されます。
+  たとえば、テーブルに 200 万行含まれている場合、計算は `500 + (0.20 * 2,000,000) = 400,500` と `SQRT(1,000 * 2,000,000) = 44,721` の小さい方となります。 これは、44,721 の変更ごとに統計が更新されることを意味します。
 
 > [!IMPORTANT]
 > [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 以降の[データベース互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 以下では、[トレース フラグ 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で低下した動的統計更新しきい値が使用されるようにします。

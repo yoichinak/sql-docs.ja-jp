@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b9a9c27b80d702706d0b6bf1d7e7b3cb7d1d09b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2bb17115cb016e13f0ef20f8bd4ace4edf5c214a
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99192732"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100270501"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -56,7 +56,7 @@ WITH IDENTITY = 'identity_name'
 IDENTITY **='** _identity\_name_ **'** サーバーの外部に接続するときに使用するアカウントの名前を指定します。 共有キーを使用して Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。 データを Azure Synapse Analytics に読み込むには、任意の有効な値を ID に使用できます。 Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。 Kerberos (Windows Active Directory または MIT KDC) の使用時、IDENTITY 引数でドメイン名を使用しないでください。 アカウント名にしておけば問題ありません。
 
 > [!IMPORTANT]
-> PolyBase 用の SQL、Oracle、Teradata、および MongoDB ODBC コネクタでサポートされるのは、Kerberos 認証ではなく、基本認証のみです。
+> Kerberos 認証をサポートする PolyBase 外部データ ソースは Hadoop だけです。 他のすべての外部データ ソース (SQL Server、Oracle、Teradata、MongoDB、汎用 ODBC) は、基本認証のみをサポートします。
 
 > [!NOTE]
 > Azure Blob Storage 内のコンテナーで匿名アクセスが有効になっている場合は、WITH IDENTITY を使用する必要はありません。 Azure Blob Storage に対するクエリの例については、「[Azure Blob Storage に格納されているファイルからテーブルへのインポート](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)」を参照してください。

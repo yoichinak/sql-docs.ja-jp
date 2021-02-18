@@ -21,12 +21,12 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 9c97ee3e1f268553a828e035498b203c8fa1e747
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 14a7dce61b50ced328c103ec88973e9bf7b18c7d
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438947"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100345241"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -160,6 +160,8 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  外部テーブルでのデータ操作言語 (DML) 操作はサポートされていません。 たとえば、[!INCLUDE[tsql](../../includes/tsql-md.md)] の UPDATE、INSERT、DELETE [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、外部データを変更することはできません。
 
  外部テーブルで許可されるデータ定義言語 (DDL) 操作は、CREATE TABLE、DROP TABLE、CREATE STATISTICS、DROP STATISTICS、CREATE VIEW、DROP VIEW のみです。
+
+ サーバーレス SQL プールの外部テーブルを、現在データがある場所に作成することはできません。 データの格納に使用されている場所を再利用するには、その場所を ADLS で手動で削除する必要があります。
 
  PolyBase では、32 個の同時 PolyBase クエリを実行しているときに、フォルダーあたり最大 33,000 ファイルを使用できます。 この最大数には、各 HDFS フォルダー内のファイルとサブフォルダーの両方が含まれます。 コンカレンシーの度合いが 32 未満である場合、ユーザーは 33,000 より多いファイルが含まれている HDFS のフォルダーに対して PolyBase クエリを実行できます。 Hadoop および PolyBase のユーザーがファイル パスを短くし、HDFS フォルダーごとに 30,000 以下のファイルを使用することをお勧めします。 参照されているファイルが多すぎると、JVM のメモリ不足例外が発生します。
 

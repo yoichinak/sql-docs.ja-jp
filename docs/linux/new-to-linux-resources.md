@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 789178113f1e22df2d2cf028d2f6e5f93e9b5b0e
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 253c398e0f010e164d1efa5c39fc958e86047ed6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646822"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064057"
 ---
 # <a name="new-to-linux-resources-for-sql-users"></a>SQL ユーザー向けの Linux 初心者用リソース
 
@@ -24,7 +24,7 @@ ms.locfileid: "88646822"
 
 ## <a name="what-is-linux"></a>Linux とは
 
-[Linux とは](https://www.linux.org/threads/what-is-linux.4106/)に関するモジュールでは、オペレーティング システムとしての Linux の歴史を紹介しています。 このモジュールでは、*カーネル*と Linux の現在の位置について説明します。 このチュートリアルは Linux の概要を説明するものであり、これから始める際に役立ちます。 
+[Linux とは](https://www.linux.org/threads/what-is-linux.4106/)に関するモジュールでは、オペレーティング システムとしての Linux の歴史を紹介しています。 このモジュールでは、*カーネル* と Linux の現在の位置について説明します。 このチュートリアルは Linux の概要を説明するものであり、これから始める際に役立ちます。 
 
 ## <a name="select-a-distribution"></a>ディストリビューションの選択
 
@@ -63,6 +63,6 @@ Linux でのさまざまなユーザーとグループの識別に慣れたら�
 
 ## <a name="next-steps"></a>次の手順
 
-Linux 環境について理解したら、SQL Server on Linux の [エディションとコンポーネント](sql-server-linux-editions-and-components-2019.md) と、 [サポートされている Linux プラットフォーム](sql-server-linux-release-notes-2019.md)を確認します。 
+Linux 環境について理解したら、SQL Server on Linux の[エディションとコンポーネント](sql-server-linux-editions-and-components-2019.md)と、[サポートされている Linux プラットフォーム](sql-server-linux-release-notes-2019.md)を確認してください。 
 
 詳しく学習する場合は、[その他の Linux チュートリアル](https://www.linux.org/forums/linux-beginner-tutorials.123/)と、[よく寄せられる質問](sql-server-linux-faq.md)をご覧ください。

@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57eb0bac3a794aaf3b7f84fc8cfb14d0207da1ae
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: d7a1f83563e3ae103fa683bbe604926f40982d06
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99233257"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100352713"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server のインデックスのアーキテクチャとデザイン ガイド
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "99233257"
 -   ハッシュ インデックス
 -   メモリ最適化された非クラスター化インデックス
 
-XML インデックスの詳細については、[XML インデックスの概要](../relational-databases/xml/xml-indexes-sql-server.md)に関するページを参照してください。
+XML インデックスの詳細については、[XML インデックスの概要](../relational-databases/xml/xml-indexes-sql-server.md)と[選択的 XML インデックス (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md) に関するページを参照してください。
 
 空間インデックスについては、「[空間インデックスの概要](../relational-databases/spatial/spatial-indexes-overview.md)」を参照してください。
 

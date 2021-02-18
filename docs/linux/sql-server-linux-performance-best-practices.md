@@ -8,12 +8,12 @@ ms.date: 01/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9a73013e7d49523f8aba418a2961336998190fc5
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 652db6f752f8bf46ad2b7d4779063c79359e3a33
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98689115"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350940"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン
 
@@ -102,13 +102,13 @@ mkfs.xfs /dev/md2 -f -L tempdb
 
 SQL Server のデータおよびログ ファイルを格納するために使用される任意のファイル システムで、**noatime** 属性を使用することを強くお勧めします。 この属性を設定する方法については、Linux のドキュメントを参照してください。 Azure 仮想マシンにマウントされているボリュームに対して、**noatime** オプションを有効にする方法の例を以下に示します。
 
-*_/etc/fstab_* のマウント ポイント エントリ
+***/etc/fstab*** のマウント ポイント エントリ
 
 ```bash
 UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /data1 xfs,rw,attr2,noatime 0 0
 ```
 
-上の例では、UUID は _*_blkid_*_ コマンドを使用して見つけることができるデバイスを表します。
+上の例では、UUID は ***blkid*** コマンドを使用して見つけることができるデバイスを表します。
 
 #### <a name="sql-server-and-forced-unit-access-fua-io-subsystem-capability"></a>SQL Server と強制ユニット アクセス (FUA) I/O サブシステム機能
 
@@ -125,7 +125,7 @@ SUSE Linux Enterprise Server 12 SP5 および Red Hat Enterprise Linux 8.0 以�
 推奨構成: 
 
 1. 起動時のパラメーターとしてトレース フラグ 3979 を有効にします
-2. *mssql-conf* を使用して、`control.writethrough = 1` と `control.alternatewritethrough = 0` を構成します
+2. **mssql-conf** を使用して、`control.writethrough = 1` と `control.alternatewritethrough = 0` を構成します
 
 上記の条件を満たさない他のほぼすべての構成については、次のように構成することをお勧めします。
 
@@ -134,13 +134,13 @@ SUSE Linux Enterprise Server 12 SP5 および Red Hat Enterprise Linux 8.0 以�
 
 ### <a name="kernel-and-cpu-settings-for-high-performance"></a>ハイ パフォーマンスのためのカーネルおよび CPU の設定
 
-以下のセクションでは、SQL Server インストールのハイ パフォーマンスとスループットに関する推奨される Linux OS 設定について説明します。 これらの設定を構成するプロセスについては、Linux OS のドキュメントを参照してください。 説明に従って [**_Tuned_*](https://tuned-project.org) を使用すると、以下で説明する多くの CPU とカーネルを構成するのに役立ちます。
+以下のセクションでは、SQL Server インストールのハイ パフォーマンスとスループットに関する推奨される Linux OS 設定について説明します。 これらの設定を構成するプロセスについては、Linux OS のドキュメントを参照してください。 説明に従って [***Tuned***](https://tuned-project.org) を使用すると、以下で説明する多くの CPU とカーネルを構成するのに役立ちます。
 
-#### <a name="using-__tuned__-to-configure-kernel-settings"></a>_*_Tuned_*_ を使用してカーネル設定を構成する
+#### <a name="using-tuned-to-configure-kernel-settings"></a>***Tuned*** を使用してカーネル設定を構成する
 
-Red Hat Enterprise Linux (RHEL) のユーザーの場合、[Tuned](https://tuned-project.org) スループットパフォーマンス プロファイルで、(C-States を除く) 一部のカーネルおよび CPU 設定が自動的に構成されます。 RHEL 8.0 以降、*mssql* という名前の _*_Tuned_*_ プロファイルは Red Hat と共に共同開発されたものであり、これにより、SQL Server ワークロードのより詳細な Linux のパフォーマンス関連の調整が提供されます。 このプロファイルには、RHEL のスループット パフォーマンス プロファイルが含まれており、このプロファイルを使用しない他の Linux ディストリビューションおよび RHEL リリースについて確認できるように、定義を以下に示します。
+Red Hat Enterprise Linux (RHEL) のユーザーの場合、[Tuned](https://tuned-project.org) スループットパフォーマンス プロファイルで、(C-States を除く) 一部のカーネルおよび CPU 設定が自動的に構成されます。 RHEL 8.0 以降、_ *mssql** という名前の **Tuned** プロファイルは Red Hat と共に共同開発されたものであり、これにより、SQL Server ワークロードのより詳細な Linux のパフォーマンス関連の調整が提供されます。 このプロファイルには、RHEL のスループット パフォーマンス プロファイルが含まれており、このプロファイルを使用しない他の Linux ディストリビューションおよび RHEL リリースについて確認できるように、定義を以下に示します。
 
-SUSE Linux Enterprise Server 12 SP5、Ubuntu 18.04、Red Hat Enterprise Linux 7.x の場合は、**_Tuned_*パッケージを手動でインストールできます。以下の説明のとおり、これを使用して* mssql** プロファイルを作成および構成することができます。
+SUSE Linux Enterprise Server 12 SP5、Ubuntu 18.04、Red Hat Enterprise Linux 7.x の場合は、**Tuned** パッケージを手動でインストールできます。 以下の説明のとおり、これを使用して _ *mssql** プロファイルを作成および構成することができます。
 
 ##### <a name="proposed-linux-settings-using-a-tuned-mssql-profile"></a>Tuned mssql プロファイルを使用した Linux 設定の提案
 
@@ -207,7 +207,7 @@ tuned-adm list
 | min_perf_pct | 100 | intel p-state に関するドキュメントを参照してください |
 | C-States | C1 のみ | C-States が C1 のみに確実に設定する方法については、Linux またはシステムのドキュメントを参照してください |
 
-前述のとおり、**_Tuned_ *を使用すると、CPU 周波数ガバナー、ENERGY_PERF_BIAS、および min_perf_pct の設定が適切に自動で構成されます。これは、* mssql** プロファイルのベースとして、スループットパフォーマンス プロファイルが使用されているためです。 C-States パラメーターは、Linux またはシステム ディストリビューターによって提供されるドキュメントに従って手動で構成する必要があります。
+前述のとおり、**Tuned** を使用すると、CPU 周波数ガバナー、ENERGY_PERF_BIAS、および min_perf_pct の設定が適切に自動で構成されます。これは、_ *mssql** プロファイルのベースとして、スループットパフォーマンス プロファイルが使用されているためです。 C-States パラメーターは、Linux またはシステム ディストリビューターによって提供されるドキュメントに従って手動で構成する必要があります。
 
 #### <a name="disk-settings-recommendations"></a>ディスク設定に関する推奨事項
 
@@ -223,15 +223,15 @@ tuned-adm list
 - **vm.swappiness**: このパラメーターにより、ランタイム プロセス メモリのスワップ アウトに適用される、ファイルシステム キャッシュと比較した場合の相対的な重みを制御します。 このパラメーターの既定値は 60 です。これは、ランタイム プロセス メモリ ページのスワップを、ファイルシステム キャッシュ ページの削除との比較において、60:140 の比率で行うことを示します。 値 1 を設定すると、ファイルシステム キャッシュを活用することなく、ランタイム プロセス メモリを物理メモリ内に保持することを強く優先することが示されます。 SQL Server の場合、バッファー プールをデータ ページ キャッシュとして使用し、信頼性の高い復旧ができるようにするために、ファイルシステム キャッシュをバイパスして物理ハードウェアに書き込むことが強く優先されます。そのため、パフォーマンスの高い専用の SQL Server に対しては、積極的な swappiness の構成が効果的な可能性があります。
 詳細については、[/proc/sys/vm/ - #swappiness のドキュメント](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/vm.html#swappiness)を参照してください。
 
-- **vm.dirty_\** _: SQL Server ファイルの書き込みアクセスはキャッシュされないため、そのデータの整合性要件が満たされます。 これらのパラメーターを使用すると、効率的な非同期書き込みパフォーマンスを実現し、フラッシュを調整しながら十分な大きさのキャッシュを許可することで Linux での書き込みのキャッシュのストレージ IO への影響を軽減できます。
+- **vm.dirty_\*** : SQL Server ファイルの書き込みアクセスはキャッシュされないため、そのデータの整合性要件が満たされます。 これらのパラメーターを使用すると、効率的な非同期書き込みパフォーマンスを実現し、フラッシュを調整しながら十分な大きさのキャッシュを許可することで Linux での書き込みのキャッシュのストレージ IO への影響を軽減できます。
 
-- _*kernel.sched_\**_: これらのパラメーター値は、Linux カーネルの Completely Fair Scheduling (CFS) アルゴリズムを微調整するための現在の推奨事項を表します。これにより、スレッドのプロセス間のプリエンプションと再開に関して、ネットワークおよびストレージの IO 呼び出しのスループットが向上します。
+- **kernel.sched_\*** : これらのパラメーター値は、Linux カーネルの Completely Fair Scheduling (CFS) アルゴリズムを微調整するための現在の推奨事項を表します。これにより、スレッドのプロセス間のプリエンプションと再開に関して、ネットワークおよびストレージの IO 呼び出しのスループットが向上します。
 
-_*mssql* *_Tuned_*_ プロファイルを使用して、_vm.swappiness、vm.dirty_\* *_ および* kernel.sched_\** の設定を構成します。 `blockdev` コマンドを使用したディスク `readahead` 構成はデバイスごとに行われるため、手動で実行する必要があります。
+**mssql** **_Tuned_ *_ プロファイルを使用して、_* vm.swappiness**、**vm.dirty_\* *_ および _* kernel.sched_\*** の設定を構成します。 `blockdev` コマンドを使用したディスク `readahead` 構成はデバイスごとに行われるため、手動で実行する必要があります。
 
 #### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>マルチノード NUMA システムのカーネル設定の自動 numa バランシング
 
-マルチノード *NUMA* システムに SQL Server をインストールすると、次の **kernel.numa_balancing** カーネル設定が既定で有効になります。 **NUMA** システムの効率を最大になるように SQL Server を運用するには、マルチノード NUMA システムでの自動 numa バランシングを無効にします。
+マルチノード **NUMA** システムに SQL Server をインストールすると、次の **kernel.numa_balancing** カーネル設定が既定で有効になります。 **NUMA** システムの効率を最大になるように SQL Server を運用するには、マルチノード NUMA システムでの自動 numa バランシングを無効にします。
 
 ```bash
 sysctl -w kernel.numa_balancing=0
@@ -257,13 +257,13 @@ sysctl -w vm.max_map_count=1600000
 echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 
-または、次の行を使用して、**mssql** **_Tuned_* プロファイルを変更します。
+または、次の行を使用して、**mssql** **_Tuned_** プロファイルを変更します。
 
 ```bash
 vm.transparent_hugepages=madvise
 ```
 
-また、変更後に *mssql* プロファイルがアクティブになるようにします。
+また、変更後に **mssql** プロファイルがアクティブになるようにします。
 
 ```bash
 tuned-adm off

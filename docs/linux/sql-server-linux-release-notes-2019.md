@@ -3,16 +3,16 @@ title: Linux 上の SQL Server 2019 のリリース ノート
 description: この記事には、Linux で実行されている SQL Server 2019 のリリース ノートとサポートされている機能が含まれています。 リリース ノートは、最新のリリースと以前のいくつかのリリースに含まれています。
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/01/2020
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 56ac6b94c281cd97c53e290b5bc387131518bbcd
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 1a17ddc3f94f23203ec0a7d56edd63fe2cff4fa1
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99235909"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100338256"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上の SQL Server 2019 のリリース ノート
 
@@ -35,6 +35,7 @@ SQL Server 2019 のリリース履歴の一覧を次の表に示します。
 
 | Release                   | Version       | リリース日 |
 |---------------------------|---------------|--------------|
+| [CU9](#cu9)               | 15.0.4102.2   | 2021-02-10   |
 | [CU8-GDR](#cu8-GDR)               | 15.0.4083.2  | 2021-01-12   |
 | [CU8](#cu8)               | 15.0.4073.23  | 2020-10-07   |
 | [CU7 (削除済み)](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 2020-09-02   |
@@ -59,6 +60,25 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
 - [Linux への SQL Server 2019 Machine Learning Services R および Python のサポートのインストール](sql-server-linux-setup-machine-learning.md)
 - [PolyBase パッケージのインストール](../relational-databases/polybase/polybase-linux-setup.md)
 - [SQL Server エージェントの有効化](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu9-february-2021"></a><a id="cu9"></a> CU9 (2021 年 2 月)
+
+これは SQL Server 2019 (15.x) の Cumulative Update 9 (CU9) リリースです。 このリリースの SQL Server データベース エンジンのバージョンは、15.0.4102.2 です。 修正プログラムと機能強化の詳細については、<https://support.microsoft.com/help/5000642> を参照してください。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージ インストールの場合は、次の表の情報を使用して RPM と Debian のパッケージをダウンロードすることができます。
+
+> [!NOTE]
+> CU1 以降では、Red Hat 用のオフライン パッケージのインストール リンクが RHEL 8 パッケージを指しています。 RHEL 7 パッケージをお探しの場合は、ダウンロード パス <https://packages.microsoft.com/rhel/7/mssql-server-2019/> を参照してください。
+>
+> **Ubuntu 18.04** は、CU3 以降の SQL Server 2019 でサポートされるようになりました。 Ubuntu 用のオフライン パッケージのインストール リンクは、Ubuntu 18.04 パッケージを指しています。 Ubuntu 16.04 パッケージをお探しの場合は、ダウンロード パス <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/> を参照してください。
+
+| Package | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat RPM パッケージ | 15.0.4102.2-4 | [エンジン RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4102.2-4.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4102.2-4.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4102.2-4.x86_64.rpm)</br>[拡張機能 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4102.2-4.x86_64.rpm)</br>[Java 拡張機能 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4102.2-4.x86_64.rpm)</br>[PolyBase RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4102.2-4.x86_64.rpm)|
+| SLES RPM パッケージ | 15.0.4102.2-4 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4102.2-4.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4102.2-4.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4102.2-4.x86_64.rpm)</br>[拡張機能 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4102.2-4.x86_64.rpm)</br>[Java 拡張機能 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4102.2-4.x86_64.rpm)</br>[PolyBase RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4102.2-4.x86_64.rpm)|
+| Ubuntu 18.04 Debian パッケージ | 15.0.4102.2-4 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4102.2-4_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4102.2-4_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4102.2-4_amd64.deb)</br>[拡張機能 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4102.2-4_amd64.deb)</br>[Java 拡張機能 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4102.2-4_amd64.deb)</br>[PolyBase RPM パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4102.2-4_amd64.deb)|
 
 ## <a name="cu8-gdr-january-2021"></a><a id="cu8-GDR"></a> CU8-GDR (2021 年 1 月)
 

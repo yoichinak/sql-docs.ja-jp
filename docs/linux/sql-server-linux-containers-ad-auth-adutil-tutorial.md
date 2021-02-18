@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 318fb046adc25cc2ff485b14974bb756e586162b
-ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
+ms.openlocfilehash: 61f03a3d1175e5d38952c3e9e578a025c474188a
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97103308"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100273113"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux--containers"></a>チュートリアル:SQL Server on Linux コンテナーで Active Directory 認証を構成する
 
@@ -86,9 +86,10 @@ Linux ホスト マシンで、次のコマンドを使用し、Linux のディ�
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. Microsoft Ubuntu リポジトリを登録します。
+1. パブリック リポジトリの GPG キーをインポートしてから、Microsoft Ubuntu リポジトリを登録します。
 
     ```bash
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
     ```
 
@@ -101,6 +102,7 @@ Linux ホスト マシンで、次のコマンドを使用し、Linux のディ�
 1. 次のコマンドを実行して adutil-preview をインストールします。 `ACCEPT_EULA=Y` により、adutil のプレビュー EULA が受け入れられます。 EULA はパス `/usr/share/adutil/` に格納されます。
 
     ```bash
+    sudo apt-get update
     sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
     ```
 

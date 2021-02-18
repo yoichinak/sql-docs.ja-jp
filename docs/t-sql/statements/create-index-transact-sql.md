@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8591620ce92aca8a6c272539721f20a8a64fd9ae
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: e02d3676b1b303ef6dbbae4a509ed0db0c608071
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237101"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525236"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -823,7 +823,7 @@ OPTIMIZE_FOR_SEQUENTIAL_KEY インデックス オプションをオンにする
 圧縮状態の変更による、テーブル、インデックス、またはパーティションへの影響を評価するには、 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) ストアド プロシージャを使用します。
 
 ## <a name="permissions"></a>アクセス許可
-テーブルまたはビューに対する `ALTER` 権限が必要です。 ユーザーは、`sysadmin` 固定サーバー ロール、`db_ddladmin` 固定データベース ロール、または `db_owner` 固定データベース ロールのメンバーである必要があります。
+テーブルまたはビューの `ALTER` 権限、もしくは `db_ddladmin` 固定データベース ロールのメンバーシップが必要です。
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、以下を作成することはできません。

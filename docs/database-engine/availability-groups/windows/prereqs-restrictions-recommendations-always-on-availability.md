@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e1a2fe365ff2cf40e1dd7e08e113a586e7c2b666
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: 571cf683c8d905cfb499624cbd05dc40efe94b86
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783519"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100344644"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性グループの前提条件、制限事項、推奨事項
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -263,7 +263,7 @@ ms.locfileid: "98783519"
   
 -   **一意の可用性グループ名:** 各可用性グループの名前は、WSFC 上で一意である必要があります。 可用性グループ名の最大文字数は 128 文字です。  
   
--   **可用性レプリカ:** 各可用性グループは、1 個のプライマリ レプリカと最大 8 個のセカンダリ レプリカをサポートします。 すべてのレプリカを非同期コミット モードで実行することも、最大 3 つのレプリカを同期コミット モードで実行することもできます (1 つのプライマリ レプリカと 2 つの同期セカンダリ レプリカ)。  
+-   **可用性レプリカ:** 各可用性グループは、1 個のプライマリ レプリカと最大 8 個のセカンダリ レプリカをサポートします。 すべてのレプリカを非同期コミット モードで実行することも、最大 5 つのレプリカを同期コミット モードで実行することもできます (1 つのプライマリ レプリカと 2 つの同期セカンダリ レプリカ)。  
   
 -   **コンピューターあたりの可用性グループおよび可用性データベースの最大数:** コンピューター (仮想マシンまたは物理コンピューター) に実際に配置できるデータベースおよび可用性グループの数はハードウェアとワークロードによって異なりますが、強制的な制限はありません。 Microsoft では物理マシンあたり最大 10 AG および 100 DB までをテストしていますが、これはバインドの上限ではありません。 サーバー上のハードウェア仕様とワークロードに応じて、SQL Server のインスタンス上により多くのデータベースと可用性グループを配置できます。 過剰な負荷がかかっているシステムには、ワーカー スレッドの枯渇、可用性グループ システム ビューおよび DMV の応答の遅延、ディスパッチャー システム ダンプの一時停止などの症状があります (ただし、これだけではありません)。 アプリケーション SLA 内でピーク ワークロード容量を処理できることを確認するために、実稼働環境と同様のワークロードを使用して環境を十分にテストしてください。 SLA を検討する際は、障害条件下の負荷や期待される応答時間を考慮してください。  
   

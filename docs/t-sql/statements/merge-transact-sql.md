@@ -25,12 +25,13 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 6b6610293bb78ef34ae5ca8b88f762c9ab4948e9
-ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest
+ms.openlocfilehash: 6bb1014c22353826b6e4429726d4d28549cc274a
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "99978864"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489336"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -100,7 +101,8 @@ MERGE
   
 <clause_search_condition> ::=  
     <search_condition> 
-```  
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ```syntaxsql
@@ -117,9 +119,9 @@ MERGE
     [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]
     [ OPTION ( <query_hint> [ ,...n ] ) ]
-;  -- The semi-colon is required, or the query will return syntax  error. 
+;  -- The semi-colon is required, or the query will return a syntax error. 
 ```
- 
+
 ## <a name="arguments"></a>引数
 
 WITH \<common_table_expression>  
@@ -236,7 +238,9 @@ DEFAULT VALUES
 >[!NOTE]
 > Azure Synapse Analytics での MERGE コマンド (プレビュー) は、SQL サーバーや Azure SQL データベースと比べて次のような違いがあります。  
 > - MERGE 更新は、削除と挿入のペアとして実装されます。 MERGE 更新の影響を受ける行の数には、削除される行と挿入される行が含まれます。 
+
 > - プレビュー期間中は、IDENTITY 列を含むテーブルに対する MERGE…WHEN NOT MATCHED INSERT はサポートされていません。  
+
 > - 各種の分散タイプでのテーブルのサポートについては、次の表で説明しています。
 
 >|Azure Synapse Analytics での MERGE CLAUSE|サポートされる TARGE 分散テーブル| サポートされる SOURCE 分散テーブル|コメント|  
@@ -256,7 +260,6 @@ MERGE の後に [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcou
 データベースの互換性レベルが 100 以上に設定されている場合、MERGE は完全に予約されたキーワードです。 MERGE ステートメントはデータベースの互換性レベルが 90 と 100 の両方で使用できますが、データベースの互換性レベルが 90 に設定されている場合、MERGE キーワードは完全には予約されません。  
   
 **MERGE** ステートメントは、キュー更新レプリケーションの使用時には使用しないでください。 **MERGE** とキュー更新トリガーには互換性がありません。 **MERGE** ステートメントは、挿入ステートメントまたは更新ステートメントと置き換えてください。  
-
 
 ## <a name="trigger-implementation"></a>トリガーの実装
 

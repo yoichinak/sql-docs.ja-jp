@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cc0d86dbdce6e3618957551a1059c0178a23d61
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 148f93b43f704686b3083954cb3d7353f33a16e0
+ms.sourcegitcommit: c6cc0b669b175ae290cf5b08952010661ebd03c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236302"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100530865"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
 
@@ -157,10 +157,11 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
 
 #### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
-データベースの **CREATE VIEW** アクセス許可と、ビューが作成されているスキーマの **ALTER** アクセス許可が必要です。 ベース テーブルが別のスキーマ内に存在する場合、少なくともそのテーブルに対する **REFERENCES** アクセス許可が必要です。
+ビューを作成するには、データベースの **CREATE VIEW** アクセス許可と、ビューが作成されているスキーマの **ALTER** アクセス許可が必要です。 ベース テーブルが別のスキーマ内に存在する場合、少なくともそのテーブルに対する **REFERENCES** アクセス許可が必要です。 インデックスを作成するユーザーとビューを作成したユーザーが異なる場合は、インデックスを作成するときに、ビューに対する **ALTER** アクセス許可が必要です (スキーマの ALTER によって処理されます)。
 
     > [!NOTE]  
-    > For the creation of the index on top of the view, the base table must have the same owner as the view. This is also called ownership-chain. This is usually the case when table and view reside within the same schema, but it is possible that individual objects have different owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
+    > Indexes can only be created on views which have the same owner as the referenced table or tables. This is also called an intact **ownership-chain** between the view and the table(s). Typically, when table and view reside within the same schema, the same schema-owner applies to all objects within the schema. But it is possible that individual objects have different explicit owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
+
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用
 
