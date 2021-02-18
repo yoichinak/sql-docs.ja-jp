@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 11e424ef4f32b91a7c4d65faf796335a3f7faf26
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 8e0e2e47cbcfaf9aa6719b60bbd894d103596c18
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99251221"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341628"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server フェールオーバー クラスタリングと SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "99251221"
 ##  <a name="terms-and-definitions"></a><a name="TermsAndDefs"></a> 用語と定義  
  Windows Server フェールオーバー クラスター  (WSFC) WSFC は、アプリケーションとサービスの可用性を高めるために連携する独立したサーバーのグループです。  
   
- ノード  
+ Node  
  WSFC に参加しているサーバー。
   
  クラスター リソース  
@@ -173,7 +173,7 @@ ms.locfileid: "99251221"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
--   [Windows Server テクノロジ: フェールオーバー クラスター](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server テクノロジ:フェールオーバー クラスター](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
 -   [記憶域スペース ダイレクト \(S2D\) の概要](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
