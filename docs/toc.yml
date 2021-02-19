@@ -8889,6 +8889,8 @@ items:
                 href: ssms/configure-login-auditing-sql-server-management-studio.md
               - name: '[検索と置換] ウィンドウからのコピーを有効にする'
                 href: ssms/troubleshoot/enable-copying-find-replace-window.md
+              - name: タブの移動を有効にする
+                href: ssms/troubleshoot/workaround-move-tabs.md
               - name: トラブルシューティング
                 items:
                   - name: 完全メモリ ダンプの取得

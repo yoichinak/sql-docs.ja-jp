@@ -39,7 +39,7 @@ ms.locfileid: "100342935"
 |session_id|**smallint**|この要求が関連付けられているセッションの ID。 NULL 値は許可されません。|  
 |request_id|**int**|要求の ID。 セッションのコンテキスト内で一意です。 NULL 値は許可されません。|  
 |start_time|**datetime**|要求が到着したときのタイムスタンプ。 NULL 値は許可されません。|  
-|status|**nvarchar(30)**|要求の状態。 DLL は、次のいずれかの場所に置くことができます。<br /><br /> 背景<br />実行中<br />実行可能<br />休止中<br />Suspended<br /><br /> NULL 値は許可されません。|  
+|status|**nvarchar(30)**|要求の状態。 DLL は、次のいずれかの場所に置くことができます。<br /><br /> バックグラウンド<br />実行中<br />実行可能<br />休止中<br />Suspended<br /><br /> NULL 値は許可されません。|  
 |command|**nvarchar(32)**|現在処理中のコマンドの種類。 一般的なコマンドの種類には次のものがあります。<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求のテキストを取得するには、対応する sql_handle と共に、要求に対して sys.dm_exec_sql_text を使用します。 内部システムプロセスは、実行するタスクの種類に基づいて、コマンドを設定します。 タスクには次のものが含まれます。<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> NULL 値は許可されません。|  
 |sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 NULL 値が許可されます。| 
 |statement_start_offset|**int**|現在実行中のバッチまたは保存されたオブジェクトに対して現在実行中のステートメントの開始位置を、0で始まるバイト単位で示します。 、、および動的管理関数と共に使用して、 `sql_handle` `statement_end_offset` `sys.dm_exec_sql_text` 要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
@@ -99,7 +99,7 @@ ms.locfileid: "100342935"
 |page_server_reads|**bigint**|**適用対象**: Azure SQL Database ハイパースケール<br /><br /> この要求によって実行されたページサーバーの読み取り回数。 NULL 値は許可されません。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>解説 
+## <a name="remarks"></a>注釈 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。 この動的管理ビューによって返される時刻値には、プリエンプティブモードで費やされた時間は含まれません。
 
 [行モード](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)で並列要求を実行する場合、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 割り当てられたタスクを完了するワーカースレッドを調整するワーカースレッドを割り当てます。 この DMV では、コーディネーターのスレッドのみが要求に対して表示されます。 列の **読み取り**、 **書き込み**、 **logical_reads**、 **row_count** は、コーディネータースレッドに対して更新され **ません** 。 列 **wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**、および **granted_query_memory** は、コーディネータースレッドに対して **のみ更新** されます。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
