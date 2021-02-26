@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 148f93b43f704686b3083954cb3d7353f33a16e0
-ms.sourcegitcommit: c6cc0b669b175ae290cf5b08952010661ebd03c3
+ms.openlocfilehash: 5c074add532e55209c8fc304a98da686cec60aab
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100530865"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636731"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
 
@@ -159,8 +159,8 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
 
 ビューを作成するには、データベースの **CREATE VIEW** アクセス許可と、ビューが作成されているスキーマの **ALTER** アクセス許可が必要です。 ベース テーブルが別のスキーマ内に存在する場合、少なくともそのテーブルに対する **REFERENCES** アクセス許可が必要です。 インデックスを作成するユーザーとビューを作成したユーザーが異なる場合は、インデックスを作成するときに、ビューに対する **ALTER** アクセス許可が必要です (スキーマの ALTER によって処理されます)。
 
-    > [!NOTE]  
-    > Indexes can only be created on views which have the same owner as the referenced table or tables. This is also called an intact **ownership-chain** between the view and the table(s). Typically, when table and view reside within the same schema, the same schema-owner applies to all objects within the schema. But it is possible that individual objects have different explicit owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
+> [!NOTE]  
+> インデックスは、所有者が参照先のテーブルと同じビューにのみ作成できます。 これは、ビューとテーブル間の完全な **所有権の継承** とも呼ばれます。 通常、テーブルとビューが同じスキーマ内に存在する場合、そのスキーマ内のすべてのオブジェクトに同じスキーマの所有者が適用されます。 つまり、そのビューの所有者にならずに、ビューを作成することが可能です。 これに対し、スキーマ内の個別のオブジェクトの所有者を明示的に別にすることも可能です。 所有者がスキーマの所有者と異なる場合、sys.tables の列 **principal_id** に値が格納されます。
 
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用

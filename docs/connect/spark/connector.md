@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 15a4bdb66ea87f85337540adfec4b5e175b1c55b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2cc921b7aa1acaf99da8a632dc8e3996d648682c
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100058127"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636701"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Apache Spark コネクタ:SQL Server および Azure SQL
 
@@ -25,7 +25,14 @@ SQL Server と Azure SQL 用の Apache Spark コネクタは、パフォーマ�
 
 [Apache Spark](https://spark.apache.org/) は、"大規模なデータ処理のための統合された分析エンジン" です。
 
-[Maven](https://search.maven.org/search?q=spark-mssql-connector) からコネクタを取得できます。 コネクタをインポートするには、座標 `com.microsoft.azure:spark-mssql-connector:<latest version>` を使用します。 また、ソースからコネクタを作成することも、GitHub のリリース セクションから jar をダウンロードすることもできます。 コネクタの最新情報については、[SQL Spark コネクタの GitHub リポジトリ](https://github.com/microsoft/sql-spark-connector)に関する記事をご覧ください。
+Maven を通じて利用できるコネクタには、2.4.5 互換バージョンと 3.0.0 互換バージョンの 2 つのバージョンがあります。 どちらのバージョンも[こちら](https://search.maven.org/search?q=spark-mssql-connector)にあり、次の座標を使用してインポートできます。
+
+| コネクタ | Maven 座標 |
+| --------- | ------------------ |
+| Spark 2.4.5 互換コネクタ | `com.microsoft.azure:spark-mssql-connector:1.0.1` |
+| Spark 3.0.0 互換コネクタ | `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha` |
+
+また、ソースからコネクタを作成することも、GitHub のリリース セクションから jar をダウンロードすることもできます。 コネクタの最新情報については、[SQL Spark コネクタの GitHub リポジトリ](https://github.com/microsoft/sql-spark-connector)に関する記事をご覧ください。
 
 ## <a name="supported-features"></a>サポートされている機能
 
@@ -37,8 +44,8 @@ SQL Server と Azure SQL 用の Apache Spark コネクタは、パフォーマ�
 
 | コンポーネント                            | サポートされているバージョン              |
 |--------------------------------------|---------------------------------|
-| Apache Spark                         | 2.4.5 (Spark 3.0 はサポートされていません) |
-| Scala                                | 2.11                            |
+| Apache Spark                         | 2.4.5、3.0.0 |
+| Scala                                | 2.11、2.12                            |
 | SQL Server 用 Microsoft JDBC ドライバー | 8.2                             |
 | Microsoft SQL Server                 | SQL Server 2008 以降        |
 | Azure SQL Databases                  | サポートされています                       |

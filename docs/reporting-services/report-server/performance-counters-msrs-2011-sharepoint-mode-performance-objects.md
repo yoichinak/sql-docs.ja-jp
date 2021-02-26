@@ -1,7 +1,7 @@
 ---
-title: パフォーマンス カウンター MSRS 2011 SharePoint モード パフォーマンス オブジェクト | Microsoft Docs
-description: MSRS 2011 Web Service SharePoint Mode および MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。
-ms.date: 06/26/2019
+title: パフォーマンス カウンター MSRS 2016 SharePoint モード、パフォーマンス オブジェクト | Microsoft Docs
+description: MSRS 2016 Web Service SharePoint モードおよび MSRS 2016 Windows Service SharePoint モード パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。
+ms.date: 02/17/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -17,37 +17,37 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: 95742efced8c5b5704863d2582c6ca80c5b227e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cfa6fbdf2a4f834accd2ec197a8933371a5a6501
+ms.sourcegitcommit: 6c93282cce1216dac327cb28848a3ab4d51b776e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440484"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100646344"
 ---
-# <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>パフォーマンス カウンター MSRS 2011 SharePoint モード パフォーマンス オブジェクト
-  このトピックでは、 **SharePoint モード配置の一部である** MSRS 2011 Web Service SharePoint Mode **と** MSRS 2011 Windows Service SharePoint Mode [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
+# <a name="performance-counters-msrs-2016-sharepoint-mode-performance-objects"></a>パフォーマンス カウンター MSRS 2016 SharePoint モード、パフォーマンス オブジェクト
+  このトピックでは、SQL Server 2016 Reporting Services SharePoint モード展開の一部である **MSRS 2016 Web Service SharePoint モード** および **MSRS 2016 Windows Service SharePoint モード** パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
   
 > [!NOTE]  
->  このパフォーマンス オブジェクトは、ローカル レポート サーバー上のイベントを監視します。 スケールアウト配置でレポート サーバーを実行している場合、カウントはスケールアウト配置全体ではなく、現在のサーバーに適用されます。  
+>  これらのパフォーマンス オブジェクトは、ローカル レポート サーバー上のイベントを監視します。 スケールアウト配置でレポート サーバーを実行している場合、カウントはスケールアウト配置全体ではなく、現在のサーバーに適用されます。  
   
  パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
- パフォーマンス カウンターとネイティブ モードのレポート サーバーについては、「[MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター (ネイティブ モード)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)」および「[MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター (SharePoint モード)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)」を参照してください。  
+ パフォーマンス カウンターとネイティブ モードのレポート サーバーについては、[MSRS 2016 Web Service および MSRS 2016 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター &#40;ネイティブ モード&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) に関連する記事を参照してください。
   
  このトピックの内容:  
   
--   [MSRS 2011 Web Service SharePoint Mode のパフォーマンス カウンター](#bkmk_webservice)  
+-   [MSRS 2016 Web Service SharePoint モードのパフォーマンス カウンター](#bkmk_webservice)  
   
--   [MSRS 2011 Windows Service SharePoint モードのパフォーマンス カウンター](#bkmk_windowsservice)  
+-   [MSRS 2016 Windows Service SharePoint モードのパフォーマンス カウンター](#bkmk_windowsservice)  
   
 -   [PowerShell コマンドレットを使用して一覧を取得する](#bkmk_powershell)  
   
-##  <a name="msrs-2011-web-service-sharepoint-mode-performance-counters"></a><a name="bkmk_webservice"></a> MSRS 2011 Web Service SharePoint Mode のパフォーマンス カウンター  
- **MSRS 2011 Web Service SharePoint Mode** パフォーマンス オブジェクトは、レポート サーバーのパフォーマンスを監視します。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、主に対話的なレポート表示操作によって開始されるレポート サーバー処理の追跡に使用されます。 設定したカウンターは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのインスタンスに適用することも、特定のインスタンスにだけ適用することもできます。 これらのカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] がレポート サーバー Web サービスを停止した時点でリセットされます。  
+##  <a name="msrs-2016-web-service-sharepoint-mode-performance-counters"></a><a name="bkmk_webservice"></a> MSRS 2016 Web Service SharePoint モードのパフォーマンス カウンター  
+ **MSRS 2016 Web Service SharePoint モード** パフォーマンス オブジェクトはレポート サーバーのパフォーマンスを監視します。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、主に対話的なレポート表示操作によって開始されるレポート サーバー処理の追跡に使用されます。 設定したカウンターは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのインスタンスに適用することも、特定のインスタンスにだけ適用することもできます。 これらのカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] がレポート サーバー Web サービスを停止した時点でリセットされます。  
   
- 次の表は、 **MSRS 2011 Web Service SharePoint Mode** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
+ 次の表は、**MSRS 2016 Web Service SharePoint モード** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
-|カウンター|説明|  
+|カウンタ|説明|  
 |-------------|-----------------|  
 |**Active sessions**|アクティブなセッションの数。 このカウンターは、レポートの実行によって生成されたすべてのブラウザー セッション (アクティブであるかどうかにかかわらず) の累積数を表示します。<br /><br /> セッション レコードが削除されると、カウンターの値は減少します。 既定では、セッションは利用されない状態が 10 分間続くと削除されます。|  
 |**Cache Hits/Sec**|キャッシュされたレポートに対する 1 秒あたりの要求数。 これはレポートの再表示の要求であり、キャッシュから直接処理されるレポートの要求ではありません (このトピックで後述する「 **Total Cache Hits** 」を参照してください)。|  
@@ -72,12 +72,12 @@ ms.locfileid: "97440484"
 |**Total Reports Executed**|サービスの開始後に、正常に実行されたレポートの総数。 このカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によってレポート サーバー Web サービスが停止すると必ずリセットされます。|  
 |**要求の合計数**|サービスの開始後、レポート サーバーに対して行われたすべての要求の総数。 このカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によってレポート サーバー Web サービスが停止すると必ずリセットされます。|  
   
-##  <a name="msrs-2011-windows-service-sharepoint-mode-performance-counters"></a><a name="bkmk_windowsservice"></a> MSRS 2011 Windows Service SharePoint モードのパフォーマンス カウンター  
- **MSRS 2011 Windows Service SharePoint Mode** パフォーマンス オブジェクトを使用して、レポート サーバー Windows サービスを監視します。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、スケジュールされた操作を介して開始されるレポート処理の追跡に使用されます。 スケジュールされた操作には、サブスクリプションと配信、レポート実行スナップショット、およびレポート履歴を含めることができます。 設定したカウンターは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのインスタンスに適用することも、特定のインスタンスにだけ適用することもできます。  
+##  <a name="msrs-2016-windows-service-sharepoint-mode-performance-counters"></a><a name="bkmk_windowsservice"></a> MSRS 2016 Windows Service SharePoint モードのパフォーマンス カウンター  
+ **MSRS 2016 Windows Service SharePoint モード** パフォーマンス オブジェクトは、レポート サーバー Windows サービスを監視するために使用されます。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、スケジュールされた操作を介して開始されるレポート処理の追跡に使用されます。 スケジュールされた操作には、サブスクリプションと配信、レポート実行スナップショット、およびレポート履歴を含めることができます。 設定したカウンターは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのインスタンスに適用することも、特定のインスタンスにだけ適用することもできます。  
   
- 次の表は、 **MSRS 2011 Windows Service SharePoint mode** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
+ 次の表は、**MSRS 2016 Windows Service SharePoint モード** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
-|カウンター|説明|  
+|カウンタ|説明|  
 |-------------|-----------------|  
 |**Active sessions**|レポート サーバー データベースに格納されるアクティブ セッションの数です。 このカウンターは、レポート サブスクリプションから生成される使用可能なすべてのブラウザー セッションの累積数と、セッションがまだアクティブかどうかを示します。|  
 |**Alerting: event queue length**||  
@@ -125,18 +125,18 @@ ms.locfileid: "97440484"
 ```  
 get-counter -listset msr*  
 Returns a list with the following information  
-CounterSetName     : MSRS 2011 Windows Service SharePoint Mode  
-CounterSetName     : MSRS 2011 Web Service SharePoint Mode  
+CounterSetName     : MSRS 2016 Windows Service SharePoint Mode  
+CounterSetName     : MSRS 2016 Web Service SharePoint Mode  
 ```  
   
- 次の Windows PowerShell スクリプトは CounterSetName が "MSRS 2011 Windows Service SharePoint Mode" であるパフォーマンス カウンターの一覧を返します。  
+ 次の Windows PowerShell スクリプトは、CounterSetName が "MSRS 2016 Windows Service SharePoint Mode" であるパフォーマンス カウンターの一覧を返します。  
   
 ```  
-(get-counter -listset "MSRS 2011 Windows Service SharePoint Mode").paths  
+(get-counter -listset "MSRS 2016 Windows Service SharePoint Mode").paths  
 ```  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーのパフォーマンスの監視](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター (ネイティブ モード)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Performance Counters for the MSRS 2016 Web Service および MSRS 2016 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター &#40;ネイティブ モード&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   

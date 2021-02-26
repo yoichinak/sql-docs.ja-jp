@@ -15,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a87a9842ac5fdf05de192d1fc562fe241441c75
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5ed027db3b2749997a12674cb657c448a26b9732
+ms.sourcegitcommit: 6c93282cce1216dac327cb28848a3ab4d51b776e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100340042"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100646388"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用
 
@@ -42,6 +42,9 @@ SQL Server による Microsoft Azure Blob Storage サービスの統合のサポ
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 - [AdventureWorks2016 サンプル データベース](../samples/adventureworks-install-configure.md)をダウンロードする。
 - ユーザー アカウントを [db_backupoperator](./security/authentication-access/database-level-roles.md) のロールに割り当て、[alter any credential](../t-sql/statements/alter-credential-transact-sql.md) 権限を付与する。 
+
+> [!IMPORTANT]
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、[Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction) がサポートされていません。このチュートリアルで使用するストレージ アカウントでは、確実に[階層型名前空間](/azure/storage/blobs/data-lake-storage-namespace)が有効になっていないようにしてください。
 
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 格納済みアクセス ポリシーと共有アクセス ストレージを作成する
 
