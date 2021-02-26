@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2016 および 2017:ハードウェアとソフトウェアの要件
+title: 'SQL Server 2016 および 2017: ハードウェアとソフトウェアの要件'
 description: SQL Server 2016 および SQL Server 2017 をインストールして実行するためのハードウェア、ソフトウェア、およびオペレーティング システムの要件の一覧。
 ms.custom: seo-lt-2019
 ms.date: 02/19/2020
@@ -45,14 +45,14 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: chadam
 author: cawrites
-ms.openlocfilehash: 8583c629fc43656e082d32ec00b1e942d2e92b3d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2fc1268ceeec1b03da9f5bd16301169504053f1c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170614"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352462"
 ---
-# <a name="sql-server-2016-and-2017-hardware-and-software-requirements"></a>SQL Server 2016 および 2017:ハードウェアとソフトウェアの要件
+# <a name="sql-server-2016-and-2017-hardware-and-software-requirements"></a>SQL Server 2016 および 2017: ハードウェアとソフトウェアの要件
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 この記事には、Windows オペレーティング システムで SQL Server 2016 および SQL Server 2017 をインストールして実行するための、ハードウェアとソフトウェアの最小要件が一覧表示されています。  
@@ -90,7 +90,7 @@ ms.locfileid: "98170614"
 |コンポーネント|要件|  
 |---------------|-----------------|  
 |.NET Framework|[!INCLUDE[sql2016](../../includes/sssql16-md.md)] 以降では、データベース エンジン、マスター データ サービス、レプリケーションのために [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 が必要になります。 SQL Server セットアップで [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] が自動的にインストールされます。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Microsoft .NET Framework 4.6 (Web Installer) for Windows [から](https://support.microsoft.com/kb/3045560)を手動でインストールすることもできます。<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 の詳細、推奨事項、ガイダンスについては、「 [.NET Framework 配置ガイド (開発者向け)](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)」を参照してください。<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 をインストールするには、[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] と [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] に [KB2919355](https://support.microsoft.com/kb/2919355) が必要になります。|  
-|ネットワーク ソフトウェア|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] でサポートされるオペレーティング システムにはネットワーク ソフトウェアが組み込まれています。 スタンドアロン インストールの名前付きおよび既定のインスタンスでは、次のネットワーク プロトコルがサポートされています。共有メモリ、名前付きパイプ、TCP/IP、および VIA。<br/><br/> **注:** VIA プロトコルはフェールオーバー クラスターではサポートされません。 SQL Server インスタンスと同じフェールオーバー クラスターのノード上で実行されているクライアントまたはアプリケーションは、そのローカル パイプ アドレスを使用して SQL Server に接続するために、共有メモリ プロトコルを使用することができます。 ただし、この種の接続はクラスターに対応しないため、インスタンスのフェールオーバー後に失敗します。 したがって、これは非推奨であり、非常に限られたシナリオでのみ使用する必要があります。<br/><br/> **重要:** VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> ネットワーク プロトコルとネットワーク ライブラリの詳細については、「 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)」を参照してください。|  
+|ネットワーク ソフトウェア|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] でサポートされるオペレーティング システムにはネットワーク ソフトウェアが組み込まれています。 スタンドアロン インストールの名前付きインスタンスおよび既定のインスタンスは、ネットワーク プロトコルとして:共有メモリ、名前付きパイプ、TCP/IP、および VIA をサポートします。<br/><br/> **注:** VIA プロトコルはフェールオーバー クラスターではサポートされません。 SQL Server インスタンスと同じフェールオーバー クラスターのノード上で実行されているクライアントまたはアプリケーションは、そのローカル パイプ アドレスを使用して SQL Server に接続するために、共有メモリ プロトコルを使用することができます。 ただし、この種の接続はクラスターに対応しないため、インスタンスのフェールオーバー後に失敗します。 したがって、これは非推奨であり、非常に限られたシナリオでのみ使用する必要があります。<br/><br/> **重要:** VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> ネットワーク プロトコルとネットワーク ライブラリの詳細については、「 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)」を参照してください。|  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行すると、製品に必要な以下のソフトウェア コンポーネントがインストールされます。  
   
@@ -271,7 +271,7 @@ Server Core への SQL Server のインストールの詳細については、�
 - [SQL Server 評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
 - [最新の累積的な更新プログラム](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
-[SQL Server を既に実行している Azure 仮想マシン](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal)を作成することもできます。しかし、仮想マシン上の SQL Server は、仮想化のオーバーヘッドのためにネイティブで実行するよりも低速になります。
+または、[SQL Server を既に実行している Azure 仮想マシン](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal)を作成することもできます。ただし、仮想マシン上の SQL Server は、仮想化のオーバーヘッドのためにネイティブで実行するよりも低速になります。
   
   
 ## <a name="next-steps"></a>次のステップ

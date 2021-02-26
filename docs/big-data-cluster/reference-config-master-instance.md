@@ -5,20 +5,22 @@ description: SQL Server マスター インスタンスのプロパティを構�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: rahul.ajmera
-ms.date: 08/04/2020
+ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f251357c818577b0ecd761c4a5ca2f030eeca58
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2d986013374e7f69111288d2d0f50b09130a2d68
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100043982"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343508"
 ---
-# <a name="sql-server-master-instance-configuration-properties"></a>SQL Server マスター インスタンスの構成プロパティ
+# <a name="sql-server-master-instance-configuration-properties----pre-cu9-release"></a>SQL Server マスター インスタンスの構成プロパティ - CU9 より前のリリース
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+> [!NOTE]
+> 次の情報は、構成が有効になっていない CU9 より前のリリース クラスターにのみ適用できます。また、SQL Server マスター インスタンスを構成するには、mssql-conf が必要です。 CU9 以降のリリース クラスターでは、構成管理機能を利用することができ、mssql conf ファイルが不要になりました。 SQL Server マスター インスタンスとその他の BDC コンポーネントで使用可能な構成については、[こちら](reference-config-bdc-overview.md)を参照してください。
 
 ## <a name="properties"></a>プロパティ
 

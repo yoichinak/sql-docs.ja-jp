@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: a0edb79e6e23f713767da060fc580ac92c3daaee
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f93a1180f25f764330db44306457e775961bc0da
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471173"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350688"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>miniCRAN を使用してローカル R パッケージ リポジトリを作成する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "97471173"
 
 パッケージ リポジトリは、次のシナリオに役立ちます。
 
-- **セキュリティ**:多くの R ユーザーは、CRAN またはそのいずれかのミラー サイトから、新しい R パッケージを任意にダウンロードしてインストールすることに慣れています。 ただし、セキュリティ上の理由により、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] を実行している実稼働サーバーは、通常、インターネットに接続されていません。
+- **セキュリティ**: 多くの R ユーザーは、CRAN またはそのいずれかのミラー サイトから、新しい R パッケージを任意にダウンロードしてインストールすることに慣れています。 ただし、セキュリティ上の理由により、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] を実行している実稼働サーバーは、通常、インターネットに接続されていません。
 
-- **オフライン インストールの簡素化**:オフライン サーバーにパッケージをインストールするには、すべてのパッケージの依存関係もダウンロードする必要があります。 miniCRAN を使用すると、簡単にすべての依存関係を正しい形式で取得し、依存関係のエラーを回避できます。
+- **より簡単なオフライン インストール**: オフライン サーバーにパッケージをインストールするには、すべてのパッケージの依存関係もダウンロードする必要があります。 miniCRAN を使用すると、簡単にすべての依存関係を正しい形式で取得し、依存関係のエラーを回避できます。
 
-- **バージョン管理の改善**:マルチユーザー環境では、サーバーに複数のパッケージ バージョンを無制限にインストールしないことが適切です。 ローカル リポジトリを使用すると、ユーザーに対して一貫したパッケージのセットを提供できます。
+- **改善されたバージョン管理**: マルチユーザー環境では、サーバーに複数のパッケージ バージョンを無制限にインストールしないことが適切です。 ローカル リポジトリを使用すると、ユーザーに対して一貫したパッケージのセットを提供できます。
 
 ## <a name="install-minicran"></a>miniCRAN をインストールする
 

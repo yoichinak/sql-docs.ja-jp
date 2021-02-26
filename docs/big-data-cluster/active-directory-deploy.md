@@ -5,16 +5,16 @@ description: Active Directory ドメインで SQL Server ビッグ データ ク
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 09/30/2020
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2a79c82f2c3fd443d7237fc3b0a1f7c51102bceb
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 799afc246b106c4b49d6aba44f8d26a761d6c2cc
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048017"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343961"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Active Directory モードで SQL Server ビッグ データ クラスターを展開する
 
@@ -54,8 +54,10 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 
 - `security.activeDirectory.realm` **省略可能なパラメーター**: ほとんどの場合、領域はドメイン名と同じです。 同じでない場合、このパラメーターを使用し、領域の名前を定義します (例: `CONTOSO.LOCAL`)。 このパラメーターに指定する値は、完全修飾されている必要があります。
 
-  > [!IMPORTANT]
-  > 現時点では、BDC では、Active Directory ドメイン名が Active Directory ドメインの **NETBIOS** 名と異なる構成はサポートされていません。
+- `security.activeDirectory.netbiosDomainName` **省略可能なパラメーター**: これは、AD ドメインの NETBIOS 名です。 ほとんどの場合、これは AD ドメイン名の最初のラベルになります。 異なる場合は、このパラメーターを使用して NETBIOS ドメイン名を定義します。 この値にドットを含めることはできません。 通常、この名前は、ドメイン内のユーザー アカウントを修飾するために使用されます。 例: CONTOSO\user。CONTOSO は NETBIOS ドメイン名です。
+
+  > [!NOTE]
+  > *security.activeDirectory.netbiosDomainName* を使用している Active Directory ドメインの **NETBIOS** 名と Active Directory ドメイン名が異なる場合の構成のサポートは、SQL Server 2019 CU9 以降で有効になっています。
 
 - `security.activeDirectory.domainDnsName`:クラスターに使用される DNS ドメインの名前 (例: `contoso.local`)。
 

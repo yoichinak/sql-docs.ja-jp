@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9e82f5820f418e65e8638ee27898a130ae6e564d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4306910b10fe1ac014226b9013af41b235b5e628
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774814"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345830"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>イベントの終了時刻に基づいたフィルターでのイベントの選択 (SQL Server Profiler)
 
@@ -41,7 +41,7 @@ ms.locfileid: "85774814"
   
 5.  **[イベントの選択]** タブで、 **[EndTime]** データ列をクリックして **[フィルターの編集]** ダイアログ ボックスを表示します。 このダイアログ ボックスは、列見出しを右クリックして **[列フィルターの編集]** をクリックしても表示することができます。  
   
-6.  **[次の値より大きい]** または **[次の値より小さい]** を展開して、比較演算子の下に表示されるフィールドに **datetime**値を入力します。  
+6.  **[次の値より大きい]** または **[次の値より小さい]** を展開して、比較演算子の下に表示されるフィールドに **datetime** 値を入力します。  
   
 ## <a name="see-also"></a>参照  
  [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   

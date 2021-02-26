@@ -34,12 +34,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 9987384899eeb9087a938d8fd8e8b156ff8e1962
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 98b630f4471d35259db609a5bf1740ff96b8d604
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236265"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336176"
 ---
 # <a name="editions-and-supported-features-of-sssql19-md"></a> の各エディションとサポートされる機能[!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
@@ -108,7 +108,7 @@ ms.locfileid: "99236265"
 
 |管理ツール|説明|
 |----------------------|-----------------|
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネントを構成、管理、開発し、それらのコンポーネントへアクセスするための統合環境です。 SSMS を使用すると、すべてのスキル レベルの開発者と管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を使用できます。 最新エディションの SSMS を使用すると SMO が更新され、それには [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) が含まれます。<br /><br/> ダウンロードしてインストールする <br />「[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)」から [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]|
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネントを構成、管理、開発し、それらのコンポーネントへアクセスするための統合環境です。 SSMS を使用すると、すべてのスキル レベルの開発者と管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を使用できます。 最新エディションの SSMS を使用すると、SMO が更新されます。これには、[SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) が含まれます。<br /><br/> ダウンロードしてインストールする <br />「[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)」から [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャー|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービス、サーバー プロトコル、クライアント プロトコル、およびクライアントの別名に関する基本的な構成管理を行います。|
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] には、 [!INCLUDE[ssDE](../includes/ssde-md.md)] または [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスを監視するためのグラフィカル ユーザー インターフェイスが備わっています。|
 |[!INCLUDE[ssDE](../includes/ssde-md.md)] チューニング アドバイザー|[!INCLUDE[ssDE](../includes/ssde-md.md)] チューニング アドバイザーは、最適なインデックスのセット、インデックス付きビュー、およびパーティションの作成に役立ちます。|
@@ -133,7 +133,7 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のインスタンスごとのバッファー プールの最大メモリ|オペレーティング システムの最大容量|128 <nobr/>GB|64 <nobr/>GB|1410 <nobr/>MB|1410<nobr/> MB|
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のインスタンスごとの列ストア セグメント キャッシュの最大メモリ|メモリ制限なし| 32 <nobr/>GB| 16 <nobr/>GB| 352 <nobr/>MB| 352 <nobr/>MB|
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のデータベースごとの最大メモリ最適化データ サイズ|メモリ制限なし| 32 <nobr/>GB| 16 <nobr/>GB| 352 <nobr/>MB| 352 <nobr/>MB|
-|利用可能な最大メモリ サイズ ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|16 <nobr/>GB<sup>2</sup><br /><br /> 64 <nobr/>GB<sup>3</sup>|該当なし|該当なし|該当なし|
+|利用可能な最大メモリ サイズ ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|16 <nobr/>GB<sup>2</sup><br /><br /> 64 <nobr/>GB<sup>3</sup>|該当なし|N/A|該当なし|
 |利用可能な最大メモリ サイズ ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|64 <nobr/>GB|64 <nobr/>GB|4 <nobr/>GB|該当なし|
 |リレーショナル データベースの最大サイズ|524 <nobr/> PB|524 <nobr/> PB|524 <nobr/> PB|10 <nobr/>GB|10 <nobr/>GB|
 

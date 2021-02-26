@@ -13,14 +13,14 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 735176a4fbb92d91d446f47492b2ddaa11098b2e
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: e8c4f32eab8fa7d7791a5f4718d8d771cb1dd6cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489392"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354475"
 ---
-# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>レッスン 1:データベース エンジン チューニング アドバイザー (DTA) での基本操作
+# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>レッスン 1: データベース エンジン チューニング アドバイザー (DTA) での基本操作
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
@@ -81,7 +81,7 @@ SSMS でデータベースを復元する手順については、[データベ�
   
     -   **[最近使用した項目の一覧に表示する項目数]** には、 **1** ～ **10** の値を設定できます。 このオプションでは、 **[ファイル]** メニューの **[最新のセッション]** または **[最近使ったファイル]** をクリックしたときに表示される最大項目数を設定します。 既定では **4** に設定されています。  
   
-    -   **[最後のチューニング オプションを保存する]** チェック ボックスをオンにした場合、既定では、最後のチューニング セッションで指定したチューニング オプションが次のチューニング セッションで使用されます。 データベース エンジン チューニング アドバイザーの既定のチューニング オプションを使用するには、このチェック ボックスをオフにします。 既定では、このオプションはオンになっています。  
+    -   **[最後のチューニング オプションを保存する]** チェック ボックスをオンにした場合、既定では、最後のチューニング セッションで指定したチューニング オプションが次のチューニング セッションで使用されます。 データベース エンジン チューニング アドバイザーの既定のチューニング オプションを使用するには、このチェック ボックスをオフにします。 既定では、このオプションが選択されています。  
   
     -   誤ってチューニング セッションを削除しないよう、既定では **[完全にセッションを削除する前に確認する]** がオンになっています。  
   

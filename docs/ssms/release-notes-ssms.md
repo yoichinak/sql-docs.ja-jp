@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: 2e1d3faf6d17417ea1f4a134778ddd9342441231
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 050447d6f1f9f13f04b01dec82e1b50ca6efbc69
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596862"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354813"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -722,7 +722,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |データ分類|SMO に新機能 'データ分類' が追加されました。 Column オブジェクトで新たに公開されたプロパティ:SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId、IsClassified (読み取り専用)。 詳細については、「[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)」を参照してください。|
 |データ分類|[データ分類] ポップアップに新しい [Classification Report]\(分類レポート\) メニュー項目が追加されました。|
 |データ分類| 推奨事項が更新されました。|
-|データベース互換性レベルのアップグレード|**_[データベース名]_ *>* _[タスク]_ *>* _[データベースのアップグレード]_ *の順に新しいオプションを追加しました。これにより、ユーザーに次のプロセスをガイドする、新しい* クエリ調整アシスタント (QTA)** が開始されます。データベースの互換性レベルをアップグレードする前にパフォーマンスのベースラインを収集する。 目的のデータベース互換性レベルにアップグレードする。  同じワークロードを介してパフォーマンス データの 2 番目の受け渡しを収集する。 ワークロードの低下を検出し、ワークロードのパフォーマンスを改善するためのテスト済みのレコメンデーションを提供する。  これは、「[クエリ ストアの使用シナリオ](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」に記載されているデータベースのアップグレード プロセスに似ていますが、最後の手順 (QTA はレコメンデーションを生成するために以前の正常起動時の状態に依存しない) が異なります。|
+|データベース互換性レベルのアップグレード|**[データベース名]** _ > _*_[タスク]_*_ > _*_[データベースのアップグレード]_*_ に新しいオプションを追加しました。 これにより、データベースの互換性レベルをアップグレードする前にパフォーマンスのベースラインを収集するプロセスをユーザーに指示する、新しい "*クエリ調整アシスタント (QTA)* " が開始されます。 目的のデータベース互換性レベルにアップグレードする。  同じワークロードを介してパフォーマンス データの 2 番目の受け渡しを収集する。 ワークロードの低下を検出し、ワークロードのパフォーマンスを改善するためのテスト済みのレコメンデーションを提供する。  これは、「[クエリ ストアの使用シナリオ](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」に記載されているデータベースのアップグレード プロセスに似ていますが、最後の手順 (QTA はレコメンデーションを生成するために以前の正常起動時の状態に依存しない) が異なります。|
 |データ層アプリケーションのウィザード|グラフ テーブルを使用したデータ層アプリケーションのインポート/エクスポートのサポートが追加されました。|
 |フラット ファイルのインポート ウィザード|インポートで列の名前が変更された可能性があることをユーザーに通知するロジックが追加されました。|
 |Integration Services (SSIS)|顧客が Azure Government クラウド内にある Azure-SSIS IR で SSIS パッケージをスケジュールできるようにするためのサポートが追加されました。|

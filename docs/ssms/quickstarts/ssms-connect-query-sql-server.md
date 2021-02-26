@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein, mikeray
 ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
-ms.openlocfilehash: 519b60f63da38192e2196014e0ea7820dafd5491
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: 92160da1da48fc107be98354250e4c580cb51155
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97619231"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350597"
 ---
 # <a name="quickstart-connect-and-query-a-sql-server-instance-using-sql-server-management-studio-ssms"></a>クイックスタート: SQL Server Management Studio (SSMS) を使用して SQL Server インスタンスに接続し、クエリを行う
 
@@ -48,8 +48,8 @@ SQL Server Management Studio (SSMS) の使用を開始して、お使いの SQL 
     |   設定   |   推奨値   |   説明   |
     |--------------|-----------------------|-----------------|
     | **サーバーの種類** | データベース エンジン | **[サーバーの種類]** に、**[データベース エンジン]** (通常は既定のオプションです) を選択します。 |
-    | **サーバー名** | 完全修飾サーバー名 | **[サーバー名]** には、お使いの SQL Server 名を入力します (ローカル接続している場合は、サーバー名に *localhost* を使用することもできます)。 既定のインスタンスの ***MSSQLSERVER** _ を使用していない場合、サーバー名とインスタンス名に入力する必要があります。 </br> </br> SQL Server インスタンス名を確認する方法がわからない場合は、「[SSMS を使用するためのヒントとテクニック](../tutorials/ssms-tricks.md#find-sql-server-instance-name)」を参照してください。 |
-    | _ *認証** | Windows 認証 </br> </br> SQL Server 認証 | 既定の設定は Windows 認証です。 </br> </br> **SQL Server 認証** を使用して接続することも可能です。 ただし、 **[SQL Server 認証]** を選択した場合は、ユーザー名とパスワードが必要です。 </br> </br> 認証の種類の詳細については、「[サーバーへの接続 (データベース エンジン)](../f1-help/connect-to-server-database-engine.md)」を参照してください。 |
+    | **サーバー名** | 完全修飾サーバー名 | **[サーバー名]** には、お使いの SQL Server 名を入力します (ローカル接続している場合は、サーバー名に *localhost* を使用することもできます)。 既定のインスタンスである ***MSSQLSERVER*** を使用していない場合、サーバー名とインスタンス名に入力する必要があります。 </br> </br> SQL Server インスタンス名を確認する方法がわからない場合は、「[SSMS を使用するためのヒントとテクニック](../tutorials/ssms-tricks.md#find-sql-server-instance-name)」を参照してください。 |
+    | **認証** | Windows 認証 </br> </br> SQL Server 認証 | 既定の設定は Windows 認証です。 </br> </br> **SQL Server 認証** を使用して接続することも可能です。 ただし、 **[SQL Server 認証]** を選択した場合は、ユーザー名とパスワードが必要です。 </br> </br> 認証の種類の詳細については、「[サーバーへの接続 (データベース エンジン)](../f1-help/connect-to-server-database-engine.md)」を参照してください。 |
     | **Login** | サーバー アカウントのユーザー ID | サーバーにログインするために使用するサーバー アカウントのユーザー ID。 **SQL Server 認証** を使用する場合は、ログインが必要です。 |
     | **パスワード** | サーバー アカウントのパスワード | サーバーにログインするために使用するサーバー アカウントのパスワード。 **SQL Server 認証** を使用する場合は、パスワードが必要です。 |
 

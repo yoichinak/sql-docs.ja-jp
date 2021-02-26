@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 839bef5d4b3aba3a9d95664c549556d6c05206e5
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: ea6bb90e43c66160463cdfa0229826b3a7013762
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081901"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "100338238"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>クエリ式と Uniform Resource Name
 
@@ -72,7 +72,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 たとえば、サーバーでは **ServerCollection** クラスを、データベースでは **DatabaseCollection** クラスを指定します。  
 
 \@*PropertyName*  
-*Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に \@ 文字を付ける必要があります。 たとえば、**Database** クラスのプロパティ **IsAnsiNull**には、\@IsAnsiNull と指定します。  
+*Object* に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に \@ 文字を付ける必要があります。 たとえば、**Database** クラスのプロパティ **IsAnsiNull** には、\@IsAnsiNull と指定します。  
   
 \@*BooleanPropertyName*=true()  
 指定したブール型のプロパティが TRUE に設定されているすべてのオブジェクトを列挙します。  
@@ -105,7 +105,7 @@ contains(\@*StringPropertyName*, '*PatternString*')
  指定したプロパティの値が NULL であるすべてのオブジェクトを列挙します。  
   
  not(\<*PropertyExpression*>)  
- *PropertyExpression*の評価値を否定して、 *PropertyExpression*に指定した条件に一致しないすべてのオブジェクトを列挙します。 たとえば、not(contains(\@Name, 'xyz')) と指定した場合、名前に xyz という文字列が含まれないすべてのオブジェクトが列挙されます。  
+ *PropertyExpression* の評価値を否定して、 *PropertyExpression* に指定した条件に一致しないすべてのオブジェクトを列挙します。 たとえば、not(contains(\@Name, 'xyz')) と指定した場合、名前に xyz という文字列が含まれないすべてのオブジェクトが列挙されます。  
   
 ## <a name="remarks"></a>解説  
 
@@ -126,7 +126,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 ## <a name="examples"></a>例  
   
 ### <a name="a-enumerating-objects-using-false"></a>A. false() を使用したオブジェクトの列挙  
- このクエリ式は、 **MyComputer** 上の既定のインスタンスにおいて **AutoClose**属性が false に設定されているすべてのデータベースを列挙します。  
+ このクエリ式は、 **MyComputer** 上の既定のインスタンスにおいて **AutoClose** 属性が false に設定されているすべてのデータベースを列挙します。  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
@@ -169,5 +169,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
   
 ## <a name="see-also"></a>参照
 
-- [Invoke-PolicyEvaluation コマンドレット](invoke-policyevaluation-cmdlet.md)
+- [Invoke-PolicyEvaluation コマンドレット](/powershell/module/sqlserver/Invoke-PolicyEvaluation)
 - [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)

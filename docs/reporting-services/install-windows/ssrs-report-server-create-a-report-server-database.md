@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 9/2/2020
-ms.openlocfilehash: 70a92bf37285e9af58dcef2e7a69abfb88b37178
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 02/16/2021
+ms.openlocfilehash: 927fafb66a9551332a0d5fcbff868ad79efa5eef
+ms.sourcegitcommit: 129c084add904fd3f7e9ab35a800c3fd8b1a8927
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100067107"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100564108"
 ---
 # <a name="create-a-report-server-database-report-server-configuration-manager"></a>レポート サーバー データベースの作成 (レポート サーバーの構成マネージャー)  
 
@@ -84,6 +84,9 @@ SharePoint モードの 3 つのデータベースの名前の例を次に示し
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+
+> [!NOTE] 
+> Linux 上の SQL は、SQL Server Reporting Services データベースをホストするためにサポートされている環境ではありません。
 
 リモート コンピューターにレポート サーバー データベースを作成する場合は、ネットワークにアクセスできるドメイン ユーザー アカウントまたはサービス アカウントを使用するように接続を構成します。 リモートの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用する場合は、レポート サーバーがインスタンスに接続するときに使用する必要がある資格情報を検討します。 詳細については、「[レポート サーバー データベース接続の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   

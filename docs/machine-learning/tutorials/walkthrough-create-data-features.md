@@ -1,5 +1,5 @@
 ---
-title: R チュートリアル:機能エンジニアリング
+title: 'R チュートリアル: 特徴エンジニアリング'
 description: データベース内分析に SQL Server 関数を使用してデータ機能を作成する方法を示すチュートリアル。
 ms.prod: sql
 ms.technology: machine-learning-services
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 38920a0d7dda05b2dbd853035c4ce0c17ffd74f2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 502600980a3cb1f80eaeca64284f0a189cfcb405
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470033"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272983"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R と SQL Server を使用したデータ機能の作成 (チュートリアル)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -109,7 +109,7 @@ R 言語は統計ライブラリが豊富なことで知られていますが、
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + RxDataStep 関数では、データをインプレースで変更するためのさまざまなメソッドをサポートしています。 詳細については、次の記事を参照してください。[Microsoft R でデータを変換およびサブセット化する方法](/r-server/r/how-to-revoscaler-data-transform)
+    + RxDataStep 関数では、データをインプレースで変更するためのさまざまなメソッドをサポートしています。 詳細については、[Microsft R でデータを変換およびサブセット化する方法](/r-server/r/how-to-revoscaler-data-transform)に関する記事を参照してください
     
     ただし、rxDataStep について注目すべき点がいくつかあります。 
     
@@ -129,7 +129,7 @@ R 言語は統計ライブラリが豊富なことで知られていますが、
 
 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) または別のクエリ エディターに切り替えて、T-SQL スクリプトを実行します。
 
-1. *fnCalculateDistance* という名前の SQL 関数を使用します。 この関数は、NYCTaxi_Sample データベースに既に含まれているはずです。 オブジェクト エクスプローラーで、次のパスに移動して関数が存在することを確認します。データベース > NYCTaxi_Sample > プログラミング > 関数 > スカラー値関数 > dbo.fnCalculateDistance。
+1. *fnCalculateDistance* という名前の SQL 関数を使用します。 この関数は、NYCTaxi_Sample データベースに既に含まれているはずです。 オブジェクト エクスプローラーで、次のパス ([データベース] > NYCTaxi_Sample > [プログラミング] > [関数] > [スカラー値関数] > dbo.fnCalculateDistance) に移動して、この関数が存在することを確認します。
 
     関数が存在しない場合は、SQL Server Management Studio を使用して、NYCTaxi_Sample データベースに関数を生成します。
 
@@ -227,7 +227,7 @@ R 言語は統計ライブラリが豊富なことで知られていますが、
     ```
 
     > [!NOTE]
-    > 場合によっては、次のようなエラーが表示されることがあります。*EXECUTE 権限がオブジェクト ' fnCalculateDistance ' で拒否されました。* その場合は、使用しているログインに、スクリプトの実行と、インスタンスだけでなく、データベースでオブジェクトを作成する権限があることを確認してください。
+    > 場合によっては、次のようなエラーが表示されることがあります: "*オブジェクト 'fnCalculateDistance' に対する実行のアクセス許可が拒否されました*"。その場合は、使用しているログインに、スクリプトの実行と、インスタンスだけでなく、データベースでオブジェクトを作成する権限があることを確認してください。
     > オブジェクトのスキーマ (fnCalculateDistance) を確認します。 オブジェクトがデータベース所有者によって作成されており、ログインがロール db_datareader に属している場合は、スクリプトを実行するための明示的な権限をログインに付与する必要があります。
 
 ## <a name="comparing-r-functions-and-sql-functions"></a>R 関数と SQL 関数の比較
@@ -248,7 +248,7 @@ SQL 関数を呼び出すときにデータ変換にかかる時間を確認す�
 > [!TIP]
 > 非常に多くの場合、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用する機能エンジニアリングの方が R よりも高速になります。たとえば、T-SQL には、移動平均や *n* タイルのロールなど、一般的なデータ サイエンス計算に適用できる高速ウィンドウ関数と順位付け関数が含まれています。 データとタスクに基づいて、最も効率的な方法を選択してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [R モデルを構築して SQL に保存する](walkthrough-build-and-save-the-model.md)

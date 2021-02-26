@@ -1,7 +1,7 @@
 ---
 title: Microsoft ODBC Driver for SQL Server をインストールする (macOS)
 description: macOS クライアントに Microsoft ODBC Driver for SQL Server をインストールして、データベース接続を有効にする方法について説明します。
-ms.date: 09/08/2020
+ms.date: 02/12/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a07f2760503e5df9897f4a4ef065621bd5852523
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2f07e613a6bd5ce8416c4b2c015749a1e631ea3f
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100042922"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525146"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>Microsoft ODBC Driver for SQL Server をインストールする (macOS)
 
@@ -23,12 +23,15 @@ ms.locfileid: "100042922"
 
 この記事では、Bash シェルから ODBC ドライバーをインストールするためのコマンドについて説明します。 パッケージを直接ダウンロードする場合は、「[ODBC Driver for SQL Server のダウンロード](../download-odbc-driver-for-sql-server.md)」を参照してください。
 
+> [!Note]
+> macOS 上の Microsoft ODBC Driver for SQL Server は、x64 アーキテクチャでのみサポートされています。 Apple M1 はサポートされていません。
+
 ## <a name="microsoft-odbc-17"></a>Microsoft ODBC 17
 
 macOS に Microsoft ODBC Driver 17 for SQL Server をインストールするには、次のコマンドを実行します。
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
@@ -46,7 +49,7 @@ HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 Microsoft ODBC Driver 13.1 for SQL Server を OS X 10.11 (El Capitan) および macOS 10.12 (Sierra) にインストールするには、次のコマンドを使用します。
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0

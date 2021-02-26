@@ -5,16 +5,16 @@ description: この記事では、SQL Server ビッグ データ クラスター
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/13/2021
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 75b3b483a9e7744bb35b50ff30649b3257e14285
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1f3e1e0ed29121f0fb0ffcac54885ca80de3e63c
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100046189"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489306"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -64,6 +64,7 @@ ms.locfileid: "100046189"
 
 | リリース <sup>1</sup> | BDC のバージョン | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] バージョン <sup>2</sup> | リリース日 |
 |--|--|--|--|
+| [CU9](#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
 | [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
 | [CU8](#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
 | [CU6](#cu6)     | 15.0.4053.23 | 20.0.1    | 2020-08-04 |
@@ -81,6 +82,25 @@ ms.locfileid: "100046189"
 ## <a name="how-to-install-updates"></a>更新プログラムのインストール方法
 
 更新プログラムをインストールする方法については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法](deployment-upgrade.md)」を参照してください。
+
+## <a name="cu9-february-2021"></a><a id="cu9"></a> CU9 (2021 年 2 月)
+
+SQL Server 2019 の累積的な更新プログラム 9 (CU9) リリース。
+
+|パッケージ バージョン | イメージ タグ |
+|-----|-----|
+|15.0.4102.2|[2019-CU9-ubuntu-16.04]|
+
+SQL Server ビッグ データ クラスター用の SQL Server 2019 CU9 には、次の重要な機能が含まれています。
+
+- BDC 配置後の構成をサポートし、システム設定の可視性を高めます。
+
+   SQL Server マスター インスタンス構成に `mssql-conf` を使用しているクラスターの場合、CU9 にアップグレードした後に追加の手順が必要になります。 [こちら](bdc-upgrade-configuration.md)の指示に従います。
+
+- 保存時の暗号化の [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] エクスペリエンスが向上しました。
+- 仮想環境を使用して Python Spark パッケージを動的にインストールする機能。
+- BDC イメージが最新の拡張機能と修正プログラムを含む最新の状態になるように、ほとんどの OSS コンポーネント (Grafana、Kibana、FluentBit など) のソフトウェア バージョンをアップグレードしました。 「[オープンソース ソフトウェア リファレンス](reference-open-source-software.md)」を参照してください。
+- その他の機能強化とバグ修正。
 
 ## <a name="cu8-gdrjanuary-2021"></a><a id="cu8-gdr"></a> CU8-GDR (2021 年 1 月)
 
@@ -233,7 +253,7 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
 ### <a name="ha-sql-server-database-encryption-key-encryptor-rotation"></a>HA SQL Server データベースの暗号化キーの暗号化機能のローテーション
 
-- **影響を受けるリリース**: リリースに関係なく、すべてのビッグ データ クラスター HA のデプロイ。
+- **影響を受けるリリース**: CU8 までのすべてのバージョン。 CU9 で解決されました。
 
 - **問題およびユーザーへの影響**:SQL Server が HA と共にデプロイされている場合、暗号化されたデータベースの証明書ローテーションは失敗します。 マスター プールで次のコマンドを実行すると、エラー メッセージが表示されます。
     ```
@@ -242,7 +262,13 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
     CERTIFICATE <NewCertificateName>
     ```
     影響はなく、コマンドは失敗し、ターゲット データベースの暗号化は以前の証明書を使用して保持されます。
-    
+
+### <a name="enabling-hdfs-encryption-zones-support-on-cu8"></a>CU8 での HDFS 暗号化ゾーンのサポートの有効化
+
+- **影響を受けるリリース**: このシナリオは、特に CU6 以前から CU8 リリースにアップグレードする場合に発生します。 これは、CU8 以降の新しい展開時または CU9 に直接アップグレードする場合には発生しません。
+
+- **問題とお客様への影響**: このシナリオでは HDFS 暗号化ゾーンのサポートは既定で有効になっていないため、[構成ガイド](encryption-at-rest-concepts-and-configuration.md)で説明されている手順を使用して構成する必要があります。
+
 ### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>累積更新プログラムを適用する前の空の Livy ジョブ
 
 - **影響を受けるリリース**: CU6 までのすべてのバージョン。 CU8 に対して解決されました。

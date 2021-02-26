@@ -1,7 +1,7 @@
 ---
 description: レポート サーバーで基本認証を構成する
 title: レポート サーバーで基本認証を構成する | Microsoft Docs
-ms.date: 08/26/2016
+ms.date: 02/10/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b2b130f85b556d6fdeb2e3c0c3c4a32644a80d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3b875eafb10e4234df2cde35bb61bbecfebad94
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492642"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489326"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>レポート サーバーで基本認証を構成する
   Reporting Services は、既定では、ネゴシエート認証および NTLM 認証を指定する要求を受け入れます。 基本認証を使用するクライアント アプリケーションやブラウザーが配置に含まれる場合は、サポートされる種類の一覧に基本認証を追加する必要があります。 また、レポート ビルダーを使用する場合は、レポート ビルダーのファイルへの匿名アクセスを有効にする必要もあります。  
@@ -35,15 +35,17 @@ ms.locfileid: "88492642"
   
 ### <a name="to-configure-a-report-server-to-use-basic-authentication"></a>レポート サーバーを構成して基本認証を使用するには  
   
-1.  テキスト エディターで RSReportServer.config を開きます。  
+1. テキスト エディターで RSReportServer.config を開きます。  
   
-     このファイルは、 *\<drive>:* \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer にあります。  
+     構成ファイルを見つけるには、「RsReportServer.config 構成ファイル」という記事の「[ファイルの場所](../report-server/rsreportserver-config-configuration-file.md#bkmk_file_location)」セクションを参照してください。
   
-2.  \<**Authentication**> を探します。  
+2. \<**Authentication**> を探します。  
   
-3.  次に示す XML 構造の中でニーズに最も合うものをコピーします。 最初の XML 構造には、次のセクションで説明するすべての要素を指定するためのプレースホルダーが含まれています。  
-  
-    ```  
+3. 次に示す XML 構造の中でニーズに最も合うものをコピーします。 最初の XML 構造には、次のセクションで説明するすべての要素を指定するためのプレースホルダーが含まれています。  
+
+    [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
+    ```xml
     <Authentication>  
           <AuthenticationTypes>  
                  <RSWindowsBasic>  
@@ -56,34 +58,47 @@ ms.locfileid: "88492642"
     </Authentication>  
     ```  
   
-     既定値を使用する場合は、次に示す最小限の要素構造をコピーしてください。  
+    既定値を使用する場合は、次に示す最小限の要素構造をコピーしてください。  
   
-    ```  
+    ```xml
           <AuthenticationTypes>  
                  <RSWindowsBasic/>  
           </AuthenticationTypes>  
     ```  
+
+    [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
+
+    ```xml
+      <Authentication>
+          <AuthenticationTypes>
+                      <RSWindowsBasic/>
+          </AuthenticationTypes>
+          <EnableAuthPersistence>true</EnableAuthPersistence>
+      <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>
+      <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>
+      </Authentication>
+    ```
+
+4. これを \<**Authentication**> の既存のエントリ上に貼り付けます。  
   
-4.  これを \<**Authentication**> の既存のエントリ上に貼り付けます。  
-  
-     複数の種類の認証を使用している場合は、 **RSWindowsBasic** 要素のみを追加し、 **RSWindowsNegotiate**、 **RSWindowsNTLM**、 **RSWindowsKerberos**の各エントリは削除しないようにします。  
+     複数の種類の認証を使用している場合は、 **RSWindowsBasic** 要素のみを追加し、 **RSWindowsNegotiate**、 **RSWindowsNTLM**、 **RSWindowsKerberos** の各エントリは削除しないようにします。  
   
      **Custom** は他の認証の種類と併用できないので注意してください。  
   
-5.  \<**Realm**> または \<**DefaultDomain**> の空の値を、ご利用の環境での有効な値に置き換えます。  
+5. \<**Realm**> または \<**DefaultDomain**> の空の値を、ご利用の環境での有効な値に置き換えます。  
   
-6.  ファイルを保存します。  
+6. ファイルを保存します。  
   
-7.  スケールアウト配置を構成した場合は、配置内の他のレポート サーバーに対して上記の手順を繰り返します。  
+7. スケールアウト配置を構成した場合は、配置内の他のレポート サーバーに対して上記の手順を繰り返します。  
   
-8.  レポート サーバーを再起動して、現在開いているセッションを消去します。  
+8. レポート サーバーを再起動して、現在開いているセッションを消去します。  
   
 ## <a name="rswindowsbasic-reference"></a>RSWindowsBasic リファレンス  
  基本認証を構成するときには次の要素を指定できます。  
   
 |要素|必須|有効な値|  
 |-------------|--------------|------------------|  
-|LogonMethod|はい<br /><br /> 値を指定しない場合は 3 が使用されます。|**2** = ネットワーク ログオン。プレーン テキスト パスワードを認証する高パフォーマンス サーバー向けです。<br /><br /> **3** = クリア テキスト ログオン。各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報が保持されます。これにより、ネットワーク内の他のサーバーに接続する際に、サーバーがユーザーの権限を借用できます。 (既定値)。<br /><br /> 注:値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ではサポート**されていません**。|  
+|LogonMethod|はい<br /><br /> 値を指定しない場合は 3 が使用されます。|**2** = ネットワーク ログオン。プレーン テキスト パスワードを認証する高パフォーマンス サーバー向けです。<br /><br /> **3** = クリア テキスト ログオン。各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報が保持されます。これにより、ネットワーク内の他のサーバーに接続する際に、サーバーがユーザーの権限を借用できます。 (既定値)。<br /><br /> 注:値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ではサポート **されていません**。|  
 |Realm|省略可能|組織内の保護されたリソースへのアクセスを制御するための承認機能や認証機能を含んだリソース パーティションを指定します。|  
 |DefaultDomain|省略可能|サーバーがユーザーを認証する際のドメインを指定します。 この値はオプションです。ただし、省略した場合、レポート サーバーでは、コンピューター名がドメインとして使用されます。 コンピューターがドメインのメンバーになっている場合は、そのドメインが既定のドメインです。 レポート サーバーをドメイン コントローラーにインストールした場合、そのコンピューターによって制御されるドメインを指定します。|  
   

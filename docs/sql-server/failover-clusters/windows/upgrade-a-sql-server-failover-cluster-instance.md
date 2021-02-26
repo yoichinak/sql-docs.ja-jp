@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: aaf4e27a88bdb3e23937521f230e62dae4115129
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 358006fa8eb00cdfc52a6d5a630f559ff86553f7
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642762"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100350032"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>フェールオーバー クラスター インスタンスのアップグレード 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,16 +50,16 @@ ms.locfileid: "97642762"
 ## <a name="prerequisites"></a>前提条件  
  作業を開始する前に、次の重要な情報を確認してください。  
   
--   [サポートされているバージョンとエディションのアップグレード](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md):使用している Windows オペレーティング システムのバージョンと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のバージョンから [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] にアップグレードできることを確認します。 たとえば、SQL Server 2005 フェールオーバー クラスタリング インスタンスから [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] には直接アップグレードできません。また、[!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] で実行されているフェールオーバー クラスター インスタンスをアップグレードすることもできません。  
+-   [サポートされるバージョンとエディションのアップグレード](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): お使いのバージョンの Windows オペレーティング システムと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から目的のバージョンの [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] にアップグレードできることを確認します。 たとえば、SQL Server 2005 フェールオーバー クラスタリング インスタンスから [!INCLUDE [sssql14-md](../../../includes/sssql14-md.md)] には直接アップグレードできません。また、[!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] で実行されているフェールオーバー クラスター インスタンスをアップグレードすることもできません。  
   
 -   [データベース エンジンのアップグレード方法の選択](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md):サポートされるバージョンとエディションのアップグレードを確認して、適切なアップグレードの方法と手順を選択します。また、環境にインストールされているその他のコンポーネントに基づいて、正しい順序でコンポーネントをアップグレードします。  
   
 -   [データベース エンジンのアップグレード計画の策定およびテスト](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md):リリース ノート、アップグレードに関する既知の問題、アップグレード前のチェックリストを確認して、アップグレードの計画を作成およびテストします。  
   
--   [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインストールにおけるソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
+-   [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] のインストールにおけるソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>ローリング アップグレードまたは更新の実行  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] にアップグレードするには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを使用して、フェールオーバー クラスター インスタンスに関与している各ノードをパッシブ ノードから 1 つずつアップグレードします。 各ノードをアップグレードすると、ノードはフェールオーバー クラスター インスタンスの実行可能な所有者から除外されます。 予期しないフェールオーバーが発生した場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップにより Windows Server クラスター ロールの所有権がアップグレード済みのノードに移動するまで、アップグレード済みのノードはフェールオーバーに関与しません。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスにアップグレードするには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを使用し、フェールオーバー クラスター インスタンスに関与している各ノードをパッシブ ノードから始めて、一度に 1 つずつアップグレードします。 各ノードをアップグレードすると、ノードはフェールオーバー クラスター インスタンスの実行可能な所有者から除外されます。 予期しないフェールオーバーが発生した場合、セットアップにより Windows Server クラスター ロールの所有権がアップグレード済みのノードに移動するまで、アップグレード済みのノードはフェールオーバーに関与しません。  
   
  既定では、アップグレード済みのノードにフェールオーバーする時期は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップにより自動的に決まります。 決定の際に基準になるのは、フェールオーバー クラスター インスタンス内のノード総数、およびアップグレード済みのノード数です。 ノード総数の半数以上がアップグレード済みの場合、次のノードでアップグレードする際、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップにより、アップグレード済みのノードにフェールオーバーが発生します。 アップグレード済みのノードにフェールオーバーする際、クラスター グループはアップグレード済みのノードに移動します。 すべてのアップグレード済みノードは実行可能な所有者の一覧に格納され、まだアップグレードされていないすべてのノードは実行可能な所有者の一覧から削除されます。 残りの各ノードをアップグレードすると、ノードはフェールオーバー クラスター インスタンスの実行可能な所有者に追加されます。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "97642762"
   
 6.  [ライセンス条項] ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の機能向上に役立てるため、機能の使用状況オプションを有効にしてレポートを [!INCLUDE[msCoName](../../../includes/msconame-md.md)]に送信することもできます。 **[次へ]** をクリックして次に進みます。 セットアップを終了するには、 **[キャンセル]** をクリックします。  
   
-7.  [インスタンスの選択] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にアップグレードする [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インスタンスを指定します。 **[次へ]** をクリックして次に進みます。  
+7.  [インスタンスの選択] ページで、アップグレードする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを指定します。 **[次へ]** をクリックして次に進みます。  
   
 8.  [機能の選択] ページでは、アップグレードする機能があらかじめ選択されています。 機能名を選択すると、右側のペインに各コンポーネント グループの説明が表示されます。 アップグレードする機能は変更できず、アップグレード操作中に機能を追加することもできないことに注意してください。 アップグレード操作の完了後に、アップグレードされた [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] のインスタンスに機能を追加するには、「 [SQL Server 2016 のインスタンスへの機能の追加 &#40;セットアップ&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)」を参照してください。  
   
@@ -127,14 +127,14 @@ ms.locfileid: "97642762"
   
 ### <a name="to-upgrade-a-multi-subnet-failover-cluster-instance-currently-using-stretch-vlan-to-use-multi-subnet"></a>現在、Stretch VLAN を使用しているマルチサブネット フェールオーバー クラスター インスタンスをアップグレードするには、マルチサブネットを使用します。  
   
-1.  前述の手順に従って、クラスターを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]にアップグレードします。  
+1.  前述の手順に従って、クラスターをアップグレードします。  
   
 2.  ネットワーク設定を変更し、リモート ノードを別のサブネットに移動します。  
   
 3.  フェールオーバー クラスター マネージャーまたは PowerShell を使用して新しいサブネットに新しい IP アドレスを追加して、IP アドレス リソースの依存関係を OR に設定します。  
   
 ## <a name="next-steps"></a>次の手順  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]へのアップグレード後は、次の作業を実行します。  
+ アップグレード後、次のタスクを完了してください。  
   
 -   [データベース エンジンのアップグレードの完了](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
