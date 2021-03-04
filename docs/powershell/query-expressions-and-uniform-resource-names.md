@@ -1,5 +1,5 @@
 ---
-title: クエリ式と Uniform Resource Name | Microsoft Docs
+title: クエリ式と Uniform Resource Name
 description: オブジェクト モデル階層内の 1 つまたは複数のオブジェクトを列挙するクエリ式、および単一のオブジェクトを一意に識別する Uniform Resource Name (URN) について学習します。
 ms.prod: sql
 ms.technology: sql-server-powershell
@@ -8,22 +8,21 @@ helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
-ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: ea6bb90e43c66160463cdfa0229826b3a7013762
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e1955201f60f58c6513928c7185dbbdad16cf445
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "100338238"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839486"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>クエリ式と Uniform Resource Name
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) モデルおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインでは、XPath 式に似た、2 種類の式文字列が使用されます。 クエリ式は、オブジェクト モデル階層内の 1 つまたは複数のオブジェクトを列挙するための条件のセットを指定する文字列です。 URN (Uniform Resource Name) は、単一のオブジェクトを一意に識別する特定の種類のクエリ式文字列です。  
 

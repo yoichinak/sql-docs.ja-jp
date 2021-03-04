@@ -21,12 +21,12 @@ ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1560c1147df8373cf75fa5640ca8ee6c6ce97bdc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0d6b6cd5081d70f22fb2be2edd3355119c987e07
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159870"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839346"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-sql)
 
@@ -70,7 +70,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 > [!IMPORTANT]
 > 所有者権限を持たない Azure SQL Database (トリガー、ストアドプロシージャ、関数など) に対してこの DMV を SQL Server Management Studio 以外で実行すると、master データベースで権限エラーがスローされます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 この動的管理関数は、 **クロス適用** を行うことで sys.dm_exec_sessions または sys.dm_exec_requests と組み合わせて使用できます。
 
@@ -87,13 +87,13 @@ GO
 
 ### <a name="b-using-cross-apply-to-additional-information"></a>B. クロス適用を追加情報に使用する
 
-次の例では、セッション ID が50より大きいセッションの入力バッファーを一覧表示します。
+次の例では、ユーザーセッションの入力バッファーを一覧表示します。
 
 ```sql
 SELECT es.session_id, ib.event_info
 FROM sys.dm_exec_sessions AS es
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib
-WHERE es.session_id > 50;
+WHERE es.is_user_process = 1;
 GO
 ```
 

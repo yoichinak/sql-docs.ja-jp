@@ -11,12 +11,12 @@ ms.topic: how-to
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee15152be634c08cb04ec6a01716604fae720471
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: dc50006d17228bf3b5ec03c2a672ed113260bf3b
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100069737"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839262"
 ---
 # <a name="troubleshoot-common-issues-for-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted の一般的な問題をトラブルシューティングする
 
@@ -28,7 +28,7 @@ ms.locfileid: "100069737"
 
 セキュリティで保護されたエンクレーブを使用してステートメントを実行するには、Always Encrypted を有効にし、データベース接続の構成証明 URL を指定する必要があります。詳細については、「[セキュリティで保護されたエンクレーブを使用してステートメントを実行するための前提条件](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves)」を参照してください。 ただし、構成証明 URL を指定しても、[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] のデータベースまたはターゲットである [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] インスタンスがセキュリティで保護されたエンクレーブをサポートしていない場合、または正しく構成されていない場合、接続は失敗します。
 
-- [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] を使用している場合は、データベースで [DC シリーズ](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)のハードウェア構成が使用されていることを確認してください。 詳細については、「[Azure SQL データベースに対して Intel SGX を有効にする](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)」を参照してください。
+- [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] を使用している場合は、データベースで [DC シリーズ](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)のハードウェア構成が使用されていることを確認してください。 詳細については、「[Azure SQL データベースに対して Intel SGX を有効にする](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)」を参照してください。
 - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] を使用している場合は、セキュリティで保護されたエンクレーブがインスタンスに対して正しく構成されていることを確認してください。 詳細については、「[SQL Server でセキュリティで保護されたエンクレーブを構成する](always-encrypted-enclaves-configure-enclave-type.md)」を参照してください。
 
 ## <a name="attestation-errors-when-using-microsoft-azure-attestation"></a>Microsoft Azure Attestation 使用時の構成証明エラー
@@ -56,7 +56,7 @@ ms.locfileid: "100069737"
   - 正しくない構成証明ポリシーが根本原因と考えられます。 Microsoft 推奨のポリシーを使用していることを確認してください。 詳細については、「[構成証明プロバイダーの作成と構成](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation#create-and-configure-an-attestation-provider)」を参照してください。
   - また、セキュリティ違反によってサーバー側のエンクレーブが侵害された結果として、ポリシーの検証が失敗する場合もあります。
 - クライアント アプリケーションから構成証明プロバイダーに接続できず、(手順 5 で) 公開署名キーを取得できません。 次の原因が考えられます。
-  - アプリケーションと構成証明プロバイダーの間にファイアウォールを構成すると、接続がブロックされる可能性があります。 ブロックされた接続のトラブルシューティングを行うには、構成証明プロバイダーの OpenId エンドポイントに接続できることを確認します。 たとえば、アプリケーションをホストしているコンピューターから OpenID エンドポイントに Web ブラウザーを使用して接続できるかどうかを確認します。 詳細については、「[Metadata Configuration - Get](https://docs.microsoft.com/rest/api/attestation/metadataconfiguration/get)」を参照してください。
+  - アプリケーションと構成証明プロバイダーの間にファイアウォールを構成すると、接続がブロックされる可能性があります。 ブロックされた接続のトラブルシューティングを行うには、構成証明プロバイダーの OpenId エンドポイントに接続できることを確認します。 たとえば、アプリケーションをホストしているコンピューターから OpenID エンドポイントに Web ブラウザーを使用して接続できるかどうかを確認します。 詳細については、「[Metadata Configuration - Get](/rest/api/attestation/metadataconfiguration/get)」を参照してください。
 
 ## <a name="attestation-errors-when-using-host-guardian-service"></a>ホスト ガーディアン サービス使用時の構成証明エラー
 

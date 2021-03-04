@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac678e88eaa21a8bb0f074e1bd899108b390bd49
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 313603678820b1f28c7854507befc69520653fc7
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100342960"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839325"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -91,9 +91,9 @@ SP1 以降では [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 、 *標�
 
 ## <a name="permissions"></a>アクセス許可  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]および AZURE SQL Managed Instance では、 `VIEW DATABASE STATE` データベースロールの権限とメンバーシップが必要です `db_owner` 。   
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、[サーバー管理者](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database)アカウントまたは[Azure Active Directory 管理者](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure)アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについては、[サーバー管理者](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database)アカウントまたは[Azure Active Directory 管理者](/azure/azure-sql/database/authentication-aad-overview#administrator-structure)アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
    
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  手順 1: によって分析されるクエリの実行を計画しているセッションにログインし `sys.dm_exec_query_profiles` ます。 プロファイル用のクエリを構成するには `SET STATISTICS PROFILE ON` 同じセッションでクエリを実行します。  
   
 ```sql  
@@ -127,4 +127,3 @@ ORDER BY node_id;
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
- 
