@@ -5,18 +5,18 @@ ms.custom: ''
 ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
-ms.author: v-jizho2
-ms.openlocfilehash: 9a2ba6a75457b2c4742603368d153f5636d3b541
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.author: v-daenge
+ms.openlocfilehash: 716e95a477bdc517cde7fa0980a2a2b2c7b65eb8
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99158213"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837279"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>[SQL Server ログイン] ダイアログ ボックス (ODBC)
 
@@ -85,7 +85,7 @@ SQL Server と同じコンピューターを使用している場合は、「(lo
 
 必要に応じて、ミラー サーバーに SPN を指定できます。 ミラー サーバーの SPN は、クライアントとサーバー間の相互認証に使用されます。
 
-### <a name="language"></a>言語
+### <a name="language"></a>Language
 
 SQL Server システム メッセージに使用する言語を指定します。 SQL Server を実行しているコンピューターには言語がインストールされている必要があります。 この設定は、サーバーのログインに指定されている既定の言語をオーバーライドします。 言語が指定されていない場合、接続はサーバーのログインに指定されている既定の言語を使用します。
 

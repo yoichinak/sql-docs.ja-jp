@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b59fc811c5bdfa122b306e9522bae97faa37e451
-ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
+ms.openlocfilehash: 952e8d393733c62f60c5b6792b422d22417ddede
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100636719"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837945"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -112,7 +112,7 @@ ON
   
 ###  <a name="limitations"></a><a name="bkmk_Limitations"></a> 制限事項  
   
-- SQL Server のワークロードのパフォーマンス特性により、Azure Blob Storage で SQL Server のデータ ファイルはページ BLOB として実装されます。 ブロック BLOB や [Azure Data Lake Storage](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) などその他の BLOB ストレージはサポートされていません。
+- SQL Server のワークロードのパフォーマンス特性により、Azure Blob Storage で SQL Server のデータ ファイルはページ BLOB として実装されます。 ブロック BLOB や [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction) などその他の BLOB ストレージはサポートされていません。
 
 - この機能の現在のリリースでは、Azure Storage に **FileStream** データを格納することはできません。 **FileStream** データは、Azure Storage に格納されているデータ ファイルを含むデータベースに格納することも可能ですが、FileStream のデータ ファイルはすべてローカルのストレージに格納する必要があります。  FileStream データはローカルのストレージに存在する必要があるので、それを Azure Storage を使用するコンピューター間で移動することはできません。そのため、FileStream に関連付けられているデータを別のコンピューターに移動するには、[従来の手法](../../relational-databases/blob/move-a-filestream-enabled-database.md)を使用することをお勧めします。  
   

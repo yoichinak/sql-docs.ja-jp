@@ -7,14 +7,15 @@ ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
+ms.reviewer: v-daenge
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: ab1b5b73ad1bd6ba02baa5ee31bb4be4b42bb63f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3a9505ab98f039fb77cd8493b20b0024775e296f
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199012"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837321"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -74,7 +75,7 @@ Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定
 - `<attestation URL>` - 構成証明 URL (構成証明サービス エンドポイント) を指定します。 構成証明サービス管理者から、ご利用の環境用の構成証明 URL を取得する必要があります。
 
   - [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、「[HGS 構成証明 URL を確認して共有する](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)」を参照してください。
-  - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation)」を参照してください。
+  - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](../../relational-databases/security/encryption/always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation)」を参照してください。
 
 
 データベース接続に対してエンクレーブ計算を有効にする接続文字列の例:

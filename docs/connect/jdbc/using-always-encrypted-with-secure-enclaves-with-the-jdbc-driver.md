@@ -5,18 +5,18 @@ ms.custom: ''
 ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
-ms.openlocfilehash: 3970374537cc3491a0d8d624c3eccd31db0134e7
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 46e812a4234098e49a272be503e52f34d4c78733
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99076970"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837539"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を JDBC Driver と共に使用する
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "99076970"
 
 - **enclaveAttestationUrl:** - 構成証明 URL (構成証明サービス エンドポイント) を指定します。 構成証明サービス管理者から、ご利用の環境用の構成証明 URL を取得する必要があります。
   - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、「[HGS 構成証明 URL を確認して共有する](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)」を参照してください。
-  - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation)」を参照してください。
+  - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](../../relational-databases/security/encryption/always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation)」を参照してください。
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] からセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にするには、ユーザーは **columnEncryptionSetting** を有効にし、上記の接続文字列プロパティの **両方** を正しく設定する必要があります。
 
@@ -91,4 +91,4 @@ try (Connection c = DriverManager.getConnection(URL);Statement s = c.createState
 この機能には、RSASSA-PSA 署名アルゴリズムが必要です。 このアルゴリズムは JDK 11 で追加されましたが、JDK 8 へのバックポートはされていません。 JDK 8 バージョンの [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] でこの機能を使用する場合は、RSASSA-PSA 署名アルゴリズムをサポートする独自のプロバイダーを読み込むか、BouncyCastleProvider のオプションの依存関係を含める必要があります。 今後、JDK 8 に署名アルゴリズムがバックポートされるか、JDK 8 のサポート ライフサイクルが終了した場合は、依存関係は削除されます。
 
 ## <a name="see-also"></a>関連項目
-[JDBC ドライバーでの Always Encrypted の使用](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
+[JDBC ドライバーでの Always Encrypted の使用](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d53811bef7cb4c570d2aa60638474f815548a17
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 0df2acfa00507f42d3ee03a0a65ff2ae25aafbd1
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100058337"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837186"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のリリース ノート
 
@@ -68,7 +68,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | ロック タイムアウトを使用せずにクエリ タイムアウトを設定します。これにより、サーバーに必要以上に接続せずに済みます。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
-<sup>1</sup> このリリースには ODBC Driver 17.4.2 以降が必要です。 これがないと、属性の設定に失敗したことに関する警告が示されます。 この警告は、古い ODBC ドライバーの使用時に抑制されることがあります。 SQLSRV を使用する場合は、「[方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](https://docs.microsoft.com/sql/connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver)」を参照してください。 PDO_SQLSRV を使用する場合、警告は既定で抑制されますが、ログに記録することはできます。 詳細については、「[アクティビティのログ記録](https://docs.microsoft.com/sql/connect/php/logging-activity)」を確認してください。
+<sup>1</sup> このリリースには ODBC Driver 17.4.2 以降が必要です。 これがないと、属性の設定に失敗したことに関する警告が示されます。 この警告は、古い ODBC ドライバーの使用時に抑制されることがあります。 SQLSRV を使用する場合は、「[方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)」を参照してください。 PDO_SQLSRV を使用する場合、警告は既定で抑制されますが、ログに記録することはできます。 詳細については、「[アクティビティのログ記録](./logging-activity.md)」を確認してください。
 
 ## <a name="581"></a>5.8.1
 

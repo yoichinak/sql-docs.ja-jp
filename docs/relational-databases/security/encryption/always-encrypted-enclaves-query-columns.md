@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bc92b0af972236b588369869afc5b023735ae699
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 130d2a9f2d92a77ab2d2e033f8e5f4fb9f88ef9f
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237127"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837668"
 ---
 # <a name="run-transact-sql-statements-using-secure-enclaves"></a>セキュリティで保護されたエンクレーブを使用して Transact-SQL ステートメントを実行する
 
@@ -67,7 +67,7 @@ ms.locfileid: "99237127"
 - 構成証明サービスの管理者から、環境用の構成証明 URL を入手する必要があります。
 
   - [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、「[HGS 構成証明 URL を確認して共有する](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)」を参照してください。
-  - [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation)」を参照してください。
+  - [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](./always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation)」を参照してください。
 
 - アプリケーションを使用してデータベースに接続している場合は、セキュリティで保護されたエンクレーブが設定された Always Encrypted がサポートされているクライアント ドライバーを使用する必要があります。 アプリケーションは、データベース接続で Always Encrypted が有効になっており、構成証明プロトコルと構成証明 URL が適切に構成されているデータベースに接続する必要があります。 詳細については、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する](always-encrypted-enclaves-client-development.md)」を参照してください。
 - SQL Server Management Studio (SSMS) または Azure SQL Data Studio を使用している場合は、データベースに接続するときに、Always Encrypted を有効にし、構成証明プロトコルと構成証明 URL を構成する必要があります。 詳細については、以下のセクションを参照してください。

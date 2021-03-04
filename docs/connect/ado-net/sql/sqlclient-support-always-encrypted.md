@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
-ms.reviewer: v-kaywon
-ms.openlocfilehash: ad8446fd807cd2c84b50e16281fe76111e7f23c3
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.reviewer: v-daenge
+ms.openlocfilehash: 2896662f0327949c2f110305c483170d5f4fa165
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100042612"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836999"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Always Encrypted と Microsoft .NET Data Provider for SQL Server を使用する
 
@@ -87,7 +87,7 @@ Microsoft.Data.SqlClient バージョン 1.1.0 以降のドライバーでは、
 - `Enclave Attestation URL` - 構成証明 URL (構成証明サービス エンドポイント) を指定します。 構成証明サービス管理者から、ご利用の環境用の構成証明 URL を取得する必要があります。
 
   - [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、「[HGS 構成証明 URL を確認して共有する](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)」を参照してください。
-  - [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation)」を参照してください。
+  - [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](../../../relational-databases/security/encryption/always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation)」を参照してください。
 
 詳しいチュートリアルについては、「[チュートリアル: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET アプリケーションを開発する](tutorial-always-encrypted-enclaves-develop-net-apps.md)」を参照してください。
 

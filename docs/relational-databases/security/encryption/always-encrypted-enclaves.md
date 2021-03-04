@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e84635c1f32396e033841c546dafc1796624d5ab
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: cbec7eb15ed8acad746e3fcb2013ee8100bcdd26
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237084"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837705"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
 
@@ -46,7 +46,7 @@ Always Encrypted は、次の図のようにセキュリティで保護された
 
 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] のセキュリティで保護されたエンクレーブが設定された Always Encrypted は、Windows で[仮想化ベースのセキュリティ (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) のセキュリティで保護されたメモリ エンクレーブ (仮想保護モード (VSM) エンクレーブとも呼ばれます) を使用します。
 
-[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では、セキュリティで保護されたエンクレーブが設定された Always Encrypted により、[Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) のエンクレーブが使用されます。 Intel SGX は、[DC シリーズ](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)のハードウェア構成を使用するデータベースでサポートされる、ハードウェアベースの信頼された実行環境テクノロジです。
+[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では、セキュリティで保護されたエンクレーブが設定された Always Encrypted により、[Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) のエンクレーブが使用されます。 Intel SGX は、[DC シリーズ](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series)のハードウェア構成を使用するデータベースでサポートされる、ハードウェアベースの信頼された実行環境テクノロジです。
 
 ## <a name="secure-enclave-attestation"></a>セキュリティで保護されたエンクレーブの構成証明
 
@@ -56,7 +56,7 @@ Always Encrypted は、次の図のようにセキュリティで保護された
 
 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] での VBS のセキュリティで保護されたエンクレーブに対する構成証明プロセスは [Windows Defender System Guard ランタイム構成証明](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)であり、構成証明サービスとしてホスト ガーディアン サービス (HGS) が必要です。 
 
-[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] での Intel SGX エンクレーブの構成証明には、[Microsoft Azure Attestation](https://docs.microsoft.com/azure/attestation/overview) が必要です。
+[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] での Intel SGX エンクレーブの構成証明には、[Microsoft Azure Attestation](/azure/attestation/overview) が必要です。
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] では、Microsoft Azure Attestation はサポートされていません。 [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] での VBS エンクレーブに対してサポートされている唯一の構成証明ソリューションは、ホスト ガーディアン サービスだけです。
@@ -167,7 +167,7 @@ SQL Server のインスタンスで障害が発生した場合、そのデータ
   - ランダム化された暗号化を使用するエンクレーブ対応列のインデックスがデータベースに含まれる場合は、データベースのバックアップを作成する前に、データベースで[高速データベース復旧 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) を有効にします。 ADR では、データベースを復元した後すぐに、インデックスも含めて、データベースを使用できることが保証されます。 詳しくは、「[データベース復旧](#database-recovery)」をご覧ください。
   
 - **Azure SQL Database**
-  - [アクティブ geo レプリケーション](https://docs.microsoft.com/azure/azure-sql/database/active-geo-replication-overview)を構成するとき、セキュリティで保護されたエンクレーブがプライマリ データベースでサポートされている場合は、セカンダリ データベースでもそうであることを確認します。
+  - [アクティブ geo レプリケーション](/azure/azure-sql/database/active-geo-replication-overview)を構成するとき、セキュリティで保護されたエンクレーブがプライマリ データベースでサポートされている場合は、セカンダリ データベースでもそうであることを確認します。
 
 SQL Server と Azure SQL Database の両方で、bacpac ファイルを使用してデータベースを移行するときは、bacpac ファイルを作成する前に、ランダム化された暗号化を使用するエンクレーブ対応列のすべてのインデックスを削除する必要があります。
 

@@ -3,20 +3,19 @@ title: 分散再生のインストール
 titleSuffix: SQL Server Distributed Replay
 description: この記事では、インストール ウィザード、コマンド プロンプト ウィンドウ、または構成ファイルを使用して、分散再生をインストールする方法について説明します。
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: fc4c971d62ac4a54a786b426ea8f7855882fa0c2
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1dfe3a196af914c8cbba177256b41b9da454025b
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345919"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838093"
 ---
 # <a name="install-distributed-replay"></a>分散再生のインストール
 
@@ -24,35 +23,36 @@ ms.locfileid: "100345919"
 
 次の 3 つのいずれかの方法で分散再生をインストールできます。  
   
--   [インストール ウィザードからの分散再生のインストール](#bkmk_wizard)  
+- [インストール ウィザードからの分散再生のインストール](#bkmk_wizard)  
   
--   [コマンド プロンプトからの分散再生のインストール](#bkmk_command_prompt)  
+- [コマンド プロンプトからの分散再生のインストール](#bkmk_command_prompt)  
   
--   [構成ファイルを使用した分散再生のインストール](#bkmk_configuration_file)  
+- [構成ファイルを使用した分散再生のインストール](#bkmk_configuration_file)  
   
 ##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> インストール ウィザードからの分散再生のインストール  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インストール ウィザードでインストールします。 機能をインストールする場所を計画する際には、以下について検討してください。  
+
+[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インストール ウィザードでインストールします。 機能をインストールする場所を計画する際には、以下について検討してください。  
   
--   管理ツールは、分散再生コントローラーと同じコンピューター上、または別のコンピューター上にインストールできます。  
+- 管理ツールは、分散再生コントローラーと同じコンピューター上、または別のコンピューター上にインストールできます。  
   
--   各 分散再生環境には、コントローラーを 1 つだけ置くことができます。  
+- 各 分散再生環境には、コントローラーを 1 つだけ置くことができます。  
   
--   クライアント サービスは、最大で 16 の (物理または仮想) コンピューター上にインストールできます。  
+- クライアント サービスは、最大で 16 の (物理または仮想) コンピューター上にインストールできます。  
   
--   分散再生コントローラー コンピューター上には、クライアント サービスのインスタンスを 1 つだけインストールできます。 分散再生環境に複数のクライアントを置く場合は、クライアント サービスをコントローラーと同じコンピューターにインストールすることはお勧めできません。 そのようにすると、分散再生の全体的な速度が低下します。  
+- 分散再生コントローラー コンピューター上には、クライアント サービスのインスタンスを 1 つだけインストールできます。 分散再生環境に複数のクライアントを置く場合は、クライアント サービスをコントローラーと同じコンピューターにインストールすることはお勧めできません。 そのようにすると、分散再生の全体的な速度が低下します。  
   
--   パフォーマンスのテストのシナリオでは、管理ツール、Distributed Replay コントローラー サービス、またはクライアント サービスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の対象インスタンスにインストールすることはお勧めしません。 これらのすべての機能をターゲット サーバーにインストールするのは、アプリケーションの互換性に関する機能テストを行うときだけに限定する必要があります。  
+- パフォーマンスのテストのシナリオでは、管理ツール、Distributed Replay コントローラー サービス、またはクライアント サービスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の対象インスタンスにインストールすることはお勧めしません。 これらのすべての機能をターゲット サーバーにインストールするのは、アプリケーションの互換性に関する機能テストを行うときだけに限定する必要があります。  
   
--   インストール後は、クライアント上で 分散再生クライアント サービスを開始する前に、コントローラー サービスである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラーを実行する必要があります。  
+- インストール後は、クライアント上で 分散再生クライアント サービスを開始する前に、コントローラー サービスである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラーを実行する必要があります。  
   
 > [!NOTE]  
 >  分散再生の機能を削除または変更するには、 **コントロール パネル** で Windows の **[プログラムと機能]** ウィンドウを使用します。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [プログラムのアンインストールまたは変更] **ウィンドウで** を選択し、 **[削除]** をクリックして [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インストール ウィザードを開きます。 **[機能の選択]** ページで、削除する分散再生機能を選択します。  
   
  **前提条件:**  
   
--   使用するコンピューターが、「 [分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)」に記載されている前提条件を満たしていることを確認します。  
+- 使用するコンピューターが、「 [分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)」に記載されている前提条件を満たしていることを確認します。  
   
--   この手順を開始する前に、コントローラーおよびクライアントのサービスを実行するためのドメイン ユーザー アカウントを作成します。 これらのアカウントは、Windows Administrators グループのメンバーにしないことをお勧めします。 詳細については、「 [Distributed Replay のセキュリティ](../../tools/distributed-replay/distributed-replay-security.md) 」の「ユーザーおよびサービス アカウント」を参照してください。  
+- この手順を開始する前に、コントローラーおよびクライアントのサービスを実行するためのドメイン ユーザー アカウントを作成します。 これらのアカウントは、Windows Administrators グループのメンバーにしないことをお勧めします。 詳細については、「 [Distributed Replay のセキュリティ](../../tools/distributed-replay/distributed-replay-security.md) 」の「ユーザーおよびサービス アカウント」を参照してください。  
   
     > [!NOTE]  
     >  管理ツール、コントローラー サービス、およびクライアント サービスが同じコンピューター上で実行されている場合は、ローカル ユーザー アカウントを使用できます。  
@@ -61,7 +61,7 @@ ms.locfileid: "100345919"
   
  既定のファイルの場所と標準インストールを使用した場合、基本ディレクトリは C:\Program Files \Microsoft SQL Server になります。 その下の以下の場所に、バイナリとアセンブリがインストールされます。  
   
--   32 ビット システムの場合:  
+- 32 ビット システムの場合:  
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]ツール  
   
@@ -69,7 +69,7 @@ ms.locfileid: "100345919"
   
      \<Share Feature Directory>\Tools\\(ユーザーが指定する代替の共有機能ディレクトリ)  
   
--   64 ビット システムの場合:  
+- 64 ビット システムの場合:  
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
@@ -93,23 +93,23 @@ ms.locfileid: "100345919"
   
 7.  **[機能の選択]** ページで、どの機能をインストールするかを設定します。  
   
-    -   管理ツールをインストールするには、 **[管理ツール - 基本]** を選択します。  
+    - 管理ツールをインストールするには、 **[管理ツール - 基本]** を選択します。  
   
-    -   コントローラー サービスをインストールするには、 **[分散再生コントローラー]** を選択します。  
+    - コントローラー サービスをインストールするには、 **[分散再生コントローラー]** を選択します。  
   
-    -   クライアント サービスをインストールするには、 **[分散再生クライアント]** を選択します。  
+    - クライアント サービスをインストールするには、 **[分散再生クライアント]** を選択します。  
   
      **重要**:分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
   
-    -   ドメイン ユーザー アカウント  
+    - ドメイン ユーザー アカウント  
   
-    -   ユーザーによって作成されたローカル ユーザー アカウント  
+    - ユーザーによって作成されたローカル ユーザー アカウント  
   
-    -   管理者  
+    - 管理者  
   
-    -   仮想アカウントおよび管理されたサービス アカウント (MSA)  
+    - 仮想アカウントおよび管理されたサービス アカウント (MSA)  
   
-    -   ネットワーク サービス、ローカル サービス、およびシステム  
+    - ネットワーク サービス、ローカル サービス、およびシステム  
   
      グループ アカウント (ローカルまたはドメイン) およびその他の組み込みのアカウント (Everyone など) は使用できません。  
   
@@ -188,9 +188,9 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
  セットアップでは、コマンド ラインからのみ構成ファイルを使用できます。 以下に、構成ファイルを使用する際のパラメーターの処理順序について説明します。  
   
--   構成ファイルによって、パッケージの既定値が上書きされます。  
+- 構成ファイルによって、パッケージの既定値が上書きされます。  
   
--   コマンド ライン値によって、構成ファイル内の値が上書きされます。  
+- コマンド ライン値によって、構成ファイル内の値が上書きされます。  
   
  構成ファイルの使用方法の詳細については、「 [構成ファイルを使用した SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)」を参照してください。  
   
@@ -205,7 +205,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 #### <a name="to-install-distributed-replay-using-the-configuration-file"></a>構成ファイルを使用して 分散再生をインストールするには  
   
--   コマンド プロンプトからインストールを実行し、ConfigurationFile パラメーターを使用して ConfigurationFile.ini を指定します。  
+- コマンド プロンプトからインストールを実行し、ConfigurationFile パラメーターを使用して ConfigurationFile.ini を指定します。  
   
  **サンプル構文**  
   

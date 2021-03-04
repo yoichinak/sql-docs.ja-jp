@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8767da09f84be9c557238643e16c925756e0bede
-ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
+ms.openlocfilehash: bbfddcbf39dbbba3b63c6853ea7700e6a27a4614
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99623782"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837221"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -133,7 +133,7 @@ for ($i = 0; $i < $numCol; $i++) {
 
 ## <a name="sensitivity-rank-using-a-predefined-set-of-values"></a>事前設定されている値セットを使用した秘密度順位
 
-5\.9.0 以降、ODBC ドライバー 17.4.2 以上の使用時、PHP ドライバーによって分類順位の取得が追加されました。 ユーザーは [ADD SENSITIVITY CLASSIFICATION](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) 使用時の順位を定義し、あらゆるデータ列を分類できます。 
+5\.9.0 以降、ODBC ドライバー 17.4.2 以上の使用時、PHP ドライバーによって分類順位の取得が追加されました。 ユーザーは [ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md) 使用時の順位を定義し、あらゆるデータ列を分類できます。 
 
 たとえば、ユーザーが `NONE` と `LOW` をそれぞれ BirthDate と SSN に割り当てる場合、JSON 表記は次のようになります。
 
@@ -142,7 +142,7 @@ for ($i = 0; $i < $numCol; $i++) {
 {"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
 ```
 
-[秘密度分類](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql)に示されているように、順位の数値は次のようになります。
+[秘密度分類](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)に示されているように、順位の数値は次のようになります。
 
 ```
 0 for NONE
@@ -192,4 +192,4 @@ array(1) {
 ## <a name="see-also"></a>参照  
 [PDOStatement クラス](../../connect/php/pdostatement-class.md)
 
-[PDO](https://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)

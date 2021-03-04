@@ -2,7 +2,7 @@
 title: 手順 3:pyodbc を使用して SQL に接続する
 description: 手順 3 は概念実証であり、Python と pyODBC を使用して SQL Server に接続する方法がわかります。 基本的な例で、データの選択と挿入が示されます。
 ms.custom: ''
-ms.date: 03/01/2020
+ms.date: 03/02/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26cbdea53547f30a59dc6953d7bf68bddc712164
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 808cb17d29362e76fdcc69171b21c9ffffd5c1ed
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807035"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837129"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>手順 3:pyodbc を使用した SQL への接続を概念実証する
 
 この例は、概念実証です。 わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
 
-開始するには、次のサンプル スクリプトを実行します。 test.py という名前のファイルを作成し、各コード スニペットを追加していきます。 
+開始するには、次のサンプル スクリプトを実行します。 test.py という名前のファイルを作成し、各コード スニペットを追加していきます。
 
 ```
 > python test.py
@@ -43,13 +43,11 @@ cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';
 cursor = cnxn.cursor()
 
 ```  
-  
-  
+
 ## <a name="run-query"></a>Run query  
   
 Cursor.execute 関数は、SQL Database に対するクエリから結果セットを取得するために使用できます。 この関数はクエリを受け取り、cursor.fetchone() を使用して反復処理できる結果セットを返します。
-  
-  
+
 ```python
 #Sample select query
 cursor.execute("SELECT @@version;") 
@@ -62,28 +60,23 @@ while row:
   
 ## <a name="insert-a-row"></a>行を挿入する  
   
-この例からは、[INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、パラメーターを渡す方法がわかります。 パラメーターにより、アプリケーションは [SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)から保護されます。    
-  
-  
+この例からは、[INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、パラメーターを渡す方法がわかります。 パラメーターにより、アプリケーションは [SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)から保護されます。
+
 ```python
 #Sample insert query
-cursor.execute("""
+count = cursor.execute("""
 INSERT INTO SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) 
 VALUES (?,?,?,?,?)""",
-'SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP) 
+'SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP).rowcount
 cnxn.commit()
-row = cursor.fetchone()
-
-while row: 
-    print('Inserted Product key is ' + str(row[0]))
-    row = cursor.fetchone()
+print('Rows inserted: ' + str(count))
 ```  
 
 ## <a name="azure-active-directory-and-the-connection-string"></a>Azure Active Directory と接続文字列
 
 pyODBC では、Microsoft ODBC Driver for SQL Server が使用されます。
 ODBC ドライバーのバージョンが 17.1 以降の場合は、pyODBC を通じて Azure Active Directory 対話型モードの ODBC ドライバーを使用できます。
-この対話型オプションは、Python と pyODBC によって ODBC ドライバーでのダイアログの表示が許可されている場合に機能します。 このオプションは、Windows オペレーティング システムでのみ使用できます。 
+この対話型オプションは、Python と pyODBC によって ODBC ドライバーでのダイアログの表示が許可されている場合に機能します。 このオプションは、Windows オペレーティング システムでのみ使用できます。
 
 ### <a name="example-connection-string-for-azure-active-directory-interactive-authentication"></a>Azure Active Directory 対話型認証の接続文字列の例
 

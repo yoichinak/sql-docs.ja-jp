@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: deae632ce9305b58b72e24e1a57507f9f4c5ee89
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: f24b3bb19150271532561d691a1ed1f4c89dfbc5
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489436"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838090"
 ---
 # <a name="monitoring-report-server-performance"></a>レポート サーバーのパフォーマンスの監視
 
@@ -68,13 +68,13 @@ SQL Server Reporting Services 2016 以降には、次のパフォーマンス �
   
 -   HTTP 関連のイベントおよびメモリ管理を監視するための **ReportServer:Service** および **ReportServerSharePoint:Service** to monitor HTTP-related events および memory management. これらは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に固有のカウンターです。要求、接続、サインイン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 このパフォーマンス オブジェクトには、メモリ管理に関連したカウンターも含まれています。  
   
- 1 台のコンピューターに複数のレポート サーバー インスタンスが存在する場合、インスタンスをまとめて監視することも個別に監視することもできます。 カウンターを追加する場合は、監視対象に含めるインスタンスを選択してください。 パフォーマンス モニター (perfmon.msc) の使用およびカウンターの追加に関する詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [Windows パフォーマンス モニター](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11))の製品ドキュメントを参照してください。  
+ 1 台のコンピューターに複数のレポート サーバー インスタンスが存在する場合、インスタンスをまとめて監視することも個別に監視することもできます。 カウンターを追加する場合は、監視対象に含めるインスタンスを選択してください。 パフォーマンス モニター (perfmon.msc) の使用およびカウンターの追加に関する詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [Windows パフォーマンス モニター](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11))の製品ドキュメントを参照してください。  
   
 ## <a name="other-performance-counters"></a>その他のパフォーマンス カウンター  
  カスタム [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] パフォーマンス カウンターは、上記の Reporting Services パフォーマンス オブジェクトに対してのみ提供されます。 次の .NET Framework パフォーマンス オブジェクトにより、レポート サーバーに関する補足的なパフォーマンス監視データが提供されます。
  
  > [!NOTE]
- > Power BI Report Server および SQL Server Reporting Services 2017 以降には、Reporting Services パフォーマンス オブジェクトは含まれていません。 [.NET Framework パフォーマンス カウンター](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/performance-counters)を使用すると、レポート サーバーのパフォーマンスの監視が可能になります。 
+ > Power BI Report Server および SQL Server Reporting Services 2017 以降には、Reporting Services パフォーマンス オブジェクトは含まれていません。 [.NET Framework パフォーマンス カウンター](/dotnet/framework/debug-trace-profile/performance-counters)を使用すると、レポート サーバーのパフォーマンスの監視が可能になります。 
  
 |パフォーマンス オブジェクト|Notes|  
 |------------------------|-----------|  
@@ -98,4 +98,3 @@ SQL Server Reporting Services 2016 以降には、次のパフォーマンス �
  [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)  
-  

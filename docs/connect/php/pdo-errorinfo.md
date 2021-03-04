@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 46b57275d92f4eb6acb64c276e3b34ea67efb429
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 62ad5c26342ce03d3098d5a835776d193df4b88c
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202027"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837234"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -130,14 +130,14 @@ pdo_sqlsrv.report_additional_errors = 0
 
 ## <a name="warnings-and-errors"></a>警告とエラー
 
-5\.9.0 以降では、ODBC の警告がエラーとしてログに記録されなくなります。 つまり、プレフィックスが "01" の[エラー コード](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)が警告としてログに記録されます。 言い換えると、ユーザーがエラーのみをログに記録する場合は、このように php.ini を更新します。
+5\.9.0 以降では、ODBC の警告がエラーとしてログに記録されなくなります。 つまり、プレフィックスが "01" の[エラー コード](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)が警告としてログに記録されます。 言い換えると、ユーザーがエラーのみをログに記録する場合は、このように php.ini を更新します。
 
 ```
 [pdo_sqlsrv]  
 pdo_sqlsrv.log_severity = 1
 ```
 
-この場合、ログ ファイルにはいずれの警告メッセージも含まれません。 pdo_sqlsrv ユーザーの[ログ記録](https://docs.microsoft.com/sql/connect/php/logging-activity#logging-activity-using-the-pdo_sqlsrv-driver)の動作を確認してください。
+この場合、ログ ファイルにはいずれの警告メッセージも含まれません。 pdo_sqlsrv ユーザーの[ログ記録](./logging-activity.md#logging-activity-using-the-pdo_sqlsrv-driver)の動作を確認してください。
 
 ## <a name="see-also"></a>参照  
 [PDO クラス](../../connect/php/pdo-class.md)

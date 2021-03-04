@@ -4,18 +4,17 @@ description: SQL Server の区切られた識別子に使用できる文字に�
 ms.prod: sql
 ms.technology: sql-server-powershell
 ms.topic: conceptual
-ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: e0aa284247d778706b739eae0c6bab18061b73dc
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 13b32a62791aaa932311223f4f648d8006eb33e7
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100340819"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838043"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 識別子のエンコードとデコード
 

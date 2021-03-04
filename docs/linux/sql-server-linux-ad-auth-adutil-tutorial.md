@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: e1e14db6e55ca4af4f76220c0e3f377c38e41165
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: f4b084d020c40bf57ae5cbaa2c5a1306808ec1d2
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100351873"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101834789"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux-using-adutil"></a>チュートリアル:adutil を使用して SQL Server on Linux で Active Directory 認証を構成する
 
@@ -142,7 +142,7 @@ SQL Server Linux ホストを Active Directory ドメイン コントローラ�
 2. adutil ツールを使用して、SQL Server によって特権 AD アカウントとして使用される新しいユーザーを作成します。
 
    ```bash
-   adutil user create --name sqluser -distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
+   adutil user create --name sqluser --distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
    ```
 
     > [!NOTE]

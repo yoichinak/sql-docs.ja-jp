@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 45b617e91f2f296aa9749f7f8f2f25b640ddf546
-ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
+ms.openlocfilehash: 82e1ad1147867abd9308dc89517855df830a38e6
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99623772"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837155"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -240,7 +240,7 @@ foreach ($fieldmeta as $f) {
 
 ## <a name="sensitivity-rank-using-a-predefined-set-of-values"></a>事前設定されている値セットを使用した秘密度順位
 
-5\.9.0 以降、ODBC ドライバー 17.4.2 以上の使用時、PHP ドライバーによって分類順位の取得が追加されました。 ユーザーは [ADD SENSITIVITY CLASSIFICATION](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) 使用時の順位を定義し、あらゆるデータ列を分類できます。 
+5\.9.0 以降、ODBC ドライバー 17.4.2 以上の使用時、PHP ドライバーによって分類順位の取得が追加されました。 ユーザーは [ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md) 使用時の順位を定義し、あらゆるデータ列を分類できます。 
 
 たとえば、ユーザーが `NONE` と `LOW` をそれぞれ BirthDate と SSN に割り当てる場合、JSON 表記は次のようになります。
 
@@ -249,7 +249,7 @@ foreach ($fieldmeta as $f) {
 {"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
 ```
 
-[秘密度分類](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql)に示されているように、順位の数値は次のようになります。
+[秘密度分類](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)に示されているように、順位の数値は次のようになります。
 
 ```
 0 for NONE
@@ -313,4 +313,4 @@ foreach ($fieldmeta as $f) {
 
 [定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 
-[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
+[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
