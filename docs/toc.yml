@@ -6176,6 +6176,22 @@ items:
                 href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
       - name: SQL Server Migration Assistant (SSMA)
         href: ssma/toc.yml
+      - name: Azure Synapse Pathway
+        items:
+          - name: 概要
+            href: tools/synapse-pathway/azure-synapse-pathway-overview.md
+          - name: Azure Synapse Pathway に関する FAQ
+            href: tools/synapse-pathway/pathway-faq.md
+          - name: バックグラウンド
+            href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
+          - name: インストール
+            href: tools/synapse-pathway/synapse-pathway-download.md
+          - name: チュートリアル - Azure Synapse Pathway を実行する
+            href: tools/synapse-pathway/synapse-pathway-assessment.md
+          - name: チュートリアル - 保存と読み込み
+            href: tools/synapse-pathway/tutorial-save-load-assessment.md
+          - name: レポートの生成
+            href: tools/synapse-pathway/report-generation.md
   - name: 管理、監視、チューニング
     items:
       - name: 管理する
@@ -7200,6 +7216,8 @@ items:
                     href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
                   - name: PolyBase の FAQ
                     href: relational-databases/polybase/polybase-faq.md
+                  - name: PolyBase のエラーと考えられる解決策
+                    href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
           - name: リファレンス
             items:
               - name: T-SQL リファレンス
