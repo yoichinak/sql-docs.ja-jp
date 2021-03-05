@@ -335,8 +335,6 @@ items:
                         href: machine-learning/r/operationalizing-your-r-code.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                       - name: SQL Server 用の R コードを変換する
                         href: machine-learning/r/converting-r-code-for-use-in-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-                      - name: sqlrutils を使用してストアド プロシージャを作成する
-                        href: machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                   - name: 予測
                     items:
                       - name: PREDICT T-SQL でのネイティブ スコアリング
