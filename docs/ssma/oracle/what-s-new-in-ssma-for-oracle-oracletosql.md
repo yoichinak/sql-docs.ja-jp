@@ -10,16 +10,24 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 4dc76c57f7194c1ee96bd091d674b793dad29faa
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ef5f8fd634958c75cc67002615e3c4a72dcf3a51
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100081880"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186563"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle の新機能 (OracleToSQL)
 
 この記事では、各リリースでの Oracle の変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v817"></a>SSMA v 8.17
+
+SSMA for Oracle の v 8.17 リリースには、次の変更が含まれています。
+
+* 計算列のサポートを追加する
+* 式でカルチャ固有の演算子文字が使用されている場合にパーサーの問題を修正する
+* 最新のエディターを使用して SQL テキストを表示するように HTML 評価レポートを更新する
 
 ## <a name="ssma-v816"></a>SSMA v 8.16
 

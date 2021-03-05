@@ -12,12 +12,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 9597182b2266ef67878a5d55b96ce731278d9d36
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6af11a4ffc62f8311f31cf378c9a65f67ae58a2b
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204918"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186549"
 ---
 # <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,6 +34,8 @@ CREATE TABLE AS SELECT (CTAS) は、使用可能な最も重要な T-SQL 機能�
 > [!NOTE]  
 > CTAS はテーブルの作成機能に加えられたものであるため、このトピックでは CREATE TABLE トピックの内容は繰り返しません。 代わりに、CTAS と CREATE TABLE のステートメントの違いについて説明します。 CREATE TABLE の詳細については、[CREATE TABLE (Azure Synapse Analytics)](./create-table-azure-sql-data-warehouse.md) ステートメントを参照してください。 
   
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 <a name="syntax-bk"></a>
