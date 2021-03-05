@@ -1,21 +1,22 @@
 ---
 title: Azure Synapse Pathway プレビューの概要
 description: Azure Synapse Pathway は、データ ウェアハウスを Azure Synapse Analytics に移行するためのツールです。
+author: anshul82-ms
 ms.author: anrampal
 ms.topic: overview
 ms.date: 03/02/2021
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 monikerRange: =azure-sqldw-latest
 ms.custom: template-overview
-ms.openlocfilehash: d7289d2bfe099dad7bbc91ccd5060797f7aad997
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 5e3844f6e63fafca5137a646ff4c02edbc7105b8
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101873218"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102185925"
 ---
-# <a name="azure-synapse-pathway-preview"></a>Azure Synapse Pathway プレビュー
+# <a name="azure-synapse-pathway-preview-overview"></a>Azure Synapse Pathway プレビューの概要
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 お客様がデータ ウェアハウス システムの最新化を検討している間、直面する重要なブロックのいずれかで SQL コードが翻訳されます。 既存のコードは現在のシステム用に記述および最適化されていますが、移行先の新しいシステム用に最適化する必要があります。
@@ -32,7 +33,7 @@ ms.locfileid: "101873218"
 
 **Azure Synapse Pathway** は、既存のデータ ウェアハウスのコード翻訳を自動化することで、最新のデータ ウェアハウス プラットフォームにアップグレードするのに役立ちます。 これは無料の直感的で使いやすいツールであり、Azure Synapse Analytics へのより迅速な移行を可能にするコード翻訳を自動化するものです。
 
- ![Azure Synapse Pathway の概要。](./media/pathway-overview/synapse-pathway-overview.png) 
+ ![Azure Synapse Pathway の概要。](./media/azure-synapse-pathway-overview/pathway-overview.png) 
 
 Synapse Pathway により、データ定義言語 (DDL) およびデータ操作言語 (DML) ステートメントが、Azure Synapse SQL と互換性のある T-SQL 準拠言語に翻訳されます。
 
@@ -47,7 +48,7 @@ Synapse Pathway をインストールする場合は、[Azure Synapse Pathway �
 ## <a name="supported-sources"></a>サポートされているソース
 
 Azure Synapse Pathway では、次のソースのデータベース、スキーマ、テーブルのコード変換がサポートされています。
-- **IBM Netezza** 
+- **IBM Netezza**
 - **Microsoft SQL Server**
 - **Snowflake**
 
@@ -59,5 +60,3 @@ Azure Synapse Pathway の追加情報については、[FAQ ページ](pathway-f
 
 - [Azure Synapse Pathway で初めての翻訳を実行する](synapse-pathway-assessment.md)
 - お知らせブログ - [Azure Synapse Pathway の発表: データ ウェアハウスの移行を加速させる - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/announcing-azure-synapse-pathway-turbocharge-your-data-warehouse/ba-p/2176630)
-
-

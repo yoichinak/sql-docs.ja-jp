@@ -4,24 +4,24 @@ description: Azure Synapse Pathway でデータ ウェアハウスのコード�
 author: anshul82-ms
 ms.author: anrampal
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 ms.topic: tutorial
 ms.date: 03/02/2021
 monikerRange: =azure-sqldw-latest
 ms.custom: template-tutorial
-ms.openlocfilehash: b76fecf9a8a7eafc84a1b9eebd746287dddf3af9
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 74f98ad652a58f70cd75ef60556bf0464fd5d7c7
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101873109"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186360"
 ---
 # <a name="tutorial-to-perform-your-first-code-translation-with-azure-synapse-pathway-preview"></a>Azure Synapse Pathway プレビューで初めてのコード翻訳を実行するためのチュートリアル
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 Azure Synapse Pathway プレビューには、Azure Synapse Analytics への移行を自動化する T-SQL 準拠コードに、**Netezza**、**Snowflake**、**Microsoft SQL Server** からスキーマ、テーブル、ビュー、関数などを翻訳するためのサポートが導入されています。
 
-詳細については、「[Azure Synapse Pathway プレビューの概要](azure-synapse-pathway-overview)」を参照してください。
+詳細については、「[Azure Synapse Pathway プレビューの概要](azure-synapse-pathway-overview.md)」を参照してください。
 
 このチュートリアルでは、以下の内容を学習します。
 
@@ -45,17 +45,17 @@ Azure Synapse Pathway プレビューには、Azure Synapse Analytics への移�
     > 入力ソースとして指定できるのは、拡張子が .sql のファイルのみです。 ユーザーが .txt ファイルで DDL や DML スクリプトを指定すると、ツールで翻訳は実行されません。
 
 1. Netezza コードを Azure Synapse Analytics に翻訳する場合は、[翻訳の種類] ドロップ ダウンで [IBM Netezza] を選びます。
-  ![Azure Synapse 評価の入力。](./media/perform-assessment/assessment-input.png)
+  ![Azure Synapse 評価の入力。](./media/synapse-pathway-assessment/assessment-input.png)
 
 1. 出力ディレクトリを選択するには、[参照] を選択し、出力が生成される場所を指定します。
- ![Azure Synapse の出力ディレクトリ。](./media/perform-assessment/output-directory.png)
+ ![Azure Synapse の出力ディレクトリ。](./media/synapse-pathway-assessment/output-directory.png)
 
 1. **[翻訳]** を選択して翻訳を開始します
 
 ## <a name="view-results"></a>結果を表示する
 
 1. 評価の期間は、追加されたデータベースの数と各データベースのスキーマ サイズによって異なります。 各データベースの結果は利用可能になるとすぐに表示されます。
- ![Azure Synapse の評価レポート。](./media/perform-assessment/assessment-report.png)
+ ![Azure Synapse の評価レポート。](./media/synapse-pathway-assessment/assessment-report-rendering.png)
 
 1. [結果の表示] を選択すると、前の手順で指定された出力ディレクトリに移動し、入力ディレクトリ構造に基づく翻訳済みスクリプト ファイルが表示されます。
 

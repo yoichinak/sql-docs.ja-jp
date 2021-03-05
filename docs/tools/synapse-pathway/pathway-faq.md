@@ -6,17 +6,17 @@ ms.author: anrampal
 ms.topic: overview
 ms.date: 03/02/2021
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 monikerRange: =azure-sqldw-latest
 ms.custom: template-overview
-ms.openlocfilehash: 345346d2161800810ba3d07667b831107f70b215
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 8352fb6a70c54ede61d544a147f970237404c9f5
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101873075"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186333"
 ---
-# <a name="azure-synapse-pathway-preview"></a>Azure Synapse Pathway プレビュー
+# <a name="azure-synapse-pathway-preview-faq"></a>Azure Synapse Pathway プレビューに関する FAQ
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 このガイドでは、Azure Synapse Pathway Preview についてよく寄せられる質問を紹介します。
@@ -58,7 +58,9 @@ A. ローカル環境で Synapse Pathway を実行できるため、Microsoft �
 
 A. 現在、Azure Synapse Pathway は **プレビュー** 段階にあります。   Synapse Pathway のサポートは、Microsoft サポート チャネルを通じてご利用いただけます。 チケットは、Azure portal または Standard (通常はオンプレミスのサポート) ポータルで提出することができます。
 
-> [!NOTE] 他の Azure サービスと同様に、すべてのプレビュー サービスは、SLA が適用されないだけで、サポートの対象にはなります。
+
+> [!NOTE] 
+> 他の Azure サービスと同様に、すべてのプレビュー サービスは、SLA が適用されないだけで、サポートの対象にはなります。
 
 <!-- ### Troubleshooting and optimization
 

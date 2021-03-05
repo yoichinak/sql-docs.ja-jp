@@ -2,19 +2,19 @@
 title: バックグラウンドでの Azure Synapse Pathway プレビュー。
 description: Azure Synapse Pathway によるコードの翻訳方法に関する技術的な詳細。
 author: anshul82-ms
-ms.author: anrampal.
+ms.author: anrampal
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 ms.topic: conceptual
 ms.date: 03/02/2021
 monikerRange: =azure-sqldw-latest
 ms.custom: template-concept
-ms.openlocfilehash: dbd362e53b5bfcd916c53e90d6f66c8fb44f0374
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 9f23aa23ef40ee7df5ad601b73ad526df7bcf0da
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101873079"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186305"
 ---
 # <a name="azure-synapse-pathway-preview-behind-the-scenes"></a>バックグラウンドでの Azure Synapse Pathway プレビュー
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -23,7 +23,7 @@ Azure Synapse Pathway の目標は、Synapse SQL 用に最適化しながら元�
 
 各ステージでは、ソース固有のメタデータを含むソースの知識を維持して拡張することで、翻訳における最高品質を保証します。
 
- ![Azure Synapse Pathway。](./media/technical-deep-dive/behind-the-scene.png)
+ ![Azure Synapse Pathway。](./media/synapse-pathway-behind-the-scenes/behind-the-scene.png)
 
 ## <a name="stage-1--lexing-and-parsing"></a>ステージ 1 – 字句解析と構文解析
 
@@ -49,7 +49,7 @@ Azure Synapse SQL では、次のように絶対関数を定義します。
 ABS ( numeric_expression )  
 ```
 
-このシンプルなケースの場合、Synapse Pathway で、Synapse SQL での float から numeric への変換が暗黙的な[変換](../../t-sql/functions/cast-and-convert-transact-sql?view=azure-sqldw-latest#implicit-conversions)であることが認識され、それ以上の型キャストは必要ありません。 シンプルなクリーンで効果的なコード翻訳。
+このシンプルなケースの場合、Synapse Pathway で、Synapse SQL での float から numeric への変換が暗黙的な[変換](../../t-sql/functions/cast-and-convert-transact-sql.md?view=azure-sqldw-latest&preserve-view=true#implicit-conversions)であることが認識され、それ以上の型キャストは必要ありません。 シンプルなクリーンで効果的なコード翻訳。
 
 ソースのステートメントとフラグメントに関するこのメタ情報を維持することは、プラットフォーム間に構造的な違いがある場合に役立ちます。たとえば、WHERE 句の検索条件述語のオプトアウト ロジックでの変換などです。
 
