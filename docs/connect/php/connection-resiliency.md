@@ -1,7 +1,7 @@
 ---
 title: アイドル状態の接続の回復性
 description: アイドル状態の接続の回復性の概要と、Microsoft Drivers for PHP for SQL Server 内でのその動作について説明します。
-ms.date: 07/13/2017
+ms.date: 03/04/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4008dd4f023170b50bdf28f1f026da9ee892f970
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 07223e87c82a64fe17cd1b2969b5c93227c70af2
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726863"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247487"
 ---
 # <a name="idle-connection-resiliency"></a>アイドル状態の接続の回復性
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "91726863"
 |Keyword|値|Default|説明|
 |-|-|-|-|
 |**ConnectRetryCount**| 0 から 255 までの整数|1|中止するまでに、切断された接続の再確立を試みる最大回数。 既定では、接続が切断されると、接続の再確立が 1 回試みられます。 値 0 は、再接続が試みられないことを意味します。|
-|**ConnectRetryInterval**| 1 から 60 までの整数|1| 接続の再確立を試行する秒単位の時間間隔。 アプリケーションでは、接続途絶検出直後に再接続が試みられた後、**ConnectRetryInterval** 秒待ってから、再試行されます。 **ConnectRetryCount** が 0 の場合、このキーワードは無視されます。
+|**ConnectRetryInterval**| 1 から 60 までの整数|10| 接続の再確立を試行する秒単位の時間間隔。 アプリケーションでは、接続途絶検出直後に再接続が試みられた後、**ConnectRetryInterval** 秒待ってから、再試行されます。 **ConnectRetryCount** が 0 の場合、このキーワードは無視されます。
 
 **ConnectRetryCount** と **ConnectRetryInterval** を掛けた積が **LoginTimeout** より大きい場合、クライアントは **LoginTimeout** に達した時点で、接続の試みを停止します。そうしないと、**ConnectRetryCount** に達するまで再接続が試行され続けます。
 

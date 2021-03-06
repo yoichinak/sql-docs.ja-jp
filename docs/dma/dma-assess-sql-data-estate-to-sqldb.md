@@ -15,18 +15,20 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4c59fb5228ef46a693e343716d1e58e56c042a53
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1094f10eedc819123cd446c0933ec14df511ac75
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100061557"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247347"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server のデータ資産の準備状況を評価する
 
-1つのサービスとしてのプラットフォーム (PaaS) オファリングは、膨大な数の SQL Server インスタンスと数千のデータベースを Azure SQL Database に移行しています。 このプロセスを可能な限り合理化するには、移行に関する相対的な準備を十分に理解しておく必要があります。 完全に準備されているサーバーやデータベースや、移行の準備を行うために最小限の労力を必要とするサーバーやデータベースを含む、低負荷の果物を特定すると、作業が容易になり、加速します。
+数百台の SQL Server インスタンスと数千のデータベースを Azure SQL Database または Azure SQL Managed Instance に移行すると、サービスとしてのプラットフォーム (PaaS) オファリングがかなりの作業になります。 このプロセスを可能な限り合理化するには、移行に関する相対的な準備を十分に理解しておく必要があります。 完全に準備されているサーバーやデータベースや、移行の準備を行うために最小限の労力を必要とするサーバーやデータベースを含む、低負荷の果物を特定すると、作業が容易になり、加速します。
 
 この記事では、 [Data Migration Assistant](./dma-overview.md) を利用して準備結果を要約し、 [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) ハブに表示するための詳細な手順について説明します。
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -101,7 +103,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
     オンプレミスの SQL Server インスタンスを SQL Server の新しいバージョンまたは Azure VM でホストされている SQL Server にアップグレードする場合は、ソースとターゲットのサーバーの種類を **SQL Server** に設定します。 Azure SQL Database (PaaS) ターゲット準備の評価については、対象サーバーの種類を **AZURE SQL Managed Instance** に設定します。
 
-3. **［作成］** を選択します
+3. **[作成]** を選択します。
 
    ![Azure Migrate-Data Migration Assistant インターフェイス](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 

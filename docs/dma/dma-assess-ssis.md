@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a893ad7e086abfdf0cc61c785ad6d93c3eeed184
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: e32a7334ecef7531311ead57332f9b7e4d7f6322
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100061527"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247313"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server 統合サービスの移行評価を実行する
 
@@ -35,6 +35,8 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 ## <a name="performance-assessments"></a>パフォーマンス評価
 
 次の手順では、Data Migration Assistant を使用して SQL Server 統合サービス (SSIS) パッケージを Azure SQL Database または Azure SQL Managed Instance に移行するための最初の評価を実行する方法について説明します。
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## <a name="create-an-assessment"></a>評価を作成する
 

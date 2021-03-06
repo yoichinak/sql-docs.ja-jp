@@ -2,7 +2,7 @@
 title: 接続文字列キーワードの使用
 description: 一部の SQL Server Native Client Api では、接続文字列を使用して接続属性を指定します。 接続文字列は、キーワードと値のペアです。
 ms.custom: ''
-ms.date: 08/01/2016
+ms.date: 03/05/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: native-client
@@ -18,12 +18,12 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbe28b09c88f63e6e0a9a764fea3da17feb3d1f0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8abbefef4c13cf0006b80f24771a06cc067a6324
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463423"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247455"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>SQL Server Native Client での接続文字列キーワードの使用
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,10 +68,10 @@ ms.locfileid: "97463423"
 |**AttachDBFileName**|アタッチできるデータベースのプライマリ ファイルの名前。 この名前には完全なパス名を指定します。また C 文字列変数を使用する場合は、\ 文字をエスケープしてください。<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> このデータベースがアタッチされ、接続の既定のデータベースとして使用されます。 **AttachDBFileName** を使用するには、 [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)データベースパラメーターまたは SQL_COPT_CURRENT_CATALOG 接続属性でもデータベース名を指定する必要があります。 データベースが以前にアタッチされていた場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] により再アタッチされることはありません (アタッチされたデータベースがその接続の既定のデータベースとして使用されます)。|  
 |**AutoTranslate**|"yes" の場合、クライアントとサーバーの間で送受信される ANSI 文字列は、いったん Unicode に変換されます。これは、クライアントとサーバーのコード ページ間で拡張文字を照合するときに発生する問題を最小限に抑えるためです。<br /><br /> クライアント SQL_C_CHAR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **CHAR**、 **varchar**、または **text** 変数、パラメーター、または列に送信されるデータは、クライアントの ANSI コードページ (acp) を使用して文字から unicode に変換され、その後、サーバーの acp を使用して unicode から文字に変換されます。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント SQL_C_CHAR 変数に送信される **char**、 **varchar**、または **text** データは、サーバーの acp を使用して文字から unicode に変換され、その後、クライアントの acp を使用して unicode から文字に変換されます。<br /><br /> この変換は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーによってクライアントで行われます。 また、サーバーで使用しているものと同じ ACP (ANSI コード ページ) がクライアントでも使用可能になっている必要があります。<br /><br /> 次の設定は、送受信時の変換に影響しません。<br /><br /> \* サーバー上の **char** 型、 **varchar** 型、または **text** 型に送信される、Unicode SQL_C_WCHAR クライアントデータ。<br /><br /> クライアント上の Unicode SQL_C_WCHAR 変数に送信される **char**、 **varchar**、または **text** server のデータ &#42; ます。<br /><br /> \* ANSI SQL_C_CHAR サーバー上の Unicode **nchar**、 **nvarchar**、または **ntext** に送信されるクライアントデータ。<br /><br /> \* Unicode **nchar**、 **nvarchar**、または **ntext** サーバーのデータが、クライアントの ANSI SQL_C_CHAR 変数に送信されます。<br /><br /> "no" の場合、文字の変換は行われません。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、サーバー上の **CHAR**、 **varchar**、または **text** 変数、パラメーター、または列に送信される、クライアントの ANSI 文字 SQL_C_CHAR データを変換しません。 サーバーからクライアントの SQL_C_CHAR 変数に送信される **char**、 **varchar**、または **text** 型のデータに対しては、変換は実行されません。<br /><br /> クライアントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用する ACP が異なる場合、拡張文字の解釈が正しく行われない場合があります。|  
 |**[データベース]**|接続に使用する既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースの名前。 **データベース** が指定されていない場合は、ログイン用に定義された既定のデータベースが使用されます。 ODBC データ ソースの既定のデータベースは、ログインに定義されている既定のデータベースをオーバーライドします。 **AttachDBFileName** も指定しない限り、データベースは既存のデータベースである必要があります。 **AttachDBFileName** も指定した場合、参照先のプライマリファイルがアタッチされ、**データベース** によって指定されたデータベース名が割り当てられます。|  
-|**Driver**|[Sqldrivers](../../../relational-databases/native-client-odbc-api/sqldrivers.md)によって返されるドライバーの名前。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーに対するこのキーワードの値は "{SQL Server Native Client 11.0}" です。 **Driver** が指定され、 **drivercompletion** が SQL_DRIVER_NOPROMPT に設定されている場合は、 **Server** キーワードが必要です。<br /><br /> ドライバー名の詳細については、「 [SQL Server Native Client ヘッダーファイルとライブラリファイルの使用](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)」を参照してください。|  
+|**[ドライバー]**|[Sqldrivers](../../../relational-databases/native-client-odbc-api/sqldrivers.md)によって返されるドライバーの名前。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーに対するこのキーワードの値は "{SQL Server Native Client 11.0}" です。 **Driver** が指定され、 **drivercompletion** が SQL_DRIVER_NOPROMPT に設定されている場合は、 **Server** キーワードが必要です。<br /><br /> ドライバー名の詳細については、「 [SQL Server Native Client ヘッダーファイルとライブラリファイルの使用](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)」を参照してください。|  
 |**DSN**|既存の ODBC ユーザー データ ソースまたはシステム データ ソースの名前。 このキーワードは、 **サーバー**、 **ネットワーク**、および **アドレス** キーワードに指定されている可能性のあるすべての値を上書きします。|  
 |**Encrypt**|データをネットワークに送信する前に暗号化するかどうかを指定します。 有効値は、"yes" および "no" です。 既定値は "no" です。|  
-|**フォールバック**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、このキーワードは非推奨とされ、設定は無視されます。|  
+|**プライ**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、このキーワードは非推奨とされ、設定は無視されます。|  
 |**Failover_Partner**|プライマリ サーバーに接続できない場合に使用するフェールオーバー パートナー サーバーの名前。|  
 |**FailoverPartnerSPN**|フェールオーバー パートナーの SPN。 既定値は空の文字列です。 空の文字列の場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はドライバーが生成した SPN を既定値として使用します。|  
 |**FileDSN**|既存の ODBC ファイル データ ソースの名前。|  

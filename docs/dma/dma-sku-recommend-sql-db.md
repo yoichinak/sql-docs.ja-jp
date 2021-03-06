@@ -1,6 +1,6 @@
 ---
 title: オンプレミスデータベースの適切な Azure SQL Database SKU を特定します (Data Migration Assistant) |Microsoft Docs
-description: Data Migration Assistant を使用して、オンプレミスデータベースの適切な Azure SQL Database SKU を識別する方法について説明します。
+description: Data Migration Assistant を使用して、オンプレミスデータベースの適切な Azure SQL Database または Azure SQL Managed Instance SKU を識別する方法について説明します。
 ms.custom: ''
 ms.date: 05/06/2019
 ms.prod: sql
@@ -14,29 +14,23 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: ffb47ee457a03315821fee863816d725f9691ac3
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b29815876d804f387ce31754c960e80f9db99434
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100062587"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247171"
 ---
-# <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>オンプレミスデータベースの適切な Azure SQL Database/Managed Instance SKU を特定する
+# <a name="identify-the-right-azure-sql-database-or-sql-managed-instance-sku-for-your-on-premises-database"></a>オンプレミスデータベースの適切な Azure SQL Database または SQL Managed Instance SKU を特定する
 
-データベースをクラウドに移行することは、特にデータベースに最適な Azure データベースターゲットと SKU を選択する場合には複雑になることがあります。 データベース Migration Assistant (DMA) の目標は、これらの質問に対処し、ユーザーにわかりやすい出力でこれらの SKU の推奨事項を提供することで、データベースの移行を容易にすることです。
+データベースをクラウドに移行することは、特にデータベースに対して最適な Azure SQL Database または SQL Managed Instance ターゲットと SKU を選択する場合には複雑になることがあります。 データベース Migration Assistant (DMA) の目標は、これらの質問に対処し、ユーザーにわかりやすい出力でこれらの SKU の推奨事項を提供することで、データベースの移行を容易にすることです。
 
-この記事では、DMA の Azure SQL Database SKU に関する推奨事項について説明します。 Azure SQL Database と Azure SQL Managed Instance には、次のようないくつかのデプロイオプションがあります。
 
-- 単一データベース
-- エラスティック プール
-- マネージド インスタンス
-
-SKU の推奨事項機能を使用すると、データベースをホストしているコンピューターから収集されたパフォーマンスカウンターに基づいて、推奨される最小 Azure SQL Database 単一データベースまたは Azure SQL Managed Instance SKU の両方を識別できます。 この機能は、価格レベル、コンピューティングレベル、最大データサイズに関連する推奨事項と、1か月あたりの推定コストを提供します。 また、推奨されるすべてのデータベースに対して、単一データベースとマネージインスタンスを一括でプロビジョニングする機能も用意されています。
-
-> [!NOTE]
-> 現在、この機能は、コマンドラインインターフェイス (CLI) を介してのみ使用できます。
+SKU の推奨事項機能を使用すると、データベースをホストしているコンピューターから収集されたパフォーマンスカウンターに基づいて、推奨される最小 Azure SQL Database または Azure SQL Managed Instance SKU の両方を識別できます。 この機能は、価格レベル、コンピューティングレベル、最大データサイズに関連する推奨事項と、1か月あたりの推定コストを提供します。 また、推奨されるすべてのデータベースに対して、単一データベースとマネージインスタンスを一括でプロビジョニングする機能も用意されています。 現在、この機能は、コマンドラインインターフェイス (CLI) を介してのみ使用できます。
 
 次に、Azure で DMA を使用して、SKU の推奨事項を確認し、対応する単一データベースまたはマネージインスタンスをプロビジョニングする方法について説明します。
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -44,7 +38,7 @@ SKU の推奨事項機能を使用すると、データベースをホストし�
 - すべてのスクリプトを実行するために必要な [PowerShell バージョン 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 以降がコンピューターにインストールされていることを確認します。 コンピューターにインストールされている PowerShell のバージョンを確認する方法については、「 [Windows powershell 5.1 をダウンロードしてインストール](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)する」を参照してください。
   > [!NOTE]
   > データ収集スクリプトでは、コンピューター情報を収集するために、PowerShell 6 で非推奨とされた Get-WmiObject コマンドレットを使用します。 このスクリプトを PowerShell 6 または7で実行するには、WMI コマンドレットを新しい CIM コマンドレットで置き換える必要があります。
-- コンピューターに Azure Powershell モジュールがインストールされていることを確認します。 詳細については、「 [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true)」を参照してください。
+- コンピューターに Azure PowerShell モジュールがインストールされていることを確認します。 詳細については、「 [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true)」を参照してください。
 - パフォーマンスカウンターを収集するために必要な PowerShell ファイル **SkuRecommendationDataCollectionScript.ps1** が、DMA フォルダーにインストールされていることを確認します。
 - このプロセスを実行するコンピューターに、データベースをホストしているコンピューターに対する管理者権限があることを確認します。
 
@@ -252,6 +246,6 @@ HTML ファイルには、この情報がグラフィック形式で含まれて
     > [!NOTE]
     > サブネット (特に初めて) でマネージインスタンスを作成するには、完了までに数時間かかることがあります。 PowerShell を使用してプロビジョニングスクリプトを実行した後、Azure Portal でデプロイの状態を確認できます。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 - CLI から DMA を実行するためのコマンドの完全な一覧については、「 [コマンドラインから Data Migration Assistant を実行](./dma-commandline.md)する」を参照してください。

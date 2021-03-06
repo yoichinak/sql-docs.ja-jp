@@ -15,19 +15,20 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c88a289e21e7cd70980763474e82b7dd6cbd49c2
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 300d88b66c2105235ab04ff616d9fcf81b24e944
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489519"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247335"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用した SQL Server 移行評価の実行
 
 次の手順に従って、オンプレミスの SQL Server に移行するための最初の評価、Azure VM での SQL Server 実行、または Data Migration Assistant を使用した Azure SQL Database を行うことができます。
 
-   > [!NOTE]
-   > Data Migration Assistant v1.0 では、アプリケーションコードでデータベース接続と埋め込み SQL クエリを分析するためのサポートが導入されています。 詳細については、 [Data Migration Assistant を使用したアプリケーションのデータアクセス層の評価に](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)関するブログ記事を参照してください。
+Data Migration Assistant v1.0 では、アプリケーションコードでデータベース接続と埋め込み SQL クエリを分析するためのサポートが導入されています。 詳細については、 [Data Migration Assistant を使用したアプリケーションのデータアクセス層の評価に](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)関するブログ記事を参照してください。
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## <a name="create-an-assessment"></a>評価を作成する
 
@@ -37,7 +38,7 @@ ms.locfileid: "97489519"
 
     オンプレミスの SQL Server インスタンスを最新のオンプレミスの SQL Server インスタンスにアップグレードする場合、または Azure VM でホストされている SQL Server にアップグレードする場合は、ソースとターゲットのサーバーの種類を **SQL Server** に設定します。 Azure SQL Database に移行している場合は、代わりに対象サーバーの種類を **Azure SQL Database** に設定します。
 
-3. **[作成]** をクリックします。
+3. **Create** をクリックしてください。
 
    ![評価を作成する](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
@@ -119,7 +120,7 @@ ms.locfileid: "97489519"
 
 ## <a name="view-results"></a>結果の表示
 
-評価期間は、追加されたデータベースの数と各データベースのスキーマサイズによって異なります。 結果は、データベースが使用可能になるとすぐに表示されます。
+評価の期間は、追加されたデータベースの数と各データベースのスキーマ サイズによって異なります。 各データベースの結果は利用可能になるとすぐに表示されます。
 
 1. 評価が完了したデータベースを選択し、スイッチャーを使用して **互換性の問題** と **機能に関する推奨事項** を切り替えます。
 
