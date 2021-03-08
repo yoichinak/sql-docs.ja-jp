@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4f53290d9b9a1ecd161ef02161f29c172297a93f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4e918602b3793d95d6192a832f110500454ee8a5
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727420"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837375"
 ---
 # <a name="using-integrated-authentication"></a>統合認証を使用する
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -107,7 +107,7 @@ DSN と接続するときに、`odbc.ini` の DSN エントリに **Trusted_Conn
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Active Directory を使用して Linux または macOS コンピューターを認証する
 
-Kerberos を構成するには、`krb5.conf` ファイルにデータを入力します。 `krb5.conf` は `/etc/` にありますが、`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf` などの構文を使用して別のファイルを参照することもできます。 `krb5.conf` ファイルの例を以下に示します。  
+<a name="configure-kerberos"></a>Kerberos を構成するには、`krb5.conf` ファイルにデータを入力します。 `krb5.conf` は `/etc/` にありますが、`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf` などの構文を使用して別のファイルを参照することもできます。 `krb5.conf` ファイルの例を以下に示します。  
   
 ```  
 [libdefaults]  

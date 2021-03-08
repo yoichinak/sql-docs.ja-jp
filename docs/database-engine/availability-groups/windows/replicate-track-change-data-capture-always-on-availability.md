@@ -2,7 +2,7 @@
 title: レプリケーション、変更の追跡、変更データ キャプチャ、および可用性グループ
 description: SQL Server Always On 可用性グループで使用する場合の、レプリケーション、変更の追跡、および変更データ キャプチャの相互運用性について説明します。
 ms.custom: seo-lt-2019
-ms.date: 08/21/2018
+ms.date: 02/23/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: availability-groups
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f82db97e9b818ecca6682cf6778850dab8a238c1
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1ee6a097a60930064ee23389d1d54e965336e3d7
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100344554"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837697"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>レプリケーション、変更の追跡、変更データ キャプチャ - Always On 可用性グループ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "100344554"
     ```  
   
     > [!NOTE]  
-    >  フェールオーバーの前にすべてのフェールオーバー ターゲット候補でジョブを作成し、ホストの可用性レプリカが新しいプライマリ レプリカになるまで無効としてマークしておく必要があります。 ローカル データベースがセカンダリ データベースになったときに、古いプライマリ データベースで実行されている CDC ジョブも無効にする必要があります。 ジョブを無効/有効にするには、[sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) の *\@enabled* オプションを使用します。 CDC ジョブの作成の詳細については、「 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。  
+    >  フェールオーバー後に、新しいプライマリ レプリカでジョブを作成する必要があります。 ローカル データベースがセカンダリ データベースになったら、古いプライマリ データベースで実行されている CDC ジョブを無効にする必要があります。 この後、レプリカが再びプライマリになった場合は、レプリカで CDC ジョブを再度有効にする必要があります。 ジョブを無効/有効にするには、[sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) の *\@enabled* オプションを使用します。 CDC ジョブの作成の詳細については、「 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。  
   
 -   **Always On プライマリ データベース レプリカへの CDC ロールの追加**  
   
@@ -207,10 +207,10 @@ Always On 可用性グループに含まれるデータベースで変更デー�
   
 |レプリケーション|Publisher|ディストリビューター|サブスクライバー (Subscriber)|  
 |-|-|-|-|  
-|**トランザクション**|はい<br /><br /> 注:双方向の相互トランザクション レプリケーションのサポートは含まれません。|はい|○| 
+|**トランザクション**|はい<br /><br /> 注:双方向の相互トランザクション レプリケーションのサポートは含まれません。|はい|はい| 
 |**P2P**|いいえ|いいえ|いいえ|  
-|**[マージ]**|○|いいえ|いいえ|  
-|**スナップショット**|○|いいえ|[はい]|
+|**[マージ]**|はい|いいえ|いいえ|  
+|**スナップショット**|はい|いいえ|はい|
   
  **データベース ミラーリングでディストリビューター データベースを使用することはできません。  
   

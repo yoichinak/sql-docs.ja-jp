@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016'
-ms.openlocfilehash: 0734f0a8163486ab46ef8143966a24adee35194d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: c1957724f028283c2e3aa6377604726f0c307add
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100079423"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838051"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -207,7 +207,7 @@ PolyBase は HDFS へのアクセスを試行しますが、必要なサービ�
 | javax.security.auth.login.LoginException<br> Checksum failed |管理者のサービス プリンシパルは存在しますが、パスワードが正しくありません。 |
 | ネイティブの構成名: C:\Windows\krb5.ini<br>Loaded from native config | このメッセージは、Java の krb5LoginModule でコンピューター上にカスタム クライアント構成が検出されたことを示しています。 カスタム クライアント設定が問題の原因である可能性があります。設定を確認してください。 |
 | javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Illegal principal name admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule:No rules applied to admin_user@CONTOSO.COM | Hadoop クラスターごとに適切なルールを指定して、プロパティ "hadoop.security.auth_to_local" を core-site.xml に追加します。 |
-| java.net.ConnectException<br>Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception | KDC に対する認証は成功しましたが、Hadoop 名前ノードにアクセスできませんでした。 名前ノードの IP とポートを確認してください。 Hadoop 上のファイアウォールが無効になっていることを確認します。 |
+| java.net.ConnectException<br>Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception |    KDC に対する認証は成功しましたが、Hadoop 名前ノードにアクセスできませんでした。 名前ノードの IP とポートを確認してください。 Hadoop 上のファイアウォールが無効になっていることを確認します。 |
 | java.io.FileNotFoundException<br>File does not exist: /test/data.csv |    認証は成功しましたが、指定された場所が存在しません。 パスを確認するか、まずルート "/" でテストしてください。 |
 
 ## <a name="debugging-tips"></a>デバッグのヒント
@@ -256,4 +256,5 @@ Kerberos へのアクセス時に引き続き問題が発生する場合は、�
 [Active Directory 認証を使用した PolyBase と Cloudera の統合](/archive/blogs/microsoftrservertigerteam/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [CDH 用に Kerberos を設定するための Cloudera のガイド](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [HDP 用に Kerberos を設定するための Hortonworks のガイド](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
-[PolyBase のトラブルシューティング](polybase-troubleshooting.md)
+[PolyBase のトラブルシューティング](polybase-troubleshooting.md)   
+[PolyBase のエラーと考えられる解決策](polybase-errors-and-possible-solutions.md)   

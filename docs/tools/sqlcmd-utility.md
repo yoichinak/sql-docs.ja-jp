@@ -26,14 +26,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 09/11/2020
+ms.date: 02/24/2021
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: be528466cb44e5c72413b0494dfe5416dd29783e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1b7d902064ef7a083b706af08730e91319be312f
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100338593"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836840"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd ユーティリティ
 
@@ -179,8 +179,8 @@ sqlcmd
 このスイッチは、SQL Database または Azure Synapse Analytics に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDUSEAAD = true が設定されます。 -G スイッチには、 **sqlcmd** バージョン [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。 詳細については、[Azure Active Directory 認証を使用した SQL Database または Azure Synapse Analytics への接続](/azure/azure-sql/database/authentication-aad-overview)に関する記事を参照してください。 -A オプションは -G オプションではサポートされていません。
 
 > [!IMPORTANT]
-> `-G` オプションは、Azure SQL Database と Azure Data Warehouse にのみ適用されます。
-> 現在、AAD 対話型認証は、Linux または macOS 上でサポートされていません。 AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) バージョン 17.6.1 以降と、適切に構成された Kerberos 環境が必要です。
+> `-G` オプションは、Azure SQL Database と Azure Synapse Analytics にのみ適用されます。
+> 現在、AAD 対話型認証は、Linux または macOS 上でサポートされていません。 AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) バージョン 17.6.1 以降と、適切に[構成された Kerberos 環境](../connect/odbc/linux-mac/using-integrated-authentication#configure-kerberos)が必要です。
 
 - **Azure Active Directory のユーザー名とパスワード:** 
 
@@ -199,7 +199,7 @@ sqlcmd
 - **Azure Active Directory 統合**
 
    Azure Active Directory 統合認証の場合、ユーザー名とパスワードなしで **-G** オプションを指定します。
-   "*現在、AAD 統合認証は、Linux または macOS 上でサポートされていません*"。
+   *AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) バージョン 17.6.1 以降と、適切に[構成された Kerberos 環境](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos)が必要です。*
 
     ```cmd
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G

@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a6fd7131b63741a82c120e1e0b222405865a9d
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 505cda4f226945cd8788e777b8ac1ea35a3aa47e
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237179"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837729"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -210,7 +210,10 @@ OUTPUT 句
  値リスト内の値がテーブル内の列と同じ順序で並んでいない場合、またはテーブル内のすべての列に対応していない場合、*column_list* を使用して、各入力値を格納する列を明示的に指定する必要があります。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 行コンストラクター (テーブル値コンストラクターとも呼ばれる) を使用すると、単一の INSERT ステートメント内に複数の行を指定できます。 行コンストラクターは、かっこで囲まれ、コンマで区切られた複数の値リストを含む単一の VALUES 句で構成されています。 詳細については、「[テーブル値コンストラクター &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)」を参照してください。  
-  
+
+> [!NOTE]  
+> Azure Synapse Analytics で挿入できる値は、定数リテラル値または変数参照のみです。 リテラル以外を挿入するには、変数を非定数値に設定して、変数を挿入します。
+
  DEFAULT  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]によって、列に対して定義されている既定値が読み込まれます。 既定値がなく、列に対して NULL が許可されている場合は、NULL が挿入されます。 **timestamp** 型が定義されている列には、次のタイムスタンプ値が挿入されます。 DEFAULT は ID 列には有効ではありません。  
   
@@ -408,7 +411,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 ## <a name="logging-behavior"></a>ログ記録の動作  
  INSERT ステートメントは、常に完全にログに記録されます。ただし、BULK キーワードを指定して OPENROWSET 関数を使用している場合、または `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` を使用している場合は除きます。 これらの操作のログへの記録は最小限にできます。 詳細については、前の「データの一括読み込みの推奨事項」を参照してください。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  リンク サーバーに接続する場合、送信側サーバーは受信側サーバーに接続するためにログイン名とパスワードをリンク サーバーに代わって提供します。 この接続を機能させるには、[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) を使用して、リンク サーバー間でログイン マッピングを作成する必要があります。  
   
  OPENROWSET(BULK...) を使用するにあたっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で権限借用がどのように処理されるかを理解しておくことが重要です。 詳しくは、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」の「セキュリティに関する考慮事項」をご覧ください。  

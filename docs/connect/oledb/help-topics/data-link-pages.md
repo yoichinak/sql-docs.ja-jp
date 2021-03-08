@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: 52089c92af76611fe8ab60b53dc7cf2848fb31c5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e3a7367daa776da3641c1b9a506f8f8335ce05d9
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99195308"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837491"
 ---
 # <a name="universal-data-link-udl-configuration"></a>ユニバーサル データ リンク (UDL) の構成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ Microsoft OLE DB Driver for SQL Server を使用してデータに接続する�
 |オプション|説明|
 |---   |---        |
 |[サーバー名の選択または入力]|ドロップダウン リストからサーバー名を選択するか、アクセスするデータベースが格納されているサーバーの場所を入力します。 サーバー上のデータベースを選択するのは別の操作です。 一覧を更新するには、"更新" をクリックします。
-|Enter information to sign in to the server (サーバーにサインインするための情報の入力)|このドロップダウン リストから、次の認証オプションを選択できます。 <ul><li>`Windows Authentication:` 現在ログインしているユーザーの Windows アカウントの資格情報を使用した SQL Server に対する認証。</li><li>`SQL Server Authentication:` ログイン ID とパスワードを使用した認証。</li><li>`Active Directory - Integrated:` Azure Active Directory の ID による統合認証。 このモードは、SQL Server に対する Windows 認証でも使用できます。</li><li>`Active Directory - Password:` Azure Active Directory の ID によるユーザー ID とパスワードの認証。</li><li>`Active Directory - Universal with MFA support:` Azure Active Directory の ID による対話型認証。 このモードでは、Azure Multi-Factor Authentication (MFA) がサポートされます。</li><li>`Active Directory - Service Principal:` Azure Active Directory サービス プリンシパルを使用した認証。 **ユーザー名** はアプリケーション (クライアント) ID に設定する必要があります。 **パスワード** はアプリケーション (クライアント) シークレットに設定する必要があります。</li></ul>|
+|Enter information to sign in to the server (サーバーにサインインするための情報の入力)|このドロップダウン リストから、次の認証オプションを選択できます。 <ul><li>`Windows Authentication:` 現在ログインしているユーザーの Windows アカウントの資格情報を使用した SQL Server に対する認証。</li><li>`SQL Server Authentication:` ログイン ID とパスワードを使用した認証。</li><li>`Active Directory - Integrated:` Azure Active Directory の ID による統合認証。 このモードは、SQL Server に対する Windows 認証でも使用できます。</li><li>`Active Directory - Password:` Azure Active Directory の ID によるユーザー ID とパスワードの認証。</li><li>`Active Directory - Universal with MFA support:` Azure Active Directory の ID による対話型認証。 このモードを使用すると、Azure Active Directory Multi-Factor Authentication (MFA) がサポートされます。</li><li>`Active Directory - Service Principal:` Azure Active Directory サービス プリンシパルを使用した認証。 **ユーザー名** はアプリケーション (クライアント) ID に設定する必要があります。 **パスワード** はアプリケーション (クライアント) シークレットに設定する必要があります。</li></ul>|
 |サーバー SPN|セキュリティ接続を使用する場合、サーバーのサービス プリンシパル名 (SPN) を指定できます。|
 |ユーザー名|データ ソースにサインインするときに認証に使用するユーザー ID を入力します。|
 |Password|データ ソースにサインインするときに認証に使用するパスワードを入力します。|

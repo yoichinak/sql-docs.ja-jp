@@ -14,12 +14,12 @@ ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea1d2300b2ff2431d58b8fb2d6139ecad130a965
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 074033472f37787c0bcf1da6f261a5f835f0cbec
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97432418"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838980"
 ---
 # <a name="sql-injection"></a>SQL インジェクション
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -93,8 +93,8 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |入力文字|Transact-SQL での意味|  
 |---------------------|------------------------------|  
 |**;**|クエリの区切り記号。|  
-|**'** の基本構成の更新を依頼してください。|文字データ文字列の区切り記号。|  
-|**--**|文字データ文字列の区切り記号。<br />。|  
+|**'**|文字データ文字列の区切り記号。|  
+|**--**|単一行コメントの区切り記号。 **--** 以降、その行の末尾までのテキストは、サーバーによって評価されません。|  
 |**/\**_ ... _*\*/**|コメントの区切り記号。 **/\**と*\*/** の間にあるテキストについては、サーバーによる評価は行われません。|  
 |**xp_**|`xp_cmdshell`など、カタログ拡張ストアド プロシージャ名の先頭に使用します。|  
   

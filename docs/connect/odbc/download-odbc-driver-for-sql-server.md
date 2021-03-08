@@ -10,18 +10,21 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 29f67c57bb6609d037d6e7077a91e5c7229e93fb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 778d8f2f53ba56436047eee53d17dd827c58f3eb
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99195313"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837579"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server のダウンロード
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Microsoft ODBC Driver for SQL Server は、ネイティブ コード API を使用して SQL Server に接続するアプリケーション用のランタイム サポートが含まれる単一のダイナミックリンク ライブラリ (DLL) です。 Microsoft ODBC Driver 17 for SQL Server は、新しいアプリケーションを作成したり、SQL Server の新機能を利用する必要のある既存のアプリケーションを拡張したりする場合に使用します。
+
+> [!Important]
+> Microsoft ODBC Driver for SQL Server で Azure Active Directory マネージ ID (`authentication=ActiveDirectoryMSI`) 認証を使用する場合は、バージョン 17.7 にアップグレードしないでください。 17.7 には、その認証モードを使用するとエラーが発生する問題があります。
 
 ## <a name="download-for-windows"></a>Windows 用のダウンロード
 

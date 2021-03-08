@@ -2,7 +2,7 @@
 title: bcp による接続
 description: Linux と macOS の Microsoft ODBC Driver for SQL Server で bcp ユーティリティを使用する方法について説明します。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/24/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b66ebab16bc26beec9ef9cd8699f53e75d36d478
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f8bff2d5d9892d709885d0888e36ca042aa72242
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727439"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837398"
 ---
 # <a name="connecting-with-bcp"></a>bcp による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,7 +74,14 @@ ID 列に、インポートされたデータ ファイルの ID 値を使用し
   
 - -F *first_row*  
 テーブルからエクスポートする最初の行、またはデータ ファイルからインポートする最初の行の番号を指定します。  
-  
+
+- -G  
+このスイッチは、Azure SQL Database または Azure Synapse Analytics に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチを使用するには、bcp バージョン 17.6 以降が必要です。 バージョンを判断するには、bcp -v を実行します。
+
+> [!IMPORTANT]
+> `-G` オプションは、Azure SQL Database と Azure Synapse Analytics にのみ適用されます。
+> 現在、AAD 対話型認証は、Linux または macOS 上でサポートされていません。 AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) バージョン 17.6.1 以降と、適切に[構成された Kerberos 環境](using-integrated-authentication.md#configure-kerberos)が必要です。
+
 - -k  
 一括コピー操作時、空の列には、挿入される列の既定値ではなく、NULL 値が保持されます。  
   

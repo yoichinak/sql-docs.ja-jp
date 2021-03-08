@@ -2,7 +2,7 @@
 title: sqlcmd による接続
 description: Linux と macOS の Microsoft ODBC Driver for SQL Server で sqlcmd ユーティリティを使用する方法について説明します。
 ms.custom: ''
-ms.date: 06/22/2020
+ms.date: 02/24/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5d69f1a19e0494b7426eebbac7d8732794f90be8
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 216f78615ca049d3e97134cb14831d9a5e6afd32
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987908"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837363"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,6 +57,12 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] 入力と出力のコード ページを指定します。 コード ページ番号は、インストールされた Linux コード ページを指定する数値です。
 (17.5.1.1 以降で利用可能)
 
+- -G このスイッチは、SQL Database または Azure Synapse Analytics に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 このオプションにより、 sqlcmd スクリプト変数 SQLCMDUSEAAD = true が設定されます。 -G スイッチには、sqlcmd バージョン 17.6 以上が必要です。 バージョンを確認するには、sqlcmd -? を実行します。
+
+> [!IMPORTANT]
+> `-G` オプションは、Azure SQL Database と Azure Synapse Analytics にのみ適用されます。
+> 現在、AAD 対話型認証は、Linux または macOS 上でサポートされていません。 AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) バージョン 17.6.1 以降と、適切に[構成された Kerberos 環境](using-integrated-authentication.md#configure-kerberos)が必要です。
+
 - -h *number_of_rows*  列ヘッダーの間に出力する行数を指定します。  
   
 - -H ワークステーション名を指定します。  
@@ -68,10 +74,10 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -k  制御文字を削除するか、置き換えます。  
   
 - **-K**_application\_intent_  
-アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、`sqlcmd` では AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、[Linux と macOS の ODBC ドライバー - 高可用性とディザスター リカバリー](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)に関するページをご覧ください。  
+アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly** だけです。 **-K** を指定しない場合、`sqlcmd` では AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、[Linux と macOS の ODBC ドライバー - 高可用性とディザスター リカバリー](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)に関するページをご覧ください。  
   
 > [!NOTE]  
-> **-K** は、CTP for SUSE Linux ではサポートされていません。 ただし、**に渡される DSN ファイルで**ApplicationIntent=ReadOnly`sqlcmd` キーワードを指定できます。 詳細については、このトピックの最後の「`sqlcmd` および `bcp` の DSN サポート」を参照してください。  
+> **-K** は、CTP for SUSE Linux ではサポートされていません。 ただし、**に渡される DSN ファイルで** ApplicationIntent=ReadOnly`sqlcmd` キーワードを指定できます。 詳細については、このトピックの最後の「`sqlcmd` および `bcp` の DSN サポート」を参照してください。  
   
 - -l *timeout* サーバーへの接続の試行時に、`sqlcmd` のログインがタイムアウトするまでの秒数を指定します。
 
@@ -123,6 +129,10 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -y *variable_length_type_display_width* `sqlcmd` スクリプト変数 `SQLCMDMAXFIXEDTYPEWIDTH` を設定します。
   
 - -Y *fixed_length_type_display_width* `sqlcmd` スクリプト変数 `SQLCMDMAXVARTYPEWIDTH` を設定します。
+
+- -z *password* パスワードを変更します。  
+  
+- -Z *password* パスワードを変更して終了します。  
 
 
 ## <a name="available-commands"></a>使用可能なコマンド
@@ -195,10 +205,6 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
     sqlcmd -S<...> -P<..> -U<..> -I c.sql  
 ```
 
-- -z *password* パスワードを変更します。  
-  
-- -Z *password* パスワードを変更して終了します。  
-
 ## <a name="unavailable-commands"></a>利用できないコマンド
 
 現在のリリースでは、次のコマンドは利用できません。  
@@ -221,7 +227,7 @@ Windows システムでは、システム DNS とユーザー DNS はレジス�
 
 DSN では、DRIVER エントリのみが必要ですが、リモート サーバーに接続するには、`sqlcmd` または `bcp` が SERVER 要素内に値を必要とします。 SERVER 要素が空であるか、DSN に存在しない場合は、`sqlcmd` と `bcp` によって、ローカルシステム上の既定のインスタンスへの接続が試行されます。
 
-Windows システムで bcp を使用する場合、[!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] 以前では、SQL Native Client 11 ドライバー (sqlncli11.dll) が必要であり、[!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 以降では、Microsoft ODBC Driver 17 for SQL Server ドライバー (msodbcsql17.dll) が必要です。  
+Windows システムで bcp を使用する場合、[!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] 以前では、SQL Native Client 11 ドライバー (sqlncli11.dll) が必要であり、[!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] 以降では、Microsoft ODBC Driver 17 for SQL Server ドライバー (msodbcsql17.dll) が必要です。  
 
 DSN と `sqlcmd` または `bcp` コマンド ラインの両方で同じオプションが指定されている場合は、コマンドライン オプションが、DSN で使用される値をオーバーライドします。 たとえば、DSN に DATABASE エントリがあり、`sqlcmd` コマンドラインに **-d** が含まれる場合、 **-d** に渡される値が使用されます。 DSN で **Trusted_Connection=yes** が指定されている場合は、Kerberos 認証が使用され、ユーザー名 ( **-U**) とパスワード ( **-P**) は無視されます (指定されている場合)。
 

@@ -5,16 +5,16 @@ description: Active Directory ドメインで SQL Server ビッグ データ ク
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 02/11/2021
+ms.date: 02/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 799afc246b106c4b49d6aba44f8d26a761d6c2cc
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 9417444a1c9d28181529ace79b6dcff6162b7f2d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343961"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837035"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Active Directory モードで SQL Server ビッグ データ クラスターを展開する
 
@@ -27,6 +27,21 @@ AD 統合で BDC を展開するためには、AD で BDC 関連のオブジェ�
 `kubeadm-prod` プロファイル (または CU5 リリース以降の `openshift-prod`) を利用することで、AD 統合に必要なセキュリティ関連の情報とエンドポイント関連の情報のプレースホルダーが自動的に作成されます。
 
 さらに、AD で必要なオブジェクトを作成するために [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] で使用される資格情報を提供する必要があります。 これらの資格情報は環境変数として提供されます。
+
+### <a name="traffic-and-ports"></a>トラフィックとポート
+
+ファイアウォールまたはサードパーティのアプリケーションによって、Active Directory の通信に必要なポートが許可されていることを確認します。 
+
+![ビッグ データ クラスターと Active Directory の間のトラフィック図。 コントローラー、セキュリティ サポート サービス、その他のクラスター サービスは、LDAP と Kerberos を使用してドメイン コントローラーと通信します。 BDC DNS プロキシ サービスは、DNS を使用して DNS サーバーと通信します。](media/big-data-cluster-overview/big-data-cluster-active-directory-dns-traffic-ports.png)
+
+Active Directory ドメインへの要求は、Kubernetes クラスター サービスとのやり取りに使用されるこれらのプロトコルで行われるため、TCP と UDP の両方に必要なポートをリッスンしているファイアウォールまたはサードパーティのアプリケーションで、受信と送信が許可されている必要があります。 Active Directory で使用される標準のポート番号は次のとおりです。
+
+| サービス | Port |
+|:---|:---|
+| DNS | 53 |
+| LDAP <BR> LDAPS | 389<BR> 636 |
+| Kerberos | 88 |
+| グローバル カタログ ポート <BR>LDAP 経由<BR>LDAPS 経由 |<BR> 3268 <BR> 3269 |
 
 ## <a name="set-security-environment-variables"></a>セキュリティ環境変数の設定
 
@@ -45,21 +60,21 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 
 - `security.activeDirectory.ouDistinguishedName`: クラスターにより作成されたあらゆる AD アカウントが追加される組織単位 (OU) の識別名。 ドメインの名前が `contoso.local` の場合、OU の識別名は `OU=BDC,DC=contoso,DC=local` です。
 
-- `security.activeDirectory.dnsIpAddresses`: ドメインの DNS サーバーの IP アドレスの一覧が含まれます。 
+- `security.activeDirectory.dnsIpAddresses`: ドメインの DNS サーバーの IP アドレスのリストが含まれます。 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`:ドメイン コントローラーの FQDN の一覧。 FQDN には、ドメイン コントローラーのコンピューター名またはホスト名が含まれています。 複数のドメイン コントローラーがある場合、ここで一覧を指定できます。 例: `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
   > 複数のドメイン コントローラーがドメインにサービスを提供している場合は、セキュリティ構成の `domainControllerFullyQualifiedDns` 一覧の最初のエントリとして、プライマリ ドメインコントローラー (PDC) を使用します。PDC 名を取得するには、コマンド プロンプトで「`netdom query fsmo`」と入力し、**Enter** キーを押します。
 
-- `security.activeDirectory.realm` **省略可能なパラメーター**: ほとんどの場合、領域はドメイン名と同じです。 同じでない場合、このパラメーターを使用し、領域の名前を定義します (例: `CONTOSO.LOCAL`)。 このパラメーターに指定する値は、完全修飾されている必要があります。
+- `security.activeDirectory.realm` **省略可能なパラメーター**: ほとんどの場合、領域はドメイン名と同じです。 同じでない場合は、このパラメーターを使用して、領域の名前を定義します (例: `CONTOSO.LOCAL`)。 このパラメーターに指定する値は、完全修飾されている必要があります。
 
-- `security.activeDirectory.netbiosDomainName` **省略可能なパラメーター**: これは、AD ドメインの NETBIOS 名です。 ほとんどの場合、これは AD ドメイン名の最初のラベルになります。 異なる場合は、このパラメーターを使用して NETBIOS ドメイン名を定義します。 この値にドットを含めることはできません。 通常、この名前は、ドメイン内のユーザー アカウントを修飾するために使用されます。 例: CONTOSO\user。CONTOSO は NETBIOS ドメイン名です。
+- `security.activeDirectory.netbiosDomainName` **省略可能なパラメーター**: これは、AD ドメインの NETBIOS 名です。 ほとんどの場合、これは AD ドメイン名の最初のラベルになります。 異なる場合は、このパラメーターを使用して NETBIOS ドメイン名を定義します。 この値にドットを含めることはできません。 通常、この名前は、ドメイン内のユーザー アカウントを修飾するために使用されます。 たとえば、CONTOSO\user では、CONTOSO が NETBIOS ドメイン名です。
 
   > [!NOTE]
   > *security.activeDirectory.netbiosDomainName* を使用している Active Directory ドメインの **NETBIOS** 名と Active Directory ドメイン名が異なる場合の構成のサポートは、SQL Server 2019 CU9 以降で有効になっています。
 
-- `security.activeDirectory.domainDnsName`:クラスターに使用される DNS ドメインの名前 (例: `contoso.local`)。
+- `security.activeDirectory.domainDnsName`: クラスターに使用される DNS ドメインの名前 (例: `contoso.local`)。
 
 - `security.activeDirectory.clusterAdmins`:このパラメーターは、1 つの AD グループを受け取ります。 AD グループのスコープは、ユニバーサルまたはグローバルである必要があります。 このグループのメンバーには、クラスターの管理者アクセス許可を付与する `bdcAdmin` クラスター ロールが割り当てられます。 これは、[SQL Server で `sysadmin` アクセス許可](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles)、[HDFS で `superuser` アクセス許可](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User)、コントローラー エンドポイントに接続したときに管理者アクセス許可が与えられることを意味します。
 
@@ -70,7 +85,7 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 
 この一覧の AD グループは、`bdcUser` ビッグデータ クラスター ロールにマップされており、SQL Server ([SQL Server アクセス許可](../relational-databases/security/permissions-hierarchy-database-engine.md)を参照) または HDFS ([HDFS アクセス許可ガイド](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)を参照) へのアクセスが許可される必要があります。 コントローラー エンドポイントに接続されている場合、これらのユーザーは `azdata bdc endpoint list` コマンドを使用して、クラスターで使用可能なエンドポイントのみを一覧表示できます。
 
-この設定の AD グループを更新する方法の詳細については、「[Active Directory モードでビッグ データ クラスター アクセスを管理する](manage-user-access.md)」を参照してください。
+これらの設定の AD グループを更新する方法の詳細については、「[Active Directory モードでビッグ データ クラスター アクセスを管理する](manage-user-access.md)」を参照してください。
 
   >[!TIP]
   >HDFS に接続するために必要な Knox ゲートウェイ エンドポイントを取得するために、Azure Data Studio では `sys.dm_cluster_endpoints` DMV を使用しています。そのため、Azure Data Studio で SQL Server マスターに接続したときの HDFS ブラウジング エクスペリエンスを有効にするには、bdcUser ロールを持つユーザーに VIEW SERVER STATE 権限を付与する必要があります。

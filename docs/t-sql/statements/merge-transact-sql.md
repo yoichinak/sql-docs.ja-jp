@@ -2,7 +2,7 @@
 description: MERGE (Transact-SQL)
 title: MERGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/20/2019
+ms.date: 02/27/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -26,12 +26,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest
-ms.openlocfilehash: 6bb1014c22353826b6e4429726d4d28549cc274a
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: c7b388649cf7ca535d5d81eb2d05cf4f0a27d373
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489336"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838964"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -238,16 +238,84 @@ DEFAULT VALUES
 >[!NOTE]
 > Azure Synapse Analytics での MERGE コマンド (プレビュー) は、SQL サーバーや Azure SQL データベースと比べて次のような違いがあります。  
 > - MERGE 更新は、削除と挿入のペアとして実装されます。 MERGE 更新の影響を受ける行の数には、削除される行と挿入される行が含まれます。 
-
 > - プレビュー期間中は、IDENTITY 列を含むテーブルに対する MERGE…WHEN NOT MATCHED INSERT はサポートされていません。  
-
 > - 各種の分散タイプでのテーブルのサポートについては、次の表で説明しています。
-
+>
 >|Azure Synapse Analytics での MERGE CLAUSE|サポートされる TARGE 分散テーブル| サポートされる SOURCE 分散テーブル|コメント|  
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| すべての分散タイプ |すべての分散タイプ||  
 >|**NOT MATCHED BY TARGET**|HASH |すべての分散タイプ|UPDATE/DELETE FROM…JOIN を使用して、2 つのテーブルを同期します。 |
 >|**NOT MATCHED BY SOURCE**|すべての分散タイプ|すべての分散タイプ|||  
+
+>[!IMPORTANT]
+> 現在、Azure Synapse Analytics の MERGE コマンドはプレビュー段階にあり、特定の条件下では、対象テーブルが不整合な状態のままになり、行が間違った分散に配置され、後のクエリで誤った結果が返される可能性があります。 この問題は、次の 2 つの条件が満たされた場合に発生する可能性があります。
+>
+> - MERGE T-SQL ステートメントが、Azure Synapse SQL データベースのハッシュ分散ターゲット テーブルで実行された。
+> - マージの TARGET テーブルに、セカンダリ インデックスまたは UNIQUE 制約がある。
+>
+> 修正を利用できるようになるまでは、セカンダリ インデックスまたは UNIQUE 制約があるハッシュ分散ターゲット テーブルで MERGE コマンドを使用しないようにしてください。  UNIQUE 制約またはセカンダリ インデックスを持つハッシュ分散テーブルのあるデータベースでの MERGE 機能のサポートが、一時的に無効にされる可能性もあります。      
+>
+> 重要な注意事項として、プレビュー機能はテストのみを目的としているので、運用インスタンスや運用データでは使用しないでください。 また、データが重要な場合は、テスト データのコピーも保持してください。
+> 
+> この問題が原因で MERGE 操作を使用できない、データベース内のハッシュ分散テーブルを確認するには、次のステートメントを実行します。
+>```sql
+> select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b
+> on a.object_id = b.object_id
+> join
+> sys.pdw_table_distribution_properties c
+> on a.object_id = c.object_id
+> where b.type = 2 and c.distribution_policy_desc = 'HASH'
+> ```
+> 
+> MERGE のハッシュ分散ターゲット テーブルがこの問題の影響を受けるかどうかを確認するには、次の手順のようにして、正しくない分散で配置された行がテーブルに含まれるかどうかを調べます。  "no need for repair" (修復の必要なし) が返された場合、このテーブルは影響を受けません。  
+>
+>```sql
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>
+> create table [check_table_1] with(distribution = round_robin) as
+> select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> group by <DISTRIBUTION_COLUMN>;
+> go
+>
+> create table [check_table_2] with(distribution = hash(x)) as
+> select x from [check_table_1];
+>go
+>
+> if not exists(select top 1 * from (select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> except select x from 
+> [check_table_2]) as tmp)
+> select 'no need for repair' as result
+> else select 'needs repair' as result
+> go
+>
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>```
+>影響を受けるテーブルを修復するには、次のステートメントを実行して、古いテーブルのすべての行を新しいテーブルにコピーします。
+>```sql
+> if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> if object_id('[repair_table]', 'U') is not null
+> drop table [repair_table];
+> go
+> create table [repair_table_temp] with(distribution = round_robin) as select * from <MERGE_TARGET_TABLE>;
+> go
+>
+> -- [repair_table] will hold the repaired table generated from <MERGE_TARGET_TABLE>
+> create table [repair_table] with(distribution = hash(<DISTRIBUTION_COLUMN>)) as select * from [repair_table_temp];
+> go
+>if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> ```   
 
 3 つの MATCHED 句のうち、少なくとも 1 つは指定する必要があります。これらの句は、任意の順序で指定できます。 1 つの MATCHED 句で 1 つの変数を複数回更新することはできません。  
   

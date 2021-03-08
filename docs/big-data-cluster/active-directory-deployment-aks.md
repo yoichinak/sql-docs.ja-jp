@@ -9,12 +9,12 @@ ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e59fd3f4eacab796117172370a83a0184ed47914
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: a0407589eefab4d5e997d582fee900a20dfcb0a3
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100047917"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837013"
 ---
 # <a name="deploy-sql-server-big-data-clusters-in-ad-mode-on-azure-kubernetes-services-aks"></a>Azure Kubernetes Services (AKS) に AD モードで SQL Server ビッグ データ クラスターを展開する
 

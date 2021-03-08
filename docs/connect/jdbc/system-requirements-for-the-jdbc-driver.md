@@ -2,7 +2,7 @@
 description: JDBC ドライバーのシステム要件
 title: JDBC ドライバーのシステム要件 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2021
+ms.date: 02/26/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2052f4db6b90851a09b0aa7f56a2f4a9220be506
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 50820ee0f7da0f58872d255c8a918dff35234553
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99187664"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837549"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC ドライバーのシステム要件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "99187664"
 
 **Microsoft JDBC Driver 9.2 for SQL Server:**  
 
-  JDBC Driver 9.2 の各インストール パッケージには、3 つの JAR クラス ライブラリ (**mssql-jdbc-9.2.0.jre8.jar**、**mssql-jdbc-9.2.0.jre11.jar**、および **mssql-jdbc-9.2.0.jre15.jar**) が含まれています。
+  JDBC Driver 9.2 の各インストール パッケージには、3 つの JAR クラス ライブラリ (**mssql-jdbc-9.2.1.jre8.jar**、**mssql-jdbc-9.2.1.jre11.jar**、および **mssql-jdbc-9.2.1.jre15.jar**) が含まれています。
 
   JDBC Driver 9.2 は、すべての主要な Java 仮想マシンと連携し、それらでサポートされるように設計されていますが、テストは OpenJDK 1.8、OpenJDK 11.0、OpenJDK 15.0、Azul Zulu JRE 1.8、Azul Zulu JRE 11.0、Azul Zulu JRE 15.0 上でのみ実行されます。
   
@@ -60,9 +60,9 @@ ms.locfileid: "99187664"
   
   |JAR|JDBC バージョン準拠|推奨される Java のバージョン|説明|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-9.2.0.jre8.jar|4.2|8|Java Runtime Environment (JRE) 1.8 が必要です。 JRE 1.7 以前を使用すると、例外がスローされます。<br /><br /> 9\.2 の新機能: JDK 15 サポート、Azure Active Directory 対話型認証のサポート、Azure Active Directory サービス プリンシパル認証のサポート、および Azure Synapse Analytics サーバー以外での useBulkCopyForBatchInsert のサポート。 |
-|mssql-jdbc-9.2.0.jre11.jar|4.3|11|Java Runtime Environment (JRE) 11.0 が必要です。 JRE 10.0 以前を使用すると、例外がスローされます。<br /><br /> 9\.2 の新機能: JDK 15 サポート、Azure Active Directory 対話型認証のサポート、Azure Active Directory サービス プリンシパル認証のサポート、および Azure Synapse Analytics サーバー以外での useBulkCopyForBatchInsert のサポート。 |
-|mssql-jdbc-9.2.0.jre15.jar|4.3|15|Java Runtime Environment (JRE) 15.0 が必要です。 JRE 14.0 以前を使用すると、例外がスローされます。<br /><br /> 9\.2 の新機能: JDK 15 サポート、Azure Active Directory 対話型認証のサポート、Azure Active Directory サービス プリンシパル認証のサポート、および Azure Synapse Analytics サーバー以外での useBulkCopyForBatchInsert のサポート。 |
+|mssql-jdbc-9.2.1.jre8.jar|4.2|8|Java Runtime Environment (JRE) 1.8 が必要です。 JRE 1.7 以前を使用すると、例外がスローされます。<br /><br /> 9\.2 の新機能: JDK 15 サポート、Azure Active Directory 対話型認証のサポート、Azure Active Directory サービス プリンシパル認証のサポート、および Azure Synapse Analytics サーバー以外での useBulkCopyForBatchInsert のサポート。 |
+|mssql-jdbc-9.2.1.jre11.jar|4.3|11|Java Runtime Environment (JRE) 11.0 が必要です。 JRE 10.0 以前を使用すると、例外がスローされます。<br /><br /> 9\.2 の新機能: JDK 15 サポート、Azure Active Directory 対話型認証のサポート、Azure Active Directory サービス プリンシパル認証のサポート、および Azure Synapse Analytics サーバー以外での useBulkCopyForBatchInsert のサポート。 |
+|mssql-jdbc-9.2.1.jre15.jar|4.3|15|Java Runtime Environment (JRE) 15.0 が必要です。 JRE 14.0 以前を使用すると、例外がスローされます。<br /><br /> 9\.2 の新機能: JDK 15 サポート、Azure Active Directory 対話型認証のサポート、Azure Active Directory サービス プリンシパル認証のサポート、および Azure Synapse Analytics サーバー以外での useBulkCopyForBatchInsert のサポート。 |
 
 
   JDBC Driver 9.2 は Maven Central Repository でも使用でき、次のコードを POM.XML に追加することで Maven プロジェクトに追加できます。  
@@ -71,7 +71,7 @@ ms.locfileid: "99187664"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>9.2.0.jre11</version>
+    <version>9.2.1.jre11</version>
 </dependency>
 ```
 

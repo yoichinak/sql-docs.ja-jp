@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 52fbeee33dd992f4916f33a1545b59265a8b47f9
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 863278eacebc4b405a4a44e72c4318e950d0cc1d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345650"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837678"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux での Always On 可用性グループのフェールオーバー
 
@@ -50,17 +50,18 @@ ms.locfileid: "100345650"
 - **RHEL/Ubuntu の例**
 
    ```bash
-   sudo pcs resource move ag_cluster-master nodeName2 --master
+   sudo pcs resource move ag_cluster-master nodeName2 --master --lifetime=30S
    ```
 
 - **SLES の例**
 
    ```bash
-   crm resource migrate ag_cluster nodeName2
+   crm resource migrate ag_cluster nodeName2 --lifetime=30S
    ```
 
 >[!IMPORTANT]
->手動でリソースをフェールオーバーした後、自動的に追加される場所の制約を削除する必要があります。
+>--lifetime オプションを使用すると、リソースを移動するために作成される場所の制約は一時的なものになり、前の例では 30 秒間有効です。
+>一時的な制約は自動的には消去されず、制約リストに期限切れの制約として表示される場合があることに注意してください。 期限切れの制約は、Pacemaker クラスターのフェールオーバーの動作には影響しません。 リソースを移動するときに --lifetime オプションを使用しない場合は、次に示すように、自動的に追加される場所の制約を削除する必要があります。
 
 #### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> 手順 2. 場所の制約の削除
 

@@ -8,19 +8,18 @@ helpviewer_keywords:
 - feature adding [SQL Server]
 - " SQL Server, features"
 - adding features to  SQL Server
-ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: cawrites
 ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 09/07/2019
+ms.date: 02/05/2021
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 2f756136657d20a694cbaa2263500624eeaf8c27
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b8b520e3c5f44342970881e3e67b3dbf95ce9853
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347872"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837577"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>SQL Server のインスタンスへの機能の追加 (セットアップ)
 
@@ -29,6 +28,9 @@ ms.locfileid: "100347872"
 この記事では、機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスに追加する手順について詳しく説明します。 SQL Server のコンポーネントまたはサービスには、SQL Server のインスタンスに固有のものがあります。 これらは、インスタンス対応とも呼ばれます。 また、これらをホストしているインスタンスとバージョンが同じで、そのインスタンスにのみ使用されます。 インスタンス対応のコンポーネントがまだインストールされていない場合は、共有コンポーネントと共に SQL Server インスタンスに追加できます。 SQL Server の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」および [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md) に関するページを参照してください。
 
 コマンド プロンプトから SQL Server のインスタンスに機能を追加する方法については、「[コマンド プロンプトからの SQL Server のインストール](./install-sql-server-from-the-command-prompt.md)」を参照してください。
+
+> [!CAUTION]
+> SQL Server の既存のインストールに機能を追加すると、インストール メディアのバージョン レベルで機能がインストールされ、それは SQL Server の他の機能のバージョン レベルより古いものである可能性があります。 これにより、予期しない動作やエラーが発生する可能性があります。 常に、新しい機能を同じバージョン レベルにすることにより、SQL Server のセットアップを正常な状態のままにしてください。 必要に応じて、Service Pack (SP)、累積的な更新プログラム (CU)、一般配布リリース (GDR) をインストールします。 SQL Server のインストールに追加される機能のバージョンを確認するには、「[SQL Server とそのコンポーネントのバージョン、エディション、更新レベルを確認する](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level)」を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -156,3 +158,4 @@ SQL Server のインストールを構成する
 - [失敗した SQL Server 2016 のインストールの修復](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 - [インストール ウィザードを使用した SQL Server のアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 - [コマンド プロンプトからの SQL Server のインストール](./install-sql-server-from-the-command-prompt.md)
+- [SQL Server の最新の更新プログラム](latest-updates-for-microsoft-sql-server.md)

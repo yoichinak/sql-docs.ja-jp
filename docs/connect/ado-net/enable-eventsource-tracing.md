@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
-ms.reviewer: ''
-ms.openlocfilehash: 1bcf11727a5ccd640846788b936ff5fefe9c63a3
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.reviewer: v-daenge
+ms.openlocfilehash: c13942dc5633deec4759ebd4c8a5661654c0952b
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595686"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837089"
 ---
 # <a name="enable-event-tracing-in-sqlclient"></a>SqlClient でのイベントのトレースの有効化
 
@@ -50,6 +50,7 @@ Microsoft.Data.SqlClient.EventSource
 |||
 
 ## <a name="example"></a>例
+
 次の例では、**AdventureWorks** サンプル データベースでデータ操作のイベント トレースを有効にし、コンソール ウィンドウにそのイベントを表示します。
 
 [!code-csharp [SqlClientEventSource#1](~/../sqlclient/doc/samples/SqlClientEventSource.cs#1)]
@@ -112,7 +113,7 @@ class Program
    ```
    xperf -start trace -f myTrace.etl -on *Microsoft.Data.SqlClient.EventSource
    ```
-   
+
 2. ネイティブ SNI のトレースの例を実行して、SQL Server に接続します。
 
 3. 次のコマンド ラインを使用してトレースを停止します。
@@ -120,8 +121,8 @@ class Program
    ```
    xperf -stop trace
    ```
-   
-4. PerfView を使用して、ステップ 1 で指定した myTrace.etl ファイルを開きます。 SNI トレース ログは、`Microsoft.Data.SqlClient.EventSource/SNIScope` および `Microsoft.Data.SqlClient.EventSource/SNITrace` のイベント名で見つけることができます。 
+
+4. PerfView を使用して、ステップ 1 で指定した myTrace.etl ファイルを開きます。 SNI トレース ログは、`Microsoft.Data.SqlClient.EventSource/SNIScope` および `Microsoft.Data.SqlClient.EventSource/SNITrace` のイベント名で見つけることができます。
 
    ![PerfView を使用して SNI のトレース ファイルを表示する](media/view-event-trace-native-sni.png)
 
@@ -133,20 +134,20 @@ class Program
 2. トレース ファイル名、出力パス、プロバイダー名を構成します。
 
    ![収集の前に PerfView を構成する](media/collect-event-trace-native-sni.png)
-   
+
 3. 収集を開始します。
 
 4. ネイティブ SNI のトレースの例を実行して、SQL Server に接続します。
 
 5. PerfView から収集を停止します。 ステップ 2 での構成に従って PerfViewData.etl ファイルが生成されるには、しばらく時間がかかります。
 
-6. PerfView で etl ファイルを開きます。 SNI トレース ログは、`Microsoft.Data.SqlClient.EventSource/SNIScope` および `Microsoft.Data.SqlClient.EventSource/SNITrace` のイベント名で見つけることができます。 
-
+6. PerfView で `etl` ファイルを開きます。 SNI トレース ログは、`Microsoft.Data.SqlClient.EventSource/SNIScope` および `Microsoft.Data.SqlClient.EventSource/SNITrace` のイベント名で見つけることができます。
 
 ## <a name="external-resources"></a>外部リソース  
+
 詳細については、次のリソースを参照してください。  
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[EventSource クラス](/dotnet/api/system.diagnostics.tracing.eventsource)|ETW イベントを作成する機能を提供します。| 
+|[EventSource クラス](/dotnet/api/system.diagnostics.tracing.eventsource)|ETW イベントを作成するために使用されます。|
 |[EventListener クラス](/dotnet/api/system.diagnostics.tracing.eventlistener)|イベント ソースからのイベントを有効または無効にするメソッドを提供します。|

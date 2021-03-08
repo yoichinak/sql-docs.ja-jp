@@ -8,12 +8,12 @@ ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0c95b3a843cbec0e703efea846b9c80f99b9dc41
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ce07fb02a81b4e44375d80f643713b9a0b62d80d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346234"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839000"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Linux での SSIS に関する制限事項と既知の問題
 
@@ -26,7 +26,7 @@ ms.locfileid: "100346234"
 Linux での SSIS パッケージのこのリリースでは、次の機能はサポートされていません。
   - SSIS カタログ データベース
   - SQL エージェントでスケジュールされたパッケージの実行
-  - [Windows 認証]
+  - Windows 認証
   - サードパーティ コンポーネント
   - 変更データ キャプチャ (CDC)
   - SSIS Scale Out
@@ -94,7 +94,7 @@ SQL Server メンテナンス プランでは、通常、さまざまな SSIS �
 | コンポーネント | 制限事項 |
 |------------|---|
 | ADO.NET の変換元と変換先 | SQLClient データ プロバイダーのみがサポートされます。 |
-| フラット ファイルの変換元と変換先 | 既定のパス マッピング規則が適用される、Windows スタイルのファイル パスのみがサポートされます。 たとえば、`D:\home\ssis\travel.csv` は `/home/ssis/travel.csv` になります。 |
+| フラット ファイルの変換元と変換先 | 1. 既定のパス マッピング規則が適用される、Windows スタイルのファイル パスのみがサポートされます。 たとえば、`D:\home\ssis\travel.csv` は `/home/ssis/travel.csv` になります。 2. Red Hat 7 でマウントされた Azure ファイル共有はサポートされません。 |
 | OData の変換元 | 基本認証のみがサポートされます。 |
 | ODBC のソースとターゲット | Linux では 64 ビットの Unicode ODBC ドライバーがサポートされます。 Linux では UnixODBC ドライバー マネージャーに依存します。 |
 | OLE DB の変換元と変換先 | SQL Server Native Client 11.0 と Microsoft OLE DB Provider for SQL Server のみがサポートされます。 |

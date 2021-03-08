@@ -27,14 +27,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
-ms.date: 09/11/2020
+ms.date: 02/24/2021
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 87aa8b901c24839aa23b75a318b7a47e3d52f40e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: c74a2f03c36449bc597d699edb008206c76d7448
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100349974"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839038"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 
@@ -219,8 +219,8 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  このスイッチは、Azure SQL Database または Azure Synapse Analytics に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチには[バージョン 14.0.3008.27 以降](https://go.microsoft.com/fwlink/?LinkID=825643)が必要です。 バージョンを判断するには、bcp -v を実行します。 詳細については、[SQL Database または Azure Synapse Analytics での認証に Azure Active Directory 認証を使用する](/azure/sql-database/sql-database-aad-authentication)に関するページをご覧ください。 
 
 > [!IMPORTANT]
-> **-G** オプションは、Azure SQL Database と Azure Data Warehouse にのみ適用されます。
-> 現在、AAD 統合認証と対話型認証は、Linux または macOS 上でサポートされていません。
+> **-G** オプションは、Azure SQL Database と Azure Synapse Analytics にのみ適用されます。
+> 現在、AAD 対話型認証は、Linux または macOS 上でサポートされていません。 AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) バージョン 17.6.1 以降と、適切に[構成された Kerberos 環境](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos)が必要です。
 
 > [!TIP]
 > お使いのバージョンの bcp に Azure Active Directory 認証 (AAD) のサポートが含まれているかどうかを確認するには、「**bcp --** 」 (bcp\<space>\<dash>\<dash>) と入力して、使用できる引数の一覧に "-G" が表示されることを確認します。

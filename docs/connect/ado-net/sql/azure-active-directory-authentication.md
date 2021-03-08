@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: karinazhou
 ms.author: v-jizho2
-ms.reviewer: ''
-ms.openlocfilehash: 0f8aaffc1f87b33a5c685b55d724fe96c44258af
-ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
+ms.reviewer: v-daenge
+ms.openlocfilehash: c57c2d10854ed902a6230eafc3a912cd0508c989
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96297949"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836001"
 ---
 # <a name="using-azure-active-directory-authentication-with-sqlclient"></a>SqlClient での Azure Active Directory 認証の使用
 
@@ -26,7 +26,7 @@ ms.locfileid: "96297949"
 
 この記事では、.NET アプリケーションから SqlClient で Azure Active Directory (Azure AD) 認証を使用して Azure SQL データ ソースに接続する方法について説明します。
 
-Azure AD 認証では、Azure AD の ID を使用して、Azure SQL Database、Azure SQL Managed Instance、Azure Synapse Analytics などの Azure SQL データ ソースにアクセスします。 **Microsoft.Data.SqlClient** 名前空間を使用すると、クライアント アプリケーションで Azure SQL Database に接続しているときに、さまざまな認証モードで Azure AD 資格情報を指定できます。 
+Azure AD 認証では、Azure AD の ID を使用して、Azure SQL Database、Azure SQL Managed Instance、Azure Synapse Analytics などの Azure SQL データ ソースにアクセスします。 **Microsoft.Data.SqlClient** 名前空間を使用すると、クライアント アプリケーションで Azure SQL Database に接続しているときに、さまざまな認証モードで Azure AD 資格情報を指定できます。
 
 接続文字列の `Authentication` 接続プロパティを設定すると、クライアントでは、指定された値に従って優先する Azure AD 認証モードを選択できます。
 
@@ -39,7 +39,6 @@ Azure AD 認証では、Azure AD の ID を使用して、Azure SQL Database、A
 - **Microsoft.Data.SqlClient** 2.1.0 には、他にも認証モードが追加されています (`Active Directory Device Code Flow` や `Active Directory Managed Identity` (別名 `Active Directory MSI`) など)。 これらの新しいモードにより、アプリケーションでサーバーに接続するためのアクセス トークンを取得できます。 
 
 以下のセクションで説明されていない Azure AD 認証の詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](/azure/azure-sql/database/authentication-aad-overview)に関する記事を参照してください。
-
 
 ## <a name="setting-azure-active-directory-authentication"></a>Azure Active Directory 認証の設定
 
@@ -54,8 +53,7 @@ Azure AD 認証では、Azure AD の ID を使用して、Azure SQL Database、A
 | Active Directory デバイス コード フロー | デバイス コード フロー モードを使用して Azure AD の ID で認証します | .NET Framework 4.6 以降、.NET Core 2.1 以降、.NET Standard 2.0 以降 | 2.1.0 以降 |
 | Active Directory Managed Identity、 <br>Active Directory MSI | システム割り当て、またはユーザー割り当てマネージド ID を使用して Azure AD の ID で認証します | .NET Framework 4.6 以降、.NET Core 2.1 以降、.NET Standard 2.0 以降 | 2.1.0 以降 |
 
-<sup>1</sup> **Microsoft.Data.SqlClient** 2.0.0 より前のバージョンでは、`Active Directory Integrated` および `Active Directory Interactive` 認証は .NET Framework 4.6 以降でのみサポートされます。 
-
+<sup>1</sup> **Microsoft.Data.SqlClient** 2.0.0 より前のバージョンでは、`Active Directory Integrated` および `Active Directory Interactive` 認証モードは .NET Framework 4.6 以降でのみサポートされます。
 
 ## <a name="using-active-directory-password-authentication"></a>Active Directory パスワード認証の使用
 
@@ -63,7 +61,7 @@ Azure AD 認証では、Azure AD の ID を使用して、Azure SQL Database、A
 
 ```c#
 // Use your own server, database, user ID, and password.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Password; Database=testdb; User Id=user@domain.com; Password=**_";
+string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Password; Database=testdb; User Id=user@domain.com; Password=***";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -100,7 +98,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
 
 `Active Directory Interactive` 認証では、Azure SQL データ ソースに接続するための多要素認証テクノロジがサポートされています。 この認証モードを接続文字列で指定すると、Azure 認証画面が表示され、ユーザーは有効な資格情報を入力するように求められます。 接続文字列にパスワードを指定することはできません。 
 
-このモードでは、SqlConnection の `Credential` プロパティを設定することはできません。 _ *Microsoft.Data.SqlClient** 2.0.0 以降では、対話モードの場合に接続文字列でのユーザー名の使用が許可されます。 
+このモードでは、SqlConnection の `Credential` プロパティを設定することはできません。 **Microsoft.Data.SqlClient** 2.0.0 以降では、対話モードの場合に接続文字列でのユーザー名の使用が許可されます。 
 
 次の例は、`Active Directory Interactive` 認証を使用する方法を示しています。
 
@@ -161,9 +159,9 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 
 ## <a name="using-active-directory-managed-identity-authentication"></a>Active Directory Managed Identity 認証の使用
 
-Azure リソースの "*マネージド ID*" は、以前にマネージド サービス ID (MSI) と呼ばれていたサービスの新しい名前です。 クライアント アプリケーションが Azure リソースを使用して Azure AD 認証がサポートされた Azure サービスにアクセスする場合、Azure AD で Azure リソースの ID を指定することによって、マネージド ID を使用して認証できます。 その後、その ID を使用してアクセス トークンを取得できます。 これにより、資格情報とシークレットを管理する必要がなくなります。 
+Azure リソースの "*マネージド ID*" は、以前にマネージド サービス ID (MSI) と呼ばれていたサービスの新しい名前です。 クライアント アプリケーションが Azure リソースを使用して Azure AD 認証がサポートされた Azure サービスにアクセスする場合、Azure AD で Azure リソースの ID を指定することによって、マネージド ID を使用して認証できます。 その後、その ID を使用してアクセス トークンを取得できます。 この認証方法により、資格情報とシークレットを管理する必要がなくなります。
 
-マネージド ID には、次の 2 種類があります。 
+マネージド ID には、次の 2 種類があります。
 
 - "_システム割り当てマネージド ID_" は、Azure AD のサービス インスタンス上に作成されます。 これは、そのサービス インスタンスのライフサイクルに関連付けられています。 
 - "_ユーザー割り当てマネージド ID_" は、スタンドアロンの Azure リソースとして作成されます。 Azure サービスの 1 つ以上のインスタンスに割り当てることができます。 

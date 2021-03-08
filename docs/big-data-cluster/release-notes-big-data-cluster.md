@@ -9,12 +9,12 @@ ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f3e1e0ed29121f0fb0ffcac54885ca80de3e63c
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: c4cb10ac3ba1e0fd8b437e7f0509dc16cc72d854
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489306"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837069"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -98,7 +98,7 @@ SQL Server ビッグ データ クラスター用の SQL Server 2019 CU9 には�
    SQL Server マスター インスタンス構成に `mssql-conf` を使用しているクラスターの場合、CU9 にアップグレードした後に追加の手順が必要になります。 [こちら](bdc-upgrade-configuration.md)の指示に従います。
 
 - 保存時の暗号化の [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] エクスペリエンスが向上しました。
-- 仮想環境を使用して Python Spark パッケージを動的にインストールする機能。
+- 仮想環境を使用して [Python Spark パッケージを動的にインストールする](spark-install-packages.md)機能。
 - BDC イメージが最新の拡張機能と修正プログラムを含む最新の状態になるように、ほとんどの OSS コンポーネント (Grafana、Kibana、FluentBit など) のソフトウェア バージョンをアップグレードしました。 「[オープンソース ソフトウェア リファレンス](reference-open-source-software.md)」を参照してください。
 - その他の機能強化とバグ修正。
 
@@ -145,7 +145,7 @@ SQL Server 2019 の累積的な更新プログラム 6 (CU6) リリース。
 - [Azure Kubernetes Service (AKS) プライベート クラスターでビッグ データ クラスターを展開する](private-deploy.md)
 - [Azure Kubernetes Service (AKS) プライベート クラスターでビッグ データ クラスター (BDC) クラスターのエグレス トラフィックを制限する](private-restrict-egress-traffic.md)
 - [高可用性を使用して SQL Server ビッグ データ クラスターを展開する](deployment-high-availability.md)
-- [SQL Server ビッグ データ クラスターを構成する](configure-cluster.md)
+- [SQL Server ビッグ データ クラスターを構成する](./configure-bdc-overview.md)
 - [ビッグ データ クラスターで Apache Spark と Apache Hadoop を構成する](configure-spark-hdfs.md)
 - [SQL Server マスター インスタンスの構成プロパティ](reference-config-master-instance.md)
 - [Apache Spark と Apache Hadoop (HDFS) の構成プロパティ](reference-config-spark-hadoop.md)

@@ -2,7 +2,7 @@
 title: JDBC ドライバーのリリース ノート
 description: この記事には、Microsoft JDBC Driver for SQL Server の各リリースが記載されています。 リリース バージョンごとに、変更された点とそれに関する説明が示されています。
 ms.custom: ''
-ms.date: 01/29/2021
+ms.date: 03/02/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ffc7d8e4090673f3fc8feb96aa3650d35361281
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: c394eaeb6ec8361dd429b944b128d19a0cf33319
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99234863"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837529"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server のリリース ノート
 
@@ -24,27 +24,42 @@ ms.locfileid: "99234863"
 
 ## <a name="92"></a><a id="92"></a> 9.2
 
-**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft JDBC Driver 9.2 for SQL Server (zip) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2153622)**  
-**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft JDBC Driver 9.2 for SQL Server (tar.gz) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2153521)**  
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft JDBC Driver 9.2.1 for SQL Server (zip) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2155948)**  
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft JDBC Driver 9.2.1 for SQL Server (tar.gz) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2155949)**  
 
-バージョン番号: 9.2.0 リリース日: 2021 年 1 月 29 日
+バージョン番号: 9.2.1  
+リリース日: 2021 年 3 月 2 日
 
 自動的に検出されたもの以外の言語でドライバーをダウンロードする必要がある場合は、以下の直接リンクを使用できます。  
-zip ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
-tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
+zip ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x40a)  
+tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x40a)  
 
 ### <a name="compliance"></a>コンプライアンス
 
 | コンプライアンスの変更 | 詳細 |
 | :---------------- | :------ |
-| JDBC Driver 9.2 用の最新の更新プログラムのダウンロード。 | &bull; &nbsp; [GitHub、9.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| JDBC API 仕様 4.2 への完全準拠。 | 9\.2 パッケージ内の jar は、Java のバージョンの互換性に従って名前付けされています。<br/><br/>たとえば、9.2 パッケージの mssql-jdbc-9.2.0.jre15.jar ファイルは、Java 15 で使用する必要があります。 |
+| JDBC Driver 9.2 用の最新の更新プログラムのダウンロード。 | &bull; &nbsp; [GitHub 9.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| JDBC API 仕様 4.2 への完全準拠。 | 9\.2 パッケージ内の jar は、Java のバージョンの互換性に従って名前付けされています。<br/><br/>たとえば、9.2 パッケージの mssql-jdbc-9.2.1.jre15.jar ファイルは、Java 15 で使用する必要があります。 |
 | Java Development Kit (JDK) バージョン 15.0、11.0 および 1.8 と互換性があります。 | Microsoft JDBC Driver 9.2 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 15.0 と互換性を持つようになりました。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="releases"></a>リリース
 
-バージョン番号: 9.2.0 リリース日: 2021 年 1 月 29 日
+バージョン番号: 9.2.1  
+リリース日: 2021 年 3 月 2 日
+
+9\.2.1 で修正された問題:
+
+Azure 環境での ActiveDirectoryServicePrincipal 認証の間に、クライアント シークレットが空になる問題を修正しました。
+
+バージョン番号: 9.2.0  
+リリース日:2021 年 1 月 29 日
+
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft JDBC Driver 9.2.0 for SQL Server (zip) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2153622)**  
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft JDBC Driver 9.2.0 for SQL Server (tar.gz) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2153521)**  
+
+ZIP ファイル: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
+tar.gz ファイル: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
 
 ### <a name="support-for-jdk-15"></a>JDK 15 のサポート
 

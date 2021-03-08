@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 2f87ae98424eef3f6aeadca1f11da6d9d1f2b403
-ms.sourcegitcommit: 8bdb5a51f87a6ff3b94360555973ca0cd0b6223f
+ms.openlocfilehash: acbe6e9241f003f100bedc3fd01d297fb91e8141
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100549388"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836694"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On フェールオーバー クラスター インスタンス (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "100549388"
  FCI は、類似するハードウェア構成と同一のソフトウェア構成 (オペレーティング システムのバージョンとパッチ レベル、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のバージョン、パッチ レベル、コンポーネント、インスタンス名など) を含む物理サーバー (ノード) のセットから構成されます。 同一のソフトウェア構成は、ノード間でフェールオーバーする際に FCI が完全に機能できるようにするために必要です。  
   
  WSFC リソース グループ  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI は、WSFC リソース グループで実行されます。 リソース グループ内の各ノードは、構成設定の同期されたコピーおよびチェックポイントが設定されたレジストリ キーを保持して、フェールオーバー後に FCI が完全に機能し、一度にクラスター内の 1 つのノード (アクティブ ノード) だけがリソース グループを所有するようにします。 WSFC サービスは、サーバー クラスター、クォーラム構成、フェールオーバー ポリシー、およびフェールオーバー操作に加え、FCI の VNN および仮想 IP アドレスを管理します。 障害 (ハードウェア、オペレーティング システム、アプリケーション、サービスなどの障害) が発生した場合や計画していたアップグレードが行われる場合は、リソース グループの所有権が FCI 内の別のノードに移動します。WSFC リソース グループでサポートされるノード数は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エディションによって決まります。 また、CPU、メモリ、ディスク数などのハードウェア容量に応じて、同じ WSFC クラスターが複数の FCI (複数のリソース グループ) を実行できます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI は、WSFC リソース グループで実行されます。 リソース グループ内の各ノードは、構成設定の同期されたコピーおよびチェックポイントが設定されたレジストリ キーを保持して、フェールオーバー後に FCI が完全に機能し、一度にクラスター内の 1 つのノード (アクティブ ノード) だけがリソース グループを所有するようにします。 WSFC サービスは、サーバー クラスター、クォーラム構成、フェールオーバー ポリシー、およびフェールオーバー操作に加え、FCI の VNN および仮想 IP アドレスを管理します。 障害 (ハードウェア、オペレーティング システム、アプリケーション、サービスなどの障害) が発生した場合や計画していたアップグレードが行われる場合は、リソース グループの所有権が FCI の別のノードに移動します。 WSFC リソース グループでサポートされるノードの数は、お使いの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエディションによって異なります。 また、CPU、メモリ、ディスク数などのハードウェア容量に応じて、同じ WSFC クラスターが複数の FCI (複数のリソース グループ) を実行できます。  
   
  SQL Server バイナリ  
  製品バイナリは FCI の各ノードにローカルにインストールされます。これは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] スタンドアロン インストールと同様のプロセスです。 ただし、スタートアップ時にサービスが自動的に開始されることはなく、WSFC によって管理されます。  

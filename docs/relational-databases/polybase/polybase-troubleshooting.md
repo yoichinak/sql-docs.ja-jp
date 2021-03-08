@@ -1,26 +1,28 @@
 ---
-title: PolyBase の監視とトラブルシューティング | Microsoft Docs
+title: PolyBase の監視とトラブルシューティング
 description: PolyBase のトラブルシューティングを行うには、次のビューと DMV を使用します。 PolyBase クエリ プランを表示し、PolyBase グループ内のノードを監視して、Hadoop 名前ノードの高可用性を設定します。
-ms.date: 04/23/2019
+ms.date: 02/17/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+dev_langs:
+- TSQL
+- XML
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
 helpviewer_keywords:
 - PolyBase, troubleshooting
-ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016'
-ms.openlocfilehash: 5945f88320f01f6ce431bea79483528bf8dbeb64
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5306f392623bebdb08d17b704e12b06c5ce9e8fa
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351754"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101835311"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase の監視とトラブルシューティング
 
@@ -171,15 +173,15 @@ PolyBase のクエリを監視およびトラブルシューティングする�
    ORDER BY total_elapsed_time DESC;  
    ```  
 
-## <a name="to-view-the--polybase-query-plan-to-be-changed"></a>PolyBase クエリ プランを参照するには (変更予定) 
+## <a name="to-view-the-polybase-query-plan-to-be-changed"></a>PolyBase クエリ プランを参照するには (変更予定) 
 
-1. SSMS で、 **[実際の実行プランを含める]** (Ctrl + M) を有効にし、クエリを実行します。
+1. SSMS で、[ **実際の実行プランを含める** ] (Ctrl + M) を有効にし、クエリを実行します。
 
-2. **[実行プラン]** タブをクリックします。
+2. [ **実行プラン** ] タブをクリックします。
 
    ![PolyBase クエリ プラン](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase クエリ プラン")  
 
-3. **[Remote Query 操作]** を右クリックし、 **[プロパティ]** を選択します。
+3. [ **Remote Query 操作** ] を右クリックし、[ **プロパティ**] を選択します。
 
 4. Remote Query の値をコピーし、テキスト エディターに貼り付け、XML リモート クエリ プランを表示します。 次に例を示します。
 
@@ -256,12 +258,37 @@ PolyBase スケール アウト グループの一部として一連のコンピ
 
 PolyBase は現在、Zookeeper や Knox などの Name Node HA サービスとやり取りしません。 ただし、この機能を提供するための実績のある回避策を使用できます。
 
-回避策:DNS 名を使用して、アクティブな Name Node への接続を再ルーティングします。 これを行うためには、外部データ ソースが DNS 名を使用して Name Node と通信していることを確認する必要があります。 Name Node のフェールオーバーが発生したときには、外部データ ソースの定義で使用される DNS 名に関連付けられている IP アドレスを変更する必要があります。 これには、すべての新しい接続を適切な Name Node に再ルーティングします。 フェールオーバーが発生したときに、既存の接続は失敗します。 このプロセスを自動化するために、"ハートビート" が、アクティブな Name Node の ping を実行できます。 ハートビートが失敗した場合、フェールオーバーが発生し、セカンダリ IP アドレスに自動的に切り替えられると想定されます。
+回避策: DNS 名を使用して、アクティブな Name Node への接続を再ルーティングします。 これを行うためには、外部データ ソースが DNS 名を使用して Name Node と通信していることを確認する必要があります。 Name Node のフェールオーバーが発生したときには、外部データ ソースの定義で使用される DNS 名に関連付けられている IP アドレスを変更する必要があります。 これには、すべての新しい接続を適切な Name Node に再ルーティングします。 フェールオーバーが発生したときに、既存の接続は失敗します。 このプロセスを自動化するために、"ハートビート" が、アクティブな Name Node の ping を実行できます。 ハートビートが失敗した場合、フェールオーバーが発生し、セカンダリ IP アドレスに自動的に切り替えられると想定されます。
+
+## <a name="log-file-locations"></a>ログ ファイルの場所
+
+Windows サーバーでは、ログはインストール ディレクトリのパスにあります (既定では c:\Program Files\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\Polybase\)。
+
+Linux サーバーでは、ログの既定の場所は /var/opt/mssql/log/polybase です。
+
+PolyBase のデータ移動のログ ファイル:  
+- <INSTANCENAME>_<SERVERNAME>_Dms_errors.log 
+- <INSTANCENAME>_<SERVERNAME>_Dms_movement.log 
+
+PolyBase のエンジン サービスのログ ファイル:  
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_errors.log 
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_movement.log 
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_server.log 
+
+Windows での、PolyBase Java ログ ファイル:
+- <SERVERNAME> Dms polybase.log
+- <SERVERNAME>_DWEngine_polybase.log
+ 
+Linux での、PolyBase Java ログ ファイル:
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_pdw.log
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_dms.log
+
 
 ## <a name="error-messages-and-possible-solutions"></a>エラー メッセージと考えられる解決策
 
-外部テーブルのエラーのトラブルシューティングについては、Murshed Zaman のブログ [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](/archive/blogs/sqlcat/polybase-setup-errors-and-possible-solutions "PolyBase のセットアップ エラーと考えられる解決策") を参照してください。
+一般的なトラブルシューティングのシナリオについては、「[PolyBase のエラーと考えられる解決策](polybase-errors-and-possible-solutions.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[PolyBase Kerberos の接続性のトラブルシューティング](polybase-troubleshoot-connectivity.md)
+[PolyBase Kerberos の接続性のトラブルシューティング](polybase-troubleshoot-connectivity.md)   
+[PolyBase のエラーと考えられる解決策](polybase-errors-and-possible-solutions.md)   

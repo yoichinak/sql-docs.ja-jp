@@ -3,18 +3,18 @@ title: Windows へのインストール
 description: Windows に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python または R スクリプトを実行できます。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/29/2020
+ms.date: 02/17/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017'
-ms.openlocfilehash: 592a365024edbbe4ee2743a156ee480b76849ba9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 44993ae527e99d615a9be620e3d930aa520c8980
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096853"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839512"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows に SQL Server Machine Learning Services (Python と R) をインストールする
 
@@ -272,22 +272,45 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 >
 > たとえば、次の行を追加して、任意の列名を生成できます。`WITH RESULT SETS ((Col1 AS int))`
 
-::: moniker range="=sql-server-2017"
-<!-- There are no updates yet available for 2019, and there's no 2019 update list site. When updates become available, add 2019 information to this section. -->
+::: moniker range=">=sql-server-2017"
 
 <a name="apply-cu"></a>
 
 ## <a name="apply-updates"></a>更新プログラムの適用
 
-最新の累積的な更新プログラムをデータベース エンジンと機械学習コンポーネントの両方に適用することをお勧めします。
+### <a name="existing-installation"></a>既存のインストール
+
+既存の SQL Server インスタンスに Machine Learning Services を追加していて、以前に累積的な更新プログラム (CU) を適用している場合は、データベース エンジンのバージョンと Machine Learning Services の機能が異なる可能性があります。 これにより、予期しない動作やエラーが発生する可能性があります。 
+
+Machine Learning Services をデータベース エンジンと同じバージョンにするには、次の手順のようにします。
+
+1. データベース エンジンの累積的な更新プログラム (CU) を確認します。 次の T-SQL ステートメントを実行します。
+
+   ```sql
+   SELECT @@VERSION
+   ```
+ 
+   次に示すのは、SQL Server 2019 の累積的な更新プログラム (CU) 8 からの出力の例です。
+ 
+   *Microsoft SQL Server 2019 (RTM-CU8-GDR) (KB4583459) - 15.0.4083.2 (X64)   Nov  2 2020 18:35:09   Copyright (C) 2019 Microsoft Corporation  Developer Edition (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 19042: ) (Hypervisor)*
+
+   詳細については、「[SQL Server とそのコンポーネントのバージョン、エディション、更新レベルを確認する](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services)」を参照してください。
+
+1. データベース エンジンにインストールした[累積的な更新プログラム (CU)](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) をダウンロードします。
+
+1. 累積的な更新プログラム (CU) のインストールを実行し、指示に従って Machine Learning Services の CU をインストールします。
+
+### <a name="new-installation"></a>新しいインストール
+
+SQL Server データベース エンジンの新しいインストールで Machine Learning Services をインストールする場合は、データベース エンジンと機械学習の両方のコンポーネントに、最新の累積的な更新プログラムを適用することをお勧めします。
 
 インターネットに接続されているデバイスでは、通常、累積的な更新プログラムは Windows Update によって適用されますが、管理された更新には、次の手順を使用することもできます。 データベース エンジンに更新プログラムを適用すると、同じインスタンスにインストールしたすべての Python または R 機能の累積更新プログラムがセットアップによってプルされます。 
 
 切断されたサーバーには追加の手順が必要です。 詳細については、[インターネット アクセスなしでコンピューターにインストールする > 累積的な更新プログラムを適用する](sql-ml-component-install-without-internet-access.md#apply-cu)を参照してください。
 
-1. 既にインストールされているベースライン インスタンスを使用して開始します: SQL Server 2017 の初回リリース
+1. 既にインストールされているベースライン インスタンスを使用して開始します: SQL Server の初回リリース。
 
-2. 累積的な更新プログラムの一覧に移動します: [Microsoft SQL Server の最新の更新プログラム](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+2. 累積的な更新プログラムの一覧に移動します: [Microsoft SQL Server の最新の更新プログラム](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)。
 
 3. 最新の累積的な更新プログラムを選択します。 実行可能ファイルがダウンロードされ、自動的に抽出されます。
 
@@ -332,6 +355,7 @@ Windows の SQL Server 2019 では、分離メカニズムが変更されてい�
 これですべてが機能するようになったので、機械学習をサポートするようにサーバーを最適化したり、事前トレーニング済みの機械学習モデルをインストールしたりすることもできます。
 
 ::: moniker range="=sql-server-2017"
+
 ### <a name="add-more-worker-accounts"></a>ワーカー アカウントを追加する
 
 多くのユーザーが同時にスクリプトを実行する場合は、Launchpad サービスに割り当てられるワーカー アカウントの数を増やすことができます。 詳細については、「[SQL Server Machine Learning Services での外部スクリプトの同時実行のスケーリング](../administration/scale-concurrent-execution-external-scripts.md)」を参照してください。

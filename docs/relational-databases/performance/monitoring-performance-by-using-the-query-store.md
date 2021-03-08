@@ -1,8 +1,8 @@
 ---
-title: クエリのストアを使用した、パフォーマンスの監視 | Microsoft Docs
+title: クエリのストアを使用した、パフォーマンスの監視
 description: SQL Server クエリ ストアからは、クエリ プランの選択やパフォーマンスに関する分析情報が提供されます。 クエリ ストアでは、クエリ、プラン、ランタイム統計の履歴がキャプチャされます。
 ms.custom: ''
-ms.date: 04/09/2020
+ms.date: 02/19/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store
 - Query Store, described
-ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: c8a836f1a8daf2b4b6a9d5b76156191799013484
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 8d0f6ebf8eb842da0b02521de614ae953408f3b8
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100341712"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101835579"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 
@@ -341,44 +340,42 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 **アドホック クエリの削除**
 
-これにより、アドホック クエリと内部クエリがクエリ ストアから 3 分ごとに削除されるため、クエリ ストアの領域が不足することはなく、本当に追跡する必要があるクエリが削除されることもありません。
+これにより、アドホック クエリと内部クエリがクエリ ストアから削除されるため、クエリ ストアの領域が不足することはなく、本当に追跡する必要があるクエリが削除されることもありません。
 
 ```sql
 SET NOCOUNT ON
--- This purges adhoc and internal queries from the query store every 3 minutes so that the
--- query store does not run out of space and remove queries we really need to track
-DECLARE @command varchar(1000)
+-- This purges adhoc and internal queries from 
+-- the Query Store in the current database 
+-- so that the Query Store does not run out of space 
+-- and remove queries we really need to track
 
-SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
-EXEC(''
-DECLARE @id int
+DECLARE @id int;
 DECLARE adhoc_queries_cursor CURSOR
 FOR
-SELECT q.query_id
-FROM sys.query_store_query_text AS qt
-JOIN sys.query_store_query AS q
-ON q.query_text_id = qt.query_text_id
-JOIN sys.query_store_plan AS p
-ON p.query_id = q.query_id
-JOIN sys.query_store_runtime_stats AS rs
-ON rs.plan_id = p.plan_id
-WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
-
-' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
-' GROUP BY q.query_id
-HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
-' ORDER BY q.query_id ;
+    SELECT q.query_id
+    FROM sys.query_store_query_text AS qt
+    JOIN sys.query_store_query AS q
+    ON q.query_text_id = qt.query_text_id
+    JOIN sys.query_store_plan AS p
+    ON p.query_id = q.query_id
+    JOIN sys.query_store_runtime_stats AS rs
+    ON rs.plan_id = p.plan_id
+    WHERE q.is_internal_query = 1  -- is it an internal query then we dont care to keep track of it
+       OR q.object_id = 0 -- if it does not have a valid object_id then it is an adhoc query and we don't care about keeping track of it
+    GROUP BY q.query_id
+    HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE())  -- if it has been more than 5 minutes since the adhoc query ran
+    ORDER BY q.query_id;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
 BEGIN
-EXEC sp_query_store_remove_query @id
-FETCH NEXT FROM adhoc_queries_cursor INTO @id
+    PRINT 'EXEC sp_query_store_remove_query ' + str(@id);
+    EXEC sp_query_store_remove_query @id;
+    FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 END
-CLOSE adhoc_queries_cursor ;
+CLOSE adhoc_queries_cursor;
 DEALLOCATE adhoc_queries_cursor;
-'') END' ;
-EXEC sp_MSforeachdb @command
+
 ```
 
 不要になったデータを消去する別のロジックを利用した独自のプロシージャを定義できます。

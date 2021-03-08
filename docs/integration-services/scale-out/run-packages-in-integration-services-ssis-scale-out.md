@@ -6,17 +6,17 @@ ms.date: 12/13/2017
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
-author: haoqian
+author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 13f9a386b6ab60280edf2d8b494721dd233b042a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 25f550f711364760de9cc07608b46532cfa34219
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347408"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839016"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out でパッケージを実行する
 
@@ -125,6 +125,9 @@ Scale Out でパッケージを実行するには、次のアクセス許可の�
 
 ## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a> SQL Server エージェント ジョブでパッケージを実行する
 SQL Server エージェント ジョブで、ジョブの 1 つの手順として SSIS パッケージを実行することができます。 Scale Out でパッケージを実行するには、既定の実行モードを **Scale Out** に設定します。既定の実行モードを **Scale Out** に設定すると、SQL Server エージェント ジョブ内のパッケージが Scale Out モードで実行されます。
+
+> [!NOTE]
+> SQL Server エージェント ジョブをキャンセルして、Scale Out パッケージの実行を停止することはできません。 Scale Out の実行を停止するには、catalog.stop_operation ストアド プロシージャを使用するか、 **[アクティブな操作]** ペインを使用することをお勧めします。 
 
 ## <a name="next-steps"></a>次のステップ
 -   [Scale Out のトラブルシューティング](troubleshooting-scale-out.md)

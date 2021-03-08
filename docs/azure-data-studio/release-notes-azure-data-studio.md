@@ -8,17 +8,30 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 2/10/2021
-ms.openlocfilehash: 17cc8ef3252ad39c344de7a7c51a9af80c1f6030
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.date: 2/18/2021
+ms.openlocfilehash: c666ae644200c1b2beefb7f73c8a819294831985
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343402"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836029"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](./download-azure-data-studio.md)**
+
+## <a name="february-2021"></a>2021 年 2 月
+
+2021 年 2 月 18 日 &nbsp; / &nbsp; バージョン: 1.26.0
+
+&nbsp;
+
+| Change | 詳細 |
+| ------ | ------- |
+| バグの修正 | 修正の全一覧については、[GitHub のバグと問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2021+Release%22+is%3Aclosed)に関するページを参照してください。 |
+| 拡張機能の更新 | [Dacpac](extensions/sql-server-dacpac-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md) </br> [Profiler](extensions/sql-server-profiler-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| Azure Arc の新しい機能 | 複数のデータ コントローラーがサポートされるようになりました <br/> Kube 構成ファイルのような新しい接続ダイアログ オプション <br/> Postgres ダッシュボードの機能強化 |
+| Notebook の新機能 | Windows で 50% 向上した Jupyter サーバーの起動時間 <br/> 右クリックで Jupyter Books を編集するサポートの追加 <br/> URI ノートブック パラメーター化サポートの追加と、[ノートブック パラメーター化のドキュメントの追加](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-parameterization) |
 
 ## <a name="december-2020-hotfix"></a>2020 年 12 月 (修正プログラム)
 

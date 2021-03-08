@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: 647551a314829ef196914e964cbd08237ef085d7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9b5b0e7040bb2797729c9f759ea5a676a5fbc287
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99195298"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837458"
 ---
 # <a name="sql-server-login-dialog-box"></a>[SQL Server ログイン] ダイアログ ボックス
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "99195298"
 |オプション|説明|
 |---   |---        |
 |サーバー|ネットワーク上の SQL Server のインスタンスの名前です。 一覧から server\instance 形式の名前を選択するか、 **[サーバー]** ボックスに server\instance 形式の名前を入力します。 必要に応じて、**SQL Server 構成マネージャー** を使用してクライアント コンピューターでサーバーの別名を作成し、 **[サーバー]** ボックスにその名前を入力することができます。 <br/><br/>SQL Server と同じコンピューターを使用している場合は、「(local)」と入力することができます。 その後、ネットワークに接続されていない SQL Server を実行している場合でも、SQL Server のローカル インスタンスに接続することができます。<br/><br/>さまざまな種類のネットワークに対応するサーバー名の詳細については、[SQL Server のインストール](../../../database-engine/install-windows/install-sql-server.md)に関するページを参照してください。|
-|認証モード|ドロップダウン リストから、次の認証オプションを選択できます。<br/><ul><li>`Windows Authentication:` 現在ログインしているユーザーの Windows アカウントの資格情報を使用した SQL Server に対する認証。</li><li>`SQL Server Authentication:` ログイン ID とパスワードを使用した認証。</li><li>`Active Directory - Integrated:` Azure Active Directory の ID による統合認証。 このモードは、SQL Server に対する Windows 認証でも使用できます。</li><li>`Active Directory - Password:` Azure Active Directory の ID によるユーザー ID とパスワードの認証。</li><li>`Active Directory - Universal with MFA support:` Azure Active Directory の ID による対話型認証。 このモードでは、Azure Multi-Factor Authentication (MFA) がサポートされます。</li><li>`Active Directory - Service Principal:` Azure Active Directory サービス プリンシパルを使用した認証。 **ログイン ID** はアプリケーション (クライアント) ID に設定する必要があります。 **パスワード** はアプリケーション (クライアント) シークレットに設定する必要があります。</li></ul>|
+|認証モード|ドロップダウン リストから、次の認証オプションを選択できます。<br/><ul><li>`Windows Authentication:` 現在ログインしているユーザーの Windows アカウントの資格情報を使用した SQL Server に対する認証。</li><li>`SQL Server Authentication:` ログイン ID とパスワードを使用した認証。</li><li>`Active Directory - Integrated:` Azure Active Directory の ID による統合認証。 このモードは、SQL Server に対する Windows 認証でも使用できます。</li><li>`Active Directory - Password:` Azure Active Directory の ID によるユーザー ID とパスワードの認証。</li><li>`Active Directory - Universal with MFA support:` Azure Active Directory の ID による対話型認証。 このモードを使用すると、Azure Active Directory Multi-Factor Authentication (MFA) がサポートされます。</li><li>`Active Directory - Service Principal:` Azure Active Directory サービス プリンシパルを使用した認証。 **ログイン ID** はアプリケーション (クライアント) ID に設定する必要があります。 **パスワード** はアプリケーション (クライアント) シークレットに設定する必要があります。</li></ul>|
 |サーバー SPN|セキュリティ接続を使用する場合、サーバーのサービス プリンシパル名 (SPN) を指定できます。|
 |Login ID|接続に使用するログイン ID を指定します。 [ログイン ID] テキスト ボックスは、`Authentication Mode` が `SQL Server Authentication`、`Active Directory - Password`、`Active Directory - Universal with MFA support`、または `Active Directory - Service Principal` に設定されている場合にのみ有効になります。|
 |Password|接続に使用するパスワードを指定します。 [パスワード] テキスト ボックスは、`Authentication Mode` が `SQL Server Authentication`、`Active Directory - Password`、または `Active Directory - Service Principal` に設定されている場合にのみ有効になります。|
