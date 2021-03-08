@@ -3,7 +3,7 @@ title: SQL Server 2017 データベース エンジンの非推奨の機能 | Mi
 titleSuffix: SQL Server 2019
 description: SQL Server 2017 (14.x) で引き続き使用できるデータベース エンジンの非推奨の機能について説明します。ただし、新しいアプリケーションではこれらを使用しないでください。
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 03/03/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,24 +17,23 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
-ms.openlocfilehash: e14f354812c99b9ed3e8be86734e3cb8e07db751
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: e3b27292b817d0ec0bf22afcc1e8eaab61864e82
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489476"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186447"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨の機能
 
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
-  このトピックでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]の機能について説明します。 非推奨の機能を新しいアプリケーションで使用しないでください。  
+  このトピックでは、[!INCLUDE[sssql17-md](../includes/sssql17-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の機能について説明します。 非推奨の機能を新しいアプリケーションで使用しないでください。  
   
 機能に非推奨の印が付いている場合、それは次のことを意味します。
-
-- その機能は保守管理状態にあり、それ以外では利用されていません。 新しい変更は行われません。新しい機能との相互運用性に関する変更もありません。
-- Microsoft は、アップグレードを容易にする目的で、今後のリリースから非推奨機能を外さないように努めます。 ただし、非推奨機能が将来の技術革新を制限してしまう場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からそれを永久的に外すことをまれに選択することがあります。
-- 新しい開発作業に非推奨機能を使用することはお勧めしません。      
+- その機能は保守管理状態にあり、それ以外では利用されていません。 新機能との相互運用性への対応に関連するものを含め、新しい変更は行われません。
+- Microsoft は、アップグレードを容易にする目的で、今後のリリースから非推奨機能を外さないように努めます。 ただし、その機能によって将来の技術革新が制限されてしまう場合に、永久的にそれを中止、つまり、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から外すことを選択することがまれにあります。
+- 新規の開発作業では、非推奨の機能を使用しないでください。 既存のアプリケーションについては、これらの機能を現在使用しているアプリケーションをできるだけ早く修正するように計画してください。     
 
 非推奨の機能の使用は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features オブジェクトのパフォーマンス カウンターおよびトレース イベントを使用して監視できます。 詳細については、「 [SQL Server オブジェクトの使用](../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
 
@@ -49,8 +48,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > このリストは、[!INCLUDE[sssql15-md](../includes/sssql16-md.md)] のリストと同じです。 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] で提供が終了または中止されることが新しく発表されたデータベース エンジン機能はありません。
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server の次のバージョンで非推奨となっている機能
-
-次の SQL Server データベース エンジン機能は、SQL Server の次のバージョンでは非推奨となっています。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。 **機能名** の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターと `sys.dm_os_performance_counters` にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。
+以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の今後のバージョンではサポートされません。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。 **機能名** の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターと `sys.dm_os_performance_counters` にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。
 
 ### <a name="back-up-and-restore"></a>バックアップと復元
 
@@ -62,7 +60,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 非推奨の機能 | 代替 | 機能名 | 機能 ID |
 |--------------------|-------------|--------------|------------|
-バージョン 100 (SQL Server 2008 および SQL Server 2008 R2) からアップグレードします。 | SQL Server バージョンが[サポート](/lifecycle/products/?products=sql-server)対象外になったときに、関連するデータベース互換性レベルに非推奨の印が付けられます。 しかし、Microsoft では、アップグレードをより簡単にする目的で、サポートされているあらゆるデータベース互換性レベルで認められているアプリケーションのサポートを可能な限り継続します。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。 | Database compatibility level 100 | 108 |
+バージョン 100 ([!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) からのアップグレード。 | [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バージョンが[サポート](/lifecycle/products/?products=sql-server)対象外になると、関連するデータベース互換性レベルには非推奨の印が付けられます。 しかし、Microsoft では、アップグレードをより簡単にする目的で、サポートされているあらゆるデータベース互換性レベルで認められているアプリケーションのサポートを可能な限り継続します。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。 | Database compatibility level 100 | 108 |
 
 ### <a name="database-objects"></a>データベース オブジェクト
 

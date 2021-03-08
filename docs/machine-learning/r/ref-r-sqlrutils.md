@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 874c3175b830cbcdb5805c5bdb06a747015ff889
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 67e14f965889cbbeecf2a9800d49b70622b88502
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100273013"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186389"
 ---
 # <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils (SQL Server Machine Learning Services の R パッケージ)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -35,7 +35,7 @@ R コードを変換して 1 つのストアド プロシージャ内で実行�
   
 ## <a name="full-reference-documentation"></a>完全なリファレンス ドキュメント
 
-**sqlrutils** パッケージは、複数の Microsoft 製品で配布されていますが、このパッケージを SQL Server または別の製品のどちらで取得しても、使用方法は同じです。 これらの関数は同じであるため、[個々の sqlrutils 関数のドキュメント](/machine-learning-server/r-reference/revoscaler/revoscaler)は Microsoft Machine Learning Server の [R リファレンス](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
+**sqlrutils** パッケージは、複数の Microsoft 製品で配布されていますが、このパッケージを SQL Server または別の製品のどちらで取得しても、使用方法は同じです。 これらの関数は同じであるため、個々の sqlrutils 関数のドキュメントは Microsoft Machine Learning Server の [sqlrutils パッケージ リファレンス](/machine-learning-server/r-reference/sqlrutils/sqlrutils)の下の 1 つの場所にのみ公開されます。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
 
 ## <a name="functions-list"></a>関数の一覧
 
@@ -106,4 +106,4 @@ R セッションで、コマンドラインから「`library(sqlrutils)`」と�
 
 ## <a name="see-also"></a>関連項目
 
-[sqlrutils を使用してストアド プロシージャを作成する方法](how-to-create-a-stored-procedure-using-sqlrutils.md)
+[sqlrutils を使用してストアド プロシージャを作成する方法](/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r)

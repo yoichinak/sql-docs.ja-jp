@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 1/25/2021
-ms.openlocfilehash: 19328956cab5d7c5e449e48d99bbfda1b999ca6f
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/3/2021
+ms.openlocfilehash: 7e55abe0d02a9f9deffffdaa7639d911faad1fa3
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100067120"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102185749"
 ---
 # <a name="sql-assessment-api"></a>SQL Assessment API
 
@@ -24,9 +24,13 @@ SQL Assessment API は、SQL Server の構成が推奨されるベスト プラ�
 
 この API は次を評価するために使用することができます。
  
-* Azure SQL Database Managed Instance と SQL Server バージョン 2012 以降。
+* SQL Server on Azure Virtual Machines
 
-* Linux ベースのシステムの SQL。
+* Azure SQL Database Managed Instance
+
+* SQL Server 2012 以降
+
+* Linux ベースのシステムの SQL
 
 この API は、Azure Data Studio (ADS) の SQL Server 評価拡張機能でも使用されます。
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 87ac1c0759264b00567d5edc2cd9f22727fdd0fa
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 4139b8b53a50aa58329f6a5a5c490d99ee9f0524
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100353864"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186258"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 
@@ -71,7 +71,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
  クライアントは、サーバーが使用する証明書の所有権を検証できる必要があります。 サーバー証明書に署名した証明機関の公開キー証明書をクライアントが持っている場合は、それ以上の構成は必要ありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows には、多くの証明機関の公開キー証明書が含まれています。 サーバー証明書に署名した公的または私的な証明機関に対する公開キー証明書をクライアントが持っていない場合は、サーバー証明書に署名した証明機関の公開キー証明書をインストールする必要があります。  
   
 > [!NOTE]  
-> フェールオーバー クラスターで暗号化を使用する場合、フェールオーバー クラスター内のすべてのノードに対して、仮想サーバーの完全修飾 DNS 名を使用してサーバー証明書をインストールする必要があります。 たとえば、 **_test1.\_\<your company>\*.com*** および **_test2.\_\<your company>\*.com*** というノードを持つ 2 ノードのクラスターと、**_virtsql_*_ という仮想サーバーがあるとします。この場合、_ *_virtsql.\_\<your company>\*.com*** の証明書を両方のノードにインストールする必要があります。 **[SQL Server ネットワークの構成]** の **[virtsql のプロトコル]** プロパティ ボックスの **[強制的に暗号化]** オプションを **[はい]** に設定します。
+> フェールオーバー クラスターで暗号化を使用する場合、フェールオーバー クラスター内のすべてのノードに対して、仮想サーバーの完全修飾 DNS 名を使用してサーバー証明書をインストールする必要があります。 たとえば、***test1.\*\<your company>\*.com*** および **_test2.\_\<your company>\*.com*** というノードを持つ 2 ノードのクラスターと、**_virtsql_*_ という仮想サーバーがあるとします。この場合、_ *_virtsql.\_\<your company>\*.com*** の証明書を両方のノードにインストールする必要があります。 **[SQL Server ネットワークの構成]** の **[virtsql のプロトコル]** プロパティ ボックスの **[強制的に暗号化]** オプションを **[はい]** に設定します。
 
 > [!NOTE]
 > Azure VM 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への Azure Search インデクサーからの暗号化接続を作成するには、「[Azure VM での Azure Search インデクサーから SQL Server への接続の構成](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers)」を参照してください。 
@@ -85,6 +85,9 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス アカウントに、TLS 証明書にアクセスするアクセス許可があること。
 
 - 現在のシステム時刻が証明書の **[有効期間の開始]** プロパティから証明書の **[有効期間の終了]** プロパティまでの範囲にあること。
+
+> [!NOTE]  
+> 証明書の有効性は、暗号化オプションを true に指定して開始されるクライアント接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するときに評価されます。ただし、[サーバー証明書を信頼する] 設定によってオーバーライドされる場合は例外です。 
 
 - 証明書がサーバー認証に使用されていること。 つまり、証明書の **[拡張キー使用法]** プロパティで **[サーバー認証] (1.3.6.1.5.5.7.3.1)** が指定されている必要があります。
 

@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8379a2e1c18ea5da82abda5ad25dee47679a742
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 85c9a992660b63f70d2193acd114e7b07d3c1092
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837785"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186499"
 ---
 # <a name="best-practices-with-query-store"></a>クエリ ストアを使用する際のベスト プラクティス
 
@@ -434,7 +434,7 @@ WHERE is_forced_plan = 1;
 > [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] の Just-In-Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU2 におけるパフォーマンス スケーラビリティの強化 ([KB 4340759](https://support.microsoft.com/help/4340759)) をできるだけ早くインストールするように計画してください。 これらの強化がない場合、データベースでワークロードが重いときにスピンロックの競合が発生し、サーバーのパフォーマンスが低速になる場合があります。 特に、`QUERY_STORE_ASYNC_PERSIST` スピンロックまたは `SPL_QUERY_STORE_STATS_COOKIE_CACHE` スピンロックで激しい競合が発生する場合があります。 この強化を適用すると、クエリ ストアによってスピンロックの競合が発生しなくなります。
 
 > [!IMPORTANT]
-> ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] から [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] の) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Just-In-Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU15、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22、および [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU8 のパフォーマンスのスケーラビリティ向上をできるだけ早くインストールするように計画してください。 この強化がない場合、データベースでアドホック ワークロードが重いときにクエリ ストアによって大量のメモリが使用され、サーバーのパフォーマンスが低速になる場合があります。 この強化を適用すると、クエリ ストアでは、さまざまなコンポーネントが使用できるメモリ量に内部的な制限が設けられます。また、十分なメモリが [!INCLUDE[ssde_md](../../includes/ssde_md.md)] に返されるまでの間、動作モードを読み取り専用に自動的に変更できます。 クエリ ストアの内部的なメモリ制限は、変更の可能性があるため文書化されないことに注意してください。  
+> ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Just-In-Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU15、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU23、および [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 のパフォーマンスのスケーラビリティ向上をできるだけ早くインストールするように計画してください。 この強化がない場合、データベースでアドホック ワークロードが重いときにクエリ ストアによって大量のメモリが使用され、サーバーのパフォーマンスが低速になる場合があります。 この強化を適用すると、クエリ ストアでは、さまざまなコンポーネントが使用できるメモリ量に内部的な制限が設けられます。また、十分なメモリが [!INCLUDE[ssde_md](../../includes/ssde_md.md)] に返されるまでの間、動作モードを読み取り専用に自動的に変更できます。 クエリ ストアの内部的なメモリ制限は、変更の可能性があるため文書化されないことに注意してください。  
 
 
 ## <a name="using-query-store-in-azure-sql-database-active-geo-replication"></a><a name="geosyncreplicas"></a> Azure SQL Database のアクティブ geo レプリケーションでのクエリ ストアの使用

@@ -1,10 +1,8 @@
 ---
-title: サーバー プロパティの表示または変更 (SQL Server) | Microsoft Docs
+title: サーバー プロパティの表示または変更 (SQL Server)
 description: SQL Server Management Studio、Transact-SQL、または SQL Server 構成マネージャーを使用して、SQL Server のインスタンスのプロパティを表示または変更する方法について説明します。
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
@@ -18,13 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: contperf-fy20q4
-ms.openlocfilehash: f6bf2a5d86faba024d58ae6b6f9c539e8bd17003
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 03/14/2017
+ms.openlocfilehash: 80d52c19e5fde8116f7f6fed638e1120064038d3
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100350339"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186062"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>サーバー プロパティの表示または変更 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,15 +94,15 @@ ms.locfileid: "100350339"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+2.  標準バーから、 **[新しいクエリ]** を選択します。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) カタログ ビューをクエリして、現在のサーバー上の各サーバーの構成オプションに関する情報を返します。 この例では、オプションの名前 (`name`) と説明 (`description`)、およびこのオプションが詳細オプションに含まれているかどうか (`is_advanced`) が返されます。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** を選択します。 この例では、 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) カタログ ビューをクエリして、現在のサーバー上の各サーバーの構成オプションに関する情報を返します。 この例では、オプションの名前 (`name`) および説明 (`description`) と、その値 (`value`) と、このオプションが詳細オプションに含まれているかどうか (`is_advanced`) が返されます。  
   
     ```wmimof  
     USE AdventureWorks2012;   
     GO  
-    SELECT name, description, is_advanced  
-    FROM sys.configurations ;   
+    SELECT name, description, value, is_advanced  
+    FROM sys.configurations;   
     GO  
   
     ```  
@@ -111,9 +111,9 @@ ms.locfileid: "100350339"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+2.  標準バーから、 **[新しいクエリ]** を選択します。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、サーバーのプロパティを変更する方法を示します。 この例では、 `fill factor` オプションの値を `100`に変更します。 変更を有効にするには、サーバーを再起動する必要があります。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** を選択します。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、サーバーのプロパティを変更する方法を示します。 この例では、 `fill factor` オプションの値を `100`に変更します。 変更を有効にするには、サーバーを再起動する必要があります。  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -137,11 +137,11 @@ GO
   
 1.  **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  **SQL Server 構成マネージャー** で **[SQL Server のサービス]** をクリックします。  
+2.  **SQL Server 構成マネージャー** で、 **[SQL Server のサービス]** を選択します。  
   
-3.  詳細ペインで **[SQL Server (\<**_instancename_**>)]** を右クリックし、 **[プロパティ]** をクリックします。  
+3.  詳細ペインで、 **[SQL Server (\<**_instancename_**>)]** を右クリックして、 **[プロパティ]** を選択します。  
   
-4.  **[SQL Server (\<**_instancename_**>) のプロパティ]** ダイアログ ボックスの **[サービス]** タブまたは **[詳細設定]** タブで、サーバーのプロパティを変更し、 **[OK]** をクリックします。  
+4.  **[SQL Server (\<**_instancename_**>) のプロパティ]** ダイアログ ボックスの **[サービス]** タブまたは **[詳細設定]** タブで、サーバーのプロパティを変更し、 **[OK]** を選択します。  
   
 ## <a name="restart-after-changes"></a><a name="FollowUp"></a>変更したら再起動する
 

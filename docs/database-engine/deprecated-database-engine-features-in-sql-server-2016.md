@@ -15,12 +15,12 @@ helpviewer_keywords:
 - deprecation [SQL Server], feature list
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 518b29507e7992b267922e09c97bf98b1657205d
-ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
+ms.openlocfilehash: e4227e17c9b8f3319e771d7de9d93fefddbaa487
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100525164"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186140"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 データベース エンジンの非推奨の機能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -28,9 +28,9 @@ ms.locfileid: "100525164"
 このトピックでは、[!INCLUDE[sssql15-md](../includes/sssql16-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の機能について説明します。 非推奨の機能を新しいアプリケーションで使用しないでください。  
   
 機能に非推奨の印が付いている場合、それは次のことを意味します。
--  その機能は保守管理状態にあり、それ以外では利用されていません。 新しい変更は行われません。新しい機能との相互運用性に関する変更もありません。
--  Microsoft は、アップグレードを容易にする目的で、今後のリリースから非推奨機能を外さないように努めます。 ただし、非推奨機能が将来の技術革新を制限してしまう場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からそれを永久的に外すことをまれに選択することがあります。
--  新しい開発作業に非推奨機能を使用することはお勧めしません。      
+- その機能は保守管理状態にあり、それ以外では利用されていません。 新機能との相互運用性への対応に関連するものを含め、新しい変更は行われません。
+- Microsoft は、アップグレードを容易にする目的で、今後のリリースから非推奨機能を外さないように努めます。 ただし、その機能によって将来の技術革新が制限されてしまう場合に、永久的にそれを中止、つまり、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から外すことを選択することがまれにあります。
+- 新規の開発作業では、非推奨の機能を使用しないでください。 既存のアプリケーションについては、これらの機能を現在使用しているアプリケーションをできるだけ早く修正するように計画してください。     
 
 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] については、「[SQL Server 2017 データベース エンジンの非推奨機能](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)」を参照してください。
 
@@ -44,7 +44,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```  
   
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server の次のバージョンで非推奨となっている機能
- 以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされません。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。 **機能名** の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターと `sys.dm_os_performance_counters` にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。  
+ 以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の今後のバージョンではサポートされません。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。 **機能名** の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターと `sys.dm_os_performance_counters` にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。  
   
 |カテゴリ|非推奨の機能|代替|機能名|機能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
