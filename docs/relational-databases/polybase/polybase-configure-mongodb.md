@@ -1,7 +1,7 @@
 ---
 title: 外部データへのアクセス:MongoDB - PolyBase
 description: この記事では、SQL Server インスタンス上で PolyBase を使用して、MongoDB 上の外部データに対してクエリを実行する方法について説明します。 外部データを参照する外部テーブルを作成します。
-ms.date: 12/13/2019
+ms.date: 03/05/2021
 ms.metadata: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15'
-ms.openlocfilehash: 306feebece733cf382f486dc686117016800f4d1
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: a9d975bf5a65ec8ece1aa2f3b1e957007046f4c8
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351789"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247512"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB 上の外部データにアクセスするための PolyBase の構成
 
@@ -42,29 +42,32 @@ MongoDB データ ソースのデータに対してクエリを実行するに�
 
 1. MongoDB ソースにアクセスするために、データベース スコープ資格情報を作成します。
 
-    ```sql
-    /*  specify credentials to external data source
-    *  IDENTITY: user name for external source. 
-    *  SECRET: password for external source.
-    */
-    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
-    ```
-    
-   > [!IMPORTANT] 
-   > PolyBase 用の MongoDB ODBC コネクタでサポートされるのは、Kerberos 認証ではなく、基本認証のみです。    
-    
-1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
+   次のスクリプトは、データベース スコープ資格情報を作成します。 スクリプトを実行する前に、お使いの環境に合わせて更新します。
+
+    - `<credential_name>` を資格情報の名前に置き換えます。
+    - `<username>` を外部ソースのユーザー名に置き換えます。
+    - `<password>` を適切なパスワードに置き換えます。 
 
     ```sql
-    /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *CONNECTION_OPTIONS: Specify driver location
-    *  CREDENTIAL: the database scoped credential, created above.
-    */
+    CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
+    ```
+
+   > [!IMPORTANT]
+   > PolyBase 用の MongoDB ODBC コネクタでサポートされるのは、Kerberos 認証ではなく、基本認証のみです。
+
+1. 外部データ ソースを作成します。
+
+    次のスクリプトは、外部データ ソースを作成します。 参考情報については、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」を参照してください。 スクリプトを実行する前に、お使いの環境に合わせて更新します。
+
+    - 場所を更新します。 お使いの環境に合わせて `<server>` と `<port>` を設定します。
+    - `<credential_name>` を前のステップで作成した資格情報の名前に置き換えます。
+    - 外部ソースに対してプッシュダウン計算を指定する場合は、必要に応じて `PUSHDOWN = ON` または `PUSHDOWN = OFF` を指定できます。
+
+    ```sql
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH (LOCATION = 'mongodb://<server>[:<port>]',
+    WITH (LOCATION = '<mongodb://<server>[:<port>]>',
     -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = credential_name);
+    CREDENTIAL = <credential_name>);
     ```
 
 1. **省略可能:** 外部テーブルの統計を作成します。
@@ -75,12 +78,17 @@ MongoDB データ ソースのデータに対してクエリを実行するに�
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
     ```
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 >外部データ ソースを作成すると、[CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) コマンドを使用して、そのソース上でクエリ可能なテーブルを作成することができます。
 >
 >例については、[MongoDB の外部テーブルの作成](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb)に関する記述を参照してください。
 
+## <a name="mongodb-connection-options"></a>MongoDB の接続オプション
+
+MongoDB の接続オプションの詳細については、[接続文字列の URI 形式に関する MongoDB のドキュメント](https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options)を照してください。
+
 ## <a name="flattening"></a>フラット化
+
 フラット化は、MongoDB ドキュメント コレクションの入れ子になったデータと繰り返しデータに対して有効になります。 ユーザーは、入れ子になったデータや繰り返しデータを含む可能性のある MongoDB ドキュメント コレクションに対して `create an external table` を有効にし、リレーショナル スキーマを明示的に指定する必要があります。 JSON の入れ子になったデータ型/繰り返しデータ型は次のようにフラット化されます
 
 * オブジェクト: 中かっこで囲まれている順序付けられていないキー/値のコレクション (入れ子)
@@ -111,10 +119,10 @@ MongoDB データ ソースのデータに対してクエリを実行するに�
 
 住所オブジェクトは次のようにフラット化されます。
 
-* Nested field restaurant.address.building becomes restaurant.address_building
-* Nested field restaurant.address.coord becomes restaurant.address_coord
-* Nested field restaurant.address.street becomes restaurant.address_street
-* Nested field restaurant.address.zipcode becomes restaurant.address_zipcode
+- 入れ子になったフィールド `restaurant.address.building` は `restaurant.address_building` になります
+- 入れ子になったフィールド `restaurant.address.coord` は `restaurant.address_coord` になります
+- 入れ子になったフィールド `restaurant.address.street` は `restaurant.address_street` になります
+- 入れ子になったフィールド `restaurant.address.zipcode` は `restaurant.address_zipcode` になります
 
 採点配列は次のようにフラット化されます。
 
@@ -128,7 +136,28 @@ MongoDB データ ソースのデータに対してクエリを実行するに�
 
 ## <a name="cosmos-db-connection"></a>Cosmos DB 接続
 
-Cosmos DB の Mongo API および Mongo DB PolyBase コネクタを使用すると、**Cosmos DB インスタンス** の外部テーブルを作成することができます。 これは、上記と同じ手順に従って行います。 データベースのスコープ資格情報、サーバーのアドレス、ポート、場所の文字列が Cosmos DB サーバーのものを反映していることを確認してください。 
+Cosmos DB の Mongo API および Mongo DB PolyBase コネクタを使用すると、**Cosmos DB インスタンス** の外部テーブルを作成することができます。 これは、上記と同じ手順に従って行います。 データベースのスコープ資格情報、サーバーのアドレス、ポート、場所の文字列が Cosmos DB サーバーのものを反映していることを確認してください。
+
+## <a name="examples"></a>例
+
+次の例では、次のパラメーターを使用して外部データ ソースを作成します。
+
+| パラメーター | [値]|
+|---|---|
+| 名前 | `external_data_source_name`|
+| サービス | `mongodb0.example.com`|
+| インスタンス | `27017`|
+| レプリカ セット | `myRepl`|
+| TLS | `true`|
+| プッシュダウン計算 | `On`|
+
+```sql
+CREATE EXTERNAL DATA SOURCE external_data_source_name
+    WITH (LOCATION = 'mongodb://mongodb0.example.com:27017',
+    CONNECTION_OPTION = 'replicaSet=myRepl','tls=true',
+    PUSHDOWN = ON ,
+    CREDENTIAL = credential_name);
+```
 
 ## <a name="next-steps"></a>次のステップ
 

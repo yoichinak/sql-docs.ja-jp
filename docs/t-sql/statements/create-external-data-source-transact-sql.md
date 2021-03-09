@@ -2,7 +2,7 @@
 description: CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/26/2020
+ms.date: 03/05/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 807994f4a6e1f3c7b426c3a7c47ecdf7c152ea3b
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 4f503a3382f0ae4ec8ea7fb8f43e91254551e73c
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100070686"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247369"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -71,7 +71,7 @@ PolyBase クエリ用の外部データ ソースを作成します。 外部デ
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
-    [ [ , ] CONNECTION_OPTIONS = '<name_value_pairs>']
+    [ [ , ] CONNECTION_OPTIONS = '<key_value_pairs>'[,...]]
     [ [ , ] CREDENTIAL = <credential_name> ]
     [ [ , ] PUSHDOWN = { ON | OFF } ]
     [ [ , ] TYPE = { HADOOP | BLOB_STORAGE } ]
@@ -127,9 +127,14 @@ WITH
 `ODBC` 経由での外部データ ソースへの接続時に、追加のオプションを指定します。 複数の接続オプションを使用するには、セミコロンで区切ります。
 
 
-最低でもドライバーの名前が必要ですが、設定に便利で、トラブルシューティングに役立てることができる `APP='<your_application_name>'` や `ApplicationIntent= ReadOnly|ReadWrite` などの他のオプションがあります。
+汎用の `ODBC` 接続と、SQL Server、Oracle、Teradata、MongoDB、CosmosDB の組み込みの `ODBC` コネクタの両方に適用されます。
 
-許可されている [CONNECTION_OPTIONS][connection_options] の一覧については、`ODBC` 製品ドキュメントを参照してください
+`key_value_pair` は、キーワードであり、特定の接続オプションの値です。 使用可能なキーワードと値は、外部データ ソースの種類によって異なります。最低でもドライバーの名前が必要ですが、設定に便利で、トラブルシューティングに役立てることができる `APP='<your_application_name>'` や `ApplicationIntent= ReadOnly|ReadWrite` などの他のオプションがあります。
+
+追加情報については、次を参照してください。
+
+- [接続文字列キーワードの使用][connection_options]
+- [ODBC ドライバー接続文字列キーワード][connection_option_keyword]
 
 ### <a name="pushdown--on--off"></a>PUSHDOWN = *ON | OFF*
 
@@ -316,7 +321,9 @@ WITH
 
 ### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. PolyBase 接続を使用して SQL Server 名前付きインスタンスを参照する外部データソースを作成する ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスを参照する外部データソースを作成する場合は、CONNECTION_OPTIONS を使用してインスタンス名を指定できます。 以下の例では、`WINSQL2019` がホスト名で、`SQL2019` がインスタンス名になります。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスを参照する外部データ ソースを作成するには、`CONNECTION_OPTIONS` を使用してインスタンス名を指定します。 
+
+以下の例では、`WINSQL2019` がホスト名で、`SQL2019` がインスタンス名になります。 `'Server=%s\SQL2019'` はキーと値のペアです。
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
@@ -1154,6 +1161,7 @@ WITH
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
 [connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
+[connection_option_keyword]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md#odbc-driver-connection-string-keywords
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
 [intro_eq]: /azure/azure-sql/database/elastic-query-overview

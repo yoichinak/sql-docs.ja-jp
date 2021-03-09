@@ -1,5 +1,5 @@
 ---
-title: ODBC を使用した接続
+title: Linux または macOS からの接続
 description: Microsoft ODBC Driver for SQL Server を使用して、Linux または macOS からデータベースへの接続を作成する方法について説明します。
 ms.custom: ''
 ms.date: 09/10/2020
@@ -9,20 +9,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
-- data source names
-- connection string keywords
-- DSNs
+- connect to linux
+- configure odbc.ini
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d1bdbcbb34be9cbfa075ead7e1cd03ec813a5d9d
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727441"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247310"
 ---
-# <a name="connecting-to-sql-server"></a>SQL Server への接続
+# <a name="connecting-from-linux-or-macos"></a>Linux または macOS からの接続
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -79,7 +78,7 @@ TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets 
 
 詳しくは、「[SQL Server への接続の暗号化](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))」および「[検証を伴わない暗号化の使用](../../../relational-databases/native-client/features/using-encryption-without-validation.md)」をご覧ください。
 
-**Encrypt** と **TrustServerCertificate**の設定に関係なく、サーバー ログインの資格情報 (ユーザー名とパスワード) は常に暗号化されます。 次の表は、 **Encrypt** 設定と **TrustServerCertificate** 設定の効果の一覧です。  
+**Encrypt** と **TrustServerCertificate** の設定に関係なく、サーバー ログインの資格情報 (ユーザー名とパスワード) は常に暗号化されます。 次の表は、 **Encrypt** 設定と **TrustServerCertificate** 設定の効果の一覧です。  
 
 ||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  

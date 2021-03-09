@@ -8,12 +8,12 @@ ms.date: 01/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 652db6f752f8bf46ad2b7d4779063c79359e3a33
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 42638520dd0d7391a10217dc7f7fdd2ce708189f
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100350940"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247492"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン
 
@@ -51,7 +51,7 @@ mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /de
 
 #### <a name="disk-partitioning-and-configuration-recommendations"></a>ディスクのパーティション分割と構成に関する推奨事項
 
-SQL Server には、RAID 構成を使用することをお勧めします。 デプロイされたファイル システムのストライプ ユニット (sunit) とストライプ幅は、RAID ジオメトリと一致している必要があります。 XFS ファイルシステムをベースにしたログ ボリュームの例を次に示します。 
+SQL Server には、RAID 構成を使用することをお勧めします。 デプロイされたファイル システムのストライプ ユニット (sunit) とストライプ幅は、RAID ジオメトリと一致している必要があります。 XFS ファイルシステムをベースにしたログ ボリュームの例を次に示します。
 
 ```bash
 # Creating a log volume, using 6 devices, in RAID 10 configuration with 64KB stripes
@@ -71,8 +71,9 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 ```
 
 ログ アレイは、64k のストライプを持つ 6 ドライブの RAID 10 です。 ご覧のとおり、
-   1. "sunit = 16 ブロック"、16*4,096 ブロック サイズ = 64k は、ストライプ サイズと一致します。 
-   2. "swidth = 48 ブロック"、swidth/sunit = 3 は、パリティ ドライブを除いたアレイ内のデータ ドライブの数です。 
+
+- "sunit = 16 ブロック"、16*4,096 ブロック サイズ = 64k は、ストライプ サイズと一致します。
+- "swidth = 48 ブロック"、swidth/sunit = 3 は、パリティ ドライブを除いたアレイ内のデータ ドライブの数です。
 
 #### <a name="file-system-configuration-recommendation"></a>ファイル システムの構成に関する推奨事項
 
@@ -216,7 +217,7 @@ tuned-adm list
 | 設定 | 値 | 詳細情報 |
 |---|---|---|
 | ディスク `readahead` | 4096 | `blockdev` コマンドを参照してください |
-| sysctl の設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 1 | **sysctl** コマンドを参照してください |
+| sysctl の設定 | kernel.sched_min_granularity_ns = 15000000<br/>kernel.sched_wakeup_granularity_ns = 2000000<br/>vm.dirty_ratio = 80<br/>vm.dirty_background_ratio = 3<br/>vm.swappiness = 1 | **sysctl** コマンドを参照してください |
 
 **説明:**
 
@@ -274,117 +275,117 @@ tuned-adm profile mssql
 
 #### <a name="network-setting-recommendations"></a>ネットワーク設定に関する推奨事項
 
-記憶域と CPU に関する推奨事項と同様に、次に示すネットワークに固有の推奨事項も参考になります。 以下に記載されているすべての設定が、NIC の違いに関係なく使用できるわけではありません。 これらの各オプションのガイダンスについては、NIC ベンダーに問い合わせおよび相談してください。 運用環境に適用する前に、開発環境でこれをテストして構成します。 以下で説明するオプションに示されている例を参照してください。使用しているコマンドは、NIC の種類とベンダーに固有です。 
+記憶域と CPU に関する推奨事項と同様に、次に示すネットワークに固有の推奨事項も参考になります。 以下に記載されているすべての設定が、NIC の違いに関係なく使用できるわけではありません。 これらの各オプションのガイダンスについては、NIC ベンダーに問い合わせおよび相談してください。 運用環境に適用する前に、開発環境でこれをテストして構成します。 以下で説明するオプションに示されている例を参照してください。使用しているコマンドは、NIC の種類とベンダーに固有です。
 
 1. ネットワーク ポートのバッファー サイズの構成: 次の例では、NIC は Intel ベースの NIC で、"eth0" という名前です。 Intel ベースの NIC の場合、推奨されるバッファー サイズは 4 KB (4096) です。 事前設定された最大値を確認し、次に示すサンプル コマンドを使用して構成します。
 
- ```bash
-         #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
-         ethtool -g eth0
-         #command to set both the rx(recieve) and tx (transmit) buffer size to 4 KB. 
-         ethtool -G eth0 rx 4096 tx 4096
-         #command to check the value is properly configured is:
-         ethtool -g eth0
-  ```
+   ```bash
+            #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
+            ethtool -g eth0
+            #command to set both the rx(recieve) and tx (transmit) buffer size to 4 KB. 
+            ethtool -G eth0 rx 4096 tx 4096
+            #command to check the value is properly configured is:
+            ethtool -g eth0
+   ```
 
 2. ジャンボ フレームを有効にする: ジャンボ フレームを有効にする前に、クライアントと SQL Server との間のネットワーク パケット パスに必要なすべてのネットワーク スイッチ、ルーター、およびその他で、ジャンボ フレームがサポートされていることを確認します。 そうした場合にのみ、ジャンボ フレームを有効にするとパフォーマンスが向上します。 ジャンボ フレームが有効になったら、SQL Server に接続し、次のように `sp_configure` を使用してネットワーク パケットのサイズを 8060 に変更します。
 
-```bash
-         #command to set jumbo frame to 9014 for a Intel NIC named eth0 is
-         ifconfig eth0 mtu 9014
-         #verify the setting using the command:
-         ip addr | grep 9014
-```
+   ```bash
+            #command to set jumbo frame to 9014 for a Intel NIC named eth0 is
+            ifconfig eth0 mtu 9014
+            #verify the setting using the command:
+            ip addr | grep 9014
+   ```
 
-```sql
-         sp_configure 'network packet size' , '8060'
-         go
-         reconfigure with override
-         go
-```
+   ```sql
+            sp_configure 'network packet size' , '8060'
+            go
+            reconfigure with override
+            go
+   ```
 
 3. 既定として、アダプティブ RX または TX の IRQ 結合用にポートを設定することをお勧めします。つまり、割り込み配信は、パケット レートが低いときの待機時間を改善するとともに、パケット レートが高いときのスループットを改善するように調整されます。 この設定は、すべての異なるネットワーク インフラストラクチャで使用できるとは限りません。そのため、既存のネットワーク インフラストラクチャを確認し、これがサポートされていることを確かめてください。 次の例は、Intel ベースの NIC である "eth0" という名前の NIC の場合です。
 
-```bash
-         #command to set the port for adaptive RX/TX IRQ coalescing
-         echtool -C eth0 adaptive-rx on
-         echtool -C eth0 adaptive-tx on
-         #confirm the setting using the command:
-         ethtool -c eth0
-```
+   ```bash
+            #command to set the port for adaptive RX/TX IRQ coalescing
+            echtool -C eth0 adaptive-rx on
+            echtool -C eth0 adaptive-tx on
+            #confirm the setting using the command:
+            ethtool -c eth0
+   ```
 
-> [!NOTE]
-> ベンチマークのための環境など、ハイ パフォーマンス環境で予測可能な動作を行うには、アダプティブ RX または TX の IRQ 結合を無効にして、明示的に RX または TX 割り込みの結合を設定します。 RX または TX の IRQ 結合を無効にしてから具体的に値を設定するコマンドの例を参照してください。
+   > [!NOTE]
+   > ベンチマークのための環境など、ハイ パフォーマンス環境で予測可能な動作を行うには、アダプティブ RX または TX の IRQ 結合を無効にして、明示的に RX または TX 割り込みの結合を設定します。 RX または TX の IRQ 結合を無効にしてから具体的に値を設定するコマンドの例を参照してください。
 
-```bash
-         #commands to disable adaptive RX/TX IRQ coalescing
-         echtool -C eth0 adaptive-rx off
-         echtool -C eth0 adaptive-tx off
-         #confirm the setting using the command:
-         ethtool -c eth0
-         #Let us set the rx-usecs parameter which specify how many microseconds after at least 1 packet is received before generating an interrupt, and the [irq] parameters are the corresponding delays in updating the #status when the interrupt is disabled. For Intel bases NICs below are good values to start with:
-         ethtool -C eth0 rx-usecs 100 tx-frames-irq 512
-         #confirm the setting using the command:
-         ethtool -c eth0
-```
+   ```bash
+            #commands to disable adaptive RX/TX IRQ coalescing
+            echtool -C eth0 adaptive-rx off
+            echtool -C eth0 adaptive-tx off
+            #confirm the setting using the command:
+            ethtool -c eth0
+            #Let us set the rx-usecs parameter which specify how many microseconds after at least 1 packet is received before generating an interrupt, and the [irq] parameters are the corresponding delays in updating the #status when the interrupt is disabled. For Intel bases NICs below are good values to start with:
+            ethtool -C eth0 rx-usecs 100 tx-frames-irq 512
+            #confirm the setting using the command:
+            ethtool -c eth0
+   ```
 
 4. RSS (Receive-Side Scaling) を有効にし、既定で RSS キューの rx と tx の側を組み合わせることもお勧めします。 Microsoft サポートとやり取りするときに、RSS を無効にするとパフォーマンスが向上したという特定のシナリオがありました。 運用環境に適用する前に、テスト環境でこの設定をテストしてください。 次に示すコマンドの例は、Intel NIC の場合です。
 
-```bash
-         #command to get pre-set maximums
-         ethtool -l eth0 
-         #note the pre-set "Combined" maximum value. let's consider for this example, it is 8.
-         #command to combine the queues with the value reported in the pre-set "Combined" maximum value:
-         ethtool -L eth0 combined 8
-         #you can verify the setting using the command below
-         ethtool -l eth0
-```
+   ```bash
+            #command to get pre-set maximums
+            ethtool -l eth0 
+            #note the pre-set "Combined" maximum value. let's consider for this example, it is 8.
+            #command to combine the queues with the value reported in the pre-set "Combined" maximum value:
+            ethtool -L eth0 combined 8
+            #you can verify the setting using the command below
+            ethtool -l eth0
+   ```
 
 5. NIC ポートの IRQ アフィニティを操作します。 IRQ アフィニティを調整することによって、期待されるパフォーマンスを実現するには、Linux でのサーバー トポロジ、NIC ドライバー スタック、既定の設定、irqbalance の設定の処理など、重要ないくつかのパラメーターについて検討してください。 NIC ポートの IRQ アフィニティ設定の最適化は、サーバー トポロジに関する知識に基づいて行い、irqbalance を無効にし、NIC ベンダー固有の設定を使用します。 次に、この構成の説明に役立つ、Mellanox 固有のネットワーク インフラストラクチャの例を示します。 コマンドは環境に応じて変わることにご注意ください。 詳細については、NIC ベンダーにお問い合わせください。
 
-```bash
-         #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
-         systemctl disable irqbalance.service
-         #or
-         irqbalance --oneshot
+   ```bash
+            #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
+            systemctl disable irqbalance.service
+            #or
+            irqbalance --oneshot
 
-         #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
-         tar -xvf mlnx_tuning_scripts.tar.gz
-         # be sure, common_irq_affinity.sh is executable. if not, 
-         # chmod +x common_irq_affinity.sh       
+            #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
+            tar -xvf mlnx_tuning_scripts.tar.gz
+            # be sure, common_irq_affinity.sh is executable. if not, 
+            # chmod +x common_irq_affinity.sh       
 
-         #display IRQ affinity for Mellanox NIC port; e.g eth0
-         ./show_irq_affinity.sh eth0
+            #display IRQ affinity for Mellanox NIC port; e.g eth0
+            ./show_irq_affinity.sh eth0
 
-         #optimize for best throughput performance
-         ./mlnx_tune -p HIGH_THROUGHPUT
+            #optimize for best throughput performance
+            ./mlnx_tune -p HIGH_THROUGHPUT
 
-         #set hardware affinity to the NUMA node hosting physically the NIC and its port
-         ./set_irq_affinity_bynode.sh `\cat /sys/class/net/eth0/device/numa_node` eth0
+            #set hardware affinity to the NUMA node hosting physically the NIC and its port
+            ./set_irq_affinity_bynode.sh `\cat /sys/class/net/eth0/device/numa_node` eth0
 
-         #verify IRQ affinity
-         ./show_irq_affinity.sh eth0
+            #verify IRQ affinity
+            ./show_irq_affinity.sh eth0
 
-         #add IRQ coalescing optimizations
-         ethtool -C eth0 adaptive-rx off
-         ethtool -C eth0 adaptive-tx off
-         ethtool -C eth0  rx-usecs 750 tx-frames-irq 2048
+            #add IRQ coalescing optimizations
+            ethtool -C eth0 adaptive-rx off
+            ethtool -C eth0 adaptive-tx off
+            ethtool -C eth0  rx-usecs 750 tx-frames-irq 2048
 
-         #verify the settings
-         ethtool -c eth0
-```
+            #verify the settings
+            ethtool -c eth0
+   ```
 
 6. 上記の変更が完了したら、次のコマンドを使用して NIC の速度を確認し、確実に予想と一致しているようにします。
 
-```bash
-         ethtool eth0 | grep -i Speed
-```
+   ```bash
+            ethtool eth0 | grep -i Speed
+   ```
 
 #### <a name="additional-advanced-kernelos-configuration"></a>その他の高度なカーネルおよび OS の構成
 
-1. 最適なストレージ IO パフォーマンスを得るために、ブロック デバイスに Linux マルチキュー スケジューリングを使用することをお勧めします。 これにより、高速ソリッドステート ドライブ (SSD) およびマルチコア システムを使用して、ブロック レイヤーのパフォーマンスを適切にスケーリングすることができます。 Linux ディストリビューションで既定で有効になるかどうかは、ドキュメントでご確認ください。 その他のほとんどの場合は、**scsi_mod.use_blk_mq=y** を使用してカーネルを起動すると有効になります。ただし、使用している Linux ディストリビューションのドキュメントには追加のガイダンスが含まれる場合があります。 これは、アップストリームの Linux カーネルと一致しています。
+- 最適なストレージ IO パフォーマンスを得るために、ブロック デバイスに Linux マルチキュー スケジューリングを使用することをお勧めします。 これにより、高速ソリッドステート ドライブ (SSD) およびマルチコア システムを使用して、ブロック レイヤーのパフォーマンスを適切にスケーリングすることができます。 Linux ディストリビューションで既定で有効になるかどうかは、ドキュメントでご確認ください。 その他のほとんどの場合は、**scsi_mod.use_blk_mq=y** を使用してカーネルを起動すると有効になります。ただし、使用している Linux ディストリビューションのドキュメントには追加のガイダンスが含まれる場合があります。 これは、アップストリームの Linux カーネルと一致しています。
 
-1. マルチパス IO は SQL Server のデプロイによく使用されるため、**dm_mod.use_blk_mq=y** カーネル ブート オプションを有効にすることで、デバイス マッパー (DM) マルチパス ターゲットも `blk-mq` インフラストラクチャを使用するように構成する必要があります。 既定値は `n` (無効) です。 基になる SCSI デバイスで `blk-mq` が使用される場合、この設定により、DM レイヤーでのロックのオーバーヘッドが減ります。 構成方法に関する追加のガイダンスについては、使用している Linux ディストリビューションのドキュメントを参照してください。
+- マルチパス IO は SQL Server のデプロイによく使用されるため、**dm_mod.use_blk_mq=y** カーネル ブート オプションを有効にすることで、デバイス マッパー (DM) マルチパス ターゲットも `blk-mq` インフラストラクチャを使用するように構成する必要があります。 既定値は `n` (無効) です。 基になる SCSI デバイスで `blk-mq` が使用される場合、この設定により、DM レイヤーでのロックのオーバーヘッドが減ります。 構成方法に関する追加のガイダンスについては、使用している Linux ディストリビューションのドキュメントを参照してください。
 
 #### <a name="configure-swapfile"></a>スワップ ファイルの構成
 

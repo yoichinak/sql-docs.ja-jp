@@ -6146,7 +6146,7 @@ items:
             href: dma/dma-assess-ssis.md
           - name: 評価の保存と読み込み
             href: dma/dma-save-load-assessments.md
-          - name: 適切な Azure SQL Database SKU の特定
+          - name: ターゲット Azure SQL SKU の特定
             href: dma/dma-sku-recommend-sql-db.md
           - name: SQL Server の新しいバージョンへのアップグレード
             href: dma/dma-migrateonpremsql.md
@@ -7213,7 +7213,7 @@ items:
                   - name: Kerberos の接続性
                     href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
                   - name: PolyBase の FAQ
-                    href: relational-databases/polybase/polybase-faq.md
+                    href: relational-databases/polybase/polybase-faq.yml
                   - name: PolyBase のエラーと考えられる解決策
                     href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
           - name: リファレンス
@@ -10037,7 +10037,7 @@ items:
               - name: SQL Server 2017
                 href: linux/sql-server-linux-editions-and-components-2017.md
           - name: よく寄せられる質問
-            href: linux/sql-server-linux-faq.md
+            href: linux/sql-server-linux-faq.yml
       - name: クイックスタート
         items:
           - name: インストールと接続 - Red Hat
@@ -11513,7 +11513,7 @@ items:
         href: relational-databases/system-catalog-views/catalog-views-transact-sql.md
         items:
           - name: SQL Server システム カタログに対するクエリに関してよく寄せられる質問
-            href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md
+            href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml
           - name: スキーマ - sys.schemas
             href: relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md
           - name: メッセージ (エラー) - sys.messages
