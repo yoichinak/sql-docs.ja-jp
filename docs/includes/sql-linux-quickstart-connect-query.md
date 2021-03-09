@@ -135,7 +135,7 @@ Windows で実行し、Linux 上の SQL Server に接続するその他のツー
 * [オフライン インストール](../linux/sql-server-linux-setup.md#offline):オフライン インストール パッケージを手動でダウンロードする方法を説明する
 
 > [!TIP]
-> よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](../linux/sql-server-linux-faq.md)」を参照してください。
+> よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](../linux/sql-server-linux-faq.yml)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 
