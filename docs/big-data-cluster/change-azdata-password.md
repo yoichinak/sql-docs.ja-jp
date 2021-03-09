@@ -4,16 +4,16 @@ description: '`AZDATA_PASSWORD` を手動で更新する'
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 03/01/2021
+ms.date: 03/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 062e574772c2a44b78772da4a979c81ed3deb959
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 71fe901915b533c4af25e98c3573aaaa00b82d53
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101836269"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247388"
 ---
 # <a name="manually-update-azdata_password"></a>`AZDATA_PASSWORD` を手動で更新する
 
@@ -34,7 +34,7 @@ ms.locfileid: "101836269"
    ```
 
    b. シークレットを Base64 でデコードします。
-   
+
    ```bash
    echo <password from kubectl command>  | base64 --decode && echo
    ```
@@ -95,18 +95,18 @@ ms.locfileid: "101836269"
 [Grafana](app-monitor.md) のパスワードを手動で更新する場合は、次のオプションのようにします。
 
 1. htpasswd ユーティリティが必要です。 これは任意のクライアント コンピューターにインストールできます。
-    
-    #### <a name="for-ubuntu"></a>[Ubuntu の場合](#tab/ubuntu): 
-    ```bash
-    sudo apt install apache2-utils
-    ```
-    
-    #### <a name="for-rhel"></a>[RHEL の場合](#tab/rhel): 
-    ```bash
-    sudo yum install httpd-tools
-    ```
-    
-    ---
+  
+### <a name="for-ubuntu"></a>[Ubuntu の場合](#tab/for-ubuntu)
+Ubuntu Linux では、以下を使用できます。
+```bash
+sudo apt install apache2-utils
+```
+### <a name="for-rhel"></a>[RHEL の場合](#tab/for-rhel)
+Red Hat Enterprise Linux では、以下を使用できます。
+```bash
+sudo yum install httpd-tools
+```
+---
 
 2. 新しいパスワードを生成します。 
     
@@ -154,23 +154,19 @@ ms.locfileid: "101836269"
      
     必要に応じて、mgmtproxy ポッドの名前を特定します。
     
-    #### <a name="for-windows"></a>[Windows の場合](#tab/windows): 
-    Windows サーバーでは、以下を使用できます。
-    
-    ```bash 
+    ### <a name="for-windows"></a>[Windows の場合](#tab/for-windows)
+     Windows サーバーでは、以下を使用できます。
+    ```bash
     kubectl get pods -n <namespace> -l app=mgmtproxy
     ```
-    
-    #### <a name="for-linux"></a>[Linux の場合](#tab/linux): 
-    Linux では、以下を使用できます。
-    
+    ### <a name="for-linux"></a>[Linux の場合](#tab/for-linux)
+     Linux では、以下を使用できます。
     ```bash
     kubectl get pods -n <namespace> | grep 'mgmtproxy'
     ```
-    
     ---
-    
-    mgmtproxy ポッドを削除します。
+
+     mgmtproxy ポッドを削除します。
     ```bash
     kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
     ```
@@ -178,13 +174,15 @@ ms.locfileid: "101836269"
 7. mgmtproxy ポッドがオンラインになり、Grafana ダッシュボードが開始されるまで待ちます。  
  
     長く待つことはなく、ポッドは数秒以内にオンラインになるはずです。 ポッドの状態を確認するには、前のステップで使用したのと同じ `get pods` コマンドを使用できます。 
-    mgmtproxy ポッドがすぐに準備完了状態に戻らない場合は、kubectl を使用してポッドを記述します。
-    
+
+    mgmtproxy ポッドがすぐに準備完了状態に戻らない場合は、kubectl を使用してポッドを記述します。 
+
     ```bash
     kubectl describe pods mgmtproxy-xxxxx  -n <namespace>
-    ```
+    ```   
     
-    トラブルシューティングを行ったり、さらにログを収集したりするには、Azure Data CLI の `[azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md)` コマンドを使用します。
+    トラブルシューティングを行ったり、さらにログを収集したりするには、Azure Data CLI の [azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md) コマンドを使用します。   
+
     
 8. 今度は、新しいパスワードを使用して Grafana にログインします。 
 
@@ -198,7 +196,7 @@ ms.locfileid: "101836269"
 
 1. Kibana の URL を開きます。
     
-    Kibana のサービス エンドポイントの URL は、[Azure Data Studio](manage-with-controller-dashboard#controller-dashboard) 内から、または次の **azdata** コマンドを使用して、見つけることができます。
+    Kibana のサービス エンドポイントの URL は、[Azure Data Studio](manage-with-controller-dashboard.md#controller-dashboard) 内から、または次の **azdata** コマンドを使用して、見つけることができます。
     
     ```azurecli
     azdata login
@@ -230,6 +228,6 @@ ms.locfileid: "101836269"
 
 ## <a name="see-also"></a>関連項目
 
-* [azdata bdc (Azure Data CLI)](../../sql/azdata/reference/reference-azdata-bdc.md) 
-* [azdata と Grafana ダッシュボードでアプリケーションを監視する](app-monitor.md)  
-* [Kibana ダッシュボードを使用してクラスター ログを確認する](cluster-logging-kibana.md)  
+* [azdata bdc (Azure Data CLI)](../azdata/reference/reference-azdata-bdc.md)  
+* [azdata と Grafana ダッシュボードでアプリケーションを監視する](app-monitor.md)   
+* [Kibana ダッシュボードを使用してクラスター ログを確認する](cluster-logging-kibana.md)   

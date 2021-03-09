@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/24/2021
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 1b7d902064ef7a083b706af08730e91319be312f
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 928936a4b4ad6524e4d0817b94696353cb8427e9
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101836840"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186601"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd ユーティリティ
 
@@ -180,7 +180,8 @@ sqlcmd
 
 > [!IMPORTANT]
 > `-G` オプションは、Azure SQL Database と Azure Synapse Analytics にのみ適用されます。
-> 現在、AAD 対話型認証は、Linux または macOS 上でサポートされていません。 AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) バージョン 17.6.1 以降と、適切に[構成された Kerberos 環境](../connect/odbc/linux-mac/using-integrated-authentication#configure-kerberos)が必要です。
+> 現在、AAD 対話型認証は、Linux または macOS 上でサポートされていません。 AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) バージョン 17.6.1 以降と、適切に[構成された Kerberos 環境](../connect/odbc/linux-mac/using-integrated-authentication.md)が必要です。
+
 
 - **Azure Active Directory のユーザー名とパスワード:** 
 
@@ -199,7 +200,7 @@ sqlcmd
 - **Azure Active Directory 統合**
 
    Azure Active Directory 統合認証の場合、ユーザー名とパスワードなしで **-G** オプションを指定します。
-   *AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) バージョン 17.6.1 以降と、適切に[構成された Kerberos 環境](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos)が必要です。*
+   *AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) バージョン 17.6.1 以降と、適切に[構成された Kerberos 環境](../connect/odbc/linux-mac/using-integrated-authentication.md)が必要です。*
 
     ```cmd
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
@@ -467,11 +468,10 @@ sqlcmd
   
 - **image**  
   
-> [!NOTE]  
->  UDT は実装によって固定長にもなります。 固定長の UDT の長さが *display_width* よりも短い場合は、返される UDT の値は影響を受けません。 ただし、 *display_width* よりも長い場合は、出力は切り捨てられます。  
-   
+> [!NOTE]
+> UDT は実装によって固定長にもなります。 固定長の UDT の長さが *display_width* よりも短い場合は、返される UDT の値は影響を受けません。 ただし、 *display_width* よりも長い場合は、出力は切り捨てられます。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  返されるデータのサイズによって、サーバーとネットワークの両方に重大なパフォーマンスの問題が発生する可能性があるため、 **-y 0** オプションは十分注意して使用してください。  
   
  **-Y** _fixed_length_type_display_width_  
@@ -514,7 +514,7 @@ sqlcmd
  ローカルに構成されたサーバー コンピューターと、ネットワーク上でブロードキャストしているサーバー コンピューター名の一覧を表示します。 このパラメーターは、他のパラメーターと組み合わせて使用することはできません。 一覧表示できるサーバー コンピューターの最大数は 3,000 です。 バッファーのサイズが原因でサーバーの一覧が切り捨てられる場合は、警告メッセージが表示されます。  
   
 > [!NOTE]  
->  ネットワーク上のブロードキャストの特性によっては、 **sqlcmd** は、一部のサーバーからタイムリーな応答を受信できない場合があります。 そのため、返されるサーバーのリストは、このオプションの実行ごとに異なる可能性があります。  
+> ネットワーク上のブロードキャストの特性によっては、 **sqlcmd** は、一部のサーバーからタイムリーな応答を受信できない場合があります。 そのため、返されるサーバーのリストは、このオプションの実行ごとに異なる可能性があります。  
   
  省略可能なパラメーター **c** を指定すると、出力結果には **Servers:** ヘッダー行が含まれません。このため、各サーバー行は、先頭に空白がない状態で一覧表示されます。 この表示はクリーン アウトプットと呼ばれます。 クリーン アウトプットを使用すると、スクリプト言語の処理パフォーマンスが向上します。  
   
