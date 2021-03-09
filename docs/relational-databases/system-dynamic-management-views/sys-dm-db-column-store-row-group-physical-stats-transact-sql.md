@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6a1b4c7a8bdead03561989fbe17f5a28b4f0621
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 020cfa1e2f1f60064f21063e0766213ab44aaa25
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237508"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464841"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-sql)
 
@@ -44,7 +44,7 @@ ms.locfileid: "99237508"
 |**partition_number**|**int**|*Row_group_id* を保持するテーブルパーティションの ID。 Partition_number を使用して、この DMV を sys パーティションに参加させることができます。|  
 |**row_group_id**|**int**|この行グループの ID。 パーティションテーブルの場合、値はパーティション内で一意です。<br /><br /> インメモリテールの場合は-1。|  
 |**delta_store_hobt_id**|**bigint**|デルタストアの行グループの hobt_id。<br /><br /> 行グループがデルタストアに存在しない場合は NULL になります。<br /><br /> メモリ内のテーブルの末尾の場合は NULL です。|  
-|**state**|**tinyint**|*State_description* に関連付けられた ID 番号。<br /><br /> 0 = 非表示<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = 圧縮<br /><br /> 4 = 廃棄標識<br /><br /> 圧縮は、インメモリテーブルに適用される唯一の状態です。|  
+|**状態**|**tinyint**|*State_description* に関連付けられた ID 番号。<br /><br /> 0 = 非表示<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = 圧縮<br /><br /> 4 = 廃棄標識<br /><br /> 圧縮は、インメモリテーブルに適用される唯一の状態です。|  
 |**state_desc**|**nvarchar(60)**|行グループの状態の説明:<br /><br /> 0-非表示-ビルドされている行グループ。 次に例を示します。 <br />列ストアの行グループは、データの圧縮中は非表示になります。 圧縮が完了すると、メタデータスイッチは列ストアの行グループの状態を "非表示" から "圧縮済み" に変更し、デルタストアの行グループの状態を "終了" から "廃棄済み" に変更します。<br /><br /> 1-OPEN-新しい行を受け入れる、デルタストアの行グループ。 開いている行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> 2-CLOSED-最大行数を含むデルタストア内の行グループ。これは、組ムーバープロセスによって列ストアに圧縮されるのを待機しています。<br /><br /> 3-圧縮-列ストア圧縮で圧縮され、列ストアに格納される行グループ。<br /><br /> 4-TOMBSTONE-以前はデルタストア内にあった行グループは使用されなくなりました。|  
 |**total_rows**|**bigint**|行グループに物理的に格納されている行の数。 圧縮された行グループの場合。 削除済みとしてマークされている行が含まれます。|  
 |**deleted_rows**|**bigint**|削除対象としてマークされている圧縮行グループに物理的に格納されている行の数。<br /><br /> デルタ ストア内の行グループの場合は 0 です。|  
@@ -91,7 +91,7 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [列ストア インデックスのアーキテクチャ](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
- [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  

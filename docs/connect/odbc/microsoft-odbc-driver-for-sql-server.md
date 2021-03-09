@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b17517d0a4a904c5a8ffa56a625ba092c6b79b41
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: b107155d9672b2a1d7b905a387e48373905dab55
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807045"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464193"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver
 
@@ -59,7 +59,7 @@ ODBC ドライバーには、[**sqlcmd**](../../tools/sqlcmd-utility.md) や [**
 - [**bcp** による接続](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [**sqlcmd** による接続](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [データ アクセスのトレース](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
-- [よく寄せられる質問](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+- [よく寄せられる質問](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.yml)
 - [ドライバー マネージャーのインストール](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 - [既知の問題](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [プログラミング ガイドライン](../../connect/odbc/linux-mac/programming-guidelines.md)

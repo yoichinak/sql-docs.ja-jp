@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d6978bfa68d3a9b922e46454481618e448e91b96
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 8cc766248f4dd2776a0367b2c0ac6e12f385433e
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346200"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464666"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux の新機能
 
@@ -34,7 +34,7 @@ SQL Server 2019 on Linux では、次の更新が行われています。
 
 | 新機能または更新 | 詳細 |
 |:-----|:-----|
-|レプリケーションのサポート |[Linux での SQL Server のレプリケーション](sql-server-linux-replication.md)
+|レプリケーションのサポート |[Linux 上の SQL Server レプリケーション](sql-server-linux-replication.md)
 |Microsoft 分散トランザクション コーディネーター (MSDTC) のサポート |[Linux で MSDTC を構成する方法](sql-server-linux-configure-msdtc.md) |
 |サード パーティの AD プロバイダーに対する OpenLDAP のサポート |[チュートリアル:SQL Server on Linux で Active Directory 認証を使用する](sql-server-linux-active-directory-authentication.md) |
 |Linux 上の Machine Learning |[Linux に Machine Learning を構成する](sql-server-linux-setup-machine-learning.md) |
@@ -54,6 +54,6 @@ SQL Server on Linux をインストールするには、次のチュートリア
 - [Docker 上での実行](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)」を参照してください。 SQL Server 2019 で導入されたその他の改善点については、[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true)に関する記事をご覧ください。
+よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.yml)」を参照してください。 SQL Server 2019 で導入されたその他の改善点については、[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true)に関する記事をご覧ください。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

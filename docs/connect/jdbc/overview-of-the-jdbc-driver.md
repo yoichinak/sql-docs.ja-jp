@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5455169782503939330c32829a89bf0701aac25a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 531dca0f328f5f587d2da545bcae182f228bdee5
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943655"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464758"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC ドライバーの概要
 
@@ -44,7 +44,7 @@ JDBC Driver バージョン 4.x は非推奨です。 4\.x のサポートは 20
 |[JDBC ドライバーの展開](../../connect/jdbc/deploying-the-jdbc-driver.md)|Windows と Unix オペレーティング システム上に Microsoft JDBC ドライバーを再配布および展開する方法について説明しています。|  
 |[JDBC ドライバーの追加情報の検索](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|外部リソースへのリンクを含む、Microsoft JDBC ドライバーに関する追加リソースの取得先について説明しています。|  
 |[Microsoft SQL Server 用 JDBC Driver のサポート表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft SQL Server 用 JDBC Driver のサポート表とサポート ライフサイクル ポリシー。|  
-|[JDBC ドライバーのよく寄せられる質問 &#40;FAQ&#41;](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC ドライバーのよく寄せられる質問。|  
+|[JDBC ドライバーのよく寄せられる質問 &#40;FAQ&#41;](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.yml)|Microsoft JDBC ドライバーのよく寄せられる質問。|  
 |[Microsoft JDBC Driver for SQL Server の機能依存関係](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server の機能依存関係。|
 | &nbsp; | &nbsp; |
 

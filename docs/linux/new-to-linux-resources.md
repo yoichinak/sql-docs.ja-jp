@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 253c398e0f010e164d1efa5c39fc958e86047ed6
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3a188ed2a055d65fec5475e620ea31bd512b058b
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100064057"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464680"
 ---
 # <a name="new-to-linux-resources-for-sql-users"></a>SQL ユーザー向けの Linux 初心者用リソース
 
@@ -65,4 +65,4 @@ Linux でのさまざまなユーザーとグループの識別に慣れたら�
 
 Linux 環境について理解したら、SQL Server on Linux の[エディションとコンポーネント](sql-server-linux-editions-and-components-2019.md)と、[サポートされている Linux プラットフォーム](sql-server-linux-release-notes-2019.md)を確認してください。 
 
-詳しく学習する場合は、[その他の Linux チュートリアル](https://www.linux.org/forums/linux-beginner-tutorials.123/)と、[よく寄せられる質問](sql-server-linux-faq.md)をご覧ください。
+詳しく学習する場合は、[その他の Linux チュートリアル](https://www.linux.org/forums/linux-beginner-tutorials.123/)と、[よく寄せられる質問](sql-server-linux-faq.yml)をご覧ください。

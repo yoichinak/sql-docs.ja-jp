@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/20/2020
-ms.openlocfilehash: daba14f8b407d2ce5aabd81fc38915c29e114a5e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b9adac14bfd458b96fe4e46c478af2d2b5d6a181
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048068"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464871"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio とは
 
@@ -22,7 +22,7 @@ Azure Data Studio とは、Windows、macOS、Linux 上のデータ プラット�
 
 Azure Data Studio では、IntelliSense、コード スニペット、ソース管理の統合、統合されたターミナルを含む最新のエディター エクスペリエンスが提供されています。 これは、データ プラットフォームのユーザーを念頭に置いて設計されており、クエリ結果セットのグラフ化機能とカスタマイズ可能なダッシュボードが組み込まれています。
 
-Azure Data Studio のソース コードとそのデータ プロバイダーは、ソース コード EULA の下の GitHub で利用できます。この EULA では、ソフトウェアを変更および使用する権利が提供されますが、ソフトウェアを再配布したりクラウドサービス内でホストしたりすることはできません。 詳細については、「[Azure Data Studio FAQ](faq.md)」(Azure Data Studio の FAQ) を参照してください。
+Azure Data Studio のソース コードとそのデータ プロバイダーは、ソース コード EULA の下の GitHub で利用できます。この EULA では、ソフトウェアを変更および使用する権利が提供されますが、ソフトウェアを再配布したりクラウドサービス内でホストしたりすることはできません。 詳細については、「[Azure Data Studio FAQ](faq.yml)」(Azure Data Studio の FAQ) を参照してください。
 
 **[Azure Data Studio のダウンロードとインストール](./download-azure-data-studio.md)**
 
@@ -167,7 +167,7 @@ Azure Data Studio 機能拡張の詳細については、[拡張機能](extensib
 ## <a name="next-steps"></a>次のステップ
 
 - [Azure Data Studio のダウンロードとインストール](./download-azure-data-studio.md)
-- [Azure Data Studio に関する FAQ](faq.md)
+- [Azure Data Studio に関する FAQ](faq.yml)
 - [SQL Server に対する接続およびクエリ](quickstart-sql-server.md)
 - [Azure SQL Database に対する接続およびクエリ](quickstart-sql-database.md)
 

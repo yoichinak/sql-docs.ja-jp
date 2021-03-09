@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 8843bf303f20a7d8aa0baac5be3d9da4e7c54e01
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 6d602db9c189b6e7fce8b767b60204253ccb7f67
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886369"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464396"
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
@@ -148,7 +148,7 @@ ODBC Driver 13 および 13.1 では、UTF-8 マルチバイト文字または U
 3.  高度なマルチスレッド アプリケーションでドライバーを使用する場合、unixODBC のハンドル検証がパフォーマンスのボトルネックになる可能性があります。 このようなシナリオでは、`--enable-fastvalidate` オプションを使用して unixODBC をコンパイルすることで、大幅にパフォーマンスを向上させることができます。 ただし、これにより、アプリケーションから無効なハンドルが ODBC API に渡されると、`SQL_INVALID_HANDLE` エラーが返されずにクラッシュする可能性があることに注意してください。
 
 ## <a name="see-also"></a>参照  
-[よく寄せられる質問](frequently-asked-questions-faq-for-odbc-linux.md)
+[よく寄せられる質問](frequently-asked-questions-faq-for-odbc-linux.yml)
 
 [このバージョンのドライバーの既知の問題](known-issues-in-this-version-of-the-driver.md)
 

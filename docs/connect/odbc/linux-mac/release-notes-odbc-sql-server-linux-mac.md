@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2c178b7afd7bf46003b689ef56af67f12609e0a9
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 83f8dbb834af379e02635130e23c0f5fd7299f3b
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837342"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464288"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
 
@@ -101,7 +101,7 @@ GeneMi.  2019/04/03.
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
-| セキュリティで保護されたエンクレーブが設定された Always Encrypted。 | [ODBC ドライバーでの Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページをご覧ください。 |
+| セキュリティで保護されたエンクレーブが設定された Always Encrypted | [ODBC ドライバーでの Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページをご覧ください。 |
 | OpenSSL の動的読み込み | [プログラミング ガイドライン](programming-guidelines.md#bkmk-openssl)に関するページをご覧ください。 |
 | 構成可能な TCP キープアライブ設定。 | 「[SQL Server への接続](connection-string-keywords-and-data-source-names-dsns.md)」をご覧ください。 |
 | バグが修正されました。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
@@ -141,7 +141,7 @@ GeneMi.  2019/04/03.
 
 ## <a name="17"></a>17
 
-**新しいディストリビューションのサポート**: macOS High Sierra および Ubuntu 17.10 
+**新しいディストリビューションのサポート**: macOS High Sierra および Ubuntu 17.10
 
 **パフォーマンスの強化**:ドライバーが UTF-8 と 16 の間で変換されるときのパフォーマンスの向上が 10 倍を超えました。
 
@@ -151,19 +151,21 @@ BCP API の Always Encrypted のサポート
 
 新しい接続文字列属性 UseFMTOnly により、一時テーブルを必要とする特別なケースで以前のメタデータがドライバーで使用されます。
 
-Azure SQL Managed Instance のサポート。 
+Azure SQL Managed Instance のサポート。
+
 > [!NOTE]
 > Managed Instance を使用するときはいくつかの相違点があります。
-> -   FILESTREAM はサポートされていません。 
-> -   ローカル ファイル システムのアクセスはサポートされていませんが、トレース ファイルなどの場合は必要です 
-> -   ローカル パスからの UDT の作成はサポートされていません 
-> -   Windows 統合認証はサポートされていません 
-> -   DTC はサポートされていません 
-> -   'sa' アカウントは存在しません (既定のアカウントは 'cloudSA' という名前です)
-> -   TDS トークン エラー (0xAA) では、正しくないサーバー名が返されます
-> -   データベース名の特殊文字はサポートされていません 
-> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] はサポートされていません
-> -   言語設定に関係なく、エラー メッセージは常に英語で表示されます (Azure と同じ) 
+>
+> - FILESTREAM はサポートされていません。
+> - ローカル ファイル システムのアクセスはサポートされていませんが、トレース ファイルなどの場合は必要です
+> - ローカル パスからの UDT の作成はサポートされていません
+> - Windows 統合認証はサポートされていません
+> - DTC はサポートされていません
+> - 'sa' アカウントは存在しません (既定のアカウントは 'cloudSA' という名前です)
+> - TDS トークン エラー (0xAA) では、正しくないサーバー名が返されます
+> - データベース名の特殊文字はサポートされていません
+> - ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] はサポートされていません
+> - 言語設定に関係なく、エラー メッセージは常に英語で表示されます (Azure と同じ)
 
 ## <a name="131-for-ssnoversion-on-linux-and-macos-may-2017"></a>13.1、Linux および macOS 上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、2017 年 5 月
 

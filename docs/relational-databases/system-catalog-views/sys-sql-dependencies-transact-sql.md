@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 2032bc1ba6658b18649f5908bebd4ae9405522b9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 45101cdf0c5e0dd9db7565ef9ff8c122749db1d7
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99150708"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464243"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "99150708"
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
   
   

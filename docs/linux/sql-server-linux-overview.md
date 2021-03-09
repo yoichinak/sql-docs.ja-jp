@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 4890633022a7888a21f14ae57c6f6db3934b7ce9
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 0cc87c2bfc33c0c710e27017da023194fcd2828b
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100273053"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465200"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上の SQL Server
 
@@ -88,7 +88,7 @@ SQL Server 2017 と [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] は�
 - [SQL Server 2019 on Linux の新機能](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 > [!TIP]
-> よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)」を参照してください。
+> よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.yml)」を参照してください。
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

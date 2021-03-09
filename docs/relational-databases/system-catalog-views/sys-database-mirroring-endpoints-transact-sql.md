@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d9570a43fe817eac49dfa953745272021af0b6f1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a402c209d94c74a7709462a6f4db64ed73fbb318
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209505"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464624"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "99209505"
 |**encryption_algorithm**|**tinyint**|暗号化アルゴリズム。次のいずれかになります。<br /><br /> **0** -なし<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -なし、RC4<br /><br /> **4** -NONE、AES<br /><br /> **5** -RC4、AES<br /><br /> **6** -AES、RC4<br /><br /> **7** -なし、RC4、AES<br /><br /> **8** -なし、AES、RC4|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|暗号化アルゴリズムの説明。次のいずれかになります。<br /><br /> NONE<br /><br /> RC4<br /><br /> AES<br /><br /> なし、RC4<br /><br /> NONE、AES<br /><br /> RC4、AES<br /><br /> AES、RC4<br /><br /> NONE、RC4、AES<br /><br /> NONE、AES、RC4|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]  
 >  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材の暗号化を解除できます。  
@@ -64,6 +64,6 @@ ms.locfileid: "99209505"
  [sys.database_mirroring &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
   
   

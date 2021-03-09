@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e4d772f7355982b1856ac467558242c561e6b391
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: c863cb129f1ba40c2bb73fff51adb859a8a7bade
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346197"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464668"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux の新機能
 
@@ -71,6 +71,6 @@ SQL Server on Linux をインストールするには、次のチュートリア
 - [Docker 上での実行](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)」を参照してください。 SQL Server 2017 で導入されたその他の改善点については、「[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)」を参照してください。
+よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.yml)」を参照してください。 SQL Server 2017 で導入されたその他の改善点については、「[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)」を参照してください。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

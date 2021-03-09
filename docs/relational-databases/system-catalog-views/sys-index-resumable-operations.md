@@ -20,12 +20,12 @@ ms.assetid: ''
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cb33d3efd0d1e69ec64a179ed54fcb79b273bf3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 62f3e422e65595de3b3d8a0b61c744c033ff4488
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193803"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465008"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys.index_resumable_operations (Transact-sql)
 
@@ -41,7 +41,7 @@ ms.locfileid: "99193803"
 |**sql_text**|**nvarchar(max)**|DDL T-sql ステートメントのテキスト|
 |**last_max_dop**|**smallint**|最後に使用された MAX_DOP (既定 = 0)|
 |**partition_number**|**int**|所有しているインデックスまたはヒープ内のパーティション番号。 パーティション分割されていないテーブルとインデックスの場合、またはすべてのパーティションが再構築される場合は、この列の値が NULL になります。|
-|**state**|**tinyint**|再開可能なインデックスの動作状態:<br /><br />0 = 実行中<br /><br />1 = 一時停止|
+|**状態**|**tinyint**|再開可能なインデックスの動作状態:<br /><br />0 = 実行中<br /><br />1 = 一時停止|
 |**state_desc**|**nvarchar(60)**|再開可能なインデックスの動作状態の説明 (実行中または一時停止)|  
 |**start_time**|**datetime**|インデックス操作の開始時刻 (null 非許容)|
 |**last_pause_time**|**datatime**| インデックス操作の最後の一時停止時刻 (null 許容)。 操作が実行中で一時停止されていない場合は NULL です。|
@@ -74,4 +74,4 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 - [sys.key_constraints](sys-key-constraints-transact-sql.md)
 - [sys.filegroups](sys-filegroups-transact-sql.md)
 - [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
-- [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](querying-the-sql-server-system-catalog-faq.md)
+- [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](querying-the-sql-server-system-catalog-faq.yml)

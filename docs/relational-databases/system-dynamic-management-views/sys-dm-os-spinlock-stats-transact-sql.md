@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: e24a8532aa721f4103e6cbff4b34b15bf607640c
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 2e48f40003412a2db5340a32e5408f649bf5bb18
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839059"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464996"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-sql)
 
@@ -104,7 +104,7 @@ GO
 |CLR_HOSTTASK|内部使用のみ。|
 |CLR_SPIN_LOCK|内部使用のみ。|
 |CMED_DATABASE|内部使用のみ。|
-|CMED_HASH_SET|内部使用のみ。|
+|CMED_HASH_SET|内部使用のみ。<br><br>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] CU1 経由)<br><br> **注:** このスピンロックの名前は [SQL Server 2016 CU2](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5)を適用した後に LOCK_RW_CMED_HASH_SET に変わります。|
 |COLUMNDATASETSESSIONLIST|内部使用のみ。|
 |COLUMNSTORE_HASHTABLE|内部使用のみ。|
 |COLUMNSTOREBUILDSTATE_LIST|内部使用のみ。|
@@ -124,7 +124,7 @@ GO
 |DBSEEDING_OPERATION|内部使用のみ。|
 |DBT_HASH|内部使用のみ。|
 |DBT_IO_LIST|内部使用のみ。|
-|DBTABLE|は、そのデータベースのプロパティを含む SQL Server 内のすべてのデータベースについて、メモリ内のデータ構造へのアクセスを制御します。 詳細については、[この記事](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)を参照してください。 |
+|DBTABLE|データベースのプロパティを格納している内のすべてのデータベースに対するメモリ内データ構造へのアクセスを制御し [!INCLUDE[ssde_md](../../includes/ssde_md.md)] ます。 詳細については、[この記事](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)を参照してください。 |
 |DEFERRED_WF_EXT_DROP|内部使用のみ。|
 |DEK_INSTANCE|内部使用のみ。|
 |DELAYED_PARTITIONED_STACK|内部使用のみ。|
@@ -134,7 +134,7 @@ GO
 |DIGEST_CACHE|内部使用のみ。|
 |DINPBUF|内部使用のみ。|
 |DIRECTLOGCONSUMER|内部使用のみ。|
-|DP_LIST|間接チェックポイントが有効になっているデータベースのダーティページの一覧へのアクセスを制御します。 [記事 4497928](https://support.microsoft.com/kb/4497928)、[記事 4040276](https://support.microsoft.com/kb/4040276)の修正プログラムを適用するか、[トレースフラグ 3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を使用してください。 詳細については、[この記事](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)を参照してください。|
+|DP_LIST|間接チェックポイントが有効になっているデータベースのダーティページの一覧へのアクセスを制御します。 [記事 4497928](https://support.microsoft.com/kb/4497928)、[記事 4040276](https://support.microsoft.com/kb/4040276)の修正プログラムを適用するか、[トレースフラグ 3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を使用します。 詳細については、[この記事](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)を参照してください。|
 |DROP|内部使用のみ。|
 |DROP_TEMPO|内部使用のみ。|
 |DROPPED_ALLOC_UNIT|内部使用のみ。|
@@ -191,18 +191,18 @@ GO
 |LANG_RES_LOAD|内部使用のみ。|
 |LIVE_TARGET_TVF|内部使用のみ。|
 |LOCK_FREE_LIST|内部使用のみ。|
-|LOCK_HASH|データベースに保持されているロックに関する情報を格納するロックマネージャーハッシュテーブルへのアクセスを保護します。 詳細については、[この記事](https://support.microsoft.com/kb/2926217)を参照してください。|
+|LOCK_HASH|データベースに保持されているロックに関する情報を格納するロックマネージャーハッシュテーブルへのアクセスを保護します。 詳細については、 [この記事](https://support.microsoft.com/kb/2926217) と、 [トランザクションのロックおよび行のバージョン管理](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine)に関するガイドを参照してください。|
 |LOCK_NOTIFICATION|内部使用のみ。|
 |LOCK_RESOURCE_ID|内部使用のみ。|
 |LOCK_RW_ABTX_HASH_SET|内部使用のみ。|
 |LOCK_RW_AGDB_HEALTH_DIAG|内部使用のみ。|
-|LOCK_RW_CMED_HASH_SET|内部使用のみ。|
+|LOCK_RW_CMED_HASH_SET|内部使用のみ。<br><br>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] CU2)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、および [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]|
 |LOCK_RW_DPT_TABLE|内部使用のみ。|
 |LOCK_RW_IN_ROW_TRACKER|内部使用のみ。|
 |LOCK_RW_LOGIN_RATE_STATS|内部使用のみ。|
 |LOCK_RW_PVS_PAGE_TRACKER|内部使用のみ。|
 |LOCK_RW_RBIO_REQ|内部使用のみ。|
-|LOCK_RW_SECURITY_CACHE|内部使用のみ。|
+|LOCK_RW_SECURITY_CACHE|セキュリティトークンとアクセスチェックに関連するキャッシュエントリを保護します。 <br><br>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] CU2)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、および [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]<br><br> TokenAndPermUserStore cache ストア内のエントリが継続的に増加している場合は、このスピンロックの大きなスピンに気付くことがあります。 [トレースフラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4610 と4618を使用して、エントリを制限するように評価します。 詳細については、「 [access check Cache サーバー構成オプション](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)」、この [記事](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d)、およびこの [ブログ](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)を参照してください。|
 |LOCK_RW_TEST|内部使用のみ。|
 |LOCK_RW_WPR_BUCKET|内部使用のみ。|
 |LOCK_SORT_STREAM|内部使用のみ。|
@@ -233,7 +233,7 @@ GO
 |MEM_MGR|内部使用のみ。|
 |MGR_CACHE|内部使用のみ。|
 |MIGRATION_BUF_LIST|内部使用のみ。|
-|ロック|セキュリティトークンとアクセスチェックに関連するキャッシュエントリを保護します。 以下のバージョンで使用され [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ます。 TokenAndPermUserStore cache ストア内のエントリが継続的に増加している場合は、このスピンロックの大きなスピンに気付くことがあります。 [トレースフラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4610 と4618を使用して、エントリを制限するように評価します。 その他の参照: [ブログ](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)、 [記事](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) 、 [ドキュメント](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)。|
+|ロック|セキュリティトークンとアクセスチェックに関連するキャッシュエントリを保護します。 <br><br>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (最大 [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] )<br><br>TokenAndPermUserStore cache ストア内のエントリが継続的に増加している場合は、このスピンロックの大きなスピンに気付くことがあります。 [トレースフラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4610 と4618を使用して、エントリを制限するように評価します。 詳細については、「 [access check Cache サーバー構成オプション](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)」、この [記事](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d)、およびこの [ブログ](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)を参照してください。|
 |NETCONN_ADDRESS|内部使用のみ。|
 |ONDEMAND_TASK|内部使用のみ。|
 |ONE_PROC_SIM_NODE_CONTEXT|内部使用のみ。|
@@ -294,7 +294,7 @@ GO
 |SBS_TRANSPORT|内部使用のみ。|
 |SBS_UCS_DISPATCH|内部使用のみ。|
 |セキュリティ|内部使用のみ。|
-|SECURITY_CACHE|セキュリティトークンとアクセスチェックに関連するキャッシュエントリを保護します。 以降で使用され [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ます。 TokenAndPermUserStore cache ストア内のエントリが継続的に増加している場合は、このスピンロックの大きなスピンに気付くことがあります。 [トレースフラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4610 と4618を使用して、エントリを制限するように評価します。 その他の参照: [ブログ](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)、 [記事](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) 、 [ドキュメント](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)。 [Sql 2017 および sql 2016 の更新プログラム](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5)を適用した後、スピンロック名が変更されていることに注意してください。|
+|SECURITY_CACHE|セキュリティトークンとアクセスチェックに関連するキャッシュエントリを保護します。 <br><br>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] CU1 経由)<br><br> TokenAndPermUserStore cache ストア内のエントリが継続的に増加している場合は、このスピンロックの大きなスピンに気付くことがあります。 [トレースフラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4610 と4618を使用して、エントリを制限するように評価します。 詳細については、「 [access check Cache サーバー構成オプション](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md)」、この [記事](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d)、およびこの [ブログ](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494)を参照してください。<br><br>**注:** このスピンロックの名前は [SQL Server 2016 CU2](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5)を適用した後に LOCK_RW_SECURITY_CACHE に変わります。|
 |SECURITY_FEDAUTH_AAD_BECWSCONNS|内部使用のみ。|
 |SEMANTIC_TICACHE|内部使用のみ。|
 |SEQUENCED_OBJECT|内部使用のみ。|
@@ -312,7 +312,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|内部使用のみ。|
 |SOS_BLOCKALLOCPARTIALLIST|内部使用のみ。|
 |SOS_BLOCKDESCRIPTORBUCKET|内部使用のみ。|
-|SOS_CACHESTORE|プランキャッシュや一時テーブルキャッシュなど、SQL Server 内のさまざまなメモリ内キャッシュへのアクセスを同期します。 このスピンロックの種類の競合が多い場合は、競合している特定のキャッシュに応じて、さまざまなことを意味します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]このスピンロックの種類のトラブルシューティングについては、カスタマーサポートサービスにお問い合わせください。 |
+|SOS_CACHESTORE|プランキャッシュや一時テーブルキャッシュなど、内のさまざまなメモリ内キャッシュへのアクセスを同期し [!INCLUDE[ssde_md](../../includes/ssde_md.md)] ます。 このスピンロックの種類の競合が多い場合は、競合している特定のキャッシュに応じて、さまざまなことを意味します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]このスピンロックの種類のトラブルシューティングについては、カスタマーサポートサービスにお問い合わせください。 |
 |SOS_CACHESTORE_CLOCK|内部使用のみ。|
 |SOS_CLOCKALG_INTERNODE_SYNC|内部使用のみ。|
 |SOS_DEBUG_HOOK|内部使用のみ。|
@@ -407,8 +407,6 @@ GO
 |XVB_CSN|内部使用のみ。|
 |XVB_LIST|内部使用のみ。|
  
-
-  
 ## <a name="see-also"></a>参照  
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
