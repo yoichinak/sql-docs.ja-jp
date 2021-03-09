@@ -9,12 +9,12 @@ ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b00ed57288d19f08555a00eec8c9e62edc0f8cf6
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: f2adf48a0aef465f4c013b5adaf97a75be4abf77
+ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343976"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514869"
 ---
 # <a name="configure-a-sql-server-big-data-cluster---pre-cu9-release"></a>SQL Server ビッグ データ クラスターを構成する - CU9 リリース以前
 
@@ -102,7 +102,7 @@ CU9 以前のビッグ データ クラスターの構成には、`service` と 
 
 たとえば、サービス `hdfs` のすべての構成は、カテゴリ `hdfs` に属します。 Hadoop (コアサイト)、HDFS、Zookeeper の構成はすべて、カテゴリ `hdfs` に属し、Livy、Spark、Yarn、Hive、メタストアの構成はすべて、カテゴリ `spark` に属すことにご注意ください。 
 
-[サポートされている構成](reference-config-spark-hadoop.md#supported-configurations)には、SQL Server ビッグ データ クラスターの展開時に構成できる Apache Spark と Hadoop のプロパティがリストアップされています。
+[サポートされている構成](reference-config-spark-hadoop.md)には、SQL Server ビッグ データ クラスターの展開時に構成できる Apache Spark と Hadoop のプロパティがリストアップされています。
 
 次のセクションでは、クラスターで変更 **できない** プロパティをリストアップしています。
 
