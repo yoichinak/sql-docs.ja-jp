@@ -313,7 +313,7 @@
         - name: 追加情報の検索
           href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
         - name: よく寄せられる質問 (FAQ)
-          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
+          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.yml
         - name: 機能の依存関係
           href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
     - name: API リファレンス
@@ -2941,7 +2941,7 @@
         - name: 既知の問題
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
         - name: よく寄せられる質問 (FAQ)
-          href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
+          href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.yml
     - name: Windows
       items:
         - name: Microsoft ODBC Driver for SQL Server on Windows
