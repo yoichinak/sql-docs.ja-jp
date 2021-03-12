@@ -9,12 +9,12 @@ ms.prod: sql
 ms.technology: tools-other
 monikerRange: =azure-sqldw-latest
 ms.custom: template-overview
-ms.openlocfilehash: 8352fb6a70c54ede61d544a147f970237404c9f5
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: e97425f682a3f6b9f2f4e955d8476d40d6cf4312
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186333"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770523"
 ---
 # <a name="azure-synapse-pathway-preview-faq"></a>Azure Synapse Pathway プレビューに関する FAQ
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -44,8 +44,15 @@ A. このプレビュー バージョンの Synapse Pathway には、次のデ�
 
 ### <a name="q-what-is-included-as-part-of-the-code-conversion"></a>Q. コード変換には何が含まれていますか?
 
-A. Synapse Pathway では、テーブル、スキーマ、ビュー、およびストアド プロシージャのコード翻訳がサポートされています。
+A. Synapse Pathway のプレビュー バージョンでは、テーブル、スキーマ、およびビューのコード翻訳がサポートされています。
 
+| ソース プラットフォーム| サポートされているステートメントの種類 | 
+|:-------------------:|:------------------|
+| IBM Netezza  | データベースの作成/変更/ドロップ<br /> スキーマの作成/変更/ドロップ <br /> テーブルの作成/変更/ドロップ |
+|Microsoft SQL Server  | データベースの作成/変更/ドロップ<br /> スキーマの作成/変更/ドロップ <br /> テーブルの作成/変更/ドロップ | 
+| Snowflake |  データベースの作成/変更/ドロップ<br /> スキーマの作成/変更/ドロップ <br /> テーブルの作成/変更/ドロップ |                       
+
+  
 ### <a name="q-can-it-also-scan-my-environment-and-provide-an-assessment-report-of-all-the-objects-that-need-to-be-convertedtranslated"></a>Q. 環境をスキャンし、変換または翻訳する必要があるすべてのオブジェクトの評価レポートを提供することもできますか?
 
 A. このプレビュー バージョンの Synapse Pathway では、変換する必要がある DDL または DML スクリプトへのリンクはユーザーが提供する必要があります。 翻訳する必要があるオブジェクトを特定するために、Synapse Pathway によって現在の環境がスキャンされることはありません。

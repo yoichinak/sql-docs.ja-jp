@@ -1,7 +1,7 @@
 ---
 title: SqlClient トラブルシューティング ガイド
 description: よく見られる問題の解決方法について説明するページです。
-ms.date: 11/27/2020
+ms.date: 03/03/2021
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 6cad6278eb6ac7b170ee108c1a3510db956ecb22
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 725d1522f98e721f581a7d4b7614181fd2632962
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96468087"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464805"
 ---
 # <a name="sqlclient-troubleshooting-guide"></a>SqlClient トラブルシューティング ガイド
 
@@ -143,7 +143,7 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
 
   通常、このエラーは、TLS 1.2 がサポートされている最低限の TLS プロトコルである Docker イメージ コンテナー、Unix クライアント、または Windows クライアントなどのクライアント環境で発生します。
 
-  **推奨される解決策:** サポートされているバージョンの SQL Server<sup>1</sup> に最新の更新プログラムをインストールし、そのサーバーで TLS 1.2 プロトコルが有効になっていることを確認します。
+  **推奨される解決策:** サポートされているバージョンの SQL Server <sup>1</sup> に最新の更新プログラムをインストールし、そのサーバーで TLS 1.2 プロトコルが有効になっていることを確認します。
 
   " _<sup>1</sup> サポートされている SQL Server のバージョンと Microsoft.Data.SqlClient のさまざまなバージョンの一覧については、「[SqlClient ドライバーのサポート ライフサイクル](sqlclient-driver-support-lifecycle.md)」を参照してください。_ "
 
@@ -171,6 +171,12 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
 - TLS/SSL 証明書が SHA-256 以上で署名されていない。
 
   **推奨される解決策:** SHA-256 以上のハッシュ アルゴリズムを使用してハッシュが署名されているサーバーの新しい TLS/SSL 証明書を生成します。
+
+- Linux と .NET 5 以降での厳密に制限された暗号スイート
+
+  .NET 5 で導入された Linux クライアントに関する破壊的変更では、許可されている暗号スイートの厳密に制限された一覧が既定で使用されます。 `CipherSuitePolicy` 値を指定するか、_OpenSSL_ の構成ファイルを変更することにより、レガシ クライアントが許可されるように (またはレガシ サーバーに接続できるように) 既定の暗号スイートの一覧を増やすことが必要になる場合があります。
+  
+  推奨される操作の詳細については、「[Linux 上の .NET 用の既定の TLS 暗号スイート](/dotnet/core/compatibility/cryptography/5.0/default-cipher-suites-for-tls-on-linux)」を参照してください。
 
 ### <a name="connection-pool-exhaustion-errors"></a>接続プール不足のエラー
 

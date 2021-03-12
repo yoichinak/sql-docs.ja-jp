@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 60f460c06c89d1d9b01ed5f19f705cec745dce09
-ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.openlocfilehash: 81073d458d69e28ee145c1bb1dd38f3474800b35
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102247356"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770540"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -145,13 +145,23 @@ DDM 列が具体化されたビューの一部でない場合でも、動的デ�
 
 具体化されたビューは、DROP VIEW でドロップできます。  ALTER MATERIALIZED VIEW を使用して、具体化されたビューを無効にしたり、リビルドしたりできます。   
 
+具体化されたビューは、自動クエリ最適化メカニズムです。  ユーザーは、具体化されたビューに直接クエリを実行する必要はありません。  ユーザー クエリが送信されると、エンジンがクエリ オブジェクトに対するユーザーのアクセス許可を確認し、ユーザーがクエリでテーブルまたは通常のビューにアクセスできない場合は、クエリが実行することなく失敗します。  ユーザーのアクセス許可が確認された場合、オプティマイザーが、対応する具体化されたビューを自動的に使用してクエリを実行し、パフォーマンスを向上させることができます。  ユーザーは、クエリの実行がベース テーブルと具体化されたビューのどちらのクエリによって行われるかに関係なく、同じデータを返します。  
+
 SQL Server Management Studio 内の説明プランとグラフィカルな推定実行プランを見ると、クエリ実行の際、具体化されたビューがクエリ オプティマイザーで考慮されるかどうかがわかります。 SQL Server Management Studio 内のグラフィカルな推定実行プランを見ると、クエリ実行の際、具体化されたビューがクエリ オプティマイザーで考慮されるかどうかがわかります。
 
 新しい具体化されたビューから SQL ステートメントでメリットが得られるかどうかを確認するには、`WITH_RECOMMENDATIONS` を指定して `EXPLAIN` コマンドを実行します。  詳細については、「[EXPLAIN (Transact-SQL)](../queries/explain-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)」を参照してください。
 
-## <a name="permissions"></a>アクセス許可
+## <a name="ownership"></a>所有権
+- ベース テーブルの所有者と、作成する具体化されたビューが同じでない場合は具体化されたビューを作成できません。
+- 具体化されたビューとそのベース テーブルは、異なるスキーマに配置できます。 具体化されたビューを作成すると、ビューのスキーマ所有者が自動的に具体化されたビューの所有者になり、このビューの所有権を変更することはできません。     
 
-ビューが作成されているスキーマに対する 1) REFERENCES と CREATE VIEW アクセス許可、または 2) CONTROL アクセス許可が必要です。 
+## <a name="permissions"></a>アクセス許可
+具体化されたビューを作成するには、オブジェクトの所有権の要件を満たすことに加えて、次の権限が必要です。 
+1) データベースの CREATE VIEW 権限
+2) 具体化されたビューのベース テーブルに対する SELECT 権限
+3) ベース テーブルを含むスキーマに対する REFERENCES 権限
+4) 具体化されたビューを含むスキーマに対する ALTER 権限 
+
 
 ## <a name="example"></a>例
 A. この例には、Synapse SQL オプティマイザーで具体化されたビューを自動的に使用してクエリを実行し、パフォーマンスを向上させる方法が示されています。これは、クエリで、COUNT(DISTINCT expression) などの、CREATE MATERIALIZED VIEW でサポートされていない関数を使用する場合でも同様です。 これまで完了するのに数秒かかっていたクエリが、ユーザー クエリに変更を加えることなく 1 秒未満で終了するようになりました。   
@@ -196,60 +206,49 @@ select DATEDIFF(ms,@timerstart,@timerend);
 
 ```
 
-B. この例では、User_B によって、テーブル T1 と T2 に具体化されたビューが作成されます。  ビューと 2 つのテーブルのどちらも、別のユーザー User_A によって所有されています。
-
+B. この例では、User1 が所有するテーブルに User2 が具体化されたビューを作成します。  具体化されたビューは User1 によって所有されています。
 ```sql
-
--- Create the users 
-CREATE USER User_A WITHOUT LOGIN ;  
-CREATE USER User_B WITHOUT LOGIN ;  
+/****************************************************************
+Setup:
+SchemaX owner = DBO
+SchemaX.T1 owner = User1
+SchemaX.T2 owner = User1
+SchemaY owner = User1
+*****************************************************************/
+CREATE USER User1 WITHOUT LOGIN ;
+CREATE USER User2 WITHOUT LOGIN ;
+CREATE SCHEMA SchemaX;  
+CREATE SCHEMA SchemaY AUTHORIZATION User1;
 GO
-CREATE SCHEMA User_A authorization User_A;
+CREATE TABLE [SchemaX].[T1] (   [vendorID] [varchar](255) Not NULL, [totalAmount] [float] Not NULL, [puYear] [int] NULL );
+CREATE TABLE [SchemaX].[T2] (   [vendorID] [varchar](255) Not NULL, [totalAmount] [float] Not NULL, [puYear] [int] NULL);
 GO
+ALTER AUTHORIZATION ON OBJECT::SchemaX.[T1] TO User1;
+ALTER AUTHORIZATION ON OBJECT::SchemaX.[T2] TO User1;
 
--- User_A creates two tables
-
-GRANT CREATE TABLE to User_A;
+/*****************************************************************************
+For user2 to create a MV in SchemaY on SchemaX.T1 and SchemaX.T2, user2 needs:
+1. CREATE VIEW permission in the database
+2. REFERENCES permission on the schema1
+3. SELECT permission on base table T1, T2  
+4. ALTER permission on SchemaY
+******************************************************************************/
+GRANT CREATE VIEW to User2;
+GRANT REFERENCES ON SCHEMA::SchemaX to User2;  
+GRANT SELECT ON OBJECT::SchemaX.T1 to User2; 
+GRANT SELECT ON OBJECT::SchemaX.T2 to User2;
+GRANT ALTER ON SCHEMA::SchemaY to User2; 
 GO
-EXECUTE AS USER = 'User_A';  
-SELECT USER_NAME();  
-Go
-CREATE TABLE [User_A].[T1]
-(
-    [vendorID] [varchar](255) Not NULL,
-    [totalAmount] [float] Not NULL,
-    [puYear] [int] NULL
-)
+EXECUTE AS USER = 'User2';  
 GO
-CREATE TABLE [User_A].[T2]
-(
-    [vendorID] [varchar](255) Not NULL,
-    [totalAmount] [float] Not NULL,
-    [puYear] [int] NULL
-)
-GO
-REVERT;
-
--- Grant User_B the required permissions to create a materialized view for User_A on T1 and T2 owned by User_A
-GRANT CREATE VIEW to User_B;
-GRANT Control ON SCHEMA::User_A to User_B;
-GRANT REFERENCES ON OBJECT::User_A.T1 to User_B;
-GRANT REFERENCES ON OBJECT::User_A.T2 to User_B;
-
--- User_B creates a materialized view.  Both the view and the base tables are owned by User_A.
-EXECUTE AS USER = 'User_B';  
-SELECT USER_NAME(); 
-GO
-
-CREATE materialized VIEW [User_A].MV_CreatedBy_UserB with(distribution=round_robin) 
+CREATE materialized VIEW [SchemaY].MV_by_User2 with(distribution=round_robin) 
 as 
         select A.vendorID, sum(A.totalamount) as S, Count_Big(*) as T 
-        from [User_A].[T1] A
-        inner join [User_A].[T2] B
-        on A.vendorID = B.vendorID
-        group by A.vendorID ;
+        from [SchemaX].[T1] A
+        inner join [SchemaX].[T2] B on A.vendorID = B.vendorID group by A.vendorID ;
 GO
 revert;
+GO
 ```
 
 ## <a name="see-also"></a>関連項目

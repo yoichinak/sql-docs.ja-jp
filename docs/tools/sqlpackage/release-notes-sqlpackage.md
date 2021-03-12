@@ -2,25 +2,72 @@
 title: DacFx と SqlPackage のリリース ノート
 description: Microsoft sqlpackage のリリース ノート。
 ms.custom: tools|sos
-ms.date: 02/02/2019
+ms.date: 03/10/2021
 ms.prod: sql
-ms.reviewer: alayu; sstein
+ms.reviewer: llali; sstein
 ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 1b93c290596cf9af23e4963912efff652e9c80ee
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3a5d63b5c727508473fe83c1de3668b5b3df85c0
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100061047"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622548"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe のリリース ノート
 
 **[最新バージョンのダウンロード](sqlpackage-download.md)**
 
 この記事では、SqlPackage.exe のリリースされたバージョンによって提供される機能と修正プログラムを示します。
+
+## <a name="187-sqlpackage"></a>18.7 sqlpackage
+
+|プラットフォーム|ダウンロード|リリース日|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI インストーラー](https://go.microsoft.com/fwlink/?linkid=2157201)|2021 年 3 月 10 日|18.7|15.0.5084.2|
+|macOS .NET Core |[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2157203)|2021 年 3 月 10 日| 18.7|15.0.5084.2|
+|Linux .NET Core |[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2157202)|2021 年 3 月 10 日| 18.7|15.0.5084.2|
+|Windows .NET Core |[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2157302)|2021 年 3 月 10 日| 18.7|15.0.5084.2|
+
+### <a name="features"></a>特徴
+| 特徴量 | 詳細 |
+| :------ | :------ |
+| デプロイ | Azure Storage との間でビッグ データを抽出/公開します。 詳細については、[ビッグ データ用の SqlPackage](sqlpackage-for-azure-synapse-analytics.md) に関する記事を参照してください |
+| Azure Synapse Analytics | 行レベルのセキュリティのサポート (インライン テーブル値関数、セキュリティ ポリシー、セキュリティ述語)  |
+| Azure Synapse Analytics | ワークロード分類のサポート |
+| Azure SQL Edge | 外部ストリーミング ジョブのサポート |
+| Azure SQL Edge | データ保持のためのテーブルとデータベースのオプションが追加されました。 |
+| [インポート] | インポート操作のための 2 つの新しいインデックス オプション プロパティが追加されました。 *DisableIndexesForDataPhase* (データを SQL Server にインポートする前にインデックスを無効にする。既定は true) と *RebuildIndexesOfflineForDataPhase* (データを SQL Server にインポートした後にオフラインでインデックスをリビルドする。既定は false) |
+| ログ記録 | ログ メッセージ内ですべてのオブジェクト名をハッシュ文字列に変換するすべての操作にプロパティが追加されました (HashObjectNamesInLogs)。 |
+| パフォーマンス | インポートとエクスポートのパフォーマンスの向上。たとえば、追加のログはボトルネックの増加の特定に役立ちます。 |
+| sqlcmd | デプロイと Schema Compare に SQLCMD 変数を値に置き換えるかどうかを指定するプロパティが追加されました (DoNotEvaluateSqlCmdVariables)。 |
+
+
+
+### <a name="fixes"></a>修正
+| 機能 | 詳細 |
+| :------ | :------ | 
+| デプロイ | [Azure SQL](https://techcommunity.microsoft.com/t5/azure-sql/changing-default-maxdop-in-azure-sql-database/ba-p/1538528) の既定の MAXDOP が 0 から 8 に変更され、DacFx でスキーマ モデルの既定値が更新されます | 
+| スキーマ比較 | OUT と OUTPUT のキーワードを使用したストアド プロシージャは、差分として無視されます |
+| デプロイ | ビッグ データ トークンの追加検証 |
+| ビルド/配置 | 最終的に dacpac を整合させるための、一時外部テーブルの完全スキーマ モデル クリーンアップ。  |
+| ビルド/配置 | エラー処理と Edge 150 RE 以外の修正が追加されました。 |
+| インポート/デプロイ | デプロイ中に復元されるシーケンス値 |
+| デプロイ | クラスター化インデックスの圧縮オプションを変更すると、alter index ではなくテーブルが再作成される問題を修正しました。 |
+| デプロイ | テーブル列が変更された場合に、クラスター化列ストア インデックスが削除され、再作成される問題を修正しました。 |
+| デプロイ | 外部ユーザーがデプロイ中に削除され、再作成される問題を修正しました。 |
+| スキーマ比較 | 外部ストリーミング ジョブでの Schema Compare の問題を修正しました。 |
+| [インポート] | デプロイ レポートのアンビエント設定 ReliableDdlEnabled スクリプトを有効にすると、Null 参照の例外が発生しました。|
+| デプロイ | システムのバージョン管理を含むデプロイ ステップが間違った順序で作成される問題を修正しました。 |
+| デプロイ | テンポラル テーブルを含むターゲットが原因で Schema Compare の更新や dacpac のデプロイが失敗する問題を修正しました。 |
+| デプロイ | ターゲットの前回の値に基づいてデプロイ後に ID 値を再シードします。 |
+
+### <a name="known-issues"></a>既知の問題
+| 機能 | 詳細 |
+| :------ | :------ |
+| デプロイ | Azure Synapse Analytics ワークロード管理機能 (ワークロード グループとワークロード分類子) はまだサポートされていません | 
 
 ## <a name="186-sqlpackage"></a>18.6 sqlpackage
 
@@ -32,7 +79,7 @@ ms.locfileid: "100061047"
 |Windows .NET Core |[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2143496)|2020 年 9 月 18 日| 18.6|15.0.4897.1|
 
 ### <a name="features"></a>特徴
-| 機能 | 詳細 |
+| 特徴量 | 詳細 |
 | :------ | :------ |
 | プラットフォーム | .NET Core バージョン用の sqlpackage を .NET Core 3.1 に更新しました |
 | Always Encrypted | SQL Server 2019 向けセキュア エンクレーブ インポートおよびエクスポートのサポートが追加されました |
@@ -223,7 +270,7 @@ ms.locfileid: "100061047"
 
 ### <a name="features"></a>特徴
 
-| 機能 | 詳細 |
+| 特徴量 | 詳細 |
 | :------ | :------ |
 | グラフ | グラフ テーブルのエッジ制約とエッジ制約句のサポートが追加されました。 |
 | デプロイ | SQL Server 2016 以降のインデックス キーで 32 列をサポートするためのモデルの検証規則が有効になりました。 |
@@ -275,7 +322,7 @@ ms.locfileid: "100061047"
 | :---------- | :------ |
 | デプロイ | .NET Core では、ビルド コントリビューターと配置コントリビューターがサポートされません。 | 
 | デプロイ | .NET Core では、json データによるシリアル化を使用している古い .dacpac ファイルと .bacpac ファイルがサポートされません。 | 
-| デプロイ | .NET Core では、大文字と小文字が区別されるファイル システムの問題により、参照された .dacpacs (master.dacpac など) が解決されない場合があります。 | 回避策は、参照ファイルの名前をすべて大文字にすることです (例: MASTER.BACPAC)。 |
+| デプロイ | .NET Core では、大文字と小文字が区別されるファイル システムの問題により、参照された .dacpacs (master.dacpac など) が解決されない場合があります。 回避策は、参照ファイルの名前をすべて大文字にすることです (例: MASTER.BACPAC)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="180-sqlpackage"></a>18.0 sqlpackage

@@ -2,7 +2,7 @@
 title: SQL Server のインストール ガイド
 description: SQL Server と関連コンポーネントを、インストール ウィザード、コマンド プロンプト、または Sysprep などのオプションを使用してインストールするのに役立つコンテンツのインデックスです。
 ms.custom: ''
-ms.date: 11/14/2019
+ms.date: 03/05/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 8f123235f263abd05878e7be422c13fcf84825e8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 4e433c16ba070d59c963589c8bceec371238ca38
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353092"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464275"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server のインストール ガイド
 
@@ -58,11 +58,11 @@ ms.locfileid: "100353092"
 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のダウンロード場所は、エディションによって異なります。
 
 * **SQL Server Enterprise、Standard、Express の各エディション** は、運用環境用にライセンスされます。 Enterprise および Standard Edition のインストール メディアについては、ソフトウェア販売元に問い合わせてください。 購入に関する情報および Microsoft パートナーのディレクトリについては、[マイクロソフトのライセンス ページ](https://www.microsoft.com/licensing/product-licensing/sql-server)をご覧ください。
-* [無料版 - 最新](https://www.microsoft.com/sql-server/sql-server-downloads)
-* [無料版 - その他](https://www.microsoft.com/evalcenter/evaluate-sql-server)
+* ボリューム ライセンス契約 ([マイクロソフトエンタープライズ契約](https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise)など) をお持ちの場合は、[ボリューム ライセンス サービス センター (VLSC)](https://www.microsoft.com/licensing/servicecenter/default.aspx) からソフトウェアをダウンロードできます。
+* [無料版 - 最新](https://www.microsoft.com/sql-server/sql-server-downloads)。
+* [無料版 - その他](https://www.microsoft.com/evalcenter/evaluate-sql-server)。
 
-
-その他の SQL Server コンポーネントはこちらにあります。 
+その他の SQL Server コンポーネントはこちらにあります。
 
 * [すべての累積的な更新プログラム](https://sqlserverbuilds.blogspot.com/)
 * [SQL Server Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)。 

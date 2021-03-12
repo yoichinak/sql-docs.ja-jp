@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4d3d5cb280f20deb3d683d962be986d7df38ed61
-ms.sourcegitcommit: 8bdb5a51f87a6ff3b94360555973ca0cd0b6223f
+ms.openlocfilehash: e2c384a012603af0fd8875071b33813050218c65
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100549378"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622738"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
@@ -207,7 +207,7 @@ ms.locfileid: "100549378"
 |**11068**|列ストア インデックスの挿入操作に対して、サーバー、データベース、またはリソース プールの構成された並列処理の最大限度 (MAXDOP) 値を使用します。 並列処理の度合いのオーバーライドについて詳しくは、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism)」を参照してください。<br /><br />**重要:** このトレース フラグは、トレース フラグ 11064 も有効になっている場合にのみ有効です。<br /><br />**重要:** このトレース フラグは、[列ストア セグメント](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment)の質の維持よりも高速なデータ読み込みが優先される場合に使用します。 たとえば、挿入操作が並列モードで実行される場合、列ストアに 1,048,577 行を読み込むときにこのトレース フラグを使用すると、複数の圧縮された行グループが生成される可能性があります。 このトレース フラグがない場合、挿入操作では 1 つの圧縮された行グループが生成されます。<br /><br />**注:** このトレース フラグは、[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ|
 |**11631**| 'ALTER INDEX ...REORGANIZE' で列ストア インデックス行グループ内の削除された行がクリーンアップされるのは、その行グループから特定のしきい値の行が削除された場合のみです。 既定のしきい値は、最大行数 (100 万) の 10% つまり 100,000 行です。 このトレース フラグにより、しきい値が列ストア行グループ内の現在の合計行数の 10% に変更されます。 たとえば、行グループに 20,000 行が含まれている場合、2,000 行が削除されるとしきい値を超え、REORGANIZE でこの行グループがクリーンアップの対象と見なされます。 詳しくは、[Microsoft サポート技術情報](https://support.microsoft.com/help/5000895)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ|
 |**11634**| 'ALTER INDEX ...REORGANIZE' で列ストア インデックス行グループ内の削除された行がクリーンアップされるのは、その行グループから特定のしきい値の行が削除された場合のみです。 既定のしきい値は、最大行数 (100 万) の 10% つまり 100,000 行です。 このトレース フラグにより、しきい値が列ストア行グループ内の行数の 1% に変更されます。 トレース フラグ 11631 と共に有効にすると、100 万行の 1% ではなく、行グループ内の現在の行数の 1% になります。 詳しくは、[Microsoft サポート技術情報](https://support.microsoft.com/help/5000895)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ|
-
+|**13116**|バグ [13685819](https://support.microsoft.com/en-us/topic/kb5000645-cumulative-update-16-for-sql-server-2016-sp2-a3997fa9-ec49-4df0-bcc3-12dd58b78265#bkmk_13685819) の修正プログラムを無効にします。 このトレース フラグは、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16 を適用した後に、並列プランを使用する DML (insert/update/delete) クエリが実行を完了できず、HP_SPOOL_BARRIER 待機に遭遇する問題が発生した場合に使用します。 <br /><br />**注:** このトレース フラグは、[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16 に適用されます。<br /><br />**スコープ**: グローバルのみ| 
   
 ## <a name="examples"></a>例  
  次の例では、DBCC TRACEON を使うことによって、サーバー レベルですべてのセッションにトレース フラグ 3205 を設定します。  

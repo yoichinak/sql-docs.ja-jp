@@ -17,12 +17,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016
-ms.openlocfilehash: 71782c95201c224bdd40624e23f529b01d892f22
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 729fcb2bdd1feccfb80d7b591fe96eeb38c23933
+ms.sourcegitcommit: 98acedd435aecfda1b3c4c23d3f0c3c1a12682a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475943"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532354"
 ---
 # <a name="replication-distribution-agent"></a>レプリケーション ディストリビューション エージェント
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -208,7 +208,9 @@ distrib [-?]
   
  ソースに利用可能なレプリケートされたトランザクションがない場合、エージェントはディストリビューターに対してトランザクションなしのメッセージを報告します。 このオプションは、エージェントが次にトランザクションなしのメッセージを報告するまでの待ち時間を指定します。 前回レプリケートされたトランザクションを処理した後で、ソースに利用可能なトランザクションがないことを検出すると、エージェントは必ずトランザクションなしのメッセージを報告します。 既定値は 60 秒です。  
 
-**-MultiSubnetFailover** MultiSubnetFailover プロパティを有効にするかどうかを指定します。 アプリケーションが異なるサブネット上の AlwaysOn 可用性グループ (AG) に接続している場合、MultiSubnetFailover=true に設定すると、(現在) アクティブなサーバーの検出と接続が速くなります。
+**-MultiSubnetFailover** MultiSubnetFailover プロパティを有効にするかどうかを指定します。 アプリケーションが異なるサブネット上の AlwaysOn 可用性グループ (AG) に接続している場合、MultiSubnetFailover=true に設定すると、(現在) アクティブなサーバーの検出と接続が速くなります。   
+  **適用対象**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] 以降)。  
+
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  BLOB データの最小バイト サイズを指定します。この値を超えると、データはストリームとしてバインドされます。 このパラメーターを使用するためには、 **-UseOledbStreaming** を指定する必要があります。 400 バイトから 1048576 バイトまでの値を指定できます。既定値は 16384 バイトです。  

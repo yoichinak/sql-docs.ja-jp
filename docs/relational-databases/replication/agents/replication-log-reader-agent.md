@@ -17,12 +17,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: f5e716be586d7fb152a3c229cc016e349d57c99b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 58e9ed82d9518d423001342fa288e2c7aba1f5bf
+ms.sourcegitcommit: 98acedd435aecfda1b3c4c23d3f0c3c1a12682a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467353"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532344"
 ---
 # <a name="replication-log-reader-agent"></a>レプリケーション ログ リーダー エージェント
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -142,7 +142,8 @@ logread [-?]
   
  ソースに利用可能なレプリケートされたトランザクションがない場合、エージェントはディストリビューターに対してトランザクションなしのメッセージを報告します。 このオプションは、エージェントが次にトランザクションなしのメッセージを報告するまでの待ち時間を指定します。 前回レプリケートされたトランザクションを処理した後で、ソースに利用可能なトランザクションがないことを検出すると、エージェントは必ずトランザクションなしのメッセージを報告します。 既定値は 60 秒です。  
  
- **-MultiSubnetFailover** [**0**\|**1**] MultiSubnetFailover プロパティを有効にするかどうかを指定します。 アプリケーションが異なるサブネット上の AlwaysOn 可用性グループ (AG) に接続している場合、MultiSubnetFailover を 1 (true) に設定すると、(現在) アクティブなサーバーの検出と接続が速くなります。
+ **-MultiSubnetFailover** [**0**\|**1**] MultiSubnetFailover プロパティを有効にするかどうかを指定します。 アプリケーションが異なるサブネット上の AlwaysOn 可用性グループ (AG) に接続している場合、MultiSubnetFailover を 1 (true) に設定すると、(現在) アクティブなサーバーの検出と接続が速くなります。   
+   **適用対象**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] 以降)。  
   
  **-Output** _output_path_and_file_name_  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  

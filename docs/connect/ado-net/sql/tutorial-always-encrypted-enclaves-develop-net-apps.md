@@ -11,12 +11,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 735d0b552843a95ea388b91e2ed1da3fcfec2790
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: b2dd15961615ef4bff9c7e5e99f91844956b1895
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837019"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464928"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET アプリケーションを開発する
 
@@ -67,7 +67,7 @@ ms.locfileid: "101837019"
 
 このアプリケーションでは、**ContosoHR** データベース (「[チュートリアル: SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)」または「[チュートリアル: Azure SQL Database でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)」) に接続し、**SSN** 列に対する `LIKE` 述語と、**Salary** 列に対する範囲比較が含まれるクエリを実行します。
 
-1. (Visual Studio によって生成された) Program.cs ファイルの内容を、次のコードに置き換えます。 
+1. (Visual Studio によって生成された) Program.cs ファイルの内容を、次のコードに置き換えます。
 
     ```cs
     using System;
@@ -140,4 +140,4 @@ ms.locfileid: "101837019"
 
 - [Always Encrypted と Microsoft .NET Data Provider for SQL Server を使用する](sqlclient-support-always-encrypted.md)
 - [Always Encrypted での Azure Key Vault プロバイダーの使用を示す例](azure-key-vault-example.md)
-- [セキュリティで保護されたエンクレーブによって有効になった Always Encrypted での Azure Key Vault プロバイダーの使用を示す例](azure-key-vault-enclave-example.md)
+- [セキュリティで保護されたエンクレーブが設定された Always Encrypted での Azure Key Vault プロバイダーの使用を示す例](azure-key-vault-enclave-example.md)

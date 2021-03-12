@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: cecc6de89a9e8f82a64942acb08af7ddee48c5be
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 94ddccc0789f01f3d7d6ac6675ec9c54405972a1
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100081463"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622628"
 ---
 # <a name="sqlpackage-import-parameters-and-properties"></a>SqlPackage Import のパラメーターとプロパティ
 SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.bacpac ファイル) のスキーマとテーブル データが、SQL Server または Azure SQL Database の新規または空のデータベースにインポートされます。 既存のデータベースへのインポート操作時に、ターゲット データベースにユーザー定義のスキーマ オブジェクトを含めることはできません。  
@@ -53,17 +53,19 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## <a name="properties-specific-to-the-import-action"></a>Import 操作に固有のプロパティ
 
-|プロパティ|[値]|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| SQLServer に対してクエリを実行するときのデータベース ロックのタイムアウトを秒単位で指定します。 無期限に待機するには、-1 を使用します。|
 |**/p:**|DatabaseMaximumSize=(INT32)|Azure SQL Database の最大サイズを GB 単位で定義します。|
 |**/p:**|DatabaseServiceObjective=(STRING)|Azure SQL Database のパフォーマンス レベル ("P0" や "S1" など) を定義します。|
+|**/p:**|DisableIndexesForDataPhase=(BOOLEAN TRUE)|SQL Server にデータをインポートする前にインデックスを無効にします。|
 |**/p:**|ImportContributorArguments=(STRING)|配置コントリビューターに配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|ImportContributors=(STRING)|bacpac をインポートするときに実行する配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
 |**/p:**|ImportContributorPaths=(STRING)|追加の配置コントリビューターを読み込むためのパスを指定します。 複数の値を指定する場合は、セミコロンで区切ります。 |
 |**/p:**|LongRunningCommandTimeout=(INT32)| SQL Server に対してクエリを実行するときの実行時間の長いコマンドのタイムアウトを秒単位で指定します。 無期限に待機するには、0 を使用します。|
+|**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN FALSE)|SQL Server にデータをインポートした後、オフラインでインデックスをリビルドします。|
 |**/p:**|Storage=({File&#124;Memory})|データベース モデルの構築時に要素をどのように格納するかを指定します。 パフォーマンス上の理由から、既定値は InMemory です。 大規模なデータベースの場合は、File バックアップ ストレージが必要です。|
   
 

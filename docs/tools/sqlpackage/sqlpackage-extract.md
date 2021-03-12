@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: 1303473c79558629ee0009f9c07bf8d28ffbd704
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 84405eb4d5ac63f287f2696dcef0a1e3ddc09cc4
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100060977"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622660"
 ---
 # <a name="sqlpackage-extract-parameters-and-properties"></a>SqlPackage Extract のパラメーターとプロパティ
 SqlPackage.exe Extract 操作によって、DACPAC ファイル (.dacpac) で、接続されたデータベースのスキーマが作成されます。 既定では、データは .dacpac ファイルに含まれません。 データを含めるには、[Export 操作](sqlpackage-export.md)を活用するか、Extract プロパティ *ExtractAllTableData*/*TableData* を使用します。 
@@ -57,8 +57,12 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## <a name="properties-specific-to-the-extract-action"></a>抽出アクションに固有のプロパティ
 
-|プロパティ|[値]|説明|
+|プロパティ|値|説明|
 |---|---|---|
+|**/p:**|AzureStorageBlobEndpoint=(STRING)|Azure BLOB ストレージ エンドポイントについては、「[Azure Synapse Analytics の SqlPackage](sqlpackage-for-azure-synapse-analytics.md#extract)」を参照してください。|
+|**/p:**|AzureStorageContainer=(STRING)|Azure BLOB ストレージ コンテナーについては、「[Azure Synapse Analytics の SqlPackage](sqlpackage-for-azure-synapse-analytics.md#extract)」を参照してください。|
+|**/p:**|AzureStorageKey=(STRING)|Azure ストレージ アカウント キーについては、「[Azure Synapse Analytics の SqlPackage](sqlpackage-for-azure-synapse-analytics.md#extract)」を参照してください。|
+|**/p:**|AzureStorageRootPath=(STRING)|コンテナー内のストレージ ルート パス。 このプロパティがない場合、パスの既定値は `servername/databasename/timestamp/` になります。 「[Azure Synapse Analytics の SqlPackage](sqlpackage-for-azure-synapse-analytics.md#extract)」を参照してください。|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|DacApplicationDescription=(STRING)|DACPAC メタデータに格納されるアプリケーションの説明を定義します。|
 |**/p:**|DacApplicationName=(STRING)|DACPAC メタデータに格納されるアプリケーション名を定義します。 既定値は、データベース名です。|

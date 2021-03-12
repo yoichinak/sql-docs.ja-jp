@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 02/05/2021
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: b8b520e3c5f44342970881e3e67b3dbf95ce9853
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 40f6618c8564f0d264076316038274b401fb650a
+ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837577"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514899"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>SQL Server のインスタンスへの機能の追加 (セットアップ)
 
@@ -145,6 +145,11 @@ ms.locfileid: "101837577"
 25. インストールが終了すると、[完了] ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 SQL Server のインストール プロセスを完了するには、 **[閉じる]** を選択します。
 
 26. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。
+
+> [!CAUTION]
+> サービス更新プログラムを適用する
+>
+> SQL Server の既存のインストールに機能を追加すると、インストール メディアのバージョン レベルで機能がインストールされ、それは SQL Server の他の機能のバージョン レベルより古いものである可能性があります。 これにより、予期しない動作やエラーが発生する可能性があります。 常に、新しい機能を同じバージョン レベルにすることにより、新機能のインストールを維持してください。 必要に応じて、Service Pack (SP)、累積的な更新プログラム (CU)、一般配布リリース (GDR) をインストールします。 サーバーのバージョンと新機能を確認するには、「[SQL Server とそのコンポーネントのバージョン、エディション、更新レベルを確認する](/troubleshoot/sql/general/determine-version-edition-update-level)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 

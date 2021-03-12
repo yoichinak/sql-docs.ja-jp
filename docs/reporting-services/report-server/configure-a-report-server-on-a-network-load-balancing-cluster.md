@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 12/11/2019
-ms.openlocfilehash: 9e7a7b0dce01b21fcb746fdfdcbd5adfa7c7483d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 03/09/2021
+ms.openlocfilehash: 8d56f26c6661587cb13ff2962221a4a41c7da2ba
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100067208"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622678"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>ネットワーク負荷分散クラスターにおけるレポート サーバーの構成
 
@@ -55,7 +55,7 @@ NLB クラスターでスケールアウト配置を運用するには、ユー�
   
  この問題を回避するために、ビュー ステート検証をサポートする任意の検証キーを生成してから、同じキーを使用するように各レポート サーバー ノードを手動で構成することができます。 ランダムに生成される任意の 16 進数のシーケンスを使用できます。 検証アルゴリズム (SHA1 など) によって、16 進数のシーケンスの必要な長さが決まります。  
 
-::: moniker range="=sql-server-2016"
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
 
 1. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]により提供される自動生成機能を使用して、検証キーと暗号化解除キーを生成します。 最終的に、スケールアウト配置内の各 Report Server インスタンスの Web.config ファイルに貼り付けることができる単一の <`machineKey`> エントリが必要です。  
   
@@ -65,17 +65,16 @@ NLB クラスターでスケールアウト配置を運用するには、ユー�
     <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Report Server 用の Web.config ファイルを開き、生成した <`machineKey`> 要素を <`system.web`> セクションに貼り付けます。 既定では、レポート マネージャーの Web.config ファイルは、\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config にあります。  
+2. Report Server 用の Web.config ファイルを開き、生成した <`machineKey`> 要素を <`system.web`> セクションに貼り付けます。 既定では、Web.config ファイルは、\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config にあります。  
   
 3. ファイルを保存します。  
   
 4. スケールアウト配置内の各レポート サーバーに対し、前の手順を繰り返します。  
   
-5. \Reporting Services\Reportserver フォルダーにあるすべての Web.Config ファイルの <`system.web`> セクションに同一の <`machineKey`> 要素が含まれていることを確認します。  
+5. スケールアウト配置内のすべてのレポート サーバーのすべての Web.Config ファイルで、<`system.web`> セクションに同一の <`machineKey`> 要素が含まれていることを確認します。  
 
-::: moniker-end
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-::: moniker range=">=sql-server-2017"
 
 1. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]により提供される自動生成機能を使用して、検証キーと暗号化解除キーを生成します。 最終的に、スケールアウト配置内の各レポート マネージャー インスタンスの RSReportServer.config ファイルに貼り付けることができる単一の \<**MachineKey**> エントリが必要です。
 
@@ -85,13 +84,13 @@ NLB クラスターでスケールアウト配置を運用するには、ユー�
     <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
-2. ファイルを保存します。
+2. レポート サーバーの RSReportServer.config ファイルを開き、生成した \<**MachineKey**> 要素を <`Configuration`> セクションに貼り付けます。 既定では、RSReportServer.config ファイルは、Reporting Services の \Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\RSReportServer.config と、Power BI Report Server の \Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer\RSReportServer.config にあります。  
 
-3. スケールアウト配置内の各レポート サーバーに対し、前の手順を繰り返します。  
+3. ファイルを保存します。
 
-4. \Reporting Services\ReportServer フォルダーにあるすべての RSReportServer.config ファイルに同一の \<**MachineKey**> 要素が含まれていることを確認します。
+4. スケールアウト配置内の各レポート サーバーに対し、前の手順を繰り返します。  
 
-::: moniker-end
+5. スケールアウト配置内のすべてのレポート サーバーのすべての RSReportServer.config ファイルで、<`Configuration`> セクションに同一の \<**MachineKey**> 要素が含まれていることを確認します。
 
 ## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> Hostname と UrlRoot を構成する方法
 

@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e0d007379d7213e1d455a7bac675c4df7cf3c343
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: f6cc1ad3c66ae7f4ec1817af3bcaa3934a1858ef
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100349131"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622898"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Docker 上で SQL Server による分散トランザクションを使用する方法
 
@@ -85,7 +85,7 @@ docker run `
 > [!NOTE]
 > RPC エンドポイント マッパーと MSDTC ポートは、ホストとコンテナー上で同一になっている必要はありません。 そのため、RPC エンドポイント マッパーのポートはコンテナー上で 135 になるように構成されると共に、潜在的にはポート 13501 またはホスト サーバー上で利用できるその他の任意のポートにマップされる可能性があります。
 
-## <a name="configure-the-firewall"></a>ファイアウォールの構成
+## <a name="configure-the-firewall"></a>ファイアウォールを構成する
 
 ホストと通信するためには、コンテナー用のホスト サーバー上にファイアウォールを構成する必要もあります。 Docker コンテナーが外部通信用に公開しているすべてのポートに対して、ファイアウォールを開きます。 前の例では、これはポート 135、51433、および 51000 になります。 これらは、ホスト自体にあるポートであり、コンテナー内でマップされているポートではありません。 そのため、コンテナーの RPC エンドポイント マッパーのポート 51000 がホストのポート 51001 にマップされた場合は、ホストとの通信のためにファイアウォールに (51000 ではなく) ポート 51001 を開く必要があります。  
 
@@ -100,8 +100,8 @@ sudo ufw allow from any to any port 135 proto tcp
 次の例は、Red Hat Enterprise Linux (RHEL) 上でこれを行う方法を示しています。
 
 ```bash
-sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=51433/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=51000/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
 sudo firewall-cmd --reload
 ```

@@ -8,15 +8,17 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 3/5/2021
-ms.openlocfilehash: 37e31834df74bf91fcf31004973c1556b8f34552
-ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.date: 3/10/2021
+ms.openlocfilehash: 34a7ff8c9380a88bb285a6d2e51e57e652f0310d
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102247465"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622841"
 ---
 # <a name="sql-assessment-api"></a>SQL Assessment API
+
+[!INCLUDE [SQL Server 2012, ASMI, SQL Server on Azure VM, SQL on Linux](../../includes/applies-to-version/sql-asmi-sqlavm-sql-linux.md)]
 
 SQL Assessment API には、ベスト プラクティスのために SQL Server の構成を評価するメカニズムが用意されています。 この API は、SQL Server Team が推奨するベスト プラクティス ルールを含むルールセットと共に配布されます。 このルールセットは新しいバージョンのリリースと共に強化されますが、同時に、この API は高いカスタマイズ性と拡張性を備えたソリューションを提供する目的で構築されています。 そのため、ユーザーは既定のルールを調整し、独自のルールを作成できます。
 

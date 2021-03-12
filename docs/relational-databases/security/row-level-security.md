@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f54ca9be0a75912c716f12b56c8b3848b151358
-ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.openlocfilehash: 7376b50196b543b162cae6d0800980990651ee45
+ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102247533"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514909"
 ---
 # <a name="row-level-security"></a>行レベルのセキュリティ
 
@@ -159,7 +159,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
 - **Filestream:** RLS は Filestream と互換性がありません。  
   
-- **PolyBase:** RLS は、Azure Synapse および SQL Server 2019 CU1 以降の外部テーブルでサポートされています。 
+- **PolyBase:** RLS は、Azure Synapse および SQL Server 2019 CU7 以降の外部テーブルでサポートされています。 
 
 - **メモリ最適化テーブル:** メモリ最適化テーブルでセキュリティ述語として使用されるインライン テーブル値関数は、`WITH NATIVE_COMPILATION` オプションを使用して定義する必要があります。 このオプションを使用すると、メモリ最適化テーブルでサポートされていない言語機能が禁止され、作成時に該当するエラーが発行されます。 詳細については、「 **メモリ最適化テーブルの概要** 」の「 [メモリ最適化テーブルの行レベルのセキュリティ](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)」をご覧ください。  
   

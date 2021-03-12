@@ -25,12 +25,12 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b41bf1941bb12bf7560563d0b00fad7b88a75f8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8ba376927810521381a3c1a838e7438cdd7acdac
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99208847"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622886"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,20 +44,20 @@ ms.locfileid: "99208847"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
+SWITCHOFFSET ( datetimeoffset_expression, timezoneoffset_expression )   
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
- *DATETIMEOFFSET*  
+ *datetimeoffset_expression*  
  **datetimeoffset(n)** 値に解決可能な式を指定する。  
   
- *time_zone*  
- [+|-]TZH:TZM 形式の文字列か、またはタイムゾーンのオフセットを表す符号付き整数 (分) です。夏時間対応であり調整済みと見なされます。  
+ *timezoneoffset_expression*  
+ [+|-]TZH:TZM 形式の式か、またはタイム ゾーンのオフセットを表す符号付き整数 (分) です。夏時間対応であり調整済みと見なされます。  
   
 ## <a name="return-type"></a>戻り値の型  
- **datetimeoffset** の小数部の有効桁数を持つ、 *DATETIMEOFFSET* 引数。  
+ *datetimeoffset_expression* 引数の小数部の有効桁数を持つ、**datetimeoffset**。  
   
 ## <a name="remarks"></a>解説  
  SWITCHOFFSET を使用して、選択、 **datetimeoffset** に最初に格納されているタイム ゾーン オフセットとは異なるタイム ゾーン オフセットの値です。 SWITCHOFFSET は、保存されているは更新されません *time_zone* 値。  

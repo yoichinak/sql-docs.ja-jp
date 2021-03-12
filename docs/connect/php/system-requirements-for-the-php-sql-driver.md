@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP のシステム要件
 description: Microsoft Drivers for PHP for SQL Server では、さまざまな PHP バージョン、オペレーティング システム、SQL Server バージョンがサポートされています。
 ms.custom: ''
-ms.date: 01/29/2021
+ms.date: 03/09/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 06824f62740653eddeee6d3484e7eb8914404110
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: b52bb4597b76ca831b94899e040a814b11b2a903
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99076444"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622668"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のシステム要件
 
@@ -48,10 +48,10 @@ PHP が実行されるコンピューター上に、正しいバージョンの 
 
 |PHP ドライバー バージョン &#8594;<br />&#8595; ODBC ドライバーのバージョン|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|ODBC ドライバー 17 以降 |はい|はい|はい|はい|はい|   |   |   |
-|ODBC ドライバー 13.1|はい|はい|はい|はい|はい|はい|はい|   |
+|ODBC ドライバー 17 以降 |はい|Yes|Yes|Yes|はい|   |   |   |
+|ODBC ドライバー 13.1|はい|Yes|Yes|Yes|Yes|Yes|はい|   |
 |ODBC ドライバー 13  |   |   |   |   |   |   |はい|   |
-|ODBC ドライバー 11  |はい|はい|はい|はい|はい|はい|はい|はい|
+|ODBC ドライバー 11  |   |はい|Yes|Yes|Yes|Yes|Yes|はい|
 
 SQLSRV ドライバーを使用している場合、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] によって使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server のバージョンに関する情報が [sqlsrv_client_info](sqlsrv-client-info.md) によって返されます。 PDO_SQLSRV ドライバーを使用している場合、[PDO::getAttribute](pdo-getattribute.md) を使用して、バージョンを確認できます。
 

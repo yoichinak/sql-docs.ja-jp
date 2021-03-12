@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.date: 03/02/2021
 monikerRange: =azure-sqldw-latest
 ms.custom: template-tutorial
-ms.openlocfilehash: 74f98ad652a58f70cd75ef60556bf0464fd5d7c7
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: 3e5e8536c135244288d022879764d021c53e67ca
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186360"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770505"
 ---
 # <a name="tutorial-to-perform-your-first-code-translation-with-azure-synapse-pathway-preview"></a>Azure Synapse Pathway プレビューで初めてのコード翻訳を実行するためのチュートリアル
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -62,6 +62,18 @@ Azure Synapse Pathway プレビューには、Azure Synapse Analytics への移�
 1. これには、GitHub リポジトリに簡単にコミットできるプロジェクトの構造が含まれています。
   
 1. エラーと警告の一覧が含まれる、結果ファイルは、同じ出力ディレクトリにアップロードされます。
+
+## <a name="run-the-translation-using-command-line"></a>コマンド ラインを使用して翻訳を実行する
+1. インストール時に、AspCmd.exe が C:\Program Files (x86)\Azure Synapse Pathway (プレビュー) から使用できるようになります
+1. コマンド プロンプトを起動して、ファイルの保存先に移動する 
+1. コマンドの一覧を見るには、「aspcmd.exe--help」と入力します
+
+  ![Azure Synapse の評価コマンド ライン ヘルプ コマンド。](./media/synapse-pathway-assessment/command-line-help.png)
+
+
+4. コマンド ラインを使用して翻訳の実行を開始することができます
+
+ ![コマンド ラインを使用した Azure Synapse の評価。](./media/synapse-pathway-assessment/command-line-assessment.png)
 
 ## <a name="next-steps"></a>次のステップ
 

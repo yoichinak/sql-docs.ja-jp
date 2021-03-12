@@ -18,12 +18,12 @@ ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/10/2020
-ms.openlocfilehash: 95bfeb321f43fb860bbbeecb32ac18ec221e5067
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 86513345502531da670b870b5ecf70de9270f18f
+ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99194692"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102474906"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 
@@ -93,15 +93,15 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 ## <a name="countersignatures"></a>副署名  
  署名付きモジュールの実行時に、署名が SQL トークンに一時的に追加されますが、モジュールで別のモジュールが実行されるかモジュールで実行が終了すると、署名は失われます。 副署名は特殊な形式の署名です。 副署名のみで権限が付与されることはありませんが、副署名されたオブジェクトに対して行われた呼び出しの間、同じ証明書または非対称キーで作成された署名を保持できるようになります。  
   
- たとえば、ユーザー Alice がプロシージャ ProcSelectT1ForAlice を呼び出すとします。このプロシージャを呼び出すと、テーブル T1 から選択を行うプロシージャ procSelectT1 が呼び出されます。 Alice は ProcSelectT1ForAlice および procSelectT1 に対する EXECUTE 権限を持っていますが、T1 に対する SELECT 権限は持っておらず、このチェーン全体に組み合わせ所有権は関係しません。 Alice は、テーブル T1 に直接アクセスすることも、ProcSelectT1ForAlice および procSelectT1 を使用してアクセスすることもできません。 Alice がアクセスのために常に ProcSelectT1ForAlice を使用するようにしたいので、procSelectT1 を実行するための権限は Alice に付与したくありません。 このためにはどうすればよいでしょうか。  
+ たとえば、ユーザー Alice がプロシージャ ProcForAlice を呼び出すとします。このプロシージャを呼び出すと、テーブル T1 から選択を行うプロシージャ ProcSelectT1 が呼び出されます。 Alice は ProcForAlice および ProcSelectT1 に対する EXECUTE 権限を持っていますが、T1 に対する SELECT 権限は持っておらず、このチェーン全体に組み合わせ所有権は関係しません。 Alice は、テーブル T1 に直接アクセスすることも、ProcForAlice および ProcSelectT1 を使用してアクセスすることもできません。 Alice がアクセスのために常に ProcForAlice を使用するようにしたいので、ProcSelectT1 を実行するための権限は Alice に付与したくありません。 このためにはどうすればよいでしょうか。  
   
--   procSelectT1 に署名して procSelectT1 が T1 にアクセスできるようにすると、Alice は procSelectT1 を直接呼び出すことができるようになり、ProcSelectT1ForAlice を呼び出す必要がありません。  
+-   ProcSelectT1 に署名して ProcSelectT1 が T1 にアクセスできるようにすると、Alice は ProcSelectT1 を直接呼び出すことができるようになり、ProcForAlice を呼び出す必要がありません。  
   
--   procSelectT1 に対する EXECUTE 権限を Alice に付与しないということもできますが、Alice は ProcSelectT1ForAlice を使用して procSelectT1 を呼び出すことができなくなります。
+-   ProcSelectT1 に対する EXECUTE 権限を Alice に付与しないということもできますが、Alice は ProcForAlice を使用して ProcSelectT1 を呼び出すことができなくなります。
   
--   ProcSelectT1ForAlice への署名は procSelectT1 の呼び出し時に失われるので、この署名だけでは効果がありません。  
+-   ProcForAlice への署名は ProcSelectT1 の呼び出し時に失われるので、この署名だけでは効果がありません。  
   
-ただし、ProcSelectT1ForAlice への署名に使用した証明書と同じ証明書を使用して procSelectT1 に副署名すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] において呼び出しチェーン全体で署名が保持され、T1 にアクセスできるようになります。 Alice が procSelectT1 を直接呼び出そうとしても、副署名では権限は付与されないので、T1 にはアクセスできません。 以下の例 C で、この例の [!INCLUDE[tsql](../../includes/tsql-md.md)] を示します。  
+ただし、ProcForAlice への署名に使用した証明書と同じ証明書を使用して ProcSelectT1 に副署名すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] において呼び出しチェーン全体で署名が保持され、T1 にアクセスできるようになります。 Alice が ProcSelectT1 を直接呼び出そうとしても、副署名では権限は付与されないので、T1 にはアクセスできません。 以下の例 C で、この例の [!INCLUDE[tsql](../../includes/tsql-md.md)] を示します。  
   
 ## <a name="permissions"></a>アクセス許可  
 
@@ -211,42 +211,42 @@ BEGIN
     SELECT * FROM T1;  
 END;  
 GO  
-GRANT EXECUTE ON procSelectT1 to public;  
+GRANT EXECUTE ON ProcSelectT1 to public;  
   
 -- Create special procedure for accessing T1  
-CREATE PROCEDURE  procSelectT1ForAlice AS  
+CREATE PROCEDURE  ProcForAlice AS  
 BEGIN  
    IF USER_ID() <> USER_ID('Alice')  
     BEGIN  
         PRINT 'Only Alice can use this.';  
         RETURN  
     END  
-   EXEC procSelectT1;  
+   EXEC ProcSelectT1;  
 END;  
 GO;  
-GRANT EXECUTE ON procSelectT1ForAlice TO PUBLIC;  
+GRANT EXECUTE ON ProcForAlice TO PUBLIC;  
   
 -- Verify procedure works for a sysadmin user  
-EXEC procSelectT1ForAlice;  
+EXEC ProcForAlice;  
   
 -- Alice still can't use the procedure yet  
 EXECUTE AS LOGIN = 'Alice';  
-    EXEC procSelectT1ForAlice;  
+    EXEC ProcForAlice;  
 REVERT;  
   
 -- Sign procedure to grant it SELECT permission  
-ADD SIGNATURE TO procSelectT1ForAlice BY CERTIFICATE csSelectT   
+ADD SIGNATURE TO ProcForAlice BY CERTIFICATE csSelectT   
 WITH PASSWORD = 'SimplePwd01';  
   
--- Counter sign proc_select_t, to make this work  
-ADD COUNTER SIGNATURE TO procSelectT1 BY CERTIFICATE csSelectT   
+-- Counter sign ProcSelectT1, to make this work  
+ADD COUNTER SIGNATURE TO ProcSelectT1 BY CERTIFICATE csSelectT   
 WITH PASSWORD = 'SimplePwd01';  
   
 -- Now the proc works.   
--- Note that calling procSelectT1 directly still doesn't work  
+-- Note that calling ProcSelectT1 directly still doesn't work  
 EXECUTE AS LOGIN = 'Alice';  
-    EXEC procSelectT1ForAlice;  
-    EXEC procSelectT1;  
+    EXEC ProcForAlice;  
+    EXEC ProcSelectT1;  
 REVERT;  
   
 -- Cleanup  

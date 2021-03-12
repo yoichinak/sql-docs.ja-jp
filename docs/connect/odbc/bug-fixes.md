@@ -14,16 +14,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6f1072f51349952be373a69a04ac556b38e3f25f
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 1816f1a8255041d6211931ffc41963acc460e15d
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837489"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770477"
 ---
 # <a name="list-of-bugs-fixed"></a>修正されたバグの一覧
 
 このページには [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の各リリースで修正されたバグの一覧が記載されています。
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-1772-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバグを修正しました
+
+- マネージド サービス ID 認証の使用時の 404 Not Found エラーによる問題を修正しました
+- 高マルチスレッド読み込みでの断続的な暗号化非対応エラーを修正しました
+- 高マルチスレッド読み込みでの断続的なクラッシュを修正しました
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-177-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバグを修正しました
 

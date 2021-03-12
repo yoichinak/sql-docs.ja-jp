@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c394eaeb6ec8361dd429b944b128d19a0cf33319
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: b308bd441b063592a39dae710c782aaf826c3071
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837529"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464790"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server のリリース ノート
 
@@ -34,7 +34,7 @@ ms.locfileid: "101837529"
 zip ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x40a)  
 tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x40a)  
 
-### <a name="compliance"></a>コンプライアンス
+### <a name="92-compliance"></a>9.2 に準拠
 
 | コンプライアンスの変更 | 詳細 |
 | :---------------- | :------ |
@@ -43,7 +43,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 | Java Development Kit (JDK) バージョン 15.0、11.0 および 1.8 と互換性があります。 | Microsoft JDBC Driver 9.2 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 15.0 と互換性を持つようになりました。 |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>リリース
+### <a name="92-releases"></a>9.2 のリリース
 
 バージョン番号: 9.2.1  
 リリース日: 2021 年 3 月 2 日
@@ -66,29 +66,32 @@ tar.gz ファイル: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2
 Microsoft JDBC Driver 9.2 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 15.0 と互換性を持つようになりました。
 
 ### <a name="added-support-for-azure-active-directory-interactive-authentication"></a>Azure Active Directory 対話型認証のサポートの追加
+
 | 認証の種類の追加 | 説明 |
 | :---------- | :------ |
 | Microsoft JDBC Driver 9.2 for SQL Server で、対話型認証を使用した Azure Key Vault への認証がサポートされるようになりました。 | 「[Azure Active Directory 認証を利用した接続](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)」を参照してください。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="added-support-for-azure-active-directory-service-principal-authentication"></a>Azure Active Directory サービス プリンシパル認証のサポートの追加
+
 | 認証の種類の追加 | 説明 |
 | :---------- | :------ |
 | Microsoft JDBC Driver 9.2 for SQL Server で、サービス プリンシパル ID のクライアント ID とシークレットを使用した Azure Key Vault への認証がサポートされるようになりました。 | 「[Azure Active Directory 認証を利用した接続](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)」を参照してください。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-azure-key-vault-library-to-use-modern-azure-key-vault-library"></a>最新の Azure Key Vault ライブラリを使用するための Azure Key Vault ライブラリの更新
+
 | Azure Key Vault のライブラリの変更 | 詳細 |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 9.2 は、前の世代の Azure Key Vault ライブラリおよび ADAL ライブラリから、最新の Azure Key Vault および Azure ID の同等のものに移行されました。 | **依存関係の変更** Azure Active Directory 認証または Azure Key Vault を利用する場合は、アプリケーションの依存関係を必ず更新してください。 [Azure Key Vault プロバイダー](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-the-azure-key-vault-provider)または [Azure Active Directory 認証の操作](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-azure-active-directory-authentication)時の依存関係の要件を参照してください |
 | &nbsp; | &nbsp; |
 
 ### <a name="enabled-usebulkcopyforbatchinsert-for-non-azure-synapse-analytics-servers"></a>Azure Synapse Analytics サーバー以外での useBulkCopyForBatchInsert の有効化
+
 | Azure Synapse Analytics サーバー以外での useBulkCopyForBatchInsert の変更 | 詳細 |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 9.2 では、Azure Synapse Analytics サーバー以外に対するバッチ挿入操作に一括コピー API が許可されるようになりました。 | 「[バッチ挿入操作に一括コピー API を使用する](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)」を参照してください。 |
 | &nbsp; | &nbsp; |
-
 
 ## <a name="previous-releases"></a>以前のリリース
 
@@ -104,7 +107,7 @@ Microsoft JDBC Driver 9.2 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 zip ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)  
 tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)  
 
-### <a name="compliance"></a>コンプライアンス
+### <a name="84-compliance"></a>8.4 に準拠
 
 | コンプライアンスの変更 | 詳細 |
 | :---------------- | :------ |
@@ -113,7 +116,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 | Java Development Kit (JDK) バージョン 14.0、11.0 および 1.8 と互換性があります。 | Microsoft JDBC Driver 8.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 14.0 と互換性を持つようになりました。 |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>リリース
+### <a name="84-releases"></a>8.4 のリリース
 
 バージョン番号: 8.4.1  
 リリース日:2020 年 8 月 27 日  
@@ -175,7 +178,7 @@ Microsoft JDBC Driver 8.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 zip ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40a)  
 tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40a)  
 
-### <a name="compliance"></a>コンプライアンス
+### <a name="82-compliance"></a>8.2 に準拠
 
 | コンプライアンスの変更 | 詳細 |
 | :---------------- | :------ |
@@ -184,7 +187,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 | Java Development Kit (JDK) バージョン 13.0、11.0 および 1.8 と互換性があります。 | Microsoft JDBC Driver 8.2 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 13.0 と互換性を持つようになりました。 |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>リリース
+### <a name="82-releases"></a>8.2 のリリース
 
 バージョン番号: 8.2.2  
 リリース日:2020 年 3 月 24 日  
@@ -231,7 +234,7 @@ Microsoft JDBC Driver 8.2 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 | また、簡単にアクセスできるように、DLL も Maven リポジトリにアップロードされています。 | [このページ](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth)を参照してください。 |
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues"></a>既知の問題
+### <a name="82-known-issues"></a>8.2 の既知の問題
 
 | 既知の問題 | 詳細 |
 | :----------- | :------ |
@@ -250,7 +253,7 @@ Microsoft JDBC Driver 8.2 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 自己解凍形式 exe ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x40a)  
 tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x40a)  
 
-### <a name="compliance"></a>コンプライアンス
+### <a name="74-compliance"></a>7.4 に準拠
 
 | コンプライアンスの変更 | 詳細 |
 | :---------------- | :------ |
@@ -259,7 +262,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 | Java Development Kit (JDK) バージョン 12.0、11.0 および 1.8 と互換性があります。 | Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 12.0 と互換性を持つようになりました。 |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>リリース
+### <a name="74-releases"></a>7.4 のリリース
 
 バージョン番号: 7.4.1  
 リリース日:2019 年 8 月 2 日  
@@ -299,7 +302,7 @@ Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 | 追加の詳細。 | 「[Feature dependencies of the Microsoft JDBC Driver for SQL Server (Microsoft JDBC Driver for SQL Server の機能の依存関係)](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues"></a>既知の問題
+### <a name="74-known-issues"></a>7.4 の既知の問題
 
 | 既知の問題 | 詳細 |
 | :----------- | :------ |
@@ -319,7 +322,7 @@ Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 自己解凍形式 exe ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x40a)  
 tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x40a)  
 
-### <a name="compliance"></a>コンプライアンス
+### <a name="72-compliance"></a>7.2 に準拠
 
 | コンプライアンスの変更 | 詳細 |
 | :---------------- | :------ |
@@ -328,7 +331,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 | Java Development Kit (JDK) バージョン 11.0 および JDK 1.8 と互換性があります。 | Microsoft JDBC Driver 7.2 for SQL Server は、JDK 1.8 に加え、Java Development Kit (JDK) バージョン 11.0 と互換性を持つようになりました。 |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>リリース
+### <a name="72-releases"></a>7.2 のリリース
 
 バージョン番号: 7.2.2  
 リリース日:2019 年 4 月 16 日  
@@ -387,7 +390,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 | 追加の詳細。 | 「[Feature dependencies of the Microsoft JDBC Driver for SQL Server (Microsoft JDBC Driver for SQL Server の機能の依存関係)](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues"></a>既知の問題
+### <a name="72-known-issues"></a>7.2 の既知の問題
 
 | 既知の問題 | 詳細 |
 | :----------- | :------ |
@@ -504,7 +507,7 @@ Microsoft JDBC Driver 6.4 for SQL Server は、JDBC 仕様 4.1 および 4.2 に
 
 JDBC ドライバーでは、SQL Server で使用する `sql_variant` データ型がサポートされるようになりました。 `sql_variant` データ型は、TVP や一括コピーなどの機能でもサポートされますが、次の制約があります。
 
-* **日付の値の場合**:
+- **日付の値の場合**:
 
   `sql_variant` 列に `datetime` 値、`smalldatetime` 値、または `date` 値が格納されているテーブルに TVP を使用して入力する場合、結果セットに対する `getDateTime()` メソッド、`getSmallDateTime()` メソッド、または `getDate()` メソッドの呼び出しは機能せず、次の例外がスローされます。
 
@@ -512,7 +515,7 @@ JDBC ドライバーでは、SQL Server で使用する `sql_variant` データ�
 
   回避策として、代わりに `getString()` メソッドまたは `getObject()` メソッドを使用してください。
 
-* **null 値に対して TVP を sql_variant と共に使用する**:
+- **null 値に対して TVP を sql_variant と共に使用する**:
   
   TVP を使用してテーブルに入力しているときに、`sql_variant` 型の列に NULL 値を送信した場合、例外が発生します。 TVPでの `sql_variant` 型の列への NULL 値の挿入は、現在サポートされていません。
 
@@ -542,7 +545,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 
 SQL Server 用 Microsoft JDBC Driver 6.2 は、JDBC 仕様 4.1 および 4.2 に完全に準拠しています。 6\.2 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされています。 たとえば、6.2 パッケージの mssql-jdbc-6.2.2.jre8.jar ファイルは、Java 8 で使用することが推奨されています。
 
-### <a name="releases"></a>リリース
+### <a name="62-releases"></a>6.2 のリリース
 
 バージョン番号: 6.2.2  
 リリース日:2017 年 10 月 3 日  
@@ -578,16 +581,16 @@ SQL Server 用 Microsoft JDBC Driver 6.2 は、JDBC 仕様 4.1 および 4.2 に
 
 JDBC Driver で、以下がサポートされるようになりました。
 
-* Kerberos 構成を変更できない、または新しいトークンまたは keytab を取得できないアプリケーションでのプリンシパル/パスワードの使用。 Kerberos 認証のみが許可される SQL Server インスタンスへの認証でこの方法を使用できます。
-* サーバー SPN の明示的な設定なしで Kerberos 統合認証を使用するレルム間認証。 ドライバーでは、レルムが提供されていない場合でも、自動的にそれを計算するようになりました。
-* 偽装されたユーザーの資格情報をデータ ソース経由の GSS 資格情報オブジェクトとして受け入れることによる Kerberos の制約付き委任。 この偽装された資格情報を使用して、Kerberos 接続が確立されます。
+- Kerberos 構成を変更できない、または新しいトークンまたは keytab を取得できないアプリケーションでのプリンシパル/パスワードの使用。 Kerberos 認証のみが許可される SQL Server インスタンスへの認証でこの方法を使用できます。
+- サーバー SPN の明示的な設定なしで Kerberos 統合認証を使用するレルム間認証。 ドライバーでは、レルムが提供されていない場合でも、自動的にそれを計算するようになりました。
+- 偽装されたユーザーの資格情報をデータ ソース経由の GSS 資格情報オブジェクトとして受け入れることによる Kerberos の制約付き委任。 この偽装された資格情報を使用して、Kerberos 接続が確立されます。
 
 ### <a name="added-timeouts"></a>タイムアウトを追加
 
 JDBC Driver では、次の構成可能なタイムアウトがサポートされるようになりました。 アプリケーションのニーズに基づいてそれらを変更できます。
 
-* クエリを実行しているときに、タイムアウトが発生する前に待機する秒数を制御するクエリのタイムアウト。
-* ソケットの読み取りまたは受け入れで、タイムアウトが発生する前に待機するミリ秒数を指定するソケットのタイムアウト。
+- クエリを実行しているときに、タイムアウトが発生する前に待機する秒数を制御するクエリのタイムアウト。
+- ソケットの読み取りまたは受け入れで、タイムアウトが発生する前に待機するミリ秒数を指定するソケットのタイムアウト。
 
 ## <a name="61"></a>6.1
 

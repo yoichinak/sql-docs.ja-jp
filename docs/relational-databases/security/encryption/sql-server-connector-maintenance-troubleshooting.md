@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: fa78eb8ef2da01514e161c58b05146b1699c93f7
-ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
+ms.openlocfilehash: 7bbd8aee97ccd31649661032c76729ad89b7fe5a
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98151268"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622748"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
 
@@ -176,6 +176,12 @@ Key Vault は定期的にバックアップする必要があります。 資格
 
 **HTTP(S) プロキシ サーバー経由で Azure Key Vault に接続するにはどうすればよいでしょうか。**
 このコネクタでは、Internet Explorer のプロキシ構成設定が使用されます。 これらの設定は[グループ ポリシー](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available)またはレジストリから制御できますが、システム全体の設定ではなく、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを実行しているサービス アカウントを対象にする必要があることに注意することが重要です。 データベース管理者が Internet Explorer の設定を表示または編集する場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジンではなく、そのデータベース管理者のアカウントにのみ影響します。 サービス アカウントを利用して対話方式でサーバーにログオンすることは推奨されておらず、セキュリティで保護されている多くの環境でブロックされます。 構成済みのプロキシ設定を変更する場合、コネクタでキー コンテナーへの接続が最初に試行されたときにキャッシュされるため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを再起動しないと変更が適用されないことがあります。
+
+**SQL Server コネクタでは、Azure Key Vault のどのキー サイズがサポートされますか。**
+SQL Server コネクタの最新のビルドでは、サイズ 2048 と 3072 の Azure Key Vault キーがサポートされています。
+  
+ > [!NOTE] 
+ > キーサイズ 3072 が使用されている場合でも、"sys.asymmetric_keys" ビューではキー サイズが 2048 として報告されます。 これはこのビューの既知のギャップであり、SQL Server 製品チームは今後のリリースでこれに対処します。
 
 **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の各構成手順で最低限必要な権限レベルを教えてください。**  
  すべての構成手順は sysadmin 固定サーバー ロールのメンバーとして実行することもできますが、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では使用する権限を最小限に抑えることをお勧めします。 次の一覧に、各操作の最小アクセス許可レベルを定義します。  

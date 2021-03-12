@@ -1,8 +1,8 @@
 ---
 description: テーブルの定義の表示
-title: テーブルの定義の表示 | Microsoft Docs
+title: テーブルの定義の表示
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/09/2021
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,16 +13,15 @@ helpviewer_keywords:
 - displaying table properties
 - tables [SQL Server], properties
 - viewing table properties
-ms.assetid: 1865fb7c-f480-4100-9007-df5364cd002a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eca47edc4d9f7e5a755d271f1d9306ff646ddf5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 49a0a836cb2e61bef9b4edb280685392f62544ec
+ms.sourcegitcommit: 98acedd435aecfda1b3c4c23d3f0c3c1a12682a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99195774"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532337"
 ---
 # <a name="view-the-table-definition"></a>テーブルの定義の表示
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -64,14 +63,26 @@ ms.locfileid: "99195774"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、特定のオブジェクトの `sys.tables` カタログ ビューからすべての列が返されます。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、システム ストアド プロシージャ sp_help を実行して、指定されたオブジェクトのすべての列情報が返されます。  
   
-    ```  
-    SELECT * FROM sys.tables  
-    WHERE object_id = 1973582069;  
+```sql  
+EXEC sp_help 'dbo.mytable';
+```  
+    
+ 詳細については、「[sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)」を参照してください。
+
+ または、システム カタログ ビューに直接クエリを実行して、テーブル、スキーマ、および列に関するオブジェクト メタデータ情報をクエリすることもできます。 次に例を示します。  
   
-    ```  
-  
- 詳細については、「[sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)」を参照してください。  
-  
-###  <a name="TsqlExample"></a>  
+```sql
+SELECT s.name, t.name, c.* FROM sys.columns AS c
+INNER JOIN sys.tables AS t ON t.object_id = c.object_id
+INNER JOIN sys.schemas AS s ON s.schema_id = t.schema_id
+WHERE t.object_id = object_id('mytable') AND s.name = 'dbo';
+```
+    
+ 詳細については、次を参照してください。 
+
+* [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)    
+* [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)    
+* [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)     
+

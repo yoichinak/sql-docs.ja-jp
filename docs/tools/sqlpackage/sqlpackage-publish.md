@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: 84fdd99b00de38b88b1a21963c4565e5c3b27ea7
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 364849c03150839ce38c4764c788bb8b813b9d53
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100081453"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622608"
 ---
 # <a name="sqlpackage-publish-parameters-properties-and-sqlcmd-variables"></a>SqlPackage Publish のパラメーター、プロパティ、SQLCMD 変数
 SqlPackage.exe の公開操作では、ソース データベースの構造に合わせて、ターゲット データベースのスキーマの増分更新を行います。 すべてまたは一部のテーブルのユーザー データを含む配置パッケージを公開すると、スキーマに加え、テーブル データが更新されます。 データの配置により、ターゲット データベースの既存のテーブル内のスキーマとデータが上書きされます。 データの配置では、配置パッケージに含まれていないテーブルについて、ターゲット データベース内の既存のスキーマまたはデータは変更されません。  
@@ -73,7 +73,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## <a name="properties-specific-to-the-publish-action"></a>公開アクションに固有のプロパティ
 
-|プロパティ|[値]|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
@@ -81,6 +81,11 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|このプロパティは、ブロックしているアセンブリを配置計画から削除する際に SqlClr の配置によって使用されます。 既定では、参照しているアセンブリを削除する必要がある場合、ブロックまたは参照しているアセンブリによって、アセンブリの更新がブロックされます。|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|互換性がない SQL Server プラットフォームであっても操作を試行するかどうかを指定します。|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|このプロパティが true に設定されている場合は、行レベル セキュリティを使用するテーブルに対するデータ モーションをブロックしません。 既定値は false です。|
+|**/p:**|AzureSharedAccessSignatureToken=(STRING)|Azure Shared Access Signature (SAS) トークンについては、「[Azure Synapse Analytics の SqlPackage](sqlpackage-for-azure-synapse-analytics.md#publish)」を参照してください。|
+|**/p:**|AzureStorageBlobEndpoint=(STRING)|Azure BLOB ストレージ エンドポイントについては、「[Azure Synapse Analytics の SqlPackage](sqlpackage-for-azure-synapse-analytics.md#publish)」を参照してください。|
+|**/p:**|AzureStorageContainer=(STRING)|Azure BLOB ストレージ コンテナーについては、「[Azure Synapse Analytics の SqlPackage](sqlpackage-for-azure-synapse-analytics.md#publish)」を参照してください。|
+|**/p:**|AzureStorageKey=(STRING)|Azure ストレージ アカウント キーについては、「[Azure Synapse Analytics の SqlPackage](sqlpackage-for-azure-synapse-analytics.md#publish)」を参照してください。|
+|**/p:**|AzureStorageRootPath=(STRING)|コンテナー内のストレージ ルート パス。 このプロパティがない場合、パスの既定値は `servername/databasename/timestamp/` になります。 「[Azure Synapse Analytics の SqlPackage](sqlpackage-for-azure-synapse-analytics.md#publish)」を参照してください。|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|変更を配置する前にデータベースをバックアップします。|
 |**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| データの精度の低下やキャスト操作を必要とするデータ型の変更などによるスキーマの変更によって、データが失われるおそれがある場合は、スキーマ検証ステップ中に操作を終了することを指定します。 既定値 (`True`) を指定すると、ターゲット データベースにデータが含まれているかどうかに関係なく、操作が終了します。  ターゲットに新しい列の型に変換できないデータが存在する場合、BlockOnPossibleDataLoss に `False` 値を指定して実行すると、配置計画の実行中に失敗するおそれがあります。 |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|スキーマがその登録と一致しないか、スキーマが登録されていないデータベースの更新をブロックするかどうかを指定します。|
