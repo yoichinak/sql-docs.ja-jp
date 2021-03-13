@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 92cca7d688f954fc8e832f4bc0e68f105c024202
-ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
+ms.openlocfilehash: d78e229bcbf2a088d42431abdf02bec3f9e51eab
+ms.sourcegitcommit: 62c7b972db0ac28e3ae457ce44a4566ebd3bbdee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102474886"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231500"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>オンプレミスの OpenShift および Azure Red Hat OpenShift に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をデプロイする
 
@@ -73,7 +73,7 @@ SQL Server 2019 CU5 では、OpenShift での SQL Server ビッグ データ ク
 4. BDC がデプロイされる名前空間内のユーザーに対するサービス アカウントに、カスタム SCC を割り当てます。
 
    ```console
-  oc create rolebinding bdc-rbac --clusterrole=system:scc:bdc-scc --group=system:serviceaccounts:<namespace>
+   oc create rolebinding bdc-rbac --clusterrole=system:scc:bdc-scc --group=system:serviceaccounts:<namespace>
    ```
 
 5. BDC をデプロイするユーザーに、適切なアクセス許可を割り当てます。 次のいずれかの操作を行います。 
