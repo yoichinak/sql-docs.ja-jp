@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c074add532e55209c8fc304a98da686cec60aab
-ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
+ms.openlocfilehash: 8c4b69dd5f196cf44f7fedfefbe45df6714aba20
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100636731"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421995"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
 
@@ -126,7 +126,7 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
    |`MIN`, `MAX`|`UNION`、`EXCEPT`、または `INTERSECT` の演算子|`TABLESAMPLE`|
    |テーブル変数|`OUTER APPLY` または `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |スパース列セット|インライン (TVF) または複数ステートメントのテーブル値関数 (MSTVF)|`OFFSET`|
-   |`CHECKSUM_AGG`|||
+   |`CHECKSUM_AGG`|`STRING_AGG`|||
 
    <sup>1</sup> インデックス付きビューには **float** 列を含めることができますが、このような列はクラスター化インデックス キーには含めることができません。
 

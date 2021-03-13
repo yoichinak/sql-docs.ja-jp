@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 01d5e44a93776560b5e89c0dc03a36b780f7ab8d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9ef6744fa152bfb5c66cc82ba71de62bc5bfb1a9
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637866"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421974"
 ---
 # <a name="model-database"></a>model データベース
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,37 +90,23 @@ SQL Server 2014 での既定のファイル拡張値については、「[model 
 ## <a name="restrictions"></a>制限  
  **model** データベースでは、次の操作を実行できません。  
   
--   ファイルまたはファイル グループの追加。  
-  
--   照合順序の変更。 既定の照合順序はサーバーの照合順序です。  
-  
--   データベース所有者の変更。 **model** は **sa** が所有します。  
-  
--   データベースの削除。  
-  
--   データベースからの **guest** ユーザーの削除。  
-  
--   変更データ キャプチャの有効化。  
-  
--   データベース ミラーリングへの参加。  
-  
--   プライマリ ファイル グループ、プライマリ データ ファイル、またはログ ファイルの削除。  
-  
--   データベース名またはプライマリ ファイル グループ名の変更。  
-  
--   データベースの OFFLINE への設定。  
-  
--   プライマリ ファイル グループの READ_ONLY への設定。  
-  
--   WITH ENCRYPTION オプションを使用したプロシージャ、ビュー、またはトリガーの作成。 暗号化キーは、オブジェクトが作成されたデータベースに関連付けられています。 **model** データベースで作成された暗号化オブジェクトは、 **model** データベースのみで使用できます。  
+- ファイルまたはファイル グループの追加。  
+- 照合順序の変更。 既定の照合順序はサーバーの照合順序です。  
+- データベース所有者の変更。 **model** は **sa** が所有します。  
+- データベースの削除。  
+- データベースからの **guest** ユーザーの削除。  
+- 変更データ キャプチャの有効化。  
+- データベース ミラーリングへの参加。  
+- プライマリ ファイル グループ、プライマリ データ ファイル、またはログ ファイルの削除。  
+- データベース名またはプライマリ ファイル グループ名の変更。  
+- データベースの OFFLINE への設定。  
+- プライマリ ファイル グループの READ_ONLY への設定。  
+- WITH ENCRYPTION オプションを使用したプロシージャ、ビュー、またはトリガーの作成。 暗号化キーは、オブジェクトが作成されたデータベースに関連付けられています。 **model** データベースで作成された暗号化オブジェクトは、 **model** データベースのみで使用できます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [システム データベース](../../relational-databases/databases/system-databases.md)  
-  
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
- [データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)  
+- [システム データベース](../../relational-databases/databases/system-databases.md)  
+- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+- [データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)  
   
   

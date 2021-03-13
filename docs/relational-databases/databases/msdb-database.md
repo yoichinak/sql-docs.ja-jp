@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 02632ce64dbd7b10571e559daf8fde4475a4e37b
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 80ada8fcce7fe1480dca5e22d4a5b8be3e73b617
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88471205"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421990"
 ---
 # <a name="msdb-database"></a>msdb データベース
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,34 +86,21 @@ ms.locfileid: "88471205"
  **msdb** データベースでは、次の操作を実行できません。  
   
 -   照合順序の変更。 既定の照合順序はサーバーの照合順序です。  
-  
 -   データベースの削除。  
-  
 -   データベースからの **guest** ユーザーの削除。  
-  
 -   変更データ キャプチャの有効化。  
-  
 -   データベース ミラーリングへの参加。  
-  
 -   プライマリ ファイル グループ、プライマリ データ ファイル、またはログ ファイルの削除。  
-  
 -   データベース名またはプライマリ ファイル グループ名の変更。  
-  
 -   データベースの OFFLINE への設定。  
-  
 -   プライマリ ファイル グループの READ_ONLY への設定。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [システム データベース](../../relational-databases/databases/system-databases.md)  
-  
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
- [データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)  
-  
- [データベース メール](../../relational-databases/database-mail/database-mail.md)  
-  
- [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)  
+- [システム データベース](../../relational-databases/databases/system-databases.md)  
+- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+- [データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)  
+- [データベース メール](../../relational-databases/database-mail/database-mail.md)  
+- [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

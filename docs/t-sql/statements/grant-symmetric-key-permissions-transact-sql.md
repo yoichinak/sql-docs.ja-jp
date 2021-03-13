@@ -20,19 +20,22 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9ae780c3bb1216609adf0221269925db0d3934ef
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest
+ms.openlocfilehash: 234b2504140b2d8c6a04787dedcac6942a33af59
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209548"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103422040"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>GRANT (対称キーの権限の許可) (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   対称キーの権限を許可します。 
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)] 
   
 ## <a name="syntax"></a>構文  
   
